@@ -58,7 +58,9 @@
 					<xsl:apply-templates select="ltx:creator[@role='author']" mode="front"/>
 				</contrib-group>
 				<xsl:apply-templates select="ltx:date[@role='creation']" mode="front"/>
-				<xsl:apply-templates select="*[not(self::ltx:title or self::ltx:creator[@role='author'] or self::ltx:date[@role='creation'])]" mode="front"/>
+				<xsl:apply-templates select="ltx:abstract" mode="front"/>
+				<xsl:apply-templates select="ltx:keywords" mode="front"/>
+				<xsl:apply-templates select="*[not(self::ltx:title or self::ltx:creator[@role='author'] or self::ltx:date[@role='creation'] or self::ltx:abstract or self::ltx:keywords)]" mode="front"/>
 				<!-- TODO check if all the front matter is actually included. Authors and titles are in already -->
 			</article-meta>
 		</front>
@@ -113,6 +115,20 @@
 	</name>
 </xsl:template>
 
+<xsl:template match="ltx:abstract" mode="front">
+	<abstract>
+		<xsl:apply-templates/>
+	</abstract>
+</xsl:template>
+
+<xsl:template match="ltx:keywords" mode="front">
+<kwd-group>
+	<xsl:for-each select="str:tokenize(./text(),',')">
+		<kwd><xsl:value-of select="."/></kwd>
+	</xsl:for-each>
+</kwd-group>
+</xsl:template>
+
 <xsl:template match="ltx:document/ltx:title" mode="front">
 	<title-group>
 		<article-title>
@@ -122,6 +138,7 @@
 </xsl:template>
 <!-- End front matter section -->
 <!-- Start main section --> 
+
 
 <xsl:template match="ltx:para">
 	<xsl:apply-templates/>
@@ -133,12 +150,40 @@
 	</p>
 </xsl:template>
 
+<xsl:template match="ltx:section">
+	<sec>
+		<xsl:apply-templates/>
+	</sec>
+</xsl:template>
+
+<xsl:template match="ltx:note[@role='thanks']">
+	<p> 
+		<xsl:apply-templates/>
+	</p>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='italic']">
+	<italic>
+		<xsl:apply-templates/>
+	</italic>
+</xsl:template>
+
+<!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
 
 <!-- This section is for elements that we aren't doing anything with and just removing from the document -->
 <xsl:template match="ltx:resource[@type='text/css']"/>
 <xsl:template match="ltx:creator[@role='author']"/>
 <xsl:template match="ltx:resource[@type='text/css']" mode="front"/>
+<xsl:template match="ltx:abstract"/>
+<xsl:template match="ltx:keywords"/>
+<xsl:template match="ltx:note[@role='thanks']" mode="front"/>
+<xsl:template match="ltx:section" mode="front"/>
+<xsl:template match="ltx:acknowledgements"/> <!-- TODO put this into backmatter -->
+<xsl:template match="ltx:acknowledgements" mode="front"/>
+<xsl:template match="ltx:bibliography"/> <!-- TODO put this into backmatter --> 
+<xsl:template match="ltx:bibliography" mode="front"/>
+<xsl:template match="ltx:date[@role='creation']"/>
 <!-- Templates to make things more convenient -->
     
 </xsl:stylesheet> 
