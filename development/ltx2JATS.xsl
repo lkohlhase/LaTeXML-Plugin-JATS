@@ -168,6 +168,19 @@
 	</italic>
 </xsl:template>
 
+<xsl:template match="ltx:section/ltx:title">
+	<title>
+		<xsl:apply-templates/>
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:cite"> <!-- TODO check whether idref always happens, else make more comprehensive -->
+	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates/></xref> 
+</xsl:template>
+
+<xsl:template match="ltx:cite/ltx:ref">
+	<xsl:apply-templates/>
+</xsl:template>
 <!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
 
@@ -184,6 +197,8 @@
 <xsl:template match="ltx:bibliography"/> <!-- TODO put this into backmatter --> 
 <xsl:template match="ltx:bibliography" mode="front"/>
 <xsl:template match="ltx:date[@role='creation']"/>
+<xsl:template match="ltx:tag"/> <!-- TODO check if Slavas stuff validates for this -->
+<xsl:template match="ltx:break"/> <!-- Break isn't really supposed to be used --> 
 <!-- Templates to make things more convenient -->
     
 </xsl:stylesheet> 
