@@ -21,14 +21,14 @@
 		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
 	</xsl:for-each>
 	</xsl:if> 
- is currently not supported.
+ is currently not supported for the main body.
 	</xsl:message>
 	<xsl:comment> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
 	<xsl:for-each select="./@*">
 		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
 	</xsl:for-each>
 	</xsl:if> 
- is currently not supported.
+ is currently not supported for the main body.
 	</xsl:comment>
 </xsl:template>
 
@@ -38,16 +38,34 @@
 		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
 	</xsl:for-each>
 	</xsl:if> 
- is currently not supported.
+ is currently not supported for the front matter.
 	</xsl:message>
 	<xsl:comment> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
 	<xsl:for-each select="./@*">
 		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
 	</xsl:for-each>
 	</xsl:if> 
- is currently not supported.
+ is currently not supported for the front matter.
 	</xsl:comment>
 </xsl:template>
+
+<xsl:template match="*" mode="back">
+	<xsl:message> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
+	<xsl:for-each select="./@*">
+		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
+	</xsl:for-each>
+	</xsl:if> 
+ is currently not supported for the back matter.
+	</xsl:message>
+	<xsl:comment> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
+	<xsl:for-each select="./@*">
+		<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>
+	</xsl:for-each>
+	</xsl:if> 
+ is currently not supported for the back matter
+	</xsl:comment>
+</xsl:template>
+
 
 <xsl:template match="ltx:document">
 	<article>
@@ -67,6 +85,9 @@
 		<body>
 			<xsl:apply-templates/>
 		</body>
+		<back> 
+			<xsl:apply-templates mode="back"/>
+		</back>
 
 	</article>
 </xsl:template>
@@ -137,6 +158,8 @@
 	</title-group>
 </xsl:template>
 <!-- End front matter section -->
+<!-- Start back section --> 
+<!-- This is essentially for bibliography -->
 <!-- Start main section --> 
 
 
@@ -199,6 +222,10 @@
 <xsl:template match="ltx:date[@role='creation']"/>
 <xsl:template match="ltx:tag"/> <!-- TODO check if Slavas stuff validates for this -->
 <xsl:template match="ltx:break"/> <!-- Break isn't really supposed to be used --> 
+<xsl:template match="ltx:resource[@type='text/css']" mode="back"/>
+<xsl:template match="ltx:creator[@role='author']" mode="back"/>
+<xsl:template match="ltx:abstract" mode="back"/>
+<xsl:template match="ltx:keywords" mode="back"/>
 <!-- Templates to make things more convenient -->
     
 </xsl:stylesheet> 
