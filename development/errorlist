@@ -1,0 +1,13 @@
+These are the substantial errors against the DTD present in Slavas conversion of ?LaTeXML-generated? XML to JATS
+1. Using <title> tag in <article-title> . It is not necessary and is called out in the documentation as not to be used (probably just need to add an extra clause for ltx:document/ltx:title or something. 
+2. Using <string-date> in <article-meta> . Should be <pub-date> <string-date> ... </string-date></pub-date>  (Maybe only for @role='creation', since it's the publishing date. Only case I ran into so far )
+3. Reference section is messed up. Currently it is Reference and then a bunch of mixed citations. It should be:
+<reflist> 
+	<title> ... </title>
+	<reflist>
+		<ref id=whatever>
+			<mixed-citation/>
+		</ref>
+	</reflist>
+	
+	Something close to that anyway
