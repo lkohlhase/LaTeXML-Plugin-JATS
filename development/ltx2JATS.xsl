@@ -15,7 +15,8 @@
    >
    <xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
-        doctype-system="archivearticle3.dtd"/>
+doctype-system="archivearticle3.dtd"/>
+<xsl:variable name="footnotes" select="//ltx:note[@role='footnote']"/>
 <xsl:template match="*">
 	<xsl:message> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
 	<xsl:for-each select="./@*">
@@ -268,6 +269,14 @@
 		<xsl:apply-templates select="@*|node()"/>
 	</italic>
 </xsl:template>
+
+<xsl:template match="ltx:note[@role='footnote']">
+	<fn id="{generate-id(.)}">
+		<p>
+			<xsl:apply-templates select="@*|node()"/> 
+		</p>
+	</fn>
+</xsl:template><!-- TODO check whether we ever us a simplistic id like @mark. Also check whether paragraphs are always necessary -->
 
 <xsl:template match="ltx:para">
 	<xsl:apply-templates select="@*|node()" />
