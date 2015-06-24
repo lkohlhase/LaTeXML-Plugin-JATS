@@ -11,7 +11,7 @@
 \=========================================================ooo==U==ooo=/
 -->
 <xsl:stylesheet
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML" 
+   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m xlink" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML"                 xmlns:xlink="http://www.w3.org/1999/xlink"
    >
    <xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
@@ -280,6 +280,11 @@
 		</tex-math>
 	</inline-formula>
 </xsl:template>
+
+<xsl:template match="ltx:inline-block">
+	<xsl:apply-templates select="@*|node()"/> 
+</xsl:template>
+
 <xsl:template match="ltx:p">
 	<p>
 		<xsl:apply-templates select="@*|node()" />
@@ -292,6 +297,33 @@
 	</sec>
 </xsl:template>
 
+<xsl:template match="ltx:figure/ltx:caption">
+	<caption>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()"/> 
+			</p>
+		</xsl:if>
+	</caption>
+</xsl:template>
+
+
+<xsl:template match="ltx:figure"> 
+	<fig>
+		<xsl:apply-templates select="@*"/> 
+		<xsl:apply-templates select="ltx:caption"/> 
+		<xsl:apply-templates select="*[not(self::ltx:caption)]"/>
+	</fig> 
+</xsl:template>
+
+<xsl:template match="ltx:graphics"> 
+	<graphic xlink:href="{./@graphic}"> <!-- Probably could have made this an empty element, but I just wanted to go sure -->
+		<xsl:apply-templates select="@*|node()"/>
+	</graphic>
+</xsl:template>
 <xsl:template match="ltx:text[@class='ltx_ref_tag']">
 	<xsl:apply-templates select="@*|node()"/>
 </xsl:template>
@@ -356,6 +388,7 @@
 <xsl:template match="ltx:document/ltx:title" mode="back"/>
 <xsl:template match="ltx:para" mode="front"/>
 <xsl:template match="ltx:para" mode="back"/>
+<xsl:template match="ltx:toccaption"/>
 <!-- hackish stuff for references -->
 
 <xsl:template match="@labels[not(../@xml:id)]">
@@ -380,5 +413,18 @@
 <xsl:template match="@*"/>
 <xsl:template match="@*" mode="back"/>
 <xsl:template match="@*" mode="front"/>
+<!-- end of hackish references stuff --> 
+<!-- font section --> 
+<xsl:template match="ltx:text[@font='medium']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='medium']" mode="back">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='medium']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
