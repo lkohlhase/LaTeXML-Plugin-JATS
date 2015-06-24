@@ -11,7 +11,7 @@
 \=========================================================ooo==U==ooo=/
 -->
 <xsl:stylesheet
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str" xmlns:str="http://exslt.org/strings" 
+   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML" 
    >
    <xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
@@ -141,7 +141,11 @@
 		</given-names>
 	</name>
 </xsl:template>
-
+<xsl:template match="ltx:text[@font='bold']" mode="front">
+	<bold>
+		<xsl:apply-templates mode="front" select="@*|node()"/>
+	</bold>
+</xsl:template> 
 <xsl:template match="ltx:abstract" mode="front">
 	<abstract>
 		<xsl:apply-templates select="@*|node()" />
@@ -206,6 +210,18 @@
 	</italic>
 </xsl:template>
 
+<xsl:template match="ltx:acknowledgements" mode="back">
+	<ack> 
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates mode="back" select="@*|node()"/>
+			</p> 
+		</xsl:if>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates mode="back" select="@*|node()"/> 
+		</xsl:if>
+	</ack>
+</xsl:template>
 <xsl:template match="ltx:bibtag[@role='authors']" mode="back">
 	<person-group person-group-type="author">
 		<name>
@@ -231,10 +247,22 @@
 	</person-group>
 </xsl:template>
 
+<!-- TODO check if we want to do anything with fullauthors --> 
+<xsl:template match="ltx:bibtag[@role='fullauthors']" mode="back"/>
+<xsl:template match="ltx:text[@font='bold']" mode="back">
+	<bold>
+		<xsl:apply-templates mode="back" select="@*|node()"/>
+	</bold>
+</xsl:template>
 <xsl:template match="ltx:bibtag[@role='refnum']" mode="back"/>
 <xsl:template match="ltx:bibtag[@role='number']" mode="back"/>
 <!-- End back section -->
 <!-- Start main section --> 
+<xsl:template match="ltx:text[@font='bold']">
+	<bold>
+		<xsl:apply-templates select="@*|node()"/>
+	</bold>
+</xsl:template>
 <xsl:template match="ltx:emph">
 	<italic>
 		<xsl:apply-templates select="@*|node()"/>
@@ -245,6 +273,13 @@
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
+<xsl:template match="ltx:Math[@mode='inline']">
+	<inline-formula>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</inline-formula>
+</xsl:template>
 <xsl:template match="ltx:p">
 	<p>
 		<xsl:apply-templates select="@*|node()" />
@@ -255,6 +290,10 @@
 	<sec>
 		<xsl:apply-templates select="@*|node()" />
 	</sec>
+</xsl:template>
+
+<xsl:template match="ltx:text[@class='ltx_ref_tag']">
+	<xsl:apply-templates select="@*|node()"/>
 </xsl:template>
 
 <xsl:template match="ltx:note[@role='thanks']">
@@ -279,9 +318,16 @@
 	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref> 
 </xsl:template>
 
-<xsl:template match="ltx:cite/ltx:ref">
+<xsl:template match="ltx:cite/ltx:ref[@idref]">
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
+
+<xsl:template match="ltx:ref[@labelref and not(@idref)]">
+	<xref ref-type="labelref" rid="{./@labelref}">
+		<xsl:apply-templates select="@*|node()"/> 
+	</xref>
+</xsl:template>
+
 <!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
 
@@ -311,6 +357,10 @@
 <xsl:template match="ltx:para" mode="front"/>
 <xsl:template match="ltx:para" mode="back"/>
 <!-- hackish stuff for references -->
+
+<xsl:template match="@labels[not(../@xml:id)]">
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
 <xsl:template match="ltx:document/@xml:id"/>
 <xsl:template match="@xml:id"> 
@@ -328,5 +378,7 @@
 </xsl:template>
 
 <xsl:template match="@*"/>
+<xsl:template match="@*" mode="back"/>
+<xsl:template match="@*" mode="front"/>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
