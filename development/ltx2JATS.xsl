@@ -97,6 +97,11 @@
 	<xsl:copy-of select="."/>
 </xsl:template>
 <!-- Front matter section -->
+<xsl:template match="ltx:emph" mode="front">
+	<italic>
+		<xsl:apply-templates mode="front" select="@*|node()"/>
+	</italic>
+</xsl:template> 
 
 <xsl:template match="ltx:creator[@role='author']" mode="front">
 	<contrib contrib-type="author">
@@ -184,9 +189,57 @@
 		</mixed-citation>
 	</ref>
 </xsl:template>
+
+<xsl:template match="ltx:bibtag[@role='year']" mode="back">
+	<year>
+		<xsl:apply-templates mode="back"/>
+	</year>
+</xsl:template>
+
+<xsl:template match="ltx:bibblock" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:emph" mode="back">
+	<italic>
+		<xsl:apply-templates mode="back" select="@*|node()"/>
+	</italic>
+</xsl:template>
+
+<xsl:template match="ltx:bibtag[@role='authors']" mode="back">
+	<person-group person-group-type="author">
+		<name>
+		<!-- I will not do sophisticated handling trying to split this into several authors etc. -->
+			<surname>
+				<xsl:for-each select="str:tokenize(./text(),' ')">
+					<xsl:if test="position=last()">
+						<xsl:value-of select="."/>
+					</xsl:if>
+				</xsl:for-each>
+			</surname>
+			<xsl:if test="contains(./text(),' ')">
+		
+				<given-names>
+					<xsl:for-each select="str:tokenize(./text(),' ')">
+						<xsl:if test="position!=last()">
+							<xsl:value-of select="."/>
+						</xsl:if> 
+					</xsl:for-each>
+				</given-names>
+			</xsl:if>
+		</name>
+	</person-group>
+</xsl:template>
+
+<xsl:template match="ltx:bibtag[@role='refnum']" mode="back"/>
+<xsl:template match="ltx:bibtag[@role='number']" mode="back"/>
 <!-- End back section -->
 <!-- Start main section --> 
-
+<xsl:template match="ltx:emph">
+	<italic>
+		<xsl:apply-templates select="@*|node()"/>
+	</italic>
+</xsl:template>
 
 <xsl:template match="ltx:para">
 	<xsl:apply-templates select="@*|node()" />
