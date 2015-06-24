@@ -226,6 +226,12 @@
 <xsl:template match="ltx:creator[@role='author']" mode="back"/>
 <xsl:template match="ltx:abstract" mode="back"/>
 <xsl:template match="ltx:keywords" mode="back"/>
+<xsl:template match="ltx:note[@role='thanks']" mode="back"/>
+<xsl:template match="ltx:section" mode="back"/><!-- TODO check if there is any real possiblity for sections in back matter. I don't think so, since they all get dealt with by normal stuff -->
+<xsl:template match="ltx:date[@role='creation']" mode="back"/>
+<xsl:template match="ltx:document/ltx:title" mode="back"/> 
+
+
 <!-- Templates to make things more convenient -->
     
 </xsl:stylesheet> 
