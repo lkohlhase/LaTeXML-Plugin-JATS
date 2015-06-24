@@ -178,8 +178,10 @@
 </xsl:template>
 
 <xsl:template match="ltx:bibitem" mode="back">
-	<ref>
-		<xsl:apply-templates mode="back"/>
+	<ref><xsl:if test="./@xml:id"><xsl:attribute name="id"><xsl:value-of select="./@xml:id"/></xsl:attribute></xsl:if>
+		<mixed-citation>
+			<xsl:apply-templates select="node()" mode="back"/>
+		</mixed-citation>
 	</ref>
 </xsl:template>
 <!-- End back section -->
@@ -255,9 +257,20 @@
 <xsl:template match="ltx:document/ltx:title" mode="back"/>
 <xsl:template match="ltx:para" mode="front"/>
 <xsl:template match="ltx:para" mode="back"/>
-
+<!-- hackish stuff for references -->
 <xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="ltx:document/@xml:id"/>
 <xsl:template match="@xml:id"> 
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template>
+
+<xsl:template match="ltx:para/@xml:id" mode="front"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="@xml:id" mode="front"> 
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template>
+
+<xsl:template match="ltx:para/@xml:id" mode="back"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="@xml:id" mode="back"> 
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 </xsl:template>
 
