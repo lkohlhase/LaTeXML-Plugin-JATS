@@ -13,6 +13,7 @@
 <xsl:stylesheet
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str" xmlns:str="http://exslt.org/strings" 
    >
+   <xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
         doctype-system="archivearticle3.dtd"/>
 <xsl:template match="*">
@@ -83,7 +84,7 @@
 			</article-meta>
 		</front>
 		<body>
-			<xsl:apply-templates/>
+			<xsl:apply-templates select="@*|node()" />
 		</body>
 		<back> 
 			<xsl:apply-templates mode="back"/>
@@ -106,15 +107,15 @@
 
 
 <xsl:template match="ltx:date[@role='creation']" mode="front">
-	<pub-date><string-date><xsl:apply-templates/></string-date></pub-date>
+	<pub-date><string-date><xsl:apply-templates select="@*|node()" /></string-date></pub-date>
 </xsl:template>
 
 <xsl:template match="ltx:contact[@role='affiliation']" mode="front">
-	<aff><xsl:apply-templates/></aff>
+	<aff><xsl:apply-templates select="@*|node()" /></aff>
 </xsl:template>
 
 <xsl:template match="ltx:contact[@role='email']" mode="front">
-	<email><xsl:apply-templates/></email>
+	<email><xsl:apply-templates select="@*|node()" /></email>
 </xsl:template>
 <xsl:template match="ltx:personname" mode="front">
 	<name>
@@ -138,7 +139,7 @@
 
 <xsl:template match="ltx:abstract" mode="front">
 	<abstract>
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</abstract>
 </xsl:template>
 
@@ -153,56 +154,78 @@
 <xsl:template match="ltx:document/ltx:title" mode="front">
 	<title-group>
 		<article-title>
-			<xsl:apply-templates/>
+			<xsl:apply-templates select="@*|node()" />
 		</article-title>
 	</title-group>
 </xsl:template>
 <!-- End front matter section -->
 <!-- Start back section --> 
-<!-- This is essentially for bibliography -->
+<!-- This is essentially for bibliography and acknowledgements-->
+<xsl:template match="ltx:bibliography" mode="back"> <!-- TODO check if there is ever any issue by making ref-list from this and not biblist -->
+	<ref-list>
+		<xsl:apply-templates mode="back"/>
+	</ref-list>
+</xsl:template>
+
+<xsl:template match="ltx:bibliography/ltx:title" mode="back">
+	<title>
+		<xsl:apply-templates select="@*|node()" />
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:biblist" mode="back">
+	<xsl:apply-templates mode="back"/> 
+</xsl:template>
+
+<xsl:template match="ltx:bibitem" mode="back">
+	<ref>
+		<xsl:apply-templates mode="back"/>
+	</ref>
+</xsl:template>
+<!-- End back section -->
 <!-- Start main section --> 
 
 
 <xsl:template match="ltx:para">
-	<xsl:apply-templates/>
+	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
 <xsl:template match="ltx:p">
 	<p>
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</p>
 </xsl:template>
 
 <xsl:template match="ltx:section">
 	<sec>
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</sec>
 </xsl:template>
 
 <xsl:template match="ltx:note[@role='thanks']">
 	<p> 
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</p>
 </xsl:template>
 
 <xsl:template match="ltx:text[@font='italic']">
 	<italic>
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</italic>
 </xsl:template>
 
 <xsl:template match="ltx:section/ltx:title">
 	<title>
-		<xsl:apply-templates/>
+		<xsl:apply-templates select="@*|node()" />
 	</title>
 </xsl:template>
 
 <xsl:template match="ltx:cite"> <!-- TODO check whether idref always happens, else make more comprehensive -->
-	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates/></xref> 
+	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref> 
 </xsl:template>
 
 <xsl:template match="ltx:cite/ltx:ref">
-	<xsl:apply-templates/>
+	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 <!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
@@ -229,9 +252,15 @@
 <xsl:template match="ltx:note[@role='thanks']" mode="back"/>
 <xsl:template match="ltx:section" mode="back"/><!-- TODO check if there is any real possiblity for sections in back matter. I don't think so, since they all get dealt with by normal stuff -->
 <xsl:template match="ltx:date[@role='creation']" mode="back"/>
-<xsl:template match="ltx:document/ltx:title" mode="back"/> 
+<xsl:template match="ltx:document/ltx:title" mode="back"/>
+<xsl:template match="ltx:para" mode="front"/>
+<xsl:template match="ltx:para" mode="back"/>
 
+<xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="@xml:id"> 
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template>
 
+<xsl:template match="@*"/>
 <!-- Templates to make things more convenient -->
-    
 </xsl:stylesheet> 
