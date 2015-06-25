@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/tmp/reader18129782833063255738651580131041181/quant-ph0607043"?>
+<?latexml class="revtex4" options="pra,twocolumn,epsfig,graphics,showpacs,floatfix,mathbbm"?>
+<?latexml package="amsmath,times"?>
+<?latexml package="psfrag"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Quantum controlled phase gate and cluster states generation via two superconducting
+quantum interference devices in a cavity</title>
+  <creator role="author">
+    <personname>Zheng-Yuan Xue<Math mode="inline" xml:id="m1" tex="{}^{1}" text="^1" fragid="m1"><m:math alttext="{}^{1}" display="inline"><m:msup><m:mi/><m:mn>1</m:mn></m:msup></m:math></Math><note mark="1" role="footnote">E-mail: xuezhengyuan@yahoo.com.cn</note>,
+Gang Zhang<Math mode="inline" xml:id="m2" tex="{}^{1,2}" text="^list@(1, 2)" fragid="m2"><m:math alttext="{}^{1,2}" display="inline"><m:msup><m:mi/><m:mrow><m:mn xml:id="XM1">1</m:mn><m:mo>,</m:mo><m:mn xml:id="XM2">2</m:mn></m:mrow></m:msup></m:math></Math>, Ping Dong<Math mode="inline" xml:id="m3" tex="{}^{1}" text="^1" fragid="m3"><m:math alttext="{}^{1}" display="inline"><m:msup><m:mi/><m:mn>1</m:mn></m:msup></m:math></Math>, You-Min Yi<Math mode="inline" xml:id="m4" tex="{}^{1}" text="^1" fragid="m4"><m:math alttext="{}^{1}" display="inline"><m:msup><m:mi/><m:mn>1</m:mn></m:msup></m:math></Math> and Zhuo-Liang
+Cao<Math mode="inline" xml:id="m5" tex="{}^{1}" text="^1" fragid="m5"><m:math alttext="{}^{1}" display="inline"><m:msup><m:mi/><m:mn>1</m:mn></m:msup></m:math></Math><note mark="2" role="footnote">E-mail: zlcao@ahu.edu.cn</note></personname>
+    <contact role="affiliation">1 School of Physics &amp; Material Science, Anhui
+University, Hefei, 230039, P. R. China<break/>2 Department of Mathematics &amp; Physics, West Anhui University,
+Lu’an, 237012, P. R. China</contact>
+  </creator>
+  <abstract name="Abstract">
+    <p>A scheme for implementing 2-qubit quantum controlled phase gate
+(QCPG) is proposed with two superconducting quantum interference
+devices (SQUIDs) in a cavity. The gate operations are realized
+within the two lower flux states of the SQUIDs by using a quantized
+cavity field and classical microwave pulses. Our scheme is achieved
+without any type of measurement, does not use the cavity mode as the
+data bus and only requires a very short resonant interaction of the
+<!-- %**** contents.tex Line 25 **** -->SQUID-cavity system. As an application of the QCPG operation, we
+also propose a scheme for generating the cluster states of many
+SQUIDs.</p>
+  </abstract>
+  <classification scheme="pacs">03.67.Lx, 03.65.Ud,42.50.Dv</classification>
+  <section refnum="I" xml:id="S1" fragid="S1">
+    <title><tag close=" ">I</tag>Introduction</title>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>Recently, much attention has been paid to the realization of quantum
+computers <cite>(<ref idref="bib.bib1">(1)</ref>)</cite>, which could compete in certain tasks
+that classical computer could never fulfill in acceptable times
+<cite>(<ref idref="bib.bib2">(2)</ref>)</cite>. Despite the already rather advanced theoretical
+concepts of quantum computing, the development of its physical
+implementations is just at an early stage. Up to now, many physical
+systems have been suggested as possible realizations of qubits and
+quantum logic gates <cite>(<ref idref="bib.bib3">(3)</ref>)</cite>. In some mature systems quantum
+manipulations of a few qubits have already been demonstrated
+experimentally, such as cavity QED <cite>(<ref idref="bib.bib4">(4)</ref>)</cite>, trapped ions
+<cite>(<ref idref="bib.bib5">(5)</ref>)</cite>, nuclear magnetic resonance (NMR) <cite>(<ref idref="bib.bib6">(6)</ref>)</cite> and photonic
+systems <cite>(<ref idref="bib.bib7">(7)</ref>)</cite>. Despite recently exciting experimental
+progresses, the physical realization of a scalable quantum computer
+remains a great challenge. The building blocks of quantum computers
+<!-- %**** contents.tex Line 50 **** -->are two-qubit logic gates. Few systems have demonstrated controlled
+qubits and qubit coupling between pairs taken from more than four
+qubits. It is difficult to couple different subsystems in a
+controlled manner, while at the same time shielding the system from
+the influence of its environment. One particularly attractive
+possibility is to use matter qubits to serve as hardware because
+they are static and potentially long lived, and an optical coupling
+mechanism can creates suitable entanglement. Among the variety of
+systems being explored for hardware implementations of quantum
+computers, cavity QED system is favored because of its demonstrated
+advantage when subjected to coherent manipulations <cite>(<ref idref="bib.bib4">(4)</ref>)</cite>.
+However, in the cavity-atom system the strong coupling limit is
+difficult to meet and individual addressing of the particles is also
+a problem-maker. In contrast, the strong coupling limit was realized
+with superconducting charge <cite>(<ref idref="bib.bib8">(8)</ref>)</cite> and flux qubits
+<cite>(<ref idref="bib.bib9">(9)</ref>)</cite> in a microcavity. SQUIDs, as well as other solid state
+circuits, can be perfectly fixed, easily embedded in a cavity and
+easy to scale up, thus the cavity-SQUID scheme may be more
+preferable than cavity-atom system. In addition, by placing SQUIDs
+into a superconducting cavity, the external environment induced
+decoherence can be greatly suppressed because the cavity can serve
+as magnetic shield for SQUIDs.</p>
+    </para>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>It is well known that single-qubit rotations and 2-qubit controlled
+logic gates together can be served to realize any unitary operation
+<!-- %**** contents.tex Line 75 **** -->on <Math mode="inline" xml:id="S1.p2.m1" tex="n" text="n" fragid="S1.p2.m1"><m:math alttext="n" display="inline"><m:mi>n</m:mi></m:math></Math> qubits <cite>(<ref idref="bib.bib10">(10)</ref>)</cite>. Recently, people have presented
+various methods for implementing quantum logic operation via SQUID
+flux qubits. Zhou <emph>et al</emph>. <cite>(<ref idref="bib.bib11">(11)</ref>)</cite> proposed a scheme to
+implement a single-qubit operation with a three-level <Math mode="inline" xml:id="S1.p2.m2" tex="\Lambda" text="Lambda" fragid="S1.p2.m2"><m:math alttext="\Lambda" display="inline"><m:mi mathvariant="normal">Λ</m:mi></m:math></Math>-type
+rf-SQUID qubit, which proven to be more favorable than the
+conventional two-level qubit. Amin <emph>et al</emph>. <cite>(<ref idref="bib.bib12">(12)</ref>)</cite> gave a
+more general method to implement an arbitrary qubit rotation using
+the three-level qubit. However, under their assumption of small
+detuning, population in the upper level of the qubit is significant
+during the interaction, which results in higher probability of
+spontaneous decay, and hence gate errors. Yang <text font="italic">et al</text>.
+<cite>(<ref idref="bib.bib13">(13)</ref>)</cite> proposed an alternative method for implementing arbitrary
+single-qubit operations with a three-level SQUID without energy
+relaxation. The above works <cite>(<ref idref="bib.bib11">(11)</ref>; <ref idref="bib.bib12">(12)</ref>; <ref idref="bib.bib13">(13)</ref>)</cite> have proposed some schemes
+for realizing single-qubit operation and two-qubit entanglement, but
+the building blocks of quantum computers are two-qubit logic gates.
+Very recently, Song <emph>et al</emph>. <cite>(<ref idref="bib.bib14">(14)</ref>)</cite> realized the 2-qubit QCPG
+operation by using a quantized cavity field and classical microwave
+pulses via Raman transition. In their scheme three SQUID qubits were
+used to perform the QCPG operation, one of the SQUID qubits is
+utilized as a quantum data-bus, and the gate operation is achieved
+between the remaining two SQIUID qubits. Yang <emph>et al</emph>. <cite>(<ref idref="bib.bib15">(15)</ref>)</cite>
+proposed their scheme for realizing the n-qubit (<Math mode="inline" xml:id="S1.p2.m3" tex="n\geq 2" text="n &gt;= 2" fragid="S1.p2.m3"><m:math alttext="n\geq 2" display="inline"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>2</m:mn></m:mrow></m:math></Math>) QCPG
+operation by using SQUIDs coupled to a superconducting resonator,
+where data-bus qubit of the gate operation is not needed.
+<!-- %**** contents.tex Line 100 **** -->Enlightened by their progress, we report alternative ways of
+demonstrating 2-qubit QCPG operation via SQUIDs in a quantized
+superconducting cavity. Our scheme is achieved without any type of
+measurement, does not use the cavity mode as the data bus and only
+requires a very short resonant interaction.</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>In most of the current explorations, quantum logic gates are
+implemented with sequences of controlled interactions between
+selected particles. Recently, Raussendorf and Briegel <cite>(<ref idref="bib.bib16">(16)</ref>)</cite>
+proposed a different model of a scalable quantum computer, namely
+the one way quantum computer, which constructs quantum logic gates
+by single-qubit measurements on cluster states. Thus many quantum
+computation scheme based on the cluster states have been proposed
+<cite>(<ref idref="bib.bib17">(17)</ref>; <ref idref="bib.bib18">(18)</ref>; <ref idref="bib.bib19">(19)</ref>)</cite>. The distinct advantage of
+one-way computing strategy is that it separates the process of
+generating entanglement and executing the computation. So one can
+tolerate failures during the generation process simply by repeating
+the process providing the failures are heralded. On the other hand,
+due to its novel application in quantum computing, generation of the
+cluster states
+<cite>(<ref idref="bib.bib20">(20)</ref>; <ref idref="bib.bib21">(21)</ref>; <ref idref="bib.bib22">(22)</ref>; <ref idref="bib.bib23">(23)</ref>; <ref idref="bib.bib24">(24)</ref>; <ref idref="bib.bib25">(25)</ref>)</cite>
+also attracts many attentions. Here, as a direct application of the
+proposed 2-qubit QCPG operation, we also present a way of generating
+the multipartite cluster states via SQUIDs trapped in cavity.</p>
+    </para>
+    <!-- %**** contents.tex Line 125 **** -->
+  </section>
+  <section refnum="II" xml:id="S2" fragid="S2">
+    <title><tag close=" ">II</tag>Basic models</title>
+    <para xml:id="S2.p1" fragid="S2.p1">
+      <p>The SQUID considered in this paper is the radio frequency SQUID
+(rf-SQUID), which consisting of a Josephson tunnel junction in a
+superconducting loop, the size of which is on the order of
+10<Math mode="inline" xml:id="S2.p1.m1" tex="\sim" text="similar-to" fragid="S2.p1.m1"><m:math alttext="\sim" display="inline"><m:mo>∼</m:mo></m:math></Math>100<Math mode="inline" xml:id="S2.p1.m2" tex="\mu" text="mu" fragid="S2.p1.m2"><m:math alttext="\mu" display="inline"><m:mi>μ</m:mi></m:math></Math>m. The rf-SQUID considered here has three-level
+<Math mode="inline" xml:id="S2.p1.m3" tex="\Lambda" text="Lambda" fragid="S2.p1.m3"><m:math alttext="\Lambda" display="inline"><m:mi mathvariant="normal">Λ</m:mi></m:math></Math>-type energy structure, which includes two lower flux
+states <Math mode="inline" xml:id="S2.p1.m4" tex="|0\rangle" text="ket@(0)" fragid="S2.p1.m4"><m:math alttext="|0\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM3">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>, <Math mode="inline" xml:id="S2.p1.m5" tex="|1\rangle" text="ket@(1)" fragid="S2.p1.m5"><m:math alttext="|1\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM4">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math> and an upper state <Math mode="inline" xml:id="S2.p1.m6" tex="|e\rangle" text="ket@(e)" fragid="S2.p1.m6"><m:math alttext="|e\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM5">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>. The
+two lower flux states <Math mode="inline" xml:id="S2.p1.m7" tex="|0\rangle" text="ket@(0)" fragid="S2.p1.m7"><m:math alttext="|0\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM6">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math> and <Math mode="inline" xml:id="S2.p1.m8" tex="|1\rangle" text="ket@(1)" fragid="S2.p1.m8"><m:math alttext="|1\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM7">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math> reside in two
+distinct potential valley and serve as logic 0 and 1 in our
+proposal. Suppose the coupling of <Math mode="inline" xml:id="S2.p1.m9" tex="|0\rangle" text="ket@(0)" fragid="S2.p1.m9"><m:math alttext="|0\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM8">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>, <Math mode="inline" xml:id="S2.p1.m10" tex="|1\rangle" text="ket@(1)" fragid="S2.p1.m10"><m:math alttext="|1\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM9">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math> and
+<Math mode="inline" xml:id="S2.p1.m11" tex="|e\rangle" text="ket@(e)" fragid="S2.p1.m11"><m:math alttext="|e\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM10">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math> with other levels of the rf-SQUID via the cavity is
+negligible, which can be readily satisfied by adjusting the level
+spacings of the rf-SQUID. For a rf-SQUID, the level spacings can be
+easily changed by varying the external flux <Math mode="inline" xml:id="S2.p1.m12" tex="\Phi_{x}" text="Phi _ x" fragid="S2.p1.m12"><m:math alttext="\Phi_{x}" display="inline"><m:msub><m:mi mathvariant="normal">Φ</m:mi><m:mi>x</m:mi></m:msub></m:math></Math> or the
+critical current <Math mode="inline" xml:id="S2.p1.m13" tex="I_{c}" text="I _ c" fragid="S2.p1.m13"><m:math alttext="I_{c}" display="inline"><m:msub><m:mi>I</m:mi><m:mi>c</m:mi></m:msub></m:math></Math> <cite>(<ref idref="bib.bib26">(26)</ref>)</cite>. Hence, coupling between
+microwave pulse and any particular rf-SQUID qubit can be obtained
+selectively, via frequency matching.</p>
+    </para>
+    <subsection refnum="II.1" xml:id="S2.SS1" fragid="S2.SS1">
+      <title><tag close=" ">II.1</tag>SQUID driven by classical field</title>
+      <para xml:id="S2.SS1.p1" fragid="S2.SS1.p1">
+        <p>We firstly review the way of implementing single-qubit operations,
+which can be realized by a rf pulse on the rf-SQUID. Let’s firstly
+consider a rf-SQUID driven by a rf pulse. If it is resonant with the
+<Math mode="inline" xml:id="S2.SS1.p1.m1" tex="|0\rangle\leftrightarrow|1\rangle" text="ket@(0) leftrightarrow ket@(1)" fragid="S2.SS1.p1.m1"><m:math alttext="|0\rangle\leftrightarrow|1\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM11">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM12">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math> transition but far-off
+resonant with the transitions of <Math mode="inline" xml:id="S2.SS1.p1.m2" tex="|0\rangle\leftrightarrow|e\rangle" text="ket@(0) leftrightarrow ket@(e)" fragid="S2.SS1.p1.m2"><m:math alttext="|0\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM13">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM14">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+and <Math mode="inline" xml:id="S2.SS1.p1.m3" tex="|1\rangle\leftrightarrow|e\rangle" text="ket@(1) leftrightarrow ket@(e)" fragid="S2.SS1.p1.m3"><m:math alttext="|1\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM15">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM16">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math> of the rf-SQUID, the
+<!-- %**** contents.tex Line 150 **** -->interaction Hamiltonian is <cite>(<ref idref="bib.bib27">(27)</ref>)</cite></p>
+        <equation frefnum="(1)" refnum="1" xml:id="S2.E1" fragid="S2.E1">
+          <Math mode="display" xml:id="S2.E1.m1" tex="H_{I}=i\Omega(|0\rangle\langle 1|-|1\rangle\langle 0|)," text="H _ I = i * Omega * ket@(0) * quantum-operator-product@(1, -, 1) * bra@(0)" fragid="S2.E1.m1"><m:math alttext="H_{I}=i\Omega(|0\rangle\langle 1|-|1\rangle\langle 0|)," display="block"><m:mrow><m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mi>i</m:mi><m:mo>⁢</m:mo><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM22"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM17">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM20">1</m:mn><m:mo fence="true" stretchy="false">|</m:mo><m:mo xml:id="XM21">-</m:mo><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM18">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM19">0</m:mn><m:mo fence="true" stretchy="false">|</m:mo></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+        </equation>
+        <p>where <Math mode="inline" xml:id="S2.SS1.p1.m4" tex="\Omega" text="Omega" fragid="S2.SS1.p1.m4"><m:math alttext="\Omega" display="inline"><m:mi mathvariant="normal">Ω</m:mi></m:math></Math> is the Rabi frequency between the levels <Math mode="inline" xml:id="S2.SS1.p1.m5" tex="|0\rangle" text="ket@(0)" fragid="S2.SS1.p1.m5"><m:math alttext="|0\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM23">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>
+and <Math mode="inline" xml:id="S2.SS1.p1.m6" tex="|1\rangle" text="ket@(1)" fragid="S2.SS1.p1.m6"><m:math alttext="|1\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM24">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>. Thus a rf pulse with duration time <Math mode="inline" xml:id="S2.SS1.p1.m7" tex="t" text="t" fragid="S2.SS1.p1.m7"><m:math alttext="t" display="inline"><m:mi>t</m:mi></m:math></Math> results in
+the following rotation</p>
+        <equationgroup class="ltx_eqn_eqnarray" xml:id="A0.EGx1" fragid="A0.EGx1">
+          <equation xml:id="S2.Ex1" fragid="S2.Ex1">
+            <MathFork>
+              <Math xml:id="S2.Ex1.m2" tex="\displaystyle|0\rangle\rightarrow\cos\Omega t|0\rangle-\sin\Omega t|1\rangle," text="ket@(0) rightarrow cosine@(Omega * t) * ket@(0) - sine@(Omega * t) * ket@(1)" fragid="S2.Ex1.m2"><m:math alttext="\displaystyle|0\rangle\rightarrow\cos\Omega t|0\rangle-\sin\Omega t|1\rangle," display="inline"><m:mrow><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM25">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>→</m:mo><m:mrow><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM26">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>-</m:mo><m:mrow><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM27">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle|0\rangle\rightarrow\cos\Omega t|0\rangle-\sin\Omega t|1\rangle," xml:id="S2.Ex1.m1" text="ket@(0) rightarrow cosine@(Omega * t) * ket@(0) - sine@(Omega * t) * ket@(1)" fragid="S2.Ex1.m1"><m:math alttext="\displaystyle|0\rangle\rightarrow\cos\Omega t|0\rangle-\sin\Omega t|1\rangle," display="inline"><m:mrow><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM28">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>→</m:mo><m:mrow><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM29">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>-</m:mo><m:mrow><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM30">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation frefnum="(2)" refnum="2" xml:id="S2.E2" fragid="S2.E2">
+            <MathFork>
+              <Math xml:id="S2.E2.m2" tex="\displaystyle|1\rangle\rightarrow\cos\Omega t|1\rangle+\sin\Omega t|0\rangle." text="ket@(1) rightarrow cosine@(Omega * t) * ket@(1) + sine@(Omega * t) * ket@(0)" fragid="S2.E2.m2"><m:math alttext="\displaystyle|1\rangle\rightarrow\cos\Omega t|1\rangle+\sin\Omega t|0\rangle." display="inline"><m:mrow><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM31">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>→</m:mo><m:mrow><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM32">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>+</m:mo><m:mrow><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM33">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle|1\rangle\rightarrow\cos\Omega t|1\rangle+\sin\Omega t|0\rangle." xml:id="S2.E2.m1" text="ket@(1) rightarrow cosine@(Omega * t) * ket@(1) + sine@(Omega * t) * ket@(0)" fragid="S2.E2.m1"><m:math alttext="\displaystyle|1\rangle\rightarrow\cos\Omega t|1\rangle+\sin\Omega t|0\rangle." display="inline"><m:mrow><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM34">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>→</m:mo><m:mrow><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM35">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>+</m:mo><m:mrow><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM36">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>Similarly, single-qubit operations in the basis {<Math mode="inline" xml:id="S2.SS1.p1.m8" tex="|0\rangle" text="ket@(0)" fragid="S2.SS1.p1.m8"><m:math alttext="|0\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM37">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>,
+<Math mode="inline" xml:id="S2.SS1.p1.m9" tex="|e\rangle" text="ket@(e)" fragid="S2.SS1.p1.m9"><m:math alttext="|e\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM38">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>} and {<Math mode="inline" xml:id="S2.SS1.p1.m10" tex="|1\rangle" text="ket@(1)" fragid="S2.SS1.p1.m10"><m:math alttext="|1\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM39">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>, <Math mode="inline" xml:id="S2.SS1.p1.m11" tex="|e\rangle" text="ket@(e)" fragid="S2.SS1.p1.m11"><m:math alttext="|e\rangle" display="inline"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM40">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>} can also be realized.
+In the rest part of this letter, we will use some single qubit
+operations without specifying the interaction time.</p>
+      </para>
+    </subsection>
+    <subsection refnum="II.2" xml:id="S2.SS2" fragid="S2.SS2">
+      <title><tag close=" ">II.2</tag>Cavity-SQUIDs resonant interaction</title>
+      <para xml:id="S2.SS2.p1" fragid="S2.SS2.p1">
+        <p>We then consider 2 rf-SQUID qubits simultaneously interacting with a
+single-mode cavity. The distance of the two qubits is large enough
+so that the interaction between the two SQUIDs is completely
+negligible. If the cavity mode is resonant with the
+<Math mode="inline" xml:id="S2.SS2.p1.m1" tex="|0\rangle\leftrightarrow|1\rangle" text="ket@(0) leftrightarrow ket@(1)" fragid="S2.SS2.p1.m1"><m:math alttext="|0\rangle\leftrightarrow|1\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM41">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM42">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math> transition but far-off
+resonant with the transitions of <Math mode="inline" xml:id="S2.SS2.p1.m2" tex="|0\rangle\leftrightarrow|e\rangle" text="ket@(0) leftrightarrow ket@(e)" fragid="S2.SS2.p1.m2"><m:math alttext="|0\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM43">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM44">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+and <Math mode="inline" xml:id="S2.SS2.p1.m3" tex="|1\rangle\leftrightarrow|e\rangle" text="ket@(1) leftrightarrow ket@(e)" fragid="S2.SS2.p1.m3"><m:math alttext="|1\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM45">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM46">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math> of the 2 rf-SQUIDs, the
+<!-- %**** contents.tex Line 175 **** -->interaction Hamiltonian can be expressed, in the interaction picture
+<cite>(<ref idref="bib.bib27">(27)</ref>)</cite>, as</p>
+        <equation frefnum="(3)" refnum="3" xml:id="S2.E3" labels="LABEL:1" fragid="S2.E3">
+          <Math mode="display" xml:id="S2.E3.m1" tex="H=\Omega_{1}(a^{+}|0\rangle_{1}\langle 1|+a|1\rangle_{1}\langle 0|)+\Omega_{2}%&#10;(a^{+}|0\rangle_{1}\langle 1|+a|1\rangle_{1}\langle 0|)," text="H = Omega _ 1 * a ^ + * (ket@(0)) _ 1 * (quantum-operator-product@(1, + a, 1)) _ 1 * bra@(0) + Omega _ 2 * a ^ + * (ket@(0)) _ 1 * (quantum-operator-product@(1, + a, 1)) _ 1 * bra@(0)" fragid="S2.E3.m1"><m:math alttext="H=\Omega_{1}(a^{+}|0\rangle_{1}\langle 1|+a|1\rangle_{1}\langle 0|)+\Omega_{2}%&#10;(a^{+}|0\rangle_{1}\langle 1|+a|1\rangle_{1}\langle 0|)," display="block"><m:mrow><m:mrow><m:mi>H</m:mi><m:mo>=</m:mo><m:mrow><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM54"><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM47">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM50">1</m:mn><m:mo fence="true" stretchy="false">|</m:mo><m:mrow xml:id="XM53"><m:mo>+</m:mo><m:mi>a</m:mi></m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM48">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM49">0</m:mn><m:mo fence="true" stretchy="false">|</m:mo></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow><m:mo>+</m:mo><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM62"><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM55">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM58">1</m:mn><m:mo fence="true" stretchy="false">|</m:mo><m:mrow xml:id="XM61"><m:mo>+</m:mo><m:mi>a</m:mi></m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM56">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM57">0</m:mn><m:mo fence="true" stretchy="false">|</m:mo></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+        </equation>
+        <p>where <Math mode="inline" xml:id="S2.SS2.p1.m4" tex="\Omega_{1}" text="Omega _ 1" fragid="S2.SS2.p1.m4"><m:math alttext="\Omega_{1}" display="inline"><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub></m:math></Math> and <Math mode="inline" xml:id="S2.SS2.p1.m5" tex="\Omega_{2}" text="Omega _ 2" fragid="S2.SS2.p1.m5"><m:math alttext="\Omega_{2}" display="inline"><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn></m:msub></m:math></Math> are the coupling strength of the
+SQUIDs 1 and 2 with the cavity, respectively. <Math mode="inline" xml:id="S2.SS2.p1.m6" tex="a^{+}" text="a ^ +" fragid="S2.SS2.p1.m6"><m:math alttext="a^{+}" display="inline"><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:math></Math> and <Math mode="inline" xml:id="S2.SS2.p1.m7" tex="a" text="a" fragid="S2.SS2.p1.m7"><m:math alttext="a" display="inline"><m:mi>a</m:mi></m:math></Math> are
+the creation and annihilation operators for the cavity mode. Then we
+can obtain the following evolutions</p>
+        <equationgroup class="ltx_eqn_eqnarray" xml:id="A0.EGx2" fragid="A0.EGx2">
+          <equation xml:id="S2.Ex2" fragid="S2.Ex2">
+            <MathFork>
+              <Math xml:id="S2.Ex2.m4" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}|0\rangle\rightarrow|0\rangle_{1}|0%&#10;\rangle_{2}|0\rangle," text="(ket@(0)) _ 1 * (ket@(0)) _ 2 * ket@(0) rightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 * ket@(0)" fragid="S2.Ex2.m4"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}|0\rangle\rightarrow|0\rangle_{1}|0%&#10;\rangle_{2}|0\rangle," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM63">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM64">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM65">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM66">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM67">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM68">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <tr>
+                  <td align="right">
+                    <Math mode="inline" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}|0\rangle" xml:id="S2.Ex2.m1" text="(ket@(0)) _ 1 * (ket@(0)) _ 2 * ket@(0)" fragid="S2.Ex2.m1"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}|0\rangle" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM69">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM70">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM71">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+                  </td>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle\rightarrow|0\rangle_{1}|0\rangle_{2}|0\rangle," xml:id="S2.Ex2.m3" text="absent rightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 * ket@(0)" fragid="S2.Ex2.m3"><m:math alttext="\displaystyle\rightarrow|0\rangle_{1}|0\rangle_{2}|0\rangle," display="inline"><m:mrow><m:mrow><m:mi/><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM72">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM73">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM74">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S2.Ex3" fragid="S2.Ex3">
+            <MathFork>
+              <Math xml:id="S2.Ex3.m4" tex="\displaystyle|0\rangle_{1}|e\rangle_{2}|0\rangle\rightarrow|0\rangle_{1}|e%&#10;\rangle_{2}|0\rangle," text="(ket@(0)) _ 1 * (ket@(e)) _ 2 * ket@(0) rightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 * ket@(0)" fragid="S2.Ex3.m4"><m:math alttext="\displaystyle|0\rangle_{1}|e\rangle_{2}|0\rangle\rightarrow|0\rangle_{1}|e%&#10;\rangle_{2}|0\rangle," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM75">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM76">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM77">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM78">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM79">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM80">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <tr>
+                  <td align="right">
+                    <Math mode="inline" tex="\displaystyle|0\rangle_{1}|e\rangle_{2}|0\rangle" xml:id="S2.Ex3.m1" text="(ket@(0)) _ 1 * (ket@(e)) _ 2 * ket@(0)" fragid="S2.Ex3.m1"><m:math alttext="\displaystyle|0\rangle_{1}|e\rangle_{2}|0\rangle" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM81">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM82">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM83">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+                  </td>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle\rightarrow|0\rangle_{1}|e\rangle_{2}|0\rangle," xml:id="S2.Ex3.m3" text="absent rightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 * ket@(0)" fragid="S2.Ex3.m3"><m:math alttext="\displaystyle\rightarrow|0\rangle_{1}|e\rangle_{2}|0\rangle," display="inline"><m:mrow><m:mrow><m:mi/><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM84">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM85">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM86">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S2.Ex6" fragid="S2.Ex6">
+            <MathFork>
+              <Math xml:id="S2.Ex6.m4" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}|0\rangle\rightarrow\frac{\Omega_{1}}{%&#10;\Omega}[\frac{1}{\Omega}(\Omega_{1}\cos\Omega t+\frac{\Omega_{2}^{2}}{\Omega_{%&#10;1}})|1\rangle_{1}|0\rangle_{2}|0\rangle+\frac{\Omega_{2}}{\Omega}(\cos\Omega t%&#10;-1)|0\rangle_{1}|1\rangle_{2}|0\rangle-i\sin\Omega t|0\rangle_{1}|0\rangle_{2}%&#10;|1\rangle]," text="(ket@(1)) _ 1 * (ket@(0)) _ 2 * ket@(0) rightarrow (Omega _ 1 / Omega) * delimited-[]@(((1 / Omega) * (Omega _ 1 * cosine@(Omega * t) + (Omega _ 2) ^ 2 / Omega _ 1) * (ket@(1)) _ 1 * (ket@(0)) _ 2 * ket@(0) + (Omega _ 2 / Omega) * (cosine@(Omega * t) - 1) * (ket@(0)) _ 1 * (ket@(1)) _ 2 * ket@(0)) - i * sine@(Omega * t) * (ket@(0)) _ 1 * (ket@(0)) _ 2 * ket@(1))" fragid="S2.Ex6.m4"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}|0\rangle\rightarrow\frac{\Omega_{1}}{%&#10;\Omega}[\frac{1}{\Omega}(\Omega_{1}\cos\Omega t+\frac{\Omega_{2}^{2}}{\Omega_{%&#10;1}})|1\rangle_{1}|0\rangle_{2}|0\rangle+\frac{\Omega_{2}}{\Omega}(\cos\Omega t%&#10;-1)|0\rangle_{1}|1\rangle_{2}|0\rangle-i\sin\Omega t|0\rangle_{1}|0\rangle_{2}%&#10;|1\rangle]," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM87">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM88">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM89">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>→</m:mo><m:mrow><m:mstyle displaystyle="true"><m:mfrac><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">[</m:mo><m:mrow xml:id="XM101"><m:mrow><m:mrow><m:mstyle displaystyle="true"><m:mfrac><m:mn>1</m:mn><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM90"><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow></m:mrow><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mfrac><m:msubsup><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn><m:mn>2</m:mn></m:msubsup><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub></m:mfrac></m:mstyle></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM91">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM92">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM93">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>+</m:mo><m:mrow><m:mstyle displaystyle="true"><m:mfrac><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn></m:msub><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM94"><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM95">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM96">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM97">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo>-</m:mo><m:mrow><m:mi>i</m:mi><m:mo>⁢</m:mo><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM98">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM99">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM100">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo stretchy="false">]</m:mo></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <tr>
+                  <td align="right">
+                    <Math mode="inline" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}|0\rangle" xml:id="S2.Ex4.m1" text="(ket@(1)) _ 1 * (ket@(0)) _ 2 * ket@(0)" fragid="S2.Ex4.m1"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}|0\rangle" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM102">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM103">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM104">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+                  </td>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle\rightarrow\frac{\Omega_{1}}{\Omega}[\frac{1}{\Omega}(\Omega_{1}%&#10;\cos\Omega t+\frac{\Omega_{2}^{2}}{\Omega_{1}})|1\rangle_{1}|0\rangle_{2}|0\rangle" xml:id="S2.Ex4.m3" fragid="S2.Ex4.m3"><m:math alttext="\displaystyle\rightarrow\frac{\Omega_{1}}{\Omega}[\frac{1}{\Omega}(\Omega_{1}%&#10;\cos\Omega t+\frac{\Omega_{2}^{2}}{\Omega_{1}})|1\rangle_{1}|0\rangle_{2}|0\rangle" display="inline"><m:mrow><m:msub><m:mrow><m:mo>→</m:mo><m:mstyle displaystyle="true"><m:mfrac><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:msub><m:mrow><m:mo stretchy="false">[</m:mo><m:mstyle displaystyle="true"><m:mfrac><m:mn>1</m:mn><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mi>cos</m:mi><m:mi mathvariant="normal">Ω</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mfrac><m:msubsup><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn><m:mn>2</m:mn></m:msubsup><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub></m:mfrac></m:mstyle><m:mo stretchy="false">)</m:mo></m:mrow><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM106">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM107">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM108">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right"/>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle+\frac{\Omega_{2}}{\Omega}(\cos\Omega t-1)|0\rangle_{1}|1\rangle_%&#10;{2}|0\rangle" xml:id="S2.Ex5.m3" text="+ (Omega _ 2 / Omega) * (cosine@(Omega * t) - 1) * (ket@(0)) _ 1 * (ket@(1)) _ 2 * ket@(0)" fragid="S2.Ex5.m3"><m:math alttext="\displaystyle+\frac{\Omega_{2}}{\Omega}(\cos\Omega t-1)|0\rangle_{1}|1\rangle_%&#10;{2}|0\rangle" display="inline"><m:mrow><m:mo>+</m:mo><m:mrow><m:mstyle displaystyle="true"><m:mfrac><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn></m:msub><m:mi mathvariant="normal">Ω</m:mi></m:mfrac></m:mstyle><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM110"><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM111">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM112">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM113">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right"/>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle-i\sin\Omega t|0\rangle_{1}|0\rangle_{2}|1\rangle]," xml:id="S2.Ex6.m3" fragid="S2.Ex6.m3"><m:math alttext="\displaystyle-i\sin\Omega t|0\rangle_{1}|0\rangle_{2}|1\rangle]," display="inline"><m:mrow><m:mrow><m:msub><m:mrow><m:msub><m:mrow><m:mo>-</m:mo><m:mi>i</m:mi><m:mi>sin</m:mi><m:mi mathvariant="normal">Ω</m:mi><m:mi>t</m:mi><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM114">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM115">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo stretchy="false">|</m:mo><m:mn xml:id="XM116">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S2.E4" refnum="4" frefnum="(4)" fragid="S2.E4">
+            <MathFork>
+              <Math xml:id="S2.E4.m4" tex="\displaystyle|1\rangle_{1}|e\rangle_{2}|0\rangle\rightarrow(\cos\Omega_{1}t|1%&#10;\rangle_{1}|0\rangle-i\sin\Omega_{1}t|0\rangle_{1}|1\rangle)|e\rangle_{2}," text="(ket@(1)) _ 1 * (ket@(e)) _ 2 * ket@(0) rightarrow (cosine@(Omega _ 1 * t) * (ket@(1)) _ 1 * ket@(0) - i * sine@(Omega _ 1 * t) * (ket@(0)) _ 1 * ket@(1)) * (ket@(e)) _ 2" fragid="S2.E4.m4"><m:math alttext="\displaystyle|1\rangle_{1}|e\rangle_{2}|0\rangle\rightarrow(\cos\Omega_{1}t|1%&#10;\rangle_{1}|0\rangle-i\sin\Omega_{1}t|0\rangle_{1}|1\rangle)|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM117">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM118">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM119">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>→</m:mo><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM124"><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM120">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM121">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>-</m:mo><m:mrow><m:mi>i</m:mi><m:mo>⁢</m:mo><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM122">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM123">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM125">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              <MathBranch>
+                <tr>
+                  <td align="right">
+                    <Math mode="inline" tex="\displaystyle|1\rangle_{1}|e\rangle_{2}|0\rangle" xml:id="S2.E4.m1" text="(ket@(1)) _ 1 * (ket@(e)) _ 2 * ket@(0)" fragid="S2.E4.m1"><m:math alttext="\displaystyle|1\rangle_{1}|e\rangle_{2}|0\rangle" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM126">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM127">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM128">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>
+                  </td>
+                  <td align="center"/>
+                  <td align="left">
+                    <Math mode="inline" tex="\displaystyle\rightarrow(\cos\Omega_{1}t|1\rangle_{1}|0\rangle-i\sin\Omega_{1}%&#10;t|0\rangle_{1}|1\rangle)|e\rangle_{2}," xml:id="S2.E4.m3" text="absent rightarrow (cosine@(Omega _ 1 * t) * (ket@(1)) _ 1 * ket@(0) - i * sine@(Omega _ 1 * t) * (ket@(0)) _ 1 * ket@(1)) * (ket@(e)) _ 2" fragid="S2.E4.m3"><m:math alttext="\displaystyle\rightarrow(\cos\Omega_{1}t|1\rangle_{1}|0\rangle-i\sin\Omega_{1}%&#10;t|0\rangle_{1}|1\rangle)|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mi/><m:mo>→</m:mo><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM133"><m:mrow><m:mrow><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM129">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM130">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo>-</m:mo><m:mrow><m:mi>i</m:mi><m:mo>⁢</m:mo><m:mrow><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM131">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM132">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM134">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+                  </td>
+                </tr>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>where <Math mode="inline" xml:id="S2.SS2.p1.m8" tex="\Omega=\sqrt{\Omega_{1}^{2}+\Omega_{2}^{2}}" text="Omega = square-root@((Omega _ 1) ^ 2 + (Omega _ 2) ^ 2)" fragid="S2.SS2.p1.m8"><m:math alttext="\Omega=\sqrt{\Omega_{1}^{2}+\Omega_{2}^{2}}" display="inline"><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:msubsup><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn><m:mn>2</m:mn></m:msubsup></m:mrow></m:msqrt></m:mrow></m:math></Math>.
+<!-- %**** contents.tex Line 200 **** --></p>
+      </para>
+    </subsection>
+  </section>
+  <section refnum="III" xml:id="S3" fragid="S3">
+    <title><tag close=" ">III</tag>QCPG operation</title>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>Now, we consider the implementation of the 2-qubit QCPG.</p>
+    </para>
+    <para xml:id="S3.p2" fragid="S3.p2">
+      <p>Step 1. Let qubit 2 interact with a classical fields tuned to the
+transition <Math mode="inline" xml:id="S3.p2.m1" tex="|1\rangle\leftrightarrow|e\rangle" text="ket@(1) leftrightarrow ket@(e)" fragid="S3.p2.m1"><m:math alttext="|1\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM135">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM136">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math>. Choosing the
+amplitude and phase of the classical field appropriately, one
+obtains the transition <Math mode="inline" xml:id="S3.p2.m2" tex="|1\rangle_{2}\longrightarrow|e\rangle_{2}" text="(ket@(1)) _ 2 longrightarrow (ket@(e)) _ 2" fragid="S3.p2.m2"><m:math alttext="|1\rangle_{2}\longrightarrow|e\rangle_{2}" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM137">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⟶</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM138">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:math></Math>.</p>
+    </para>
+    <para xml:id="S3.p3" fragid="S3.p3">
+      <p>Step 2. Send the two SQUID qubits simultaneously to the vacuum
+cavity. If we choose <Math mode="inline" xml:id="S3.p3.m1" tex="\Omega_{1}t=\pi" text="Omega _ 1 * t = pi" fragid="S3.p3.m1"><m:math alttext="\Omega_{1}t=\pi" display="inline"><m:mrow><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:mi>t</m:mi></m:mrow><m:mo>=</m:mo><m:mi>π</m:mi></m:mrow></m:math></Math> and
+<Math mode="inline" xml:id="S3.p3.m2" tex="\Omega_{2}=\sqrt{3}\Omega_{1}" text="Omega _ 2 = square-root@(3) * Omega _ 1" fragid="S3.p3.m2"><m:math alttext="\Omega_{2}=\sqrt{3}\Omega_{1}" display="inline"><m:mrow><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>⁢</m:mo><m:msub><m:mi mathvariant="normal">Ω</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mrow></m:math></Math>, which can be achieved by choosing
+coupling strengths and interaction time appropriately. Then we have</p>
+      <equationgroup class="ltx_eqn_eqnarray" xml:id="A0.EGx3" fragid="A0.EGx3">
+        <equation xml:id="S3.Ex7" fragid="S3.Ex7">
+          <MathFork>
+            <Math xml:id="S3.Ex7.m2" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}\rightarrow|0\rangle_{1}|0\rangle_{2},|%&#10;0\rangle_{1}|e\rangle_{2}\rightarrow|0\rangle_{1}|e\rangle_{2}," text="formulae@((ket@(0)) _ 1 * (ket@(0)) _ 2 rightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2, (ket@(0)) _ 1 * (ket@(e)) _ 2 rightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2)" fragid="S3.Ex7.m2"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}\rightarrow|0\rangle_{1}|0\rangle_{2},|%&#10;0\rangle_{1}|e\rangle_{2}\rightarrow|0\rangle_{1}|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow xml:id="XM147"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM139">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM140">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM141">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM142">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo><m:mrow xml:id="XM148"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM143">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM144">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM145">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM146">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}\rightarrow|0\rangle_{1}|0\rangle_{2},|%&#10;0\rangle_{1}|e\rangle_{2}\rightarrow|0\rangle_{1}|e\rangle_{2}," xml:id="S3.Ex7.m1" text="formulae@((ket@(0)) _ 1 * (ket@(0)) _ 2 rightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2, (ket@(0)) _ 1 * (ket@(e)) _ 2 rightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2)" fragid="S3.Ex7.m1"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}\rightarrow|0\rangle_{1}|0\rangle_{2},|%&#10;0\rangle_{1}|e\rangle_{2}\rightarrow|0\rangle_{1}|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow xml:id="XM157"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM149">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM150">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM151">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM152">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo><m:mrow xml:id="XM158"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM153">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM154">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM155">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM156">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+        <equation frefnum="(5)" refnum="5" xml:id="S3.E5" fragid="S3.E5">
+          <MathFork>
+            <Math xml:id="S3.E5.m2" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}\rightarrow|1\rangle_{1}|0\rangle_{2},|%&#10;1\rangle_{1}|e\rangle_{2}\rightarrow-|1\rangle_{1}|e\rangle_{2}," text="formulae@((ket@(1)) _ 1 * (ket@(0)) _ 2 rightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2, (ket@(1)) _ 1 * (ket@(e)) _ 2 rightarrow - (ket@(1)) _ 1 * (ket@(e)) _ 2)" fragid="S3.E5.m2"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}\rightarrow|1\rangle_{1}|0\rangle_{2},|%&#10;1\rangle_{1}|e\rangle_{2}\rightarrow-|1\rangle_{1}|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow xml:id="XM167"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM159">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM160">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM161">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM162">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo><m:mrow xml:id="XM168"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM163">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM164">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM165">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM166">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}\rightarrow|1\rangle_{1}|0\rangle_{2},|%&#10;1\rangle_{1}|e\rangle_{2}\rightarrow-|1\rangle_{1}|e\rangle_{2}," xml:id="S3.E5.m1" text="formulae@((ket@(1)) _ 1 * (ket@(0)) _ 2 rightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2, (ket@(1)) _ 1 * (ket@(e)) _ 2 rightarrow - (ket@(1)) _ 1 * (ket@(e)) _ 2)" fragid="S3.E5.m1"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}\rightarrow|1\rangle_{1}|0\rangle_{2},|%&#10;1\rangle_{1}|e\rangle_{2}\rightarrow-|1\rangle_{1}|e\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow xml:id="XM177"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM169">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM170">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM171">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM172">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo><m:mrow xml:id="XM178"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM173">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM174">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>→</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM175">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM176">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+      <p>where we have omitted the cavity state, which was left in the vacuum
+state.</p>
+    </para>
+    <para xml:id="S3.p4" fragid="S3.p4">
+      <p>Step 3. Let qubit 2 interact again with a classical field tuned to
+the transition <Math mode="inline" xml:id="S3.p4.m1" tex="|1\rangle\leftrightarrow|e\rangle" text="ket@(1) leftrightarrow ket@(e)" fragid="S3.p4.m1"><m:math alttext="|1\rangle\leftrightarrow|e\rangle" display="inline"><m:mrow><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM179">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>↔</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM180">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow></m:math></Math> and one obtains
+the transition <Math mode="inline" xml:id="S3.p4.m2" tex="|e\rangle_{2}\longrightarrow|1\rangle_{2}" text="(ket@(e)) _ 2 longrightarrow (ket@(1)) _ 2" fragid="S3.p4.m2"><m:math alttext="|e\rangle_{2}\longrightarrow|1\rangle_{2}" display="inline"><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM181">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⟶</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM182">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:math></Math>.
+<!-- %**** contents.tex Line 225 **** --></p>
+    </para>
+    <para xml:id="S3.p5" fragid="S3.p5">
+      <p>The states of the system after each of the above steps can be
+described as</p>
+      <equationgroup class="ltx_eqn_eqnarray" xml:id="A0.EGx4" fragid="A0.EGx4">
+        <equation xml:id="S3.Ex8" fragid="S3.Ex8">
+          <MathFork>
+            <Math xml:id="S3.Ex8.m2" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0%&#10;\rangle_{2}," text="(ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2" fragid="S3.Ex8.m2"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM183">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM184">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM185">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM186">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM187">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM188">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM189">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM190">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0%&#10;\rangle_{2}," xml:id="S3.Ex8.m1" text="(ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(0)) _ 2" fragid="S3.Ex8.m1"><m:math alttext="\displaystyle|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|0\rangle_{2}\longrightarrow|0\rangle_{1}|0%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM191">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM192">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM193">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM194">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM195">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM196">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM197">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM198">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+        <equation xml:id="S3.Ex9" fragid="S3.Ex9">
+          <MathFork>
+            <Math xml:id="S3.Ex9.m2" tex="\displaystyle|0\rangle_{1}|1\rangle_{2}\longrightarrow|0\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|e\rangle_{2}\longrightarrow|0\rangle_{1}|1%&#10;\rangle_{2}," text="(ket@(0)) _ 1 * (ket@(1)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(1)) _ 2" fragid="S3.Ex9.m2"><m:math alttext="\displaystyle|0\rangle_{1}|1\rangle_{2}\longrightarrow|0\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|e\rangle_{2}\longrightarrow|0\rangle_{1}|1%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM199">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM200">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM201">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM202">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM203">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM204">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM205">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM206">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|0\rangle_{1}|1\rangle_{2}\longrightarrow|0\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|e\rangle_{2}\longrightarrow|0\rangle_{1}|1%&#10;\rangle_{2}," xml:id="S3.Ex9.m1" text="(ket@(0)) _ 1 * (ket@(1)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(e)) _ 2 longrightarrow (ket@(0)) _ 1 * (ket@(1)) _ 2" fragid="S3.Ex9.m1"><m:math alttext="\displaystyle|0\rangle_{1}|1\rangle_{2}\longrightarrow|0\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow|0\rangle_{1}|e\rangle_{2}\longrightarrow|0\rangle_{1}|1%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM207">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM208">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM209">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM210">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM211">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM212">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM213">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM214">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+        <equation xml:id="S3.Ex10" fragid="S3.Ex10">
+          <MathFork>
+            <Math xml:id="S3.Ex10.m2" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0%&#10;\rangle_{2}," text="(ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2" fragid="S3.Ex10.m2"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM215">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM216">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM217">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM218">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM219">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM220">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM221">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM222">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0%&#10;\rangle_{2}," xml:id="S3.Ex10.m1" text="(ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(0)) _ 2" fragid="S3.Ex10.m1"><m:math alttext="\displaystyle|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0\rangle_{%&#10;2}\longrightarrow|1\rangle_{1}|0\rangle_{2}\longrightarrow|1\rangle_{1}|0%&#10;\rangle_{2}," display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM223">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM224">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM225">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM226">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM227">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM228">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM229">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM230">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+        <equation frefnum="(6)" refnum="6" xml:id="S3.E6" fragid="S3.E6">
+          <MathFork>
+            <Math xml:id="S3.E6.m2" tex="\displaystyle|1\rangle_{1}|1\rangle_{2}\longrightarrow|1\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow-|1\rangle_{1}|e\rangle_{2}\longrightarrow-|1\rangle_{1}|1%&#10;\rangle_{2}." text="(ket@(1)) _ 1 * (ket@(1)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(e)) _ 2 longrightarrow - (ket@(1)) _ 1 * (ket@(e)) _ 2 longrightarrow - (ket@(1)) _ 1 * (ket@(1)) _ 2" fragid="S3.E6.m2"><m:math alttext="\displaystyle|1\rangle_{1}|1\rangle_{2}\longrightarrow|1\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow-|1\rangle_{1}|e\rangle_{2}\longrightarrow-|1\rangle_{1}|1%&#10;\rangle_{2}." display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM231">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM232">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM233">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM234">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM235">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM236">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>⟶</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM237">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM238">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle|1\rangle_{1}|1\rangle_{2}\longrightarrow|1\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow-|1\rangle_{1}|e\rangle_{2}\longrightarrow-|1\rangle_{1}|1%&#10;\rangle_{2}." xml:id="S3.E6.m1" text="(ket@(1)) _ 1 * (ket@(1)) _ 2 longrightarrow (ket@(1)) _ 1 * (ket@(e)) _ 2 longrightarrow - (ket@(1)) _ 1 * (ket@(e)) _ 2 longrightarrow - (ket@(1)) _ 1 * (ket@(1)) _ 2" fragid="S3.E6.m1"><m:math alttext="\displaystyle|1\rangle_{1}|1\rangle_{2}\longrightarrow|1\rangle_{1}|e\rangle_{%&#10;2}\longrightarrow-|1\rangle_{1}|e\rangle_{2}\longrightarrow-|1\rangle_{1}|1%&#10;\rangle_{2}." display="inline"><m:mrow><m:mrow><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM239">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM240">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM241">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM242">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo>⟶</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM243">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mi xml:id="XM244">e</m:mi><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow><m:mo>⟶</m:mo><m:mrow><m:mo>-</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM245">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM246">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+      <p>The above transformations correspond to 2-qubit QCPG operation,
+where qubit 1 and 2 are the control and target qubit, respectively.
+In this way, a scheme for implementing the 2-qubit QCPG based on
+cavity-SQUID system is proposed. Our scheme is achieved without any
+type of measurement, does not use the cavity mode as the data bus
+and only requires a single resonant interaction of the SQUID-cavity
+system. Thus the presented scheme is very simple and the required
+interaction time is very short. The simplification of the process
+and the reduction of the operation time are important for
+suppressing decoherence.</p>
+    </para>
+  </section>
+  <section refnum="IV" xml:id="S4" fragid="S4">
+    <title><tag close=" ">IV</tag>Generation of cluster states</title>
+    <!-- %**** contents.tex Line 250 **** -->
+    <para xml:id="S4.p1" fragid="S4.p1">
+      <p>Now, we consider the generation of the cluster states. Firstly, we
+focus on the 2-qubit cluster state case. Initially, rf-SQUIDs 1 and
+2 have been prepared in the state <Math mode="inline" xml:id="S4.p1.m1" tex="1/\sqrt{2}(|0\rangle+|1\rangle)" text="(1 / square-root@(2)) * (ket@(0) + ket@(1))" fragid="S4.p1.m1"><m:math alttext="1/\sqrt{2}(|0\rangle+|1\rangle)" display="inline"><m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM249"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM247">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM248">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:math></Math>
+and the cavity in vacuum state <Math mode="inline" xml:id="S4.p1.m2" tex="|0\rangle_{C}" text="(ket@(0)) _ C" fragid="S4.p1.m2"><m:math alttext="|0\rangle_{C}" display="inline"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM250">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>C</m:mi></m:msub></m:math></Math>. Thus the state of the
+quantum system is</p>
+      <equation frefnum="(7)" refnum="7" xml:id="S4.E7" fragid="S4.E7">
+        <Math mode="display" xml:id="S4.E7.m1" tex="\frac{1}{2}(|0\rangle_{1}+|1\rangle_{1})(|0\rangle_{2}+|1\rangle_{2})|0\rangle%&#10;_{C}." text="(1 / 2) * ((ket@(0)) _ 1 + (ket@(1)) _ 1) * ((ket@(0)) _ 2 + (ket@(1)) _ 2) * (ket@(0)) _ C" fragid="S4.E7.m1"><m:math alttext="\frac{1}{2}(|0\rangle_{1}+|1\rangle_{1})(|0\rangle_{2}+|1\rangle_{2})|0\rangle%&#10;_{C}." display="block"><m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM253"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM251">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM252">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM256"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM254">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM255">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM257">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>C</m:mi></m:msub></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+      </equation>
+      <p>Repeat the process of the above 2-qubit QCPG operation on rf-SQUIDs
+1 and 2 with the aid of the cavity. After the gate operation the
+state of the quantum system will evolve to</p>
+      <equation frefnum="(8)" refnum="8" xml:id="S4.E8" labels="LABEL:b2" fragid="S4.E8">
+        <Math mode="display" xml:id="S4.E8.m1" tex="\frac{1}{2}(|0\rangle_{1}+|1\rangle_{1}\sigma_{1})(|0\rangle_{2}+|1\rangle_{2})," text="(1 / 2) * ((ket@(0)) _ 1 + (ket@(1)) _ 1 * sigma _ 1) * ((ket@(0)) _ 2 + (ket@(1)) _ 2)" fragid="S4.E8.m1"><m:math alttext="\frac{1}{2}(|0\rangle_{1}+|1\rangle_{1}\sigma_{1})(|0\rangle_{2}+|1\rangle_{2})," display="block"><m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM260"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM258">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM259">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>1</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mi>σ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM263"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM261">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM262">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+      </equation>
+      <p>where <Math mode="inline" xml:id="S4.p1.m3" tex="\sigma_{1}=|0\rangle_{2}\langle 0|-|1\rangle_{2}\langle 1|" text="sigma _ 1 = (ket@(0)) _ 2 * (quantum-operator-product@(0, -, 1)) _ 2 * bra@(1)" fragid="S4.p1.m3"><m:math alttext="\sigma_{1}=|0\rangle_{2}\langle 0|-|1\rangle_{2}\langle 1|" display="inline"><m:mrow><m:msub><m:mi>σ</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM264">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM267">0</m:mn><m:mo fence="true" stretchy="false">|</m:mo><m:mo xml:id="XM268">-</m:mo><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM265">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM266">1</m:mn><m:mo fence="true" stretchy="false">|</m:mo></m:mrow></m:mrow></m:mrow></m:math></Math> and we
+have omitted the state of the cavity, which is left in the vacuum
+state and disentangled with the prepared entangled state. The state
+in Eq. (<ref labelref="LABEL:b2" title="(8) ‣ IV Generation of cluster states ‣ Quantum controlled phase gate and cluster states generation via two superconducting&#10;quantum interference devices in a cavity"><text class="ltx_ref_tag">8</text></ref>) is a bipartite cluster state.</p>
+    </para>
+    <para xml:id="S4.p2" fragid="S4.p2">
+      <p>Next, we consider the generation of <emph>N</emph>-qubit cluster state.
+Assume all the <emph>N</emph> rf-SQUIDs have been prepared in the state
+<Math mode="inline" xml:id="S4.p2.m1" tex="1/\sqrt{2}(|0\rangle+|1\rangle)" text="(1 / square-root@(2)) * (ket@(0) + ket@(1))" fragid="S4.p2.m1"><m:math alttext="1/\sqrt{2}(|0\rangle+|1\rangle)" display="inline"><m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM271"><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM269">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM270">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:math></Math> and a cavity in the vacuum state.
+the initial state of the system is</p>
+      <equation frefnum="(9)" refnum="9" xml:id="S4.E9" labels="LABEL:ni" fragid="S4.E9">
+        <Math mode="display" xml:id="S4.E9.m1" tex="\frac{1}{\sqrt{2^{N}}}\bigotimes_{i=1}^{N}(|0\rangle_{i}+|1\rangle_{i})|0%&#10;\rangle_{C}." text="(1 / square-root@(2 ^ N)) * ((tensor-product _ (i = 1)) ^ N)@(((ket@(0)) _ i + (ket@(1)) _ i) * (ket@(0)) _ C)" fragid="S4.E9.m1"><m:math alttext="\frac{1}{\sqrt{2^{N}}}\bigotimes_{i=1}^{N}(|0\rangle_{i}+|1\rangle_{i})|0%&#10;\rangle_{C}." display="block"><m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:msqrt><m:msup><m:mn>2</m:mn><m:mi>N</m:mi></m:msup></m:msqrt></m:mfrac><m:mo>⁢</m:mo><m:mrow><m:munderover><m:mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:munderover><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM274"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM272">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>i</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM273">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>i</m:mi></m:msub></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM275">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>C</m:mi></m:msub></m:mrow></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></Math>
+      </equation>
+      <p>For rf-SQUID <Math mode="inline" xml:id="S4.p2.m2" tex="i" text="i" fragid="S4.p2.m2"><m:math alttext="i" display="inline"><m:mi>i</m:mi></m:math></Math> (<Math mode="inline" xml:id="S4.p2.m3" tex="i&lt;N" text="i less N" fragid="S4.p2.m3"><m:math alttext="i&lt;N" display="inline"><m:mrow><m:mi>i</m:mi><m:mo>&lt;</m:mo><m:mi>N</m:mi></m:mrow></m:math></Math>), repeat the above procedures for generating
+bipartite cluster state on the rf-SQUIDs <Math mode="inline" xml:id="S4.p2.m4" tex="i" text="i" fragid="S4.p2.m4"><m:math alttext="i" display="inline"><m:mi>i</m:mi></m:math></Math>, (<Math mode="inline" xml:id="S4.p2.m5" tex="i+1" text="i + 1" fragid="S4.p2.m5"><m:math alttext="i+1" display="inline"><m:mrow><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></Math>) and the cavity
+(these selective interactions can be embodied via frequency
+matching) and end the process when <Math mode="inline" xml:id="S4.p2.m6" tex="i=N" text="i = N" fragid="S4.p2.m6"><m:math alttext="i=N" display="inline"><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mi>N</m:mi></m:mrow></m:math></Math>. Then the <emph>N</emph>
+rf-SQUIDs will be prepared in</p>
+      <equation frefnum="(10)" refnum="10" xml:id="S4.E10" labels="LABEL:n" fragid="S4.E10">
+        <Math mode="display" xml:id="S4.E10.m1" tex="\frac{1}{\sqrt{2^{N}}}\bigotimes_{i=1}^{(N-1)}(|0\rangle_{i}+|1\rangle_{i}%&#10;\sigma_{i})(|0\rangle_{N}+|1\rangle_{N})," text="(1 / square-root@(2 ^ N)) * ((tensor-product _ (i = 1)) ^ (N - 1))@(((ket@(0)) _ i + (ket@(1)) _ i * sigma _ i) * ((ket@(0)) _ N + (ket@(1)) _ N))" fragid="S4.E10.m1"><m:math alttext="\frac{1}{\sqrt{2^{N}}}\bigotimes_{i=1}^{(N-1)}(|0\rangle_{i}+|1\rangle_{i}%&#10;\sigma_{i})(|0\rangle_{N}+|1\rangle_{N})," display="block"><m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:msqrt><m:msup><m:mn>2</m:mn><m:mi>N</m:mi></m:msup></m:msqrt></m:mfrac><m:mo>⁢</m:mo><m:mrow><m:munderover><m:mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM276"><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:munderover><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM279"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM277">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>i</m:mi></m:msub><m:mo>+</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM278">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>i</m:mi></m:msub><m:mo>⁢</m:mo><m:msub><m:mi>σ</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM282"><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM280">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>N</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM281">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mi>N</m:mi></m:msub></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mo>,</m:mo></m:mrow></m:math></Math>
+      </equation>
+      <p>with
+<Math mode="inline" xml:id="S4.p2.m7" tex="\sigma_{i}=|0\rangle_{(i+1)}\langle 0|-|1\rangle_{(i+1)}\langle 1|" text="sigma _ i = (ket@(0)) _ (i + 1) * (quantum-operator-product@(0, -, 1)) _ (i + 1) * bra@(1)" fragid="S4.p2.m7"><m:math alttext="\sigma_{i}=|0\rangle_{(i+1)}\langle 0|-|1\rangle_{(i+1)}\langle 1|" display="inline"><m:mrow><m:msub><m:mi>σ</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:msub><m:mrow><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM285">0</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM283"><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:msub><m:mo>⁢</m:mo><m:msub><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM288">0</m:mn><m:mo fence="true" stretchy="false">|</m:mo><m:mo xml:id="XM289">-</m:mo><m:mo fence="true" stretchy="false">|</m:mo><m:mn xml:id="XM286">1</m:mn><m:mo stretchy="false">⟩</m:mo></m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow xml:id="XM284"><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:msub><m:mo>⁢</m:mo><m:mrow><m:mo stretchy="false">⟨</m:mo><m:mn xml:id="XM287">1</m:mn><m:mo fence="true" stretchy="false">|</m:mo></m:mrow></m:mrow></m:mrow></m:math></Math>.
+The state in (<ref labelref="LABEL:n" title="(10) ‣ IV Generation of cluster states ‣ Quantum controlled phase gate and cluster states generation via two superconducting&#10;quantum interference devices in a cavity"><text class="ltx_ref_tag">10</text></ref>) is the <emph>N</emph>-qubit cluster state and we
+have omitted the state of the cavity, which is disentangled with the
+cluster state.</p>
+    </para>
+    <para xml:id="S4.p3" fragid="S4.p3">
+      <p>For the case of the inevitable imperfectness of the experimental
+exploration of our scheme, it is very reasonable that one can only
+generate the cluster state of a certain length we label this
+critical number as <Math mode="inline" xml:id="S4.p3.m1" tex="n_{c}" text="n _ c" fragid="S4.p3.m1"><m:math alttext="n_{c}" display="inline"><m:msub><m:mi>n</m:mi><m:mi>c</m:mi></m:msub></m:math></Math>. To generate a cluster chain of a length
+<Math mode="inline" xml:id="S4.p3.m2" tex="n&gt;n_{c}" text="n &gt; n _ c" fragid="S4.p3.m2"><m:math alttext="n&gt;n_{c}" display="inline"><m:mrow><m:mi>n</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>n</m:mi><m:mi>c</m:mi></m:msub></m:mrow></m:math></Math>, we can simply parallelling generate cluster chains of
+length under the critical number and then fuse them together to
+further increase its length. This idea can also be perfected even if
+<!-- %**** contents.tex Line 300 **** -->the QDPG is not deterministically <cite>(<ref idref="bib.bib23">(23)</ref>)</cite>. In Ref.
+<cite>(<ref idref="bib.bib23">(23)</ref>)</cite>, Duan et al. also generalized the idea to the
+generation of two-dimensional square lattice cluster states from a
+set of cluster chains with QCPG only succeed with an arbitrarily
+small probability. The two-dimensional square lattice cluster state
+prepared at numerous qubits is a universal ”substrate” for quantum
+computation. After the preparation of the states, the remaining work
+is only to perform single-qubit measurements, and the final results
+are read out from those qubits that were not measured in the whole
+process. In this sprit, many recent schemes
+<cite>(<ref idref="bib.bib23">(23)</ref>; <ref idref="bib.bib25">(25)</ref>; <ref idref="bib.bib28">(28)</ref>)</cite> have shown how to use probabilistic
+gate operations to construct entangled states with certainty. Our
+scheme is of deterministic nature, thus it holds more promising
+future.</p>
+    </para>
+  </section>
+  <section refnum="V" xml:id="S5" fragid="S5">
+    <title><tag close=" ">V</tag>Discussions and conclusion</title>
+    <para xml:id="S5.p1" fragid="S5.p1">
+      <p>Before ending the paper, we briefly address the experimental
+feasibility of the proposed scheme. Among the variety of systems
+being explored for hardware implementations for quantum computation,
+the cavity-SQUID system, as well as other solid state circuits, is
+favored because it is easy embedded in electronic circuits and
+scaled up to large registers <cite>(<ref idref="bib.bib29">(29)</ref>)</cite>, and the control and
+measurement techniques are quite advanced <cite>(<ref idref="bib.bib30">(30)</ref>)</cite>. The
+interaction time can be perfectly controlled by external control.
+The time constants involved are long enough to realize all the
+<!-- %**** contents.tex Line 325 **** -->required manipulations <cite>(<ref idref="bib.bib9">(9)</ref>)</cite>. Finally, coupling between
+microwave pulses and any particular rf-SQUID qubit can be obtained
+selectively via frequency matching. Thus our scheme might be
+realizable within current technology.</p>
+    </para>
+    <para xml:id="S5.p2" fragid="S5.p2">
+      <p>For the sake of definitiveness, let us estimate the experimental
+feasibility of realizing the logic gates using SQUIDs with the
+parameters already available in present experiment
+<cite>(<ref idref="bib.bib31">(31)</ref>; <ref idref="bib.bib32">(32)</ref>; <ref idref="bib.bib33">(33)</ref>)</cite>. Suppose the quality
+factor of the superconducting cavity is <Math mode="inline" xml:id="S5.p2.m1" tex="Q=1\times 10^{6}" text="Q = 1 * 10 ^ 6" fragid="S5.p2.m1"><m:math alttext="Q=1\times 10^{6}" display="inline"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mn>6</m:mn></m:msup></m:mrow></m:mrow></m:math></Math> and the
+cavity mode frequency is <Math mode="inline" xml:id="S5.p2.m2" tex="\omega_{c}=50" text="omega _ c = 50" fragid="S5.p2.m2"><m:math alttext="\omega_{c}=50" display="inline"><m:mrow><m:msub><m:mi>ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>50</m:mn></m:mrow></m:math></Math>GHz, the cavity decay time is
+<Math mode="inline" xml:id="S5.p2.m3" tex="k^{-1}=Q/\omega_{c}=20" text="k ^ (- 1) = Q / omega _ c = 20" fragid="S5.p2.m3"><m:math alttext="k^{-1}=Q/\omega_{c}=20" display="inline"><m:mrow><m:msup><m:mi>k</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mrow><m:mi>Q</m:mi><m:mo>/</m:mo><m:msub><m:mi>ω</m:mi><m:mi>c</m:mi></m:msub></m:mrow><m:mo>=</m:mo><m:mn>20</m:mn></m:mrow></m:math></Math><Math mode="inline" xml:id="S5.p2.m4" tex="\mu" text="mu" fragid="S5.p2.m4"><m:math alttext="\mu" display="inline"><m:mi>μ</m:mi></m:math></Math>s. The realistic length of the cavity is
+<Math mode="inline" xml:id="S5.p2.m5" tex="l=1.4" text="l = 1.4" fragid="S5.p2.m5"><m:math alttext="l=1.4" display="inline"><m:mrow><m:mi>l</m:mi><m:mo>=</m:mo><m:mn>1.4</m:mn></m:mrow></m:math></Math>mm, when the two SQUIDa are located each at one of the
+antinodes of the cavity, the distance of them, <Math mode="inline" xml:id="S5.p2.m6" tex="D" text="D" fragid="S5.p2.m6"><m:math alttext="D" display="inline"><m:mi>D</m:mi></m:math></Math>, is equal to the
+length of the cavity. For SQUIDs of size <Math mode="inline" xml:id="S5.p2.m7" tex="d=40" text="d = 40" fragid="S5.p2.m7"><m:math alttext="d=40" display="inline"><m:mrow><m:mi>d</m:mi><m:mo>=</m:mo><m:mn>40</m:mn></m:mrow></m:math></Math><Math mode="inline" xml:id="S5.p2.m8" tex="\mu" text="mu" fragid="S5.p2.m8"><m:math alttext="\mu" display="inline"><m:mi>μ</m:mi></m:math></Math>s, we get
+<Math mode="inline" xml:id="S5.p2.m9" tex="D/d=35" text="D / d = 35" fragid="S5.p2.m9"><m:math alttext="D/d=35" display="inline"><m:mrow><m:mrow><m:mi>D</m:mi><m:mo>/</m:mo><m:mi>d</m:mi></m:mrow><m:mo>=</m:mo><m:mn>35</m:mn></m:mrow></m:math></Math> which perfectly satisfies the requirement of <Math mode="inline" xml:id="S5.p2.m10" tex="D\gg d" text="D &gt;&gt; d" fragid="S5.p2.m10"><m:math alttext="D\gg d" display="inline"><m:mrow><m:mi>D</m:mi><m:mo>≫</m:mo><m:mi>d</m:mi></m:mrow></m:math></Math>. The
+upper state energy relaxation constant is <Math mode="inline" xml:id="S5.p2.m11" tex="\gamma_{e}^{-1}=2.5" text="(gamma _ e) ^ (- 1) = 2.5" fragid="S5.p2.m11"><m:math alttext="\gamma_{e}^{-1}=2.5" display="inline"><m:mrow><m:msubsup><m:mi>γ</m:mi><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>=</m:mo><m:mn>2.5</m:mn></m:mrow></m:math></Math><Math mode="inline" xml:id="S5.p2.m12" tex="\mu" text="mu" fragid="S5.p2.m12"><m:math alttext="\mu" display="inline"><m:mi>μ</m:mi></m:math></Math>s.
+For a superconducting standing-wave cavity and a SQUID located at
+one of antinodes of the magnetism field, the coupling constant is
+<Math mode="inline" xml:id="S5.p2.m13" tex="g=1.8\times 10^{8}" text="g = 1.8 * 10 ^ 8" fragid="S5.p2.m13"><m:math alttext="g=1.8\times 10^{8}" display="inline"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mrow><m:mn>1.8</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mn>8</m:mn></m:msup></m:mrow></m:mrow></m:math></Math>Hz, thus the resonant interaction time for our
+scheme is <Math mode="inline" xml:id="S5.p2.m14" tex="T_{r}=\pi/g\simeq 1.7\times 10^{-8}s" text="T _ r = pi / g similar-to-or-equals 1.7 * 10 ^ (- 8) * s" fragid="S5.p2.m14"><m:math alttext="T_{r}=\pi/g\simeq 1.7\times 10^{-8}s" display="inline"><m:mrow><m:msub><m:mi>T</m:mi><m:mi>r</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mi>π</m:mi><m:mo>/</m:mo><m:mi>g</m:mi></m:mrow><m:mo>≃</m:mo><m:mrow><m:mrow><m:mn>1.7</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mrow><m:mo>-</m:mo><m:mn>8</m:mn></m:mrow></m:msup></m:mrow><m:mo>⁢</m:mo><m:mi>s</m:mi></m:mrow></m:mrow></m:math></Math>. Meanwhile, the strong
+coupling condition can be perfectly achieved as <Math mode="inline" xml:id="S5.p2.m15" tex="g^{2}/\gamma_{e}k=1.6\times 10^{6}\gg 1" text="(g ^ 2 / gamma _ e) * k = 1.6 * 10 ^ 6 &gt;&gt; 1" fragid="S5.p2.m15"><m:math alttext="g^{2}/\gamma_{e}k=1.6\times 10^{6}\gg 1" display="inline"><m:mrow><m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:msub><m:mi>γ</m:mi><m:mi>e</m:mi></m:msub></m:mrow><m:mo>⁢</m:mo><m:mi>k</m:mi></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1.6</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mn>6</m:mn></m:msup></m:mrow><m:mo>≫</m:mo><m:mn>1</m:mn></m:mrow></m:math></Math>. The Rabi frequency for the interaction of
+the rf pulse and the SQUID is <Math mode="inline" xml:id="S5.p2.m16" tex="\Omega=8.5\times 10^{7}" text="Omega = 8.5 * 10 ^ 7" fragid="S5.p2.m16"><m:math alttext="\Omega=8.5\times 10^{7}" display="inline"><m:mrow><m:mi mathvariant="normal">Ω</m:mi><m:mo>=</m:mo><m:mrow><m:mn>8.5</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mn>7</m:mn></m:msup></m:mrow></m:mrow></m:math></Math>Hz, thus the
+interaction time for the single photon detection is
+<!-- %**** contents.tex Line 350 **** --><Math mode="inline" xml:id="S5.p2.m17" tex="T_{l}=\pi/2\Omega\simeq 1.8\times 10^{-8}s" text="T _ l = (pi / 2) * Omega similar-to-or-equals 1.8 * 10 ^ (- 8) * s" fragid="S5.p2.m17"><m:math alttext="T_{l}=\pi/2\Omega\simeq 1.8\times 10^{-8}s" display="inline"><m:mrow><m:msub><m:mi>T</m:mi><m:mi>l</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mrow><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow><m:mo>⁢</m:mo><m:mi mathvariant="normal">Ω</m:mi></m:mrow><m:mo>≃</m:mo><m:mrow><m:mrow><m:mn>1.8</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mrow><m:mo>-</m:mo><m:mn>8</m:mn></m:mrow></m:msup></m:mrow><m:mo>⁢</m:mo><m:mi>s</m:mi></m:mrow></m:mrow></m:math></Math>. Both interaction time
+(<Math mode="inline" xml:id="S5.p2.m18" tex="T_{r}" text="T _ r" fragid="S5.p2.m18"><m:math alttext="T_{r}" display="inline"><m:msub><m:mi>T</m:mi><m:mi>r</m:mi></m:msub></m:math></Math> and <Math mode="inline" xml:id="S5.p2.m19" tex="T_{l}" text="T _ l" fragid="S5.p2.m19"><m:math alttext="T_{l}" display="inline"><m:msub><m:mi>T</m:mi><m:mi>l</m:mi></m:msub></m:math></Math>) are much shorter than the cavity decay time and
+the relaxation time of the upper state. In addition, the above
+estimation is very conservative compare to present experimental
+achievements, in fact, a superconducting cavity with
+<Math mode="inline" xml:id="S5.p2.m20" tex="Q=3\times 10^{8}" text="Q = 3 * 10 ^ 8" fragid="S5.p2.m20"><m:math alttext="Q=3\times 10^{8}" display="inline"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mrow><m:mn>3</m:mn><m:mo>×</m:mo><m:msup><m:mn>10</m:mn><m:mn>8</m:mn></m:msup></m:mrow></m:mrow></m:math></Math> has already been reported <cite>(<ref idref="bib.bib34">(34)</ref>)</cite>.</p>
+    </para>
+    <para xml:id="S5.p3" fragid="S5.p3">
+      <p>In conclusion, we have investigated a simple scheme for implementing
+the 2-qubit QCPG gate based on cavity-SQUID systems. The presented
+schemes are achieved without any type of measurement. Our scheme is
+also a deterministic one without any auxiliary SQUID serving as
+data-bus. In addition, the implementation of our scheme is simple,
+which is very important in view of decoherence and the successful
+probability and the fidelity both reach unit. We also roughly
+estimated the experimental feasibility of our schemes, which shows
+they are well within current techniques, thus our suggestion may
+offer a simple way of implementing the quantum logic gate via
+QED-SQUID system. As an direct application of the QCPG operation, we
+also proposed a scheme for generating the cluster states, which are
+universal ”substrate” for quantum computation.</p>
+    </para>
+  </section>
+  <acknowledgements name="Acknowledgements">This work is supported by the Key Program of the
+Education Department of Anhui Province (No. 2006kj070A), the Talent
+Foundation of Anhui University and for Z.-Y. Xue by the Postgraduate
+Innovation Research Plan from Anhui University.
+<!-- %**** contents.tex Line 375 **** --></acknowledgements>
+  <bibliography xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist>
+      <bibitem key="qcomputer" xml:id="bib.bib1" fragid="bib.bib1">
+        <bibtag role="number">1</bibtag>
+        <bibtag role="refnum">(1)</bibtag>
+        <bibblock> D. Deutsch and R. Jozsa, Proc. R. Soc. A
+<text font="bold">439</text>, 553 (1992).
+</bibblock>
+      </bibitem>
+      <bibitem key="time" xml:id="bib.bib2" fragid="bib.bib2">
+        <bibtag role="number">2</bibtag>
+        <bibtag role="refnum">(2)</bibtag>
+        <bibblock> C. H. Bennett, Phys. Today <text font="bold">48</text> (10), 24 (1995).
+</bibblock>
+      </bibitem>
+      <bibitem key="proposals" xml:id="bib.bib3" fragid="bib.bib3">
+        <bibtag role="number">3</bibtag>
+        <bibtag role="refnum">(3)</bibtag>
+        <bibblock> Eds. S. Braunstein and H.-K. Lo, Fortschr. Phys. <text font="bold">48</text>, No.
+9-11 (2000).
+</bibblock>
+      </bibitem>
+      <bibitem key="qed" xml:id="bib.bib4" fragid="bib.bib4">
+        <bibtag role="number">4</bibtag>
+        <bibtag role="refnum">(4)</bibtag>
+        <bibblock> J. M. Raimond, M. Brune and S. Haroche, Rev. Mod. Phys.
+<text font="bold">73</text> 565 (2001).
+</bibblock>
+      </bibitem>
+      <bibitem key="ion" xml:id="bib.bib5" fragid="bib.bib5">
+        <bibtag role="number">5</bibtag>
+        <bibtag role="refnum">(5)</bibtag>
+        <bibblock> J. J. García-Ripoll, P. Zoller, and J. I. Cirac,
+Phys. Rev. Lett. <text font="bold">91</text>, 157901 (2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="nmr" xml:id="bib.bib6" fragid="bib.bib6">
+        <bibtag role="number">6</bibtag>
+        <bibtag role="refnum">(6)</bibtag>
+        <bibblock> C. Negrevergne, T. S. Mahesh, C. A. Ryan, M. Ditty, F. Cyr-Racine,
+W. Power, N. Boulant, T. Havel, D. G. Cory and R. Laflamme, Phys.
+Rev. Lett. 96, 170501 (2006).
+</bibblock>
+      </bibitem>
+      <bibitem key="photon" xml:id="bib.bib7" fragid="bib.bib7">
+        <bibtag role="number">7</bibtag>
+        <bibtag role="refnum">(7)</bibtag>
+        <bibblock> E. Knill, R. Laflamme and G. J. Milburn, Nature <text font="bold">409</text>, 46 (2001).
+</bibblock>
+      </bibitem>
+      <bibitem key="charge" xml:id="bib.bib8" fragid="bib.bib8">
+        <bibtag role="number">8</bibtag>
+        <bibtag role="refnum">(8)</bibtag>
+        <bibblock> A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R. S.
+Huang, J. Majer, S. Kumar, S. M. Girvin and R. J. Schoelkopf, Nature
+<text font="bold">431</text>, 162 (2004).
+<!-- %**** contents.tex Line 400 **** --></bibblock>
+      </bibitem>
+      <bibitem key="flux" xml:id="bib.bib9" fragid="bib.bib9">
+        <bibtag role="number">9</bibtag>
+        <bibtag role="refnum">(9)</bibtag>
+        <bibblock> C. P. Yang, Shih-I. Chu, and S. Han, Phys. Rev. Lett. <text font="bold">92</text>, 117902 (2004).
+</bibblock>
+      </bibitem>
+      <bibitem key="qcomputing" xml:id="bib.bib10" fragid="bib.bib10">
+        <bibtag role="number">10</bibtag>
+        <bibtag role="refnum">(10)</bibtag>
+        <bibblock> T. Sleator and H. Weinfurter, Phys. Rev. Lett. <text font="bold">74</text>, 4087 (1995).
+</bibblock>
+      </bibitem>
+      <bibitem key="3" xml:id="bib.bib11" fragid="bib.bib11">
+        <bibtag role="number">11</bibtag>
+        <bibtag role="refnum">(11)</bibtag>
+        <bibblock>
+Z. Zhou, Shih-I. Chu and S. Han, Phys. Rev. B <text font="bold">66</text>, 054527
+(2002).
+</bibblock>
+      </bibitem>
+      <bibitem key="4" xml:id="bib.bib12" fragid="bib.bib12">
+        <bibtag role="number">12</bibtag>
+        <bibtag role="refnum">(12)</bibtag>
+        <bibblock> M. H. S. Amin, A. Y. Smirnov and A. M. Brink, Phys.
+Rev. B <text font="bold">67</text>, 100508(R) (2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="5" xml:id="bib.bib13" fragid="bib.bib13">
+        <bibtag role="number">13</bibtag>
+        <bibtag role="refnum">(13)</bibtag>
+        <bibblock> C. P. Yang and S. Han, Phys. Lett. A <text font="bold">321</text>, 273 (2004).
+</bibblock>
+      </bibitem>
+      <bibitem key="6" xml:id="bib.bib14" fragid="bib.bib14">
+        <bibtag role="number">14</bibtag>
+        <bibtag role="refnum">(14)</bibtag>
+        <bibblock> K. H. Song, Z. W. Zhou and G. C. Guo, Phys. Rev. A <text font="bold">71</text>, 052310
+(2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="7" xml:id="bib.bib15" fragid="bib.bib15">
+        <bibtag role="number">15</bibtag>
+        <bibtag role="refnum">(15)</bibtag>
+        <bibblock> C. P. Yang and S. Han, Phys. Rev. A <text font="bold">72</text>, 032311
+(2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="oneway" xml:id="bib.bib16" fragid="bib.bib16">
+        <bibtag role="number">16</bibtag>
+        <bibtag role="refnum">(16)</bibtag>
+        <bibblock> H. J. Briegel and R. Raussendorf, Phys. Rev. Lett. <text font="bold">86</text>, 910 (2001);
+R. Raussendorf and H. J. Briegel, Phys. Rev. Lett. <text font="bold">86</text>, 5188
+(2001).
+</bibblock>
+      </bibitem>
+      <bibitem key="qccluster1" xml:id="bib.bib17" fragid="bib.bib17">
+        <bibtag role="number">17</bibtag>
+        <bibtag role="refnum">(17)</bibtag>
+        <bibblock> R. Raussendorf, D. E. Browne and H. J. Briegel, Phys. Rev. A <text font="bold">68</text>, 022312
+<!-- %**** contents.tex Line 425 **** -->(2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="qccluster2" xml:id="bib.bib18" fragid="bib.bib18">
+        <bibtag role="number">18</bibtag>
+        <bibtag role="refnum">(18)</bibtag>
+        <bibblock> D. L. Zhou, B. Zeng, Z. Xu and C. P. Sun, Phys. Rev. A
+<text font="bold">68</text>, 062303 (2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="qccluster3" xml:id="bib.bib19" fragid="bib.bib19">
+        <bibtag role="number">19</bibtag>
+        <bibtag role="refnum">(19)</bibtag>
+        <bibblock> M. A. Nielsen, Phys. Rev. Lett. <text font="bold">93</text>, 040503
+(2004); M. A. Nielsen and C. M. Dawson, Phys. Rev. A <text font="bold">71</text>,
+042323 (2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate1" xml:id="bib.bib20" fragid="bib.bib20">
+        <bibtag role="number">20</bibtag>
+        <bibtag role="refnum">(20)</bibtag>
+        <bibblock> X. B. Zou, K. Pahlke, and W. Mathis, Phys. Rev. A <text font="bold">69</text>,
+052314 (2004); X. B. Zou and W. Mathis, Phys. Rev. A <text font="bold">71</text>,
+032308 (2005); <text font="bold">72</text>, 013809 (2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate2" xml:id="bib.bib21" fragid="bib.bib21">
+        <bibtag role="number">21</bibtag>
+        <bibtag role="refnum">(21)</bibtag>
+        <bibblock> S. D. Barrett and P. Kok, Phys. Rev. A <text font="bold">71</text>, 060310(R)
+(2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate3" xml:id="bib.bib22" fragid="bib.bib22">
+        <bibtag role="number">22</bibtag>
+        <bibtag role="refnum">(22)</bibtag>
+        <bibblock> M. Borhani and D. Loss, Phys. Rev. A <text font="bold">71</text>, 034308
+(2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate4" xml:id="bib.bib23" fragid="bib.bib23">
+        <bibtag role="number">23</bibtag>
+        <bibtag role="refnum">(23)</bibtag>
+        <bibblock> L. M. Duan and R. Raussendorf, Phys. Rev. Lett. <text font="bold">95</text> 080503
+(2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate5" xml:id="bib.bib24" fragid="bib.bib24">
+        <bibtag role="number">24</bibtag>
+        <bibtag role="refnum">(24)</bibtag>
+        <bibblock> J. Cho and H. W. Lee, Phys. Rev. Lett. <text font="bold">95</text>, 160501 (2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="generate6" xml:id="bib.bib25" fragid="bib.bib25">
+        <bibtag role="number">25</bibtag>
+        <bibtag role="refnum">(25)</bibtag>
+        <bibblock> Q. Chen, J. Cheng, K. L. Wang and J. Du, Phys. Rev. A <text font="bold">73</text>,
+<!-- %**** contents.tex Line 450 **** -->012303 (2006).
+</bibblock>
+      </bibitem>
+      <bibitem key="levelspace" xml:id="bib.bib26" fragid="bib.bib26">
+        <bibtag role="number">26</bibtag>
+        <bibtag role="refnum">(26)</bibtag>
+        <bibblock> R. Rouse, S. Han and J. E. Lukens, Phys. Rev. Lett. <text font="bold">75</text>, 1614
+(1995); J. R. Friedman, V. Patel, W. Chen, S. K. Tolpygo and J. E.
+Lukens, Nature <text font="bold">406</text>, 43 (2000).
+</bibblock>
+      </bibitem>
+      <bibitem key="laserh" xml:id="bib.bib27" fragid="bib.bib27">
+        <bibtag role="number">27</bibtag>
+        <bibtag role="refnum">(27)</bibtag>
+        <bibblock> C. P. Yang, Shih-I. Chu and S. Han, Phys. Rev. A <text font="bold">67</text>, 042311 (2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="c" xml:id="bib.bib28" fragid="bib.bib28">
+        <bibtag role="number">28</bibtag>
+        <bibtag role="refnum">(28)</bibtag>
+        <bibblock> N. Yoran and B. Reznik, Phys. Rev. Lett. <text font="bold">91</text>, 037903
+(2003); D. E. Browne and T. Rudolph, Phys. Rev. Lett. <text font="bold">95</text>
+010501 (2005); Y. L. Lim, A. Beige and L. C. Kwek, Phys. Rev. Lett.
+<text font="bold">95</text>, 030505 (2005).
+</bibblock>
+      </bibitem>
+      <bibitem key="coherent" xml:id="bib.bib29" fragid="bib.bib29">
+        <bibtag role="number">29</bibtag>
+        <bibtag role="refnum">(29)</bibtag>
+        <bibblock> D. Vion, A. Aassime, A. Cottet, P. Joyez, H. Pothier, C. Urbina, D.
+Esteve and M. Devoret, Science <text font="bold">296</text>, 886 (2002); Y. Yu, S.
+Han, X. Chu, Shih-I. Chu and Z. Wang, Science <text font="bold">296</text>, 889
+(2002).
+</bibblock>
+      </bibitem>
+      <bibitem key="rsquid" xml:id="bib.bib30" fragid="bib.bib30">
+        <bibtag role="number">30</bibtag>
+        <bibtag role="refnum">(30)</bibtag>
+        <bibblock> Y. Makhlin, G. Schön and A. Shnirman, Rev. Mod. Phys. <text font="bold">73</text>, 357 (2001).
+</bibblock>
+      </bibitem>
+      <bibitem key="experiment1" xml:id="bib.bib31" fragid="bib.bib31">
+        <bibtag role="number">31</bibtag>
+        <bibtag role="refnum">(31)</bibtag>
+        <bibblock>
+Y. Yu, S. Han, X. Chu, Shih-I. Chu and Z. Wang, Science
+<text font="bold">296</text>, 889 (2002).
+</bibblock>
+      </bibitem>
+      <bibitem key="experiment2" xml:id="bib.bib32" fragid="bib.bib32">
+        <bibtag role="number">32</bibtag>
+        <bibtag role="refnum">(32)</bibtag>
+        <bibblock> I. Chiorescu, Y. Nakamura, C. J. P. M. Harmans and J. E.
+<!-- %**** contents.tex Line 475 **** -->Mooij, Science <text font="bold">299</text>, 1869 (2003).
+</bibblock>
+      </bibitem>
+      <bibitem key="experiment3" xml:id="bib.bib33" fragid="bib.bib33">
+        <bibtag role="number">33</bibtag>
+        <bibtag role="refnum">(33)</bibtag>
+        <bibblock> Y. Yu, D. Nakada, J. C. Lee, B. Singh, D. S. Crankshaw, T. P.
+Orlando, K. K. Berggren and W. D. Oliver, Phys. Rev. Lett.
+<text font="bold">92</text>, 117904 (2004).
+</bibblock>
+      </bibitem>
+      <bibitem key="hq" xml:id="bib.bib34" fragid="bib.bib34">
+        <bibtag role="number">34</bibtag>
+        <bibtag role="refnum">(34)</bibtag>
+        <bibblock> S. Osnaghi, P. Bertet, A. Auffeves, P. Maioli, M. Brune, J. M.
+Raimond and S. Haroche, Phys. Rev. Lett. <text font="bold">87</text>, 037902 (2001).
+</bibblock>
+      </bibitem>
+    </biblist>
+  </bibliography>
+</document>

@@ -326,6 +326,24 @@ doctype-system="archivearticle3.dtd"/>
 	</sec>
 </xsl:template>
 
+<xsl:template match="ltx:section/ltx:title">
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:subsection/ltx:title">
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:subsection">
+	<sec>
+		<xsl:apply-templates select="@*|node()"/>
+	</sec>
+</xsl:template>
+
 <xsl:template match="ltx:figure/ltx:caption">
 	<caption>
 		<xsl:if test="./ltx:p">
@@ -404,6 +422,7 @@ doctype-system="archivearticle3.dtd"/>
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
+
 <xsl:template match="ltx:ref[@labelref and not(@idref)]">
 	<xref ref-type="labelref" rid="{./@labelref}">
 		<xsl:apply-templates select="@*|node()"/> 
@@ -439,6 +458,10 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:para" mode="front"/>
 <xsl:template match="ltx:para" mode="back"/>
 <xsl:template match="ltx:toccaption"/>
+<xsl:template match="ltx:classification"/>
+<xsl:template match="ltx:classification" mode="back"/>
+<xsl:template match="ltx:classification" mode="front"/>
+
 <!-- hackish stuff for references -->
 
 <xsl:template match="@labels">
