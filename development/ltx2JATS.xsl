@@ -11,14 +11,14 @@
 \=========================================================ooo==U==ooo=/
 -->
 <xsl:stylesheet
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m xlink xhtml" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML"         xmlns:xhtml="http://www.w3.org/1999/xhtml"        xmlns:xlink="http://www.w3.org/1999/xlink" >
+   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m xlink xhtml" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML"         xmlns:xhtml="http://www.w3.org/1999/xhtml"        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:exsl="http://exslt.org/common"
+                extension-element-prefixes="exsl" >
 
    <xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
 doctype-system="archivearticle3.dtd"/>
 
 <xsl:variable name="footnotes" select="//ltx:note[@role='footnote']"/>
-
 <xsl:include href="LaTeXML-tabular-xhtml.xsl"/>
 <xsl:include href="LaTeXML-common.xsl"/>
 <xsl:template match="*">
@@ -72,6 +72,20 @@ doctype-system="archivearticle3.dtd"/>
 	</xsl:comment>
 </xsl:template>
 
+<xsl:template match="ltx:ERROR">
+	An error in the conversion from LaTeX to XML has occurred here. 
+</xsl:template>
+
+<xsl:template match="ltx:ERROR" mode="front">
+	An error in the conversion from LaTeX to XML has occurred here. 
+</xsl:template>
+
+<xsl:template match="ltx:ERROR" mode="back">
+	An error in the conversion from LaTeX to XML has occurred here. 
+</xsl:template>
+
+
+
 
 <xsl:template match="ltx:document">
 	<article>
@@ -89,12 +103,15 @@ doctype-system="archivearticle3.dtd"/>
 			</article-meta>
 		</front>
 		<body>
-			<xsl:apply-templates select="@*|node()" />
+			<xsl:apply-templates select="@*|node()[not(self::ltx:appendix)]" />
 		</body>
 		<back> 
-			<xsl:apply-templates mode="back"/>
+			<xsl:apply-templates select="@*|node()" mode="back"/>
+			<app-group>
+				<xsl:apply-templates select="//ltx:appendix"/> 
+			</app-group>
 		</back>
-
+			
 	</article>
 </xsl:template>
 
@@ -115,6 +132,17 @@ doctype-system="archivearticle3.dtd"/>
 	</contrib>
 </xsl:template>
 
+<xsl:template match="ltx:appendix">
+	<app> 
+		<xsl:apply-templates select="@*|node()"/>
+	</app> 
+</xsl:template>	
+
+<xsl:template match="ltx:appendix/ltx:title">
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
 
 <xsl:template match="ltx:date[@role='creation']" mode="front">
 	<pub-date><string-date><xsl:apply-templates select="@*|node()" /></string-date></pub-date>
@@ -172,10 +200,72 @@ doctype-system="archivearticle3.dtd"/>
 		</article-title>
 	</title-group>
 </xsl:template>
+
+<xsl:template match="ltx:equationgroup" mode="front">
+	<disp-formula-group>
+		<xsl:apply-templates select="@*|node()" mode="front"/> 
+	</disp-formula-group> 
+</xsl:template> 
+
+<xsl:template match="ltx:equation" mode="front">
+	<disp-formula>
+		<xsl:apply-templates select="@*" mode="front"/>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</disp-formula>
+</xsl:template>
+
+<xsl:template match="ltx:Math[@mode='inline']" mode="front">
+	<inline-formula>
+		<xsl:apply-templates select="@*"/>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</inline-formula>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='italic']">
+	<italic>
+		<xsl:apply-templates select="@*|node()"/>
+	</italic> 
+</xsl:template>
+
+<xsl:template match="ltx:table" mode="front"/>
+<xsl:template match="ltx:abstract//ltx:table" mode="front">
+	<xsl:message> There was a table in an abstract, deal with it </xsl:message> <!-- TODO if this actually happens, then deal with it -->
+</xsl:template>
+
 <!-- End front matter section -->
 <!-- Start back section --> 
 <!-- This is essentially for bibliography and acknowledgements-->
-<xsl:template match="ltx:bibliography" mode="back"> <!-- TODO check if there is ever any issue by making ref-list from this and not biblist -->
+ <!-- TODO check if there is ever any issue by making ref-list from this and not biblist -->
+
+<xsl:template match="ltx:equationgroup" mode="back">
+	<disp-formula-group>
+		<xsl:apply-templates select="@*|node()" mode="back"/> 
+	</disp-formula-group> 
+</xsl:template> 
+
+<xsl:template match="ltx:equation" mode="back">
+	<disp-formula>
+		<xsl:apply-templates select="@*" mode="back"/>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</disp-formula>
+</xsl:template>
+
+<xsl:template match="ltx:Math[@mode='inline']" mode="back">
+	<inline-formula>
+		<xsl:apply-templates select="@*" mode="back"/>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</inline-formula>
+</xsl:template>
+
+<xsl:template match="ltx:bibliography" mode="back">
 	<ref-list>
 		<xsl:apply-templates mode="back"/>
 	</ref-list>
@@ -227,6 +317,13 @@ doctype-system="archivearticle3.dtd"/>
 		</xsl:if>
 	</ack>
 </xsl:template>
+
+<xsl:template match="ltx:text[@font='italic']" mode="back">
+	<italic>
+		<xsl:apply-templates select="@*|node()"/>
+	</italic>
+</xsl:template>
+
 <xsl:template match="ltx:bibtag[@role='authors']" mode="back">
 	<person-group person-group-type="author">
 		<name>
@@ -261,13 +358,31 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 <xsl:template match="ltx:bibtag[@role='refnum']" mode="back"/>
 <xsl:template match="ltx:bibtag[@role='number']" mode="back"/>
+
+<xsl:template match="ltx:table" mode="back"/>
+<xsl:template match="ltx:acknowledgements//ltx:table">
+	<xsl:message> There's a table in the acknowledgements. Deal with it </xsl:message> <!-- TODO, actually do this if you ever see this --> 
+</xsl:template>
+
 <!-- End back section -->
 <!-- Start main section --> 
+
 <xsl:template match="ltx:text[@font='bold']">
 	<bold>
 		<xsl:apply-templates select="@*|node()"/>
 	</bold>
 </xsl:template>
+
+<xsl:template match="ltx:note[@role='institutetext']" mode="back"/>
+<xsl:template match="ltx:note[@role='institutetext']"/>
+<xsl:template match="ltx:note[@role='institutetext']" mode="front"/> <!-- TODO Check if this can be done better -->
+
+<xsl:template match="ltx:text[@font='italic']">
+	<italic>
+		<xsl:apply-templates select="@*|node()"/> 
+	</italic>
+</xsl:template>
+
 <xsl:template match="ltx:emph">
 	<italic>
 		<xsl:apply-templates select="@*|node()"/>
@@ -326,6 +441,12 @@ doctype-system="archivearticle3.dtd"/>
 	</sec>
 </xsl:template>
 
+<xsl:template match="ltx:subsubsection">
+	<sec>
+		<xsl:apply-templates select="@*|node()"/>
+	</sec>
+</xsl:template>
+
 <xsl:template match="ltx:section/ltx:title">
 	<title>
 		<xsl:apply-templates select="@*|node()"/>
@@ -333,6 +454,12 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 
 <xsl:template match="ltx:subsection/ltx:title">
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:subsubsection/ltx:title">
 	<title>
 		<xsl:apply-templates select="@*|node()"/>
 	</title>
@@ -414,8 +541,19 @@ doctype-system="archivearticle3.dtd"/>
 	</title>
 </xsl:template>
 
-<xsl:template match="ltx:cite"> <!-- TODO check whether idref always happens, else make more comprehensive -->
-	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref> 
+<xsl:template match="ltx:cite">
+	<xsl:if test="./ltx:ref/@idref">
+	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref>
+	</xsl:if>
+	<xsl:if test="./ltx:bibref/@bibrefs">
+		<xsl:for-each select="str:tokenize(./ltx:bibref/@bibrefs,./ltx:bibref/@yyseparator)">
+			<xref ref-type="bibr" rid="{.}"><xsl:apply-templates select="@*|node()"/></xref>
+		</xsl:for-each>
+	</xsl:if> 
+</xsl:template>
+
+<xsl:template match="ltx:bibref">
+	<xsl:apply-templates select="@*|node()"/>
 </xsl:template>
 
 <xsl:template match="ltx:cite/ltx:ref[@idref]">
@@ -461,7 +599,23 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:classification"/>
 <xsl:template match="ltx:classification" mode="back"/>
 <xsl:template match="ltx:classification" mode="front"/>
-
+<xsl:template match="ltx:note[@role='slugcomment']"/>
+<xsl:template match="ltx:note[@role='slugcomment']" mode="front"/> 
+<xsl:template match="ltx:note[@role='slugcomment']" mode="back"/>
+<xsl:template match="ltx:pagination"/>
+<xsl:template match="ltx:pagination" mode="front"/>
+<xsl:template match="ltx:pagination" mode="back"/>
+<xsl:template match="ltx:toctitle"/> 
+<xsl:template match="ltx:toctitle" mode="front"/> 
+<xsl:template match="ltx:toctitle" mode="back"/>
+<xsl:template match="ltx:appendix" mode="front"/> 
+<xsl:template match="ltx:appendix" mode="back"/>
+<xsl:template match="ltx:contact[@role='emailmark']" mode="front"/>
+<xsl:template match="ltx:contact[@role='emailmark']" mode="back"/>
+<xsl:template match="ltx:contact[@role='emailmark']"/>
+<xsl:template match="ltx:contact[@role='institutemark']" mode="front"/>
+<xsl:template match="ltx:contact[@role='institutemark']" mode="back"/>
+<xsl:template match="ltx:contact[@role='institutemark']"/>
 <!-- hackish stuff for references -->
 
 <xsl:template match="@labels">
@@ -469,6 +623,7 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
 <xsl:template match="ltx:document/@xml:id"/>
+<xsl:template match="ltx:document/@labels"/>
 <xsl:template match="@xml:id">
 	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
@@ -509,5 +664,15 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:text[@fontsize='90%']">
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
+
+<xsl:template match="ltx:text[@fontsize='80%']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='upright']">
+	<xsl:apply-templates select="@*|node()"/> 
+</xsl:template>
+
+
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
