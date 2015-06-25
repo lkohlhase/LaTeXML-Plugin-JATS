@@ -286,8 +286,24 @@ doctype-system="archivearticle3.dtd"/>
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
+<xsl:template match="ltx:equationgroup">
+	<disp-formula-group>
+		<xsl:apply-templates select="@*|node()"/> 
+	</disp-formula-group> 
+</xsl:template> 
+
+<xsl:template match="ltx:equation">
+	<disp-formula>
+		<xsl:apply-templates select="@*"/>
+		<tex-math>
+			<xsl:value-of select="./@tex"/>
+		</tex-math>
+	</disp-formula>
+</xsl:template>
+
 <xsl:template match="ltx:Math[@mode='inline']">
 	<inline-formula>
+		<xsl:apply-templates select="@*"/>
 		<tex-math>
 			<xsl:value-of select="./@tex"/>
 		</tex-math>
@@ -334,8 +350,23 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:table">
 	<table-wrap>
-		<xsl:apply-templates select="@*|node()"/>
+		<xsl:apply-templates select="@*"/>
+		<xsl:apply-templates select="ltx:caption"/>
+		<xsl:apply-templates select="*[not(self::ltx:caption)]"/>
 	</table-wrap>
+</xsl:template>
+
+<xsl:template match="ltx:table/ltx:caption">
+	<caption>
+		<xsl:if test="./ltx:p">	
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()"/>
+			</p> 
+		</xsl:if>
+	</caption> 
 </xsl:template>
 
 <xsl:template match="ltx:graphics"> 
@@ -410,23 +441,29 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:toccaption"/>
 <!-- hackish stuff for references -->
 
-<xsl:template match="@labels[not(../@xml:id)]">
+<xsl:template match="@labels">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 </xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
 <xsl:template match="ltx:document/@xml:id"/>
-<xsl:template match="@xml:id"> 
+<xsl:template match="@xml:id">
+	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="ltx:para/@xml:id" mode="front"/> <!-- TODO append this to the next <p> or something -->
-<xsl:template match="@xml:id" mode="front"> 
+<xsl:template match="@xml:id" mode="front">
+	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="ltx:para/@xml:id" mode="back"/> <!-- TODO append this to the next <p> or something -->
-<xsl:template match="@xml:id" mode="back"> 
+<xsl:template match="@xml:id" mode="back">
+	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="@*"/>
@@ -444,6 +481,10 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:text[@font='medium']" mode="front">
 	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@fontsize='90%']">
+	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
