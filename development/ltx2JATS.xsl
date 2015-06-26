@@ -148,6 +148,10 @@ doctype-system="archivearticle3.dtd"/>
 	<pub-date><string-date><xsl:apply-templates select="@*|node()" /></string-date></pub-date>
 </xsl:template>
 
+<xsl:template match="ltx:creator" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
 <xsl:template match="ltx:contact[@role='affiliation']" mode="front">
 	<aff><xsl:apply-templates select="@*|node()" /></aff>
 </xsl:template>
@@ -174,6 +178,8 @@ doctype-system="archivearticle3.dtd"/>
 		</given-names>
 	</name>
 </xsl:template>
+
+
 <xsl:template match="ltx:text[@font='bold']" mode="front">
 	<bold>
 		<xsl:apply-templates mode="front" select="@*|node()"/>
@@ -211,7 +217,7 @@ doctype-system="archivearticle3.dtd"/>
 	<disp-formula>
 		<xsl:apply-templates select="@*" mode="front"/>
 		<tex-math>
-			<xsl:value-of select="./@tex"/>
+			<xsl:value-of select="./ltx:Math/@tex"/>
 		</tex-math>
 	</disp-formula>
 </xsl:template>
@@ -224,6 +230,26 @@ doctype-system="archivearticle3.dtd"/>
 		</tex-math>
 	</inline-formula>
 </xsl:template>
+
+<xsl:template match="ltx:paragraph">
+	<boxed-text>
+		<xsl:apply-templates select="@*|node()"/>
+	</boxed-text>
+</xsl:template>
+
+<xsl:template match="ltx:paragraph/ltx:title">
+	<caption>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p> 
+				<xsl:apply-templates select="@*|node()"/>
+			</p>
+		</xsl:if>
+	</caption>
+</xsl:template>
+
 
 <xsl:template match="ltx:text[@font='italic']">
 	<italic>
@@ -251,7 +277,7 @@ doctype-system="archivearticle3.dtd"/>
 	<disp-formula>
 		<xsl:apply-templates select="@*" mode="back"/>
 		<tex-math>
-			<xsl:value-of select="./@tex"/>
+			<xsl:value-of select="./ltx:Math/@tex"/>
 		</tex-math>
 	</disp-formula>
 </xsl:template>
@@ -411,7 +437,7 @@ doctype-system="archivearticle3.dtd"/>
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
 		<tex-math>
-			<xsl:value-of select="./@tex"/>
+			<xsl:value-of select="./ltx:Math/@tex"/>
 		</tex-math>
 	</disp-formula>
 </xsl:template>
@@ -435,16 +461,59 @@ doctype-system="archivearticle3.dtd"/>
 	</p>
 </xsl:template>
 
+<xsl:template match="ltx:itemize">
+	<list list-type="bullet">
+		<xsl:apply-templates select="@*|node()"/> 
+	</list> 
+</xsl:template>
+
+<xsl:template match="ltx:item"> 
+	<list-item>
+		<xsl:apply-templates select="@*|node()"/> 
+	</list-item>
+</xsl:template>
+
 <xsl:template match="ltx:section">
 	<sec>
 		<xsl:apply-templates select="@*|node()" />
 	</sec>
 </xsl:template>
 
+<xsl:template match="ltx:theorem">
+	<statement>
+		<xsl:apply-templates select="@*|node()"/>
+	</statement>
+</xsl:template>
+
+<xsl:template match="ltx:theorem/ltx:title">
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
+
+<xsl:template match="ltx:contact[@role='address']" mode="front">
+	<addr>
+		<addr-line>
+		<xsl:apply-templates select="@*|node()" mode="front"/>
+		</addr-line>
+	</addr>
+</xsl:template>
+
+
+<xsl:template match="ltx:text[@class='ltx_phantom']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
 <xsl:template match="ltx:subsubsection">
 	<sec>
 		<xsl:apply-templates select="@*|node()"/>
 	</sec>
+</xsl:template>
+
+<xsl:template match="ltx:quote">
+	<disp-quote>
+		<xsl:apply-templates select="@*|node()"/>
+	</disp-quote>
 </xsl:template>
 
 <xsl:template match="ltx:section/ltx:title">
@@ -567,6 +636,12 @@ doctype-system="archivearticle3.dtd"/>
 	</xref>
 </xsl:template>
 
+<xsl:template match="ltx:titlepage">
+	<xsl:apply-templates select="@*|node()"/> 
+</xsl:template>
+
+
+
 <!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
 
@@ -616,6 +691,12 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:contact[@role='institutemark']" mode="front"/>
 <xsl:template match="ltx:contact[@role='institutemark']" mode="back"/>
 <xsl:template match="ltx:contact[@role='institutemark']"/>
+<xsl:template match="ltx:creator" mode="back"/>
+<xsl:template match="ltx:creator"/>
+<xsl:template match="ltx:contact[@role='affiliation']"/>
+<xsl:template match="ltx:titlepage" mode="front"/> 
+<xsl:template match="ltx:titlepage" mode="back"/>
+<xsl:template match="ltx:break" mode="front"/>
 <!-- hackish stuff for references -->
 
 <xsl:template match="@labels">
@@ -623,6 +704,8 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
 <xsl:template match="ltx:document/@xml:id"/>
+<xsl:template match="ltx:document/@xml:id" mode="front"/>
+<xsl:template match="ltx:document/@xml:id" mode="back"/>
 <xsl:template match="ltx:document/@labels"/>
 <xsl:template match="@xml:id">
 	<xsl:if test="not(../@labels)">
@@ -672,6 +755,15 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:text[@font='upright']">
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
+
+<xsl:template match="ltx:text[@font='smallcaps']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@class='ltx_markedasmath']">
+	<xsl:apply-templates select="@*|node()"/> 
+</xsl:template>
+
 
 
 <!-- Templates to make things more convenient -->
