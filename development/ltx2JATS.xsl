@@ -222,6 +222,10 @@ doctype-system="archivearticle3.dtd"/>
 	</disp-formula>
 </xsl:template>
 
+<xsl:template match="ltx:contact[@role='url']" mode="front">
+	<xsl:apply-templates select="@*|node()" mode="front"/>
+</xsl:template>
+
 <xsl:template match="ltx:equation" mode="front">
 	<p>
 	<disp-formula>
@@ -400,6 +404,7 @@ doctype-system="archivearticle3.dtd"/>
 		</name>
 	</person-group>
 </xsl:template>
+
 
 <!-- TODO check if we want to do anything with fullauthors --> 
 <xsl:template match="ltx:bibtag[@role='fullauthors']" mode="back"/>
@@ -696,6 +701,42 @@ doctype-system="archivearticle3.dtd"/>
 	</xref>
 </xsl:template>
 
+<xsl:template match="ltx:ref[@class='ltx_url']">
+	<external-link xlink:href="{./href}">	
+		<xsl:apply-templates select="@*|node()"/> 
+	</external-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[@class='ltx_url']" mode="front">
+	<external-link xlink:href="{./href}">	
+		<xsl:apply-templates select="@*|node()" mode="front"/> 
+	</external-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[@class='ltx_url']" mode="back">
+	<external-link xlink:href="{./href}">	
+		<xsl:apply-templates select="@*|node()" mode="back"/> 
+	</external-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]">
+	<external-link xlink:href="{./href}">
+		<xsl:apply-templates select="@*|node()"/>
+	</external-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="front">
+	<external-link xlink:href="{./href}">
+		<xsl:apply-templates select="@*|node()"/>
+	</external-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="back">
+	<external-link xlink:href="{./href}">
+		<xsl:apply-templates select="@*|node()"/>
+	</external-link>
+</xsl:template>
+
 <xsl:template match="ltx:titlepage">
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
@@ -758,6 +799,16 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:titlepage" mode="front"/> 
 <xsl:template match="ltx:titlepage" mode="back"/>
 <xsl:template match="ltx:break" mode="front"/>
+<xsl:template match="ltx:figure" mode="front"/> 
+<xsl:template match="ltx:figure" mode="back"/>
+<xsl:template match="ltx:break" mode="back"/>
+<xsl:template match="ltx:contact[@role='dedicatory']" mode="front"/>
+<xsl:template match="ltx:contact[@role='dedicatory']" mode="back"/>
+<xsl:template match="ltx:contact[@role='dedicatory']"/>
+<xsl:template match="ltx:abstract/ltx:figure" mode="front">
+
+	<xsl:message>figure in an abstract, fix this </xsl:message> <!-- TODO actualy fix it if it happens --> 
+</xsl:template>
 <!-- hackish stuff for references -->
 
 <xsl:template match="@labels">
@@ -833,7 +884,53 @@ doctype-system="archivearticle3.dtd"/>
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
 
+<xsl:template match="ltx:text[@font='sansserif']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
 
+<xsl:template match="ltx:text[@font='sansserif']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
 
+<xsl:template match="ltx:text[@font='sansserif']" mode="back">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='serif']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='serif']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='serif']" mode="back">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='typewriter']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='typewriter']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='typewriter']" mode="back">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@xml:lang]">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@xml:lang]" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@xml:lang]" mode="back">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
+
