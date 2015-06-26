@@ -524,6 +524,18 @@ doctype-system="archivearticle3.dtd"/>
 	</title>
 </xsl:template>
 
+<xsl:template match="ltx:proof">
+	<statement>
+		<xsl:apply-templates select="@*|node()"/> 
+	</statement>
+</xsl:template> 
+
+<xsl:template match="ltx:proof/ltx:title">	
+	<title>
+		<xsl:apply-templates select="@*|node()"/>
+	</title>
+</xsl:template>
+
 <xsl:template match="ltx:contact[@role='address']" mode="front">
 	<address>
 		<addr-line>
@@ -631,6 +643,10 @@ doctype-system="archivearticle3.dtd"/>
 	</p>
 </xsl:template>
 
+<xsl:template match="ltx:p/ltx:note[@role='thanks']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
 <xsl:template match="ltx:text[@font='italic']">
 	<italic>
 		<xsl:apply-templates select="@*|node()" />
@@ -685,6 +701,7 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:abstract"/>
 <xsl:template match="ltx:keywords"/>
 <xsl:template match="ltx:note[@role='thanks']" mode="front"/>
+<xsl:template match="ltx:contact[@role='thanks']" mode="front"/>
 <xsl:template match="ltx:section" mode="front"/>
 <xsl:template match="ltx:acknowledgements"/> <!-- TODO put this into backmatter -->
 <xsl:template match="ltx:acknowledgements" mode="front"/>
