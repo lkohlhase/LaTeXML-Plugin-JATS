@@ -372,6 +372,10 @@ doctype-system="archivearticle3.dtd"/>
 	</italic>
 </xsl:template>
 
+<xsl:template match="ltx:rule" mode="back">
+	<hr/>
+</xsl:template>
+
 <xsl:template match="ltx:bibtag[@role='authors']" mode="back">
 	<person-group person-group-type="author">
 		<name>
@@ -498,6 +502,12 @@ doctype-system="archivearticle3.dtd"/>
 	<list list-type="bullet">
 		<xsl:apply-templates select="@*|node()"/> 
 	</list> 
+</xsl:template>
+
+<xsl:template match="ltx:enumerate">
+	<list list-type="ordered">
+		<xsl:apply-templates select="@*|node()"/> 
+	</list>
 </xsl:template>
 
 <xsl:template match="ltx:item"> 
@@ -659,6 +669,7 @@ doctype-system="archivearticle3.dtd"/>
 	</title>
 </xsl:template>
 
+
 <xsl:template match="ltx:cite">
 	<xsl:if test="./ltx:ref/@idref">
 	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref>
@@ -807,6 +818,14 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 
 <xsl:template match="ltx:text[@font='smallcaps']">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='smallcaps']" mode="front">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@font='smallcaps']" mode="back">
 	<xsl:apply-templates select="@*|node()"/>
 </xsl:template>
 
