@@ -213,13 +213,24 @@ doctype-system="archivearticle3.dtd"/>
 	</disp-formula-group> 
 </xsl:template> 
 
-<xsl:template match="ltx:equation" mode="front">
+<xsl:template match="ltx:equationgroup/ltx:equation" mode="front">
 	<disp-formula>
 		<xsl:apply-templates select="@*" mode="front"/>
 		<tex-math>
 			<xsl:value-of select="./ltx:Math/@tex"/>
 		</tex-math>
 	</disp-formula>
+</xsl:template>
+
+<xsl:template match="ltx:equation" mode="front">
+	<p>
+	<disp-formula>
+		<xsl:apply-templates select="@*" mode="front"/>
+		<tex-math>
+			<xsl:value-of select="./ltx:Math/@tex"/>
+		</tex-math>
+	</disp-formula>
+	</p>	
 </xsl:template>
 
 <xsl:template match="ltx:Math[@mode='inline']" mode="front">
@@ -273,13 +284,24 @@ doctype-system="archivearticle3.dtd"/>
 	</disp-formula-group> 
 </xsl:template> 
 
-<xsl:template match="ltx:equation" mode="back">
+<xsl:template match="ltx:equationgroup/ltx:equation" mode="back">
 	<disp-formula>
 		<xsl:apply-templates select="@*" mode="back"/>
 		<tex-math>
 			<xsl:value-of select="./ltx:Math/@tex"/>
 		</tex-math>
 	</disp-formula>
+</xsl:template>
+
+<xsl:template match="ltx:equation" mode="back">
+	<p>
+	<disp-formula>
+		<xsl:apply-templates select="@*" mode="back"/>
+		<tex-math>
+			<xsl:value-of select="./ltx:Math/@tex"/>
+		</tex-math>
+	</disp-formula>
+	</p>
 </xsl:template>
 
 <xsl:template match="ltx:Math[@mode='inline']" mode="back">
@@ -434,6 +456,17 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template> 
 
 <xsl:template match="ltx:equation">
+	<p>
+	<disp-formula>
+		<xsl:apply-templates select="@*"/>
+		<tex-math>
+			<xsl:value-of select="./ltx:Math/@tex"/>
+		</tex-math>
+	</disp-formula>
+	</p>
+</xsl:template>
+
+<xsl:template match="ltx:equationgroup/ltx:equation">
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
 		<tex-math>
@@ -492,11 +525,11 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 
 <xsl:template match="ltx:contact[@role='address']" mode="front">
-	<addr>
+	<address>
 		<addr-line>
 		<xsl:apply-templates select="@*|node()" mode="front"/>
 		</addr-line>
-	</addr>
+	</address>
 </xsl:template>
 
 
