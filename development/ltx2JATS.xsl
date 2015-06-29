@@ -103,12 +103,12 @@ doctype-system="archivearticle3.dtd"/>
 			</article-meta>
 		</front>
 		<body>
-			<xsl:apply-templates select="@*|node()[not(self::ltx:appendix)]" />
+			<xsl:apply-templates select="@*|node()"/>
 		</body>
 		<back> 
 			<xsl:apply-templates select="@*|node()" mode="back"/>
 			<app-group>
-				<xsl:apply-templates select="//ltx:appendix"/> 
+				<xsl:apply-templates select="//ltx:appendix" mode="app"/> 
 			</app-group>
 		</back>
 			
@@ -132,7 +132,7 @@ doctype-system="archivearticle3.dtd"/>
 	</contrib>
 </xsl:template>
 
-<xsl:template match="ltx:appendix">
+<xsl:template match="ltx:appendix" mode="app">
 	<app> 
 		<xsl:apply-templates select="@*|node()"/>
 	</app> 
@@ -753,39 +753,39 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 
 <xsl:template match="ltx:ref[@class='ltx_url']">
-	<external-link xlink:href="{./href}">	
+	<ext-link xlink:href="{./href}">	
 		<xsl:apply-templates select="@*|node()"/> 
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:ref[@class='ltx_url']" mode="front">
-	<external-link xlink:href="{./href}">	
+	<ext-link xlink:href="{./href}">	
 		<xsl:apply-templates select="@*|node()" mode="front"/> 
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:ref[@class='ltx_url']" mode="back">
-	<external-link xlink:href="{./href}">	
+	<ext-link xlink:href="{./href}">	
 		<xsl:apply-templates select="@*|node()" mode="back"/> 
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]">
-	<external-link xlink:href="{./href}">
+	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="front">
-	<external-link xlink:href="{./href}">
+	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="back">
-	<external-link xlink:href="{./href}">
+	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
-	</external-link>
+	</ext-link>
 </xsl:template>
 
 <xsl:template match="ltx:float" mode="back">
@@ -845,6 +845,7 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:toctitle" mode="back"/>
 <xsl:template match="ltx:appendix" mode="front"/> 
 <xsl:template match="ltx:appendix" mode="back"/>
+<xsl:template match="ltx:appendix"/>
 <xsl:template match="ltx:contact[@role='emailmark']" mode="front"/>
 <xsl:template match="ltx:contact[@role='emailmark']" mode="back"/>
 <xsl:template match="ltx:contact[@role='emailmark']"/>
