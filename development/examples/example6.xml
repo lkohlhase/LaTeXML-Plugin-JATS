@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="siam-wns-article"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Spectral bounds for percolation on directed and undirected graphs</title>
+  <creator role="author">
+    <personname>Kathleen E. Hamilton and Leonid P. Pryadko</personname>
+  </creator>
+  <ERROR class="undefined">\usehyperref</ERROR>
+  <!-- %must come later, otherwise, it won’t work. -->
+  <section xml:id="Sx1" fragid="Sx1">
+    <title>Summary</title>
+    <para xml:id="Sx1.p1" fragid="Sx1.p1">
+      <p>We suggest several algebraic bounds for percolation on directed and
+undirected graphs: proliferation of strongly-connected clusters,
+proliferation of in- and out-clusters, and the transition associated
+with the number of giant components. <!-- %%% Based on the spectral properties 
+     %%% of the Hashimoto matrix, we present an extension of mean field theory
+     %%% to quasi-transitive graphs as well as general finite graphs.--></p>
+    </para>
+    <!-- %**** siam03arXiv.tex Line 25 **** -->
+  </section>
+  <section xml:id="Sx2" fragid="Sx2">
+    <title>Introduction</title>
+    <para xml:id="Sx2.p1" fragid="Sx2.p1">
+      <p>Percolation on random graphs has been successfully used in network
+theory as a way to understand connectivity of real-life
+networks<cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>, <ref class="ltx_missing_citation" idref="%Callaway-Newman-Strogatz-Watts-2000" title="%Callaway-Newman-Strogatz-Watts-2000">%Callaway-Newman-Strogatz-Watts-2000</ref>, <ref href="#bib.bib13" idref="bib.bib13">13</ref>]</cite>. On a tree graph,
+mean field theory is useful to determine the location of a percolation
+transition <cite class="ltx_citemacro_cite">[<ref href="#bib.bib12" idref="bib.bib12">12</ref>]</cite>. However the existence of
+cycles reduce the applicability of this method on general graphs. We
+seek rigorous mean field bounds on the percolation transition which
+would be applicable to any graph.</p>
+    </para>
+    <para xml:id="Sx2.p2" fragid="Sx2.p2">
+      <p>Spectra of associated matrices have been linked to
+percolation and epidemic thresholds for a variety of
+graph and network models
+<cite class="ltx_citemacro_cite">[<ref href="#bib.bib10" idref="bib.bib10">10</ref>, <ref href="#bib.bib11" idref="bib.bib11">11</ref>, <ref href="#bib.bib4" idref="bib.bib4">4</ref>, <ref class="ltx_missing_citation" idref="%Bollobas-Borgs-Chayes-Riordan-2010" title="%Bollobas-Borgs-Chayes-Riordan-2010">%Bollobas-Borgs-Chayes-Riordan-2010</ref>, <ref href="#bib.bib9" idref="bib.bib9">9</ref>]</cite>. Recently,
+we constructed a lower bound on the percolation transition for an
+infinite quasi-transitive graph <Math mode="inline" xml:id="Sx2.p2.m1" tex="\mathcal{G}_{0}" text="G _ 0" fragid="Sx2.p2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">G</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, a graph-theoretical
+analog of a translationally-invariant
+system<cite class="ltx_citemacro_cite">[<ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite>. The bound,</p>
+      <equation frefnum="(1)" refnum="1" xml:id="Sx2.E1" labels="LABEL:eq:orig-bound" fragid="Sx2.E1">
+        <Math mode="display" xml:id="Sx2.E1.m1" tex="p_{c}\geq 1/\rho(H)," text="p _ c &gt;= (1 / rho) * H" fragid="Sx2.E1.m1">
+          <XMath>
+            <XMApp punctuation=",">
+              <XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                <XMTok role="UNKNOWN" font="italic">c</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  <XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMRef idref="Sx2.E1.m1.1"/>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok role="UNKNOWN" xml:id="Sx2.E1.m1.1" font="italic" fragid="Sx2.E1.m1.1">H</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>is defined by the inverse spectral radius of the Hashimoto
+<!-- %**** siam03arXiv.tex Line 50 **** -->matrix<cite class="ltx_citemacro_cite">[<ref href="#bib.bib6" idref="bib.bib6">6</ref>]</cite> <Math mode="inline" xml:id="Sx2.p2.m2" tex="H" text="H" fragid="Sx2.p2.m2"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math> which is used to enumerate
+non-backtracking walks on <Math mode="inline" xml:id="Sx2.p2.m3" tex="\mathcal{G}_{0}" text="G _ 0" fragid="Sx2.p2.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">G</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>. The formal proof involved
+a sequential application of <emph>cycle unwrapping</emph> maps which results
+in a tree graph locally equivalent to the original graph. In
+the case of a degree-regular graph, Eq. (<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) gives
+the well-known bound in terms of the maximum degree. In the case of
+random graphs with few short cycles, the same expression
+(<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) gives a numerically exact result for the
+percolation transition<cite class="ltx_citemacro_cite">[<ref href="#bib.bib7" idref="bib.bib7">7</ref>]</cite>.</p>
+    </para>
+    <para xml:id="Sx2.p3" fragid="Sx2.p3">
+      <p>In this work we analyze the applicability of the expression
+(<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) to more general graphs and in particular, finite
+graphs. We note that the Hashimoto matrix <Math mode="inline" xml:id="Sx2.p3.m1" tex="H" text="H" fragid="Sx2.p3.m1"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math> can be viewed as the
+adjacency matrix of the oriented line (di)graph (OLG) associated with
+the original graph<cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>. Thus,
+Eq. (<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) requires a mapping of the original
+<emph>undirected</emph> percolation problem to a <emph>directed</emph> one.
+Several transitions are associated with percolation on a digraph
+<Math mode="inline" xml:id="Sx2.p3.m2" tex="{\cal D}" text="D" fragid="Sx2.p3.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math>, in particular, formation of a giant strongly connected
+component, and formation of a giant in- or out-
+component<cite class="ltx_citemacro_cite">[<ref href="#bib.bib11" idref="bib.bib11">11</ref>]</cite>. We show that on a general
+digraph, Eq. (<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) is most directly associated with
+another transition, the formation of a strongly connected component
+with a large number of distinct self-avoiding cycles (SACs), and argue
+that this property is related to uniqueness of the percolating
+<!-- %**** siam03arXiv.tex Line 75 **** -->cluster.</p>
+    </para>
+  </section>
+  <section refnum="1" xml:id="S1" fragid="S1">
+    <title><tag close=" ">1</tag>Main results</title>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>Consider an order-<Math mode="inline" xml:id="S1.p1.m1" tex="n" text="n" fragid="S1.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>
+strongly-connected digraph <Math mode="inline" xml:id="S1.p1.m2" tex="{\cal D}" text="D" fragid="S1.p1.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> with vertex and edge sets
+<Math mode="inline" xml:id="S1.p1.m3" tex="{\cal V}({\cal D})" text="V * D" fragid="S1.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok><XMDual><XMRef idref="S1.p1.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m3.1" font="caligraphic" fragid="S1.p1.m3.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.p1.m4" tex="{\cal E}({\cal D})" text="E * D" fragid="S1.p1.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">E</XMTok><XMDual><XMRef idref="S1.p1.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m4.1" font="caligraphic" fragid="S1.p1.m4.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. Associated with <Math mode="inline" xml:id="S1.p1.m5" tex="{\cal D}" text="D" fragid="S1.p1.m5"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math>
+is an adjacency matrix <Math mode="inline" xml:id="S1.p1.m6" tex="A\equiv A({\cal D})" text="A equivalent-to A * D" fragid="S1.p1.m6"><XMath><XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMTok role="UNKNOWN" font="italic">A</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">A</XMTok><XMDual><XMRef idref="S1.p1.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m6.1" font="caligraphic" fragid="S1.p1.m6.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>, and Hashimoto
+matrix<cite class="ltx_citemacro_cite">[<ref href="#bib.bib6" idref="bib.bib6">6</ref>]</cite> <Math mode="inline" xml:id="S1.p1.m7" tex="H\equiv H({\cal D})" text="H equivalent-to H * D" fragid="S1.p1.m7"><XMath><XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMTok role="UNKNOWN" font="italic">H</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">H</XMTok><XMDual><XMRef idref="S1.p1.m7.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m7.1" font="caligraphic" fragid="S1.p1.m7.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>, with
+elements</p>
+      <equation frefnum="(2)" refnum="2" xml:id="S1.E2" labels="LABEL:eq:Hashimoto" fragid="S1.E2">
+        <Math mode="display" xml:id="S1.E2.m1" tex="H_{u,v}=\delta_{jj^{\prime}}(1-\delta_{li}),\quad u\equiv i\to j,\;v\equiv j^{%&#10;\prime}\to l," text="formulae@(formulae@(H _ (list@(u, v)) = delta _ (j * j ^ prime) * (1 - delta _ (l * i)), u equivalent-to i to j), v equivalent-to j ^ prime to l)" fragid="S1.E2.m1">
+          <XMath>
+            <XMDual punctuation=",">
+              <XMApp>
+                <XMTok meaning="formulae"/>
+                <XMRef idref="S1.E2.m1.3"/>
+                <XMRef idref="S1.E2.m1.4"/>
+              </XMApp>
+              <XMWrap>
+                <XMDual xml:id="S1.E2.m1.3" fragid="S1.E2.m1.3">
+                  <XMApp>
+                    <XMTok meaning="formulae"/>
+                    <XMRef idref="S1.E2.m1.3.1"/>
+                    <XMRef idref="S1.E2.m1.3.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMApp xml:id="S1.E2.m1.3.1" fragid="S1.E2.m1.3.1">
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">H</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="list"/>
+                            <XMRef idref="S1.E2.m1.1"/>
+                            <XMRef idref="S1.E2.m1.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="UNKNOWN" xml:id="S1.E2.m1.1" font="italic" fragid="S1.E2.m1.1">u</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok role="UNKNOWN" xml:id="S1.E2.m1.2" font="italic" fragid="S1.E2.m1.2">v</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok name="delta" role="UNKNOWN" font="italic">δ</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">j</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">j</XMTok>
+                              <XMTok name="prime" role="SUPOP">′</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="S1.E2.m1.3.1.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S1.E2.m1.3.1.1" fragid="S1.E2.m1.3.1.1">
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                                <XMTok name="delta" role="UNKNOWN" font="italic">δ</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">l</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PUNCT" rpadding="10.0pt">,</XMTok>
+                    <XMApp xml:id="S1.E2.m1.3.2" fragid="S1.E2.m1.3.2">
+                      <XMTok meaning="multirelation"/>
+                      <XMTok role="UNKNOWN" font="italic">u</XMTok>
+                      <XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                      <XMTok name="to" role="ARROW">→</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">j</XMTok>
+                    </XMApp>
+                  </XMWrap>
+                </XMDual>
+                <XMTok role="PUNCT" rpadding="2.8pt">,</XMTok>
+                <XMApp xml:id="S1.E2.m1.4" fragid="S1.E2.m1.4">
+                  <XMTok meaning="multirelation"/>
+                  <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                  <XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">j</XMTok>
+                    <XMTok name="prime" role="SUPOP">′</XMTok>
+                  </XMApp>
+                  <XMTok name="to" role="ARROW">→</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">l</XMTok>
+                </XMApp>
+              </XMWrap>
+            </XMDual>
+          </XMath>
+        </Math>
+      </equation>
+      <p>where <Math mode="inline" xml:id="S1.p1.m8" tex="u" text="u" fragid="S1.p1.m8"><XMath><XMTok role="UNKNOWN" font="italic">u</XMTok></XMath></Math>, <Math mode="inline" xml:id="S1.p1.m9" tex="v" text="v" fragid="S1.p1.m9"><XMath><XMTok role="UNKNOWN" font="italic">v</XMTok></XMath></Math> are directed edges in <Math mode="inline" xml:id="S1.p1.m10" tex="{\cal E}({\cal D})" text="E * D" fragid="S1.p1.m10"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">E</XMTok><XMDual><XMRef idref="S1.p1.m10.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m10.1" font="caligraphic" fragid="S1.p1.m10.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. The
+digraph <Math mode="inline" xml:id="S1.p1.m11" tex="{\cal D}" text="D" fragid="S1.p1.m11"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> may have some symmetric edges (length-two cycles),
+whereas the OLG has none. The spectral
+radius of <Math mode="inline" xml:id="S1.p1.m12" tex="H" text="H" fragid="S1.p1.m12"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math> satisfies <Math mode="inline" xml:id="S1.p1.m13" tex="\rho(H)\leq\rho(A)" text="rho * H less= rho * A" fragid="S1.p1.m13"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p1.m13.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m13.1" font="italic" fragid="S1.p1.m13.1">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p1.m13.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m13.2" font="italic" fragid="S1.p1.m13.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>; the equality
+is reached iff <Math mode="inline" xml:id="S1.p1.m14" tex="{\cal D}" text="D" fragid="S1.p1.m14"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> has no symmetric edges. Also, for any
+induced <Math mode="inline" xml:id="S1.p1.m15" tex="q" text="q" fragid="S1.p1.m15"><XMath><XMTok role="UNKNOWN" font="italic">q</XMTok></XMath></Math>-norm, <Math mode="inline" xml:id="S1.p1.m16" tex="\rho(H)\leq\|H\|_{q}" text="rho * H less= (norm@(H)) _ q" fragid="S1.p1.m16"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p1.m16.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m16.1" font="italic" fragid="S1.p1.m16.1">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="S1.p1.m16.2"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m16.2" font="italic" fragid="S1.p1.m16.2">H</XMTok><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="italic">q</XMTok></XMApp></XMApp></XMath></Math>.</p>
+    </para>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>In <emph>site percolation</emph> on <Math mode="inline" xml:id="S1.p2.m1" tex="{\cal D}" text="D" fragid="S1.p2.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math>, each vertex is open with
+probability <Math mode="inline" xml:id="S1.p2.m2" tex="p" text="p" fragid="S1.p2.m2"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> and closed with probability <Math mode="inline" xml:id="S1.p2.m3" tex="1-p" text="1 - p" fragid="S1.p2.m3"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMath></Math>; we consider a
+subgraph <Math mode="inline" xml:id="S1.p2.m4" tex="{\cal D}^{\prime}" text="D ^ prime" fragid="S1.p2.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMath></Math> of <Math mode="inline" xml:id="S1.p2.m5" tex="{\cal D}" text="D" fragid="S1.p2.m5"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> induced by the open vertices. We
+<!-- %**** siam03arXiv.tex Line 100 **** -->are interested in the likelihood of forming in-, out-, or strongly
+connected components of a given size <Math mode="inline" xml:id="S1.p2.m6" tex="m" text="m" fragid="S1.p2.m6"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> on <Math mode="inline" xml:id="S1.p2.m7" tex="{\cal D}^{\prime}" text="D ^ prime" fragid="S1.p2.m7"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMath></Math> [e.g., in the
+case of the out-component, there exists a vertex <Math mode="inline" xml:id="S1.p2.m8" tex="i_{0}\in{\cal V}({\cal D}^{\prime})" text="i _ 0 element-of V * D ^ prime" fragid="S1.p2.m8"><XMath><XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok><XMDual><XMRef idref="S1.p2.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p2.m8.1" fragid="S1.p2.m8.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math> such that <Math mode="inline" xml:id="S1.p2.m9" tex="m-1" text="m - 1" fragid="S1.p2.m9"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> or more vertices can be reached by directed
+walks on <Math mode="inline" xml:id="S1.p2.m10" tex="{\cal D}^{\prime}" text="D ^ prime" fragid="S1.p2.m10"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMath></Math> starting with <Math mode="inline" xml:id="S1.p2.m11" tex="i_{0}" text="i _ 0" fragid="S1.p2.m11"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>]. In a strongly connected
+component, each site can be reached from any other by directed walks;
+it is automatically both an in- and out-cluster. We prove the
+following:</p>
+    </para>
+    <theorem class="ltx_theorem_theorem" frefnum="Theorem 1" refnum="1" xml:id="Thmtheorem1" labels="LABEL:th:H-norm-one-bound" fragid="Thmtheorem1">
+      <title class="ltx_runin" font="bold">
+        <tag>Theorem 1</tag>
+      </title>
+      <para xml:id="Thmtheorem1.p1" fragid="Thmtheorem1.p1">
+        <p>
+          <text font="italic">For any finite <Math mode="inline" xml:id="Thmtheorem1.p1.m1" tex="m&gt;0" text="m &gt; 0" fragid="Thmtheorem1.p1.m1"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP" font="upright">&gt;</XMTok><XMTok role="UNKNOWN">m</XMTok><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok></XMApp></XMath></Math>, the probability that a site <Math mode="inline" xml:id="Thmtheorem1.p1.m2" tex="v" text="v" fragid="Thmtheorem1.p1.m2"><XMath><XMTok role="UNKNOWN">v</XMTok></XMath></Math> is the
+root of an out-component of size <Math mode="inline" xml:id="Thmtheorem1.p1.m3" tex="m" text="m" fragid="Thmtheorem1.p1.m3"><XMath><XMTok role="UNKNOWN">m</XMTok></XMath></Math> or greater is bounded by <Math mode="inline" xml:id="Thmtheorem1.p1.m4" tex="mP_{m}^{\mathrm{(out)}}(v)\leq(1-p\|H\|_{1})^{-1}" text="m * (P _ m) ^ out * v less= (1 - p * (norm@(H)) _ 1) ^ (- 1)" fragid="Thmtheorem1.p1.m4"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">m</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">P</XMTok><XMTok role="UNKNOWN">m</XMTok></XMApp><XMDual><XMRef idref="Thmtheorem1.p1.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">(</XMTok><XMTok role="UNKNOWN" xml:id="Thmtheorem1.p1.m4.1" font="upright" fragid="Thmtheorem1.p1.m4.1">out</XMTok><XMTok role="CLOSE" stretchy="false" font="upright">)</XMTok></XMWrap></XMDual></XMApp><XMDual><XMRef idref="Thmtheorem1.p1.m4.2"/><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">(</XMTok><XMTok role="UNKNOWN" xml:id="Thmtheorem1.p1.m4.2" fragid="Thmtheorem1.p1.m4.2">v</XMTok><XMTok role="CLOSE" stretchy="false" font="upright">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMDual><XMRef idref="Thmtheorem1.p1.m4.4"/><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">(</XMTok><XMApp xml:id="Thmtheorem1.p1.m4.4" fragid="Thmtheorem1.p1.m4.4"><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">p</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="Thmtheorem1.p1.m4.3"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR" font="upright">∥</XMTok><XMTok role="UNKNOWN" xml:id="Thmtheorem1.p1.m4.3" fragid="Thmtheorem1.p1.m4.3">H</XMTok><XMTok meaning="parallel-to" name="||" role="VERTBAR" font="upright">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMApp></XMApp><XMTok role="CLOSE" stretchy="false" font="upright">)</XMTok></XMWrap></XMDual><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="Thmtheorem1.p1.m5" tex="p\|H\|_{1}&lt;1" text="p * (norm@(H)) _ 1 less 1" fragid="Thmtheorem1.p1.m5"><XMath><XMApp><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">p</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="Thmtheorem1.p1.m5.1"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR" font="upright">∥</XMTok><XMTok role="UNKNOWN" xml:id="Thmtheorem1.p1.m5.1" fragid="Thmtheorem1.p1.m5.1">H</XMTok><XMTok meaning="parallel-to" name="||" role="VERTBAR" font="upright">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMApp><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>This implies that out-cluster percolation threshold in large
+(di)graphs satisfies <Math mode="inline" xml:id="S1.p3.m1" tex="p_{c}^{\mathrm{(out)}}&gt;\|H\|_{1}^{-1}" text="(p _ c) ^ out &gt; ((norm@(H)) _ 1) ^ (- 1)" fragid="S1.p3.m1"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok></XMApp><XMDual><XMRef idref="S1.p3.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m1.1" fragid="S1.p3.m1.1">out</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="S1.p3.m1.2"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m1.2" font="italic" fragid="S1.p3.m1.2">H</XMTok><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>. A similar
+statement can be written for in-cluster percolation,
+<Math mode="inline" xml:id="S1.p3.m2" tex="p_{c}^{\mathrm{(in)}}\geq\|H^{T}\|_{1}^{-1}" text="(p _ c) ^ in &gt;= ((norm@(H ^ T)) _ 1) ^ (- 1)" fragid="S1.p3.m2"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok></XMApp><XMDual><XMRef idref="S1.p3.m2.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m2.1" fragid="S1.p3.m2.1">in</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="S1.p3.m2.2"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok><XMApp xml:id="S1.p3.m2.2" fragid="S1.p3.m2.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>. This is a generalization of the
+maximum degree bound to arbitrary digraphs. The proof is based
+on constructing an upper bound for the average number of sites
+reachable from <Math mode="inline" xml:id="S1.p3.m3" tex="v" text="v" fragid="S1.p3.m3"><XMath><XMTok role="UNKNOWN" font="italic">v</XMTok></XMath></Math> via non-backtracking walks. This is found by
+upper-bounding the sum <Math mode="inline" xml:id="S1.p3.m4" tex="\|\sum_{m\geq 0}p^{m}H^{m}x_{v}\|_{1}" text="(norm@((sum _ (m &gt;= 0))@(p ^ m * H ^ m * x _ v))) _ 1" fragid="S1.p3.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="S1.p3.m4.1"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok><XMApp xml:id="S1.p3.m4.1" fragid="S1.p3.m4.1"><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok mathstyle="text" meaning="sum" role="SUMOP" scriptpos="post">∑</XMTok><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">v</XMTok></XMApp></XMApp></XMApp><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>, where <Math mode="inline" xml:id="S1.p3.m5" tex="x_{v}" text="x _ v" fragid="S1.p3.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">v</XMTok></XMApp></XMath></Math>
+has only one non-zero component.
+We constructed a family of strongly-connected digraphs which saturate
+this bound, while at the same time <Math mode="inline" xml:id="S1.p3.m6" tex="\rho(H)&lt;\|H\|_{1}" text="rho * H less (norm@(H)) _ 1" fragid="S1.p3.m6"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p3.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m6.1" font="italic" fragid="S1.p3.m6.1">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="norm"/><XMRef idref="S1.p3.m6.2"/></XMApp><XMWrap><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m6.2" font="italic" fragid="S1.p3.m6.2">H</XMTok><XMTok meaning="parallel-to" name="||" role="VERTBAR">∥</XMTok></XMWrap></XMDual><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math>. Additionally,
+<!-- %**** siam03arXiv.tex Line 125 **** -->on these digraphs, the strongly-connected cluster percolation
+threshold is strictly higher than <Math mode="inline" xml:id="S1.p3.m7" tex="p_{c}^{(\rm out)}" text="(p _ c) ^ out" fragid="S1.p3.m7"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok></XMApp><XMDual><XMRef idref="S1.p3.m7.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m7.1" fragid="S1.p3.m7.1">out</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> or <Math mode="inline" xml:id="S1.p3.m8" tex="p_{c}^{(\rm in)}" text="(p _ c) ^ in" fragid="S1.p3.m8"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok></XMApp><XMDual><XMRef idref="S1.p3.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p3.m8.1" fragid="S1.p3.m8.1">in</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>; they give a counterexample for the central conjecture of
+Ref. <cite class="ltx_citemacro_cite">[<ref href="#bib.bib11" idref="bib.bib11">11</ref>]</cite>.</p>
+    </para>
+    <para xml:id="S1.p4" fragid="S1.p4">
+      <p>We notice that OLG of a strongly connected digraph <Math mode="inline" xml:id="S1.p4.m1" tex="\mathcal{D}" text="D" fragid="S1.p4.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> is
+also strongly connected, provided that <Math mode="inline" xml:id="S1.p4.m2" tex="\mathcal{D}" text="D" fragid="S1.p4.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math> remains strongly
+connected when any edge in any pair <Math mode="inline" xml:id="S1.p4.m3" tex="u=i\to j" text="u = i to j" fragid="S1.p4.m3"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">u</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok name="to" role="ARROW">→</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.p4.m4" tex="\bar{u}=j\to i" text="bar@(u) = j to i" fragid="S1.p4.m4"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok name="bar" role="OVERACCENT" stretchy="false">¯</XMTok><XMTok role="UNKNOWN" font="italic">u</XMTok></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok><XMTok name="to" role="ARROW">→</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> of
+mutually opposite edges (if any) is removed. For such a digraph, an
+improved bound for out-cluster probability reads <Math mode="inline" xml:id="S1.p4.m5" tex="mP_{m}^{\mathrm{(out)}}(v)\leq\gamma_{L}[1-p\rho(H)]^{-1}" text="m * (P _ m) ^ out * v less= gamma _ L * (delimited-[]@(1 - p * rho * H)) ^ (- 1)" fragid="S1.p4.m5"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">P</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMDual><XMRef idref="S1.p4.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p4.m5.1" fragid="S1.p4.m5.1">out</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMDual><XMRef idref="S1.p4.m5.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p4.m5.2" font="italic" fragid="S1.p4.m5.2">v</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="gamma" role="UNKNOWN" font="italic">γ</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S1.p4.m5.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S1.p4.m5.4" fragid="S1.p4.m5.4"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p4.m5.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p4.m5.3" font="italic" fragid="S1.p4.m5.3">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math> (cf. Theorem
+<ref labelref="LABEL:th:H-norm-one-bound" href="#Thmtheorem1" title="Theorem 1 ‣ 1 Main results ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>), where <Math mode="inline" xml:id="S1.p4.m6" tex="\gamma_{L}" text="gamma _ L" fragid="S1.p4.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="gamma" role="UNKNOWN" font="italic">γ</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp></XMath></Math> is the principal ratio,
+<Math mode="inline" xml:id="S1.p4.m7" tex="\gamma_{L}\equiv\max_{ij}(\xi_{i}/\xi_{j})" text="gamma _ L equivalent-to (maximum _ (i * j))@(xi _ i / xi _ j)" fragid="S1.p4.m7"><XMath><XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="gamma" role="UNKNOWN" font="italic">γ</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp><XMDual><XMApp><XMRef idref="S1.p4.m7.1"/><XMRef idref="S1.p4.m7.2"/></XMApp><XMApp><XMApp xml:id="S1.p4.m7.1" fragid="S1.p4.m7.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok meaning="maximum" role="OPFUNCTION" scriptpos="post">max</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok></XMApp></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p4.m7.2" fragid="S1.p4.m7.2"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMApp></XMath></Math>, for the left Perron-Frobenius
+vector of <Math mode="inline" xml:id="S1.p4.m8" tex="H" text="H" fragid="S1.p4.m8"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math>, <Math mode="inline" xml:id="S1.p4.m9" tex="\xi\rho(H)=\xi H" text="xi * rho * H = xi * H" fragid="S1.p4.m9"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p4.m9.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p4.m9.1" font="italic" fragid="S1.p4.m9.1">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok><XMTok role="UNKNOWN" font="italic">H</XMTok></XMApp></XMApp></XMath></Math>. This inequality allows to extend
+the bound (<ref labelref="LABEL:eq:orig-bound" href="#Sx2.E1" title="(1) ‣ Introduction ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">1</text></ref>) from
+Ref. <cite class="ltx_citemacro_cite">[<ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite> to in- and out-cluster
+percolation on any strongly-connected quasi-transitive infinite
+digraph.</p>
+    </para>
+    <para xml:id="S1.p5" fragid="S1.p5">
+      <p>The trace <Math mode="inline" xml:id="S1.p5.m1" tex="s^{-1}\mathop{\mathrm{Tr}}H^{s}" text="s ^ (- 1) * Tr@(H ^ s)" fragid="S1.p5.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok role="BIGOP">Tr</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMApp></XMApp></XMath></Math> counts non-backtracking directed cycles of
+length <Math mode="inline" xml:id="S1.p5.m2" tex="s" text="s" fragid="S1.p5.m2"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math> on <Math mode="inline" xml:id="S1.p5.m3" tex="\mathcal{D}" text="D" fragid="S1.p5.m3"><XMath><XMTok role="UNKNOWN" font="caligraphic">D</XMTok></XMath></Math>. We constructed a corresponding bound for
+the total number of SACs on <Math mode="inline" xml:id="S1.p5.m4" tex="{\cal D}^{\prime}" text="D ^ prime" fragid="S1.p5.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.p5.m5" tex="n_{E}\equiv|\mathcal{E}(\mathcal{D})|" text="n _ E equivalent-to absolute-value@(E * D)" fragid="S1.p5.m5"><XMath><XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok></XMApp><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S1.p5.m5.2"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S1.p5.m5.2" fragid="S1.p5.m5.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">E</XMTok><XMDual><XMRef idref="S1.p5.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p5.m5.1" font="caligraphic" fragid="S1.p5.m5.1">D</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual></XMApp></XMath></Math>:</p>
+      <equation frefnum="(3)" refnum="3" xml:id="S1.E3" labels="LABEL:eq:SAC-bound" fragid="S1.E3">
+        <Math mode="display" xml:id="S1.E3.m1" tex="N\leq\sum_{s&gt;0}s^{-1}p^{s}\mathop{\mathrm{Tr}}H^{s}\leq n_{E}\left|\ln[1-p\rho%&#10;(H)]\right|." text="N less= (sum _ (s &gt; 0))@(s ^ (- 1) * p ^ s * Tr@(H ^ s)) less= n _ E * absolute-value@(natural-logarithm@(1 - p * rho * H))" fragid="S1.E3.m1">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="multirelation"/>
+              <XMTok role="UNKNOWN" font="italic">N</XMTok>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMApp>
+                <XMApp scriptpos="mid">
+                  <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+                  <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                  <XMApp>
+                    <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    <XMTok meaning="0" role="NUMBER">0</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    <XMApp>
+                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="BIGOP">Tr</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">H</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">E</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="absolute-value"/>
+                    <XMRef idref="S1.E3.m1.3"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="VERTBAR">|</XMTok>
+                    <XMDual xml:id="S1.E3.m1.3" fragid="S1.E3.m1.3">
+                      <XMApp>
+                        <XMRef idref="S1.E3.m1.2"/>
+                        <XMRef idref="S1.E3.m1.3.1"/>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="natural-logarithm" role="OPFUNCTION" xml:id="S1.E3.m1.2" fragid="S1.E3.m1.2">ln</XMTok>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">[</XMTok>
+                          <XMApp xml:id="S1.E3.m1.3.1" fragid="S1.E3.m1.3.1">
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                              <XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok>
+                              <XMDual>
+                                <XMRef idref="S1.E3.m1.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok role="UNKNOWN" xml:id="S1.E3.m1.1" font="italic" fragid="S1.E3.m1.1">H</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                        </XMWrap>
+                      </XMApp>
+                    </XMDual>
+                    <XMTok role="VERTBAR">|</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>Notice that a strongly-connected cluster with <Math mode="inline" xml:id="S1.p5.m6" tex="m" text="m" fragid="S1.p5.m6"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> cycles supports <Math mode="inline" xml:id="S1.p5.m7" tex="m" text="m" fragid="S1.p5.m7"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math>
+distinct SACs iff it has an articulation point separating any two
+cycles; such a cluster can be separated into two by removing a single
+site. A two-site-connected cluster (which can be cut into two pieces
+by removing two sites, but not one) will support at least <Math mode="inline" xml:id="S1.p5.m8" tex="m(m-1)/2" text="(m * (m - 1)) / 2" fragid="S1.p5.m8"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMDual><XMRef idref="S1.p5.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p5.m8.1" fragid="S1.p5.m8.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>
+distinct SACs. A <emph>stable</emph> giant cluster which can not be easily
+separated into two large pieces will necessarily have large
+connectivity and support up to the maximum <Math mode="inline" xml:id="S1.p5.m9" tex="\mathcal{O}(2^{m})" text="O * 2 ^ m" fragid="S1.p5.m9"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">O</XMTok><XMDual><XMRef idref="S1.p5.m9.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p5.m9.1" fragid="S1.p5.m9.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> SACs.
+For a cluster occupying a finite fraction of directed edges in
+<Math mode="inline" xml:id="S1.p5.m10" tex="\mathcal{D}^{\prime}" text="D ^ prime" fragid="S1.p5.m10"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">D</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMath></Math>, such a possibility is excluded by
+Eq. (<ref labelref="LABEL:eq:SAC-bound" href="#S1.E3" title="(3) ‣ 1 Main results ‣ Spectral bounds for percolation on directed and undirected graphs"><text class="ltx_ref_tag">3</text></ref>). Therefore, we expect any large
+clusters formed at <Math mode="inline" xml:id="S1.p5.m11" tex="p\rho(H)&lt;1" text="p * rho * H less 1" fragid="S1.p5.m11"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok name="rho" role="UNKNOWN" font="italic">ρ</XMTok><XMDual><XMRef idref="S1.p5.m11.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p5.m11.1" font="italic" fragid="S1.p5.m11.1">H</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> to be unstable; i.e., fracture easily
+into two or more large cluster. Thus, we give</p>
+    </para>
+    <theorem class="ltx_theorem_conjecture" frefnum="Conjecture 2" refnum="2" xml:id="Thmtheorem2" labels="LABEL:th:adjacency" fragid="Thmtheorem2">
+      <title class="ltx_runin" font="bold">
+        <tag>Conjecture 2</tag>
+      </title>
+      <para xml:id="Thmtheorem2.p1" fragid="Thmtheorem2.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="Thmtheorem2.p1.m1" tex="p\rho(H)&lt;1" text="p * rho * H less 1" fragid="Thmtheorem2.p1.m1"><XMath><XMApp><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">p</XMTok><XMTok name="rho" role="UNKNOWN">ρ</XMTok><XMDual><XMRef idref="Thmtheorem2.p1.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">(</XMTok><XMTok role="UNKNOWN" xml:id="Thmtheorem2.p1.m1.1" fragid="Thmtheorem2.p1.m1.1">H</XMTok><XMTok role="CLOSE" stretchy="false" font="upright">)</XMTok></XMWrap></XMDual></XMApp><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMath></Math>, if there is a percolating cluster, it is not
+unique with probability approaching one at large <Math mode="inline" xml:id="Thmtheorem2.p1.m2" tex="n" text="n" fragid="Thmtheorem2.p1.m2"><XMath><XMTok role="UNKNOWN">n</XMTok></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=" ">2</tag>Conclusions</title>
+    <para xml:id="S2.p1" fragid="S2.p1">
+      <p>We used algebraic techniques based on non-backtracking (Hashimoto)
+matrix to establish several new bounds for percolation on general
+<!-- %**** siam03arXiv.tex Line 175 **** -->directed (and undirected) graphs. Our results are formulated as
+bounds for the probability that a given site connects to a cluster of
+size <Math mode="inline" xml:id="S2.p1.m1" tex="m" text="m" fragid="S2.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> or greater, and are
+applicable for finite and infinite (di)graphs. We also discuss the
+stability of giant strongly-connected clusters, which is related to
+the uniqueness transition.</p>
+    </para>
+  </section>
+  <section refnum="3" xml:id="S3" fragid="S3">
+    <title><tag close=" ">3</tag>Acknowledgements</title>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>The authors wish to thank Mark E. J. Newman for insightful
+discussions. This work was supported in part by the U.S. Army
+Research Office under Grant No. W911NF-14-1-0272 and by the NSF under
+Grant No. PHY-1416578.
+<!-- %“bibliographystyle–abbrv˝ 
+     %“bibliography–wns-bib,lpp,percol,new˙bibfile˝--></p>
+    </para>
+  </section>
+  <bibliography xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist>
+      <bibitem key="bollobas1998random" xml:id="bib.bib1" fragid="bib.bib1">
+        <bibtag role="refnum">1</bibtag>
+        <bibblock>
+B. Bollobás.
+</bibblock>
+        <bibblock><text font="italic">Random graphs</text>.
+</bibblock>
+        <bibblock>Springer, 1998.
+</bibblock>
+      </bibitem>
+      <bibitem key="Bollobas-Borgs-Chayes-Riordan-2010" xml:id="bib.bib2" fragid="bib.bib2">
+        <bibtag role="refnum">2</bibtag>
+        <bibblock>
+B. Bollobás, C. Borgs, J. Chayes, and O. Riordan.
+</bibblock>
+        <bibblock>Percolation on dense graph sequences.
+</bibblock>
+        <bibblock><text font="italic">The Annals of Probability</text>, 38(1):150–183, 2010.
+<!-- %**** siam03arXiv.tex Line 200 **** --></bibblock>
+      </bibitem>
+      <bibitem key="Callaway-Newman-Strogatz-Watts-2000" xml:id="bib.bib3" fragid="bib.bib3">
+        <bibtag role="refnum">3</bibtag>
+        <bibblock>
+D. S. Callaway, M. E. J. Newman, S. H. Strogatz, and D. J. Watts.
+</bibblock>
+        <bibblock>Network robustness and fragility: Percolation on random graphs.
+</bibblock>
+        <bibblock><text font="italic">Phys. Rev. Lett.</text>, 85:5468–5471, Dec 2000.
+</bibblock>
+      </bibitem>
+      <bibitem key="chakrabarti2008epidemic" xml:id="bib.bib4" fragid="bib.bib4">
+        <bibtag role="refnum">4</bibtag>
+        <bibblock>
+D. Chakrabarti, Y. Wang, C. Wang, J. Leskovec, and C. Faloutsos.
+</bibblock>
+        <bibblock>Epidemic thresholds in real networks.
+</bibblock>
+        <bibblock><text font="italic">ACM Transactions on Information and System Security (TISSEC)</text>,
+10(4):1, 2008.
+</bibblock>
+      </bibitem>
+      <bibitem key="Hamilton-Pryadko-PRL-2014" xml:id="bib.bib5" fragid="bib.bib5">
+        <bibtag role="refnum">5</bibtag>
+        <bibblock>
+K. E. Hamilton and L. P. Pryadko.
+</bibblock>
+        <bibblock>Tight lower bound for percolation threshold on an infinite graph.
+</bibblock>
+        <bibblock><text font="italic">Phys. Rev. Lett.</text>, 113:208701, Nov 2014.
+</bibblock>
+      </bibitem>
+      <bibitem key="Hashimoto-matrix-1989" xml:id="bib.bib6" fragid="bib.bib6">
+        <bibtag role="refnum">6</bibtag>
+        <bibblock>
+K. Hashimoto.
+</bibblock>
+        <bibblock>Zeta functions of finite graphs and representations of <Math mode="inline" xml:id="bib.bib6.m1" tex="p" text="p" fragid="bib.bib6.m1"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math>-adic
+groups.
+</bibblock>
+        <bibblock>In K. Hashimoto and Y. Namikawa, editors, <text font="italic">Automorphic Forms and
+Geometry of Arithmetic Varieties</text>, volume 15 of <text font="italic">Advanced Studies in Pure
+Mathematics</text>, pages 211–280. Kinokuniya, Tokyo, 1989.
+<!-- %**** siam03arXiv.tex Line 225 **** --></bibblock>
+      </bibitem>
+      <bibitem key="Karrer-Newman-Zdeborova-PRL-2014" xml:id="bib.bib7" fragid="bib.bib7">
+        <bibtag role="refnum">7</bibtag>
+        <bibblock>
+B. Karrer, M. E. J. Newman, and L. Zdeborová.
+</bibblock>
+        <bibblock>Percolation on sparse networks.
+</bibblock>
+        <bibblock><text font="italic">Phys. Rev. Lett.</text>, 113:208702, Nov 2014.
+</bibblock>
+      </bibitem>
+      <bibitem key="Kotani-Sunada-2000" xml:id="bib.bib8" fragid="bib.bib8">
+        <bibtag role="refnum">8</bibtag>
+        <bibblock>
+M. Kotani and T. Sunada.
+</bibblock>
+        <bibblock>Zeta functions of finite graphs.
+</bibblock>
+        <bibblock><text font="italic">J. Math. Sci. Univ. Tokyo</text>, 7(1):7–25, 2000.
+</bibblock>
+      </bibitem>
+      <bibitem key="prakash2012threshold" xml:id="bib.bib9" fragid="bib.bib9">
+        <bibtag role="refnum">9</bibtag>
+        <bibblock>
+B. A. Prakash, D. Chakrabarti, N. C. Valler, M. Faloutsos, and C. Faloutsos.
+</bibblock>
+        <bibblock>Threshold conditions for arbitrary cascade models on arbitrary
+networks.
+</bibblock>
+        <bibblock><text font="italic">Knowledge and information systems</text>, 33(3):549–575, 2012.
+</bibblock>
+      </bibitem>
+      <bibitem key="PhysRevE.76.056119" xml:id="bib.bib10" fragid="bib.bib10">
+        <bibtag role="refnum">10</bibtag>
+        <bibblock>
+J. G. Restrepo, E. Ott, and B. R. Hunt.
+</bibblock>
+        <bibblock>Approximating the largest eigenvalue of network adjacency matrices.
+</bibblock>
+        <bibblock><text font="italic">Phys. Rev. E</text>, 76:056119, Nov 2007.
+</bibblock>
+      </bibitem>
+      <bibitem key="Restrepo-Ott-Hunt-2008" xml:id="bib.bib11" fragid="bib.bib11">
+        <bibtag role="refnum">11</bibtag>
+        <bibblock>
+J. G. Restrepo, E. Ott, and B. R. Hunt.
+</bibblock>
+        <bibblock>Weighted percolation on directed networks.
+</bibblock>
+        <bibblock><text font="italic">Phys. Rev. Lett.</text>, 100:058701, Feb 2008.
+<!-- %**** siam03arXiv.tex Line 250 **** --></bibblock>
+      </bibitem>
+      <bibitem key="stauffer1991introduction" xml:id="bib.bib12" fragid="bib.bib12">
+        <bibtag role="refnum">12</bibtag>
+        <bibblock>
+D. Stauffer and A. Aharony.
+</bibblock>
+        <bibblock><text font="italic">Introduction to percolation theory</text>.
+</bibblock>
+        <bibblock>Taylor and Francis, 1991.
+</bibblock>
+      </bibitem>
+      <bibitem key="Hofstad-2010" xml:id="bib.bib13" fragid="bib.bib13">
+        <bibtag role="refnum">13</bibtag>
+        <bibblock>
+R. van der Hofstad.
+</bibblock>
+        <bibblock>Percolation and random graphs.
+</bibblock>
+        <bibblock>In I. Molchanov and W. Kendall, editors, <text font="italic">New Perspectives on
+Stochastic Geometry</text>, chapter 6, pages 173–247. Oxford University Press,
+2010.
+</bibblock>
+        <bibblock>ISBN 978-0-19-923257-4.
+</bibblock>
+      </bibitem>
+    </biblist>
+  </bibliography>
+</document>

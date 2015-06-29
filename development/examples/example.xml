@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="article"?>
+<!-- %We will use this to test stuff -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>An example TeX document for testing</title>
+  <creator role="author">
+    <personname>Lukas Kohlhase</personname>
+  </creator>
+  <para>
+    <p xml:id="asdf">Hello World</p>
+  </para>
+</document>

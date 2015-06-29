@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="article" options="12pt,a4paper"?>
+<?latexml package="geometry" options="margin=3cm"?>
+<?latexml package="apacite" options="natbibapa"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>On not testing the foreign-language effect:<break/>A comment on Costa, Foucart, Arnon, Aparici, and Apesteguia (2014)</title>
+  <creator role="author">
+    <personname>Florian Wickelmaier<note mark="1" role="footnote"><text font="italic">Address for correspondence:</text>
+Florian Wickelmaier, Department of Psychology, University of Tuebingen,
+Schleichstrasse 4, 72076 Tuebingen, Germany. E-mail:
+florian.wickelmaier@uni-tuebingen.de</note></personname>
+  </creator>
+  <date role="creation">
+    <text font="italic">University of Tuebingen, Germany</text>
+  </date>
+  <abstract name="Abstract">
+    <p>In their first five studies, <ERROR class="undefined">\citet</ERROR>*CostaFoucart14 fail to provide a
+statistical test of the foreign-language effect. Instead, the authors employ a
+procedure in which they test the framing effects separately for the native and
+the foreign language conditions. Such a procedure, however, is inappropriate
+when comparing two effects; rather, a test of their difference is required.
+Using the original data, it is shown that in four out of the five studies the
+authors’ conclusions about the existence of a foreign-language effect are
+invalid.
+<!-- %**** WickelmaierComment.tex Line 25 **** --></p>
+  </abstract>
+  <para xml:id="p1" class="ltx_noindent" fragid="p1">
+    <p><text font="italic">Keywords:</text> Hypothesis testing, interaction, foreign-language
+effect, decision making</p>
+  </para>
+  <para xml:id="p2" fragid="p2">
+    <p>In their article “‘Piensa’ twice: On the foreign language effect in decision
+making,” <ERROR class="undefined">\citet</ERROR>*CostaFoucart14 fail to provide a statistical test of the
+foreign-language effect for their first five studies. Instead, the authors
+employ a procedure in which they test the framing effects separately for the
+native (NL) and the foreign (FL) language conditions. To illustrate, in their
+first study the authors conclude that “the difference between the response
+distributions in the two frame versions for the FL group barely reached
+significant values (Gain vs. Loss distribution <Math mode="inline" xml:id="p2.m1" tex="\chi^{2}(1,N=123)=3.7" fragid="p2.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="chi" role="UNKNOWN" font="italic">χ</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="123" role="NUMBER">123</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="3.7" role="NUMBER">3.7</XMTok></XMath></Math>, <Math mode="inline" xml:id="p2.m2" tex="p=.05" text="p = .05" fragid="p2.m2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok meaning=".05" role="NUMBER">.05</XMTok></XMApp></XMath></Math>), and was much smaller than when the task was performed in the NL (Gain
+vs. Loss distribution <Math mode="inline" xml:id="p2.m3" tex="\chi^{2}(1,N=124)=14.2" fragid="p2.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="chi" role="UNKNOWN" font="italic">χ</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="124" role="NUMBER">124</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="14.2" role="NUMBER">14.2</XMTok></XMath></Math>, <Math mode="inline" xml:id="p2.m4" tex="p=.001" text="p = .001" fragid="p2.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok meaning=".001" role="NUMBER">.001</XMTok></XMApp></XMath></Math>)”
+<ERROR class="undefined">\citep</ERROR>[][p. 240]CostaFoucart14. The procedure used by the authors, however,
+does not constitute a test of their postulated hypothesis of different-sized
+framing effects, and their interpretation that the former effect is smaller
+than the latter is therefore not justified. This is so because the difference
+between significant and not significant is not itself significant
+<ERROR class="undefined">\citep</ERROR>GelmanStern06, NieuwenhuisForstmann11. Rather, a test of the
+difference of the effects is required.
+<!-- %**** WickelmaierComment.tex Line 50 **** --></p>
+  </para>
+  <para xml:id="p3" fragid="p3">
+    <p>To give a numerical example, consider their first study of the Asian disease
+problem: When presented in the foreign language (English),
+41 of
+61
+participants chose the sure option in the gain frame, while
+31 of
+62
+participants chose the sure option in the loss frame. The odds ratio is
+2.05.
+In the native language (Spanish),
+42 of
+62
+participants chose the sure option in the gain frame, while
+21 of
+62
+participants chose the sure option in the loss frame. The odds ratio is
+4.10.
+Thus, the ratio of odds ratios across the two language conditions is
+2.00.
+The 95% confidence interval for the true ratio of odds ratios is
+(0.70, 5.72);
+it covers one, indicating that the hypothesis of equal odds ratios cannot be
+rejected with an error probability of 5%.</p>
+  </para>
+  <!-- %**** WickelmaierComment.tex Line 75 **** -->
+  <table frefnum="Table 1" refnum="1" xml:id="S0.T1" labels="LABEL:tab:OR" fragid="S0.T1">
+    <toccaption><tag close=" ">1</tag>Odds ratios, ratio of odds ratios and 95% confidence interval for
+studies reported in <ERROR class="undefined">\citet</ERROR>CostaFoucart14.</toccaption>
+    <caption><tag close=": ">Table 1</tag>Odds ratios, ratio of odds ratios and 95% confidence interval for
+studies reported in <ERROR class="undefined">\citet</ERROR>CostaFoucart14.</caption>
+    <tabular vattach="middle" class="ltx_guessed_headers">
+      <tbody>
+        <tr>
+          <td border="t" thead="row"/>
+          <td align="center" border="t" colspan="2" thead="column">Odds Ratio</td>
+          <td align="center" border="t" thead="column">Ratio of</td>
+          <td border="t"/>
+        </tr>
+        <tr>
+          <td align="left" thead="column row">Study</td>
+          <td align="center" border="t" thead="column">NL</td>
+          <td align="center" border="t" thead="column">FL</td>
+          <td align="center" thead="column">Odds Ratios</td>
+          <td align="center" thead="column">95% CI</td>
+        </tr>
+        <tr>
+          <td align="left" border="t" thead="row">Asian disease (S/E)</td>
+          <td align="center" border="t">4.10</td>
+          <td align="center" border="t">2.05</td>
+          <td align="center" border="t">2.00</td>
+          <td align="center" border="t">(0.704, 5.724)</td>
+        </tr>
+        <tr>
+          <td align="left" thead="row">Asian disease (A/H)</td>
+          <td align="center">4.33</td>
+          <td align="center">1.59</td>
+          <td align="center">2.72</td>
+          <td align="center">(0.602, 12.528)</td>
+        </tr>
+        <tr>
+          <td align="left" thead="row">Financial crisis</td>
+          <td align="center">1.90</td>
+          <td align="center">1.28</td>
+          <td align="center">1.48</td>
+          <td align="center">(0.553, 3.981)</td>
+        </tr>
+        <tr>
+          <td align="left" thead="row">Ticket/money lost</td>
+          <td align="center">2.34</td>
+          <td align="center">2.29</td>
+          <td align="center">1.02</td>
+          <td align="center">(0.377, 2.775)</td>
+        </tr>
+        <tr>
+          <td align="left" border="b" thead="row">Discount</td>
+          <td align="center" border="b">5.61</td>
+          <td align="center" border="b">1.84</td>
+          <td align="center" border="b">3.05</td>
+          <td align="center" border="b">(0.997, 10.029)</td>
+        </tr>
+      </tbody>
+    </tabular>
+    <break/>
+    <p>Note: NL: native language, FL: foreign language, CI: confidence interval, S/E:
+Spanish/English, A/H: Arab/Hebrew.</p>
+  </table>
+  <para xml:id="p4" fragid="p4">
+    <p>Table <ref labelref="LABEL:tab:OR" href="#S0.T1" title="Table 1 ‣ On not testing the foreign-language effect: A comment on Costa, Foucart, Arnon, Aparici, and Apesteguia (2014)"><text class="ltx_ref_tag">1</text></ref> shows the odds ratios, their ratios and confidence
+intervals for the first five studies reported in
+<ERROR class="undefined">\citet</ERROR>CostaFoucart14<note mark="2" role="footnote">Code for replicating the analyses presented
+here is available in the supplementary material.</note>. The profile likelihood
+<!-- %**** WickelmaierComment.tex Line 100 **** -->confidence intervals <ERROR class="undefined">\citep</ERROR>Agresti02 are based on the logistic regression
+model</p>
+    <equation frefnum="(1)" refnum="1" xml:id="S0.E1" labels="LABEL:eq:logit" fragid="S0.E1">
+      <Math mode="display" xml:id="S0.E1.m1" tex="\log\frac{P(Y=1)}{P(Y=0)}=\beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}X_{%&#10;1}X_{2}," text="logarithm@([P(Y=1)] / [P(Y=0)]) = beta _ 0 + beta _ 1 * X _ 1 + beta _ 2 * X _ 2 + beta _ 3 * X _ 1 * X _ 2" fragid="S0.E1.m1">
+        <XMath>
+          <XMApp punctuation=",">
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+              <XMApp>
+                <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                <XMArg>
+                  <XMTok role="UNKNOWN" font="italic">P</XMTok>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">Y</XMTok>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMArg>
+                <XMArg>
+                  <XMTok role="UNKNOWN" font="italic">P</XMTok>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">Y</XMTok>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMArg>
+              </XMApp>
+            </XMApp>
+            <XMApp>
+              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                <XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok>
+                <XMTok meaning="0" role="NUMBER">0</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok>
+                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>
+    </equation>
+    <p>where <Math mode="inline" xml:id="p4.m1" tex="Y=1" text="Y = 1" fragid="p4.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">Y</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> denotes that a person chose, for example, the sure option in the
+Asian disease problem, <Math mode="inline" xml:id="p4.m2" tex="X_{1}=1" text="X _ 1 = 1" fragid="p4.m2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> indicates the gain version of the problem
+(<Math mode="inline" xml:id="p4.m3" tex="X_{1}=0" text="X _ 1 = 0" fragid="p4.m3"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> the loss version), and <Math mode="inline" xml:id="p4.m4" tex="X_{2}=1" text="X _ 2 = 1" fragid="p4.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> the native language condition
+(<Math mode="inline" xml:id="p4.m5" tex="X_{2}=0" text="X _ 2 = 0" fragid="p4.m5"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> the foreign language). The coefficient <Math mode="inline" xml:id="p4.m6" tex="\beta_{3}" text="beta _ 3" fragid="p4.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math> represents the
+difference in log odds ratios, thus <Math mode="inline" xml:id="p4.m7" tex="\exp(\beta_{3})" text="exponential@(beta _ 3)" fragid="p4.m7"><XMath><XMDual><XMApp><XMRef idref="p4.m7.1"/><XMRef idref="p4.m7.2"/></XMApp><XMApp><XMTok meaning="exponential" role="OPFUNCTION" xml:id="p4.m7.1" fragid="p4.m7.1">exp</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="p4.m7.2" fragid="p4.m7.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="beta" role="UNKNOWN" font="italic">β</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math> is the estimated ratio of
+odds ratios. Although the ratios are greater than one and point in the
+hypothesized direction, the confidence intervals all include one, so none of
+the effects is significant. Even when the data of the first three studies are
+combined, as was done by the authors, the estimated ratio of odds ratios,
+based on a model that contains the study as an additional predictor, is
+1.86
+(0.97, 3.56)
+and not significant.</p>
+  </para>
+  <para xml:id="p5" fragid="p5">
+    <p>In contrast to these results, the authors’ interpretation of the outcomes of
+the first three studies is that “it appears that we can safely conclude that
+foreign language reduces loss aversion” <ERROR class="undefined">\citep</ERROR>[][p. 250; see their Figure 1,
+p. 241]CostaFoucart14. They further conclude that there is a
+<!-- %**** WickelmaierComment.tex Line 125 **** -->foreign-language effect in the discount, but not in the ticket/money lost
+problem (see their Table 9, p. 250). Considering the analyses presented above,
+however, the conclusion rather is that there is not much evidence in favor of
+a foreign-language effect in any of the five studies<note mark="3" role="footnote">In a corrigendum
+to their original article, <ERROR class="undefined">\citet</ERROR>CostaFoucart15 report a meta-analysis which
+shows a significant foreign-language effect based on the combined data of all
+five studies. This combined effect, however, does not imply significance of
+the effect for each study separately.</note>.</p>
+  </para>
+  <para xml:id="p6" fragid="p6">
+    <p>In summary, more care has to be taken when analyzing an effect that, like the
+foreign-language effect, consists of the difference of two effects. Failing to
+test this difference runs the risk of rendering conclusions invalid.</p>
+  </para>
+  <bibliography bibstyle="apacite" citestyle="numbers" files="$HOME/w/LMU/bibtex/long,$HOME/w/LMU/bibtex/fw" xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist xml:id="Document.L1" fragid="L1"/>
+  </bibliography>
+</document>

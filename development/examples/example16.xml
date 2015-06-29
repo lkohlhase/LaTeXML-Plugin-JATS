@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="amsart" options="12pt"?>
+<?latexml package="amscd"?>
+<?latexml package="amsmath"?>
+<?latexml package="verbatim"?>
+<?latexml package="ulem" options="normalem"?>
+<?latexml package="longtable"?>
+<?latexml package="xy" options="all,cmtip,arrow"?>
+<?latexml package="pb-diagram,pb-xy"?>
+<?latexml package="amssymb"?>
+<!-- %**** example16.tex Line 25 **** -->
+<!-- %**** example16.tex Line 50 **** -->
+<!-- %**** example16.tex Line 75 **** -->
+<!-- %**** example16.tex Line 100 **** -->
+<!-- %**** example16.tex Line 125 **** -->
+<!-- %**** example16.tex Line 150 **** -->
+<!-- %**** example16.tex Line 175 **** -->
+<!-- %**** example16.tex Line 200 **** -->
+<!-- %**** example16.tex Line 225 **** -->
+<?latexml package="hyperref" options="hypertex"?>
+<!-- %**** example16.tex Line 250 **** -->
+<!-- %**** example16.tex Line 275 **** -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line ltx_leqno" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <resource src="ltx-amsart.css" type="text/css"/>
+  <resource src="ltx-ulem.css" type="text/css"/>
+  <title>Rost motives, affine varieties, and classifying spaces</title>
+  <toctitle>Rost motives, affine varieties, and classifying spaces</toctitle>
+  <creator role="author">
+    <personname>Victor Petrov</personname>
+  </creator>
+  <creator role="author" before=" and ">
+    <personname>Nikita Semenov</personname>
+    <contact role="address">Semenov:
+Institut für Mathematik, Johannes Gutenberg-Universität
+Mainz, Staudingerweg 9, D-55128, Mainz, Germany</contact>
+    <contact role="email">semenov@uni-mainz.de</contact>
+    <contact role="address">Petrov: St. Petersburg Department of Steklov Mathematical Institute,
+Russian Academy of Sciences,
+Fontanka 27,
+191023 St. Petersburg,
+Russia</contact>
+    <contact role="email">victorapetrov@googlemail.com</contact>
+  </creator>
+  <abstract name="Abstract.">
+    <p>In the present article we investigate ordinary and equivariant Rost motives. We provide an equivariant motivic
+decomposition of the variety <Math mode="inline" xml:id="m1" tex="X" text="X" fragid="m1"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> of full flags of a split semisimple algebraic group over
+a smooth base scheme,
+study torsion subgroup of the Chow group of twisted forms of <Math mode="inline" xml:id="m2" tex="X" text="X" fragid="m2"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math>, define some equivariant Rost motives over a field and ordinary Rost motives
+over a general base scheme, and relate equivariant Rost motives with classifying spaces of some algebraic groups.</p>
+  </abstract>
+  <keywords name="Key words and phrases">Linear algebraic groups, twisted flag varieties, equivariant Chow groups, classifying spaces, motives.</keywords>
+  <classification name="2010 Mathematics Subject Classification" scheme="2010 Mathematics Subject Classification">20G15, 14C15</classification>
+  <acknowledgements>Results of Sections 6–8 were obtained under the support of RSCF grant 14-11-00456. The second author
+acknowledges the support of the SPP 1786 “Homotopy theory and algebraic geometry” (DFG)</acknowledgements>
+  <!-- %**** example16.tex Line 300 **** -->
+  <section refnum="1" xml:id="S1" fragid="S1">
+    <title><tag close=". ">1</tag>Introduction</title>
+    <toctitle><tag close=" ">1</tag>Introduction</toctitle>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>The (generalized) Rost motives play an essential role in the proofs of the Milnor and of the Bloch–Kato conjectures
+(see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Ro07" title="Ro07">Ro07</ref>]</cite>, <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Vo03" title="Vo03">Vo03</ref>]</cite>, <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Vo11" title="Vo11">Vo11</ref>]</cite> and references there). Rost motives are uniquely determined by pure symbols in the Galois cohomology
+<Math mode="inline" xml:id="S1.p1.m1" tex="H_{et}^{n}(F,\mu_{p}^{\otimes n})" text="(H _ (e * t)) ^ n * open-interval@(F, (mu _ p) ^ (absent tensor-product n))" fragid="S1.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp></XMApp><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p1.m1.1"/><XMRef idref="S1.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m1.1" font="italic" fragid="S1.p1.m1.1">F</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p1.m1.2" fragid="S1.p1.m1.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp><XMApp><XMTok meaning="tensor-product" name="otimes" role="MULOP">⊗</XMTok><XMTok meaning="absent"/><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> of a field <Math mode="inline" xml:id="S1.p1.m2" tex="F" text="F" fragid="S1.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>, where <Math mode="inline" xml:id="S1.p1.m3" tex="n" text="n" fragid="S1.p1.m3"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> is a natural number
+and <Math mode="inline" xml:id="S1.p1.m4" tex="p" text="p" fragid="S1.p1.m4"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> is a prime number. In particular, a Rost motive depends on two parameters <Math mode="inline" xml:id="S1.p1.m5" tex="n" text="n" fragid="S1.p1.m5"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> and <Math mode="inline" xml:id="S1.p1.m6" tex="p" text="p" fragid="S1.p1.m6"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math>.</p>
+    </para>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>In Section <ref labelref="LABEL:secaff" class="ltx_missing_label" broken="1">LABEL:secaff</ref> we will show that the Rost motives corresponding to <text font="italic">small values</text> of parameters <Math mode="inline" xml:id="S1.p2.m1" tex="(n,p)" text="open-interval@(n, p)" fragid="S1.p2.m1"><XMath><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p2.m1.1"/><XMRef idref="S1.p2.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p2.m1.1" font="italic" fragid="S1.p2.m1.1">n</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S1.p2.m1.2" font="italic" fragid="S1.p2.m1.2">p</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> can be
+identified in the category of motives of Voevodsky with the motives of certain concrete affine varieties.
+These identifications resemble the exceptional isomorphisms between small finite groups.</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>Namely, there exists a general principle in Mathematics related to the phenomenon of small dimensions.
+For example, it is well-known that in dimensions bigger than <Math mode="inline" xml:id="S1.p3.m1" tex="4" text="4" fragid="S1.p3.m1"><XMath><XMTok meaning="4" role="NUMBER">4</XMTok></XMath></Math> there are no regular polytopes apart
+from simplices, hyper-cubes and hyper-octahedra (which are dual to hyper-cubes). On the other hand, there exist famous beautiful <Math mode="inline" xml:id="S1.p3.m2" tex="3" text="3" fragid="S1.p3.m2"><XMath><XMTok meaning="3" role="NUMBER">3</XMTok></XMath></Math>- and <Math mode="inline" xml:id="S1.p3.m3" tex="4" text="4" fragid="S1.p3.m3"><XMath><XMTok meaning="4" role="NUMBER">4</XMTok></XMath></Math>-dimensional
+regular polytopes, namely, dodecahedron, icosahedron, <Math mode="inline" xml:id="S1.p3.m4" tex="24" text="24" fragid="S1.p3.m4"><XMath><XMTok meaning="24" role="NUMBER">24</XMTok></XMath></Math>-cell, <Math mode="inline" xml:id="S1.p3.m5" tex="120" text="120" fragid="S1.p3.m5"><XMath><XMTok meaning="120" role="NUMBER">120</XMTok></XMath></Math>-cell, and <Math mode="inline" xml:id="S1.p3.m6" tex="600" text="600" fragid="S1.p3.m6"><XMath><XMTok meaning="600" role="NUMBER">600</XMTok></XMath></Math>-cell.</p>
+    </para>
+    <para xml:id="S1.p4" fragid="S1.p4">
+      <p>The same principle is known in other areas of Mathematics. Here is a short outline.</p>
+    </para>
+    <para xml:id="S1.p5" fragid="S1.p5">
+      <p><Math mode="inline" xml:id="S1.p5.m1" tex="\bullet" text="bullet" fragid="S1.p5.m1"><XMath><XMTok name="bullet" role="MULOP">∙</XMTok></XMath></Math> When studying finite simple groups, one finds a finite number of exceptional groups, which are called
+<text font="italic">sporadic groups</text>. There are no sporadic groups of order bigger than <Math mode="inline" xml:id="S1.p5.m2" tex="2^{180}" text="2 ^ 180" fragid="S1.p5.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok meaning="180" role="NUMBER">180</XMTok></XMApp></XMath></Math>. Thus, a “small dimension” in
+this example is big, but concrete and finite.</p>
+    </para>
+    <para xml:id="S1.p6" fragid="S1.p6">
+      <p><Math mode="inline" xml:id="S1.p6.m1" tex="\bullet" text="bullet" fragid="S1.p6.m1"><XMath><XMTok name="bullet" role="MULOP">∙</XMTok></XMath></Math> In the theory of simple <text font="italic">Lie groups</text> and <text font="italic">Lie algebras</text> there are exceptional series of groups and algebras
+with the last one of rank <Math mode="inline" xml:id="S1.p6.m2" tex="8" text="8" fragid="S1.p6.m2"><XMath><XMTok meaning="8" role="NUMBER">8</XMTok></XMath></Math> (type <Math mode="inline" xml:id="S1.p6.m3" tex="\mathrm{E}_{8}" text="E _ 8" fragid="S1.p6.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">E</XMTok><XMTok meaning="8" role="NUMBER">8</XMTok></XMApp></XMath></Math>). If one would classify simple complex Lie algebras
+<!-- %**** example16.tex Line 325 **** -->of rank bigger than <Math mode="inline" xml:id="S1.p6.m4" tex="8" text="8" fragid="S1.p6.m4"><XMath><XMTok meaning="8" role="NUMBER">8</XMTok></XMath></Math>, then one would miss all exceptional cases and find the algebras of classical types only.</p>
+    </para>
+    <para xml:id="S1.p7" fragid="S1.p7">
+      <p><Math mode="inline" xml:id="S1.p7.m1" tex="\bullet" text="bullet" fragid="S1.p7.m1"><XMath><XMTok name="bullet" role="MULOP">∙</XMTok></XMath></Math> In the theory of <text font="italic">Jordan algebras</text> all simple Jordan algebras of dimension bigger than <Math mode="inline" xml:id="S1.p7.m2" tex="27" text="27" fragid="S1.p7.m2"><XMath><XMTok meaning="27" role="NUMBER">27</XMTok></XMath></Math> are special,
+and there exists an exceptional Jordan algebra of dimension <Math mode="inline" xml:id="S1.p7.m3" tex="27" text="27" fragid="S1.p7.m3"><XMath><XMTok meaning="27" role="NUMBER">27</XMTok></XMath></Math> (Albert algebra).</p>
+    </para>
+    <para xml:id="S1.p8" fragid="S1.p8">
+      <p><Math mode="inline" xml:id="S1.p8.m1" tex="\bullet" text="bullet" fragid="S1.p8.m1"><XMath><XMTok name="bullet" role="MULOP">∙</XMTok></XMath></Math> Finally, when studying finite groups, one finds <text font="italic">exceptional isomorphisms</text> between finite groups of small order,
+like famous isomorphisms between small <Math mode="inline" xml:id="S1.p8.m2" tex="\operatorname{\mathrm{PSL}}" text="PSL" fragid="S1.p8.m2"><XMath><XMTok role="OPERATOR" scriptpos="post">PSL</XMTok></XMath></Math> groups over finite fields and alternating groups,
+or <Math mode="inline" xml:id="S1.p8.m3" tex="\operatorname{\mathrm{PSL}}(3,4)" text="PSL@(3, 4)" fragid="S1.p8.m3"><XMath><XMDual><XMApp><XMRef idref="S1.p8.m3.1"/><XMRef idref="S1.p8.m3.2"/><XMRef idref="S1.p8.m3.3"/></XMApp><XMApp><XMTok role="OPERATOR" scriptpos="post" xml:id="S1.p8.m3.1" fragid="S1.p8.m3.1">PSL</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S1.p8.m3.2" fragid="S1.p8.m3.2">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="4" role="NUMBER" xml:id="S1.p8.m3.3" fragid="S1.p8.m3.3">4</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math> and Mathieu group <Math mode="inline" xml:id="S1.p8.m4" tex="M_{21}" text="M _ 21" fragid="S1.p8.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">M</XMTok><XMTok meaning="21" role="NUMBER">21</XMTok></XMApp></XMath></Math>. Moreover, as a consequence of these isomorphisms one finds exceptional
+behaviour of the <text font="italic">Schur multipliers</text> of finite groups of small order.</p>
+    </para>
+    <para xml:id="S1.p9" fragid="S1.p9">
+      <p>One of the goals of the present article is to give another illustration of this principle in the context
+of the algebraic geometry.</p>
+    </para>
+    <para xml:id="S1.p10" fragid="S1.p10">
+      <p>The amazing identification of the Rost motive with affine varieties mentioned above allows us to define the <text font="italic">equivariant</text> Rost motives for small parameters <Math mode="inline" xml:id="S1.p10.m1" tex="(n,p)" text="open-interval@(n, p)" fragid="S1.p10.m1"><XMath><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p10.m1.1"/><XMRef idref="S1.p10.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p10.m1.1" font="italic" fragid="S1.p10.m1.1">n</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S1.p10.m1.2" font="italic" fragid="S1.p10.m1.2">p</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>.
+We start first developing general equivariant methods in Section <ref labelref="LABEL:seclift" class="ltx_missing_label" broken="1">LABEL:seclift</ref>, where we provide complete <Math mode="inline" xml:id="S1.p10.m2" tex="G" text="G" fragid="S1.p10.m2"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-equivariant motivic decompositions of
+the variety of full flags of <Math mode="inline" xml:id="S1.p10.m3" tex="G" text="G" fragid="S1.p10.m3"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>, where <Math mode="inline" xml:id="S1.p10.m4" tex="G" text="G" fragid="S1.p10.m4"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> is a split semisimple algebraic group over a field (Theorem <ref labelref="LABEL:tlift" class="ltx_missing_label" broken="1">LABEL:tlift</ref>).
+These motivic decompositions turn out to be related to Kac’s degrees of generators of a certain ideal <Math mode="inline" xml:id="S1.p10.m5" tex="I_{p}" text="I _ p" fragid="S1.p10.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">I</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMath></Math> from <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Kac85" title="Kac85">Kac85</ref>]</cite>.
+Thus, we give a geometric interpretation of these degrees, as opposed to an algebraic description using combinatorics
+of the Weyl group given in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Kac85" title="Kac85">Kac85</ref>]</cite>.</p>
+    </para>
+    <para xml:id="S1.p11" fragid="S1.p11">
+      <p>Applying our general formula of Theorem <ref labelref="LABEL:tlift" class="ltx_missing_label" broken="1">LABEL:tlift</ref> to varieties of types <Math mode="inline" xml:id="S1.p11.m1" tex="\mathrm{G}_{2}" text="G _ 2" fragid="S1.p11.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">G</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S1.p11.m2" tex="\mathrm{F}_{4}" text="F _ 4" fragid="S1.p11.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">F</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMath></Math> (where the ordinary Rost
+motives appear) and using the identification of small Rost motives with affine varieties we find a relation
+between the <text font="italic">equivariant Rost motives</text> and the <text font="italic">classifying spaces</text> of some
+<!-- %**** example16.tex Line 350 **** -->algebraic groups. For example, the <Math mode="inline" xml:id="S1.p11.m3" tex="\mathrm{G}_{2}" text="G _ 2" fragid="S1.p11.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">G</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>-equivariant Rost motive for <Math mode="inline" xml:id="S1.p11.m4" tex="(n,p)=(3,2)" text="open-interval@(n, p) = open-interval@(3, 2)" fragid="S1.p11.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p11.m4.1"/><XMRef idref="S1.p11.m4.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p11.m4.1" font="italic" fragid="S1.p11.m4.1">n</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S1.p11.m4.2" font="italic" fragid="S1.p11.m4.2">p</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p11.m4.3"/><XMRef idref="S1.p11.m4.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S1.p11.m4.3" fragid="S1.p11.m4.3">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="2" role="NUMBER" xml:id="S1.p11.m4.4" fragid="S1.p11.m4.4">2</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is <Math mode="inline" xml:id="S1.p11.m5" tex="B\operatorname{\mathrm{SL}}_{3}" text="B * SL _ 3" fragid="S1.p11.m5"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">B</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">SL</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp></XMath></Math> and
+the <Math mode="inline" xml:id="S1.p11.m6" tex="\mathrm{F}_{4}" text="F _ 4" fragid="S1.p11.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">F</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMath></Math>-equivariant Rost motive for <Math mode="inline" xml:id="S1.p11.m7" tex="(n,p)=(3,3)" text="open-interval@(n, p) = open-interval@(3, 3)" fragid="S1.p11.m7"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p11.m7.1"/><XMRef idref="S1.p11.m7.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p11.m7.1" font="italic" fragid="S1.p11.m7.1">n</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S1.p11.m7.2" font="italic" fragid="S1.p11.m7.2">p</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S1.p11.m7.3"/><XMRef idref="S1.p11.m7.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S1.p11.m7.3" fragid="S1.p11.m7.3">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S1.p11.m7.4" fragid="S1.p11.m7.4">3</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is <Math mode="inline" xml:id="S1.p11.m8" tex="B\operatorname{\mathrm{Spin}}_{9}" text="B * Spin _ 9" fragid="S1.p11.m8"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">B</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">Spin</XMTok><XMTok meaning="9" role="NUMBER">9</XMTok></XMApp></XMApp></XMath></Math>. We explain this in Section <ref labelref="LABEL:sec6" class="ltx_missing_label" broken="1">LABEL:sec6</ref>.
+We also remark that recently Pirutka and Yagita used the classifying spaces of some simple simply connected
+algebraic groups to provide a counter-example to the integral Tate conjecture over finite fields (see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="PY14" title="PY14">PY14</ref>]</cite>).</p>
+    </para>
+    <para xml:id="S1.p12" fragid="S1.p12">
+      <p>Moreover, a more detailed analysis shows that there is a close relation between the <text font="italic">torsion subgroup</text>
+of the ordinary Rost motive and Kac’s degrees of the ideal <Math mode="inline" xml:id="S1.p12.m1" tex="I_{p}" text="I _ p" fragid="S1.p12.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">I</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMath></Math>. We establish this relation in general
+(not only for types <Math mode="inline" xml:id="S1.p12.m2" tex="\mathrm{G}_{2}" text="G _ 2" fragid="S1.p12.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">G</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S1.p12.m3" tex="\mathrm{F}_{4}" text="F _ 4" fragid="S1.p12.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN">F</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMath></Math>) in Section <ref labelref="LABEL:sec7" class="ltx_missing_label" broken="1">LABEL:sec7</ref>. In particular, it follows from our results that
+the Chow group <Math mode="inline" xml:id="S1.p12.m4" tex="\mathop{\mathrm{CH}}\nolimits(E/B)/p" text="CH@(E / B / p)" fragid="S1.p12.m4"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMDual><XMRef idref="S1.p12.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p12.m4.1" fragid="S1.p12.m4.1"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">B</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMApp></XMath></Math> is <text font="italic">finitely generated</text>, where <Math mode="inline" xml:id="S1.p12.m5" tex="E" text="E" fragid="S1.p12.m5"><XMath><XMTok role="UNKNOWN" font="italic">E</XMTok></XMath></Math> is a generic <Math mode="inline" xml:id="S1.p12.m6" tex="G" text="G" fragid="S1.p12.m6"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-torsor over a field, <Math mode="inline" xml:id="S1.p12.m7" tex="B" text="B" fragid="S1.p12.m7"><XMath><XMTok role="UNKNOWN" font="italic">B</XMTok></XMath></Math> is a Borel subgroup of <Math mode="inline" xml:id="S1.p12.m8" tex="G" text="G" fragid="S1.p12.m8"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>
+and <Math mode="inline" xml:id="S1.p12.m9" tex="p" text="p" fragid="S1.p12.m9"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> is a prime number.
+Notice that this fact is quite unexpected, since e.g. there exist examples of small-dimensional quadrics due
+to Karpenko and Merkurjev with <text font="italic">infinitely generated</text> torsion in the Chow group.
+We remark also that the original title of Voevodsky’s article <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Vo03" title="Vo03">Vo03</ref>]</cite> (where he proves the Milnor
+conjecture) was “On <Math mode="inline" xml:id="S1.p12.m10" tex="2" text="2" fragid="S1.p12.m10"><XMath><XMTok meaning="2" role="NUMBER">2</XMTok></XMath></Math>-torsion in motivic cohomology”, since precisely the structure of the torsion part
+was crucial in his proof.</p>
+    </para>
+    <para xml:id="S1.p13" fragid="S1.p13">
+      <p>Besides, we provide in Section <ref labelref="LABEL:sec7" class="ltx_missing_label" broken="1">LABEL:sec7</ref> a motivic decomposition of <Math mode="inline" xml:id="S1.p13.m1" tex="E/B" text="E / B" fragid="S1.p13.m1"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">B</XMTok></XMApp></XMath></Math>, where <Math mode="inline" xml:id="S1.p13.m2" tex="B" text="B" fragid="S1.p13.m2"><XMath><XMTok role="UNKNOWN" font="italic">B</XMTok></XMath></Math> is a Borel subgroup
+of a split semisimple algebraic group <Math mode="inline" xml:id="S1.p13.m3" tex="G" text="G" fragid="S1.p13.m3"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> over a field <Math mode="inline" xml:id="S1.p13.m4" tex="F" text="F" fragid="S1.p13.m4"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> and <Math mode="inline" xml:id="S1.p13.m5" tex="E" text="E" fragid="S1.p13.m5"><XMath><XMTok role="UNKNOWN" font="italic">E</XMTok></XMath></Math> is a <Math mode="inline" xml:id="S1.p13.m6" tex="G" text="G" fragid="S1.p13.m6"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-torsor over an arbitrary
+smooth base scheme. We remark that we are not aware of any other similar result, where the base scheme is not field.</p>
+    </para>
+    <para xml:id="S1.p14" fragid="S1.p14">
+      <p>Finally, the identification of small Rost motives with affine varieties allows to define ordinary small <text font="italic">Rost motives
+over an arbitrary smooth base scheme</text>. We do it in Section <ref labelref="LABEL:rostbase" class="ltx_missing_label" broken="1">LABEL:rostbase</ref>, where we also show that the Rost motives
+over an arbitrary scheme have in general more torsion than over fields.</p>
+    </para>
+    <para xml:id="S1.p15" fragid="S1.p15">
+      <p>Besides this, we remark that our equivariant motivic decompositions from Section <ref labelref="LABEL:seclift" class="ltx_missing_label" broken="1">LABEL:seclift</ref> automatically
+<!-- %**** example16.tex Line 375 **** -->provide decompositions of nil-Hecke algebras modulo a prime <Math mode="inline" xml:id="S1.p15.m1" tex="p" text="p" fragid="S1.p15.m1"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> and give new information about its modular
+representations (see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="NPSZ15" title="NPSZ15">NPSZ15</ref>]</cite>).</p>
+    </para>
+    <para xml:id="S1.p16" fragid="S1.p16">
+      <p><text font="bold">Acknowledgments.</text>
+We would like to thank Nikolai Vavilov for his very interesting lectures on exceptional objects in
+algebra and geometry given in the Chebyshev Laboratory of the St. Petersburg State University in 2013, which
+influenced the present paper. The second author also thanks Thomas Friedrich for his talk about
+reductive spaces in small dimensions given at the Mainz University in January 2014 where he explained
+some exceptional isomorphisms in the context of differential geometry.</p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=". ">2</tag>Definitions and notation</title>
+    <toctitle><tag close=" ">2</tag>Definitions and notation</toctitle>
+    <theorem class="ltx_theorem_ntt" frefnum="2.1" refnum="2.1" xml:id="S2.E1" fragid="S2.E1">
+      <title class="ltx_runin" font="bold"><tag>2.1</tag>Algebraic groups.</title>
+      <para xml:id="S2.E1.p1" fragid="S2.E1.p1">
+        <p>Let <Math mode="inline" xml:id="S2.E1.p1.m1" tex="F" text="F" fragid="S2.E1.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> be an arbitrary field. In the present article we consider linear algebraic groups over <Math mode="inline" xml:id="S2.E1.p1.m2" tex="F" text="F" fragid="S2.E1.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>.
+The basic notion of the theory of linear algebraic groups
+(e.g. Weyl group, Borel subgroups, fundamental weights, etc.) can be found in many books, e.g. in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Springer" title="Springer">Springer</ref>]</cite>.</p>
+      </para>
+      <para xml:id="S2.E1.p2" fragid="S2.E1.p2">
+        <p>In the article we freely use the notion of twisted flag varieties, torsors, Galois cohomology, Milnor <Math mode="inline" xml:id="S2.E1.p2.m1" tex="K" text="K" fragid="S2.E1.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">K</XMTok></XMath></Math>-theory, as
+well as some classical constructions of algebraic groups related to Pfister forms, octonions and Albert algebras,
+see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Inv" title="Inv">Inv</ref>]</cite>, <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="GMS03" title="GMS03">GMS03</ref>]</cite>.</p>
+      </para>
+      <para xml:id="S2.E1.p3" fragid="S2.E1.p3">
+        <p>Moreover, we associate with a semisimple group <Math mode="inline" xml:id="S2.E1.p3.m1" tex="G" text="G" fragid="S2.E1.p3.m1"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> of inner type a set of prime numbers, called <text font="italic">torsion primes</text>.
+Namely, we define this set as the union of all torsion primes of all simple components of <Math mode="inline" xml:id="S2.E1.p3.m2" tex="G" text="G" fragid="S2.E1.p3.m2"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> and for a simple <Math mode="inline" xml:id="S2.E1.p3.m3" tex="G" text="G" fragid="S2.E1.p3.m3"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>
+of inner type this set is given in the following table:</p>
+        <!-- %**** example16.tex Line 400 **** -->
+      </para>
+      <table frefnum="Table 1" refnum="1" xml:id="S2.T1" align="center" fragid="S2.T1">
+        <tabular>
+          <tr>
+            <td align="center" border="r">Dynkin type</td>
+            <td align="center">Torsion primes</td>
+          </tr>
+          <tr>
+            <td align="center" border="r t">
+              <Math mode="inline" xml:id="S2.T1.m1" tex="\mathrm{A}_{m}" text="A _ m" fragid="S2.T1.m1">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                    <XMTok role="UNKNOWN">A</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="center" border="t">
+              <Math mode="inline" xml:id="S2.T1.m2" tex="p\mid m+1" fragid="S2.T1.m2">
+                <XMath>
+                  <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                  <XMTok name="mid" role="VERTBAR">∣</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMath>
+              </Math>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" border="r">
+              <Math mode="inline" xml:id="S2.T1.m3" tex="\mathrm{B}_{m},\mathrm{C}_{m},\mathrm{D}_{m},\mathrm{G}_{2}" text="list@(B _ m, C _ m, D _ m, G _ 2)" fragid="S2.T1.m3">
+                <XMath>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="list"/>
+                      <XMRef idref="S2.T1.m3.1"/>
+                      <XMRef idref="S2.T1.m3.2"/>
+                      <XMRef idref="S2.T1.m3.3"/>
+                      <XMRef idref="S2.T1.m3.4"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMApp xml:id="S2.T1.m3.1" fragid="S2.T1.m3.1">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">B</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S2.T1.m3.2" fragid="S2.T1.m3.2">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">C</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S2.T1.m3.3" fragid="S2.T1.m3.3">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">D</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S2.T1.m3.4" fragid="S2.T1.m3.4">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">G</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+            </td>
+            <td align="center">
+              <Math mode="inline" xml:id="S2.T1.m4" tex="2" text="2" fragid="S2.T1.m4">
+                <XMath>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMath>
+              </Math>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" border="r">
+              <Math mode="inline" xml:id="S2.T1.m5" tex="\mathrm{F}_{4},\mathrm{E}_{6},\mathrm{E}_{7}" text="list@(F _ 4, E _ 6, E _ 7)" fragid="S2.T1.m5">
+                <XMath>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="list"/>
+                      <XMRef idref="S2.T1.m5.1"/>
+                      <XMRef idref="S2.T1.m5.2"/>
+                      <XMRef idref="S2.T1.m5.3"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMApp xml:id="S2.T1.m5.1" fragid="S2.T1.m5.1">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">F</XMTok>
+                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S2.T1.m5.2" fragid="S2.T1.m5.2">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">E</XMTok>
+                        <XMTok meaning="6" role="NUMBER">6</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S2.T1.m5.3" fragid="S2.T1.m5.3">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                        <XMTok role="UNKNOWN">E</XMTok>
+                        <XMTok meaning="7" role="NUMBER">7</XMTok>
+                      </XMApp>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+            </td>
+            <td align="center">
+              <Math mode="inline" xml:id="S2.T1.m6" tex="2,3" text="list@(2, 3)" fragid="S2.T1.m6">
+                <XMath>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="list"/>
+                      <XMRef idref="S2.T1.m6.1"/>
+                      <XMRef idref="S2.T1.m6.2"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok meaning="2" role="NUMBER" xml:id="S2.T1.m6.1" fragid="S2.T1.m6.1">2</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok meaning="3" role="NUMBER" xml:id="S2.T1.m6.2" fragid="S2.T1.m6.2">3</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" border="r">
+              <Math mode="inline" xml:id="S2.T1.m7" tex="\mathrm{E}_{8}" text="E _ 8" fragid="S2.T1.m7">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                    <XMTok role="UNKNOWN">E</XMTok>
+                    <XMTok meaning="8" role="NUMBER">8</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="center">
+              <Math mode="inline" xml:id="S2.T1.m8" tex="2,3,5" text="list@(2, 3, 5)" fragid="S2.T1.m8">
+                <XMath>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="list"/>
+                      <XMRef idref="S2.T1.m8.1"/>
+                      <XMRef idref="S2.T1.m8.2"/>
+                      <XMRef idref="S2.T1.m8.3"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok meaning="2" role="NUMBER" xml:id="S2.T1.m8.1" fragid="S2.T1.m8.1">2</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok meaning="3" role="NUMBER" xml:id="S2.T1.m8.2" fragid="S2.T1.m8.2">3</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok meaning="5" role="NUMBER" xml:id="S2.T1.m8.3" fragid="S2.T1.m8.3">5</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+            </td>
+          </tr>
+        </tabular>
+      </table>
+    </theorem>
+    <theorem class="ltx_theorem_ntt" frefnum="2.2" refnum="2.2" xml:id="S2.E2" fragid="S2.E2">
+      <title class="ltx_runin" font="bold"><tag>2.2</tag>Motives.</title>
+      <para xml:id="S2.E2.p1" fragid="S2.E2.p1">
+        <p>For a smooth variety <Math mode="inline" xml:id="S2.E2.p1.m1" tex="X" text="X" fragid="S2.E2.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> over <Math mode="inline" xml:id="S2.E2.p1.m2" tex="F" text="F" fragid="S2.E2.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> we consider its Chow ring <Math mode="inline" xml:id="S2.E2.p1.m3" tex="\mathop{\mathrm{CH}}\nolimits(X)" text="CH@(X)" fragid="S2.E2.p1.m3"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p1.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m3.1" font="italic" fragid="S2.E2.p1.m3.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> of algebraic cycles modulo rational equivalence,
+see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Ful" title="Ful">Ful</ref>]</cite>. Sometimes we have a fixed prime <Math mode="inline" xml:id="S2.E2.p1.m4" tex="p" text="p" fragid="S2.E2.p1.m4"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> and use the notation <Math mode="inline" xml:id="S2.E2.p1.m5" tex="\mathop{\mathrm{Ch}}\nolimits(X):=\mathop{\mathrm{CH}}\nolimits(X)\otimes%&#10;\mathbb{Z}/p" text="Ch@(X) assign CH@((X tensor-product Z) / p)" fragid="S2.E2.p1.m5"><XMath><XMApp><XMTok meaning="assign" role="RELOP">:=</XMTok><XMApp><XMTok role="BIGOP">Ch</XMTok><XMDual><XMRef idref="S2.E2.p1.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m5.1" font="italic" fragid="S2.E2.p1.m5.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="BIGOP">CH</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="tensor-product" name="otimes" role="MULOP">⊗</XMTok><XMDual><XMRef idref="S2.E2.p1.m5.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m5.2" font="italic" fragid="S2.E2.p1.m5.2">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="blackboard">Z</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMApp></XMApp></XMath></Math>.
+We do not write <Math mode="inline" xml:id="S2.E2.p1.m6" tex="p" text="p" fragid="S2.E2.p1.m6"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> in the notation of <Math mode="inline" xml:id="S2.E2.p1.m7" tex="\mathop{\mathrm{Ch}}\nolimits" text="Ch" fragid="S2.E2.p1.m7"><XMath><XMTok role="BIGOP">Ch</XMTok></XMath></Math>, since <Math mode="inline" xml:id="S2.E2.p1.m8" tex="p" text="p" fragid="S2.E2.p1.m8"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math> is always clear from the context.
+Notice that <Math mode="inline" xml:id="S2.E2.p1.m9" tex="\mathop{\mathrm{CH}}\nolimits(X)=\mathop{\mathrm{CH}}\nolimits^{*}(X)=\mathop{%&#10;\mathrm{CH}}\nolimits_{*}(X)" text="CH@(X) = (CH ^ *)@(X) = (CH _ *)@(X)" fragid="S2.E2.p1.m9"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p1.m9.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m9.1" font="italic" fragid="S2.E2.p1.m9.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="BIGOP">CH</XMTok><XMTok meaning="times" role="MULOP">*</XMTok></XMApp><XMDual><XMRef idref="S2.E2.p1.m9.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m9.2" font="italic" fragid="S2.E2.p1.m9.2">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="BIGOP">CH</XMTok><XMTok meaning="times" role="MULOP">*</XMTok></XMApp><XMDual><XMRef idref="S2.E2.p1.m9.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p1.m9.3" font="italic" fragid="S2.E2.p1.m9.3">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math> is graded, but we often omit the <Math mode="inline" xml:id="S2.E2.p1.m10" tex="*" text="*" fragid="S2.E2.p1.m10"><XMath><XMTok meaning="times" role="MULOP">*</XMTok></XMath></Math> in the notation meaning the whole
+Chow group.</p>
+      </para>
+      <para xml:id="S2.E2.p2" fragid="S2.E2.p2">
+        <p>For a field extension <Math mode="inline" xml:id="S2.E2.p2.m1" tex="E/F" text="E / F" fragid="S2.E2.p2.m1"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">F</XMTok></XMApp></XMath></Math> we call a cycle <Math mode="inline" xml:id="S2.E2.p2.m2" tex="\alpha\in\mathop{\mathrm{CH}}\nolimits(X_{E})" text="alpha element-of CH@(X _ E)" fragid="S2.E2.p2.m2"><XMath><XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p2.m2.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.E2.p2.m2.1" fragid="S2.E2.p2.m2.1"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math> <text font="italic">rational</text>, if it is defined over <Math mode="inline" xml:id="S2.E2.p2.m3" tex="F" text="F" fragid="S2.E2.p2.m3"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>,
+i.e. lies in the image of the restriction homomorphism <Math mode="inline" xml:id="S2.E2.p2.m4" tex="\mathop{\mathrm{CH}}\nolimits(X)\to\mathop{\mathrm{CH}}\nolimits(X_{E})" text="CH@(X) to CH@(X _ E)" fragid="S2.E2.p2.m4"><XMath><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p2.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p2.m4.1" font="italic" fragid="S2.E2.p2.m4.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p2.m4.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.E2.p2.m4.2" fragid="S2.E2.p2.m4.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>.</p>
+      </para>
+      <para xml:id="S2.E2.p3" fragid="S2.E2.p3">
+        <p>If <Math mode="inline" xml:id="S2.E2.p3.m1" tex="X" text="X" fragid="S2.E2.p3.m1"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> is a flag variety for a split group <Math mode="inline" xml:id="S2.E2.p3.m2" tex="G" text="G" fragid="S2.E2.p3.m2"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>, then <Math mode="inline" xml:id="S2.E2.p3.m3" tex="\mathop{\mathrm{CH}}\nolimits(X)" text="CH@(X)" fragid="S2.E2.p3.m3"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p3.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p3.m3.1" font="italic" fragid="S2.E2.p3.m3.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is combinatorial and depends only
+on the Dynkin type of <Math mode="inline" xml:id="S2.E2.p3.m4" tex="G" text="G" fragid="S2.E2.p3.m4"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> and on the (combinatorial) type of <Math mode="inline" xml:id="S2.E2.p3.m5" tex="X" text="X" fragid="S2.E2.p3.m5"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math>. Therefore <Math mode="inline" xml:id="S2.E2.p3.m6" tex="\mathop{\mathrm{CH}}\nolimits(X)" text="CH@(X)" fragid="S2.E2.p3.m6"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p3.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p3.m6.1" font="italic" fragid="S2.E2.p3.m6.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> does not change under
+field extensions and we identify <Math mode="inline" xml:id="S2.E2.p3.m7" tex="\mathop{\mathrm{CH}}\nolimits(X)" text="CH@(X)" fragid="S2.E2.p3.m7"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p3.m7.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p3.m7.1" font="italic" fragid="S2.E2.p3.m7.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.E2.p3.m8" tex="\mathop{\mathrm{CH}}\nolimits(X_{E})" text="CH@(X _ E)" fragid="S2.E2.p3.m8"><XMath><XMApp><XMTok role="BIGOP">CH</XMTok><XMDual><XMRef idref="S2.E2.p3.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.E2.p3.m8.1" fragid="S2.E2.p3.m8.1"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> for all <Math mode="inline" xml:id="S2.E2.p3.m9" tex="E/F" text="E / F" fragid="S2.E2.p3.m9"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">F</XMTok></XMApp></XMath></Math>.</p>
+      </para>
+      <!-- %**** example16.tex Line 425 **** -->
+      <para xml:id="S2.E2.p4" fragid="S2.E2.p4">
+        <p>We work in the category of Grothendieck’s Chow motives over <Math mode="inline" xml:id="S2.E2.p4.m1" tex="F" text="F" fragid="S2.E2.p4.m1"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> with coefficients in <Math mode="inline" xml:id="S2.E2.p4.m2" tex="\mathbb{Z}" text="Z" fragid="S2.E2.p4.m2"><XMath><XMTok role="UNKNOWN" font="blackboard">Z</XMTok></XMath></Math> or in <Math mode="inline" xml:id="S2.E2.p4.m3" tex="\mathbb{Z}/p" text="Z / p" fragid="S2.E2.p4.m3"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="blackboard">Z</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMath></Math> for some
+prime number <Math mode="inline" xml:id="S2.E2.p4.m4" tex="p" text="p" fragid="S2.E2.p4.m4"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math>. The construction of this category in given <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Ma68" title="Ma68">Ma68</ref>]</cite> (see also the book <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="EKM" title="EKM">EKM</ref>]</cite>).
+Namely, one starts with the category of correspondences. Its objects are smooth projective varieties over <Math mode="inline" xml:id="S2.E2.p4.m5" tex="F" text="F" fragid="S2.E2.p4.m5"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>
+and the morphisms between two such varieties <Math mode="inline" xml:id="S2.E2.p4.m6" tex="X" text="X" fragid="S2.E2.p4.m6"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> and <Math mode="inline" xml:id="S2.E2.p4.m7" tex="Y" text="Y" fragid="S2.E2.p4.m7"><XMath><XMTok role="UNKNOWN" font="italic">Y</XMTok></XMath></Math> are given by</p>
+        <equation xml:id="S2.Ex1" fragid="S2.Ex1">
+          <Math mode="display" xml:id="S2.Ex1.m1" tex="\operatorname{Hom}(X,Y)=\bigoplus\mathop{\mathrm{CH}}\nolimits_{\dim X_{i}}(X_%&#10;{i}\times Y)\otimes R," text="Hom@(X, Y) = direct-sum@((CH _ (dimension@(X _ i)))@((X _ i * Y) tensor-product R))" fragid="S2.Ex1.m1">
+            <XMath>
+              <XMApp punctuation=",">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMDual>
+                  <XMApp>
+                    <XMRef idref="S2.Ex1.m1.1"/>
+                    <XMRef idref="S2.Ex1.m1.2"/>
+                    <XMRef idref="S2.Ex1.m1.3"/>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="OPERATOR" scriptpos="post" xml:id="S2.Ex1.m1.1" fragid="S2.Ex1.m1.1">Hom</XMTok>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok role="UNKNOWN" xml:id="S2.Ex1.m1.2" font="italic" fragid="S2.Ex1.m1.2">X</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok role="UNKNOWN" xml:id="S2.Ex1.m1.3" font="italic" fragid="S2.Ex1.m1.3">Y</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMApp>
+                </XMDual>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="direct-sum" name="bigoplus" role="SUMOP" scriptpos="mid" fontsize="160%">⊕</XMTok>
+                  <XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="BIGOP">CH</XMTok>
+                      <XMApp>
+                        <XMTok meaning="dimension" role="LIMITOP">dim</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post4"/>
+                          <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="tensor-product" name="otimes" role="MULOP">⊗</XMTok>
+                      <XMDual>
+                        <XMRef idref="S2.Ex1.m1.4"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S2.Ex1.m1.4" fragid="S2.Ex1.m1.4">
+                            <XMTok meaning="times" role="MULOP">×</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMTok role="UNKNOWN" font="italic">Y</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                      <XMTok role="UNKNOWN" font="italic">R</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>where <Math mode="inline" xml:id="S2.E2.p4.m8" tex="R" text="R" fragid="S2.E2.p4.m8"><XMath><XMTok role="UNKNOWN" font="italic">R</XMTok></XMath></Math> is the coefficient ring and the sum runs over all irreducible components <Math mode="inline" xml:id="S2.E2.p4.m9" tex="X_{i}" text="X _ i" fragid="S2.E2.p4.m9"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> of <Math mode="inline" xml:id="S2.E2.p4.m10" tex="X" text="X" fragid="S2.E2.p4.m10"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math>.
+The category of the Chow motives arises as the pseudo-abelian completion of the category of correspondences.
+In particular, its objects are pairs <Math mode="inline" xml:id="S2.E2.p4.m11" tex="(X,\pi)" text="open-interval@(X, pi)" fragid="S2.E2.p4.m11"><XMath><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.E2.p4.m11.1"/><XMRef idref="S2.E2.p4.m11.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p4.m11.1" font="italic" fragid="S2.E2.p4.m11.1">X</XMTok><XMTok role="PUNCT">,</XMTok><XMTok name="pi" role="UNKNOWN" xml:id="S2.E2.p4.m11.2" font="italic" fragid="S2.E2.p4.m11.2">π</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> where <Math mode="inline" xml:id="S2.E2.p4.m12" tex="X" text="X" fragid="S2.E2.p4.m12"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> is a smooth projective variety over <Math mode="inline" xml:id="S2.E2.p4.m13" tex="F" text="F" fragid="S2.E2.p4.m13"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> and <Math mode="inline" xml:id="S2.E2.p4.m14" tex="\pi\in\operatorname{Hom}(X,X)" text="pi element-of Hom@(X, X)" fragid="S2.E2.p4.m14"><XMath><XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMDual><XMApp><XMRef idref="S2.E2.p4.m14.1"/><XMRef idref="S2.E2.p4.m14.2"/><XMRef idref="S2.E2.p4.m14.3"/></XMApp><XMApp><XMTok role="OPERATOR" scriptpos="post" xml:id="S2.E2.p4.m14.1" fragid="S2.E2.p4.m14.1">Hom</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p4.m14.2" font="italic" fragid="S2.E2.p4.m14.2">X</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p4.m14.3" font="italic" fragid="S2.E2.p4.m14.3">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMApp></XMath></Math>
+is a projector, i.e., it satisfies the equation <Math mode="inline" xml:id="S2.E2.p4.m15" tex="\pi\circ\pi=\pi" text="pi compose pi = pi" fragid="S2.E2.p4.m15"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="compose" name="circ" role="MULOP">∘</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMath></Math>.</p>
+      </para>
+      <para xml:id="S2.E2.p5" fragid="S2.E2.p5">
+        <p>Sometimes, we work in a larger category <Math mode="inline" xml:id="S2.E2.p5.m1" tex="DM^{eff}_{-}(F)" text="D * (M ^ (e * f * f)) _ - * F" fragid="S2.E2.p5.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">M</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok></XMApp></XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp><XMDual><XMRef idref="S2.E2.p5.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p5.m1.1" font="italic" fragid="S2.E2.p5.m1.1">F</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> of effective motives of Voevodsky over <Math mode="inline" xml:id="S2.E2.p5.m2" tex="F" text="F" fragid="S2.E2.p5.m2"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>.
+The construction of this category can be found e.g. in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="FSV00" title="FSV00">FSV00</ref>]</cite>.</p>
+      </para>
+      <para xml:id="S2.E2.p6" fragid="S2.E2.p6">
+        <p>By <Math mode="inline" xml:id="S2.E2.p6.m1" tex="\mathcal{M}(X)" text="M * X" fragid="S2.E2.p6.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">M</XMTok><XMDual><XMRef idref="S2.E2.p6.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.E2.p6.m1.1" font="italic" fragid="S2.E2.p6.m1.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> we denote the motive of <Math mode="inline" xml:id="S2.E2.p6.m2" tex="X" text="X" fragid="S2.E2.p6.m2"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math>. For a motive <Math mode="inline" xml:id="S2.E2.p6.m3" tex="M" text="M" fragid="S2.E2.p6.m3"><XMath><XMTok role="UNKNOWN" font="italic">M</XMTok></XMath></Math> we denote by</p>
+        <equation xml:id="S2.Ex2" fragid="S2.Ex2">
+          <Math mode="display" xml:id="S2.Ex2.m1" tex="M\{m\}=M(m)[2m]" text="M * set@(m) = M * m * delimited-[]@(2 * m)" fragid="S2.Ex2.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">M</XMTok>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="set"/>
+                      <XMRef idref="S2.Ex2.m1.1"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">{</XMTok>
+                      <XMTok role="UNKNOWN" xml:id="S2.Ex2.m1.1" font="italic" fragid="S2.Ex2.m1.1">m</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">M</XMTok>
+                  <XMDual>
+                    <XMRef idref="S2.Ex2.m1.2"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok role="UNKNOWN" xml:id="S2.Ex2.m1.2" font="italic" fragid="S2.Ex2.m1.2">m</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="delimited-[]"/>
+                      <XMRef idref="S2.Ex2.m1.3"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">[</XMTok>
+                      <XMApp xml:id="S2.Ex2.m1.3" fragid="S2.Ex2.m1.3">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>its <text font="italic">Tate twist</text> by <Math mode="inline" xml:id="S2.E2.p6.m4" tex="m" text="m" fragid="S2.E2.p6.m4"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math>.
+We say that the <text font="italic">Rost nilpotence</text> principle holds for <Math mode="inline" xml:id="S2.E2.p6.m5" tex="X" text="X" fragid="S2.E2.p6.m5"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math>, if the kernel of the restriction homomorphism</p>
+        <equation xml:id="S2.Ex3" fragid="S2.Ex3">
+          <Math mode="display" xml:id="S2.Ex3.m1" tex="\operatorname{End}(\mathcal{M}(X))\to\operatorname{End}(\mathcal{M}(X_{E}))" text="End@(M * X) to End@(M * X _ E)" fragid="S2.Ex3.m1">
+            <XMath>
+              <XMApp>
+                <XMTok name="to" role="ARROW">→</XMTok>
+                <XMDual>
+                  <XMApp>
+                    <XMRef idref="S2.Ex3.m1.2"/>
+                    <XMRef idref="S2.Ex3.m1.4"/>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="OPERATOR" scriptpos="post" xml:id="S2.Ex3.m1.2" fragid="S2.Ex3.m1.2">End</XMTok>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S2.Ex3.m1.4" fragid="S2.Ex3.m1.4">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok role="UNKNOWN" font="caligraphic">M</XMTok>
+                        <XMDual>
+                          <XMRef idref="S2.Ex3.m1.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok role="UNKNOWN" xml:id="S2.Ex3.m1.1" font="italic" fragid="S2.Ex3.m1.1">X</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMApp>
+                </XMDual>
+                <XMDual>
+                  <XMApp>
+                    <XMRef idref="S2.Ex3.m1.3"/>
+                    <XMRef idref="S2.Ex3.m1.5"/>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="OPERATOR" scriptpos="post" xml:id="S2.Ex3.m1.3" fragid="S2.Ex3.m1.3">End</XMTok>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S2.Ex3.m1.5" fragid="S2.Ex3.m1.5">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok role="UNKNOWN" font="caligraphic">M</XMTok>
+                        <XMDual>
+                          <XMRef idref="S2.Ex3.m1.5.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S2.Ex3.m1.5.1" fragid="S2.Ex3.m1.5.1">
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">E</XMTok>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMApp>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>consists of nilpotent elements for all field extensions <Math mode="inline" xml:id="S2.E2.p6.m6" tex="E/F" text="E / F" fragid="S2.E2.p6.m6"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">F</XMTok></XMApp></XMath></Math>. Notice that the Rost
+nilpotence principle holds for all twisted flag varieties, see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="CGM05" title="CGM05">CGM05</ref>]</cite>.</p>
+      </para>
+      <para xml:id="S2.E2.p7" fragid="S2.E2.p7">
+        <p>Starting from Section <ref labelref="LABEL:sec7" class="ltx_missing_label" broken="1">LABEL:sec7</ref> we deal with Chow motives over a smooth base scheme <Math mode="inline" xml:id="S2.E2.p7.m1" tex="Z" text="Z" fragid="S2.E2.p7.m1"><XMath><XMTok role="UNKNOWN" font="italic">Z</XMTok></XMath></Math>. The construction
+of this category of motives is exactly the same as for Chow motives over a field, but one
+starts with smooth projective varieties over <Math mode="inline" xml:id="S2.E2.p7.m2" tex="Z" text="Z" fragid="S2.E2.p7.m2"><XMath><XMTok role="UNKNOWN" font="italic">Z</XMTok></XMath></Math> and takes the products over <Math mode="inline" xml:id="S2.E2.p7.m3" tex="Z" text="Z" fragid="S2.E2.p7.m3"><XMath><XMTok role="UNKNOWN" font="italic">Z</XMTok></XMath></Math> and not over <Math mode="inline" xml:id="S2.E2.p7.m4" tex="F" text="F" fragid="S2.E2.p7.m4"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math>.</p>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_ntt" frefnum="2.3" refnum="2.3" xml:id="S2.E3" fragid="S2.E3">
+      <title class="ltx_runin" font="bold"><tag>2.3</tag>Equivariant Chow groups.</title>
+      <para xml:id="S2.E3.p1" fragid="S2.E3.p1">
+        <p>In the present article we consider the equivariant Chow rings <Math mode="inline" xml:id="S2.E3.p1.m1" tex="\mathop{\mathrm{CH}}\nolimits_{G}" text="CH _ G" fragid="S2.E3.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="BIGOP">CH</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMApp></XMath></Math> of algebraic varieties, see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="EG98" title="EG98">EG98</ref>]</cite>.
+<!-- %**** example16.tex Line 450 **** -->Moreover, we use the Chow rings of the étale classifying spaces of algebraic groups, see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="To99" title="To99">To99</ref>]</cite>. Notice that
+there exists a more general context of Morel–Voevodsky (see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="MV99" title="MV99">MV99</ref>]</cite>).</p>
+      </para>
+      <para xml:id="S2.E3.p2" fragid="S2.E3.p2">
+        <p>The basic property of the equivariant Chow rings which we use in the present article is the following one.
+If <Math mode="inline" xml:id="S2.E3.p2.m1" tex="E" text="E" fragid="S2.E3.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">E</XMTok></XMath></Math> is a <Math mode="inline" xml:id="S2.E3.p2.m2" tex="G" text="G" fragid="S2.E3.p2.m2"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-torsor and <Math mode="inline" xml:id="S2.E3.p2.m3" tex="H" text="H" fragid="S2.E3.p2.m3"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math> is a subgroup of <Math mode="inline" xml:id="S2.E3.p2.m4" tex="G" text="G" fragid="S2.E3.p2.m4"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>, then one has a sequence</p>
+        <equation xml:id="S2.Ex4" fragid="S2.Ex4">
+          <Math mode="display" xml:id="S2.Ex4.m1" tex="H\to E\to E/H\to BH," text="H to E to E / H to B * H" fragid="S2.Ex4.m1">
+            <XMath>
+              <XMApp punctuation=",">
+                <XMTok meaning="multirelation"/>
+                <XMTok role="UNKNOWN" font="italic">H</XMTok>
+                <XMTok name="to" role="ARROW">→</XMTok>
+                <XMTok role="UNKNOWN" font="italic">E</XMTok>
+                <XMTok name="to" role="ARROW">→</XMTok>
+                <XMApp>
+                  <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">E</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">H</XMTok>
+                </XMApp>
+                <XMTok name="to" role="ARROW">→</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">B</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">H</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>where <Math mode="inline" xml:id="S2.E3.p2.m5" tex="BH" text="B * H" fragid="S2.E3.p2.m5"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">B</XMTok><XMTok role="UNKNOWN" font="italic">H</XMTok></XMApp></XMath></Math> is the classifying space of <Math mode="inline" xml:id="S2.E3.p2.m6" tex="H" text="H" fragid="S2.E3.p2.m6"><XMath><XMTok role="UNKNOWN" font="italic">H</XMTok></XMath></Math>, which induces a commutative diagram of pullbacks</p>
+        <equation frefnum="(2.4)" refnum="2.4" xml:id="S2.E4" labels="LABEL:dia11" fragid="S2.E4">
+          <text class="ltx_markedasmath">Θ</text>
+        </equation>
+      </para>
+    </theorem>
+  </section>
+</document>

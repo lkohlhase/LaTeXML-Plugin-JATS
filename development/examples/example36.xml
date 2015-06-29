@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="article" options="12pt"?>
+<?latexml package="graphicx"?>
+<!-- %% ¡/local definitions here¿ -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title font="bold">Mutually Exclusive Modules in Logic Programming </title>
+  <creator role="author">
+    <personname>
+Keehang Kwon<break/><text fontsize="90%" font="slanted">Faculty of Computer Eng., DongA University<break/>khkwon@dau.ac.kr
+</text></personname>
+  </creator>
+  <!-- %% js “newtheorem–proposition˝–Proposition˝ 
+     %% js “newenvironment–proof˝
+     %% js –“begin–trivlist˝“item[]–“bf Proof. ˝˝%
+     %% js –““* “hspace*–“fill˝ $“Box$“end–trivlist˝˝
+     %**** macros.tex Line 25 ****
+     %“newcounter–exno˝[section]
+     %“newcounter–defno˝[section]
+     %“newtheorem–defn˝–Definition˝[section]
+     %“newtheorem–ex˝[defn]–Example˝
+     %% js “newtheorem–lemma˝–Lemma˝
+     %% js “newtheorem–theorem˝[lemma]–Theorem˝
+     %**** macros.tex Line 50 ****
+     %“newenvironment–lemma˝–“refstepcounter–defno˝“medskip “noindent –“bf
+     %Lemma “thedefno.“ ˝˝–“medskip˝
+     %“newenvironment–theorem˝–“refstepcounter–defno˝“medskip “noindent –“bf
+     %Theorem “thedefno.“ ˝˝–“medskip˝
+     %“newenvironment–ex˝–“refstepcounter–exno˝“medskip “noindent –“bf
+     %Example “theexno.“ ˝˝–“medskip˝
+     %“newenvironment–defn˝–“refstepcounter–defno˝“medskip “noindent –“bf Definition “thesection.“thedefno˝˝–˝
+     %“newenvironment–ex˝–“refstepcounter–exno˝“medskip “noindent –“bf Example “thesection.“theexno˝˝–˝
+     %**** macros.tex Line 75 ****
+     %“renewcommand–“neg˝–“mathord“sim˝
+     %**** macros.tex Line 100 ****
+     %**** macros.tex Line 125 ****
+     %These are the annotations used with inference figures
+     %**** macros.tex Line 150 ****
+     %From the hohh section
+     %**** macros.tex Line 175 ****
+     %choice disjunction
+     %choice disjunction
+     %choice disjunction
+     %**** macros.tex Line 200 ****
+     %choice conjunction
+     %choice conjunction
+     %choice disjunction
+     %choice conjunction
+     %**** macros.tex Line 225 ****
+     %**** mumo.tex Line 25 ****
+     %% ¡/local definitions here¿
+     %“begin–document˝
+     %“maketitle
+     %“newcommand–“adc˝–“&˝-->
+  <para xml:id="p1" class="ltx_noindent" fragid="p1">
+    <p><text font="bold">Abstract</text>:
+Logic programming has traditionally lacked devices for expressing
+mutually exclusive modules. We address this limitation
+by adopting
+choice-conjunctive modules of the form
+<Math mode="inline" xml:id="p1.m1" tex="D_{0}\&amp;D_{1}" text="D _ 0 and D _ 1" fragid="p1.m1"><XMath><XMApp><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> where <Math mode="inline" xml:id="p1.m2" tex="D_{0},D_{1}" text="list@(D _ 0, D _ 1)" fragid="p1.m2"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="p1.m2.1"/><XMRef idref="p1.m2.2"/></XMApp><XMWrap><XMApp xml:id="p1.m2.1" fragid="p1.m2.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="p1.m2.2" fragid="p1.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMWrap></XMDual></XMath></Math> are a conjunction of Horn clauses and
+<Math mode="inline" xml:id="p1.m3" tex="\&amp;" text="and" fragid="p1.m3"><XMath><XMTok meaning="and" role="ADDOP">&amp;</XMTok></XMath></Math> is a linear logic connective. Solving a goal <Math mode="inline" xml:id="p1.m4" tex="G" text="G" fragid="p1.m4"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> using <Math mode="inline" xml:id="p1.m5" tex="D_{0}\&amp;D_{1}" text="D _ 0 and D _ 1" fragid="p1.m5"><XMath><XMApp><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> – <Math mode="inline" xml:id="p1.m6" tex="ex(D_{0}\&amp;D_{1},G)" text="e * x * open-interval@(D _ 0 and D _ 1, G)" fragid="p1.m6"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="p1.m6.2"/><XMRef idref="p1.m6.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="p1.m6.2" fragid="p1.m6.2"><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="p1.m6.1" font="italic" fragid="p1.m6.1">G</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> – has the
+following operational semantics: <Math mode="inline" xml:id="p1.m7" tex="choose" text="c * h * o * o * s * e" fragid="p1.m7"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok></XMApp></XMath></Math> a successful one between <Math mode="inline" xml:id="p1.m8" tex="ex(D_{0},G)" text="e * x * open-interval@(D _ 0, G)" fragid="p1.m8"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="p1.m8.2"/><XMRef idref="p1.m8.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="p1.m8.2" fragid="p1.m8.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="p1.m8.1" font="italic" fragid="p1.m8.1">G</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> and
+<Math mode="inline" xml:id="p1.m9" tex="ex(D_{1},G)" text="e * x * open-interval@(D _ 1, G)" fragid="p1.m9"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="p1.m9.2"/><XMRef idref="p1.m9.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="p1.m9.2" fragid="p1.m9.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="p1.m9.1" font="italic" fragid="p1.m9.1">G</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. In other words, if <Math mode="inline" xml:id="p1.m10" tex="D_{0}" text="D _ 0" fragid="p1.m10"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> is chosen in the course of solving <Math mode="inline" xml:id="p1.m11" tex="G" text="G" fragid="p1.m11"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>, then <Math mode="inline" xml:id="p1.m12" tex="D_{1}" text="D _ 1" fragid="p1.m12"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> will be
+<!-- %**** mumo.tex Line 50 **** -->discarded and vice versa. Hence, the class of choice-conjunctive modules can capture
+the notion of mutually exclusive modules.</p>
+  </para>
+  <para xml:id="p2" fragid="p2">
+    <p><text font="bold">keywords:</text> mutual exclusion, cut, linear logic, choice-conjunction.</p>
+  </para>
+  <!-- %% ¡/local definitions here¿ -->
+  <section refnum="1" xml:id="S1" labels="LABEL:sec:intro" fragid="S1">
+    <title><tag close=" ">1</tag>Introduction</title>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>Modern logic programming languages support a notion of modules, <text font="italic">i.e.</text>, a conjunction of clauses as a unit.
+Despite their attractiveness, logic programming has
+traditionally lacked elegant devices for structuring mutually exclusion at the module level.
+Lacking such devices, structuring mutually exclusive modules in logic programming has been impossible.</p>
+    </para>
+    <!-- %**** mumo.tex Line 75 **** -->
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>This paper proposes a logical, high-level solution to this problem.
+To be specific, we propose
+MutexWeb, an extension to LogicWeb with a novel feature called choice-conjunctive modules.
+This logic extends modules by the choice construct
+of the form <Math mode="inline" xml:id="S1.p2.m1" tex="D_{0}\&amp;D_{1}" text="D _ 0 and D _ 1" fragid="S1.p2.m1"><XMath><XMApp><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> where <Math mode="inline" xml:id="S1.p2.m2" tex="D_{0},D_{1}" text="list@(D _ 0, D _ 1)" fragid="S1.p2.m2"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S1.p2.m2.1"/><XMRef idref="S1.p2.m2.2"/></XMApp><XMWrap><XMApp xml:id="S1.p2.m2.1" fragid="S1.p2.m2.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p2.m2.2" fragid="S1.p2.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMWrap></XMDual></XMath></Math> are modules and <Math mode="inline" xml:id="S1.p2.m3" tex="\&amp;" text="and" fragid="S1.p2.m3"><XMath><XMTok meaning="and" role="ADDOP">&amp;</XMTok></XMath></Math> is a choice-conjunctive connective of
+linear logic.
+Inspired by <cite class="ltx_citemacro_cite">[<ref href="#bib.bib3" idref="bib.bib3">3</ref>]</cite>, this has the following intended semantics: <Math mode="inline" xml:id="S1.p2.m4" tex="choose" text="c * h * o * o * s * e" fragid="S1.p2.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok></XMApp></XMath></Math> a successful one between <Math mode="inline" xml:id="S1.p2.m5" tex="D_{0}" text="D _ 0" fragid="S1.p2.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S1.p2.m6" tex="D_{1}" text="D _ 1" fragid="S1.p2.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> in the course of
+solving a goal. Of course, the unchosen module will be discarded.
+This expression thus supports the idea of mutual exclusion.</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>An illustration of this aspect is provided by the following modules <Math mode="inline" xml:id="S1.p3.m1" tex="quicksort,heapsort" text="list@(q * u * i * c * k * s * o * r * t, h * e * a * p * s * o * r * t)" fragid="S1.p3.m1"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S1.p3.m1.1"/><XMRef idref="S1.p3.m1.2"/></XMApp><XMWrap><XMApp xml:id="S1.p3.m1.1" fragid="S1.p3.m1.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok role="UNKNOWN" font="italic">u</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p3.m1.2" fragid="S1.p3.m1.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp></XMWrap></XMDual></XMath></Math> which define the
+usual
+<Math mode="inline" xml:id="S1.p3.m2" tex="qsort,hsort" text="list@(q * s * o * r * t, h * s * o * r * t)" fragid="S1.p3.m2"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S1.p3.m2.1"/><XMRef idref="S1.p3.m2.2"/></XMApp><XMWrap><XMApp xml:id="S1.p3.m2.1" fragid="S1.p3.m2.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p3.m2.2" fragid="S1.p3.m2.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp></XMWrap></XMDual></XMath></Math> relation:</p>
+    </para>
+    <para xml:id="S1.p4" class="ltx_noindent" fragid="S1.p4">
+      <tabular>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S1.p4.m1" tex="mod(quicksort)." text="m * o * d * q * u * i * c * k * s * o * r * t" fragid="S1.p4.m1"><XMath><XMApp punctuation="."><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMRef idref="S1.p4.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p4.m1.1" fragid="S1.p4.m1.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok role="UNKNOWN" font="italic">u</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> % quicksort</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S1.p4.m2" tex="qsort(X,L):-\ldots." text="q * s * o * r * t * open-interval@(X, L) colon - ldots" fragid="S1.p4.m2">
+              <XMath>
+                <XMApp punctuation=".">
+                  <XMTok name="colon" role="METARELOP">:</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S1.p4.m2.1"/>
+                        <XMRef idref="S1.p4.m2.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S1.p4.m2.1" font="italic" fragid="S1.p4.m2.1">X</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S1.p4.m2.2" font="italic" fragid="S1.p4.m2.2">L</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok name="ldots" role="ID">…</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S1.p4.m3" tex="\vdots" text="vdots" fragid="S1.p4.m3">
+              <XMath>
+                <XMTok name="vdots" role="ID">⋮</XMTok>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+        <tr>
+          <td/>
+        </tr>
+        <tr>
+          <td/>
+        </tr>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S1.p4.m4" tex="mod(heapsort)." text="m * o * d * h * e * a * p * s * o * r * t" fragid="S1.p4.m4"><XMath><XMApp punctuation="."><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMRef idref="S1.p4.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p4.m4.1" fragid="S1.p4.m4.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> % heapsort</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S1.p4.m5" tex="hsort(X,L):-\ldots." text="h * s * o * r * t * open-interval@(X, L) colon - ldots" fragid="S1.p4.m5">
+              <XMath>
+                <XMApp punctuation=".">
+                  <XMTok name="colon" role="METARELOP">:</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">h</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S1.p4.m5.1"/>
+                        <XMRef idref="S1.p4.m5.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S1.p4.m5.1" font="italic" fragid="S1.p4.m5.1">X</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S1.p4.m5.2" font="italic" fragid="S1.p4.m5.2">L</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok name="ldots" role="ID">…</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S1.p4.m6" tex="\vdots" text="vdots" fragid="S1.p4.m6">
+              <XMath>
+                <XMTok name="vdots" role="ID">⋮</XMTok>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+      </tabular>
+      <p>Now we want to define a module <Math mode="inline" xml:id="S1.p4.m7" tex="sort" text="s * o * r * t" fragid="S1.p4.m7"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp></XMath></Math> which contains different sorting algorithms.
+This is show below:
+<!-- %**** mumo.tex Line 100 **** --></p>
+    </para>
+    <para xml:id="S1.p5" class="ltx_noindent" fragid="S1.p5">
+      <tabular>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S1.p5.m1" tex="mod(sort)." text="m * o * d * s * o * r * t" fragid="S1.p5.m1"><XMath><XMApp punctuation="."><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMRef idref="S1.p5.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p5.m1.1" fragid="S1.p5.m1.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> % modue sort</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S1.p5.m2" tex="mod(quicksort)\ \&amp;\ mod(heapsort)." text="m * o * d * q * u * i * c * k * s * o * r * t and m * o * d * h * e * a * p * s * o * r * t" fragid="S1.p5.m2">
+              <XMath>
+                <XMApp punctuation=".">
+                  <XMTok meaning="and" role="ADDOP" rpadding="5.0pt">&amp;</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMDual>
+                      <XMRef idref="S1.p5.m2.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S1.p5.m2.1" fragid="S1.p5.m2.1">
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">u</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">k</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" rpadding="5.0pt" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMDual>
+                      <XMRef idref="S1.p5.m2.2"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S1.p5.m2.2" fragid="S1.p5.m2.2">
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">h</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+      </tabular>
+      <p>In the above, these two sorting algorithms
+are defined as mutually exclusive. Hence, only one of these two sorting algorithms
+can be used.</p>
+    </para>
+    <para xml:id="S1.p6" fragid="S1.p6">
+      <p>The remainder of this paper is structured as follows. We describe MutexWeb in
+the next section. In Section <ref labelref="LABEL:sec:modules" href="#S3" title="3 MutexWeb ‣ Mutually Exclusive Modules in Logic Programming"><text class="ltx_ref_tag">3</text></ref>, we
+present some examples of MutexWeb.
+Section <ref labelref="LABEL:sec:conc" href="#S4" title="4 Conclusion ‣ Mutually Exclusive Modules in Logic Programming"><text class="ltx_ref_tag">4</text></ref> concludes the paper.</p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" labels="LABEL:def:semantics LABEL:sec:logic" fragid="S2">
+    <title><tag close=" ">2</tag>The Language</title>
+    <para xml:id="S2.p1" class="ltx_noindent" fragid="S2.p1">
+      <p>The language is an extended version of Horn clauses
+with choice-conjunctive modules and implication goals. It is described
+by <Math mode="inline" xml:id="S2.p1.m1" tex="G" text="G" fragid="S2.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>- and <Math mode="inline" xml:id="S2.p1.m2" tex="D" text="D" fragid="S2.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math>-formulas given by the syntax rules below:
+
+<tabular><tr><td align="right">.</td><td align="left"><Math mode="inline" xml:id="S2.p1.m3" tex="G::=" text="G colon assign" fragid="S2.p1.m3"><XMath><XMApp><XMTok name="colon" role="METARELOP">:</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="assign" role="RELOP">:=</XMTok></XMApp></XMath></Math> .</td><td align="left"><Math mode="inline" xml:id="S2.p1.m4" tex="A\;|\;G\land G\;|\;D\supset G\;|\;\exists x\ G" fragid="S2.p1.m4"><XMath><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">A</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="and" name="land" role="ADDOP">∧</XMTok><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">G</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="superset-of" name="supset" role="RELOP">⊃</XMTok><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">G</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok meaning="exists" role="BIGOP">∃</XMTok><XMTok role="UNKNOWN" rpadding="5.0pt" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math></td></tr><tr><td/></tr><tr><td align="right">.</td><td align="left"><Math mode="inline" xml:id="S2.p1.m5" tex="D::=" text="D colon assign" fragid="S2.p1.m5"><XMath><XMApp><XMTok name="colon" role="METARELOP">:</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="assign" role="RELOP">:=</XMTok></XMApp></XMath></Math> .</td><td align="left"><Math mode="inline" xml:id="S2.p1.m6" tex="A\;|\;G\supset D\ \;|\;\forall x\ D\;|\;D\&amp;D\;|\;D\land D" fragid="S2.p1.m6"><XMath><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">A</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="superset-of" name="supset" role="RELOP">⊃</XMTok><XMTok role="UNKNOWN" rpadding="7.8pt" font="italic">D</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok meaning="for-all" name="forall" role="BIGOP">∀</XMTok><XMTok role="UNKNOWN" rpadding="5.0pt" font="italic">x</XMTok><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">D</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMTok role="UNKNOWN" rpadding="2.8pt" font="italic">D</XMTok><XMTok role="VERTBAR" rpadding="2.8pt" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="and" name="land" role="ADDOP">∧</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math></td></tr></tabular>
+In the rules above,
+<Math mode="inline" xml:id="S2.p1.m7" tex="A" text="A" fragid="S2.p1.m7"><XMath><XMTok role="UNKNOWN" font="italic">A</XMTok></XMath></Math> represents an atomic formula.
+A <Math mode="inline" xml:id="S2.p1.m8" tex="D" text="D" fragid="S2.p1.m8"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math>-formula is called a
+module.</p>
+    </para>
+    <para xml:id="S2.p2" fragid="S2.p2">
+      <p>In the transition system to be considered, <Math mode="inline" xml:id="S2.p2.m1" tex="G" text="G" fragid="S2.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-formulas will function as
+queries and a set of <Math mode="inline" xml:id="S2.p2.m2" tex="D" text="D" fragid="S2.p2.m2"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math>-formulas will constitute a program.</p>
+    </para>
+    <para xml:id="S2.p3" fragid="S2.p3">
+      <p>We will present an operational
+semantics for this language. The rules of MutexWeb are formalized by means of what it means to
+execute a goal task <Math mode="inline" xml:id="S2.p3.m1" tex="G" text="G" fragid="S2.p3.m1"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> from a program <Math mode="inline" xml:id="S2.p3.m2" tex="{\cal P}" text="P" fragid="S2.p3.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">P</XMTok></XMath></Math>.
+These rules in fact depend on the top-level
+constructor in the expression, a property known as
+uniform provability<cite class="ltx_citemacro_cite">[<ref href="#bib.bib7" idref="bib.bib7">7</ref>, <ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>. Below the notation <Math mode="inline" xml:id="S2.p3.m3" tex="bchain(D,{\cal P},A)" text="b * c * h * a * i * n * vector@(D, P, A)" fragid="S2.p3.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="S2.p3.m3.1"/><XMRef idref="S2.p3.m3.2"/><XMRef idref="S2.p3.m3.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m3.1" font="italic" fragid="S2.p3.m3.1">D</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m3.2" font="caligraphic" fragid="S2.p3.m3.2">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m3.3" font="italic" fragid="S2.p3.m3.3">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> denotes
+that the <Math mode="inline" xml:id="S2.p3.m4" tex="D" text="D" fragid="S2.p3.m4"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math> formula is distinguished
+(marked for backchaining). Note that execution alternates between
+two phases: the goal-reduction phase (one without a distinguished clause)
+and the backchaining phase (one with a distinguished clause).</p>
+    </para>
+    <para xml:id="S2.p4" fragid="S2.p4">
+      <p><text font="bold">Definition 1. </text>
+Let <Math mode="inline" xml:id="S2.p4.m1" tex="G" text="G" fragid="S2.p4.m1"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> be a goal and let <Math mode="inline" xml:id="S2.p4.m2" tex="{\cal P}" text="P" fragid="S2.p4.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">P</XMTok></XMath></Math> be a program.
+Then the notion of executing <Math mode="inline" xml:id="S2.p4.m3" tex="\langle{\cal P},G\rangle" text="list@(P, G)" fragid="S2.p4.m3"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S2.p4.m3.1"/><XMRef idref="S2.p4.m3.2"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMTok role="UNKNOWN" xml:id="S2.p4.m3.1" font="caligraphic" fragid="S2.p4.m3.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p4.m3.2" font="italic" fragid="S2.p4.m3.2">G</XMTok><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math> – <Math mode="inline" xml:id="S2.p4.m4" tex="ex({\cal P},G)" text="e * x * open-interval@(P, G)" fragid="S2.p4.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p4.m4.1"/><XMRef idref="S2.p4.m4.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p4.m4.1" font="caligraphic" fragid="S2.p4.m4.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p4.m4.2" font="italic" fragid="S2.p4.m4.2">G</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> –
+is defined as follows:
+<!-- %**** mumo.tex Line 150 **** --></p>
+      <itemize>
+        <item frefnum="•" refnum="1" xml:id="I1.i1" fragid="I1.i1">
+          <tag>•</tag>
+          <para xml:id="I1.i1.p1" fragid="I1.i1.p1">
+            <p><Math mode="inline" xml:id="I1.i1.p1.m1" tex="bchain(A,{\cal P},A)" text="b * c * h * a * i * n * vector@(A, P, A)" fragid="I1.i1.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i1.p1.m1.1"/><XMRef idref="I1.i1.p1.m1.2"/><XMRef idref="I1.i1.p1.m1.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i1.p1.m1.1" font="italic" fragid="I1.i1.p1.m1.1">A</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i1.p1.m1.2" font="caligraphic" fragid="I1.i1.p1.m1.2">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i1.p1.m1.3" font="italic" fragid="I1.i1.p1.m1.3">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. % This is a success.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="2" xml:id="I1.i2" fragid="I1.i2">
+          <tag>•</tag>
+          <para xml:id="I1.i2.p1" fragid="I1.i2.p1">
+            <p><Math mode="inline" xml:id="I1.i2.p1.m1" tex="bchain(G_{1}\supset D,{\cal P},A)" fragid="I1.i2.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="superset-of" name="supset" role="RELOP">⊃</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" font="caligraphic">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" font="italic">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMath></Math> if
+<Math mode="inline" xml:id="I1.i2.p1.m2" tex="ex({\cal P},G_{1})" text="e * x * open-interval@(P, G _ 1)" fragid="I1.i2.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i2.p1.m2.1"/><XMRef idref="I1.i2.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i2.p1.m2.1" font="caligraphic" fragid="I1.i2.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i2.p1.m2.2" fragid="I1.i2.p1.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> and <Math mode="inline" xml:id="I1.i2.p1.m3" tex="bchain(D,{\cal P},A)" text="b * c * h * a * i * n * vector@(D, P, A)" fragid="I1.i2.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i2.p1.m3.1"/><XMRef idref="I1.i2.p1.m3.2"/><XMRef idref="I1.i2.p1.m3.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i2.p1.m3.1" font="italic" fragid="I1.i2.p1.m3.1">D</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i2.p1.m3.2" font="caligraphic" fragid="I1.i2.p1.m3.2">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i2.p1.m3.3" font="italic" fragid="I1.i2.p1.m3.3">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="3" xml:id="I1.i3" fragid="I1.i3">
+          <tag>•</tag>
+          <para xml:id="I1.i3.p1" fragid="I1.i3.p1">
+            <p><Math mode="inline" xml:id="I1.i3.p1.m1" tex="bchain(\forall xD,{\cal P},A)" text="b * c * h * a * i * n * vector@(for-all@(x * D), P, A)" fragid="I1.i3.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i3.p1.m1.3"/><XMRef idref="I1.i3.p1.m1.1"/><XMRef idref="I1.i3.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i3.p1.m1.3" fragid="I1.i3.p1.m1.3"><XMTok meaning="for-all" name="forall" role="BIGOP">∀</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i3.p1.m1.1" font="caligraphic" fragid="I1.i3.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i3.p1.m1.2" font="italic" fragid="I1.i3.p1.m1.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i3.p1.m2" tex="bchain([t/x]D,{\cal P},A)" text="b * c * h * a * i * n * vector@(delimited-[]@(t / x) * D, P, A)" fragid="I1.i3.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i3.p1.m2.3"/><XMRef idref="I1.i3.p1.m2.1"/><XMRef idref="I1.i3.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i3.p1.m2.3" fragid="I1.i3.p1.m2.3"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="I1.i3.p1.m2.3.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="I1.i3.p1.m2.3.1" fragid="I1.i3.p1.m2.3.1"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="italic">D</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i3.p1.m2.1" font="caligraphic" fragid="I1.i3.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i3.p1.m2.2" font="italic" fragid="I1.i3.p1.m2.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="4" xml:id="I1.i4" fragid="I1.i4">
+          <tag>•</tag>
+          <para xml:id="I1.i4.p1" fragid="I1.i4.p1">
+            <p><Math mode="inline" xml:id="I1.i4.p1.m1" tex="bchain(D_{0}\land D_{1},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 0 and D _ 1, P, A)" fragid="I1.i4.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i4.p1.m1.3"/><XMRef idref="I1.i4.p1.m1.1"/><XMRef idref="I1.i4.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i4.p1.m1.3" fragid="I1.i4.p1.m1.3"><XMTok meaning="and" name="land" role="ADDOP">∧</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i4.p1.m1.1" font="caligraphic" fragid="I1.i4.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i4.p1.m1.2" font="italic" fragid="I1.i4.p1.m1.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i4.p1.m2" tex="bchain(D_{0},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 0, P, A)" fragid="I1.i4.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i4.p1.m2.3"/><XMRef idref="I1.i4.p1.m2.1"/><XMRef idref="I1.i4.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i4.p1.m2.3" fragid="I1.i4.p1.m2.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i4.p1.m2.1" font="caligraphic" fragid="I1.i4.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i4.p1.m2.2" font="italic" fragid="I1.i4.p1.m2.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="5" xml:id="I1.i5" fragid="I1.i5">
+          <tag>•</tag>
+          <para xml:id="I1.i5.p1" fragid="I1.i5.p1">
+            <p><Math mode="inline" xml:id="I1.i5.p1.m1" tex="bchain(D_{0}\land D_{1},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 0 and D _ 1, P, A)" fragid="I1.i5.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i5.p1.m1.3"/><XMRef idref="I1.i5.p1.m1.1"/><XMRef idref="I1.i5.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i5.p1.m1.3" fragid="I1.i5.p1.m1.3"><XMTok meaning="and" name="land" role="ADDOP">∧</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i5.p1.m1.1" font="caligraphic" fragid="I1.i5.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i5.p1.m1.2" font="italic" fragid="I1.i5.p1.m1.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i5.p1.m2" tex="bchain(D_{1},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 1, P, A)" fragid="I1.i5.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i5.p1.m2.3"/><XMRef idref="I1.i5.p1.m2.1"/><XMRef idref="I1.i5.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i5.p1.m2.3" fragid="I1.i5.p1.m2.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i5.p1.m2.1" font="caligraphic" fragid="I1.i5.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i5.p1.m2.2" font="italic" fragid="I1.i5.p1.m2.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="6" xml:id="I1.i6" fragid="I1.i6">
+          <tag>•</tag>
+          <para xml:id="I1.i6.p1" fragid="I1.i6.p1">
+            <p><Math mode="inline" xml:id="I1.i6.p1.m1" tex="bchain(D_{0}\&amp;D_{1},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 0 and D _ 1, P, A)" fragid="I1.i6.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i6.p1.m1.3"/><XMRef idref="I1.i6.p1.m1.1"/><XMRef idref="I1.i6.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i6.p1.m1.3" fragid="I1.i6.p1.m1.3"><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m1.1" font="caligraphic" fragid="I1.i6.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m1.2" font="italic" fragid="I1.i6.p1.m1.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if choose a successful disjunct between <Math mode="inline" xml:id="I1.i6.p1.m2" tex="bchain(D_{0},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 0, P, A)" fragid="I1.i6.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i6.p1.m2.3"/><XMRef idref="I1.i6.p1.m2.1"/><XMRef idref="I1.i6.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i6.p1.m2.3" fragid="I1.i6.p1.m2.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m2.1" font="caligraphic" fragid="I1.i6.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m2.2" font="italic" fragid="I1.i6.p1.m2.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> and
+<Math mode="inline" xml:id="I1.i6.p1.m3" tex="bchain(D_{1},{\cal P},A)" text="b * c * h * a * i * n * vector@(D _ 1, P, A)" fragid="I1.i6.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i6.p1.m3.3"/><XMRef idref="I1.i6.p1.m3.1"/><XMRef idref="I1.i6.p1.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i6.p1.m3.3" fragid="I1.i6.p1.m3.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m3.1" font="caligraphic" fragid="I1.i6.p1.m3.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i6.p1.m3.2" font="italic" fragid="I1.i6.p1.m3.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="7" xml:id="I1.i7" fragid="I1.i7">
+          <tag>•</tag>
+          <para xml:id="I1.i7.p1" fragid="I1.i7.p1">
+            <p><Math mode="inline" xml:id="I1.i7.p1.m1" tex="ex({\cal P},A)" text="e * x * open-interval@(P, A)" fragid="I1.i7.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i7.p1.m1.1"/><XMRef idref="I1.i7.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m1.1" font="caligraphic" fragid="I1.i7.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m1.2" font="italic" fragid="I1.i7.p1.m1.2">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i7.p1.m2" tex="D\in{\cal P}" text="D element-of P" fragid="I1.i7.p1.m2"><XMath><XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok role="UNKNOWN" font="caligraphic">P</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="I1.i7.p1.m3" tex="bchain(D,{\cal P},A)" text="b * c * h * a * i * n * vector@(D, P, A)" fragid="I1.i7.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="I1.i7.p1.m3.1"/><XMRef idref="I1.i7.p1.m3.2"/><XMRef idref="I1.i7.p1.m3.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m3.1" font="italic" fragid="I1.i7.p1.m3.1">D</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m3.2" font="caligraphic" fragid="I1.i7.p1.m3.2">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m3.3" font="italic" fragid="I1.i7.p1.m3.3">A</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. % change to backchaining phase.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="8" xml:id="I1.i8" fragid="I1.i8">
+          <tag>•</tag>
+          <para xml:id="I1.i8.p1" fragid="I1.i8.p1">
+            <p><Math mode="inline" xml:id="I1.i8.p1.m1" tex="ex({\cal P},G_{1}\land G_{2})" text="e * x * open-interval@(P, G _ 1 and G _ 2)" fragid="I1.i8.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i8.p1.m1.1"/><XMRef idref="I1.i8.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i8.p1.m1.1" font="caligraphic" fragid="I1.i8.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i8.p1.m1.2" fragid="I1.i8.p1.m1.2"><XMTok meaning="and" name="land" role="ADDOP">∧</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i8.p1.m2" tex="ex({\cal P},G_{1})" text="e * x * open-interval@(P, G _ 1)" fragid="I1.i8.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i8.p1.m2.1"/><XMRef idref="I1.i8.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i8.p1.m2.1" font="caligraphic" fragid="I1.i8.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i8.p1.m2.2" fragid="I1.i8.p1.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> and
+<Math mode="inline" xml:id="I1.i8.p1.m3" tex="ex({\cal P},G_{2})" text="e * x * open-interval@(P, G _ 2)" fragid="I1.i8.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i8.p1.m3.1"/><XMRef idref="I1.i8.p1.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i8.p1.m3.1" font="caligraphic" fragid="I1.i8.p1.m3.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i8.p1.m3.2" fragid="I1.i8.p1.m3.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="9" xml:id="I1.i9" fragid="I1.i9">
+          <tag>•</tag>
+          <para xml:id="I1.i9.p1" fragid="I1.i9.p1">
+            <p><Math mode="inline" xml:id="I1.i9.p1.m1" tex="ex({\cal P},\exists xG_{1})" text="e * x * open-interval@(P, exists@(x * G _ 1))" fragid="I1.i9.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i9.p1.m1.1"/><XMRef idref="I1.i9.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i9.p1.m1.1" font="caligraphic" fragid="I1.i9.p1.m1.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i9.p1.m1.2" fragid="I1.i9.p1.m1.2"><XMTok meaning="exists" role="BIGOP">∃</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> if <Math mode="inline" xml:id="I1.i9.p1.m2" tex="ex({\cal P},[t/x]G_{1})" text="e * x * open-interval@(P, delimited-[]@(t / x) * G _ 1)" fragid="I1.i9.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i9.p1.m2.1"/><XMRef idref="I1.i9.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i9.p1.m2.1" font="caligraphic" fragid="I1.i9.p1.m2.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i9.p1.m2.2" fragid="I1.i9.p1.m2.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="I1.i9.p1.m2.2.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="I1.i9.p1.m2.2.1" fragid="I1.i9.p1.m2.2.1"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+          </para>
+        </item>
+        <item frefnum="•" refnum="10" xml:id="I1.i10" fragid="I1.i10">
+          <tag>•</tag>
+          <para xml:id="I1.i10.p1" fragid="I1.i10.p1">
+            <p><Math mode="inline" xml:id="I1.i10.p1.m1" tex="ex({\cal P},D\supset G_{1})" fragid="I1.i10.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" font="caligraphic">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="superset-of" name="supset" role="RELOP">⊃</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMath></Math> if <Math mode="inline" xml:id="I1.i10.p1.m2" tex="ex(\{D\}\cup{\cal P},G_{1})" text="e * x * open-interval@(set@(D) union P, G _ 1)" fragid="I1.i10.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i10.p1.m2.2"/><XMRef idref="I1.i10.p1.m2.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i10.p1.m2.2" fragid="I1.i10.p1.m2.2"><XMTok meaning="union" name="cup" role="ADDOP">∪</XMTok><XMDual><XMApp><XMTok meaning="set"/><XMRef idref="I1.i10.p1.m2.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">{</XMTok><XMTok role="UNKNOWN" xml:id="I1.i10.p1.m2.1" font="italic" fragid="I1.i10.p1.m2.1">D</XMTok><XMTok role="CLOSE" stretchy="false">}</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="caligraphic">P</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i10.p1.m2.3" fragid="I1.i10.p1.m2.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>
+<!-- %This goal behaves as exclusive-OR. 
+     %**** mumo.tex Line 175 ****--></p>
+          </para>
+        </item>
+      </itemize>
+    </para>
+    <para xml:id="S2.p5" class="ltx_noindent" fragid="S2.p5">
+      <p>In the rule (6), the symbol <Math mode="inline" xml:id="S2.p5.m1" tex="D_{0}\&amp;D_{1}" text="D _ 0 and D _ 1" fragid="S2.p5.m1"><XMath><XMApp><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> allows for the mutually exclusive execution of modules. This rule
+can be implemented as follows:
+first attempts to solve the goal using <Math mode="inline" xml:id="S2.p5.m2" tex="D_{0}" text="D _ 0" fragid="S2.p5.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>.
+If it succeeds, then do nothing (and do not leave any choice point for <Math mode="inline" xml:id="S2.p5.m3" tex="D_{1}" text="D _ 1" fragid="S2.p5.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>
+). If it fails, then <Math mode="inline" xml:id="S2.p5.m4" tex="D_{1}" text="D _ 1" fragid="S2.p5.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> is attempted.</p>
+    </para>
+    <para xml:id="S2.p6" fragid="S2.p6">
+      <p>Our execution model based on uniform proof is not complete with respect to linear logic.
+However, it is complete with respect to affine logic (linear logic + weakening).
+The following theorem connects our language to affine logic.
+Its proof can be obtained from the fact that the cut rule is admissible in affine logic.</p>
+    </para>
+    <theorem class="ltx_theorem_theorem" frefnum="Theorem 1" refnum="1" xml:id="lemma1" fragid="lemma1">
+      <title class="ltx_runin" font="bold">
+        <tag>Theorem 1</tag>
+      </title>
+      <para xml:id="lemma1.p1" fragid="lemma1.p1">
+        <p>
+          <text font="italic">Let <Math mode="inline" xml:id="lemma1.p1.m1" tex="\{D_{1},\ldots,D_{n}\}" text="set@(D _ 1, ldots, D _ n)" fragid="lemma1.p1.m1"><XMath><XMDual><XMApp><XMTok meaning="set"/><XMRef idref="lemma1.p1.m1.2"/><XMRef idref="lemma1.p1.m1.1"/><XMRef idref="lemma1.p1.m1.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">{</XMTok><XMApp xml:id="lemma1.p1.m1.2" fragid="lemma1.p1.m1.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMTok role="PUNCT" font="upright">,</XMTok><XMTok name="ldots" role="ID" xml:id="lemma1.p1.m1.1" font="upright" fragid="lemma1.p1.m1.1">…</XMTok><XMTok role="PUNCT" font="upright">,</XMTok><XMApp xml:id="lemma1.p1.m1.3" fragid="lemma1.p1.m1.3"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok role="UNKNOWN">n</XMTok></XMApp><XMTok role="CLOSE" stretchy="false" font="upright">}</XMTok></XMWrap></XMDual></XMath></Math> be a program and
+let <Math mode="inline" xml:id="lemma1.p1.m2" tex="G" text="G" fragid="lemma1.p1.m2"><XMath><XMTok role="UNKNOWN">G</XMTok></XMath></Math> be a goal. Then, <Math mode="inline" xml:id="lemma1.p1.m3" tex="ex(\{D_{1},\ldots,D_{n}\},G)" text="e * x * open-interval@(set@(D _ 1, ldots, D _ n), G)" fragid="lemma1.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">e</XMTok><XMTok role="UNKNOWN">x</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="lemma1.p1.m3.3"/><XMRef idref="lemma1.p1.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">(</XMTok><XMDual xml:id="lemma1.p1.m3.3" fragid="lemma1.p1.m3.3"><XMApp><XMTok meaning="set"/><XMRef idref="lemma1.p1.m3.3.1"/><XMRef idref="lemma1.p1.m3.1"/><XMRef idref="lemma1.p1.m3.3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false" font="upright">{</XMTok><XMApp xml:id="lemma1.p1.m3.3.1" fragid="lemma1.p1.m3.3.1"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMTok role="PUNCT" font="upright">,</XMTok><XMTok name="ldots" role="ID" xml:id="lemma1.p1.m3.1" font="upright" fragid="lemma1.p1.m3.1">…</XMTok><XMTok role="PUNCT" font="upright">,</XMTok><XMApp xml:id="lemma1.p1.m3.3.2" fragid="lemma1.p1.m3.3.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok role="UNKNOWN">n</XMTok></XMApp><XMTok role="CLOSE" stretchy="false" font="upright">}</XMTok></XMWrap></XMDual><XMTok role="PUNCT" font="upright">,</XMTok><XMTok role="UNKNOWN" xml:id="lemma1.p1.m3.2" fragid="lemma1.p1.m3.2">G</XMTok><XMTok role="CLOSE" stretchy="false" font="upright">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> terminates with a success
+if and only if <Math mode="inline" xml:id="lemma1.p1.m4" tex="G" text="G" fragid="lemma1.p1.m4"><XMath><XMTok role="UNKNOWN">G</XMTok></XMath></Math> follows from
+<Math mode="inline" xml:id="lemma1.p1.m5" tex="\{!D_{1},\ldots,!D_{n}\}" fragid="lemma1.p1.m5"><XMath><XMTok role="OPEN" stretchy="false" font="upright">{</XMTok><XMTok meaning="factorial" role="POSTFIX" font="upright">!</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMTok role="PUNCT" font="upright">,</XMTok><XMTok name="ldots" role="ID" font="upright">…</XMTok><XMTok role="PUNCT" font="upright">,</XMTok><XMTok meaning="factorial" role="POSTFIX" font="upright">!</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">D</XMTok><XMTok role="UNKNOWN">n</XMTok></XMApp><XMTok role="CLOSE" stretchy="false" font="upright">}</XMTok></XMath></Math> in intuitionistic affine logic.</text>
+        </p>
+      </para>
+    </theorem>
+    <para xml:id="S2.p7" class="ltx_noindent" fragid="S2.p7">
+      <p>In the above, <Math mode="inline" xml:id="S2.p7.m1" tex="!D" fragid="S2.p7.m1"><XMath><XMTok meaning="factorial" role="POSTFIX">!</XMTok><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math> represents that <Math mode="inline" xml:id="S2.p7.m2" tex="D" text="D" fragid="S2.p7.m2"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math> is a reusable clause.</p>
+    </para>
+    <!-- %**** mumo.tex Line 200 **** -->
+  </section>
+  <section refnum="3" xml:id="S3" labels="LABEL:sec:modules" fragid="S3">
+    <title><tag close=" ">3</tag>MutexWeb</title>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>In our context, a web page corresponds simply to a set of <Math mode="inline" xml:id="S3.p1.m1" tex="D" text="D" fragid="S3.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math>-formulas
+with a URL.
+The module construct <Math mode="inline" xml:id="S3.p1.m2" tex="mod" text="m * o * d" fragid="S3.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp></XMath></Math> allows a URL to be associated to a set of <Math mode="inline" xml:id="S3.p1.m3" tex="D" text="D" fragid="S3.p1.m3"><XMath><XMTok role="UNKNOWN" font="italic">D</XMTok></XMath></Math>-formulas.
+An example of the use of this construct is provided by the
+following “lists” module which contains some basic list-handling rules.</p>
+    </para>
+    <para xml:id="S3.p2" class="ltx_noindent" fragid="S3.p2">
+      <tabular>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S3.p2.m1" tex="mod(lists)" text="m * o * d * l * i * s * t * s" fragid="S3.p2.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMRef idref="S3.p2.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p2.m1.1" fragid="S3.p2.m1.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</td>
+        </tr>
+        <tr>
+          <td align="left">% deterministic version of the member predicate</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S3.p2.m2" tex="memb(X,[X|L])\ \&amp;" fragid="S3.p2.m2">
+              <XMath>
+                <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                <XMTok role="UNKNOWN" font="italic">b</XMTok>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">[</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">X</XMTok>
+                    <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                  </XMWrap>
+                  <XMTok role="CLOSE" rpadding="5.0pt" stretchy="false">)</XMTok>
+                </XMWrap>
+                <XMTok meaning="and" role="ADDOP">&amp;</XMTok>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S3.p2.m3" tex="memb(X,[Y|L])" fragid="S3.p2.m3"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="PUNCT">,</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" font="italic">Y</XMTok><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMath></Math> :- <Math mode="inline" xml:id="S3.p2.m4" tex="(neq\ X\ Y)\ \land\ memb(X,L)." text="n * e * q * X * Y and m * e * m * b * open-interval@(X, L)" fragid="S3.p2.m4"><XMath><XMApp punctuation="."><XMTok meaning="and" name="land" role="ADDOP" rpadding="5.0pt">∧</XMTok><XMDual><XMRef idref="S3.p2.m4.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p2.m4.3" fragid="S3.p2.m4.3"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" rpadding="5.0pt" font="italic">q</XMTok><XMTok role="UNKNOWN" rpadding="5.0pt" font="italic">X</XMTok><XMTok role="UNKNOWN" font="italic">Y</XMTok></XMApp><XMTok role="CLOSE" rpadding="5.0pt" stretchy="false">)</XMTok></XMWrap></XMDual><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S3.p2.m4.1"/><XMRef idref="S3.p2.m4.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m4.1" font="italic" fragid="S3.p2.m4.1">X</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m4.2" font="italic" fragid="S3.p2.m4.2">L</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math></td>
+        </tr>
+        <tr>
+          <td align="left">% optimized version of the append predicate</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S3.p2.m5" tex="append([],L,L)\ \&amp;" text="limit-from@(a * p * p * e * n * d * vector@(list@(), L, L), and)" fragid="S3.p2.m5">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="limit-from"/>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="vector"/>
+                        <XMRef idref="S3.p2.m5.3"/>
+                        <XMRef idref="S3.p2.m5.1"/>
+                        <XMRef idref="S3.p2.m5.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMDual xml:id="S3.p2.m5.3" fragid="S3.p2.m5.3">
+                          <XMApp>
+                            <XMTok meaning="list"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">[</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S3.p2.m5.1" font="italic" fragid="S3.p2.m5.1">L</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S3.p2.m5.2" font="italic" fragid="S3.p2.m5.2">L</XMTok>
+                        <XMTok role="CLOSE" rpadding="5.0pt" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMTok meaning="and" role="ADDOP">&amp;</XMTok>
+                </XMApp>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><Math mode="inline" xml:id="S3.p2.m6" tex="append([X|L_{1}],L_{2},[X|L_{3}])" fragid="S3.p2.m6"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap><XMTok role="PUNCT">,</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" font="italic">X</XMTok><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMath></Math> :- <Math mode="inline" xml:id="S3.p2.m7" tex="append(L_{1},L_{2},L_{3})." text="a * p * p * e * n * d * vector@(L _ 1, L _ 2, L _ 3)" fragid="S3.p2.m7"><XMath><XMApp punctuation="."><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMApp><XMTok meaning="vector"/><XMRef idref="S3.p2.m7.1"/><XMRef idref="S3.p2.m7.2"/><XMRef idref="S3.p2.m7.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p2.m7.1" fragid="S3.p2.m7.1"><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p2.m7.2" fragid="S3.p2.m7.2"><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p2.m7.3" fragid="S3.p2.m7.3"><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math></td>
+        </tr>
+        <tr>
+          <td align="left">% the sorting of a list via two mutually exclusive sorting algorithms</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <Math mode="inline" xml:id="S3.p2.m8" tex="mod(quicksort)\ \&amp;\ mod(heapsort)" text="m * o * d * q * u * i * c * k * s * o * r * t and m * o * d * h * e * a * p * s * o * r * t" fragid="S3.p2.m8">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="and" role="ADDOP" rpadding="5.0pt">&amp;</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMDual>
+                      <XMRef idref="S3.p2.m8.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S3.p2.m8.1" fragid="S3.p2.m8.1">
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">u</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">k</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" rpadding="5.0pt" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMDual>
+                      <XMRef idref="S3.p2.m8.2"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S3.p2.m8.2" fragid="S3.p2.m8.2">
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">h</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </td>
+        </tr>
+      </tabular>
+      <p>Our language makes it possible to use quicksort and heapsort in a mutually exclusive way.
+<!-- %**** mumo.tex Line 225 **** --></p>
+    </para>
+    <para xml:id="S3.p3" fragid="S3.p3">
+      <p>These pages can be made available in specific contexts by explicitly
+mentioning the module implication. For example, consider a goal
+<Math mode="inline" xml:id="S3.p3.m1" tex="mod(lists)\supset qsort([2,60,3,5],L)" text="m * o * d * l * i * s * t * s superset-of q * s * o * r * t * open-interval@(list@(2, 60, 3, 5), L)" fragid="S3.p3.m1"><XMath><XMApp><XMTok meaning="superset-of" name="supset" role="RELOP">⊃</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMDual><XMRef idref="S3.p3.m1.6"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p3.m1.6" fragid="S3.p3.m1.6"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S3.p3.m1.7"/><XMRef idref="S3.p3.m1.5"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMDual xml:id="S3.p3.m1.7" fragid="S3.p3.m1.7"><XMApp><XMTok meaning="list"/><XMRef idref="S3.p3.m1.1"/><XMRef idref="S3.p3.m1.2"/><XMRef idref="S3.p3.m1.3"/><XMRef idref="S3.p3.m1.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok meaning="2" role="NUMBER" xml:id="S3.p3.m1.1" fragid="S3.p3.m1.1">2</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="60" role="NUMBER" xml:id="S3.p3.m1.2" fragid="S3.p3.m1.2">60</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S3.p3.m1.3" fragid="S3.p3.m1.3">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="5" role="NUMBER" xml:id="S3.p3.m1.4" fragid="S3.p3.m1.4">5</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p3.m1.5" font="italic" fragid="S3.p3.m1.5">L</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>.
+Solving this goal has the effect
+of adding the rules in <Math mode="inline" xml:id="S3.p3.m2" tex="lists" text="l * i * s * t * s" fragid="S3.p3.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>
+to the program before evaluating <Math mode="inline" xml:id="S3.p3.m3" tex="qsort([2,60,3,5],L)" text="q * s * o * r * t * open-interval@(list@(2, 60, 3, 5), L)" fragid="S3.p3.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S3.p3.m3.6"/><XMRef idref="S3.p3.m3.5"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMDual xml:id="S3.p3.m3.6" fragid="S3.p3.m3.6"><XMApp><XMTok meaning="list"/><XMRef idref="S3.p3.m3.1"/><XMRef idref="S3.p3.m3.2"/><XMRef idref="S3.p3.m3.3"/><XMRef idref="S3.p3.m3.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok meaning="2" role="NUMBER" xml:id="S3.p3.m3.1" fragid="S3.p3.m3.1">2</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="60" role="NUMBER" xml:id="S3.p3.m3.2" fragid="S3.p3.m3.2">60</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S3.p3.m3.3" fragid="S3.p3.m3.3">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="5" role="NUMBER" xml:id="S3.p3.m3.4" fragid="S3.p3.m3.4">5</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p3.m3.5" font="italic" fragid="S3.p3.m3.5">L</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>, producing the result <Math mode="inline" xml:id="S3.p3.m4" tex="L=[2,3,5,60]" text="L = list@(2, 3, 5, 60)" fragid="S3.p3.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p3.m4.1"/><XMRef idref="S3.p3.m4.2"/><XMRef idref="S3.p3.m4.3"/><XMRef idref="S3.p3.m4.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok meaning="2" role="NUMBER" xml:id="S3.p3.m4.1" fragid="S3.p3.m4.1">2</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S3.p3.m4.2" fragid="S3.p3.m4.2">3</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="5" role="NUMBER" xml:id="S3.p3.m4.3" fragid="S3.p3.m4.3">5</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="60" role="NUMBER" xml:id="S3.p3.m4.4" fragid="S3.p3.m4.4">60</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+    </para>
+  </section>
+  <section refnum="4" xml:id="S4" labels="LABEL:sec:conc" fragid="S4">
+    <title><tag close=" ">4</tag>Conclusion</title>
+    <para xml:id="S4.p1" fragid="S4.p1">
+      <p>In this paper, we have considered an extension to Prolog with
+mutually exclusive modules. This extension allows modules of
+the form <Math mode="inline" xml:id="S4.p1.m1" tex="D_{0}\&amp;D_{1}" text="D _ 0 and D _ 1" fragid="S4.p1.m1"><XMath><XMApp><XMTok meaning="and" role="ADDOP">&amp;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> where <Math mode="inline" xml:id="S4.p1.m2" tex="D_{0},D_{1}" text="list@(D _ 0, D _ 1)" fragid="S4.p1.m2"><XMath><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S4.p1.m2.1"/><XMRef idref="S4.p1.m2.2"/></XMApp><XMWrap><XMApp xml:id="S4.p1.m2.1" fragid="S4.p1.m2.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S4.p1.m2.2" fragid="S4.p1.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">D</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMWrap></XMDual></XMath></Math> are modules.
+These modules are
+particularly useful for structuring the program space.</p>
+    </para>
+    <para xml:id="S4.p2" fragid="S4.p2">
+      <p>We are investigating the connection between MutexWeb and Japaridze’s
+computability logic <cite class="ltx_citemacro_cite">[<ref href="#bib.bib3" idref="bib.bib3">3</ref>, <ref href="#bib.bib4" idref="bib.bib4">4</ref>]</cite>.
+<!-- %“profile*–˝–˝% without picture of author’s face --></p>
+    </para>
+    <!-- %**** mumo.tex Line 250 **** 
+     %bib style-->
+  </section>
+  <bibliography xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist>
+      <bibitem key="LD96" xml:id="bib.bib1" fragid="bib.bib1">
+        <bibtag role="refnum">1</bibtag>
+        <bibblock>
+S.W. Lok and A. Davison, “Logic Programming with the WWW,” Proceedings of
+the 7th ACM conference on Hypertext, ACM Press, 1996.
+</bibblock>
+      </bibitem>
+      <bibitem key="Davies" xml:id="bib.bib2" fragid="bib.bib2">
+        <bibtag role="refnum">2</bibtag>
+        <bibblock>
+J. Davies, D. Fensel, and F.V. Harmelen, Towards the Semantic Web, John Wiley,
+2003.
+</bibblock>
+      </bibitem>
+      <bibitem key="Jap03" xml:id="bib.bib3" fragid="bib.bib3">
+        <bibtag role="refnum">3</bibtag>
+        <bibblock>
+G. Japaridze, “Introduction to computability logic”, Annals of Pure and
+Applied Logic, vol.123, pp.1–99, 2003.
+</bibblock>
+      </bibitem>
+      <bibitem key="Jap08" xml:id="bib.bib4" fragid="bib.bib4">
+        <bibtag role="refnum">4</bibtag>
+        <bibblock>
+G. Japaridze, “Sequential operators in computability logic”,
+Information and Computation, vol.206, No.12, pp.1443-1475, 2008.
+<!-- %**** mumo.tex Line 275 **** --></bibblock>
+      </bibitem>
+      <bibitem key="Gir87" xml:id="bib.bib5" fragid="bib.bib5">
+        <bibtag role="refnum">5</bibtag>
+        <bibblock>
+J.Y. Girard, “Linear Logic”, Theoretical Computer Science, vol.50, pp.1–102,
+1987.
+</bibblock>
+      </bibitem>
+      <bibitem key="HM94" xml:id="bib.bib6" fragid="bib.bib6">
+        <bibtag role="refnum">6</bibtag>
+        <bibblock>
+J. Hodas and D. Miller, “Logic Programming in a Fragment of Intuitionistic Linear Logic”, Information and Computation, vol.110, pp.327–365, 1994.
+</bibblock>
+      </bibitem>
+      <bibitem key="Mil89jlp" xml:id="bib.bib7" fragid="bib.bib7">
+        <bibtag role="refnum">7</bibtag>
+        <bibblock>
+D. Miller, “A logical analysis of modules in logic programming,” Journal of
+Logic Programming, vol.6, pp.79–108, 1989.
+</bibblock>
+      </bibitem>
+      <bibitem key="MNPS91" xml:id="bib.bib8" fragid="bib.bib8">
+        <bibtag role="refnum">8</bibtag>
+        <bibblock>
+D. Miller, G. Nadathur, F. Pfenning, and A. Scedrov, “Uniform proofs as a
+foundation for logic programming,” Annals of Pure and Applied Logic, vol.51,
+pp.125–157, 1991.
+</bibblock>
+      </bibitem>
+      <bibitem key="Por" xml:id="bib.bib9" fragid="bib.bib9">
+        <bibtag role="refnum">9</bibtag>
+        <bibblock>
+A. Porto, “A structured alternative to Prolog with simple compositional
+semantics”,
+Theory and Practice of Logic Programming, vol.11, No.4-5, pp.611-627, 2011.
+<!-- %**** mumo.tex Line 300 **** --></bibblock>
+      </bibitem>
+    </biblist>
+  </bibliography>
+  <!-- %“profile*–˝–˝% without picture of author’s face -->
+</document>

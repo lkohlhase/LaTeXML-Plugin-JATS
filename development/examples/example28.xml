@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="article" options="english,12pt,leqno"?>
+<?latexml package="tikz"?>
+<!-- %“usetikzlibrary–knots˝ -->
+<?latexml package="inputenc" options="latin1"?>
+<?latexml package="amsxtra"?>
+<?latexml package="amsmath"?>
+<?latexml package="amssymb"?>
+<?latexml package="amsfonts"?>
+<?latexml package="xy" options="all"?>
+<?latexml package="mathrsfs"?>
+<?latexml package="amsthm"?>
+<?latexml package="babel"?>
+<!-- %**** example28.tex Line 25 **** -->
+<!-- %“theoremstyle–plain˝ -->
+<!-- %“newtheorem–thm˝–Theorem˝[subsection] -->
+<!-- %“newtheorem–prop˝[thm]–Proposition˝[section] -->
+<!-- %“newtheorem–ass˝[thm]–Assumption˝[section] -->
+<!-- %“newtheorem–refo˝[thm]–Reformulation˝[section] -->
+<!-- %Body font -->
+<!-- %Indent amount (empty = no indent, “parindent = para indent) -->
+<!-- %Thm head font -->
+<!-- %Punctuation after thm head -->
+<!-- %Space after thm head (“newline = linebreak) -->
+<!-- %Thm head spec -->
+<!-- %**** example28.tex Line 50 **** -->
+<!-- %**** example28.tex Line 75 **** -->
+<!-- %Body font -->
+<!-- %Indent amount (empty = no indent, “parindent = para indent) -->
+<!-- %Thm head font -->
+<!-- %Punctuation after thm head -->
+<!-- %Space after thm head (“newline = linebreak) -->
+<!-- %Thm head spec -->
+<!-- %**** example28.tex Line 100 **** -->
+<!-- %**** example28.tex Line 125 **** -->
+<!-- %**** example28.tex Line 150 **** -->
+<!-- %**** example28.tex Line 175 **** -->
+<!-- %**** example28.tex Line 200 **** -->
+<!-- %**** example28.tex Line 225 **** -->
+<!-- %**** example28.tex Line 250 **** -->
+<!-- %operators -->
+<!-- %**** example28.tex Line 275 **** -->
+<!-- %**** example28.tex Line 300 **** -->
+<!-- %**** example28.tex Line 325 **** -->
+<!-- %**** example28.tex Line 350 **** -->
+<!-- %“address–bb˝ -->
+<!-- %“email–cc˝ -->
+<!-- %“thanks–˝ -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line ltx_leqno" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Microlocal sheaves and quiver varieties</title>
+  <creator role="author" xml:lang="en">
+    <personname>Roman Bezrukavnikov </personname>
+  </creator>
+  <creator role="author" before="  " xml:lang="en">
+    <personname>Mikhail Kapranov </personname>
+  </creator>
+  <para xml:id="p1" fragid="p1">
+    <quote xml:lang="en">
+      <p align="center">
+        <text font="italic">À Vadim Schechtman pour son 60-ème anniversaire</text>
+      </p>
+    </quote>
+  </para>
+  <!-- %**** example28.tex Line 375 **** 
+     %“begin–abstract˝
+     %“end–abstract˝
+     %“baselineskip =35pt-->
+  <TOC name="Contents" role="contents" select="ltx:part | ltx:chapter | ltx:section | ltx:subsection | ltx:subsubsection | ltx:appendix | ltx:index | ltx:bibliography"/>
+  <!-- %“vfill“eject -->
+  <section refnum="0" xml:id="S0" xml:lang="en" fragid="S0">
+    <title>Introduction.</title>
+    <para xml:id="S0.p1" fragid="S0.p1">
+      <p>The goal of this paper is to relate two classes of symplectic manifolds of great importance in Representation Theory
+and to put them into a common framework.
+<!-- %**** example28.tex Line 400 **** --></p>
+    </para>
+    <para xml:id="S0.p2" class="ltx_noindent" fragid="S0.p2">
+      <p><text font="bold">(0.1)</text>
+<text font="bold"> Moduli of local systems on Riemann surfaces.</text>
+First, let <Math mode="inline" xml:id="S0.p2.m1" tex="X" text="X" fragid="S0.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> be a compact oriented <Math mode="inline" xml:id="S0.p2.m2" tex="C^{\infty}" text="C ^ infinity" fragid="S0.p2.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">C</XMTok><XMTok meaning="infinity" name="infty" role="ID">∞</XMTok></XMApp></XMath></Math> surface and <Math mode="inline" xml:id="S0.p2.m3" tex="G" text="G" fragid="S0.p2.m3"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math> be a reductive algeraic group.
+The moduli space <Math mode="inline" xml:id="S0.p2.m4" tex="\operatorname{LS}_{G}(X)" text="(LS _ G)@(X)" fragid="S0.p2.m4"><XMath><XMDual><XMApp><XMRef idref="S0.p2.m4.2"/><XMRef idref="S0.p2.m4.1"/></XMApp><XMApp><XMApp xml:id="S0.p2.m4.2" fragid="S0.p2.m4.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">LS</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S0.p2.m4.1" font="italic" fragid="S0.p2.m4.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math> of <Math mode="inline" xml:id="S0.p2.m5" tex="G" text="G" fragid="S0.p2.m5"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-local systems on <Math mode="inline" xml:id="S0.p2.m6" tex="X" text="X" fragid="S0.p2.m6"><XMath><XMTok role="UNKNOWN" font="italic">X</XMTok></XMath></Math> is naturally a symplectic manifold <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="goldman" title="goldman">goldman</ref>]</cite>,
+with the symplectic structure given by the cohomological pairing.
+As shown by Atiyah-Bott, <Math mode="inline" xml:id="S0.p2.m7" tex="\operatorname{LS}_{G}(X)" text="(LS _ G)@(X)" fragid="S0.p2.m7"><XMath><XMDual><XMApp><XMRef idref="S0.p2.m7.2"/><XMRef idref="S0.p2.m7.1"/></XMApp><XMApp><XMApp xml:id="S0.p2.m7.2" fragid="S0.p2.m7.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">LS</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S0.p2.m7.1" font="italic" fragid="S0.p2.m7.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math> can be obtained as the Hamiltonian reduction of an infinite-dimensional
+flat symplectic space formed by all <Math mode="inline" xml:id="S0.p2.m8" tex="G" text="G" fragid="S0.p2.m8"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>-connections, with the Lie algebra-valued moment map given by the curvature.
+Alternatively, <Math mode="inline" xml:id="S0.p2.m9" tex="\operatorname{LS}_{G}(X)" text="(LS _ G)@(X)" fragid="S0.p2.m9"><XMath><XMDual><XMApp><XMRef idref="S0.p2.m9.2"/><XMRef idref="S0.p2.m9.1"/></XMApp><XMApp><XMApp xml:id="S0.p2.m9.2" fragid="S0.p2.m9.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">LS</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S0.p2.m9.1" font="italic" fragid="S0.p2.m9.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math>
+can be obtained as a Hamiltonian reduction of a finite-dimensional
+symplectic space but at the price
+of passing to the  multiplicative theory: replacing the Lie algebra-valued moment map by a group-valued one <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="AMM" title="AMM">AMM</ref>]</cite>.</p>
+    </para>
+    <para xml:id="S0.p3" fragid="S0.p3">
+      <p>The variety <Math mode="inline" xml:id="S0.p3.m1" tex="\operatorname{LS}_{G}(X)" text="(LS _ G)@(X)" fragid="S0.p3.m1"><XMath><XMDual><XMApp><XMRef idref="S0.p3.m1.2"/><XMRef idref="S0.p3.m1.1"/></XMApp><XMApp><XMApp xml:id="S0.p3.m1.2" fragid="S0.p3.m1.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="OPERATOR" scriptpos="post">LS</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S0.p3.m1.1" font="italic" fragid="S0.p3.m1.1">X</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMath></Math> and its versions associated to surfaces with punctures, marked points etc.
+form fundamental examples of cluster varieties <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="FG" title="FG">FG</ref>]</cite>, and their quantization is interesting from many points of view.
+We will be particularly interested in the case <Math mode="inline" xml:id="S0.p3.m2" tex="G=GL_{n}" text="G = G * L _ n" fragid="S0.p3.m2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp></XMApp></XMath></Math>, in which case local systems form an abelian category.</p>
+    </para>
+    <para xml:id="S0.p4" fragid="S0.p4">
+      <p><text font="bold">(0.2)</text>
+<text font="bold"> Quiver varieties.</text> The second class is formed by the Nakajima quiver varieties <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="N" title="N">N</ref>]</cite>.
+Given a finite oriented graph <Math mode="inline" xml:id="S0.p4.m1" tex="Q" text="Q" fragid="S0.p4.m1"><XMath><XMTok role="UNKNOWN" font="italic">Q</XMTok></XMath></Math>, the corresponding quiver varieties can be seen as symplectic reductions of
+the cotangent bundles to the moduli spaces of representations of <Math mode="inline" xml:id="S0.p4.m2" tex="Q" text="Q" fragid="S0.p4.m2"><XMath><XMTok role="UNKNOWN" font="italic">Q</XMTok></XMath></Math> with various dimension vectors.
+Passing to the cotangent bundle has the effect of “doubling the quiver”:
+<!-- %**** example28.tex Line 425 **** -->introducing, for each arrow <text class="ltx_markedasmath">Θ</text></p>
+    </para>
+  </section>
+</document>

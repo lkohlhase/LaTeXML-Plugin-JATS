@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="cernart" options="12pt"?>
+<?latexml package="graphicx"?>
+<?latexml package="amsmath"?>
+<?latexml package="amssymb"?>
+<?latexml package="times"?>
+<?latexml package="cite"?>
+<?latexml package="multirow"?>
+<?latexml package="xcolor" options="table"?>
+<?latexml package="appendix"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title fontsize="120%">Comments concerning the paper ”Measurement of negatively charged
+pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”
+by the NA61 collaboration</title>
+  <titlepage>
+    <!-- %“vspace–3.1cm˝ 
+     %****************************** Section 1 ****************************-->
+    <section refnum="1" xml:id="S1" labels="LABEL:sec:intro" fragid="S1">
+      <title><tag close=" ">1</tag>Introduction</title>
+      <!-- %**** na61piminus.tex Line 75 **** -->
+      <para xml:id="S1.p1" fragid="S1.p1">
+        <p>The study of inclusive hadron production in p+p interactions has
+a long history. It has closely followed the steady evolution of
+particle accelerators towards higher interaction energies as well as
+the development of novel detector technologies. Although the
+measurement of particle yields in well-defined regions of the
+available phase space might seem to be a rather trivial undertaking,
+the achievement of high precision presents a real challenge to
+the experimentalist in terms of absolute normalization and the
+control of systematic effects, in particular concerning the
+necessary corrections for detector and accelerator connected
+effects. The term of ”precision” has to be defined here very
+carefully. In fact a survey of the existing data reveals that
+it is the evaluation of systematic errors rather than the available
+event statistics that is the limiting factor. Indeed only a few
+experiments have achieved cross section measurements with a
+systematic uncertainty in the one to two percent range. It is
+on this level that one may talk about ”high precision” data,
+and this performance has shown no real evolution over the past few
+decades of experimental work. It is by no means true that the
+use of state-of-the-art detector technology would automatically
+ensure superior data quality. Indeed any new attempt at producing
+”precision” data has to take full account of the preceding work.
+It is in this sense that this paper presents a critical review
+of new data on <Math mode="inline" xml:id="S1.p1.m1" tex="\pi^{-}" text="pi ^ -" fragid="S1.p1.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields produced by the NA61 collaboration
+<!-- %**** na61piminus.tex Line 100 **** -->in the range of beam momenta from 20 to 158 GeV/c <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite>. In the
+introduction to their publication the authors claim that ”the
+available data concern mainly basic features of unidentified
+charged hadrons and they are sparse. Many needed results on
+hadron spectra are missing”. And they continue: ”Thus new high
+precision measurements on hadron production properties in p+p
+interactions are necessary…”. These claims are put to a stringent
+test in the present comments, and it will be shown that the new
+data are by no means superior to existing results. In fact the
+NA61 results are found to be less precise than a set of reference experiments
+over the full range of the studied beam momenta.</p>
+      </para>
+      <para xml:id="S1.p2" fragid="S1.p2">
+        <p>This paper is arranged as follows. After an introduction to the
+experimental situation concerning inclusive pion production,
+a set of reference experiments in the range of beam momenta
+from 12 to 158 GeV/c is recalled in Sect. <ref labelref="LABEL:sec:ref_exp" href="#S3" title="3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref>.
+Section <ref labelref="LABEL:sec:na61" href="#S4" title="4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">4</text></ref> describes some aspects of the new NA61 results. A detailed
+comparison of these data with the published reference
+experiments follows for the total <Math mode="inline" xml:id="S1.p2.m1" tex="\pi^{-}" text="pi ^ -" fragid="S1.p2.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields in
+Sect. <ref labelref="LABEL:sec:tot_pim" href="#S5" title="5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">5</text></ref>, for the <Math mode="inline" xml:id="S1.p2.m2" tex="p_{T}" text="p _ T" fragid="S1.p2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated rapidity distributions in
+Sect. <ref labelref="LABEL:sec:rap_dist" href="#S6" title="6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">6</text></ref> and for the double differential cross sections
+in Sect. <ref labelref="LABEL:sec:differential" href="#S7" title="7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">7</text></ref>. Some remarks concerning normalization problems
+in Sect. <ref labelref="LABEL:sec:corr" href="#S8" title="8 Corrections and normalization ‣ 7.3 Inverse slopes of the mT distributions (”temperature”) ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">8</text></ref> conclude the paper.</p>
+      </para>
+      <!-- %**** na61piminus.tex Line 125 **** 
+     %****************************** Section 2 ****************************-->
+      <section refnum="2" xml:id="S2" labels="LABEL:sec:exp_sit" fragid="S2">
+        <title><tag close=" ">2</tag>The experimental situation</title>
+        <para xml:id="S2.p1" fragid="S2.p1">
+          <p>Most early experiments studying secondary hadron production in
+p+p interactions have been using hydrogen bubble chambers. This
+technique has a decisive advantage over all other detectors in
+terms of the continuous phase space coverage, perfect absolute
+normalization and only small corrections for detector related
+effects. Hence it offers superior performance concerning the
+systematic uncertainties.</p>
+        </para>
+        <para xml:id="S2.p2" fragid="S2.p2">
+          <p>For beam momenta up to about 5 GeV/c, the study of fully constrained
+exclusive final states has been possible using kinematical fitting.
+Above this limit, the transition to inclusive single particle cross
+sections had to be accepted due to the increased
+total multiplicity including numerous non-detected neutral hadrons.
+This accentuated the inherent weakness of bubble chamber data in
+terms of particle identification and of the rather sharp limitation
+in the size of the obtainable data samples. For the study of <Math mode="inline" xml:id="S2.p2.m1" tex="\pi^{-}" text="pi ^ -" fragid="S2.p2.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>
+production however the former limitation is of less importance
+in energy regions where the K<Math mode="inline" xml:id="S2.p2.m2" tex="{}^{-}" text="^-" fragid="S2.p2.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S2.p2.m3" tex="\pi^{-}" text="pi ^ -" fragid="S2.p2.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.p2.m4" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S2.p2.m4"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math>/<Math mode="inline" xml:id="S2.p2.m5" tex="\pi^{-}" text="pi ^ -" fragid="S2.p2.m5"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> ratios remain limited
+to the few percent level and methods of precise corrections have
+<!-- %**** na61piminus.tex Line 150 **** -->been developed, especially making use of the complete phase space
+coverage of the bubble chamber results. These methods have been
+employed up to beam momenta of about 70 GeV/c.</p>
+        </para>
+        <para xml:id="S2.p3" fragid="S2.p3">
+          <p>The alternative detector technique using small solid angle
+magnetic spectrometers allows for complete particle identification
+using for instance Cerenkov or time-of-flight detectors. Its
+weaknesses lie in the increased problems around calibration,
+normalization and corrections as well as in the generally very
+limited and fractional coverage of the production phase space.
+In fact not a single spectrometer experiment has been covering the
+complete phase space in one set-up. The introduction
+of the Time Projection Chamber (TPC) as a large solid angle detector
+permitting combined precision tracking and particle identification
+has remedied at least part of these problems. It offers, in fixed
+target experiments, identification over a major fraction of phase
+space via energy loss measurement with the exception of the
+cross-over region between the energy loss of the different particle
+species at about 1–3 GeV/c laboratory momentum. This corresponds
+to different areas in accessible phase space as a function of beam
+momentum. In addition TPC detectors need, as they are used in
+conjunction with targets of beam interaction lengths of at most
+a few percent, external triggering which introduces non-trivial and sizeable corrections.</p>
+        </para>
+        <para xml:id="S2.p4" fragid="S2.p4">
+          <p>In the following sections a number of existing results in the
+<!-- %**** na61piminus.tex Line 175 **** -->range of beam momenta covered by the NA61 experiment will be
+used as a reference for a detailed comparison with the new data.
+In this comparison the following definitions and variables will
+be used:</p>
+        </para>
+        <para xml:id="S2.p5" fragid="S2.p5">
+          <itemize xml:id="I1" fragid="I1">
+            <item xml:id="I1.i1" fragid="I1.i1">
+              <tag>•</tag>
+              <para xml:id="I1.i1.p1" fragid="I1.i1.p1">
+                <p>laboratory beam momentum <Math mode="inline" xml:id="I1.i1.p1.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="I1.i1.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> (GeV/c)</p>
+              </para>
+            </item>
+            <item xml:id="I1.i2" fragid="I1.i2">
+              <tag>•</tag>
+              <para xml:id="I1.i2.p1" fragid="I1.i2.p1">
+                <p>transverse momentum <Math mode="inline" xml:id="I1.i2.p1.m1" tex="p_{T}" text="p _ T" fragid="I1.i2.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> (GeV/c)</p>
+              </para>
+            </item>
+            <item xml:id="I1.i3" fragid="I1.i3">
+              <tag>•</tag>
+              <para xml:id="I1.i3.p1" fragid="I1.i3.p1">
+                <p>cms energy squared <Math mode="inline" xml:id="I1.i3.p1.m1" tex="s=2m_{p}+2m_{p}p_{\textrm{beam}}" text="s = 2 * m _ p + 2 * m _ p * p _ [beam]" fragid="I1.i3.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMApp></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="I1.i3.p1.m2" tex="m_{p}" text="m _ p" fragid="I1.i3.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok></XMApp></XMath></Math> = proton mass) (GeV<Math mode="inline" xml:id="I1.i3.p1.m3" tex="{}^{2}" text="^2" fragid="I1.i3.p1.m3"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="3"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>)</p>
+              </para>
+            </item>
+            <item xml:id="I1.i4" fragid="I1.i4">
+              <tag>•</tag>
+              <para xml:id="I1.i4.p1" fragid="I1.i4.p1">
+                <p>cms rapidity <Math mode="inline" xml:id="I1.i4.p1.m1" tex="y=0.5\ln((E+p_{L})/(E-p_{L}))" text="y = 0.5 * natural-logarithm@((E + p _ L) / (E - p _ L))" fragid="I1.i4.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="0.5" role="NUMBER">0.5</XMTok><XMDual><XMApp><XMRef idref="I1.i4.p1.m1.1"/><XMRef idref="I1.i4.p1.m1.2"/></XMApp><XMApp><XMTok meaning="natural-logarithm" role="OPFUNCTION" xml:id="I1.i4.p1.m1.1" fragid="I1.i4.p1.m1.1">ln</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i4.p1.m1.2" fragid="I1.i4.p1.m1.2"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMDual><XMRef idref="I1.i4.p1.m1.2.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i4.p1.m1.2.1" fragid="I1.i4.p1.m1.2.1"><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMDual><XMRef idref="I1.i4.p1.m1.2.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="I1.i4.p1.m1.2.2" fragid="I1.i4.p1.m1.2.2"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMApp></XMDual></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="I1.i4.p1.m2" tex="p_{L}" text="p _ L" fragid="I1.i4.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok></XMApp></XMath></Math> cms longitudinal momentum)</p>
+              </para>
+            </item>
+            <item xml:id="I1.i5" fragid="I1.i5">
+              <tag>•</tag>
+              <para xml:id="I1.i5.p1" fragid="I1.i5.p1">
+                <p><Math mode="inline" xml:id="I1.i5.p1.m1" tex="\langle n_{\pi^{-}}\rangle" text="delimited-⟨⟩@(n _ (pi ^ -))" fragid="I1.i5.p1.m1"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="I1.i5.p1.m1.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="I1.i5.p1.m1.1" fragid="I1.i5.p1.m1.1"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math> average number of <Math mode="inline" xml:id="I1.i5.p1.m2" tex="\pi^{-}" text="pi ^ -" fragid="I1.i5.p1.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> per inelastic event</p>
+              </para>
+            </item>
+            <item xml:id="I1.i6" fragid="I1.i6">
+              <tag>•</tag>
+              <para xml:id="I1.i6.p1" fragid="I1.i6.p1">
+                <p>transverse mass <Math mode="inline" xml:id="I1.i6.p1.m1" tex="m_{T}=\sqrt{p_{T}^{2}+m_{\pi}^{2}}" text="m _ T = square-root@((p _ T) ^ 2 + (m _ pi) ^ 2)" fragid="I1.i6.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok meaning="square-root"/><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="I1.i6.p1.m2" tex="m_{\pi}" text="m _ pi" fragid="I1.i6.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMath></Math> = pion mass)</p>
+              </para>
+            </item>
+            <item xml:id="I1.i7" fragid="I1.i7">
+              <tag>•</tag>
+              <para xml:id="I1.i7.p1" fragid="I1.i7.p1">
+                <p>invariant inclusive cross section <Math mode="inline" xml:id="I1.i7.p1.m1" tex="f(y,p_{T})=\frac{1}{\pi}\frac{d^{2}\sigma}{dydp_{T}^{2}}" text="f * open-interval@(y, p _ T) = (1 / pi) * ((d ^ 2 * sigma) / (d * y * d * (p _ T) ^ 2))" fragid="I1.i7.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="I1.i7.p1.m1.1"/><XMRef idref="I1.i7.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="I1.i7.p1.m1.1" font="italic" fragid="I1.i7.p1.m1.1">y</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="I1.i7.p1.m1.2" fragid="I1.i7.p1.m1.2"><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="sigma" role="UNKNOWN" font="italic">σ</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math></p>
+              </para>
+            </item>
+            <item xml:id="I1.i8" fragid="I1.i8">
+              <tag>•</tag>
+              <para xml:id="I1.i8.p1" fragid="I1.i8.p1">
+                <p>pion density per inelastic event <Math mode="inline" xml:id="I1.i8.p1.m1" tex="d^{2}n/dydp_{T}" text="((d ^ 2 * n) / d) * y * d * p _ T" fragid="I1.i8.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMApp></XMath></Math></p>
+              </para>
+            </item>
+            <item xml:id="I1.i9" fragid="I1.i9">
+              <tag>•</tag>
+              <para xml:id="I1.i9.p1" fragid="I1.i9.p1">
+                <p><Math mode="inline" xml:id="I1.i9.p1.m1" tex="p_{T}" text="p _ T" fragid="I1.i9.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated pion density <Math mode="inline" xml:id="I1.i9.p1.m2" tex="dn/dy" text="((d * n) / d) * y" fragid="I1.i9.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math> per inelastic event</p>
+              </para>
+            </item>
+          </itemize>
+        </para>
+        <!-- %****************************** Section 3 **************************** -->
+        <section refnum="3" xml:id="S3" labels="LABEL:sec:ref_exp" fragid="S3">
+          <title><tag close=" ">3</tag>The reference experiments</title>
+          <!-- %**** na61piminus.tex Line 200 **** 
+     %****************************** Section 3.1 ****************************-->
+          <subsection refnum="3.1" xml:id="S3.SS1" labels="LABEL:sec:beam" fragid="S3.SS1">
+            <title><tag close=" ">3.1</tag>Beam momenta, event samples and systematic uncertainties</title>
+            <para xml:id="S3.SS1.p1" fragid="S3.SS1.p1">
+              <p>A series of eight published experiments have been selected in the
+range 12 <Math mode="inline" xml:id="S3.SS1.p1.m1" tex="&lt;p_{\textrm{beam}}&lt;" text="absent less p _ [beam] less absent" fragid="S3.SS1.p1.m1"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 158 GeV/c. These are completely bracketing the NA61
+beam momenta. Some information concerning the beam momenta, cms
+energies and the size of the event samples are summarized in Table <ref labelref="LABEL:tab:beam" href="#S3.T1" title="Table 1 ‣ 3.1 Beam momenta, event samples and systematic uncertainties ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>.</p>
+            </para>
+            <!-- %Table 1 -->
+            <table frefnum="Table 1" placement="h" refnum="1" xml:id="S3.T1" labels="LABEL:tab:beam" fragid="S3.T1">
+              <!-- %“renewcommand–“tabcolsep˝–0.14pc˝ 
+     %“renewcommand–“arraystretch˝–1.0˝
+     %“footnotesize
+     %“scriptsize-->
+              <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+                <thead>
+                  <tr>
+                    <td align="center" border="l t" thead="column"><Math mode="inline" xml:id="S3.T1.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S3.T1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post10"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> (GeV/c)</td>
+                    <td align="center" border="t" thead="column">12</td>
+                    <td align="center" border="t" thead="column">19</td>
+                    <td align="center" border="t" thead="column">24</td>
+                    <td align="center" border="t" thead="column">28.5</td>
+                    <td align="center" border="t" thead="column">32</td>
+                    <td align="center" border="t" thead="column">69</td>
+                    <td align="center" border="t" thead="column">100</td>
+                    <td align="center" border="r t" thead="column">158</td>
+                  </tr>
+                  <tr>
+                    <td align="center" border="l" thead="column">reference</td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib3" idref="bib.bib3">3</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib4" idref="bib.bib4">4</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib6" idref="bib.bib6">6</ref>]</cite>
+                    </td>
+                    <td align="center" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib7" idref="bib.bib7">7</ref>]</cite>
+                    </td>
+                    <td align="center" border="r" thead="column">
+                      <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="center" border="l"><Math mode="inline" xml:id="S3.T1.m2" tex="\sqrt{s}" text="square-root@(s)" fragid="S3.T1.m2"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>(GeV)</td>
+                    <td align="center">4.92</td>
+                    <td align="center">6.12</td>
+                    <td align="center">6.84</td>
+                    <td align="center">7.43</td>
+                    <td align="center">7.85</td>
+                    <td align="center">11.45</td>
+                    <td align="center">13.76</td>
+                    <td align="center" border="r">17.27</td>
+                  </tr>
+                  <tr>
+                    <td align="center" border="l">events used</td>
+                    <td align="center">175k</td>
+                    <td align="center">8k</td>
+                    <td align="center">100k</td>
+                    <td align="center">30k</td>
+                    <td align="center">100k</td>
+                    <td align="center">8k</td>
+                    <td align="center">4k</td>
+                    <td align="center" border="r">4700k</td>
+                  </tr>
+                  <tr>
+                    <td align="center" border="b l">detector</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b">HBC</td>
+                    <td align="center" border="b r">TPC</td>
+                  </tr>
+                </tbody>
+              </tabular>
+              <toccaption><tag close=" ">1</tag>Selection of reference experiments for <Math mode="inline" xml:id="S3.T1.m3" tex="\pi^{-}" text="pi ^ -" fragid="S3.T1.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> production
+in p+p interactions, giving beam momentum, <Math mode="inline" xml:id="S3.T1.m4" tex="\sqrt{s}" text="square-root@(s)" fragid="S3.T1.m4"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>, the
+number of events available and the type of detector (HBC =
+hydrogen bubble chamber)</toccaption>
+              <caption><tag close=": ">Table 1</tag>Selection of reference experiments for <Math mode="inline" xml:id="S3.T1.m5" tex="\pi^{-}" text="pi ^ -" fragid="S3.T1.m5"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> production
+in p+p interactions, giving beam momentum, <Math mode="inline" xml:id="S3.T1.m6" tex="\sqrt{s}" text="square-root@(s)" fragid="S3.T1.m6"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>, the
+number of events available and the type of detector (HBC =
+hydrogen bubble chamber)</caption>
+            </table>
+            <para xml:id="S3.SS1.p2" fragid="S3.SS1.p2">
+              <p>It should be mentioned here that the event numbers of the bubble
+chamber experiments, especially refs. <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>, <ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite> are rather sizeable
+for this detector technique and well adapted to the systematic
+errors, see below.</p>
+            </para>
+            <para xml:id="S3.SS1.p3" fragid="S3.SS1.p3">
+              <p>All reference experiments have published <Math mode="inline" xml:id="S3.SS1.p3.m1" tex="\langle\pi^{-}\rangle" text="delimited-⟨⟩@(pi ^ -)" fragid="S3.SS1.p3.m1"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S3.SS1.p3.m1.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="S3.SS1.p3.m1.1" fragid="S3.SS1.p3.m1.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math> and rapidity
+distributions <Math mode="inline" xml:id="S3.SS1.p3.m2" tex="dn/dy" text="((d * n) / d) * y" fragid="S3.SS1.p3.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math>. In addition double differential cross
+sections <Math mode="inline" xml:id="S3.SS1.p3.m3" tex="f(y,p_{T})" text="f * open-interval@(y, p _ T)" fragid="S3.SS1.p3.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S3.SS1.p3.m3.1"/><XMRef idref="S3.SS1.p3.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S3.SS1.p3.m3.1" font="italic" fragid="S3.SS1.p3.m3.1">y</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.SS1.p3.m3.2" fragid="S3.SS1.p3.m3.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> are available in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>, <ref href="#bib.bib5" idref="bib.bib5">5</ref>, <ref href="#bib.bib6" idref="bib.bib6">6</ref>, <ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>.
+The bubble chamber experiments <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>, <ref href="#bib.bib3" idref="bib.bib3">3</ref>, <ref href="#bib.bib4" idref="bib.bib4">4</ref>, <ref href="#bib.bib5" idref="bib.bib5">5</ref>, <ref href="#bib.bib6" idref="bib.bib6">6</ref>, <ref href="#bib.bib7" idref="bib.bib7">7</ref>]</cite> achieve measurements of the
+total charged multiplicity <Math mode="inline" xml:id="S3.SS1.p3.m4" tex="\langle n_{\textrm{ch}}\rangle" text="delimited-⟨⟩@(n _ [ch])" fragid="S3.SS1.p3.m4"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S3.SS1.p3.m4.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="S3.SS1.p3.m4.1" fragid="S3.SS1.p3.m4.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMText>ch</XMText></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math> with a precision of about 1%.
+For the event numbers given in Table <ref labelref="LABEL:tab:beam" href="#S3.T1" title="Table 1 ‣ 3.1 Beam momenta, event samples and systematic uncertainties ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref> this uncertainty is in
+most cases not governed by the statistical errors. For <Math mode="inline" xml:id="S3.SS1.p3.m5" tex="\langle n_{\pi^{-}}\rangle" text="delimited-⟨⟩@(n _ (pi ^ -))" fragid="S3.SS1.p3.m5"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S3.SS1.p3.m5.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="S3.SS1.p3.m5.1" fragid="S3.SS1.p3.m5.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math>
+the given errors are about 2%, again not dominated by statistics.
+<!-- %**** na61piminus.tex Line 250 **** -->The TPC experiment NA49 <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite> gives an overall systematic uncertainty
+of 2%. This means that all reference data offer a systematic
+precision on the 2% level.</p>
+            </para>
+            <!-- %****************************** Section 3.2 **************************** -->
+          </subsection>
+          <subsection refnum="3.2" xml:id="S3.SS2" labels="LABEL:sec:pid" fragid="S3.SS2">
+            <title><tag close=" ">3.2</tag>Particle identification</title>
+            <para xml:id="S3.SS2.p1" fragid="S3.SS2.p1">
+              <p>The situation concerning the contribution of K<Math mode="inline" xml:id="S3.SS2.p1.m1" tex="{}^{-}" text="^-" fragid="S3.SS2.p1.m1"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and anti-protons
+is clarified in Fig. <ref labelref="LABEL:fig:ratio_tot" href="#S3.F1" title="Figure 1 ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>.</p>
+            </para>
+            <!-- %Fig.1 -->
+            <figure frefnum="Figure 1" placement="h!" refnum="1" xml:id="S3.F1" labels="LABEL:fig:ratio_tot" fragid="S3.F1">
+              <graphics candidates="ratio_tot.eps" graphic="ratio_tot.eps" options="width=170.716535pt" xml:id="S3.F1.g1" class="ltx_centering" fragid="S3.F1.g1" imagesrc="x62.png" imagewidth="266" imageheight="300"/>
+              <toccaption class="ltx_centering"><tag close=" ">1</tag>K<Math mode="inline" xml:id="S3.F1.m1" tex="{}^{-}" text="^-" fragid="S3.F1.m1"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m2" tex="\pi^{-}" text="pi ^ -" fragid="S3.F1.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.F1.m3" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.F1.m3"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m4" tex="pi^{-}" text="p * i ^ -" fragid="S3.F1.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMApp></XMath></Math> ratios as a function of
+<Math mode="inline" xml:id="S3.F1.m5" tex="\sqrt{s}" text="square-root@(s)" fragid="S3.F1.m5"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>. The full lines correspond to the new determination
+of the energy dependence of K<Math mode="inline" xml:id="S3.F1.m6" tex="{}^{-}" text="^-" fragid="S3.F1.m6"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> <cite class="ltx_citemacro_cite">[<ref href="#bib.bib9" idref="bib.bib9">9</ref>]</cite> and <Math mode="inline" xml:id="S3.F1.m7" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.F1.m7"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> <cite class="ltx_citemacro_cite">[<ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite> yields
+by the NA49 collaboration. The measurement of the K<Math mode="inline" xml:id="S3.F1.m8" tex="{}^{-}" text="^-" fragid="S3.F1.m8"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m9" tex="\pi^{-}" text="pi ^ -" fragid="S3.F1.m9"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>
+ratio at 32 GeV/c beam momentum and the correction deduced
+from the measured K<Math mode="inline" xml:id="S3.F1.m10" tex="{}^{0}_{S}" text="^ 0 absent _ S" fragid="S3.F1.m10"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post6"/><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="pre5"/><XMTok meaning="absent"/><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">S</XMTok></XMApp></XMath></Math> yields at 69 GeV/c are given as data points</toccaption>
+              <caption class="ltx_centering"><tag close=": ">Figure 1</tag>K<Math mode="inline" xml:id="S3.F1.m11" tex="{}^{-}" text="^-" fragid="S3.F1.m11"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m12" tex="\pi^{-}" text="pi ^ -" fragid="S3.F1.m12"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.F1.m13" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.F1.m13"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m14" tex="pi^{-}" text="p * i ^ -" fragid="S3.F1.m14"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">p</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMApp></XMath></Math> ratios as a function of
+<Math mode="inline" xml:id="S3.F1.m15" tex="\sqrt{s}" text="square-root@(s)" fragid="S3.F1.m15"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>. The full lines correspond to the new determination
+of the energy dependence of K<Math mode="inline" xml:id="S3.F1.m16" tex="{}^{-}" text="^-" fragid="S3.F1.m16"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> <cite class="ltx_citemacro_cite">[<ref href="#bib.bib9" idref="bib.bib9">9</ref>]</cite> and <Math mode="inline" xml:id="S3.F1.m17" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.F1.m17"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> <cite class="ltx_citemacro_cite">[<ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite> yields
+by the NA49 collaboration. The measurement of the K<Math mode="inline" xml:id="S3.F1.m18" tex="{}^{-}" text="^-" fragid="S3.F1.m18"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.F1.m19" tex="\pi^{-}" text="pi ^ -" fragid="S3.F1.m19"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>
+ratio at 32 GeV/c beam momentum and the correction deduced
+from the measured K<Math mode="inline" xml:id="S3.F1.m20" tex="{}^{0}_{S}" text="^ 0 absent _ S" fragid="S3.F1.m20"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post6"/><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="pre5"/><XMTok meaning="absent"/><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">S</XMTok></XMApp></XMath></Math> yields at 69 GeV/c are given as data points</caption>
+              <!-- %**** na61piminus.tex Line 275 **** -->
+            </figure>
+            <para xml:id="S3.SS2.p2" fragid="S3.SS2.p2">
+              <p>It is apparent from Fig. <ref labelref="LABEL:fig:ratio_tot" href="#S3.F1" title="Figure 1 ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref> that in relation to an overall systematic
+uncertainty of 2% the K<Math mode="inline" xml:id="S3.SS2.p2.m1" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m1"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.SS2.p2.m2" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.SS2.p2.m2"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> contributions are of importance
+above <Math mode="inline" xml:id="S3.SS2.p2.m3" tex="\sqrt{s}\gtrsim" text="square-root@(s) greater-than-or-equivalent-to absent" fragid="S3.SS2.p2.m3"><XMath><XMApp><XMTok meaning="greater-than-or-equivalent-to" name="gtrsim" role="RELOP">≳</XMTok><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp><XMTok meaning="absent"/></XMApp></XMath></Math> 5 GeV and 14 GeV, respectively. The K<Math mode="inline" xml:id="S3.SS2.p2.m4" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m4"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.SS2.p2.m5" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S3.SS2.p2.m5"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math>
+yields are directly determined by energy loss analysis in the
+NA49 experiment <cite class="ltx_citemacro_cite">[<ref href="#bib.bib9" idref="bib.bib9">9</ref>, <ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite>. The bubble chamber experiments at 32 and
+and 69 GeV/c beam momentum have used either a direct determination
+of the K<Math mode="inline" xml:id="S3.SS2.p2.m6" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m6"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields <cite class="ltx_citemacro_cite">[<ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite> or corrections derived from the measurement
+of K<Math mode="inline" xml:id="S3.SS2.p2.m7" tex="{}^{0}_{S}" text="^ 0 absent _ S" fragid="S3.SS2.p2.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="pre2"/><XMTok meaning="absent"/><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">S</XMTok></XMApp></XMath></Math> cross sections <cite class="ltx_citemacro_cite">[<ref href="#bib.bib6" idref="bib.bib6">6</ref>]</cite> in order to take account of the kaon
+contributions. Reference <cite class="ltx_citemacro_cite">[<ref href="#bib.bib5" idref="bib.bib5">5</ref>]</cite> measures a K<Math mode="inline" xml:id="S3.SS2.p2.m8" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m8"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.SS2.p2.m9" tex="\pi^{-}" text="pi ^ -" fragid="S3.SS2.p2.m9"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> ratio of 4%<Math mode="inline" xml:id="S3.SS2.p2.m10" tex="\pm" text="plus-or-minus" fragid="S3.SS2.p2.m10"><XMath><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMath></Math>1.5%, ref. <cite class="ltx_citemacro_cite">[<ref href="#bib.bib6" idref="bib.bib6">6</ref>]</cite>
+gives a correction of 5–6%, see Fig. <ref labelref="LABEL:fig:ratio_tot" href="#S3.F1" title="Figure 1 ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>. It may therefore be concluded
+that at least to an accuracy within the given systematic errors the
+identification of <Math mode="inline" xml:id="S3.SS2.p2.m11" tex="\pi^{-}" text="pi ^ -" fragid="S3.SS2.p2.m11"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields has been achieved. For the group of
+measurements at beam momenta between 19 and 28.5 GeV/c <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>, <ref href="#bib.bib3" idref="bib.bib3">3</ref>, <ref href="#bib.bib4" idref="bib.bib4">4</ref>]</cite> no
+subtraction of K<Math mode="inline" xml:id="S3.SS2.p2.m12" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m12"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> contributions has been attempted in the published
+results. As in this energy region the K<Math mode="inline" xml:id="S3.SS2.p2.m13" tex="{}^{-}" text="^-" fragid="S3.SS2.p2.m13"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>/<Math mode="inline" xml:id="S3.SS2.p2.m14" tex="\pi^{-}" text="pi ^ -" fragid="S3.SS2.p2.m14"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> ratio is of order
+1.7–2.2%, a corresponding reduction of the published yields has been
+performed in the subsequent sections of this paper. The data <cite class="ltx_citemacro_cite">[<ref href="#bib.bib7" idref="bib.bib7">7</ref>]</cite>
+at <Math mode="inline" xml:id="S3.SS2.p2.m15" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S3.SS2.p2.m15"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 100 GeV/c need a somewhat bigger downward correction of
+about 5%, see Fig. <ref labelref="LABEL:fig:ratio_tot" href="#S3.F1" title="Figure 1 ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>. Here the internal consistency with the other
+reference data may be controlled regarding the energy dependence of
+the total yields and of the rapidity distributions, Sects. <ref labelref="LABEL:sec:tot_pim" href="#S5" title="5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">5</text></ref> and <ref labelref="LABEL:sec:rap_dist" href="#S6" title="6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">6</text></ref>.
+<!-- %**** na61piminus.tex Line 300 **** --></p>
+            </para>
+            <!-- %****************************** Section 4 **************************** -->
+            <section refnum="4" xml:id="S4" labels="LABEL:sec:na61" fragid="S4">
+              <title><tag close=" ">4</tag>The NA61 experiment</title>
+              <!-- %****************************** Section 4.1 **************************** -->
+              <subsection refnum="4.1" xml:id="S4.SS1" labels="LABEL:sec:na61_beam" fragid="S4.SS1">
+                <title><tag close=" ">4.1</tag>Beam momenta, event samples and systematic uncertainties</title>
+                <para xml:id="S4.SS1.p1" fragid="S4.SS1.p1">
+                  <p>Some information about the NA61 data <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite> concerning the beam momenta
+and the number of used events is given in Table <ref labelref="LABEL:tab:na61_beam" href="#S4.T2" title="Table 2 ‣ 4.1 Beam momenta, event samples and systematic uncertainties ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">2</text></ref>.</p>
+                </para>
+                <!-- %Table 2 -->
+                <table frefnum="Table 2" placement="h" refnum="2" xml:id="S4.T2" labels="LABEL:tab:na61_beam" fragid="S4.T2">
+                  <!-- %“renewcommand–“tabcolsep˝–0.14pc˝ -->
+                  <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+                    <thead>
+                      <tr>
+                        <td align="center" border="l t" thead="column row"><Math mode="inline" xml:id="S4.T2.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S4.T2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post10"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> (GeV/c)</td>
+                        <td align="center" border="t" thead="column">20</td>
+                        <td align="center" border="t" thead="column">31</td>
+                        <td align="center" border="t" thead="column">40</td>
+                        <td align="center" border="t" thead="column">80</td>
+                        <td align="center" border="r t" thead="column">158</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td align="center" border="l" thead="row"><Math mode="inline" xml:id="S4.T2.m2" tex="\sqrt{s}" text="square-root@(s)" fragid="S4.T2.m2"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>(GeV)</td>
+                        <td align="center">6.27</td>
+                        <td align="center">7.74</td>
+                        <td align="center">8.76</td>
+                        <td align="center">12.32</td>
+                        <td align="center" border="r">17.27</td>
+                      </tr>
+                      <tr>
+                        <td align="center" border="b l" thead="row">events used</td>
+                        <td align="center" border="b">233k</td>
+                        <td align="center" border="b">843k</td>
+                        <td align="center" border="b">1580k</td>
+                        <td align="center" border="b">1540k</td>
+                        <td align="center" border="b r">1650k</td>
+                      </tr>
+                    </tbody>
+                  </tabular>
+                  <toccaption><tag close=" ">2</tag>Beam momenta, <Math mode="inline" xml:id="S4.T2.m3" tex="\sqrt{s}" text="square-root@(s)" fragid="S4.T2.m3"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> and the available event samples of the NA61 experiment</toccaption>
+                  <caption><tag close=": ">Table 2</tag>Beam momenta, <Math mode="inline" xml:id="S4.T2.m4" tex="\sqrt{s}" text="square-root@(s)" fragid="S4.T2.m4"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> and the available event samples of the NA61 experiment</caption>
+                </table>
+                <para xml:id="S4.SS1.p2" fragid="S4.SS1.p2">
+                  <p>The available event numbers are superior to the ones of the
+bubble chamber experiments <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>, <ref href="#bib.bib3" idref="bib.bib3">3</ref>, <ref href="#bib.bib4" idref="bib.bib4">4</ref>, <ref href="#bib.bib5" idref="bib.bib5">5</ref>, <ref href="#bib.bib6" idref="bib.bib6">6</ref>, <ref href="#bib.bib7" idref="bib.bib7">7</ref>]</cite>, however this advantage is
+offset by the very sizeable systematic uncertainties.
+The bin-by-bin distributions of the given systematic errors are
+shown in Fig. <ref labelref="LABEL:fig:syst_dist" href="#S4.F2" title="Figure 2 ‣ 4.1 Beam momenta, event samples and systematic uncertainties ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">2</text></ref>.</p>
+                </para>
+                <!-- %Fig.2 -->
+                <figure frefnum="Figure 2" placement="b!" refnum="2" xml:id="S4.F2" labels="LABEL:fig:syst_dist" fragid="S4.F2">
+                  <graphics candidates="syst_dist_inset.eps" graphic="syst_dist_inset.eps" options="width=426.791339pt" xml:id="S4.F2.g1" class="ltx_centering" fragid="S4.F2.g1" imagesrc="x63.png" imagewidth="664" imageheight="478"/>
+                  <toccaption class="ltx_centering"><tag close=" ">2</tag>Bin-by-bin distributions of the systematic errors
+of the NA61 experiment for the double differential yields <Math mode="inline" xml:id="S4.F2.m1" tex="d^{2}n/dydp_{T}" text="((d ^ 2 * n) / d) * y * d * p _ T" fragid="S4.F2.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMApp></XMath></Math> at
+the five beam momenta between 20 and 158 GeV/c. In the inserts the
+systematic errors of the respective <Math mode="inline" xml:id="S4.F2.m2" tex="p_{T}" text="p _ T" fragid="S4.F2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated distributions <Math mode="inline" xml:id="S4.F2.m3" tex="dn/dy" text="((d * n) / d) * y" fragid="S4.F2.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math> are presented.
+The corresponding mean values are indicated by arrows</toccaption>
+                  <caption class="ltx_centering"><tag close=": ">Figure 2</tag>Bin-by-bin distributions of the systematic errors
+of the NA61 experiment for the double differential yields <Math mode="inline" xml:id="S4.F2.m4" tex="d^{2}n/dydp_{T}" text="((d ^ 2 * n) / d) * y * d * p _ T" fragid="S4.F2.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMApp></XMath></Math> at
+the five beam momenta between 20 and 158 GeV/c. In the inserts the
+systematic errors of the respective <Math mode="inline" xml:id="S4.F2.m5" tex="p_{T}" text="p _ T" fragid="S4.F2.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated distributions <Math mode="inline" xml:id="S4.F2.m6" tex="dn/dy" text="((d * n) / d) * y" fragid="S4.F2.m6"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math> are presented.
+The corresponding mean values are indicated by arrows</caption>
+                </figure>
+                <para xml:id="S4.SS1.p3" fragid="S4.SS1.p3">
+                  <p>Evidently the NA61 data feature rather important systematic
+uncertainties on the bin-to-bin level, with a minimum at about 5–6% and maximum values
+reaching up to 20% at low beam momenta. This means that these
+errors are by factors of 3–10 above the ones published by the
+reference experiments. The strong difference between the uncertainties
+of the <Math mode="inline" xml:id="S4.SS1.p3.m1" tex="p_{T}" text="p _ T" fragid="S4.SS1.p3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated quantities, see inserts in Fig. <ref labelref="LABEL:fig:syst_dist" href="#S4.F2" title="Figure 2 ‣ 4.1 Beam momenta, event samples and systematic uncertainties ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">2</text></ref>,
+and the ones given for the individual bins are somewhat surprising. They would
+indicate very strong bin-to-bin correlations due to finite transverse momentum
+resolution. Given the event statistics of order
+1–2 Mevents it may be stated that the experimental errors are
+governed by systematics rather than by statistical fluctuations.</p>
+                </para>
+                <!-- %****************************** Section 4.2 **************************** -->
+              </subsection>
+              <subsection refnum="4.2" xml:id="S4.SS2" labels="LABEL:sec:na61_pid" fragid="S4.SS2">
+                <title><tag close=" ">4.2</tag>Particle identification</title>
+                <para xml:id="S4.SS2.p1" fragid="S4.SS2.p1">
+                  <p>NA61 does not attempt to use the superior particle identification
+<!-- %**** na61piminus.tex Line 375 **** -->capabilities offered by its TPC detectors <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>, <ref href="#bib.bib9" idref="bib.bib9">9</ref>, <ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite> with the exception
+of a correction for electron contamination. Instead, the yields
+of all negative hadrons (h<Math mode="inline" xml:id="S4.SS2.p1.m1" tex="{}^{-}" text="^-" fragid="S4.SS2.p1.m1"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>) are determined and a correction for
+K<Math mode="inline" xml:id="S4.SS2.p1.m2" tex="{}^{-}" text="^-" fragid="S4.SS2.p1.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS2.p1.m3" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S4.SS2.p1.m3"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> contributions is applied using a microscopic production
+model <cite class="ltx_citemacro_cite">[<ref href="#bib.bib11" idref="bib.bib11">11</ref>]</cite>. No quantitative information is given in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite> as to the
+precision to which this model might describe the K<Math mode="inline" xml:id="S4.SS2.p1.m4" tex="{}^{-}" text="^-" fragid="S4.SS2.p1.m4"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS2.p1.m5" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S4.SS2.p1.m5"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> yields
+as functions of <Math mode="inline" xml:id="S4.SS2.p1.m6" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S4.SS2.p1.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> and rapidity. A detailed comparison would
+be particularly mandatory in view of the recent work on the
+<Math mode="inline" xml:id="S4.SS2.p1.m7" tex="s" text="s" fragid="S4.SS2.p1.m7"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math>-dependence of kaon and baryon production published by NA49 <cite class="ltx_citemacro_cite">[<ref href="#bib.bib9" idref="bib.bib9">9</ref>, <ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite>.</p>
+                </para>
+                <!-- %****************************** Section 5 **************************** -->
+                <section refnum="5" xml:id="S5" labels="LABEL:sec:tot_pim" fragid="S5">
+                  <title><tag close=" ">5</tag>Total <Math mode="inline" xml:id="S5.m1" tex="\pi^{-}" text="pi ^ -" fragid="S5.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields</title>
+                  <para xml:id="S5.p1" fragid="S5.p1">
+                    <p>For a precise comparison of <Math mode="inline" xml:id="S5.p1.m1" tex="\langle\pi^{-}\rangle" text="delimited-⟨⟩@(pi ^ -)" fragid="S5.p1.m1"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S5.p1.m1.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="S5.p1.m1.1" fragid="S5.p1.m1.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math> the following reference data
+from experiments only giving the total <Math mode="inline" xml:id="S5.p1.m2" tex="\pi^{-}" text="pi ^ -" fragid="S5.p1.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields, Table <ref labelref="LABEL:tab:ref_beam" href="#S5.T3" title="Table 3 ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref>,
+have been added to the list of Table <ref labelref="LABEL:tab:beam" href="#S3.T1" title="Table 1 ‣ 3.1 Beam momenta, event samples and systematic uncertainties ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>.</p>
+                  </para>
+                  <!-- %Table 3 -->
+                  <table frefnum="Table 3" placement="h" refnum="3" xml:id="S5.T3" labels="LABEL:tab:ref_beam" fragid="S5.T3">
+                    <!-- %**** na61piminus.tex Line 400 **** 
+     %“renewcommand–“tabcolsep˝–0.14pc˝-->
+                    <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+                      <thead>
+                        <tr>
+                          <td align="center" border="l t" thead="column">
+                            <Math mode="inline" xml:id="S5.T3.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S5.T3.m1">
+                              <XMath>
+                                <XMApp>
+                                  <XMTok role="SUBSCRIPTOP" scriptpos="post10"/>
+                                  <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                                  <XMText>
+                                    <text fontsize="80%">beam</text>
+                                  </XMText>
+                                </XMApp>
+                              </XMath>
+                            </Math>
+                            <text fontsize="80%"> (GeV/c)</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">2.23</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">2.78</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">3.68</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">5.50</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">6.60</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">60</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">100</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">102</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">205</text>
+                          </td>
+                          <td align="center" border="t" thead="column">
+                            <text fontsize="80%">300</text>
+                          </td>
+                          <td align="center" border="r t" thead="column">
+                            <text fontsize="80%">400</text>
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td align="center" border="b l">
+                            <text fontsize="80%">ref.</text>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib12" idref="bib.bib12">12</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib13" idref="bib.bib13">13</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib14" idref="bib.bib14">14</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib15" idref="bib.bib15">15</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib16" idref="bib.bib16">16</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib17" idref="bib.bib17">17</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib18" idref="bib.bib18">18</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib19" idref="bib.bib19">19</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib20" idref="bib.bib20">20</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b">
+                            <cite class="ltx_citemacro_cite">
+                              <text fontsize="80%">[</text>
+                              <ref href="#bib.bib21" idref="bib.bib21">21</ref>
+                              <text fontsize="80%">]</text>
+                            </cite>
+                          </td>
+                          <td align="center" border="b r">
+                            <cite class="ltx_citemacro_cite"><text fontsize="80%">[</text><ref href="#bib.bib19" idref="bib.bib19">19</ref>, <ref href="#bib.bib22" idref="bib.bib22">22</ref>, <ref href="#bib.bib23" idref="bib.bib23">23</ref><text fontsize="80%">]</text></cite>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </tabular>
+                    <toccaption>
+                      <tag close=" ">
+                        <text fontsize="80%">3</text>
+                      </tag>
+                      <text fontsize="80%">Beam momenta for the additional reference data for </text>
+                      <Math mode="inline" xml:id="S5.T3.m2" tex="\langle\pi^{-}\rangle" text="delimited-⟨⟩@(pi ^ -)" fragid="S5.T3.m2">
+                        <XMath>
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="delimited-⟨⟩"/>
+                              <XMRef idref="S5.T3.m2.1"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok>
+                              <XMApp xml:id="S5.T3.m2.1" fragid="S5.T3.m2.1">
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                                <XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              </XMApp>
+                              <XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMath>
+                      </Math>
+                      <text fontsize="80%">,
+refs. </text>
+                      <cite class="ltx_citemacro_cite"><text fontsize="80%">[</text><ref href="#bib.bib12" idref="bib.bib12">12</ref>, <ref href="#bib.bib13" idref="bib.bib13">13</ref>, <ref href="#bib.bib14" idref="bib.bib14">14</ref>, <ref href="#bib.bib15" idref="bib.bib15">15</ref>, <ref href="#bib.bib16" idref="bib.bib16">16</ref>, <ref href="#bib.bib17" idref="bib.bib17">17</ref>, <ref href="#bib.bib18" idref="bib.bib18">18</ref>, <ref href="#bib.bib19" idref="bib.bib19">19</ref>, <ref href="#bib.bib20" idref="bib.bib20">20</ref>, <ref href="#bib.bib21" idref="bib.bib21">21</ref>, <ref href="#bib.bib22" idref="bib.bib22">22</ref>, <ref href="#bib.bib23" idref="bib.bib23">23</ref><text fontsize="80%">]</text></cite>
+                    </toccaption>
+                    <caption fontsize="80%"><tag close=": ">Table 3</tag>Beam momenta for the additional reference data for <Math mode="inline" xml:id="S5.T3.m3" tex="\langle\pi^{-}\rangle" text="delimited-⟨⟩@(pi ^ -)" fragid="S5.T3.m3"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S5.T3.m3.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false" fontsize="125%">⟨</XMTok><XMApp xml:id="S5.T3.m3.1" fragid="S5.T3.m3.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok name="pi" role="UNKNOWN" fontsize="125%" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP" fontsize="125%">-</XMTok></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false" fontsize="125%">⟩</XMTok></XMWrap></XMDual></XMath></Math>,
+refs. <cite class="ltx_citemacro_cite">[<ref href="#bib.bib12" idref="bib.bib12">12</ref>, <ref href="#bib.bib13" idref="bib.bib13">13</ref>, <ref href="#bib.bib14" idref="bib.bib14">14</ref>, <ref href="#bib.bib15" idref="bib.bib15">15</ref>, <ref href="#bib.bib16" idref="bib.bib16">16</ref>, <ref href="#bib.bib17" idref="bib.bib17">17</ref>, <ref href="#bib.bib18" idref="bib.bib18">18</ref>, <ref href="#bib.bib19" idref="bib.bib19">19</ref>, <ref href="#bib.bib20" idref="bib.bib20">20</ref>, <ref href="#bib.bib21" idref="bib.bib21">21</ref>, <ref href="#bib.bib22" idref="bib.bib22">22</ref>, <ref href="#bib.bib23" idref="bib.bib23">23</ref>]</cite></caption>
+                  </table>
+                  <para xml:id="S5.p2" fragid="S5.p2">
+                    <p>With the exception of the low-energy measurements <cite class="ltx_citemacro_cite">[<ref href="#bib.bib12" idref="bib.bib12">12</ref>, <ref href="#bib.bib13" idref="bib.bib13">13</ref>, <ref href="#bib.bib14" idref="bib.bib14">14</ref>, <ref href="#bib.bib15" idref="bib.bib15">15</ref>, <ref href="#bib.bib16" idref="bib.bib16">16</ref>]</cite> and the
+EHS experiment <cite class="ltx_citemacro_cite">[<ref href="#bib.bib23" idref="bib.bib23">23</ref>]</cite> the data are obtained from <Math mode="inline" xml:id="S5.p2.m1" tex="\langle h^{-}\rangle" text="delimited-⟨⟩@(h ^ -)" fragid="S5.p2.m1"><XMath><XMDual><XMApp><XMTok meaning="delimited-⟨⟩"/><XMRef idref="S5.p2.m1.1"/></XMApp><XMWrap><XMTok name="langle" role="OPEN" stretchy="false">⟨</XMTok><XMApp xml:id="S5.p2.m1.1" fragid="S5.p2.m1.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp><XMTok name="rangle" role="CLOSE" stretchy="false">⟩</XMTok></XMWrap></XMDual></XMath></Math>. They have been
+corrected for K<Math mode="inline" xml:id="S5.p2.m2" tex="{}^{-}" text="^-" fragid="S5.p2.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S5.p2.m3" tex="\overline{\textrm{p}}" text="overline@([p])" fragid="S5.p2.m3"><XMath><XMApp><XMTok name="overline" role="OVERACCENT">¯</XMTok><XMText>p</XMText></XMApp></XMath></Math> contributions using the particle ratios
+of Fig. <ref labelref="LABEL:fig:ratio_tot" href="#S3.F1" title="Figure 1 ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>. The resulting average <Math mode="inline" xml:id="S5.p2.m4" tex="\pi^{-}" text="pi ^ -" fragid="S5.p2.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yields are given in Fig. <ref labelref="LABEL:fig:meanpi" href="#S5.F3" title="Figure 3 ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref> as
+a function of s<Math mode="inline" xml:id="S5.p2.m5" tex="{}^{1/4}" text="^1 / 4" fragid="S5.p2.m5"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>.</p>
+                  </para>
+                  <!-- %Fig.3 -->
+                  <figure frefnum="Figure 3" placement="h!" refnum="3" xml:id="S5.F3" labels="LABEL:fig:meanpi" fragid="S5.F3">
+                    <!-- %**** na61piminus.tex Line 425 **** -->
+                    <graphics candidates="meanpi.eps" graphic="meanpi.eps" options="width=426.791339pt" xml:id="S5.F3.g1" class="ltx_centering" fragid="S5.F3.g1" imagesrc="x64.png" imagewidth="664" imageheight="748"/>
+                    <toccaption class="ltx_centering"><tag close=" ">3</tag>Average <Math mode="inline" xml:id="S5.F3.m1" tex="\pi^{-}" text="pi ^ -" fragid="S5.F3.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> multiplicities as a function of
+s<Math mode="inline" xml:id="S5.F3.m2" tex="{}^{1/4}" text="^1 / 4" fragid="S5.F3.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>. The reference experiments are given as
+closed circles. The full line corresponds to an
+eyeball fit through the reference data. Open
+circles: NA61 results with their published systematic
+errors. The insert gives the percent deviations
+of the NA61 data from the interpolation of the
+reference data. The line is drawn to guide the eye. The error bars are
+quoted by NA61 <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite>, the shaded area corresponds to the systematic
+uncertainties of the reference experiments</toccaption>
+                    <caption class="ltx_centering"><tag close=": ">Figure 3</tag>Average <Math mode="inline" xml:id="S5.F3.m3" tex="\pi^{-}" text="pi ^ -" fragid="S5.F3.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post5"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> multiplicities as a function of
+s<Math mode="inline" xml:id="S5.F3.m4" tex="{}^{1/4}" text="^1 / 4" fragid="S5.F3.m4"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>. The reference experiments are given as
+closed circles. The full line corresponds to an
+eyeball fit through the reference data. Open
+circles: NA61 results with their published systematic
+errors. The insert gives the percent deviations
+of the NA61 data from the interpolation of the
+reference data. The line is drawn to guide the eye. The error bars are
+quoted by NA61 <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite>, the shaded area corresponds to the systematic
+uncertainties of the reference experiments</caption>
+                  </figure>
+                  <para xml:id="S5.p3" fragid="S5.p3">
+                    <p>It is evident from Fig. <ref labelref="LABEL:fig:meanpi" href="#S5.F3" title="Figure 3 ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref> that the NA61 data lie above the reference
+results for all values of <Math mode="inline" xml:id="S5.p3.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S5.p3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math>. The percent deviation increases
+with decreasing beam momentum and reaches 7% at <Math mode="inline" xml:id="S5.p3.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S5.p3.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 20 GeV/c
+(insert of Fig. <ref labelref="LABEL:fig:meanpi" href="#S5.F3" title="Figure 3 ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref>).</p>
+                  </para>
+                  <para xml:id="S5.p4" fragid="S5.p4">
+                    <p>The deviations which are visible in Fig. <ref labelref="LABEL:fig:meanpi" href="#S5.F3" title="Figure 3 ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">3</text></ref> have direct
+consequences for the overall precision of the NA61 experiment. If
+the <Math mode="inline" xml:id="S5.p4.m1" tex="\pi^{-}" text="pi ^ -" fragid="S5.p4.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> yield is increased, the h<Math mode="inline" xml:id="S5.p4.m2" tex="{}^{+}" text="^+" fragid="S5.p4.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="plus" role="ADDOP">+</XMTok></XMApp></XMath></Math> yield has to follow upwards,
+albeit with a smaller percentage, in order to not violate charge
+<!-- %**** na61piminus.tex Line 450 **** -->conservation. This will in turn offset the total charged multiplicity
+which is measured to a one percent systematic accuracy by most
+reference experiments.</p>
+                  </para>
+                  <!-- %****************************** Section 6 **************************** -->
+                  <section refnum="6" xml:id="S6" labels="LABEL:sec:rap_dist" fragid="S6">
+                    <title><tag close=" ">6</tag>Rapidity distributions <Math mode="inline" xml:id="S6.m1" tex="dn/dy" text="((d * n) / d) * y" fragid="S6.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math></title>
+                    <!-- %****************************** Section 6.1 **************************** -->
+                    <subsection refnum="6.1" xml:id="S6.SS1" labels="LABEL:sec:ref_rap_dist" fragid="S6.SS1">
+                      <title><tag close=" ">6.1</tag>Reference rapidity density distributions as a function of <Math mode="inline" xml:id="S6.SS1.m1" tex="y" text="y" fragid="S6.SS1.m1"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> and <Math mode="inline" xml:id="S6.SS1.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.SS1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math></title>
+                      <para xml:id="S6.SS1.p1" fragid="S6.SS1.p1">
+                        <p>The single differential, <Math mode="inline" xml:id="S6.SS1.p1.m1" tex="p_{T}" text="p _ T" fragid="S6.SS1.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> integrated rapidity distributions
+<Math mode="inline" xml:id="S6.SS1.p1.m2" tex="dn/dy(y,p_{\textrm{beam}})" text="((d * n) / d) * y * open-interval@(y, p _ [beam])" fragid="S6.SS1.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S6.SS1.p1.m2.1"/><XMRef idref="S6.SS1.p1.m2.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S6.SS1.p1.m2.1" font="italic" fragid="S6.SS1.p1.m2.1">y</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S6.SS1.p1.m2.2" fragid="S6.SS1.p1.m2.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> constitute a next step towards a more detailed inspection
+of the NA61 results. All reference experiments cited in Table <ref labelref="LABEL:tab:beam" href="#S3.T1" title="Table 1 ‣ 3.1 Beam momenta, event samples and systematic uncertainties ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">1</text></ref>
+have published rapidity distributions. These have been interpolated
+to the rapidity values published in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite>. The resulting rapidity
+densities are shown in Fig. <ref labelref="LABEL:fig:dndy_bc" href="#S6.F4" title="Figure 4 ‣ 6.1 Reference rapidity density distributions as a function of y and pbeam ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">4</text></ref> as a function of beam momentum for
+the rapidity range from 0.1 to 2.7. The data points (full dots)
+<!-- %**** na61piminus.tex Line 475 **** -->are interpolated in <Math mode="inline" xml:id="S6.SS1.p1.m3" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.SS1.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> by the full lines.</p>
+                      </para>
+                      <!-- %Fig.4 -->
+                      <figure frefnum="Figure 4" placement="h!" refnum="4" xml:id="S6.F4" labels="LABEL:fig:dndy_bc" fragid="S6.F4">
+                        <graphics candidates="dndy_bc.eps" graphic="dndy_bc.eps" options="width=426.791339pt" xml:id="S6.F4.g1" class="ltx_centering" fragid="S6.F4.g1" imagesrc="x65.png" imagewidth="665" imageheight="906"/>
+                        <toccaption class="ltx_centering"><tag close=" ">4</tag>Rapidity densities <Math mode="inline" xml:id="S6.F4.m1" tex="dn/dy" text="((d * n) / d) * y" fragid="S6.F4.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math> from eight reference
+experiments (full dots) as a function of <Math mode="inline" xml:id="S6.F4.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F4.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> for
+rapidities between 0.1 and 2.7. The full lines constitute an
+eyeball interpolation. The positions of the five beam momenta
+measured by NA61 are presented as the vertical broken lines</toccaption>
+                        <caption class="ltx_centering"><tag close=": ">Figure 4</tag>Rapidity densities <Math mode="inline" xml:id="S6.F4.m3" tex="dn/dy" text="((d * n) / d) * y" fragid="S6.F4.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math> from eight reference
+experiments (full dots) as a function of <Math mode="inline" xml:id="S6.F4.m4" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F4.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> for
+rapidities between 0.1 and 2.7. The full lines constitute an
+eyeball interpolation. The positions of the five beam momenta
+measured by NA61 are presented as the vertical broken lines</caption>
+                      </figure>
+                      <para xml:id="S6.SS1.p2" fragid="S6.SS1.p2">
+                        <p>Evidently the eight cited experiments constitute a data sample
+which is internally consistent and compatible with a continuous
+and smooth dependence both on <Math mode="inline" xml:id="S6.SS1.p2.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.SS1.p2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> and on rapidity. The
+deviations of the data points from the interpolation are consistent
+with the systematic uncertainty of 2% given by all experiments.
+This is exemplified in Fig. <ref labelref="LABEL:fig:dndy_diff" href="#S6.F5" title="Figure 5 ‣ 6.1 Reference rapidity density distributions as a function of y and pbeam ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">5</text></ref> where the percent deviations of
+the data points with respect to the interpolated <Math mode="inline" xml:id="S6.SS1.p2.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.SS1.p2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> dependence
+are shown for four rapidity values between 0.3 and 2.1.</p>
+                      </para>
+                      <!-- %Fig.5 
+     %**** na61piminus.tex Line 500 ****-->
+                      <figure frefnum="Figure 5" placement="h!" refnum="5" xml:id="S6.F5" labels="LABEL:fig:dndy_diff" fragid="S6.F5">
+                        <graphics candidates="dndy_diff.eps" graphic="dndy_diff.eps" options="width=227.622047pt" xml:id="S6.F5.g1" class="ltx_centering" fragid="S6.F5.g1" imagesrc="x66.png" imagewidth="355" imageheight="340"/>
+                        <toccaption class="ltx_centering"><tag close=" ">5</tag>Point-by point deviation of the reference data
+from the interpolated <Math mode="inline" xml:id="S6.F5.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F5.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> dependence, given in percent,
+as a function of <Math mode="inline" xml:id="S6.F5.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F5.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> for fixed rapidities between 0.3 and 2.1</toccaption>
+                        <caption class="ltx_centering"><tag close=": ">Figure 5</tag>Point-by point deviation of the reference data
+from the interpolated <Math mode="inline" xml:id="S6.F5.m3" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F5.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> dependence, given in percent,
+as a function of <Math mode="inline" xml:id="S6.F5.m4" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F5.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> for fixed rapidities between 0.3 and 2.1</caption>
+                      </figure>
+                      <!-- %****************************** Section 6.2 **************************** -->
+                    </subsection>
+                    <subsection refnum="6.2" xml:id="S6.SS2" labels="LABEL:sec:comp_rap_dist" fragid="S6.SS2">
+                      <title><tag close=" ">6.2</tag>Comparison to the NA61 results</title>
+                      <para xml:id="S6.SS2.p1" fragid="S6.SS2.p1">
+                        <p>The global data sample contained in Fig. <ref labelref="LABEL:fig:dndy_bc" href="#S6.F4" title="Figure 4 ‣ 6.1 Reference rapidity density distributions as a function of y and pbeam ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">4</text></ref> may now be compared
+to the NA61 results at the five respective beam momenta between
+20 and 158 GeV/c. This comparison is presented in the five
+panels of Fig. <ref labelref="LABEL:fig:dndy_na61diff" href="#S6.F6" title="Figure 6 ‣ 6.2 Comparison to the NA61 results ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">6</text></ref> giving the relative difference in percent between
+the NA61 results and the reference data interpolation to the
+NA61 beam momenta.</p>
+                      </para>
+                      <!-- %**** na61piminus.tex Line 525 **** 
+     %Fig.6-->
+                      <figure frefnum="Figure 6" placement="h!" refnum="6" xml:id="S6.F6" labels="LABEL:fig:dndy_na61diff" fragid="S6.F6">
+                        <graphics candidates="dndy_na61diff_syst.eps" graphic="dndy_na61diff_syst.eps" options="width=327.206693pt" xml:id="S6.F6.g1" class="ltx_centering" fragid="S6.F6.g1" imagesrc="x67.png" imagewidth="510" imageheight="366"/>
+                        <toccaption class="ltx_centering"><tag close=" ">6</tag>Relative difference between the NA61 results and
+the interpolated reference data in percent as a function of rapidity,
+for the five values of <Math mode="inline" xml:id="S6.F6.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F6.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> given by NA61.
+The lines through the points are drawn to guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</toccaption>
+                        <caption class="ltx_centering"><tag close=": ">Figure 6</tag>Relative difference between the NA61 results and
+the interpolated reference data in percent as a function of rapidity,
+for the five values of <Math mode="inline" xml:id="S6.F6.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F6.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> given by NA61.
+The lines through the points are drawn to guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</caption>
+                      </figure>
+                      <para xml:id="S6.SS2.p2" fragid="S6.SS2.p2">
+                        <p>Very substantial deviations appear in this comparison of the
+single differential distributions. There is in general a structure
+with positive deviations at low and high rapidity and an
+intermediate minimum around <Math mode="inline" xml:id="S6.SS2.p2.m1" tex="y" text="y" fragid="S6.SS2.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 1.3–1.5. The minimum becomes
+slightly negative at <Math mode="inline" xml:id="S6.SS2.p2.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.SS2.p2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 40 and 80 GeV/c. The positive
+deviations reach typical values of about 6% at low <Math mode="inline" xml:id="S6.SS2.p2.m3" tex="y" text="y" fragid="S6.SS2.p2.m3"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> and between
+10 and 30% at <Math mode="inline" xml:id="S6.SS2.p2.m4" tex="y&gt;" text="y &gt; absent" fragid="S6.SS2.p2.m4"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 2 with a clear dependence on beam momentum.
+This corresponds to discrepancies of more than 4 standard deviations
+even compared to the larger NA61 errors.</p>
+                      </para>
+                      <!-- %**** na61piminus.tex Line 550 **** 
+     %****************************** Section 6.3 ****************************-->
+                    </subsection>
+                    <subsection refnum="6.3" xml:id="S6.SS3" labels="LABEL:sec:gaus_fits" fragid="S6.SS3">
+                      <title><tag close=" ">6.3</tag>Gaussian fits</title>
+                      <para xml:id="S6.SS3.p1" fragid="S6.SS3.p1">
+                        <p>The fitting of rapidity distributions with two symmetrically
+displaced Gaussians appears to be a standard procedure of NA61
+in order to represent their data both for the elementary p+p
+and for A+A interactions. It is of course not to be expected
+that the physics of soft hadron production would satisfy such
+a simplistic arithmetic parametrization. This is demonstrated
+in Fig. <ref labelref="LABEL:fig:ydist" href="#S6.F7" title="Figure 7 ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">7</text></ref> which shows the comparison between the double
+Gaussian fit and the NA61 data (full dots) and the published
+NA49 data (open circles) at 158 GeV/c beam momentum.</p>
+                      </para>
+                      <!-- %Fig.7 -->
+                      <figure frefnum="Figure 7" placement="h!" refnum="7" xml:id="S6.F7" labels="LABEL:fig:ydist" fragid="S6.F7">
+                        <graphics candidates="ydist.eps" graphic="ydist.eps" options="width=298.753937pt" xml:id="S6.F7.g1" class="ltx_centering" fragid="S6.F7.g1" imagesrc="x68.png" imagewidth="467" imageheight="524"/>
+                        <toccaption class="ltx_centering"><tag close=" ">7</tag>Rapidity density at <Math mode="inline" xml:id="S6.F7.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F7.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c as a
+function of rapidity. Full dots: NA61 data. Open circles:
+NA49 data. The full line represents the data parametrization
+with two symmetrically displaced Gaussians using the
+parameters given in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite></toccaption>
+                        <caption class="ltx_centering"><tag close=": ">Figure 7</tag>Rapidity density at <Math mode="inline" xml:id="S6.F7.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F7.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c as a
+function of rapidity. Full dots: NA61 data. Open circles:
+NA49 data. The full line represents the data parametrization
+with two symmetrically displaced Gaussians using the
+parameters given in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite></caption>
+                        <!-- %**** na61piminus.tex Line 575 **** -->
+                      </figure>
+                      <para xml:id="S6.SS3.p2" fragid="S6.SS3.p2">
+                        <p>Beyond the rapidity range covered by the NA61 data, the
+parametrization diverges from the published data by a factor
+of 2 at <Math mode="inline" xml:id="S6.SS3.p2.m1" tex="y" text="y" fragid="S6.SS3.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 4 and by more than one order of magnitude at
+<Math mode="inline" xml:id="S6.SS3.p2.m2" tex="y" text="y" fragid="S6.SS3.p2.m2"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 4.8. But also within the rapidity range of the NA61
+measurements there are important systematic differences between
+data and fit as presented in Fig. <ref labelref="LABEL:fig:fit_diff" href="#S6.F8" title="Figure 8 ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">8</text></ref> for the beam momenta of
+40 and 158 GeV/c.</p>
+                      </para>
+                      <!-- %Fig.8 -->
+                      <figure frefnum="Figure 8" placement="h!" refnum="8" xml:id="S6.F8" labels="LABEL:fig:fit_diff" fragid="S6.F8">
+                        <graphics candidates="fit_diff.eps" graphic="fit_diff.eps" options="width=341.433071pt" xml:id="S6.F8.g1" class="ltx_centering" fragid="S6.F8.g1" imagesrc="x69.png" imagewidth="532" imageheight="315"/>
+                        <toccaption class="ltx_centering"><tag close=" ">8</tag>Deviations of the NA61 data from the Gaussian fit
+as a function of rapidity in percent at <Math mode="inline" xml:id="S6.F8.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F8.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 40 GeV/c,
+and 158 GeV/c. The lines are drawn to guide the eye</toccaption>
+                        <caption class="ltx_centering"><tag close=": ">Figure 8</tag>Deviations of the NA61 data from the Gaussian fit
+as a function of rapidity in percent at <Math mode="inline" xml:id="S6.F8.m2" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S6.F8.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 40 GeV/c,
+and 158 GeV/c. The lines are drawn to guide the eye</caption>
+                      </figure>
+                      <para xml:id="S6.SS3.p3" fragid="S6.SS3.p3">
+                        <p>Evidently the fits introduce systematic distortions of up to <Math mode="inline" xml:id="S6.SS3.p3.m1" tex="\pm" text="plus-or-minus" fragid="S6.SS3.p3.m1"><XMath><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMath></Math>5%
+compared to the data. It has been repeatedly demonstrated in
+<!-- %**** na61piminus.tex Line 600 **** -->the NA49 publications <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>, <ref href="#bib.bib9" idref="bib.bib9">9</ref>, <ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite> that arithmetic formulations are
+not advisable for data with a precision on the few percent level.</p>
+                      </para>
+                      <!-- %****************************** Section 7 **************************** -->
+                      <section refnum="7" xml:id="S7" labels="LABEL:sec:differential" fragid="S7">
+                        <title><tag close=" ">7</tag>Double differential cross sections</title>
+                        <para xml:id="S7.p1" fragid="S7.p1">
+                          <p>A final step in the critical assessment of the NA61 results
+consists in scrutinizing the double differential <Math mode="inline" xml:id="S7.p1.m1" tex="\pi^{-}" text="pi ^ -" fragid="S7.p1.m1"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> densities
+<Math mode="inline" xml:id="S7.p1.m2" tex="d^{2}n/dydp_{T}" text="((d ^ 2 * n) / d) * y * d * p _ T" fragid="S7.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">d</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok role="UNKNOWN" font="italic">d</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMApp></XMath></Math> in comparison to the reference experiments that have
+given cross sections as a function of both y and <Math mode="inline" xml:id="S7.p1.m3" tex="p_{T}" text="p _ T" fragid="S7.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>.</p>
+                        </para>
+                        <!-- %****************************** Section 7.1 **************************** -->
+                        <subsection refnum="7.1" xml:id="S7.SS1" labels="LABEL:sec:comp_na49" fragid="S7.SS1">
+                          <title><tag close=" ">7.1</tag>Comparison to NA49 at <Math mode="inline" xml:id="S7.SS1.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.SS1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c</title>
+                          <para xml:id="S7.SS1.p1" fragid="S7.SS1.p1">
+                            <p>NA49 has published <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite> detailed interpolated invariant cross sections
+<Math mode="inline" xml:id="S7.SS1.p1.m1" tex="f(x_{F},p_{T})" text="f * open-interval@(x _ F, p _ T)" fragid="S7.SS1.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S7.SS1.p1.m1.1"/><XMRef idref="S7.SS1.p1.m1.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS1.p1.m1.1" fragid="S7.SS1.p1.m1.1"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">F</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S7.SS1.p1.m1.2" fragid="S7.SS1.p1.m1.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> as functions of Feynman <Math mode="inline" xml:id="S7.SS1.p1.m2" tex="x_{F}" text="x _ F" fragid="S7.SS1.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">F</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S7.SS1.p1.m3" tex="p_{T}" text="p _ T" fragid="S7.SS1.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>. These data are given
+in steps of 0.05 GeV/c in <Math mode="inline" xml:id="S7.SS1.p1.m4" tex="p_{T}" text="p _ T" fragid="S7.SS1.p1.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> and may be readily interpolated to the
+<!-- %**** na61piminus.tex Line 625 **** -->rapidity values chosen by NA61. The corresponding relative differences,
+given in percent of the NA49 cross sections, are shown in Fig. <ref labelref="LABEL:fig:na61_na49_comp" href="#S7.F9" title="Figure 9 ‣ 7.1 Comparison to NA49 at pbeam = 158 GeV/c ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">9</text></ref> for
+6 values of <Math mode="inline" xml:id="S7.SS1.p1.m5" tex="p_{T}" text="p _ T" fragid="S7.SS1.p1.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> as a function of rapidity.</p>
+                          </para>
+                          <!-- %Fig.9 -->
+                          <figure frefnum="Figure 9" placement="h!" refnum="9" xml:id="S7.F9" labels="LABEL:fig:na61_na49_comp" fragid="S7.F9">
+                            <graphics candidates="na61_na49_comp_syst.eps" graphic="na61_na49_comp_syst.eps" options="width=355.659449pt" xml:id="S7.F9.g1" class="ltx_centering" fragid="S7.F9.g1" imagesrc="x70.png" imagewidth="553" imageheight="397"/>
+                            <toccaption class="ltx_centering"><tag close=" ">9</tag>Relative differences between NA61 and NA49 results
+in percent of the NA49 cross sections for 6 values of <Math mode="inline" xml:id="S7.F9.m1" tex="p_{T}" text="p _ T" fragid="S7.F9.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>,
+as a function of rapidity. The error bars correspond to the
+statistical errors of NA61. The full lines are drawn to
+guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</toccaption>
+                            <caption class="ltx_centering"><tag close=": ">Figure 9</tag>Relative differences between NA61 and NA49 results
+in percent of the NA49 cross sections for 6 values of <Math mode="inline" xml:id="S7.F9.m2" tex="p_{T}" text="p _ T" fragid="S7.F9.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>,
+as a function of rapidity. The error bars correspond to the
+statistical errors of NA61. The full lines are drawn to
+guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</caption>
+                          </figure>
+                          <para xml:id="S7.SS1.p2" fragid="S7.SS1.p2">
+                            <p>Very substantial deviations of the NA61 data from the NA49 results
+are visible in Fig. <ref labelref="LABEL:fig:na61_na49_comp" href="#S7.F9" title="Figure 9 ‣ 7.1 Comparison to NA49 at pbeam = 158 GeV/c ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">9</text></ref>. These deviations show a systematic
+behaviour, reaching up to <Math mode="inline" xml:id="S7.SS1.p2.m1" tex="\pm" text="plus-or-minus" fragid="S7.SS1.p2.m1"><XMath><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMath></Math>20% of the NA49 values.</p>
+                          </para>
+                          <!-- %****************************** Section 7.2 **************************** 
+     %**** na61piminus.tex Line 650 ****-->
+                        </subsection>
+                        <subsection refnum="7.2" xml:id="S7.SS2" labels="LABEL:sec:comp_bc" fragid="S7.SS2">
+                          <title><tag close=" ">7.2</tag>Comparison to the bubble chamber reference <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite></title>
+                          <para xml:id="S7.SS2.p1" fragid="S7.SS2.p1">
+                            <p>Double differential cross sections at <Math mode="inline" xml:id="S7.SS2.p1.m1" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.SS2.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 12 and 24 GeV/c have
+been published by <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite> as functions of <Math mode="inline" xml:id="S7.SS2.p1.m2" tex="p_{T}" text="p _ T" fragid="S7.SS2.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> and rapidity. These
+data have been interpolated to the beam momentum of 20 GeV/c
+and compared to the NA61 results. The resulting relative differences
+in percent are shown in Fig. <ref labelref="LABEL:fig:na61_bc_comp" href="#S7.F10" title="Figure 10 ‣ 7.2 Comparison to the bubble chamber reference [2] ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">10</text></ref>.</p>
+                          </para>
+                          <!-- %Fig.10 -->
+                          <figure frefnum="Figure 10" placement="h!" refnum="10" xml:id="S7.F10" labels="LABEL:fig:na61_bc_comp" fragid="S7.F10">
+                            <graphics candidates="na61_bc_comp_syst.eps" graphic="na61_bc_comp_syst.eps" options="width=355.659449pt" xml:id="S7.F10.g1" class="ltx_centering" fragid="S7.F10.g1" imagesrc="x71.png" imagewidth="553" imageheight="397"/>
+                            <toccaption class="ltx_centering"><tag close=" ">10</tag>Relative differences between NA61 and the bubble
+chamber results <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite> interpolated to the beam momentum of
+20 GeV/c as a function of rapidity for five values of <Math mode="inline" xml:id="S7.F10.m1" tex="p_{T}" text="p _ T" fragid="S7.F10.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>. The full lines
+are drawn to guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</toccaption>
+                            <caption class="ltx_centering"><tag close=": ">Figure 10</tag>Relative differences between NA61 and the bubble
+chamber results <cite class="ltx_citemacro_cite">[<ref href="#bib.bib2" idref="bib.bib2">2</ref>]</cite> interpolated to the beam momentum of
+20 GeV/c as a function of rapidity for five values of <Math mode="inline" xml:id="S7.F10.m2" tex="p_{T}" text="p _ T" fragid="S7.F10.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>. The full lines
+are drawn to guide the eye. The shaded
+areas and the dashed lines represent the systematic errors of the reference
+data and NA61 data, respectively</caption>
+                          </figure>
+                          <!-- %**** na61piminus.tex Line 675 **** -->
+                          <para xml:id="S7.SS2.p2" fragid="S7.SS2.p2">
+                            <p>Also at this beam momentum large discrepancies up to a 40–50% level
+are evident, with a systematic rapidity dependence that changes
+strongly with transverse momentum.</p>
+                          </para>
+                          <!-- %****************************** Section 7.3 **************************** -->
+                        </subsection>
+                        <subsection refnum="7.3" xml:id="S7.SS3" labels="LABEL:sec:inv_slope" fragid="S7.SS3">
+                          <title><tag close=" ">7.3</tag>Inverse slopes of the <Math mode="inline" xml:id="S7.SS3.m1" tex="m_{T}" text="m _ T" fragid="S7.SS3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> distributions (”temperature”)</title>
+                          <para xml:id="S7.SS3.p1" fragid="S7.SS3.p1">
+                            <p>NA61 has chosen to fit their <Math mode="inline" xml:id="S7.SS3.p1.m1" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.SS3.p1.m1"><XMath><XMDual><XMRef idref="S7.SS3.p1.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS3.p1.m1.1" fragid="S7.SS3.p1.m1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distributions by an exponential
+within the limits 0.2 <Math mode="inline" xml:id="S7.SS3.p1.m2" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.SS3.p1.m2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7. The lower limit is positioned well
+above the mean <Math mode="inline" xml:id="S7.SS3.p1.m3" tex="p_{T}" text="p _ T" fragid="S7.SS3.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> such that, at central rapidity and <Math mode="inline" xml:id="S7.SS3.p1.m4" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.SS3.p1.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c,
+only 44% of all <Math mode="inline" xml:id="S7.SS3.p1.m5" tex="\pi^{-}" text="pi ^ -" fragid="S7.SS3.p1.m5"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> fall within this <Math mode="inline" xml:id="S7.SS3.p1.m6" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.SS3.p1.m6"><XMath><XMDual><XMRef idref="S7.SS3.p1.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS3.p1.m6.1" fragid="S7.SS3.p1.m6.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> bin. The inverse
+slope of a supposedly exponential <Math mode="inline" xml:id="S7.SS3.p1.m7" tex="m_{T}" text="m _ T" fragid="S7.SS3.p1.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> distribution is generally
+connected to a thermodynamic quantity called ”hadronic temperature”.
+It may be asked what relation an exponential fit over this small
+<Math mode="inline" xml:id="S7.SS3.p1.m8" tex="m_{T}" text="m _ T" fragid="S7.SS3.p1.m8"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> interval may have to this quantity. Indeed, the dependence of
+the inverse slope on <Math mode="inline" xml:id="S7.SS3.p1.m9" tex="m_{T}" text="m _ T" fragid="S7.SS3.p1.m9"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> may be extracted from the published NA61
+data by using a local exponential fit to three successive data points. This is shown
+in Fig. <ref labelref="LABEL:fig:mt_slope" href="#S7.F11" title="Figure 11 ‣ 7.3 Inverse slopes of the mT distributions (”temperature”) ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">11</text></ref> for the most central rapidity bin at <Math mode="inline" xml:id="S7.SS3.p1.m10" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.SS3.p1.m10"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c.</p>
+                          </para>
+                          <!-- %Fig.11 -->
+                          <figure frefnum="Figure 11" placement="h!" refnum="11" xml:id="S7.F11" labels="LABEL:fig:mt_slope" fragid="S7.F11">
+                            <!-- %**** na61piminus.tex Line 700 **** -->
+                            <graphics candidates="mt_slope.eps" graphic="mt_slope.eps" options="width=227.622047pt" xml:id="S7.F11.g1" class="ltx_centering" fragid="S7.F11.g1" imagesrc="x72.png" imagewidth="355" imageheight="400"/>
+                            <toccaption class="ltx_centering"><tag close=" ">11</tag>Local inverse slopes of the <Math mode="inline" xml:id="S7.F11.m1" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F11.m1"><XMath><XMDual><XMRef idref="S7.F11.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F11.m1.1" fragid="S7.F11.m1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distribution at
+<Math mode="inline" xml:id="S7.F11.m2" tex="y" text="y" fragid="S7.F11.m2"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0.1, obtained by an exponential fit to three successive data points,
+as a function of <Math mode="inline" xml:id="S7.F11.m3" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F11.m3"><XMath><XMDual><XMRef idref="S7.F11.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F11.m3.1" fragid="S7.F11.m3.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> at <Math mode="inline" xml:id="S7.F11.m4" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.F11.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c.
+The limits of the exponential fit are indicated by the vertical lines, the resulting
+”hadronic temperature” as the horizontal band corresponding to the published
+systematic error of <Math mode="inline" xml:id="S7.F11.m5" tex="\pm" text="plus-or-minus" fragid="S7.F11.m5"><XMath><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMath></Math>2.7 MeV</toccaption>
+                            <caption class="ltx_centering"><tag close=": ">Figure 11</tag>Local inverse slopes of the <Math mode="inline" xml:id="S7.F11.m6" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F11.m6"><XMath><XMDual><XMRef idref="S7.F11.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F11.m6.1" fragid="S7.F11.m6.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distribution at
+<Math mode="inline" xml:id="S7.F11.m7" tex="y" text="y" fragid="S7.F11.m7"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0.1, obtained by an exponential fit to three successive data points,
+as a function of <Math mode="inline" xml:id="S7.F11.m8" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F11.m8"><XMath><XMDual><XMRef idref="S7.F11.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F11.m8.1" fragid="S7.F11.m8.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> at <Math mode="inline" xml:id="S7.F11.m9" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.F11.m9"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c.
+The limits of the exponential fit are indicated by the vertical lines, the resulting
+”hadronic temperature” as the horizontal band corresponding to the published
+systematic error of <Math mode="inline" xml:id="S7.F11.m10" tex="\pm" text="plus-or-minus" fragid="S7.F11.m10"><XMath><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMath></Math>2.7 MeV</caption>
+                          </figure>
+                          <para xml:id="S7.SS3.p2" fragid="S7.SS3.p2">
+                            <p>A look at Fig. <ref labelref="LABEL:fig:mt_slope" href="#S7.F11" title="Figure 11 ‣ 7.3 Inverse slopes of the mT distributions (”temperature”) ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">11</text></ref> shows that the fit limits appear to have been chosen
+to cover mainly the region of the <Math mode="inline" xml:id="S7.SS3.p2.m1" tex="m_{T}" text="m _ T" fragid="S7.SS3.p2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> dependence that might be called
+exponential within the sizeable statistical bin-by-bin errors.
+Immediately below and above these limits the inverse slopes increase
+towards low and high <Math mode="inline" xml:id="S7.SS3.p2.m2" tex="m_{T}" text="m _ T" fragid="S7.SS3.p2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math>. In fact the <Math mode="inline" xml:id="S7.SS3.p2.m3" tex="(m_{T}-m)" text="m _ T - m" fragid="S7.SS3.p2.m3"><XMath><XMDual><XMRef idref="S7.SS3.p2.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS3.p2.m3.1" fragid="S7.SS3.p2.m3.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distributions
+have been shown to be non-exponential for pions <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>, kaons <cite class="ltx_citemacro_cite">[<ref href="#bib.bib9" idref="bib.bib9">9</ref>]</cite> and
+baryons <cite class="ltx_citemacro_cite">[<ref href="#bib.bib10" idref="bib.bib10">10</ref>]</cite> by the NA49 collaboration. This is very evident looking
+at the corresponding inverse slopes for <Math mode="inline" xml:id="S7.SS3.p2.m4" tex="\pi^{-}" text="pi ^ -" fragid="S7.SS3.p2.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> as a function of <Math mode="inline" xml:id="S7.SS3.p2.m5" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.SS3.p2.m5"><XMath><XMDual><XMRef idref="S7.SS3.p2.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS3.p2.m5.1" fragid="S7.SS3.p2.m5.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>
+as published, with an event number three times higher than NA61,
+by NA49 <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>, see Fig. <ref labelref="LABEL:fig:inv_slope_na49" href="#S7.F12" title="Figure 12 ‣ 7.3 Inverse slopes of the mT distributions (”temperature”) ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">12</text></ref>.</p>
+                          </para>
+                          <!-- %Fig.12 -->
+                          <figure frefnum="Figure 12" placement="h!" refnum="12" xml:id="S7.F12" labels="LABEL:fig:inv_slope_na49" fragid="S7.F12">
+                            <!-- %**** na61piminus.tex Line 725 **** -->
+                            <graphics candidates="inv_slope_na49.eps" graphic="inv_slope_na49.eps" options="width=227.622047pt" xml:id="S7.F12.g1" class="ltx_centering" fragid="S7.F12.g1" imagesrc="x73.png" imagewidth="355" imageheight="400"/>
+                            <toccaption class="ltx_centering"><tag close=" ">12</tag>Inverse slopes of the <Math mode="inline" xml:id="S7.F12.m1" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F12.m1"><XMath><XMDual><XMRef idref="S7.F12.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F12.m1.1" fragid="S7.F12.m1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distribution at
+<Math mode="inline" xml:id="S7.F12.m2" tex="y" text="y" fragid="S7.F12.m2"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0 as a function of <Math mode="inline" xml:id="S7.F12.m3" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F12.m3"><XMath><XMDual><XMRef idref="S7.F12.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F12.m3.1" fragid="S7.F12.m3.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> for the NA49 data <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite></toccaption>
+                            <caption class="ltx_centering"><tag close=": ">Figure 12</tag>Inverse slopes of the <Math mode="inline" xml:id="S7.F12.m4" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F12.m4"><XMath><XMDual><XMRef idref="S7.F12.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F12.m4.1" fragid="S7.F12.m4.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> distribution at
+<Math mode="inline" xml:id="S7.F12.m5" tex="y" text="y" fragid="S7.F12.m5"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0 as a function of <Math mode="inline" xml:id="S7.F12.m6" tex="(m_{T}-m_{\pi})" text="m _ T - m _ pi" fragid="S7.F12.m6"><XMath><XMDual><XMRef idref="S7.F12.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.F12.m6.1" fragid="S7.F12.m6.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> for the NA49 data <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite></caption>
+                          </figure>
+                          <para xml:id="S7.SS3.p3" fragid="S7.SS3.p3">
+                            <p>Indeed there is practically no region in this plot where the inverse slopes
+may be called constant. Between the cut limits 0.2 <Math mode="inline" xml:id="S7.SS3.p3.m1" tex="&lt;(m_{T}-m_{\pi})&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.SS3.p3.m1"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMDual><XMRef idref="S7.SS3.p3.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S7.SS3.p3.m1.1" fragid="S7.SS3.p3.m1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7
+of the NA61 analysis there is a systematic change of the inverse
+slopes by about 15 MeV, to be compared to the given systematic
+error of the NA61 fit of only 2.7 MeV. In this context also the comparison of
+the inverse slopes between central Pb+Pb and p+p interactions <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite> (Fig. 18)
+needs comment. The published Pb+Pb data <cite class="ltx_citemacro_cite">[<ref href="#bib.bib25" idref="bib.bib25">25</ref>]</cite> show a very strong dependence
+of the inverse slopes on <Math mode="inline" xml:id="S7.SS3.p3.m2" tex="m_{T}-m_{\pi}" text="m _ T - m _ pi" fragid="S7.SS3.p3.m2"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp></XMath></Math>, see Fig. <ref labelref="LABEL:fig:mt_slope_pb" href="#S7.F13" title="Figure 13 ‣ 7.3 Inverse slopes of the mT distributions (”temperature”) ‣ 7 Double differential cross sections ‣ 6.3 Gaussian fits ‣ 6 Rapidity distributions ⁢/⁢dndy ‣ 5 Total π- yields ‣ 4.2 Particle identification ‣ 4 The NA61 experiment ‣ 3.2 Particle identification ‣ 3 The reference experiments ‣ 2 The experimental situation ‣ 1 Introduction ‣ Comments concerning the paper ”Measurement of negatively charged&#10;pion spectra in inelastic p+p interactions at 20, 31, 40, 80 and 158 GeV/c”&#10;by the NA61 collaboration"><text class="ltx_ref_tag">13</text></ref>.</p>
+                          </para>
+                          <!-- %Fig.13 -->
+                          <figure frefnum="Figure 13" placement="h!" refnum="13" xml:id="S7.F13" labels="LABEL:fig:mt_slope_pb" fragid="S7.F13">
+                            <graphics candidates="mt_slope_pb.eps" graphic="mt_slope_pb.eps" options="width=227.622047pt" xml:id="S7.F13.g1" class="ltx_centering" fragid="S7.F13.g1" imagesrc="x74.png" imagewidth="355" imageheight="400"/>
+                            <toccaption class="ltx_centering"><tag close=" ">13</tag>Local inverse slopes of the <Math mode="inline" xml:id="S7.F13.m1" tex="m_{T}-m_{\pi}" text="m _ T - m _ pi" fragid="S7.F13.m1"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp></XMath></Math> distribution
+at <Math mode="inline" xml:id="S7.F13.m2" tex="y" text="y" fragid="S7.F13.m2"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0.1 for central Pb+Pb interactions <cite class="ltx_citemacro_cite">[<ref href="#bib.bib25" idref="bib.bib25">25</ref>]</cite> at
+<Math mode="inline" xml:id="S7.F13.m3" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.F13.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c. The full line is drawn to
+guide the eye, the horizontal line gives the claimed temperature
+in the limits 0.2 <Math mode="inline" xml:id="S7.F13.m4" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.F13.m4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7 GeV/c<Math mode="inline" xml:id="S7.F13.m5" tex="{}^{2}" text="^2" fragid="S7.F13.m5"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> with the shaded
+area corresponding to the systematic error</toccaption>
+                            <caption class="ltx_centering"><tag close=": ">Figure 13</tag>Local inverse slopes of the <Math mode="inline" xml:id="S7.F13.m6" tex="m_{T}-m_{\pi}" text="m _ T - m _ pi" fragid="S7.F13.m6"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp></XMath></Math> distribution
+at <Math mode="inline" xml:id="S7.F13.m7" tex="y" text="y" fragid="S7.F13.m7"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> = 0.1 for central Pb+Pb interactions <cite class="ltx_citemacro_cite">[<ref href="#bib.bib25" idref="bib.bib25">25</ref>]</cite> at
+<Math mode="inline" xml:id="S7.F13.m8" tex="p_{\textrm{beam}}" text="p _ [beam]" fragid="S7.F13.m8"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMText>beam</XMText></XMApp></XMath></Math> = 158 GeV/c. The full line is drawn to
+guide the eye, the horizontal line gives the claimed temperature
+in the limits 0.2 <Math mode="inline" xml:id="S7.F13.m9" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.F13.m9"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post5"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7 GeV/c<Math mode="inline" xml:id="S7.F13.m10" tex="{}^{2}" text="^2" fragid="S7.F13.m10"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="5"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> with the shaded
+area corresponding to the systematic error</caption>
+                          </figure>
+                          <para xml:id="S7.SS3.p4" fragid="S7.SS3.p4">
+                            <p>In view of a variation of the inverse slopes of about 100 MeV in the interval
+0.1 <Math mode="inline" xml:id="S7.SS3.p4.m1" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.SS3.p4.m1"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7 GeV/c<Math mode="inline" xml:id="S7.SS3.p4.m2" tex="{}^{2}" text="^2" fragid="S7.SS3.p4.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> the very concept of a well-defined and
+constant ”hadronic temperature” must be questioned.</p>
+                          </para>
+                          <para xml:id="S7.SS3.p5" fragid="S7.SS3.p5">
+                            <p>The value of 180 MeV quoted in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite> (Fig. 18) with a systematic error
+of only 10 MeV, will change to 163 MeV by changing the fit interval from
+0.2 <Math mode="inline" xml:id="S7.SS3.p5.m1" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.SS3.p5.m1"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.7 GeV/c<Math mode="inline" xml:id="S7.SS3.p5.m2" tex="{}^{2}" text="^2" fragid="S7.SS3.p5.m2"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> to 0.1 <Math mode="inline" xml:id="S7.SS3.p5.m3" tex="&lt;m_{T}-m_{\pi}&lt;" text="absent less m _ T - m _ pi less absent" fragid="S7.SS3.p5.m3"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="absent"/><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math> 0.6 GeV/c<Math mode="inline" xml:id="S7.SS3.p5.m4" tex="{}^{2}" text="^2" fragid="S7.SS3.p5.m4"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>
+while the same change in the p+p data will keep the <Math mode="inline" xml:id="S7.SS3.p5.m5" tex="T" text="T" fragid="S7.SS3.p5.m5"><XMath><XMTok role="UNKNOWN" font="italic">T</XMTok></XMath></Math> value stable to within
+1 MeV. In addition it should be recalled that the inverse slopes have to
+diverge upwards in the approach to <Math mode="inline" xml:id="S7.SS3.p5.m6" tex="m_{T}-m_{\pi}" text="m _ T - m _ pi" fragid="S7.SS3.p5.m6"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok></XMApp></XMApp></XMath></Math> = <Math mode="inline" xml:id="S7.SS3.p5.m7" tex="p_{T}" text="p _ T" fragid="S7.SS3.p5.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> = 0 as the
+invariant cross section crosses this value with slope zero.</p>
+                          </para>
+                          <!-- %****************************** Section 8 **************************** -->
+                          <section refnum="8" xml:id="S8" labels="LABEL:sec:corr" fragid="S8">
+                            <title><tag close=" ">8</tag>Corrections and normalization</title>
+                            <!-- %**** na61piminus.tex Line 775 **** -->
+                            <para xml:id="S8.p1" fragid="S8.p1">
+                              <p>Given the large discrepancies between the NA61 results and the
+set of reference experiments described above, it should be
+mandatory to localize apparative and experimental effects that
+might be responsible for the observed problems. This would
+concern in particular the size of the corrections to the
+raw data and the way the results are normalized. Unfortunately
+there are no quantitative informations available in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite>
+with respect to these important ingredients to the data analysis.
+The reader might use the repeated statement that the systematic
+errors are enumerated as 20-40% of the applied corrections to
+estimate that the corresponding corrections might reach values
+of up to or bigger than 50%. Concerning the absolute normalization
+the statement concerning a change of the target density with
+time in Sect. 3 of the paper <cite class="ltx_citemacro_cite">[<ref href="#bib.bib1" idref="bib.bib1">1</ref>]</cite> would indicate that the standard
+normalization via a model-independent direct measurement of
+the trigger cross section <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite> was impossible, see also the
+comments in <cite class="ltx_citemacro_cite">[<ref href="#bib.bib24" idref="bib.bib24">24</ref>]</cite>. Instead the normalization has to
+rely completely on the comparison to a microscopic model <cite class="ltx_citemacro_cite">[<ref href="#bib.bib11" idref="bib.bib11">11</ref>]</cite>.
+The event losses due to the interaction trigger of NA61 are
+almost completely located in the diffractive sector of the
+strong interaction, a sector that is notoriously ill described
+by the standard microscopic models as those do not contain the
+production and cascading decays of N<Math mode="inline" xml:id="S8.p1.m1" tex="{}^{*}" text="^*" fragid="S8.p1.m1"><XMath><XMApp role="FLOATSUPERSCRIPT" scriptpos="2"><XMTok meaning="times" role="MULOP">*</XMTok></XMApp></XMath></Math> resonances which dominate
+this region of phase space. Furthermore, the used production model will
+not only have to describe exactly the inclusive yields of forward
+<!-- %**** na61piminus.tex Line 800 **** -->particles hitting the trigger counter, but also the correlation of
+these particles with secondary <Math mode="inline" xml:id="S8.p1.m2" tex="\pi^{-}" text="pi ^ -" fragid="S8.p1.m2"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok name="pi" role="UNKNOWN" font="italic">π</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> in order to quantify the correction
+to be applied at lower rapidity. This correction is strongly dependent on
+<Math mode="inline" xml:id="S8.p1.m3" tex="p_{T}" text="p _ T" fragid="S8.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">T</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S8.p1.m4" tex="y" text="y" fragid="S8.p1.m4"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> <cite class="ltx_citemacro_cite">[<ref href="#bib.bib8" idref="bib.bib8">8</ref>]</cite>. In this context the statement that
+”the results presented in this paper are determined from particle
+yields per selected event” does not take into account that all reference
+yields discussed in the present comments are referred to the
+total inelastic cross section and not to an undetermined trigger
+cross section.</p>
+                            </para>
+                            <!-- %****************************** Section 9 **************************** -->
+                            <section refnum="9" xml:id="S9" labels="LABEL:sec:conclusion" fragid="S9">
+                              <title><tag close=" ">9</tag>Conclusion</title>
+                              <para xml:id="S9.p1" fragid="S9.p1">
+                                <p>New data on negative pion production from the NA61 collaboration
+in the range of beam momenta from 20 to 158 GeV/c have been compared
+to a wide range of reference data in the same energy region.
+Important deviations of the new data from the existing results
+have been revealed. These discrepancies increase in the
+successive steps from the total pion yields via the single
+differential rapidity distributions to the double differential
+invariant cross sections.
+<!-- %**** na61piminus.tex Line 825 **** --></p>
+                              </para>
+                              <bibliography xml:id="bib" fragid="bib">
+                                <title>References</title>
+                                <biblist>
+                                  <bibitem key="na61" xml:id="bib.bib1" fragid="bib.bib1">
+                                    <bibtag role="refnum">1</bibtag>
+                                    <bibblock> N. Abgrall et al., CERN-PH-EP-2013-182, submitted to Eur. Phys. J. <text font="bold">C</text>
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="blobel" xml:id="bib.bib2" fragid="bib.bib2">
+                                    <bibtag role="refnum">2</bibtag>
+                                    <bibblock> V. Blobel et al., Nucl. Phys. <text font="bold">B69</text> (1974) 454
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="boggild" xml:id="bib.bib3" fragid="bib.bib3">
+                                    <bibtag role="refnum">3</bibtag>
+                                    <bibblock> H. Boggild et al. Nucl. Phys. <text font="bold">B57</text> (1973) 77
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="sims" xml:id="bib.bib4" fragid="bib.bib4">
+                                    <bibtag role="refnum">4</bibtag>
+                                    <bibblock> W. H. Sims et al. Nucl. Phys. <text font="bold">B41</text> (1972) 317
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="zabrodin" xml:id="bib.bib5" fragid="bib.bib5">
+                                    <bibtag role="refnum">5</bibtag>
+                                    <bibblock> E. E. Zabrodin et al., Phys. Rev. <text font="bold">D52</text> (1995) 1316
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="ammosov" xml:id="bib.bib6" fragid="bib.bib6">
+                                    <bibtag role="refnum">6</bibtag>
+                                    <bibblock> V. V. Ammosov et al., N. Cim. <text font="bold">40A</text> (1977) 237
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="morse" xml:id="bib.bib7" fragid="bib.bib7">
+                                    <bibtag role="refnum">7</bibtag>
+                                    <bibblock> W. M. Morse et al., Phys. Rev. <text font="bold">D15</text> (1977) 66
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="pp_pion" xml:id="bib.bib8" fragid="bib.bib8">
+                                    <bibtag role="refnum">8</bibtag>
+                                    <bibblock> C. Alt et al., Eur. Phys. J. <text font="bold">C45</text> (2006) 343
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="pp_kaon" xml:id="bib.bib9" fragid="bib.bib9">
+                                    <bibtag role="refnum">9</bibtag>
+                                    <bibblock> T. Anticic et al., Eur. Phys. J. <text font="bold">C68</text> (2010) 1
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="pp_proton" xml:id="bib.bib10" fragid="bib.bib10">
+                                    <bibtag role="refnum">10</bibtag>
+                                    <bibblock> T. Anticic et al., Eur. Phys. J. <text font="bold">C65</text> (2010) 9
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="epos" xml:id="bib.bib11" fragid="bib.bib11">
+                                    <bibtag role="refnum">11</bibtag>
+                                    <bibblock> K. Werner, Nucl. Phys. <text font="bold">B175</text> (2008) 81
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="eisner" xml:id="bib.bib12" fragid="bib.bib12">
+                                    <bibtag role="refnum">12</bibtag>
+                                    <bibblock> A. M. Eisner et al., Phys. Rev. <text font="bold">138</text> (1965) 670
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="pickup" xml:id="bib.bib13" fragid="bib.bib13">
+                                    <bibtag role="refnum">13</bibtag>
+                                    <bibblock> E. Pickup et al., Phys. Rev. <text font="bold">125</text> (1962) 2091
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="xx" xml:id="bib.bib14" fragid="bib.bib14">
+                                    <bibtag role="refnum">14</bibtag>
+                                    <bibblock> G. A. Smith et al., Phys. Rev. <text font="bold">123</text> (1961) 2160
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="alexander" xml:id="bib.bib15" fragid="bib.bib15">
+                                    <bibtag role="refnum">15</bibtag>
+                                    <bibblock> G. Alexander et al., Phys. Rev. <text font="bold">154</text> (1967) 1284
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="gellert" xml:id="bib.bib16" fragid="bib.bib16">
+                                    <bibtag role="refnum">16</bibtag>
+                                    <bibblock> E. R. Gellert, LBL-749 (1972)
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="bromberg" xml:id="bib.bib17" fragid="bib.bib17">
+                                    <bibtag role="refnum">17</bibtag>
+                                    <bibblock> C. Bromberg et al., Phys.Rev. <text font="bold">D15</text> (1977) 64
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="erwin" xml:id="bib.bib18" fragid="bib.bib18">
+                                    <bibtag role="refnum">18</bibtag>
+                                    <bibblock> J. Erwin et al., Phys. Rev. Lett. <text font="bold">32</text> (1974) 254
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="bromberg1" xml:id="bib.bib19" fragid="bib.bib19">
+                                    <bibtag role="refnum">19</bibtag>
+                                    <bibblock> C. Bromberg et al., Phys. Rev. Lett. <text font="bold">31</text> (1973) 1563
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="barish" xml:id="bib.bib20" fragid="bib.bib20">
+                                    <bibtag role="refnum">20</bibtag>
+                                    <bibblock> S. Barish et al., Phys. Rev. <text font="bold">D9</text> (1074) 2689
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="firestone" xml:id="bib.bib21" fragid="bib.bib21">
+                                    <bibtag role="refnum">21</bibtag>
+                                    <bibblock> A. Firestone et al., Phys.Rev. <text font="bold">D10</text> (1974) 2080
+<!-- %**** na61piminus.tex Line 850 **** --></bibblock>
+                                  </bibitem>
+                                  <bibitem key="kass" xml:id="bib.bib22" fragid="bib.bib22">
+                                    <bibtag role="refnum">22</bibtag>
+                                    <bibblock> R. D. Kass et al. Phys.Rev. <text font="bold">D20</text> (1979) 605
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="ehs" xml:id="bib.bib23" fragid="bib.bib23">
+                                    <bibtag role="refnum">23</bibtag>
+                                    <bibblock> M. Aguilar-Benitez et al., Z. Phys. <text font="bold">C50</text> (1991) 405
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="na61_prog" xml:id="bib.bib24" fragid="bib.bib24">
+                                    <bibtag role="refnum">24</bibtag>
+                                    <bibblock> NA61 progress report 2012, CERN-SPSC-2012-029
+</bibblock>
+                                  </bibitem>
+                                  <bibitem key="pbpb" xml:id="bib.bib25" fragid="bib.bib25">
+                                    <bibtag role="refnum">25</bibtag>
+                                    <bibblock> S. Afanasiev et al., Phys. Rev. <text font="bold">C66</text> (2002) 054902
+</bibblock>
+                                  </bibitem>
+                                </biblist>
+                              </bibliography>
+                            </section>
+                          </section>
+                        </subsection>
+                      </section>
+                    </subsection>
+                  </section>
+                </section>
+              </subsection>
+            </section>
+          </subsection>
+        </section>
+      </section>
+    </section>
+  </titlepage>
+</document>

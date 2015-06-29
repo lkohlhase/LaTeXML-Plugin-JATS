@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<!-- %“documentclass[11pt,preprint]–aastex˝ -->
+<!-- %“usepackage–amssymb˝ -->
+<!-- %“documentclass[preprint2]–aastex˝ -->
+<?latexml class="emulateapj"?>
+<?latexml package="txfonts"?>
+<?latexml package="rotating" options="figuresright"?>
+<!-- %Halpha -->
+<!-- %Hbeta -->
+<!-- %Hgamma -->
+<!-- %Hdelta -->
+<!-- %Hepsilon -->
+<!-- %H2 -->
+<!-- %HI -->
+<!-- %HII -->
+<!-- %HeI -->
+<!-- %HII -->
+<!-- %NaI -->
+<!-- %Lyalpha -->
+<!-- %Lybeta -->
+<!-- %**** wang.tex Line 25 **** -->
+<!-- %SII -->
+<!-- %OVI -->
+<!-- %OIII -->
+<!-- %OII -->
+<!-- %OI -->
+<!-- %CIII -->
+<!-- %CII -->
+<!-- %CI -->
+<!-- %SiII -->
+<!-- %SiIII -->
+<!-- %SiIV -->
+<!-- %PII -->
+<!-- %FeIII -->
+<!-- %FeII -->
+<!-- %NV -->
+<!-- %NIV -->
+<!-- %NII -->
+<!-- %NIII -->
+<!-- %CIV -->
+<!-- %CaI -->
+<!-- %CaII -->
+<!-- %MgII -->
+<!-- %**** wang.tex Line 50 **** -->
+<!-- %**** wang.tex Line 75 **** -->
+<!-- %standard GALEX macros -->
+<!-- %**** wang.tex Line 100 **** -->
+<!-- %“def“DeltaRA–—“Delta–“rm RA—˝˝ -->
+<!-- %“def“DeltaDec–—“Delta–“rm DEC—˝˝ -->
+<!-- %“received–˝ “accepted–˝ -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <resource src="ltx-apj.css" type="text/css"/>
+  <title> BATC 15 BAND PHOTOMETRY OF THE OPEN CLUSTER NGC 188</title>
+  <toctitle>BATC Photometry of NGC 188</toctitle>
+  <creator role="author">
+    <personname>Jiaxin Wang<note mark="1" role="affiliation">Key Laboratory of Optical Astronomy, National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100012, China; majun@nao.cas.cn</note> <note mark="2" role="affiliation">University of Chinese Academy of Sciences, Beijing 10039, China</note> , Jun Ma<note mark="1" role="affiliation">Key Laboratory of Optical Astronomy, National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100012, China; majun@nao.cas.cn</note> , Zhenyu Wu<note mark="1" role="affiliation">Key Laboratory of Optical Astronomy, National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100012, China; majun@nao.cas.cn</note> , Song Wang<note mark="1" role="affiliation">Key Laboratory of Optical Astronomy, National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100012, China; majun@nao.cas.cn</note> , Xu Zhou<note mark="1" role="affiliation">Key Laboratory of Optical Astronomy, National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100012, China; majun@nao.cas.cn</note> </personname>
+  </creator>
+  <abstract name="Abstract">
+    <p>This paper presents CCD multicolour photometry for the old open cluster NGC 188. The observations were carried out as a part of the Beijing–Arizona–Taiwan–Connecticut Multicolour Sky Survey from 1995 February to 2008 March, using 15 intermediate-band filters covering 3000–10000 Å. By fitting the Padova theoretical isochrones to our data, the fundamental parameters of this cluster are derived: an age of <Math mode="inline" xml:id="m1" tex="t=7.5\pm 0.5" text="t = 7.5 plus-or-minus 0.5" fragid="m1"/> Gyr, a distant modulus of <Math mode="inline" xml:id="m2" tex="(m-M)_{0}=11.17\pm 0.08" text="(m - M) _ 0 = 11.17 plus-or-minus 0.08" fragid="m2"/>, and a reddening of <Math mode="inline" xml:id="m3" tex="E(B-V)=0.036\pm 0.010" text="E * (B - V) = 0.036 plus-or-minus 0.010" fragid="m3"/>. The radial surface density profile of NGC 188 is obtained by star count. By fitting the King model, the structural parameters of NGC 188 are derived: a core radius of <Math mode="inline" xml:id="m4" tex="R_{c}=3.80^{\prime}" text="R _ c = 3.80 ^ prime" fragid="m4"/>, a tidal radius of <Math mode="inline" xml:id="m5" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="m5"/>, and a concentration parameter of <Math mode="inline" xml:id="m6" tex="C_{0}=\log(R_{t}/R_{c})=1.07" text="C _ 0 = logarithm@(R _ t / R _ c) = 1.07" fragid="m6"/>. Fitting the mass function to a power-law function <Math mode="inline" xml:id="m7" tex="\phi(m)\propto m^{\alpha}" text="phi * m proportional-to m ^ alpha" fragid="m7"/>, the slopes of mass functions for different spatial regions are derived. We find that NGC 188 presents a slope break in the mass function. The break mass is <Math mode="inline" xml:id="m8" tex="m_{\rm break}=0.885~{}M_{\odot}" text="m _ break = 0.885 * M _ direct-product" fragid="m8"/>. In the mass range above <Math mode="inline" xml:id="m9" tex="m_{\rm break}" text="m _ break" fragid="m9"/>, the slope of the overall region is <Math mode="inline" xml:id="m10" tex="\alpha=-0.76" text="alpha = - 0.76" fragid="m10"/>. The slope of the core region is <Math mode="inline" xml:id="m11" tex="\alpha=1.09" text="alpha = 1.09" fragid="m11"/>, and the slopes of the external regions are <Math mode="inline" xml:id="m12" tex="\alpha=-0.86" text="alpha = - 0.86" fragid="m12"/> and <Math mode="inline" xml:id="m13" tex="\alpha=-2.15" text="alpha = - 2.15" fragid="m13"/>, respectively. In the mass range below <Math mode="inline" xml:id="m14" tex="m_{\rm break}" text="m _ break" fragid="m14"/>, these slopes are <Math mode="inline" xml:id="m15" tex="\alpha=0.12" text="alpha = 0.12" fragid="m15"/>, <Math mode="inline" xml:id="m16" tex="\alpha=4.91" text="alpha = 4.91" fragid="m16"/>, <Math mode="inline" xml:id="m17" tex="\alpha=1.33" text="alpha = 1.33" fragid="m17"/>, and <Math mode="inline" xml:id="m18" tex="\alpha=-1.09" text="alpha = - 1.09" fragid="m18"/>, respectively. The mass segregation in NGC 188 is reflected in the obvious variation of the slopes in different spatial regions of this cluster.</p>
+  </abstract>
+  <keywords name="Subject headings">open cluster and association: individual (NGC 188) – stars: fundamental parameters – stars: luminosity function, mass function</keywords>
+  <note role="slugcomment">AJ, in press</note>
+  <!-- %**** wang.tex Line 125 **** -->
+  <section refnum="1" xml:id="S1" fragid="S1">
+    <title><tag close=". ">1</tag>Introduction</title>
+    <toctitle><tag close=" ">1</tag>Introduction</toctitle>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>Open clusters are important tools to investigate the Galaxy evolution and stellar evolution. Due to their accurate parameters (e.g. age, metallicity, and distance), open clusters can probe the Galactic disk and trace the Galaxy evolution. For example, <cite class="ltx_citemacro_citet">Chen et al. (<ref href="#bib.bib11" idref="bib.bib11">11</ref>)</cite> compiled the most complete open cluster sample with metallicity, age, and distance data, as well as kinematic information, available, and presented some statistical analysis on spatial and metallicity distributions. Their result supports the inside-out Galactic disk formation mechanism, in which the invoked star formation rate and infall timescale vary with radius. <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib6" idref="bib.bib6">6</ref>)</cite> used a sample consisting of 654 open clusters to determine the thin-disk scale height, displacement of the Sun above the Galactic plane, scale length and the open cluster age-distribution function. The dynamical state of open clusters is complexly determined by the primordial gas expulsion, stellar evolution, dynamics, and the effect of Galactic tidal field <cite class="ltx_citemacro_citep">(<ref href="#bib.bib23" idref="bib.bib23">23</ref>; <ref href="#bib.bib36" idref="bib.bib36">36</ref>; <ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite>: (1) the primordial expulsion of gas unbinds most of cluster, but a significant fraction of it can condense by two-body interactions to became an open cluster; (2) stellar evolution at the early phase causes large mass loss that will result in the disruption of open clusters; (3) internal dynamical evolution will result in mass segregation and evaporation of low mass star, and (4) the Galactic tidal force will strip the stars from the open cluster. Therefore, the detailed study of the dynamical state of open clusters can examine the stellar evolution theory and Galactic dynamics as well as map the Galactic tidal field. The accurate and precise fundamental parameters, structural parameters and mass function are the cornerstone for these investigations.</p>
+    </para>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>The photometric system of the Beijing–Arizona–Taiwan–Connecticut (BATC) Multicolour Survey consists 15 intermediate-band filters which cover the wavelength range <Math mode="inline" xml:id="S1.p2.m1" tex="3000-10000~{}\rm{\AA}" text="3000 - 10000 * Å" fragid="S1.p2.m1"/>. This system is designed to avoid most of the known bright and variable night-sky emission lines, and it is suitable to derive spectral energy distributions (SEDs) of objects. Before February 2006, a Ford Aerospace <Math mode="inline" xml:id="S1.p2.m2" tex="2{\rm k}\times 2{\rm k}" text="2 * k * 2 * k" fragid="S1.p2.m2"/> thick CCD camera was applied, which has a pixel size of 15 <Math mode="inline" xml:id="S1.p2.m3" tex="\mu\rm{m}" text="mu * m" fragid="S1.p2.m3"/> and a field of view of <Math mode="inline" xml:id="S1.p2.m4" tex="58^{\prime}\times 58^{\prime}" text="58 ^ prime * 58 ^ prime" fragid="S1.p2.m4"/>, resulting in a resolution of <Math mode="inline" xml:id="S1.p2.m5" tex="1^{\prime\prime}.67~{}\rm{pixel}^{-1}" text="1 ^ prime2 * .67 * pixel ^ (- 1)" fragid="S1.p2.m5"/>. After February 2006, a new <Math mode="inline" xml:id="S1.p2.m6" tex="4{\rm k}\times 4{\rm k}" text="4 * k * 4 * k" fragid="S1.p2.m6"/> CCD with a pixel size of 12 <Math mode="inline" xml:id="S1.p2.m7" tex="\mu" text="mu" fragid="S1.p2.m7"/>m was used with a resolution of <Math mode="inline" xml:id="S1.p2.m8" tex="1^{\prime\prime}.36" text="1 ^ prime2 * .36" fragid="S1.p2.m8"/> pixel<Math mode="inline" xml:id="S1.p2.m9" tex="{}^{-1}" text="^- 1" fragid="S1.p2.m9"/> <cite class="ltx_citemacro_citep">(<ref href="#bib.bib13" idref="bib.bib13">13</ref>)</cite>. Due to the large field of view and deep photometry of the BATC photometric system, it is suitable for investigating open clusters in the Milky Way. The BATC photometric system has been used to study the membership determination, fundamental parameters, structural parameters and mass function of open clusters such as M67, M48, and NGC 7789 <cite class="ltx_citemacro_citep">(<ref href="#bib.bib12" idref="bib.bib12">12</ref>; <ref href="#bib.bib34" idref="bib.bib34">34</ref>; <ref href="#bib.bib35" idref="bib.bib35">35</ref>; <ref href="#bib.bib36" idref="bib.bib36">36</ref>)</cite>. In this paper we will study an old open cluster NGC 188 based on the BATC photometric data. We will derive the fundamental parameters and structural parameters, and discuss the mass function and dynamical state for this open cluster.</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>The old open cluster NGC 188 has once been regarded as the oldest open cluster in the Milky Way. Old open clusters are important to understand the early history of the Milky Way. Owing to its special location <Math mode="inline" xml:id="S1.p3.m1" tex="l=122.85^{\circ}" text="l = 122.85 ^ compose" fragid="S1.p3.m1"/> and <Math mode="inline" xml:id="S1.p3.m2" tex="b=+22.39^{\circ}" text="b = + 22.39 ^ compose" fragid="S1.p3.m2"/>, NGC 188 is less contaminated and easy to be observed. Therefore, since from <cite class="ltx_citemacro_citet">Sandage (<ref href="#bib.bib29" idref="bib.bib29">29</ref>)</cite> many works about NGC 188 have been done. Works about the fundamental parameters of this cluster are listed in Table 1 of <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite> and Table 1 of this paper. From these tables we can see that many methods are used to derive the fundamental parameters, and the results are somewhat different. The age of NGC 188 is from 4.3 Gyr to 16 Gyr, the metallicity is from <Math mode="inline" xml:id="S1.p3.m3" tex="\rm{[Fe/H]}=-0.6" text="delimited-[]@(Fe / H) = - 0.6" fragid="S1.p3.m3"/> to <Math mode="inline" xml:id="S1.p3.m4" tex="\rm{[Fe/H]}=0.69" text="delimited-[]@(Fe / H) = 0.69" fragid="S1.p3.m4"/>, the reddening value is from <Math mode="inline" xml:id="S1.p3.m5" tex="E(B-V)=0" text="E * (B - V) = 0" fragid="S1.p3.m5"/> to <Math mode="inline" xml:id="S1.p3.m6" tex="E(B-V)=0.15" text="E * (B - V) = 0.15" fragid="S1.p3.m6"/>, and the distance is from 1275 pc to 2047 pc. We consider that, one hand, these scatters result from the reddening-metallicity degeneracy. On the other hand, it reflects that different stellar evolutionary models and different photometric data will derive different results. In addition, quite some works adopted solar metallicity to NGC 188 and derived the other parameters based on this metallicity. Based on the BATC photometric data, we will try to find a method to avoid the reddening-metallicity degeneracy. The color-color diagram based on the photometric data in the four BATC bands performs well to this purpose for NGC 188. <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite> has derived the structural parameters and mass function (MF), and studied the dynamical evolution of NGC 188 in detail. In addition, till now only <cite class="ltx_citemacro_citet">Bonatto &amp; Bica (<ref href="#bib.bib4" idref="bib.bib4">4</ref>)</cite> and <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite> studied the MF break of NGC 188, however, because of not deep photometry, <cite class="ltx_citemacro_citet">Bonatto &amp; Bica (<ref href="#bib.bib4" idref="bib.bib4">4</ref>)</cite> and <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite> did not observe the MF break of NGC 188. So, in this paper, we will study the dynamical evolution of NGC 188 based on our deeper photometry.</p>
+    </para>
+    <para xml:id="S1.p4" fragid="S1.p4">
+      <p>We describe our new observational data and photometric reduction of NGC 188 in Section 2. In Section 3 we derive the fundamental parameters of NGC 188. The structure of NGC 188 is discussed in Section 4. The MF and the mass segregation are discussed in Section 5. A summary is presented in Section 6.</p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=". ">2</tag>Observation and photometric data </title>
+    <toctitle><tag close=" ">2</tag>Observation and photometric data </toctitle>
+    <figure frefnum="Figure 1" placement="htb" refnum="1" xml:id="S2.F1" labels="LABEL:fig1" fragid="S2.F1">
+      <graphics candidates="fig1.ps" graphic="fig1.ps" options="width=216.81pt" xml:id="S2.F1.g1" class="ltx_centering" fragid="S2.F1.g1" imagesrc="x53.png" imagewidth="339" imageheight="340"/>
+      <toccaption class="ltx_centering"><tag close=" ">1</tag>An image in the field of NGC 188 observed by the BATC <Math mode="inline" xml:id="S2.F1.m1" tex="i" text="i" fragid="S2.F1.m1"/> band. The image size is <Math mode="inline" xml:id="S2.F1.m2" tex="58^{\prime}\times 58^{\prime}" text="58 ^ prime * 58 ^ prime" fragid="S2.F1.m2"/>.</toccaption>
+      <caption class="ltx_centering"><tag close=".— ">Figure 1</tag>An image in the field of NGC 188 observed by the BATC <Math mode="inline" xml:id="S2.F1.m3" tex="i" text="i" fragid="S2.F1.m3"/> band. The image size is <Math mode="inline" xml:id="S2.F1.m4" tex="58^{\prime}\times 58^{\prime}" text="58 ^ prime * 58 ^ prime" fragid="S2.F1.m4"/>.</caption>
+    </figure>
+    <figure frefnum="Figure 2" refnum="2" xml:id="S2.F2" labels="LABEL:fig2" fragid="S2.F2">
+      <p class="ltx_align_center">
+        <graphics candidates="fig2.ps" graphic="fig2.ps" options="width=216.81pt" xml:id="S2.F2.g1" fragid="S2.F2.g1" imagesrc="x54.png" imagewidth="338" imageheight="423"/>
+      </p>
+      <toccaption><tag close=" ">2</tag>Observed <Math mode="inline" xml:id="S2.F2.m1" tex="(c-p)" text="c - p" fragid="S2.F2.m1"/> vs. <Math mode="inline" xml:id="S2.F2.m2" tex="c" text="c" fragid="S2.F2.m2"/>, <Math mode="inline" xml:id="S2.F2.m3" tex="(d-g)" text="d - g" fragid="S2.F2.m3"/> vs. <Math mode="inline" xml:id="S2.F2.m4" tex="d" text="d" fragid="S2.F2.m4"/>, <Math mode="inline" xml:id="S2.F2.m5" tex="(f-i)" text="f - i" fragid="S2.F2.m5"/> vs. <Math mode="inline" xml:id="S2.F2.m6" tex="f" text="f" fragid="S2.F2.m6"/>, and <Math mode="inline" xml:id="S2.F2.m7" tex="(c-m)" text="c - m" fragid="S2.F2.m7"/> vs. <Math mode="inline" xml:id="S2.F2.m8" tex="m" text="m" fragid="S2.F2.m8"/> CMDs of NGC 188. Dots represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m9" tex="0\%\leq P&lt;60\%" text="0percent less= P less 60percent" fragid="S2.F2.m9"/>, crosses represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m10" tex="60\%\leq P&lt;90\%" text="60percent less= P less 90percent" fragid="S2.F2.m10"/>, and diamonds represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m11" tex="90\%\leq P\leq 100\%" text="90percent less= P less= 100percent" fragid="S2.F2.m11"/>.</toccaption>
+      <caption><tag close=".— ">Figure 2</tag>Observed <Math mode="inline" xml:id="S2.F2.m12" tex="(c-p)" text="c - p" fragid="S2.F2.m12"/> vs. <Math mode="inline" xml:id="S2.F2.m13" tex="c" text="c" fragid="S2.F2.m13"/>, <Math mode="inline" xml:id="S2.F2.m14" tex="(d-g)" text="d - g" fragid="S2.F2.m14"/> vs. <Math mode="inline" xml:id="S2.F2.m15" tex="d" text="d" fragid="S2.F2.m15"/>, <Math mode="inline" xml:id="S2.F2.m16" tex="(f-i)" text="f - i" fragid="S2.F2.m16"/> vs. <Math mode="inline" xml:id="S2.F2.m17" tex="f" text="f" fragid="S2.F2.m17"/>, and <Math mode="inline" xml:id="S2.F2.m18" tex="(c-m)" text="c - m" fragid="S2.F2.m18"/> vs. <Math mode="inline" xml:id="S2.F2.m19" tex="m" text="m" fragid="S2.F2.m19"/> CMDs of NGC 188. Dots represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m20" tex="0\%\leq P&lt;60\%" text="0percent less= P less 60percent" fragid="S2.F2.m20"/>, crosses represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m21" tex="60\%\leq P&lt;90\%" text="60percent less= P less 90percent" fragid="S2.F2.m21"/>, and diamonds represent the stars with the membership probability of <Math mode="inline" xml:id="S2.F2.m22" tex="90\%\leq P\leq 100\%" text="90percent less= P less= 100percent" fragid="S2.F2.m22"/>.</caption>
+      <!-- %**** wang.tex Line 150 **** -->
+    </figure>
+    <para xml:id="S2.p1" fragid="S2.p1">
+      <p>Our observations are based on the BATC photometric system. The BATC photometric system utilizes the 60/90 cm f/3 Schmidt telescope which is at the Xinglong Station of the National Astronomical Observatories, China Academy of Sciences (NAOC). Figure 1 shows the image of NGC 188 in the BATC <Math mode="inline" xml:id="S2.p1.m1" tex="i" text="i" fragid="S2.p1.m1"/> band. The details of the BATC system are described in <cite class="ltx_citemacro_citet">Yan et al. (<ref href="#bib.bib37" idref="bib.bib37">37</ref>)</cite> and <cite class="ltx_citemacro_citet">Zhou et al. (<ref href="#bib.bib38" idref="bib.bib38">38</ref>)</cite>. In Table 2, we list the corresponding effective wavelength and full width at half maximum (FWHM) of each filter, and exposure time and the number of frames observed in each filter for our observation.</p>
+    </para>
+    <para xml:id="S2.p2" fragid="S2.p2">
+      <p>Data reductions are carried out by two procedures called PIPELINE I and PIPELINE II. These procedures are developed as standard for the BATC photometric system. Bias subtraction and field flatting are carried out by PIPELINE I. Instrumental magnitudes of point sources are determined by PIPELINE II. After that, the instrumental magnitudes are calibrated to the BATC standard system <cite class="ltx_citemacro_citep">(<ref href="#bib.bib39" idref="bib.bib39">39</ref>)</cite>. For each filter, the average calibration error is below 0.02 mag. For every image, the mean of the FWHM of the point spread function (PSF) is <Math mode="inline" xml:id="S2.p2.m1" tex="4.39^{\prime\prime}" text="4.39 ^ prime2" fragid="S2.p2.m1"/>, which critically samples (<Math mode="inline" xml:id="S2.p2.m2" tex="\approx 2.5" text="absent approximately-equals 2.5" fragid="S2.p2.m2"/> pixels) the PSF. So, the effect of undersampling on our photometric accuracy is not critical. For each star observed more than once in a BATC band, the final photometric result in that band is the weighted mean.</p>
+    </para>
+  </section>
+  <section refnum="3" xml:id="S3" fragid="S3">
+    <title><tag close=". ">3</tag>Fundamental parameters for NGC 188</title>
+    <toctitle><tag close=" ">3</tag>Fundamental parameters for NGC 188</toctitle>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>We adopt the proper-motion membership probabilities in Table 3 of <cite class="ltx_citemacro_citet">Platais et al. (<ref href="#bib.bib28" idref="bib.bib28">28</ref>)</cite> for NGC 188. Matching this table and our star catalog, we pick up the common stars, which are plotted in Figure 2. In this paper, stars whose proper-motions membership probabilities greater than <Math mode="inline" xml:id="S3.p1.m1" tex="60\%" text="60percent" fragid="S3.p1.m1"/> are used to derive the fundamental parameters. We used the photometric data in the seven BATC bands to construct four color-magnitude diagrams (CMDs). These combinations are <Math mode="inline" xml:id="S3.p1.m2" tex="(c-p)" text="c - p" fragid="S3.p1.m2"/> vs. <Math mode="inline" xml:id="S3.p1.m3" tex="c" text="c" fragid="S3.p1.m3"/>, <Math mode="inline" xml:id="S3.p1.m4" tex="(d-g)" text="d - g" fragid="S3.p1.m4"/> vs. <Math mode="inline" xml:id="S3.p1.m5" tex="d" text="d" fragid="S3.p1.m5"/>, <Math mode="inline" xml:id="S3.p1.m6" tex="(f-i)" text="f - i" fragid="S3.p1.m6"/> vs. <Math mode="inline" xml:id="S3.p1.m7" tex="f" text="f" fragid="S3.p1.m7"/>, and <Math mode="inline" xml:id="S3.p1.m8" tex="(c-m)" text="c - m" fragid="S3.p1.m8"/> vs. <Math mode="inline" xml:id="S3.p1.m9" tex="m" text="m" fragid="S3.p1.m9"/>. We fit the theoretical BATC isochrones (see Section 3.2) to our observational data of NGC 188 to derive the fundamental parameters.</p>
+    </para>
+    <subsection refnum="3.1" xml:id="S3.SS1" fragid="S3.SS1">
+      <title><tag close=". ">3.1</tag>Isochrones of stellar evolutionary models</title>
+      <toctitle><tag close=" ">3.1</tag>Isochrones of stellar evolutionary models</toctitle>
+      <para xml:id="S3.SS1.p1" fragid="S3.SS1.p1">
+        <p>Stellar evolutionary models from the Padova group <cite class="ltx_citemacro_citep">(<ref href="#bib.bib3" idref="bib.bib3">3</ref>; <ref href="#bib.bib16" idref="bib.bib16">16</ref>; <ref href="#bib.bib17" idref="bib.bib17">17</ref>, and references therein)</cite> are widely used. In the Padova stellar evolutionary models, <cite class="ltx_citemacro_citet">Girardi et al. (<ref href="#bib.bib17" idref="bib.bib17">17</ref>)</cite> provided tables of theoretical isochrones in such photometric systems as ABmag, STmag, VEGAmag, and a standard star system. The complete data-base <cite class="ltx_citemacro_citep">(<ref href="#bib.bib17" idref="bib.bib17">17</ref>)</cite> covers a very large range of stellar masses (typically from 0.6 to <Math mode="inline" xml:id="S3.SS1.p1.m1" tex="120~{}M_{\odot}" text="120 * M _ direct-product" fragid="S3.SS1.p1.m1"/>). These models <cite class="ltx_citemacro_citep">(<ref href="#bib.bib17" idref="bib.bib17">17</ref>; <ref href="#bib.bib18" idref="bib.bib18">18</ref>)</cite> are computed with updated opacities and equations of state, and moderate amount of convective overshoot. However, the isochrones are presented for only 6 initial chemical compositions: <Math mode="inline" xml:id="S3.SS1.p1.m2" tex="{\rm[Fe/H]}=-2.2490" text="delimited-[]@(Fe / H) = - 2.2490" fragid="S3.SS1.p1.m2"/>, <Math mode="inline" xml:id="S3.SS1.p1.m3" tex="-1.6464" text="- 1.6464" fragid="S3.SS1.p1.m3"/>, <Math mode="inline" xml:id="S3.SS1.p1.m4" tex="-0.6392" text="- 0.6392" fragid="S3.SS1.p1.m4"/>, <Math mode="inline" xml:id="S3.SS1.p1.m5" tex="-0.3300" text="- 0.3300" fragid="S3.SS1.p1.m5"/>, <Math mode="inline" xml:id="S3.SS1.p1.m6" tex="+0.0932" text="+ 0.0932" fragid="S3.SS1.p1.m6"/> (solar metallicity), and <Math mode="inline" xml:id="S3.SS1.p1.m7" tex="+0.5595" text="+ 0.5595" fragid="S3.SS1.p1.m7"/>, which are evidently not dense enough. It is fortunate that <cite class="ltx_citemacro_citet">Marigo et al. (<ref href="#bib.bib26" idref="bib.bib26">26</ref>)</cite> provide tables for any intermediate value of age and metallicity via an interactive web interface <note mark="1" role="footnote">http://stev.oapd.inaf.it/cmd</note>.</p>
+      </para>
+    </subsection>
+    <subsection refnum="3.2" xml:id="S3.SS2" fragid="S3.SS2">
+      <title><tag close=". ">3.2</tag>Isochrone fitting</title>
+      <toctitle><tag close=" ">3.2</tag>Isochrone fitting</toctitle>
+      <para xml:id="S3.SS2.p1" fragid="S3.SS2.p1">
+        <p>To determine the main characteristics of the population in NGC 188, we fit isochrones to the cluster CMD. We used the Padova theoretical isochrones in the BATC system <cite class="ltx_citemacro_citep">(<ref href="#bib.bib26" idref="bib.bib26">26</ref>)</cite>. Via an interactive web interface (see Section 3.1), we can construct a grid of isochrones for different values of age and metallicity, photometric system, and dust properties. We use the default models that involve scaled solar abundance ratios (i.e., <Math mode="inline" xml:id="S3.SS2.p1.m1" tex="[\rm{\alpha/Fe]}=0.0" text="delimited-[]@(alpha / Fe) = 0.0" fragid="S3.SS2.p1.m1"/>). In performing, the Chabrier lognormal initial mass function (IMF) <cite class="ltx_citemacro_citep">(<ref href="#bib.bib8" idref="bib.bib8">8</ref>)</cite> is adopted.</p>
+      </para>
+      <subsubsection refnum="3.2.1" xml:id="S3.SS2.SSS1" fragid="S3.SS2.SSS1">
+        <title><tag close=" ">3.2.1</tag>Reddening</title>
+        <para xml:id="S3.SS2.SSS1.p1" fragid="S3.SS2.SSS1.p1">
+          <p>To determine the reddening value of an open cluster, a method based on the color-color diagram fitting is usually used. However, in this method, the degeneracy between reddening and metallicity requires that the metallicity is previously known. For instance, adopting the metallicity of <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m1" tex="{\rm[Fe/H]=-0.04\pm 0.05}" text="delimited-[]@(Fe / H) = (- 0.04) plus-or-minus 0.05" fragid="S3.SS2.SSS1.p1.m1"/> for NGC 188, <cite class="ltx_citemacro_citet">Sarajedini et al. (<ref href="#bib.bib30" idref="bib.bib30">30</ref>)</cite> obtained NGC 188’s reddening to be <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m2" tex="E(B-V)=0.09\pm 0.02" text="E * (B - V) = 0.09 plus-or-minus 0.02" fragid="S3.SS2.SSS1.p1.m2"/> based on the <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m3" tex="UBV" text="U * B * V" fragid="S3.SS2.SSS1.p1.m3"/> color-color diagram and the Hyades fiducial sequence. Assuming a solar metallicity for NGC 188, <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite> obtained NGC 188’s reddening to be <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m4" tex="E(B-V)=0.025\pm 0.005" text="E * (B - V) = 0.025 plus-or-minus 0.005" fragid="S3.SS2.SSS1.p1.m4"/> based on the <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m5" tex="(g^{\prime}-r^{\prime})" text="g ^ prime - r ^ prime" fragid="S3.SS2.SSS1.p1.m5"/> and <Math mode="inline" xml:id="S3.SS2.SSS1.p1.m6" tex="(u^{\prime}-g^{\prime})" text="u ^ prime - g ^ prime" fragid="S3.SS2.SSS1.p1.m6"/> color-color diagram and the <cite class="ltx_citemacro_citet">Girardi et al. (<ref href="#bib.bib19" idref="bib.bib19">19</ref>)</cite> SDSS isochrones.</p>
+        </para>
+        <para xml:id="S3.SS2.SSS1.p2" fragid="S3.SS2.SSS1.p2">
+          <p>We derive the reddening of NGC 188. Table 1 of <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite> and Table 1 of this paper list the metallicities of NGC 188 obtained from spectral analysis, which are between <Math mode="inline" xml:id="S3.SS2.SSS1.p2.m1" tex="\rm[Fe/H]=-0.12" text="delimited-[]@(Fe / H) = - 0.12" fragid="S3.SS2.SSS1.p2.m1"/> and <Math mode="inline" xml:id="S3.SS2.SSS1.p2.m2" tex="\rm[Fe/H]=+0.12" text="delimited-[]@(Fe / H) = + 0.12" fragid="S3.SS2.SSS1.p2.m2"/>. We adopted these two values of metallicity to derive the reddening of NGC 188 on the <Math mode="inline" xml:id="S3.SS2.SSS1.p2.m3" tex="(d-g)" text="d - g" fragid="S3.SS2.SSS1.p2.m3"/> and <Math mode="inline" xml:id="S3.SS2.SSS1.p2.m4" tex="(f-i)" text="f - i" fragid="S3.SS2.SSS1.p2.m4"/> color-color diagram. In addition, the resent results showed that the age of NGC 188 is between 6.0 and 8.0 Gyr (see Section 3.3 for details). In this paper, the reddening <Math mode="inline" xml:id="S3.SS2.SSS1.p2.m5" tex="E(B-V)" text="E * (B - V)" fragid="S3.SS2.SSS1.p2.m5"/> is transformed to each BATC band using the extinction coefficient derived by <cite class="ltx_citemacro_citet">Chen (<ref href="#bib.bib10" idref="bib.bib10">10</ref>)</cite> based on the procedure given in Appendix B of <cite class="ltx_citemacro_citet">Schlegel et al. (<ref href="#bib.bib31" idref="bib.bib31">31</ref>)</cite>.</p>
+        </para>
+        <para xml:id="S3.SS2.SSS1.p3" fragid="S3.SS2.SSS1.p3">
+          <p>Figure 3 shows the result obtained for three values of reddening <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m1" tex="E(B-V)=0.0" text="E * (B - V) = 0.0" fragid="S3.SS2.SSS1.p3.m1"/>, 0.036, and 0.082 (<Math mode="inline" xml:id="S3.SS2.SSS1.p3.m2" tex="\rm[Fe/H]=-0.12" text="delimited-[]@(Fe / H) = - 0.12" fragid="S3.SS2.SSS1.p3.m2"/>). In the left and right panels, the BATC isochrones are for 6.0 and 8.0 Gyr, respectively. In Figure 3, the two vertical dashed lines represent the main-sequence band between <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m3" tex="(d-g)=0.65" text="d - g = 0.65" fragid="S3.SS2.SSS1.p3.m3"/> and 1.05, which is the region where the data and isochrones should fit best. From Figure 3, we can see that the best fit of the BATC isochrone to the data points was obtained for <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m4" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.SS2.SSS1.p3.m4"/>. Figure 4 shows the result as Figure 3 did, but for <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m5" tex="\rm[Fe/H]=+0.12" text="delimited-[]@(Fe / H) = + 0.12" fragid="S3.SS2.SSS1.p3.m5"/>. From Figure 4, we can also see that the best fit of the BATC isochrone to the data points was obtained for <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m6" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.SS2.SSS1.p3.m6"/>. As a result, we arrived at a reddening value of <Math mode="inline" xml:id="S3.SS2.SSS1.p3.m7" tex="E(B-V)=0.036\pm 0.010" text="E * (B - V) = 0.036 plus-or-minus 0.010" fragid="S3.SS2.SSS1.p3.m7"/> for NGC 188, where the quoted uncertainty only includes an estimate of the error in the reddening determination.
+<!-- %**** wang.tex Line 175 **** --></p>
+        </para>
+        <figure frefnum="Figure 3" placement="htb" refnum="3" xml:id="S3.F3" labels="LABEL:fig3" fragid="S3.F3">
+          <p class="ltx_align_center" align="center">
+            <graphics candidates="fig3.ps" graphic="fig3.ps" options="width=303.534pt" xml:id="S3.F3.g1" fragid="S3.F3.g1" imagesrc="x55.png" imagewidth="474" imageheight="237"/>
+          </p>
+          <toccaption class="ltx_centering"><tag close=" ">3</tag>Observed <Math mode="inline" xml:id="S3.F3.m1" tex="d-g" text="d - g" fragid="S3.F3.m1"/> vs. <Math mode="inline" xml:id="S3.F3.m2" tex="f-i" text="f - i" fragid="S3.F3.m2"/> color-color diagram for the main-sequence stars with membership probability larger than <Math mode="inline" xml:id="S3.F3.m3" tex="60\%" text="60percent" fragid="S3.F3.m3"/> in NGC 188. The dotted, solid, and dashed lines are BATC isochrones (<Math mode="inline" xml:id="S3.F3.m4" tex="\rm[Fe/H]=-0.12" text="delimited-[]@(Fe / H) = - 0.12" fragid="S3.F3.m4"/>) with three different reddening values <Math mode="inline" xml:id="S3.F3.m5" tex="E(B-V)=0.0" text="E * (B - V) = 0.0" fragid="S3.F3.m5"/>, 0.036, and 0.082. In the left and right panels, the BATC isochrones are for 6.0 and 8.0 Gyr, respectively. The two vertical dashed lines represent the main-sequence band between <Math mode="inline" xml:id="S3.F3.m6" tex="(d-g)=0.65" text="d - g = 0.65" fragid="S3.F3.m6"/> and 1.05, which is the region where the data and isochrones should fit best. Error bars represent the photometric errors.</toccaption>
+          <caption class="ltx_centering"><tag close=".— ">Figure 3</tag>Observed <Math mode="inline" xml:id="S3.F3.m7" tex="d-g" text="d - g" fragid="S3.F3.m7"/> vs. <Math mode="inline" xml:id="S3.F3.m8" tex="f-i" text="f - i" fragid="S3.F3.m8"/> color-color diagram for the main-sequence stars with membership probability larger than <Math mode="inline" xml:id="S3.F3.m9" tex="60\%" text="60percent" fragid="S3.F3.m9"/> in NGC 188. The dotted, solid, and dashed lines are BATC isochrones (<Math mode="inline" xml:id="S3.F3.m10" tex="\rm[Fe/H]=-0.12" text="delimited-[]@(Fe / H) = - 0.12" fragid="S3.F3.m10"/>) with three different reddening values <Math mode="inline" xml:id="S3.F3.m11" tex="E(B-V)=0.0" text="E * (B - V) = 0.0" fragid="S3.F3.m11"/>, 0.036, and 0.082. In the left and right panels, the BATC isochrones are for 6.0 and 8.0 Gyr, respectively. The two vertical dashed lines represent the main-sequence band between <Math mode="inline" xml:id="S3.F3.m12" tex="(d-g)=0.65" text="d - g = 0.65" fragid="S3.F3.m12"/> and 1.05, which is the region where the data and isochrones should fit best. Error bars represent the photometric errors.</caption>
+        </figure>
+        <figure frefnum="Figure 4" placement="htb" refnum="4" xml:id="S3.F4" labels="LABEL:fig4" fragid="S3.F4">
+          <p class="ltx_align_center" align="center">
+            <graphics candidates="fig4.ps" graphic="fig4.ps" options="width=303.534pt" xml:id="S3.F4.g1" fragid="S3.F4.g1" imagesrc="x56.png" imagewidth="474" imageheight="237"/>
+          </p>
+          <toccaption class="ltx_centering"><tag close=" ">4</tag>Observed <Math mode="inline" xml:id="S3.F4.m1" tex="d-g" text="d - g" fragid="S3.F4.m1"/> vs. <Math mode="inline" xml:id="S3.F4.m2" tex="f-i" text="f - i" fragid="S3.F4.m2"/> color-color diagram for the main-sequence stars with membership probability larger than <Math mode="inline" xml:id="S3.F4.m3" tex="60\%" text="60percent" fragid="S3.F4.m3"/> in NGC 188. The dotted, solid, and dashed lines are BATC isochrones (<Math mode="inline" xml:id="S3.F4.m4" tex="\rm[Fe/H]=+0.12" text="delimited-[]@(Fe / H) = + 0.12" fragid="S3.F4.m4"/>) with three different reddening values <Math mode="inline" xml:id="S3.F4.m5" tex="E(B-V)=0.0" text="E * (B - V) = 0.0" fragid="S3.F4.m5"/>, 0.036, and 0.082. In the left and right panels, the BATC isochrones are for 6.0 and 8.0 Gyr, respectively. The two vertical dashed lines represent the main-sequence band between <Math mode="inline" xml:id="S3.F4.m6" tex="(d-g)=0.65" text="d - g = 0.65" fragid="S3.F4.m6"/> and 1.05, which is the region where the data and isochrones should fit best. Error bars represent the photometric errors.</toccaption>
+          <caption class="ltx_centering"><tag close=".— ">Figure 4</tag>Observed <Math mode="inline" xml:id="S3.F4.m7" tex="d-g" text="d - g" fragid="S3.F4.m7"/> vs. <Math mode="inline" xml:id="S3.F4.m8" tex="f-i" text="f - i" fragid="S3.F4.m8"/> color-color diagram for the main-sequence stars with membership probability larger than <Math mode="inline" xml:id="S3.F4.m9" tex="60\%" text="60percent" fragid="S3.F4.m9"/> in NGC 188. The dotted, solid, and dashed lines are BATC isochrones (<Math mode="inline" xml:id="S3.F4.m10" tex="\rm[Fe/H]=+0.12" text="delimited-[]@(Fe / H) = + 0.12" fragid="S3.F4.m10"/>) with three different reddening values <Math mode="inline" xml:id="S3.F4.m11" tex="E(B-V)=0.0" text="E * (B - V) = 0.0" fragid="S3.F4.m11"/>, 0.036, and 0.082. In the left and right panels, the BATC isochrones are for 6.0 and 8.0 Gyr, respectively. The two vertical dashed lines represent the main-sequence band between <Math mode="inline" xml:id="S3.F4.m12" tex="(d-g)=0.65" text="d - g = 0.65" fragid="S3.F4.m12"/> and 1.05, which is the region where the data and isochrones should fit best. Error bars represent the photometric errors.</caption>
+        </figure>
+      </subsubsection>
+      <subsubsection refnum="3.2.2" xml:id="S3.SS2.SSS2" fragid="S3.SS2.SSS2">
+        <title><tag close=" ">3.2.2</tag>Metallicity, age, and distance modulus</title>
+        <para xml:id="S3.SS2.SSS2.p1" fragid="S3.SS2.SSS2.p1">
+          <p>Since the value of reddening has been fixed, we go ahead to determine the other parameters of NGC 188 in the CMDs. Because of the age-metallicity degeneracy, we cannot simultaneously determine age and metallicity by the fitting method. We adopt a value of metallicity <Math mode="inline" xml:id="S3.SS2.SSS2.p1.m1" tex="~{}\rm[Fe/H]=0.12" text="delimited-[]@(Fe / H) = 0.12" fragid="S3.SS2.SSS2.p1.m1"/> in <cite class="ltx_citemacro_citet">Friel et al. (<ref href="#bib.bib15" idref="bib.bib15">15</ref>)</cite>, which was obtained from spectral analysis of red giants of NGC 188. Now, fitting the theoretical isochrone to our color-magnitude data points became straightforward. First, we chose the age for which the fitted isochrone had the same color of the turn-off as our data points. Then, by shifting the isochrone up and down (changing the distance modulus), we finally obtained the best fit.</p>
+        </para>
+        <para xml:id="S3.SS2.SSS2.p2" fragid="S3.SS2.SSS2.p2">
+          <p>Based on the age obtained by the previous works (see Table 1 of this paper and Table 1 of Fornal et al. 2007 in detail), we used the interactive web in Section 3.1 to construct a fine grid of isochrones about ages, sampling an age range <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m1" tex="6.0\leq t\leq 8.0" text="6.0 less= t less= 8.0" fragid="S3.SS2.SSS2.p2.m1"/> Gyr at intervals of 0.1 Gyr. The metallicity <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m2" tex="{\rm[Fe/H]}=\log(Z/Z_{\odot})=0.12" text="delimited-[]@(Fe / H) = logarithm@(Z / Z _ direct-product) = 0.12" fragid="S3.SS2.SSS2.p2.m2"/> where <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m3" tex="Z_{\odot}\approx 0.0152" text="Z _ direct-product approximately-equals 0.0152" fragid="S3.SS2.SSS2.p2.m3"/>, so this metallicity corresponds to <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m4" tex="Z=0.0200" text="Z = 0.0200" fragid="S3.SS2.SSS2.p2.m4"/>. Using this fine grid of isochrones, we obtained the fundamental parameters of NGC 188. A set of the best fitting parameters for our data is adopted as follows: an age of <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m5" tex="t=7.5\pm 0.5" text="t = 7.5 plus-or-minus 0.5" fragid="S3.SS2.SSS2.p2.m5"/> Gyr, and a distance modulus of <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m6" tex="(m-M)_{0}=11.17\pm 0.08" text="(m - M) _ 0 = 11.17 plus-or-minus 0.08" fragid="S3.SS2.SSS2.p2.m6"/>. The error of the age of NGC 188 is estimated by eye in the CMDs. Figure 5 shows a set of CMDs in the BATC system for NGC 188. From Figure 5, we can give an estimate of the error of age to be <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m7" tex="\pm 0.5" text="plus-or-minus 0.5" fragid="S3.SS2.SSS2.p2.m7"/> Gyr. The error of the distance modulus is also estimated by eye in the CMDs. Figure 6 shows a set of CMDs in the BATC system for NGC 188. From Figure 6, we can give an estimate of the error of distance modulus to be <Math mode="inline" xml:id="S3.SS2.SSS2.p2.m8" tex="\pm 0.08" text="plus-or-minus 0.08" fragid="S3.SS2.SSS2.p2.m8"/>.</p>
+        </para>
+        <figure frefnum="Figure 5" placement="htb" refnum="5" xml:id="S3.F5" labels="LABEL:fig5" fragid="S3.F5">
+          <p class="ltx_align_center" align="center">
+            <graphics candidates="fig5.ps" graphic="fig5.ps" options="width=216.81pt" xml:id="S3.F5.g1" fragid="S3.F5.g1" imagesrc="x57.png" imagewidth="338" imageheight="423"/>
+          </p>
+          <toccaption class="ltx_centering"><tag close=" ">5</tag>Observed <Math mode="inline" xml:id="S3.F5.m1" tex="(c-p)" text="c - p" fragid="S3.F5.m1"/> vs. <Math mode="inline" xml:id="S3.F5.m2" tex="c" text="c" fragid="S3.F5.m2"/>, <Math mode="inline" xml:id="S3.F5.m3" tex="(d-g)" text="d - g" fragid="S3.F5.m3"/> vs. <Math mode="inline" xml:id="S3.F5.m4" tex="d" text="d" fragid="S3.F5.m4"/>, <Math mode="inline" xml:id="S3.F5.m5" tex="(f-i)" text="f - i" fragid="S3.F5.m5"/> vs. <Math mode="inline" xml:id="S3.F5.m6" tex="f" text="f" fragid="S3.F5.m6"/>, and <Math mode="inline" xml:id="S3.F5.m7" tex="(c-m)" text="c - m" fragid="S3.F5.m7"/> vs. <Math mode="inline" xml:id="S3.F5.m8" tex="m" text="m" fragid="S3.F5.m8"/> CMDs of NGC 188 for stars with membership probability larger than <Math mode="inline" xml:id="S3.F5.m9" tex="60\%" text="60percent" fragid="S3.F5.m9"/>. The blue, red, and green lines are BATC isochrones (<Math mode="inline" xml:id="S3.F5.m10" tex="Z=0.0200" text="Z = 0.0200" fragid="S3.F5.m10"/>, <Math mode="inline" xml:id="S3.F5.m11" tex="(m-M)_{0}=11.17" text="(m - M) _ 0 = 11.17" fragid="S3.F5.m11"/>, and <Math mode="inline" xml:id="S3.F5.m12" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.F5.m12"/>) with three different ages <Math mode="inline" xml:id="S3.F5.m13" tex="t=7.0" text="t = 7.0" fragid="S3.F5.m13"/> Gyr, 7.5 Gyr, and 8.0 Gyr. Error bars represent the photometric errors.</toccaption>
+          <caption class="ltx_centering"><tag close=".— ">Figure 5</tag>Observed <Math mode="inline" xml:id="S3.F5.m14" tex="(c-p)" text="c - p" fragid="S3.F5.m14"/> vs. <Math mode="inline" xml:id="S3.F5.m15" tex="c" text="c" fragid="S3.F5.m15"/>, <Math mode="inline" xml:id="S3.F5.m16" tex="(d-g)" text="d - g" fragid="S3.F5.m16"/> vs. <Math mode="inline" xml:id="S3.F5.m17" tex="d" text="d" fragid="S3.F5.m17"/>, <Math mode="inline" xml:id="S3.F5.m18" tex="(f-i)" text="f - i" fragid="S3.F5.m18"/> vs. <Math mode="inline" xml:id="S3.F5.m19" tex="f" text="f" fragid="S3.F5.m19"/>, and <Math mode="inline" xml:id="S3.F5.m20" tex="(c-m)" text="c - m" fragid="S3.F5.m20"/> vs. <Math mode="inline" xml:id="S3.F5.m21" tex="m" text="m" fragid="S3.F5.m21"/> CMDs of NGC 188 for stars with membership probability larger than <Math mode="inline" xml:id="S3.F5.m22" tex="60\%" text="60percent" fragid="S3.F5.m22"/>. The blue, red, and green lines are BATC isochrones (<Math mode="inline" xml:id="S3.F5.m23" tex="Z=0.0200" text="Z = 0.0200" fragid="S3.F5.m23"/>, <Math mode="inline" xml:id="S3.F5.m24" tex="(m-M)_{0}=11.17" text="(m - M) _ 0 = 11.17" fragid="S3.F5.m24"/>, and <Math mode="inline" xml:id="S3.F5.m25" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.F5.m25"/>) with three different ages <Math mode="inline" xml:id="S3.F5.m26" tex="t=7.0" text="t = 7.0" fragid="S3.F5.m26"/> Gyr, 7.5 Gyr, and 8.0 Gyr. Error bars represent the photometric errors.</caption>
+        </figure>
+        <!-- %**** wang.tex Line 200 **** -->
+        <figure frefnum="Figure 6" placement="htb" refnum="6" xml:id="S3.F6" labels="LABEL:fig6" fragid="S3.F6">
+          <p class="ltx_align_center" align="center">
+            <graphics candidates="fig6.ps" graphic="fig6.ps" options="width=216.81pt" xml:id="S3.F6.g1" fragid="S3.F6.g1" imagesrc="x58.png" imagewidth="338" imageheight="423"/>
+          </p>
+          <toccaption class="ltx_centering"><tag close=" ">6</tag>Observed <Math mode="inline" xml:id="S3.F6.m1" tex="(c-p)" text="c - p" fragid="S3.F6.m1"/> vs. <Math mode="inline" xml:id="S3.F6.m2" tex="c" text="c" fragid="S3.F6.m2"/>, <Math mode="inline" xml:id="S3.F6.m3" tex="(d-g)" text="d - g" fragid="S3.F6.m3"/> vs. <Math mode="inline" xml:id="S3.F6.m4" tex="d" text="d" fragid="S3.F6.m4"/>, <Math mode="inline" xml:id="S3.F6.m5" tex="(f-i)" text="f - i" fragid="S3.F6.m5"/> vs. <Math mode="inline" xml:id="S3.F6.m6" tex="f" text="f" fragid="S3.F6.m6"/>, and <Math mode="inline" xml:id="S3.F6.m7" tex="(c-m)" text="c - m" fragid="S3.F6.m7"/> vs. <Math mode="inline" xml:id="S3.F6.m8" tex="m" text="m" fragid="S3.F6.m8"/> CMDs of NGC 188 for stars with membership probability larger than <Math mode="inline" xml:id="S3.F6.m9" tex="60\%" text="60percent" fragid="S3.F6.m9"/>. The blue, red, and green lines are BATC isochrones (<Math mode="inline" xml:id="S3.F6.m10" tex="t=7.5" text="t = 7.5" fragid="S3.F6.m10"/> Gyr, <Math mode="inline" xml:id="S3.F6.m11" tex="Z=0.0200" text="Z = 0.0200" fragid="S3.F6.m11"/>, and <Math mode="inline" xml:id="S3.F6.m12" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.F6.m12"/>) with three different distance moduli <Math mode="inline" xml:id="S3.F6.m13" tex="(m-M)_{0}=11.09" text="(m - M) _ 0 = 11.09" fragid="S3.F6.m13"/>, 11.17, and 11.25. Error bars represent the photometric errors.</toccaption>
+          <caption class="ltx_centering"><tag close=".— ">Figure 6</tag>Observed <Math mode="inline" xml:id="S3.F6.m14" tex="(c-p)" text="c - p" fragid="S3.F6.m14"/> vs. <Math mode="inline" xml:id="S3.F6.m15" tex="c" text="c" fragid="S3.F6.m15"/>, <Math mode="inline" xml:id="S3.F6.m16" tex="(d-g)" text="d - g" fragid="S3.F6.m16"/> vs. <Math mode="inline" xml:id="S3.F6.m17" tex="d" text="d" fragid="S3.F6.m17"/>, <Math mode="inline" xml:id="S3.F6.m18" tex="(f-i)" text="f - i" fragid="S3.F6.m18"/> vs. <Math mode="inline" xml:id="S3.F6.m19" tex="f" text="f" fragid="S3.F6.m19"/>, and <Math mode="inline" xml:id="S3.F6.m20" tex="(c-m)" text="c - m" fragid="S3.F6.m20"/> vs. <Math mode="inline" xml:id="S3.F6.m21" tex="m" text="m" fragid="S3.F6.m21"/> CMDs of NGC 188 for stars with membership probability larger than <Math mode="inline" xml:id="S3.F6.m22" tex="60\%" text="60percent" fragid="S3.F6.m22"/>. The blue, red, and green lines are BATC isochrones (<Math mode="inline" xml:id="S3.F6.m23" tex="t=7.5" text="t = 7.5" fragid="S3.F6.m23"/> Gyr, <Math mode="inline" xml:id="S3.F6.m24" tex="Z=0.0200" text="Z = 0.0200" fragid="S3.F6.m24"/>, and <Math mode="inline" xml:id="S3.F6.m25" tex="E(B-V)=0.036" text="E * (B - V) = 0.036" fragid="S3.F6.m25"/>) with three different distance moduli <Math mode="inline" xml:id="S3.F6.m26" tex="(m-M)_{0}=11.09" text="(m - M) _ 0 = 11.09" fragid="S3.F6.m26"/>, 11.17, and 11.25. Error bars represent the photometric errors.</caption>
+        </figure>
+      </subsubsection>
+    </subsection>
+    <subsection refnum="3.3" xml:id="S3.SS3" fragid="S3.SS3">
+      <title><tag close=". ">3.3</tag>Comparing with previous works</title>
+      <toctitle><tag close=" ">3.3</tag>Comparing with previous works</toctitle>
+      <para xml:id="S3.SS3.p1" fragid="S3.SS3.p1">
+        <p>We compare our best fitting parameters for NGC 188 with those of previous studies in the past two decade. For reddening <Math mode="inline" xml:id="S3.SS3.p1.m1" tex="E(B-V)" text="E * (B - V)" fragid="S3.SS3.p1.m1"/>, many works (see Table 1 of Fornal et al. 2007) obtained the values of reddening to be larger than <Math mode="inline" xml:id="S3.SS3.p1.m2" tex="0.08" text="0.08" fragid="S3.SS3.p1.m2"/>. Our best fitting result of <Math mode="inline" xml:id="S3.SS3.p1.m3" tex="0.036\pm 0.010" text="0.036 plus-or-minus 0.010" fragid="S3.SS3.p1.m3"/> is in very agreement with those in <cite class="ltx_citemacro_citet">Carraro et al. (<ref href="#bib.bib7" idref="bib.bib7">7</ref>)</cite>, who obtained the values of reddening to be 0.03 and 0.04. Our result is also consistent with that of <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite>, who obtained the value of reddening to be <Math mode="inline" xml:id="S3.SS3.p1.m4" tex="0.025\pm 0.005" text="0.025 plus-or-minus 0.005" fragid="S3.SS3.p1.m4"/>. For age, our best fitting of <Math mode="inline" xml:id="S3.SS3.p1.m5" tex="7.5\pm 0.5" text="7.5 plus-or-minus 0.5" fragid="S3.SS3.p1.m5"/> Gyr is consistent with those of <cite class="ltx_citemacro_citet">Carraro et al. (<ref href="#bib.bib7" idref="bib.bib7">7</ref>)</cite>, <cite class="ltx_citemacro_citet">Sarajedini et al. (<ref href="#bib.bib30" idref="bib.bib30">30</ref>)</cite>, and <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite>, who obtained the ages of NGC 188 to be 7.5 Gyr and 7.0 Gyr, <Math mode="inline" xml:id="S3.SS3.p1.m6" tex="7.0\pm 0.5" text="7.0 plus-or-minus 0.5" fragid="S3.SS3.p1.m6"/> Gyr, and <Math mode="inline" xml:id="S3.SS3.p1.m7" tex="7.5\pm 0.7" text="7.5 plus-or-minus 0.7" fragid="S3.SS3.p1.m7"/> Gyr, respectively. For distance modulus <Math mode="inline" xml:id="S3.SS3.p1.m8" tex="(m-M)_{0}" text="(m - M) _ 0" fragid="S3.SS3.p1.m8"/>, our best fitting of <Math mode="inline" xml:id="S3.SS3.p1.m9" tex="11.17\pm 0.08" text="11.17 plus-or-minus 0.08" fragid="S3.SS3.p1.m9"/> (or <Math mode="inline" xml:id="S3.SS3.p1.m10" tex="1714\pm 64~{}\rm pc" text="1714 plus-or-minus 64 * pc" fragid="S3.SS3.p1.m10"/>) is consistent with those of <cite class="ltx_citemacro_citet">Carraro et al. (<ref href="#bib.bib7" idref="bib.bib7">7</ref>)</cite>, <cite class="ltx_citemacro_citet">Sarajedini et al. (<ref href="#bib.bib30" idref="bib.bib30">30</ref>)</cite>, and <cite class="ltx_citemacro_citet">Fornal et al. (<ref href="#bib.bib14" idref="bib.bib14">14</ref>)</cite>, who obtained the distances of NGC 188 to be <Math mode="inline" xml:id="S3.SS3.p1.m11" tex="1705~{}\rm pc" text="1705 * pc" fragid="S3.SS3.p1.m11"/> and <Math mode="inline" xml:id="S3.SS3.p1.m12" tex="1720~{}\rm pc" text="1720 * pc" fragid="S3.SS3.p1.m12"/>, <Math mode="inline" xml:id="S3.SS3.p1.m13" tex="1710\pm 70~{}\rm pc" text="1710 plus-or-minus 70 * pc" fragid="S3.SS3.p1.m13"/>, and <Math mode="inline" xml:id="S3.SS3.p1.m14" tex="1700\pm 100~{}\rm pc" text="1700 plus-or-minus 100 * pc" fragid="S3.SS3.p1.m14"/>, respectively.</p>
+      </para>
+    </subsection>
+  </section>
+  <section refnum="4" xml:id="S4" fragid="S4">
+    <title><tag close=". ">4</tag>Structural parameters of NGC 188</title>
+    <toctitle><tag close=" ">4</tag>Structural parameters of NGC 188</toctitle>
+    <para xml:id="S4.p1" fragid="S4.p1">
+      <p>The structure of a cluster is described by means of the radial surface density profile, which is defined as the projected number of stars per area in the direction of the cluster. In this paper we adopt the empirical formula derived by <cite class="ltx_citemacro_citet">King (<ref href="#bib.bib22" idref="bib.bib22">22</ref>)</cite> to fit the radial surface density profile of NGC 188.</p>
+    </para>
+    <para xml:id="S4.p2" fragid="S4.p2">
+      <p>In order to enlarge the number of member stars of NGC 188, we used the SED fitting method developed by <cite class="ltx_citemacro_citet">Wu et al. (<ref href="#bib.bib35" idref="bib.bib35">35</ref>)</cite> to search more member stars. For the <Math mode="inline" xml:id="S4.p2.m1" tex="j" text="j" fragid="S4.p2.m1"/>th star, a parameter <Math mode="inline" xml:id="S4.p2.m2" tex="S" text="S" fragid="S4.p2.m2"/> can be defined:<break/></p>
+    </para>
+    <para xml:id="S4.p3" fragid="S4.p3">
+      <p><Math mode="inline" xml:id="S4.p3.m1" tex="S_{j}(t,Z,(m-M)_{0},E(B-V))" text="S _ j * vector@(t, Z, (m - M) _ 0, E * (B - V))" fragid="S4.p3.m1"/></p>
+      <equation frefnum="(1)" refnum="1" xml:id="S4.E1" labels="LABEL:eq1" fragid="S4.E1">
+        <Math mode="display" xml:id="S4.E1.m1" tex="=\sum\limits_{i=1}^{n}\frac{[m_{ij}-M_{i}(t,Z,(m-M)_{0},E(B-V))]^{2}}{\sigma_{%&#10;ij}^{2}}" text="absent = ((sum _ (i = 1)) ^ n)@((delimited-[]@(m _ (i * j) - M _ i * vector@(t, Z, (m - M) _ 0, E * (B - V)))) ^ 2 / (sigma _ (i * j)) ^ 2)" fragid="S4.E1.m1"/>
+      </equation>
+      <p>where <Math mode="inline" xml:id="S4.p3.m2" tex="M_{i}(t,Z,(m-M)_{0},E(B-V))" text="M _ i * vector@(t, Z, (m - M) _ 0, E * (B - V))" fragid="S4.p3.m2"/> is the theoretical magnitude in the <Math mode="inline" xml:id="S4.p3.m3" tex="i" text="i" fragid="S4.p3.m3"/>th BATC band, corrected by the distance modulus <Math mode="inline" xml:id="S4.p3.m4" tex="(m-M)_{0}" text="(m - M) _ 0" fragid="S4.p3.m4"/> and reddening <Math mode="inline" xml:id="S4.p3.m5" tex="E(B-V)" text="E * (B - V)" fragid="S4.p3.m5"/> and computed from the chosen theoretical isochrone model with the age <Math mode="inline" xml:id="S4.p3.m6" tex="t" text="t" fragid="S4.p3.m6"/> and metallicity <Math mode="inline" xml:id="S4.p3.m7" tex="Z" text="Z" fragid="S4.p3.m7"/>. The values of <Math mode="inline" xml:id="S4.p3.m8" tex="(m-M)_{0}" text="(m - M) _ 0" fragid="S4.p3.m8"/>, <Math mode="inline" xml:id="S4.p3.m9" tex="E(B-V)" text="E * (B - V)" fragid="S4.p3.m9"/>, <Math mode="inline" xml:id="S4.p3.m10" tex="t" text="t" fragid="S4.p3.m10"/>, and <Math mode="inline" xml:id="S4.p3.m11" tex="Z" text="Z" fragid="S4.p3.m11"/> have been obtained in Section 3. Here <Math mode="inline" xml:id="S4.p3.m12" tex="m_{ij}" text="m _ (i * j)" fragid="S4.p3.m12"/> and <Math mode="inline" xml:id="S4.p3.m13" tex="\sigma_{ij}" text="sigma _ (i * j)" fragid="S4.p3.m13"/> are the observed magnitude and its error, respectively, of the <Math mode="inline" xml:id="S4.p3.m14" tex="j" text="j" fragid="S4.p3.m14"/>th star in the <Math mode="inline" xml:id="S4.p3.m15" tex="i" text="i" fragid="S4.p3.m15"/>th band, and <Math mode="inline" xml:id="S4.p3.m16" tex="n" text="n" fragid="S4.p3.m16"/> is the total number of observed bands for the <Math mode="inline" xml:id="S4.p3.m17" tex="j" text="j" fragid="S4.p3.m17"/>th star. For <Math mode="inline" xml:id="S4.p3.m18" tex="M_{i}" text="M _ i" fragid="S4.p3.m18"/> with different stellar masses, the minimum of <Math mode="inline" xml:id="S4.p3.m19" tex="S_{j}" text="S _ j" fragid="S4.p3.m19"/>, <Math mode="inline" xml:id="S4.p3.m20" tex="S_{j,min}" text="S _ (list@(j, m * i * n))" fragid="S4.p3.m20"/>, can be obtained for the <Math mode="inline" xml:id="S4.p3.m21" tex="j" text="j" fragid="S4.p3.m21"/>th star with the chosen theoretical model. If the observed SEDs can match the theoretical SEDs, the parameter <Math mode="inline" xml:id="S4.p3.m22" tex="S_{min}" text="S _ (m * i * n)" fragid="S4.p3.m22"/> should be the <Math mode="inline" xml:id="S4.p3.m23" tex="\chi^{2}" text="chi ^ 2" fragid="S4.p3.m23"/> distribution with <Math mode="inline" xml:id="S4.p3.m24" tex="n-P" text="n - P" fragid="S4.p3.m24"/> degrees of freedom, where <Math mode="inline" xml:id="S4.p3.m25" tex="P" text="P" fragid="S4.p3.m25"/> is the number of free parameters to be solved. The integral probability at least as large as <Math mode="inline" xml:id="S4.p3.m26" tex="S_{j,min}" text="S _ (list@(j, m * i * n))" fragid="S4.p3.m26"/> in the <Math mode="inline" xml:id="S4.p3.m27" tex="\chi^{2}" text="chi ^ 2" fragid="S4.p3.m27"/> distribution with <Math mode="inline" xml:id="S4.p3.m28" tex="n-P" text="n - P" fragid="S4.p3.m28"/> degrees of freedom is taken as the “photometric“ membership probability of the <Math mode="inline" xml:id="S4.p3.m29" tex="j" text="j" fragid="S4.p3.m29"/>th star <cite class="ltx_citemacro_citep">(<ref href="#bib.bib35" idref="bib.bib35">35</ref>)</cite>. We determine 2131 stars to be photometric members with <Math mode="inline" xml:id="S4.p3.m30" tex="P_{\rm phot}" text="P _ phot" fragid="S4.p3.m30"/> greater than <Math mode="inline" xml:id="S4.p3.m31" tex="50\%" text="50percent" fragid="S4.p3.m31"/>. The <Math mode="inline" xml:id="S4.p3.m32" tex="d-g" text="d - g" fragid="S4.p3.m32"/> versus <Math mode="inline" xml:id="S4.p3.m33" tex="d" text="d" fragid="S4.p3.m33"/> CMD of these stars are shown in Figure 7.</p>
+    </para>
+    <figure frefnum="Figure 7" placement="htb" refnum="7" xml:id="S4.F7" labels="LABEL:fig7" fragid="S4.F7">
+      <!-- %**** wang.tex Line 225 **** -->
+      <p class="ltx_align_center" align="center">
+        <graphics candidates="fig7.ps" graphic="fig7.ps" options="width=173.448pt" xml:id="S4.F7.g1" fragid="S4.F7.g1" imagesrc="x59.png" imagewidth="269" imageheight="336"/>
+      </p>
+      <toccaption class="ltx_centering"><tag close=" ">7</tag>Observed <Math mode="inline" xml:id="S4.F7.m1" tex="d-g" text="d - g" fragid="S4.F7.m1"/> vs <Math mode="inline" xml:id="S4.F7.m2" tex="d" text="d" fragid="S4.F7.m2"/> CMD of NGC 188 for member stars which are determined by the SED fitting method. Error bars represent the photometric errors.</toccaption>
+      <caption class="ltx_centering"><tag close=".— ">Figure 7</tag>Observed <Math mode="inline" xml:id="S4.F7.m3" tex="d-g" text="d - g" fragid="S4.F7.m3"/> vs <Math mode="inline" xml:id="S4.F7.m4" tex="d" text="d" fragid="S4.F7.m4"/> CMD of NGC 188 for member stars which are determined by the SED fitting method. Error bars represent the photometric errors.</caption>
+    </figure>
+    <para xml:id="S4.p4" fragid="S4.p4">
+      <p>We used these 2131 member stars to determine the radial surface density profile of NGC 188. We adopted the central position for NGC 188 at <Math mode="inline" xml:id="S4.p4.m1" tex="\alpha_{0}=00^{\rm h}47^{\rm m}53^{\rm s}" text="alpha _ 0 = 00 ^ h * 47 ^ m * 53 ^ s" fragid="S4.p4.m1"/> and <Math mode="inline" xml:id="S4.p4.m2" tex="\delta_{0}=+85^{\circ}15^{\prime}30^{\prime\prime}" text="delta _ 0 = + 85 ^ compose * 15 ^ prime * 30 ^ prime2" fragid="S4.p4.m2"/> (J2000.0) following <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite>. The radial surface density profile is determined by counting stars inside concentric annuli with a step of <Math mode="inline" xml:id="S4.p4.m3" tex="1.0^{\prime}" text="1.0 ^ prime" fragid="S4.p4.m3"/> in radius of <Math mode="inline" xml:id="S4.p4.m4" tex="0^{\prime}\leq r&lt;20^{\prime}" text="0 ^ prime less= r less 20 ^ prime" fragid="S4.p4.m4"/> and counting stars inside concentric annuli with a step of <Math mode="inline" xml:id="S4.p4.m5" tex="2.0^{\prime}" text="2.0 ^ prime" fragid="S4.p4.m5"/> in radius of <Math mode="inline" xml:id="S4.p4.m6" tex="20^{\prime}&lt;r\leq 30^{\prime}" text="20 ^ prime less r less= 30 ^ prime" fragid="S4.p4.m6"/>. The radial surface density profile of NGC 188 is shown in Figure 8. The fit has been performed using a non-linear least-square fit routine which uses the 1 <Math mode="inline" xml:id="S4.p4.m7" tex="\sigma" text="sigma" fragid="S4.p4.m7"/> Poisson errors as weights. The fitted structural parameters obtained here are as follows: a core radius of <Math mode="inline" xml:id="S4.p4.m8" tex="R_{c}=3.80^{\prime}" text="R _ c = 3.80 ^ prime" fragid="S4.p4.m8"/>, a tidal radius of <Math mode="inline" xml:id="S4.p4.m9" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="S4.p4.m9"/>, and a concentration parameter of <Math mode="inline" xml:id="S4.p4.m10" tex="C_{0}=\rm log" text="C _ 0 = log" fragid="S4.p4.m10"/> <Math mode="inline" xml:id="S4.p4.m11" tex="(R_{t}/R_{c})=1.07" text="R _ t / R _ c = 1.07" fragid="S4.p4.m11"/>. With the distance to the Sun <Math mode="inline" xml:id="S4.p4.m12" tex="d_{\odot}=1714~{}\rm pc" text="d _ direct-product = 1714 * pc" fragid="S4.p4.m12"/> obtained in Section 3, the core radius and tidal radius of NGC 188 turn out to be <Math mode="inline" xml:id="S4.p4.m13" tex="R_{c}=1.89~{}\rm pc" text="R _ c = 1.89 * pc" fragid="S4.p4.m13"/> and <Math mode="inline" xml:id="S4.p4.m14" tex="R_{t}=22.33~{}\rm pc" text="R _ t = 22.33 * pc" fragid="S4.p4.m14"/>, respectively. The fitting curves are shown in Figure 8 with solid lines. As shown in Figure 8, the radial surface density profile is reproduced well by the King model within uncertainties.</p>
+    </para>
+    <para xml:id="S4.p5" fragid="S4.p5">
+      <p>We compare our structural parameters for NGC 188 with those of previous studies. For the core radius <Math mode="inline" xml:id="S4.p5.m1" tex="R_{c}" text="R _ c" fragid="S4.p5.m1"/>, our best fitting result of <Math mode="inline" xml:id="S4.p5.m2" tex="3.80^{\prime}" text="3.80 ^ prime" fragid="S4.p5.m2"/> is somewhat larger than that of <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite>, who obtained the value of core radius to be <Math mode="inline" xml:id="S4.p5.m3" tex="3.1\pm 0.2^{\prime}" text="3.1 plus-or-minus 0.2 ^ prime" fragid="S4.p5.m3"/>. However, our result is somewhat smaller than that of <cite class="ltx_citemacro_citet">Chumak et al. (<ref href="#bib.bib9" idref="bib.bib9">9</ref>)</cite>, who obtained the value of core radius to be <Math mode="inline" xml:id="S4.p5.m4" tex="4.45^{\prime}" text="4.45 ^ prime" fragid="S4.p5.m4"/>. The tidal radius of <Math mode="inline" xml:id="S4.p5.m5" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="S4.p5.m5"/> obtained here is somewhat larger than that in <cite class="ltx_citemacro_citet">Keenan et al. (<ref href="#bib.bib21" idref="bib.bib21">21</ref>)</cite>, who obtained the tidal radius of NGC 188 to be <Math mode="inline" xml:id="S4.p5.m6" tex="27.0\pm 5.0^{\prime}" text="27.0 plus-or-minus 5.0 ^ prime" fragid="S4.p5.m6"/>. Our result is consistent with that in <cite class="ltx_citemacro_citet">Bonatto et al. (<ref href="#bib.bib5" idref="bib.bib5">5</ref>)</cite>, who obtained the tidal radius of NGC 188 to be <Math mode="inline" xml:id="S4.p5.m7" tex="44\pm 9^{\prime}" text="44 plus-or-minus 9 ^ prime" fragid="S4.p5.m7"/>. And our result is smaller than that in <cite class="ltx_citemacro_citet">Chumak et al. (<ref href="#bib.bib9" idref="bib.bib9">9</ref>)</cite>, who derived the tidal radius of NGC 188 to be <Math mode="inline" xml:id="S4.p5.m8" tex="71.6^{\prime}" text="71.6 ^ prime" fragid="S4.p5.m8"/>.</p>
+    </para>
+    <figure frefnum="Figure 8" placement="htb" refnum="8" xml:id="S4.F8" labels="LABEL:fig8" fragid="S4.F8">
+      <p class="ltx_align_center" align="center">
+        <graphics candidates="fig8.ps" graphic="fig8.ps" options="width=216.81pt" xml:id="S4.F8.g1" fragid="S4.F8.g1" imagesrc="x60.png" imagewidth="338" imageheight="338"/>
+      </p>
+      <toccaption class="ltx_centering"><tag close=" ">8</tag>Radial surface density profile of NGC 188. The top panel uses logarithm coordinate, and the bottom panel uses linear coordinate. Error bars represent the 1 <Math mode="inline" xml:id="S4.F8.m1" tex="\sigma" text="sigma" fragid="S4.F8.m1"/> Poisson errors. The fitting parameters of King model are adopted as follows: a core radius of <Math mode="inline" xml:id="S4.F8.m2" tex="R_{c}=3.80^{\prime}" text="R _ c = 3.80 ^ prime" fragid="S4.F8.m2"/> and a tidal radius of <Math mode="inline" xml:id="S4.F8.m3" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="S4.F8.m3"/>.</toccaption>
+      <caption class="ltx_centering"><tag close=".— ">Figure 8</tag>Radial surface density profile of NGC 188. The top panel uses logarithm coordinate, and the bottom panel uses linear coordinate. Error bars represent the 1 <Math mode="inline" xml:id="S4.F8.m4" tex="\sigma" text="sigma" fragid="S4.F8.m4"/> Poisson errors. The fitting parameters of King model are adopted as follows: a core radius of <Math mode="inline" xml:id="S4.F8.m5" tex="R_{c}=3.80^{\prime}" text="R _ c = 3.80 ^ prime" fragid="S4.F8.m5"/> and a tidal radius of <Math mode="inline" xml:id="S4.F8.m6" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="S4.F8.m6"/>.</caption>
+    </figure>
+  </section>
+  <section refnum="5" xml:id="S5" fragid="S5">
+    <title><tag close=". ">5</tag>Mass function of NGC 188</title>
+    <toctitle><tag close=" ">5</tag>Mass function of NGC 188</toctitle>
+    <para xml:id="S5.p1" fragid="S5.p1">
+      <p>Since a large field of view of NGC 188 is observed here, we have an opportunity to study the MF and the mass segregation for NGC 188. The member stars of NGC 188 obtained here by the SED fitting method is used. In addition, we take the stars below the main-sequence turn-off to derive MF. We used stars with <Math mode="inline" xml:id="S5.p1.m1" tex="P_{\rm phot}" text="P _ phot" fragid="S5.p1.m1"/> greater than <Math mode="inline" xml:id="S5.p1.m2" tex="60\%" text="60percent" fragid="S5.p1.m2"/> to avoid the field-star contamination. In order to study the mass segregation of NGC 188, we must know the mass functions in different regions. We select the core region (<Math mode="inline" xml:id="S5.p1.m3" tex="0^{\prime}\leq R&lt;3.80^{\prime}" text="0 ^ prime less= R less 3.80 ^ prime" fragid="S5.p1.m3"/>), <Math mode="inline" xml:id="S5.p1.m4" tex="3.80^{\prime}\leq R&lt;15^{\prime}" text="3.80 ^ prime less= R less 15 ^ prime" fragid="S5.p1.m4"/>, <Math mode="inline" xml:id="S5.p1.m5" tex="15^{\prime}\leq R&lt;30^{\prime}" text="15 ^ prime less= R less 30 ^ prime" fragid="S5.p1.m5"/>, and the whole region (<Math mode="inline" xml:id="S5.p1.m6" tex="0^{\prime}\leq R\leq 30^{\prime}" text="0 ^ prime less= R less= 30 ^ prime" fragid="S5.p1.m6"/>). Completeness estimation is necessary to obtain the MF of NGC 188. We used artificial-star tests on our data to determine completeness corrections as <cite class="ltx_citemacro_citet">Wu et al. (<ref href="#bib.bib36" idref="bib.bib36">36</ref>)</cite> did. The completeness correction for the whole region and for three different regions of NGC 188 are listed in Table 3 for the BATC <Math mode="inline" xml:id="S5.p1.m7" tex="e" text="e" fragid="S5.p1.m7"/> band. In the mass functions we included only the values for which the completeness corrections are 0.5 or higher for all regions in NGC 188. Therefore, limiting magnitude <Math mode="inline" xml:id="S5.p1.m8" tex="e=20.0" text="e = 20.0" fragid="S5.p1.m8"/> is adopted. After correcting for completeness, the mass functions for different regions of NGC 188 were obtained, which are shown in Figure 9.</p>
+    </para>
+    <para xml:id="S5.p2" fragid="S5.p2">
+      <p>In Figure 9, the MF break is obvious. The break mass is determined to be near <Math mode="inline" xml:id="S5.p2.m1" tex="m_{\rm break}=0.885~{}M_{\odot}" text="m _ break = 0.885 * M _ direct-product" fragid="S5.p2.m1"/>. The MF break of clusters essentially reflects the internal dynamics of clusters on the mass function and/or some fundamental properties of the initial mass function associated to different conditions in star formation <cite class="ltx_citemacro_citep">(<ref href="#bib.bib4" idref="bib.bib4">4</ref>)</cite>. The power-law function <Math mode="inline" xml:id="S5.p2.m2" tex="\phi(m)\propto m^{\alpha}" text="phi * m proportional-to m ^ alpha" fragid="S5.p2.m2"/> is used to fit the MF. The fit has been performed using a non-linear least-square fit routine which uses the 1 <Math mode="inline" xml:id="S5.p2.m3" tex="\sigma" text="sigma" fragid="S5.p2.m3"/> Poisson errors as weights. The best fitting power-law functions are shown in Figure 9 with solid lines, and the slopes are listed in Table 4. In the fitting of the core region, we did not use the point which only includes one member star. The slope of MF is flat in the core region and become steeper as the distance increases, which reflects the mass segregation of NGC 188. The overall MF slope <Math mode="inline" xml:id="S5.p2.m4" tex="\alpha=-0.76" text="alpha = - 0.76" fragid="S5.p2.m4"/> in the mass range <Math mode="inline" xml:id="S5.p2.m5" tex="0.885~{}M_{\odot}\leq M\leq 1.125~{}M_{\odot}" text="0.885 * M _ direct-product less= M less= 1.125 * M _ direct-product" fragid="S5.p2.m5"/> is much flatter than the universal IMF <Math mode="inline" xml:id="S5.p2.m6" tex="\alpha=-2.2\pm 0.3" text="alpha = (- 2.2) plus-or-minus 0.3" fragid="S5.p2.m6"/> in the mass range <Math mode="inline" xml:id="S5.p2.m7" tex="0.5~{}M_{\odot}\leq M\leq 1.0~{}M_{\odot}" text="0.5 * M _ direct-product less= M less= 1.0 * M _ direct-product" fragid="S5.p2.m7"/> <cite class="ltx_citemacro_citep">(<ref href="#bib.bib24" idref="bib.bib24">24</ref>; <ref href="#bib.bib25" idref="bib.bib25">25</ref>)</cite>. This flat slope reflects the advanced dynamical state of NGC 188. The number of stars for NGC 188 can be estimated by the power-law function. We derived the number of stars in NGC 188 based on the power-law function obtained here to be 5776. Based on the number of stars obtained here, we can estimate the relaxation time of NGC 188. The relaxation time is calculated according to this formula <Math mode="inline" xml:id="S5.p2.m8" tex="t_{\rm relax}=Nt_{\rm cross}/(8{\rm ln}N)" text="t _ relax = (N * t _ cross) / (8 * l * n * N)" fragid="S5.p2.m8"/>, where<Math mode="inline" xml:id="S5.p2.m9" tex="~{}t_{\rm cross}=R/\sigma_{v}" text="t _ cross = R / sigma _ v" fragid="S5.p2.m9"/> is the cross time, <Math mode="inline" xml:id="S5.p2.m10" tex="N" text="N" fragid="S5.p2.m10"/> is the number of stars, and <Math mode="inline" xml:id="S5.p2.m11" tex="\sigma_{v}" text="sigma _ v" fragid="S5.p2.m11"/> is the velocity dispersion <cite class="ltx_citemacro_citep">(<ref href="#bib.bib2" idref="bib.bib2">2</ref>)</cite>. We adopted a typical <Math mode="inline" xml:id="S5.p2.m12" tex="\sigma_{v}\approx 3~{}\rm kms^{-1}" text="sigma _ v approximately-equals 3 * kms ^ (- 1)" fragid="S5.p2.m12"/> from <cite class="ltx_citemacro_citet">Binney &amp; Merrifield (<ref href="#bib.bib1" idref="bib.bib1">1</ref>)</cite>, and the relaxation time of NGC 188 is <Math mode="inline" xml:id="S5.p2.m13" tex="t_{\rm relax}=595.6~{}\rm Myr" text="t _ relax = 595.6 * Myr" fragid="S5.p2.m13"/>. The ratio of the cluster age to the relaxation time is <Math mode="inline" xml:id="S5.p2.m14" tex="\tau={\rm Age}/t_{\rm relax}=12.6" text="tau = Age / t _ relax = 12.6" fragid="S5.p2.m14"/>. Therefore, NGC 188 is in the advanced dynamical state. Many number of low mass stars have been evaporated and stripped from this open cluster.</p>
+    </para>
+    <figure frefnum="Figure 9" placement="htb" refnum="9" xml:id="S5.F9" labels="LABEL:fig9" fragid="S5.F9">
+      <p class="ltx_align_center" align="center">
+        <graphics candidates="fig9.ps" graphic="fig9.ps" options="width=216.81pt" xml:id="S5.F9.g1" fragid="S5.F9.g1" imagesrc="x61.png" imagewidth="338" imageheight="338"/>
+      </p>
+      <toccaption class="ltx_centering"><tag close=" ">9</tag>Mass functions in different spatial regions of NGC 188. Error bars represent the 1 <Math mode="inline" xml:id="S5.F9.m1" tex="\sigma" text="sigma" fragid="S5.F9.m1"/> Poisson errors. Solid lines are the best fitting power-law functions. The spatial range and the slope of power-law function are given in each panel. We used stars with <Math mode="inline" xml:id="S5.F9.m2" tex="P_{phot}" text="P _ (p * h * o * t)" fragid="S5.F9.m2"/> greater than <Math mode="inline" xml:id="S5.F9.m3" tex="60\%" text="60percent" fragid="S5.F9.m3"/> to avoid the field-contamination.</toccaption>
+      <caption class="ltx_centering"><tag close=".— ">Figure 9</tag>Mass functions in different spatial regions of NGC 188. Error bars represent the 1 <Math mode="inline" xml:id="S5.F9.m4" tex="\sigma" text="sigma" fragid="S5.F9.m4"/> Poisson errors. Solid lines are the best fitting power-law functions. The spatial range and the slope of power-law function are given in each panel. We used stars with <Math mode="inline" xml:id="S5.F9.m5" tex="P_{phot}" text="P _ (p * h * o * t)" fragid="S5.F9.m5"/> greater than <Math mode="inline" xml:id="S5.F9.m6" tex="60\%" text="60percent" fragid="S5.F9.m6"/> to avoid the field-contamination.</caption>
+      <!-- %**** wang.tex Line 250 **** -->
+    </figure>
+  </section>
+  <section refnum="6" xml:id="S6" fragid="S6">
+    <title><tag close=". ">6</tag>Summary</title>
+    <toctitle><tag close=" ">6</tag>Summary</toctitle>
+    <para xml:id="S6.p1" fragid="S6.p1">
+      <p>In this paper, we present photometry of NGC 188 in 15 intermediate-band filters of the BATC system. By fitting the theoretical isochrones to the observational data points, we determined three fundamental parameters for NGC 188: a reddening of <Math mode="inline" xml:id="S6.p1.m1" tex="E(B-V)=0.036\pm 0.010" text="E * (B - V) = 0.036 plus-or-minus 0.010" fragid="S6.p1.m1"/>, an age of <Math mode="inline" xml:id="S6.p1.m2" tex="t=7.5\pm 0.5" text="t = 7.5 plus-or-minus 0.5" fragid="S6.p1.m2"/> Gyr, and a distance modulus of <Math mode="inline" xml:id="S6.p1.m3" tex="(m-M)_{0}=11.17\pm 0.08" text="(m - M) _ 0 = 11.17 plus-or-minus 0.08" fragid="S6.p1.m3"/>.</p>
+    </para>
+    <para xml:id="S6.p2" fragid="S6.p2">
+      <p>Based on the SED fitting method developed by <cite class="ltx_citemacro_citet">Wu et al. (<ref href="#bib.bib35" idref="bib.bib35">35</ref>)</cite>, we obtained a sample of NGC 188 member stars consisting of 2131 stars with <Math mode="inline" xml:id="S6.p2.m1" tex="P_{\rm phot}" text="P _ phot" fragid="S6.p2.m1"/> greater than <Math mode="inline" xml:id="S6.p2.m2" tex="50\%" text="50percent" fragid="S6.p2.m2"/>. We determined the radial surface density profile of NGC 188 using this sample. By fitting the empirical density law of <cite class="ltx_citemacro_citet">King (<ref href="#bib.bib22" idref="bib.bib22">22</ref>)</cite> to our radial surface density profile, the structural parameters of NGC 188 are derived: a core radius of <Math mode="inline" xml:id="S6.p2.m3" tex="R_{c}=3.80^{\prime}" text="R _ c = 3.80 ^ prime" fragid="S6.p2.m3"/>, a tidal radius of <Math mode="inline" xml:id="S6.p2.m4" tex="R_{t}=44.78^{\prime}" text="R _ t = 44.78 ^ prime" fragid="S6.p2.m4"/>, and a concentration parameter of <Math mode="inline" xml:id="S6.p2.m5" tex="C_{0}=1.07" text="C _ 0 = 1.07" fragid="S6.p2.m5"/>.</p>
+    </para>
+    <para xml:id="S6.p3" fragid="S6.p3">
+      <p>We studied the details of mass function of NGC 188 based on the photometry which are obtained in a large field of view and deep observation. The MF is fitted with a power-law function, and the slopes of mass functions in different regions are derived. The MF slopes flatten from the outskirts to the inner regions which indicates mass segregation in NGC 188. The MF break in NGC 188 is observed, and the break mass is <Math mode="inline" xml:id="S6.p3.m1" tex="m_{\rm break}=0.885~{}M_{\odot}" text="m _ break = 0.885 * M _ direct-product" fragid="S6.p3.m1"/>. We also derived the number of stars and the relaxation time. The mass segregation and the large ratio of the cluster age to the relaxation time indicate that NGC 188 has gone strong dynamical evolution.</p>
+    </para>
+  </section>
+  <acknowledgements>We would like to thank the anonymous referee for providing rapid and thoughtful report that helped improve the original manuscript greatly. This study has been supported by the National Basic Research Program of China (973 Program), No. 2014CB845702 and 2014CB845704, and the Chinese National Natural Science Foundation through grants 11373035, 11433005, 11373033, 11203034, 11203031, 11303038, 11303043, 11073032, 11003021, and 11173016.
+</acknowledgements>
+  <bibliography xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist>
+      <bibitem key="binney98" xml:id="bib.bib1" fragid="bib.bib1">
+        <bibtag role="number">1</bibtag>
+        <bibtag role="year">1998</bibtag>
+        <bibtag role="authors">Binney &amp; Merrifield</bibtag>
+        <bibtag role="refnum">Binney &amp; Merrifield (1998)</bibtag>
+        <bibblock>Binney, J., &amp; Merrifield, M. 1998, in Galactic Astronomy (Princeton, NJ: Princeton University Press), Princeton serise in astrophysis, QB857.B522
+</bibblock>
+      </bibitem>
+      <bibitem key="binney08" xml:id="bib.bib2" fragid="bib.bib2">
+        <bibtag role="number">2</bibtag>
+        <bibtag role="year">2008</bibtag>
+        <bibtag role="authors">Binney &amp; Tremaine</bibtag>
+        <bibtag role="refnum">Binney &amp; Tremaine (2008)</bibtag>
+        <bibblock>Binney, J., &amp; Tremaine, S. 2008, in Galactic Dynamics (Princeton, NJ: Princeton University Press)
+</bibblock>
+      </bibitem>
+      <bibitem key="bertelli94" xml:id="bib.bib3" fragid="bib.bib3">
+        <bibtag role="number">3</bibtag>
+        <bibtag role="year">1994</bibtag>
+        <bibtag role="authors">Bertelli et al.</bibtag>
+        <bibtag role="refnum">Bertelli et al. (1994)</bibtag>
+        <bibblock>Bertelli, G., Bressan, A., Chiosi, C., Fagotto, F., &amp; Nasi, E. 1994, A&amp;AS, 106, 275
+</bibblock>
+      </bibitem>
+      <bibitem key="bonatto05a" xml:id="bib.bib4" fragid="bib.bib4">
+        <bibtag role="number">4</bibtag>
+        <bibtag role="year">2005</bibtag>
+        <bibtag role="authors">Bonatto &amp; Bica</bibtag>
+        <bibtag role="refnum">Bonatto &amp; Bica (2005)</bibtag>
+        <bibblock>Bonatto, C., &amp; Bica, E. 2005, A&amp;A, 437, 483
+</bibblock>
+      </bibitem>
+      <bibitem key="bonatto05b" xml:id="bib.bib5" fragid="bib.bib5">
+        <bibtag role="number">5</bibtag>
+        <bibtag role="year">2005</bibtag>
+        <bibtag role="authors">Bonatto et al.</bibtag>
+        <bibtag role="refnum">Bonatto et al. (2005)</bibtag>
+        <bibblock>Bonatto, C., Bica, E., &amp; Santos. J. F. C. 2005, A&amp;A, 433, 917
+<!-- %**** wang.tex Line 275 **** --></bibblock>
+      </bibitem>
+      <bibitem key="bonatto06" xml:id="bib.bib6" fragid="bib.bib6">
+        <bibtag role="number">6</bibtag>
+        <bibtag role="year">2006</bibtag>
+        <bibtag role="authors">Bonatto et al.</bibtag>
+        <bibtag role="refnum">Bonatto et al. (2006)</bibtag>
+        <bibblock> Bonatto, C., Kerber, L. O., Bica, E., &amp; Santiago, B. X. 2006, A&amp;A, 446, 121
+</bibblock>
+      </bibitem>
+      <bibitem key="carraro94" xml:id="bib.bib7" fragid="bib.bib7">
+        <bibtag role="number">7</bibtag>
+        <bibtag role="year">1994</bibtag>
+        <bibtag role="authors">Carraro et al.</bibtag>
+        <bibtag role="refnum">Carraro et al. (1994)</bibtag>
+        <bibblock>Carraro, G., Chiosi, C., Bressan, A., &amp; Bertelli, G. 1994, A&amp;A, 103, 375
+</bibblock>
+      </bibitem>
+      <bibitem key="chabrier01" xml:id="bib.bib8" fragid="bib.bib8">
+        <bibtag role="number">8</bibtag>
+        <bibtag role="year">2001</bibtag>
+        <bibtag role="authors">Chabrier</bibtag>
+        <bibtag role="refnum">Chabrier (2001)</bibtag>
+        <bibblock> Chabrier, G. 2001, ApJ, 554, 1274
+</bibblock>
+      </bibitem>
+      <bibitem key="chumak10" xml:id="bib.bib9" fragid="bib.bib9">
+        <bibtag role="number">9</bibtag>
+        <bibtag role="year">2010</bibtag>
+        <bibtag role="authors">Chumak et al.</bibtag>
+        <bibtag role="refnum">Chumak et al. (2010)</bibtag>
+        <bibblock> Chumak, Y. O., Platais, I., McLaughlin, D. E., Rastorguev, A. S., &amp; Chumak, O. V. 2010, MNRAS, 402, 1841
+</bibblock>
+      </bibitem>
+      <bibitem key="chen00" xml:id="bib.bib10" fragid="bib.bib10">
+        <bibtag role="number">10</bibtag>
+        <bibtag role="year">2000</bibtag>
+        <bibtag role="authors">Chen</bibtag>
+        <bibtag role="refnum">Chen (2000)</bibtag>
+        <bibblock>Chen, A. 2000, Ph.D. thesis, Natl. Cent. Univ.
+</bibblock>
+      </bibitem>
+      <bibitem key="chen03" xml:id="bib.bib11" fragid="bib.bib11">
+        <bibtag role="number">11</bibtag>
+        <bibtag role="year">2003</bibtag>
+        <bibtag role="authors">Chen et al.</bibtag>
+        <bibtag role="refnum">Chen et al. (2003)</bibtag>
+        <bibblock> Chen, L., Hou, J.-L., &amp; Wang, J.-J. 2003, AJ, 125, 1397
+</bibblock>
+      </bibitem>
+      <bibitem key="fan96" xml:id="bib.bib12" fragid="bib.bib12">
+        <bibtag role="number">12</bibtag>
+        <bibtag role="year">1996</bibtag>
+        <bibtag role="authors">Fan et al.</bibtag>
+        <bibtag role="refnum">Fan et al. (1996)</bibtag>
+        <bibblock>Fan, X., Burstein, D., Chen, J.-S., et al. 1996, AJ, 112, 628
+</bibblock>
+      </bibitem>
+      <bibitem key="fan09" xml:id="bib.bib13" fragid="bib.bib13">
+        <bibtag role="number">13</bibtag>
+        <bibtag role="year">2009</bibtag>
+        <bibtag role="authors">Fan et al.</bibtag>
+        <bibtag role="refnum">Fan et al. (2009)</bibtag>
+        <bibblock>Fan, Z., Ma, J., &amp; Zhou, X. 2009, Res. Astron. Astrophys., 9, 993
+</bibblock>
+      </bibitem>
+      <bibitem key="fornal07" xml:id="bib.bib14" fragid="bib.bib14">
+        <bibtag role="number">14</bibtag>
+        <bibtag role="year">2007</bibtag>
+        <bibtag role="authors">Fornal et al.</bibtag>
+        <bibtag role="refnum">Fornal et al. (2007)</bibtag>
+        <bibblock>Fornal, B., Tucker, D. L., Smith, J. A., Allam, S. S., Rider, C. J., &amp; Sung, H. 2007, AJ, 133, 1409
+</bibblock>
+      </bibitem>
+      <bibitem key="friel10" xml:id="bib.bib15" fragid="bib.bib15">
+        <bibtag role="number">15</bibtag>
+        <bibtag role="year">2010</bibtag>
+        <bibtag role="authors">Friel et al.</bibtag>
+        <bibtag role="refnum">Friel et al. (2010)</bibtag>
+        <bibblock>Friel, E. D., Jacobson, H. R., &amp; Pilachowski, C. A. 2010, AJ, 139, 1942
+</bibblock>
+      </bibitem>
+      <bibitem key="Girardi00" xml:id="bib.bib16" fragid="bib.bib16">
+        <bibtag role="number">16</bibtag>
+        <bibtag role="year">2000</bibtag>
+        <bibtag role="authors">Girardi et al.</bibtag>
+        <bibtag role="refnum">Girardi et al. (2000)</bibtag>
+        <bibblock>Girardi, L., Bressan, A., Bertelli, G., &amp; Chiosi, C. 2000, A&amp;AS, 141, 371
+</bibblock>
+      </bibitem>
+      <bibitem key="Girardi02" xml:id="bib.bib17" fragid="bib.bib17">
+        <bibtag role="number">17</bibtag>
+        <bibtag role="year">2002</bibtag>
+        <bibtag role="authors">Girardi et al.</bibtag>
+        <bibtag role="refnum">Girardi et al. (2002)</bibtag>
+        <bibblock>Girardi, L., Bertelli, G., Bressan, A., et al. 2002, A&amp;A, 391, 195
+</bibblock>
+      </bibitem>
+      <bibitem key="Girardi08" xml:id="bib.bib18" fragid="bib.bib18">
+        <bibtag role="number">18</bibtag>
+        <bibtag role="year">2008</bibtag>
+        <bibtag role="authors">Girardi et al.</bibtag>
+        <bibtag role="refnum">Girardi et al. (2008)</bibtag>
+        <bibblock>Girardi, L., Dalcanton, J., Williams, B., et al. 2008, PASP, 120, 583
+<!-- %**** wang.tex Line 300 **** --></bibblock>
+      </bibitem>
+      <bibitem key="Girardi04" xml:id="bib.bib19" fragid="bib.bib19">
+        <bibtag role="number">19</bibtag>
+        <bibtag role="year">2004</bibtag>
+        <bibtag role="authors">Girardi et al.</bibtag>
+        <bibtag role="refnum">Girardi et al. (2004)</bibtag>
+        <bibblock>Girardi, L., Grebel, E. K., Odenkirchen, M., &amp; Chiosi, C. 2004, A&amp;A, 422, 205
+</bibblock>
+      </bibitem>
+      <bibitem key="jacobson11" xml:id="bib.bib20" fragid="bib.bib20">
+        <bibtag role="number">20</bibtag>
+        <bibtag role="year">2011</bibtag>
+        <bibtag role="authors">Jacobson et al.</bibtag>
+        <bibtag role="refnum">Jacobson et al. (2011)</bibtag>
+        <bibblock>Jacobson, H. R., Pilachowski, C. A., &amp; Friel, E. D. 2011, AJ, 142, 59
+</bibblock>
+      </bibitem>
+      <bibitem key="keenan73" xml:id="bib.bib21" fragid="bib.bib21">
+        <bibtag role="number">21</bibtag>
+        <bibtag role="year">1973</bibtag>
+        <bibtag role="authors">Keenan et al.</bibtag>
+        <bibtag role="refnum">Keenan et al. (1973)</bibtag>
+        <bibblock>Keenan, D. W., Innanen, K. A., &amp; House, F. C. 1973, AJ, 78, 173
+</bibblock>
+      </bibitem>
+      <bibitem key="king62" xml:id="bib.bib22" fragid="bib.bib22">
+        <bibtag role="number">22</bibtag>
+        <bibtag role="year">1962</bibtag>
+        <bibtag role="authors">King</bibtag>
+        <bibtag role="refnum">King (1962)</bibtag>
+        <bibblock>King, I. 1962, AJ, 67, 471
+</bibblock>
+      </bibitem>
+      <bibitem key="kroupa01a" xml:id="bib.bib23" fragid="bib.bib23">
+        <bibtag role="number">23</bibtag>
+        <bibtag role="year">2001a</bibtag>
+        <bibtag role="authors">Kroupa</bibtag>
+        <bibtag role="refnum">Kroupa (2001a)</bibtag>
+        <bibblock>Kroupa, P. 2001, ASPC, 243, 387
+</bibblock>
+      </bibitem>
+      <bibitem key="kroupa01b" xml:id="bib.bib24" fragid="bib.bib24">
+        <bibtag role="number">24</bibtag>
+        <bibtag role="year">2001b</bibtag>
+        <bibtag role="authors">Kroupa</bibtag>
+        <bibtag role="refnum">Kroupa (2001b)</bibtag>
+        <bibblock>Kroupa, P. 2001, MNRAS, 322, 231
+</bibblock>
+      </bibitem>
+      <bibitem key="kroupa02" xml:id="bib.bib25" fragid="bib.bib25">
+        <bibtag role="number">25</bibtag>
+        <bibtag role="year">2002</bibtag>
+        <bibtag role="authors">Kroupa</bibtag>
+        <bibtag role="refnum">Kroupa (2002)</bibtag>
+        <bibblock>Kroupa, P. 2002, Science, 295, 82
+</bibblock>
+      </bibitem>
+      <bibitem key="Marigo08" xml:id="bib.bib26" fragid="bib.bib26">
+        <bibtag role="number">26</bibtag>
+        <bibtag role="year">2008</bibtag>
+        <bibtag role="authors">Marigo et al.</bibtag>
+        <bibtag role="refnum">Marigo et al. (2008)</bibtag>
+        <bibblock>Marigo, P., Girardi, L., Bressan, A., Groenewegen, M. A. T., Silva, L., &amp; Granato, G. L. 2008, A&amp;A, 482, 883
+</bibblock>
+      </bibitem>
+      <bibitem key="meibom09" xml:id="bib.bib27" fragid="bib.bib27">
+        <bibtag role="number">27</bibtag>
+        <bibtag role="year">2009</bibtag>
+        <bibtag role="authors">Meibom et al.</bibtag>
+        <bibtag role="refnum">Meibom et al. (2009)</bibtag>
+        <bibblock>Meibom, S., Grundahl, F., Clausen, J. V., et al. 2009, AJ, 137, 5086
+</bibblock>
+      </bibitem>
+      <bibitem key="platais03" xml:id="bib.bib28" fragid="bib.bib28">
+        <bibtag role="number">28</bibtag>
+        <bibtag role="year">2003</bibtag>
+        <bibtag role="authors">Platais et al.</bibtag>
+        <bibtag role="refnum">Platais et al. (2003)</bibtag>
+        <bibblock> Platais, I., Kozhurina-Platais, V., Mathieu, R., Girard, T. M., &amp; van Altena, W. F. 2003, AJ, 126, 2922
+</bibblock>
+      </bibitem>
+      <bibitem key="sandage62" xml:id="bib.bib29" fragid="bib.bib29">
+        <bibtag role="number">29</bibtag>
+        <bibtag role="year">1962</bibtag>
+        <bibtag role="authors">Sandage</bibtag>
+        <bibtag role="refnum">Sandage (1962)</bibtag>
+        <bibblock> Sandage, A. 1962, ApJ, 135, 333
+</bibblock>
+      </bibitem>
+      <bibitem key="sara99" xml:id="bib.bib30" fragid="bib.bib30">
+        <bibtag role="number">30</bibtag>
+        <bibtag role="year">1999</bibtag>
+        <bibtag role="authors">Sarajedini et al.</bibtag>
+        <bibtag role="refnum">Sarajedini et al. (1999)</bibtag>
+        <bibblock>Sarajedini, A., von Hippel, T., Kozhurina-Platais, V., &amp; Demarque, P. 1999, AJ, 118, 2894
+<!-- %**** wang.tex Line 325 **** --></bibblock>
+      </bibitem>
+      <bibitem key="schl98" xml:id="bib.bib31" fragid="bib.bib31">
+        <bibtag role="number">31</bibtag>
+        <bibtag role="year">1998</bibtag>
+        <bibtag role="authors">Schlegel et al.</bibtag>
+        <bibtag role="refnum">Schlegel et al. (1998)</bibtag>
+        <bibblock>Schlegel, D. J., Finkbeiner, D. P., &amp; Davis, M. 1998, ApJ, 500, 525
+</bibblock>
+      </bibitem>
+      <bibitem key="vandenberg04" xml:id="bib.bib32" fragid="bib.bib32">
+        <bibtag role="number">32</bibtag>
+        <bibtag role="year">2004</bibtag>
+        <bibtag role="authors">Vandenberg &amp; Stetson</bibtag>
+        <bibtag role="refnum">Vandenberg &amp; Stetson (2004)</bibtag>
+        <bibblock> Vandenberg, D. A., &amp; Stetson, P. B. 2004, PASP, 116, 997
+</bibblock>
+      </bibitem>
+      <bibitem key="worthey03" xml:id="bib.bib33" fragid="bib.bib33">
+        <bibtag role="number">33</bibtag>
+        <bibtag role="year">2003</bibtag>
+        <bibtag role="authors">Worthey &amp; Jowett</bibtag>
+        <bibtag role="refnum">Worthey &amp; Jowett (2003)</bibtag>
+        <bibblock>Worthey, G., &amp; Jowett, K. J. 2003, PASP, 115, 96
+</bibblock>
+      </bibitem>
+      <bibitem key="wu05" xml:id="bib.bib34" fragid="bib.bib34">
+        <bibtag role="number">34</bibtag>
+        <bibtag role="year">2005</bibtag>
+        <bibtag role="authors">Wu et al.</bibtag>
+        <bibtag role="refnum">Wu et al. (2005)</bibtag>
+        <bibblock>Wu, Z.-Y., Zhou, X., Ma, J., Jiang, Z.-J., &amp; Chen, J.-S. 2005, PASP, 117, 32
+</bibblock>
+      </bibitem>
+      <bibitem key="wu06" xml:id="bib.bib35" fragid="bib.bib35">
+        <bibtag role="number">35</bibtag>
+        <bibtag role="year">2006</bibtag>
+        <bibtag role="authors">Wu et al.</bibtag>
+        <bibtag role="refnum">Wu et al. (2006)</bibtag>
+        <bibblock>Wu, Z.-Y., Zhou, X., Ma, J., Jiang, Z.-J., &amp; Chen, J.-S. 2006, PASP, 118, 1104
+</bibblock>
+      </bibitem>
+      <bibitem key="wu07" xml:id="bib.bib36" fragid="bib.bib36">
+        <bibtag role="number">36</bibtag>
+        <bibtag role="year">2007</bibtag>
+        <bibtag role="authors">Wu et al.</bibtag>
+        <bibtag role="refnum">Wu et al. (2007)</bibtag>
+        <bibblock>Wu, Z.-Y., Zhou, X., Ma, J., Jiang, Z.-J., Chen, J.-S., &amp; Wu, J.-H. 2007, AJ, 133, 2061
+</bibblock>
+      </bibitem>
+      <bibitem key="yan00" xml:id="bib.bib37" fragid="bib.bib37">
+        <bibtag role="number">37</bibtag>
+        <bibtag role="year">2000</bibtag>
+        <bibtag role="authors">Yan et al.</bibtag>
+        <bibtag role="refnum">Yan et al. (2000)</bibtag>
+        <bibblock> Yan, H., Burstein, D., Fan, X.-H., et al. 2000, PASP, 112, 691
+</bibblock>
+      </bibitem>
+      <bibitem key="zhou01" xml:id="bib.bib38" fragid="bib.bib38">
+        <bibtag role="number">38</bibtag>
+        <bibtag role="year">2001</bibtag>
+        <bibtag role="authors">Zhou et al.</bibtag>
+        <bibtag role="refnum">Zhou et al. (2001)</bibtag>
+        <bibblock> Zhou, X., Jiang, Z.-J., Xue, S.-J., Wu, H., Ma, J., &amp; Chen, J.-S. 2001, Chinese Astron. Astrophys., 1, 372
+</bibblock>
+      </bibitem>
+      <bibitem key="zhou03" xml:id="bib.bib39" fragid="bib.bib39">
+        <bibtag role="number">39</bibtag>
+        <bibtag role="year">2003</bibtag>
+        <bibtag role="authors">Zhou et al.</bibtag>
+        <bibtag role="refnum">Zhou et al. (2003)</bibtag>
+        <bibblock> Zhou, X., Jiang, Z.-J., Ma, J., et al. 2003, A&amp;A, 397, 361
+</bibblock>
+      </bibitem>
+    </biblist>
+  </bibliography>
+  <pagination role="newpage"/>
+  <!-- %============================================================================================================================================ 
+     %“begin–deluxetable˝–lcccccl˝
+     %“rotate
+     %“tablenum–1˝
+     %**** wang.tex Line 350 ****
+     %“tablecolumns–7˝ “tablewidth–0pc˝
+     %“tablecaption–Literature estimates of fundamental parameters for NGC 188“label–table1˝˝
+     %“tabletypesize–“scriptsize˝
+     %“tabletypesize–“tiny˝-->
+  <table angle="90" depth="0.0pt" frefnum="Table 1" height="925.5pt" innerdepth="149.4pt" innerheight="7.0pt" innerwidth="925.5pt" refnum="1" width="156.4pt" xml:id="A0.T1" xtranslate="-384.53pt" ytranslate="-309.82pt" labels="LABEL:table1" fragid="A0.T1">
+    <toccaption class="ltx_centering">
+      <tag close=" ">
+        <text fontsize="90%">1</text>
+      </tag>
+      <text fontsize="90%">Literature estimates of fundamental parameters for NGC 188</text>
+    </toccaption>
+    <caption class="ltx_centering" fontsize="90%"><tag>Table 1</tag>Literature estimates of fundamental parameters for NGC 188</caption>
+    <tabular vattach="middle" class="ltx_centering">
+      <tbody>
+        <tr>
+          <td align="center" border="tt">
+            <text fontsize="90%">Reference</text>
+          </td>
+          <td align="center" border="tt">
+            <text fontsize="90%">Distance Modulus</text>
+          </td>
+          <td align="center" border="tt">
+            <text fontsize="90%">Distance</text>
+          </td>
+          <td align="center" border="tt">
+            <text fontsize="90%">Age</text>
+          </td>
+          <td align="center" border="tt">
+            <Math mode="inline" xml:id="A0.T1.m1" tex="E(B-V)" text="E * (B - V)" fragid="A0.T1.m1"/>
+          </td>
+          <td align="center" border="tt">
+            <Math mode="inline" xml:id="A0.T1.m2" tex="\rm[Fe/H]" text="delimited-[]@(Fe / H)" fragid="A0.T1.m2"/>
+          </td>
+          <td align="center" border="tt">
+            <text fontsize="90%">Technique</text>
+          </td>
+        </tr>
+        <tr>
+          <td/>
+          <td/>
+          <td align="center">
+            <text fontsize="90%">(pc)</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">(Gyr)</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">(mag)</text>
+          </td>
+          <td/>
+          <td/>
+        </tr>
+        <tr>
+          <td align="center" border="t">
+            <text fontsize="90%">Fornal et al.(2007)</text>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m3" tex="11.23\pm 0.14" text="11.23 plus-or-minus 0.14" fragid="A0.T1.m3"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m4" tex="1700\pm 100" text="1700 plus-or-minus 100" fragid="A0.T1.m4"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m5" tex="7.5\pm 0.7" text="7.5 plus-or-minus 0.7" fragid="A0.T1.m5"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m6" tex="0.025\pm 0.005" text="0.025 plus-or-minus 0.005" fragid="A0.T1.m6"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m7" tex="0.00" text="0.00" fragid="A0.T1.m7"/>
+            <text fontsize="90%">(adopted)</text>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T1.m8" tex="u^{{}^{\prime}}g^{{}^{\prime}}r^{{}^{\prime}}i^{{}^{\prime}}z{{}^{\prime}}" fragid="A0.T1.m8"/>
+            <text fontsize="90%"> photometry,Girardi isochrone fits</text>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <text fontsize="90%">Meibom et al.(2009)</text>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m9" tex="11.24\pm 0.09" text="11.24 plus-or-minus 0.09" fragid="A0.T1.m9"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m10" tex="1770\pm 75" text="1770 plus-or-minus 75" fragid="A0.T1.m10"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m11" tex="6.2\pm 0.2" text="6.2 plus-or-minus 0.2" fragid="A0.T1.m11"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m12" tex="0.087" text="0.087" fragid="A0.T1.m12"/>
+            <text fontsize="90%"> (adopted)</text>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m13" tex="-0.1-0.0" text="- 0.1 - 0.0" fragid="A0.T1.m13"/>
+            <text fontsize="90%">(adopted)</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">Analysis of eclipsing binaries</text>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <text fontsize="90%">Friel et al.(2010)</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m14" tex="0.12\pm 0.02" text="0.12 plus-or-minus 0.02" fragid="A0.T1.m14"/>
+          </td>
+          <td align="center">
+            <text fontsize="90%">High-resolution spectral analysis of red giants</text>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <text fontsize="90%">Jacobson et al.(2011)</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <text fontsize="90%">…</text>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T1.m15" tex="-0.03\pm 0.04" text="(- 0.03) plus-or-minus 0.04" fragid="A0.T1.m15"/>
+          </td>
+          <td align="center">
+            <text fontsize="90%">High-resolution spectral analysis</text>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" border="b">
+            <text fontsize="90%">This work</text>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T1.m16" tex="11.21\pm 0.08" text="11.21 plus-or-minus 0.08" fragid="A0.T1.m16"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T1.m17" tex="1714\pm 64" text="1714 plus-or-minus 64" fragid="A0.T1.m17"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T1.m18" tex="7.5\pm 0.5" text="7.5 plus-or-minus 0.5" fragid="A0.T1.m18"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T1.m19" tex="0.036\pm 0.010" text="0.036 plus-or-minus 0.010" fragid="A0.T1.m19"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T1.m20" tex="0.12" text="0.12" fragid="A0.T1.m20"/>
+            <text fontsize="90%">(adopted)</text>
+          </td>
+          <td align="center" border="b">
+            <text fontsize="90%">BATC multi-color photometry, isochrone fits</text>
+          </td>
+        </tr>
+      </tbody>
+    </tabular>
+  </table>
+  <!-- %**** wang.tex Line 375 **** 
+     %============================================================================================
+     %“begin–deluxetable*˝–cccccc˝
+     %“tablenum–1˝
+     %“tablecolumns–15˝ “tablewidth–0pc˝
+     %“tablecaption–Parameters of 15 BATC filters and statistics of our observations“label–table2˝˝
+     %“tabletypesize–“scriptsize˝
+     %“tabletypesize–“tiny˝
+     %“tablehead–“colhead–Number˝ & “colhead–Filter Name˝ & “colhead–$“lambda ˙–“rm eff˝$˝ &“colhead–FWHM˝ & “colhead–Exposure˝ & “colhead–Number of Images˝““
+     %“colhead–˝& “colhead–˝ &“colhead–(“AA)˝ & “colhead–(“AA)˝ & “colhead–(s)˝ & “colhead–˝ ˝
+     %“startdata-->
+  <table frefnum="Table 2" refnum="2" xml:id="A0.T2" labels="LABEL:table2" fragid="A0.T2">
+    <toccaption class="ltx_centering"><tag close=" ">2</tag>Parameters of 15 BATC filters and statistics of our observations</toccaption>
+    <caption class="ltx_centering"><tag>Table 2</tag>Parameters of 15 BATC filters and statistics of our observations</caption>
+    <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+      <thead>
+        <tr>
+          <td align="center" border="tt" thead="column row">Number</td>
+          <td align="center" border="tt" thead="column row">Filter Name</td>
+          <td align="center" border="tt" thead="column row">
+            <Math mode="inline" xml:id="A0.T2.m1" tex="\lambda_{\rm eff}" text="lambda _ eff" fragid="A0.T2.m1"/>
+          </td>
+          <td align="center" border="tt" thead="column">FWHM</td>
+          <td align="center" border="tt" thead="column">Exposure</td>
+          <td align="center" border="tt" thead="column">Number of Images</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td thead="row"/>
+          <td thead="column row"/>
+          <td align="center" thead="column row">(Å)</td>
+          <td align="center" thead="column">(Å)</td>
+          <td align="center" thead="column">(s)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td align="center" border="t" thead="row">1</td>
+          <td align="center" border="t" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m2" tex="a" text="a" fragid="A0.T2.m2"/>
+          </td>
+          <td align="center" border="t" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m3" tex="3360" text="3360" fragid="A0.T2.m3"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T2.m4" tex="360" text="360" fragid="A0.T2.m4"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T2.m5" tex="4800" text="4800" fragid="A0.T2.m5"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T2.m6" tex="7" text="7" fragid="A0.T2.m6"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">2</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m7" tex="b" text="b" fragid="A0.T2.m7"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m8" tex="3890" text="3890" fragid="A0.T2.m8"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m9" tex="340" text="340" fragid="A0.T2.m9"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m10" tex="11010" text="11010" fragid="A0.T2.m10"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m11" tex="18" text="18" fragid="A0.T2.m11"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">3</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m12" tex="c" text="c" fragid="A0.T2.m12"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m13" tex="4194" text="4194" fragid="A0.T2.m13"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m14" tex="309" text="309" fragid="A0.T2.m14"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m15" tex="7020" text="7020" fragid="A0.T2.m15"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m16" tex="8" text="8" fragid="A0.T2.m16"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">4</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m17" tex="d" text="d" fragid="A0.T2.m17"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m18" tex="4540" text="4540" fragid="A0.T2.m18"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m19" tex="332" text="332" fragid="A0.T2.m19"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m20" tex="6840" text="6840" fragid="A0.T2.m20"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m21" tex="7" text="7" fragid="A0.T2.m21"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">5</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m22" tex="e" text="e" fragid="A0.T2.m22"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m23" tex="4925" text="4925" fragid="A0.T2.m23"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m24" tex="374" text="374" fragid="A0.T2.m24"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m25" tex="23940" text="23940" fragid="A0.T2.m25"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m26" tex="24" text="24" fragid="A0.T2.m26"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">6</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m27" tex="f" text="f" fragid="A0.T2.m27"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m28" tex="5267" text="5267" fragid="A0.T2.m28"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m29" tex="344" text="344" fragid="A0.T2.m29"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m30" tex="11709" text="11709" fragid="A0.T2.m30"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m31" tex="28" text="28" fragid="A0.T2.m31"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">7</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m32" tex="g" text="g" fragid="A0.T2.m32"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m33" tex="5790" text="5790" fragid="A0.T2.m33"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m34" tex="289" text="289" fragid="A0.T2.m34"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m35" tex="7620" text="7620" fragid="A0.T2.m35"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m36" tex="14" text="14" fragid="A0.T2.m36"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">8</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m37" tex="h" text="h" fragid="A0.T2.m37"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m38" tex="6074" text="6074" fragid="A0.T2.m38"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m39" tex="308" text="308" fragid="A0.T2.m39"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m40" tex="6780" text="6780" fragid="A0.T2.m40"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m41" tex="9" text="9" fragid="A0.T2.m41"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">9</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m42" tex="i" text="i" fragid="A0.T2.m42"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m43" tex="6656" text="6656" fragid="A0.T2.m43"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m44" tex="491" text="491" fragid="A0.T2.m44"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m45" tex="5800" text="5800" fragid="A0.T2.m45"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m46" tex="16" text="16" fragid="A0.T2.m46"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">10</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m47" tex="j" text="j" fragid="A0.T2.m47"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m48" tex="7057" text="7057" fragid="A0.T2.m48"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m49" tex="238" text="238" fragid="A0.T2.m49"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m50" tex="7080" text="7080" fragid="A0.T2.m50"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m51" tex="10" text="10" fragid="A0.T2.m51"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">11</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m52" tex="k" text="k" fragid="A0.T2.m52"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m53" tex="7546" text="7546" fragid="A0.T2.m53"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m54" tex="192" text="192" fragid="A0.T2.m54"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m55" tex="9300" text="9300" fragid="A0.T2.m55"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m56" tex="11" text="11" fragid="A0.T2.m56"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">12</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m57" tex="m" text="m" fragid="A0.T2.m57"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m58" tex="8023" text="8023" fragid="A0.T2.m58"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m59" tex="255" text="255" fragid="A0.T2.m59"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m60" tex="12780" text="12780" fragid="A0.T2.m60"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m61" tex="17" text="17" fragid="A0.T2.m61"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">13</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m62" tex="n" text="n" fragid="A0.T2.m62"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m63" tex="8484" text="8484" fragid="A0.T2.m63"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m64" tex="167" text="167" fragid="A0.T2.m64"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m65" tex="12780" text="12780" fragid="A0.T2.m65"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m66" tex="10" text="10" fragid="A0.T2.m66"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">14</td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m67" tex="o" text="o" fragid="A0.T2.m67"/>
+          </td>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m68" tex="9182" text="9182" fragid="A0.T2.m68"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m69" tex="247" text="247" fragid="A0.T2.m69"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m70" tex="17985" text="17985" fragid="A0.T2.m70"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T2.m71" tex="15" text="15" fragid="A0.T2.m71"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" border="b" thead="row">15</td>
+          <td align="center" border="b" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m72" tex="p" text="p" fragid="A0.T2.m72"/>
+          </td>
+          <td align="center" border="b" thead="row">
+            <Math mode="inline" xml:id="A0.T2.m73" tex="9739" text="9739" fragid="A0.T2.m73"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T2.m74" tex="275" text="275" fragid="A0.T2.m74"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T2.m75" tex="19800" text="19800" fragid="A0.T2.m75"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T2.m76" tex="19" text="19" fragid="A0.T2.m76"/>
+          </td>
+        </tr>
+      </tbody>
+    </tabular>
+  </table>
+  <!-- %============================================================================================ 
+     %“begin–deluxetable*˝–ccccc˝
+     %“tablenum–1˝
+     %“tablecolumns–7˝ “tablewidth–0pc˝
+     %“tablecaption–Completeness analysis results for NGC188“label–table3˝˝
+     %“tabletypesize–“scriptsize˝
+     %“tabletypesize–“tiny˝
+     %“tablehead–“colhead–$“Delta e$˝ & “colhead–$0.0’ “leq r “leq 30’$˝ & “colhead–$0.0’ “leq r ¡ 3.80’$˝ &“colhead–$3.80’ “leq r ¡ 15$˝ & “colhead–$15 “leq r “leq 30$˝ ˝
+     %“startdata-->
+  <table frefnum="Table 3" refnum="3" xml:id="A0.T3" labels="LABEL:table3" fragid="A0.T3">
+    <!-- %**** wang.tex Line 425 **** -->
+    <toccaption class="ltx_centering"><tag close=" ">3</tag>Completeness analysis results for NGC 188</toccaption>
+    <caption class="ltx_centering"><tag>Table 3</tag>Completeness analysis results for NGC 188</caption>
+    <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+      <thead>
+        <tr>
+          <td align="center" border="tt" thead="column row">
+            <Math mode="inline" xml:id="A0.T3.m1" tex="\Delta e" text="Delta * e" fragid="A0.T3.m1"/>
+          </td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T3.m2" tex="0.0^{\prime}\leq r\leq 30^{\prime}" text="0.0 ^ prime less= r less= 30 ^ prime" fragid="A0.T3.m2"/>
+          </td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T3.m3" tex="0.0^{\prime}\leq r&lt;3.80^{\prime}" text="0.0 ^ prime less= r less 3.80 ^ prime" fragid="A0.T3.m3"/>
+          </td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T3.m4" tex="3.80^{\prime}\leq r&lt;15" text="3.80 ^ prime less= r less 15" fragid="A0.T3.m4"/>
+          </td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T3.m5" tex="15\leq r\leq 30" text="15 less= r less= 30" fragid="A0.T3.m5"/>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center" border="t" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m6" tex="13-14" text="13 - 14" fragid="A0.T3.m6"/>
+          </td>
+          <td align="center" border="t">0.91</td>
+          <td align="center" border="t">0.37</td>
+          <td align="center" border="t">0.92</td>
+          <td align="center" border="t">0.91</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m7" tex="14-15" text="14 - 15" fragid="A0.T3.m7"/>
+          </td>
+          <td align="center">0.92</td>
+          <td align="center">0.56</td>
+          <td align="center">0.93</td>
+          <td align="center">0.92</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m8" tex="15-16" text="15 - 16" fragid="A0.T3.m8"/>
+          </td>
+          <td align="center">0.96</td>
+          <td align="center">0.96</td>
+          <td align="center">0.97</td>
+          <td align="center">0.97</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m9" tex="16-17" text="16 - 17" fragid="A0.T3.m9"/>
+          </td>
+          <td align="center">0.91</td>
+          <td align="center">0.90</td>
+          <td align="center">0.92</td>
+          <td align="center">0.92</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m10" tex="17-18" text="17 - 18" fragid="A0.T3.m10"/>
+          </td>
+          <td align="center">0.83</td>
+          <td align="center">0.82</td>
+          <td align="center">0.84</td>
+          <td align="center">0.84</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m11" tex="18-19" text="18 - 19" fragid="A0.T3.m11"/>
+          </td>
+          <td align="center">0.68</td>
+          <td align="center">0.69</td>
+          <td align="center">0.69</td>
+          <td align="center">0.69</td>
+        </tr>
+        <tr>
+          <td align="center" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m12" tex="19-20" text="19 - 20" fragid="A0.T3.m12"/>
+          </td>
+          <td align="center">0.53</td>
+          <td align="center">0.64</td>
+          <td align="center">0.56</td>
+          <td align="center">0.56</td>
+        </tr>
+        <tr>
+          <td align="center" border="b" thead="row">
+            <Math mode="inline" xml:id="A0.T3.m13" tex="20-21" text="20 - 21" fragid="A0.T3.m13"/>
+          </td>
+          <td align="center" border="b">0.13</td>
+          <td align="center" border="b">0.47</td>
+          <td align="center" border="b">0.14</td>
+          <td align="center" border="b">0.14</td>
+        </tr>
+      </tbody>
+    </tabular>
+  </table>
+  <!-- %============================================================================================ 
+     %“begin–deluxetable*˝–ccc˝
+     %“tablenum–1˝
+     %“tablecolumns–4˝ “tablewidth–0pc˝
+     %**** wang.tex Line 450 ****
+     %“tablecaption–Fitted parameters for mass functions of NGC188“label–table4˝˝
+     %“tabletypesize–“scriptsize˝
+     %“tabletypesize–“tiny˝
+     %“tablehead–“colhead–Distance $r$˝ & “colhead–$“alpha~(m ¡ m˙–“rm break˝)$˝ & “colhead–$“alpha~(m¿m˙–“rm break˝)$˝““
+     %“colhead–$(“rm arcmin)$˝& “colhead–$0.6-0.885$˝ &“colhead–$0.885-1.125$˝˝
+     %“startdata-->
+  <table frefnum="Table 4" refnum="4" xml:id="A0.T4" labels="LABEL:table4" fragid="A0.T4">
+    <toccaption class="ltx_centering"><tag close=" ">4</tag>Fitted parameters for mass functions of NGC 188</toccaption>
+    <caption class="ltx_centering"><tag>Table 4</tag>Fitted parameters for mass functions of NGC 188</caption>
+    <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+      <thead>
+        <tr>
+          <td align="center" border="tt" thead="column">Distance <Math mode="inline" xml:id="A0.T4.m1" tex="r" text="r" fragid="A0.T4.m1"/></td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T4.m2" tex="\alpha~{}(m&lt;m_{\rm break})" fragid="A0.T4.m2"/>
+          </td>
+          <td align="center" border="tt" thead="column">
+            <Math mode="inline" xml:id="A0.T4.m3" tex="\alpha~{}(m&gt;m_{\rm break})" fragid="A0.T4.m3"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" thead="column">
+            <Math mode="inline" xml:id="A0.T4.m4" tex="(\rm arcmin)" text="arcmin" fragid="A0.T4.m4"/>
+          </td>
+          <td align="center" thead="column">
+            <Math mode="inline" xml:id="A0.T4.m5" tex="0.6-0.885" text="0.6 - 0.885" fragid="A0.T4.m5"/>
+          </td>
+          <td align="center" thead="column">
+            <Math mode="inline" xml:id="A0.T4.m6" tex="0.885-1.125" text="0.885 - 1.125" fragid="A0.T4.m6"/>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T4.m7" tex="0.0-30.0" text="0.0 - 30.0" fragid="A0.T4.m7"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T4.m8" tex="0.12" text="0.12" fragid="A0.T4.m8"/>
+          </td>
+          <td align="center" border="t">
+            <Math mode="inline" xml:id="A0.T4.m9" tex="-0.76" text="- 0.76" fragid="A0.T4.m9"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m10" tex="0.0-3.80" text="0.0 - 3.80" fragid="A0.T4.m10"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m11" tex="4.91" text="4.91" fragid="A0.T4.m11"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m12" tex="1.09" text="1.09" fragid="A0.T4.m12"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m13" tex="3.80-15.0" text="3.80 - 15.0" fragid="A0.T4.m13"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m14" tex="1.33" text="1.33" fragid="A0.T4.m14"/>
+          </td>
+          <td align="center">
+            <Math mode="inline" xml:id="A0.T4.m15" tex="-0.86" text="- 0.86" fragid="A0.T4.m15"/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T4.m16" tex="15.0-30.0" text="15.0 - 30.0" fragid="A0.T4.m16"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T4.m17" tex="-1.09" text="- 1.09" fragid="A0.T4.m17"/>
+          </td>
+          <td align="center" border="b">
+            <Math mode="inline" xml:id="A0.T4.m18" tex="-2.15" text="- 2.15" fragid="A0.T4.m18"/>
+          </td>
+        </tr>
+      </tbody>
+    </tabular>
+  </table>
+</document>

@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="amsart" options="12pt"?>
+<!-- %“pagestyle–plain˝ -->
+<!-- %“usepackage–amsfonts, amssymb, curves, epic, epsf, amsmath, amsthm˝ -->
+<?latexml package="amsfonts,amssymb,amsmath,amsthm"?>
+<?latexml package="amscd"?>
+<?latexml package="color"?>
+<?latexml package="enumerate"?>
+<!-- %“newcommand–“annotation˝[1]–“marginpar–“tiny “textcolor–DarkRed˝–#1˝˝˝ -->
+<!-- %**** ExplicitExamplesNK1Arxiv.tex Line 25 **** -->
+<!-- %**** ExplicitExamplesNK1Arxiv.tex Line 50 **** -->
+<!-- %“newtheorem–theorem˝–Theorem˝ -->
+<!-- %“newtheorem–Theorem˝[theorem]–Theorem˝ -->
+<!-- %**** ExplicitExamplesNK1Arxiv.tex Line 75 **** -->
+<!-- %“newtheorem–conjecture˝[theorem]–Conjecture˝ -->
+<!-- %“newenvironment–example˝–“medskip“noindent –“em Example:˝˝–˝ -->
+<!-- %% xy.tex from $Id: xy.doc,v 3.7 1999/02/16 15:12:50 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Basic Xy-pictures: Xy-pic bootstrap and kernel macros. -->
+<!-- %% Copyright (c) 1991-1999 Kristoffer H. Rose ¡krisrose@ens-lyon.fr¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% Copyright (c) 1991-1999 Kristoffer H. Rose ¡krisrose@ens-lyon.fr¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xy.tex Line 25 **** -->
+<!-- %**** xy.tex Line 50 **** -->
+<!-- %**** xy.tex Line 75 **** -->
+<!-- %**** xy.tex Line 100 **** -->
+<!-- %% xyrecat.tex from $Id: xyrecat.doc,v 3.3 1996/12/19 03:31:56 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Reset Category Codes’’ utility. -->
+<!-- %% Copyright (c) 1994-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyrecat.tex Line 25 **** -->
+<!-- %% xyidioms.tex from $Id: xyidioms.doc,v 3.4 1997/05/18 01:14:25 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Format-dependent idioms for Xy-pic. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyidioms.tex Line 25 **** -->
+<!-- %**** xyidioms.tex Line 50 **** -->
+<!-- %**** xy.tex Line 125 **** -->
+<!-- %**** xy.tex Line 150 **** -->
+<!-- %**** xy.tex Line 175 **** -->
+<!-- %**** xy.tex Line 200 **** -->
+<!-- %**** xy.tex Line 225 **** -->
+<!-- %**** xy.tex Line 250 **** -->
+<!-- %**** xy.tex Line 275 **** -->
+<!-- %**** xy.tex Line 300 **** -->
+<!-- %**** xy.tex Line 325 **** -->
+<!-- %**** xy.tex Line 350 **** -->
+<!-- %**** xy.tex Line 375 **** -->
+<!-- %**** xy.tex Line 400 **** -->
+<!-- %**** xy.tex Line 425 **** -->
+<!-- %**** xy.tex Line 450 **** -->
+<!-- %**** xy.tex Line 475 **** -->
+<!-- %**** xy.tex Line 500 **** -->
+<!-- %**** xy.tex Line 525 **** -->
+<!-- %**** xy.tex Line 550 **** -->
+<!-- %**** xy.tex Line 575 **** -->
+<!-- %**** xy.tex Line 600 **** -->
+<!-- %**** xy.tex Line 625 **** -->
+<!-- %**** xy.tex Line 650 **** -->
+<!-- %**** xy.tex Line 675 **** -->
+<!-- %**** xy.tex Line 700 **** -->
+<!-- %**** xy.tex Line 725 **** -->
+<!-- %**** xy.tex Line 750 **** -->
+<!-- %**** xy.tex Line 775 **** -->
+<!-- %**** xy.tex Line 800 **** -->
+<!-- %**** xy.tex Line 825 **** -->
+<!-- %**** xy.tex Line 850 **** -->
+<!-- %**** xy.tex Line 875 **** -->
+<!-- %**** xy.tex Line 900 **** -->
+<!-- %**** xy.tex Line 925 **** -->
+<!-- %**** xy.tex Line 950 **** -->
+<!-- %**** xy.tex Line 975 **** -->
+<!-- %**** xy.tex Line 1000 **** -->
+<!-- %**** xy.tex Line 1025 **** -->
+<!-- %**** xy.tex Line 1050 **** -->
+<!-- %**** xy.tex Line 1075 **** -->
+<!-- %Delete this: “expandafter“addtotoks@“expandafter–“next–#2˝˝% -->
+<!-- %**** xy.tex Line 1100 **** -->
+<!-- %**** xy.tex Line 1125 **** -->
+<!-- %**** xy.tex Line 1150 **** -->
+<!-- %**** xy.tex Line 1175 **** -->
+<!-- %**** xy.tex Line 1200 **** -->
+<!-- %**** xy.tex Line 1225 **** -->
+<!-- %**** xy.tex Line 1250 **** -->
+<!-- %**** xy.tex Line 1275 **** -->
+<!-- %**** xy.tex Line 1300 **** -->
+<!-- %**** xy.tex Line 1325 **** -->
+<!-- %**** xy.tex Line 1350 **** -->
+<!-- %**** xy.tex Line 1375 **** -->
+<!-- %**** xy.tex Line 1400 **** -->
+<!-- %**** xy.tex Line 1425 **** -->
+<!-- %**** xy.tex Line 1450 **** -->
+<!-- %**** xy.tex Line 1475 **** -->
+<!-- %**** xy.tex Line 1500 **** -->
+<!-- %**** xy.tex Line 1525 **** -->
+<!-- %**** xy.tex Line 1550 **** -->
+<!-- %**** xy.tex Line 1575 **** -->
+<!-- %**** xy.tex Line 1600 **** -->
+<!-- %**** xy.tex Line 1625 **** -->
+<!-- %**** xy.tex Line 1650 **** -->
+<!-- %**** xy.tex Line 1675 **** -->
+<!-- %**** xy.tex Line 1700 **** -->
+<!-- %**** xy.tex Line 1725 **** -->
+<!-- %**** xy.tex Line 1750 **** -->
+<!-- %**** xy.tex Line 1775 **** -->
+<!-- %**** xy.tex Line 1800 **** -->
+<!-- %**** xy.tex Line 1825 **** -->
+<!-- %**** xy.tex Line 1850 **** -->
+<!-- %**** xy.tex Line 1875 **** -->
+<!-- %**** xy.tex Line 1900 **** -->
+<!-- %**** xy.tex Line 1925 **** -->
+<!-- %**** xy.tex Line 1950 **** -->
+<!-- %**** xy.tex Line 1975 **** -->
+<!-- %**** xy.tex Line 2000 **** -->
+<!-- %**** xy.tex Line 2025 **** -->
+<!-- %**** xy.tex Line 2050 **** -->
+<!-- %**** xy.tex Line 2075 **** -->
+<!-- %**** xy.tex Line 2100 **** -->
+<!-- %**** xy.tex Line 2125 **** -->
+<!-- %**** xy.tex Line 2150 **** -->
+<!-- %**** xy.tex Line 2175 **** -->
+<!-- %**** xy.tex Line 2200 **** -->
+<!-- %**** xy.tex Line 2225 **** -->
+<!-- %**** xy.tex Line 2250 **** -->
+<!-- %**** xy.tex Line 2275 **** -->
+<!-- %**** xy.tex Line 2300 **** -->
+<!-- %**** xy.tex Line 2325 **** -->
+<!-- %**** xy.tex Line 2350 **** -->
+<!-- %%“xydef@“circlescale@–“divide“R@c“KK@ “divide“d@X“KK@ “divide“d@Y“KK@ ˝ -->
+<!-- %**** xy.tex Line 2375 **** -->
+<!-- %**** xy.tex Line 2400 **** -->
+<!-- %**** xy.tex Line 2425 **** -->
+<!-- %**** xy.tex Line 2450 **** -->
+<!-- %**** xy.tex Line 2475 **** -->
+<!-- %1a -->
+<!-- %3a -->
+<!-- %**** xy.tex Line 2500 **** -->
+<!-- %**** xy.tex Line 2525 **** -->
+<!-- %**** xy.tex Line 2550 **** -->
+<!-- %**** xy.tex Line 2575 **** -->
+<!-- %**** xy.tex Line 2600 **** -->
+<!-- %**** xy.tex Line 2625 **** -->
+<!-- %**** xy.tex Line 2650 **** -->
+<!-- %**** xy.tex Line 2675 **** -->
+<!-- %% xyall.tex from $Id: xyall.doc,v 3.3 1996/12/19 03:31:56 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘All features’’ option. -->
+<!-- %% Copyright (c) 1993-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyall.tex Line 25 **** -->
+<!-- %% xycurve.tex from $Id: xycurve.doc,v 3.7 1999/02/16 15:12:50 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Curves and Splines’’ extension. -->
+<!-- %% Copyright (c) 1993-1997 Ross Moore ¡ross@mpce.mq.edu.au¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@ens-lyon.fr¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xycurve.tex Line 25 **** -->
+<!-- %**** xycurve.tex Line 50 **** -->
+<!-- %**** xycurve.tex Line 75 **** -->
+<!-- %**** xycurve.tex Line 100 **** -->
+<!-- %**** xycurve.tex Line 125 **** -->
+<!-- %**** xycurve.tex Line 150 **** -->
+<!-- %**** xycurve.tex Line 175 **** -->
+<!-- %**** xycurve.tex Line 200 **** -->
+<!-- %**** xycurve.tex Line 225 **** -->
+<!-- %**** xycurve.tex Line 250 **** -->
+<!-- %**** xycurve.tex Line 275 **** -->
+<!-- %**** xycurve.tex Line 300 **** -->
+<!-- %**** xycurve.tex Line 325 **** -->
+<!-- %**** xycurve.tex Line 350 **** -->
+<!-- %**** xycurve.tex Line 375 **** -->
+<!-- %**** xycurve.tex Line 400 **** -->
+<!-- %% “getcrvsegsnum@ “advance“dimen@“count@“p@ -->
+<!-- %**** xycurve.tex Line 425 **** -->
+<!-- %% splinecorrect@c is probably wrong here!! -->
+<!-- %**** xycurve.tex Line 450 **** -->
+<!-- %**** xycurve.tex Line 475 **** -->
+<!-- %% “getcrvsegsnum@ -->
+<!-- %% “dimen@=-“count@“p@ -->
+<!-- %**** xycurve.tex Line 500 **** -->
+<!-- %**** xycurve.tex Line 525 **** -->
+<!-- %**** xycurve.tex Line 550 **** -->
+<!-- %**** xycurve.tex Line 575 **** -->
+<!-- %**** xycurve.tex Line 600 **** -->
+<!-- %**** xycurve.tex Line 625 **** -->
+<!-- %**** xycurve.tex Line 650 **** -->
+<!-- %**** xycurve.tex Line 675 **** -->
+<!-- %**** xycurve.tex Line 700 **** -->
+<!-- %**** xycurve.tex Line 725 **** -->
+<!-- %**** xycurve.tex Line 750 **** -->
+<!-- %**** xycurve.tex Line 775 **** -->
+<!-- %**** xycurve.tex Line 800 **** -->
+<!-- %**** xycurve.tex Line 825 **** -->
+<!-- %**** xycurve.tex Line 850 **** -->
+<!-- %**** xycurve.tex Line 875 **** -->
+<!-- %**** xycurve.tex Line 900 **** -->
+<!-- %**** xycurve.tex Line 925 **** -->
+<!-- %**** xycurve.tex Line 950 **** -->
+<!-- %**** xycurve.tex Line 975 **** -->
+<!-- %**** xycurve.tex Line 1000 **** -->
+<!-- %**** xycurve.tex Line 1025 **** -->
+<!-- %**** xycurve.tex Line 1050 **** -->
+<!-- %**** xycurve.tex Line 1075 **** -->
+<!-- %**** xycurve.tex Line 1100 **** -->
+<!-- %**** xycurve.tex Line 1125 **** -->
+<!-- %**** xycurve.tex Line 1150 **** -->
+<!-- %**** xycurve.tex Line 1175 **** -->
+<!-- %**** xycurve.tex Line 1200 **** -->
+<!-- %% “multiply“splineval@“m@ne “advance“splineval@“p@ -->
+<!-- %% “def“segmentnum@–1˝ -->
+<!-- %**** xycurve.tex Line 1225 **** -->
+<!-- %**** xycurve.tex Line 1250 **** -->
+<!-- %**** xycurve.tex Line 1275 **** -->
+<!-- %**** xycurve.tex Line 1300 **** -->
+<!-- %**** xycurve.tex Line 1325 **** -->
+<!-- %**** xycurve.tex Line 1350 **** -->
+<!-- %**** xycurve.tex Line 1375 **** -->
+<!-- %**** xycurve.tex Line 1400 **** -->
+<!-- %**** xycurve.tex Line 1425 **** -->
+<!-- %**** xycurve.tex Line 1450 **** -->
+<!-- %**** xycurve.tex Line 1475 **** -->
+<!-- %**** xycurve.tex Line 1500 **** -->
+<!-- %**** xycurve.tex Line 1525 **** -->
+<!-- %**** xycurve.tex Line 1550 **** -->
+<!-- %**** xycurve.tex Line 1575 **** -->
+<!-- %**** xycurve.tex Line 1600 **** -->
+<!-- %**** xycurve.tex Line 1625 **** -->
+<!-- %**** xycurve.tex Line 1650 **** -->
+<!-- %**** xycurve.tex Line 1675 **** -->
+<!-- %**** xycurve.tex Line 1700 **** -->
+<!-- %**** xycurve.tex Line 1725 **** -->
+<!-- %**** xycurve.tex Line 1750 **** -->
+<!-- %**** xycurve.tex Line 1775 **** -->
+<!-- %% “ifdim“bendPLACE@“p@=“z@ “emptyspline@ “else -->
+<!-- %**** xycurve.tex Line 1800 **** -->
+<!-- %**** xycurve.tex Line 1825 **** -->
+<!-- %**** xycurve.tex Line 1850 **** -->
+<!-- %**** xycurve.tex Line 1875 **** -->
+<!-- %**** xycurve.tex Line 1900 **** -->
+<!-- %**** xycurve.tex Line 1925 **** -->
+<!-- %**** xycurve.tex Line 1950 **** -->
+<!-- %**** xycurve.tex Line 1975 **** -->
+<!-- %**** xycurve.tex Line 2000 **** -->
+<!-- %**** xycurve.tex Line 2025 **** -->
+<!-- %**** xycurve.tex Line 2050 **** -->
+<!-- %**** xycurve.tex Line 2075 **** -->
+<!-- %**** xycurve.tex Line 2100 **** -->
+<!-- %**** xycurve.tex Line 2125 **** -->
+<!-- %**** xycurve.tex Line 2150 **** -->
+<!-- %**** xycurve.tex Line 2175 **** -->
+<!-- %**** xycurve.tex Line 2200 **** -->
+<!-- %**** xycurve.tex Line 2225 **** -->
+<!-- %**** xycurve.tex Line 2250 **** -->
+<!-- %**** xycurve.tex Line 2275 **** -->
+<!-- %**** xycurve.tex Line 2300 **** -->
+<!-- %**** xycurve.tex Line 2325 **** -->
+<!-- %**** xycurve.tex Line 2350 **** -->
+<!-- %**** xycurve.tex Line 2375 **** -->
+<!-- %**** xycurve.tex Line 2400 **** -->
+<!-- %**** xycurve.tex Line 2425 **** -->
+<!-- %**** xycurve.tex Line 2450 **** -->
+<!-- %**** xycurve.tex Line 2475 **** -->
+<!-- %% “cubicCircleControls@@ -->
+<!-- %**** xycurve.tex Line 2500 **** -->
+<!-- %**** xycurve.tex Line 2525 **** -->
+<!-- %**** xycurve.tex Line 2550 **** -->
+<!-- %**** xycurve.tex Line 2575 **** -->
+<!-- %**** xycurve.tex Line 2600 **** -->
+<!-- %**** xycurve.tex Line 2625 **** -->
+<!-- %**** xycurve.tex Line 2650 **** -->
+<!-- %**** xycurve.tex Line 2675 **** -->
+<!-- %**** xycurve.tex Line 2700 **** -->
+<!-- %% xyframe.tex from $Id: xyframe.doc,v 3.7 1999/02/16 15:12:50 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Frames and Brackets’’ extension. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyframe.tex Line 25 **** -->
+<!-- %**** xyframe.tex Line 50 **** -->
+<!-- %**** xyframe.tex Line 75 **** -->
+<!-- %**** xyframe.tex Line 100 **** -->
+<!-- %**** xyframe.tex Line 125 **** -->
+<!-- %**** xyframe.tex Line 150 **** -->
+<!-- %**** xyframe.tex Line 175 **** -->
+<!-- %**** xyframe.tex Line 200 **** -->
+<!-- %**** xyframe.tex Line 225 **** -->
+<!-- %**** xyframe.tex Line 250 **** -->
+<!-- %**** xyframe.tex Line 275 **** -->
+<!-- %**** xyframe.tex Line 300 **** -->
+<!-- %**** xyframe.tex Line 325 **** -->
+<!-- %**** xyframe.tex Line 350 **** -->
+<!-- %**** xyframe.tex Line 375 **** -->
+<!-- %**** xyframe.tex Line 400 **** -->
+<!-- %**** xyframe.tex Line 425 **** -->
+<!-- %**** xyframe.tex Line 450 **** -->
+<!-- %**** xyframe.tex Line 475 **** -->
+<!-- %**** xyframe.tex Line 500 **** -->
+<!-- %**** xyframe.tex Line 525 **** -->
+<!-- %% xycmtip.tex from $Id: xycmtip.doc,v 3.3 1996/12/19 03:31:56 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Computer Modern tips’’ extension. -->
+<!-- %% Copyright (c) 1992-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xycmtip.tex Line 25 **** -->
+<!-- %% xytips.tex from $Id: xytips.doc,v 3.3 1996/12/19 04:12:13 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘More Tips’’ extension. -->
+<!-- %% Copyright (c) 1992-1996 Kristoffer H. Rose ¡kris@diku.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡kris@diku.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xytips.tex Line 25 **** -->
+<!-- %**** xytips.tex Line 50 **** -->
+<!-- %**** xytips.tex Line 75 **** -->
+<!-- %% xyline.tex from $Id: xyline.doc,v 3.6 1998/03/06 01:28:05 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Line Width’’ extension. -->
+<!-- %% Copyright (c) 1993-1996 Ross Moore ¡ross@mpce.mq.edu.au¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@ens-lyon.fr¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyline.tex Line 25 **** -->
+<!-- %**** xyline.tex Line 50 **** -->
+<!-- %**** xyline.tex Line 75 **** -->
+<!-- %**** xyline.tex Line 100 **** -->
+<!-- %**** xyline.tex Line 125 **** -->
+<!-- %**** xyline.tex Line 150 **** -->
+<!-- %**** xyline.tex Line 175 **** -->
+<!-- %**** xyline.tex Line 200 **** -->
+<!-- %**** xyline.tex Line 225 **** -->
+<!-- %% xyrotate.tex from $Id: xyrotate.doc,v 3.3 1996/12/18 09:40:16 ross Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Rotate and Scale extension’’ option. -->
+<!-- %% Copyright (c) 1993-1996 Ross Moore ¡ross@mpce.mq.edu.au¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyrotate.tex Line 25 **** -->
+<!-- %**** xyrotate.tex Line 50 **** -->
+<!-- %**** xyrotate.tex Line 75 **** -->
+<!-- %**** xyrotate.tex Line 100 **** -->
+<!-- %**** xyrotate.tex Line 125 **** -->
+<!-- %**** xyrotate.tex Line 150 **** -->
+<!-- %% xycolor.tex from $Id: xycolor.doc,v 3.3 1996/12/19 03:50:08 ross Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Colour extension’’ option. -->
+<!-- %% Copyright (c) 1993-1996 Ross Moore ¡ross@mpce.mq.edu.au¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1996 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xycolor.tex Line 25 **** -->
+<!-- %**** xycolor.tex Line 50 **** -->
+<!-- %**** xycolor.tex Line 75 **** -->
+<!-- %**** xycolor.tex Line 100 **** -->
+<!-- %% xymatrix.tex from $Id: xymatrix.doc,v 3.4 1997/05/18 01:14:25 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Matrix’’ feature. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xymatrix.tex Line 25 **** -->
+<!-- %**** xymatrix.tex Line 50 **** -->
+<!-- %**** xymatrix.tex Line 75 **** -->
+<!-- %**** xymatrix.tex Line 100 **** -->
+<!-- %**** xymatrix.tex Line 125 **** -->
+<!-- %**** xymatrix.tex Line 150 **** -->
+<!-- %**** xymatrix.tex Line 175 **** -->
+<!-- %**** xymatrix.tex Line 200 **** -->
+<!-- %**** xymatrix.tex Line 225 **** -->
+<!-- %**** xymatrix.tex Line 250 **** -->
+<!-- %**** xymatrix.tex Line 275 **** -->
+<!-- %**** xymatrix.tex Line 300 **** -->
+<!-- %**** xymatrix.tex Line 325 **** -->
+<!-- %**** xymatrix.tex Line 350 **** -->
+<!-- %**** xymatrix.tex Line 375 **** -->
+<!-- %**** xymatrix.tex Line 400 **** -->
+<!-- %**** xymatrix.tex Line 425 **** -->
+<!-- %**** xymatrix.tex Line 450 **** -->
+<!-- %**** xymatrix.tex Line 475 **** -->
+<!-- %% xyarrow.tex from $Id: xyarrow.doc,v 3.5 1997/05/28 13:05:01 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Arrows and Paths’’ feature. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xyarrow.tex Line 25 **** -->
+<!-- %**** xyarrow.tex Line 50 **** -->
+<!-- %**** xyarrow.tex Line 75 **** -->
+<!-- %**** xyarrow.tex Line 100 **** -->
+<!-- %**** xyarrow.tex Line 125 **** -->
+<!-- %**** xyarrow.tex Line 150 **** -->
+<!-- %**** xyarrow.tex Line 175 **** -->
+<!-- %**** xyarrow.tex Line 200 **** -->
+<!-- %**** xyarrow.tex Line 225 **** -->
+<!-- %**** xyarrow.tex Line 250 **** -->
+<!-- %**** xyarrow.tex Line 275 **** -->
+<!-- %**** xyarrow.tex Line 300 **** -->
+<!-- %**** xyarrow.tex Line 325 **** -->
+<!-- %**** xyarrow.tex Line 350 **** -->
+<!-- %**** xyarrow.tex Line 375 **** -->
+<!-- %**** xyarrow.tex Line 400 **** -->
+<!-- %**** xyarrow.tex Line 425 **** -->
+<!-- %**** xyarrow.tex Line 450 **** -->
+<!-- %**** xyarrow.tex Line 475 **** -->
+<!-- %**** xyarrow.tex Line 500 **** -->
+<!-- %**** xyarrow.tex Line 525 **** -->
+<!-- %% xygraph.tex from $Id: xygraph.doc,v 3.7 1999/02/16 15:12:50 krisrose Exp $ -->
+<!-- %% -->
+<!-- %% Xy-pic ‘‘Graph Combinator feature’’ option. -->
+<!-- %% Copyright (c) 1994-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% This file is part of the Xy-pic package for graphs and diagrams in TeX. -->
+<!-- %% See the companion README and INSTALL files for further information. -->
+<!-- %% Copyright (c) 1991-1997 Kristoffer H. Rose ¡krisrose@brics.dk¿ -->
+<!-- %% -->
+<!-- %% The Xy-pic package is free software; you can redistribute it and/or modify -->
+<!-- %% it under the terms of the GNU General Public License as published by the -->
+<!-- %% Free Software Foundation; either version 2 of the License, or (at your -->
+<!-- %% option) any later version. -->
+<!-- %% -->
+<!-- %% The Xy-pic package is distributed in the hope that it will be useful, but -->
+<!-- %% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY -->
+<!-- %% or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License -->
+<!-- %% for more details. -->
+<!-- %% -->
+<!-- %% You should have received a copy of the GNU General Public License along -->
+<!-- %% with this package; if not, write to the Free Software Foundation, Inc., -->
+<!-- %% 675 Mass Ave, Cambridge, MA 02139, USA. -->
+<!-- %% -->
+<!-- %**** xygraph.tex Line 25 **** -->
+<!-- %**** xygraph.tex Line 50 **** -->
+<!-- %**** xygraph.tex Line 75 **** -->
+<!-- %**** xygraph.tex Line 100 **** -->
+<!-- %**** xygraph.tex Line 125 **** -->
+<!-- %**** xygraph.tex Line 150 **** -->
+<!-- %**** xygraph.tex Line 175 **** -->
+<!-- %**** xygraph.tex Line 200 **** -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line ltx_leqno" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <resource src="ltx-amsart.css" type="text/css"/>
+  <title>Explicit examples in <Math mode="inline" xml:id="m1" tex="NK_{1}" text="N * K _ 1" fragid="m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math></title>
+  <toctitle>K Theory Examples</toctitle>
+  <creator role="author">
+    <personname>Scott Schmieding</personname>
+    <contact role="address">Department of Mathematics, University of Maryland, College
+Park MD 20742 U.S.A.</contact>
+    <contact role="email">schmiedi@math.umd.edu</contact>
+  </creator>
+  <abstract name="Abstract.">
+    <p>For certain rings <Math mode="inline" xml:id="m2" tex="\mathcal{R}" text="R" fragid="m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math>,
+we construct explicit matrices representing
+nonzero classes in the
+algebraic <Math mode="inline" xml:id="m3" tex="K" text="K" fragid="m3"><XMath><XMTok role="UNKNOWN" font="italic">K</XMTok></XMath></Math> theory group <Math mode="inline" xml:id="m4" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="m4.1" font="caligraphic" fragid="m4.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.</p>
+  </abstract>
+  <keywords name="Key words and phrases">algebraic K-theory, Nil group, finite group ring, strong shift equivalence</keywords>
+  <classification name="2010 Mathematics Subject Classification" scheme="2010 Mathematics Subject Classification">Primary 19M05; Secondary 37B10</classification>
+  <!-- %**** ExplicitExamplesNK1Arxiv.tex Line 100 **** 
+     %“tableofcontents-->
+  <section refnum="1" xml:id="S1" fragid="S1">
+    <title><tag close=". ">1</tag>Introduction</title>
+    <toctitle><tag close=" ">1</tag>Introduction</toctitle>
+    <para xml:id="S1.p1" class="ltx_indent" fragid="S1.p1">
+      <p>The purpose of this note is simply to
+exhibit explicit matrices representing non-zero classes in
+the algebraic <Math mode="inline" xml:id="S1.p1.m1" tex="K" text="K" fragid="S1.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">K</XMTok></XMath></Math>-theory group <Math mode="inline" xml:id="S1.p1.m2" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S1.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S1.p1.m2.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m2.1" font="caligraphic" fragid="S1.p1.m2.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> (and
+thereby in <Math mode="inline" xml:id="S1.p1.m3" tex="Nil_{0}(\mathcal{R})" text="N * i * l _ 0 * R" fragid="S1.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S1.p1.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m3.1" font="caligraphic" fragid="S1.p1.m3.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>), for
+some rings <Math mode="inline" xml:id="S1.p1.m4" tex="\mathcal{R}" text="R" fragid="S1.p1.m4"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> for which <Math mode="inline" xml:id="S1.p1.m5" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S1.p1.m5"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S1.p1.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m5.1" font="caligraphic" fragid="S1.p1.m5.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> arises as an obstruction in
+<cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BoSc2" title="BoSc2">BoSc2</ref>]</cite> and <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BoSc3" title="BoSc3">BoSc3</ref>]</cite>. In <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BoSc2" title="BoSc2">BoSc2</ref>]</cite>, <Math mode="inline" xml:id="S1.p1.m6" tex="\mathcal{R}" text="R" fragid="S1.p1.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> is the integral group ring
+of a finite group <Math mode="inline" xml:id="S1.p1.m7" tex="G" text="G" fragid="S1.p1.m7"><XMath><XMTok role="UNKNOWN" font="italic">G</XMTok></XMath></Math>; our example is for
+<Math mode="inline" xml:id="S1.p1.m8" tex="G=\mathbb{Z}/4\mathbb{Z}" text="G = (Z / 4) * Z" fragid="S1.p1.m8"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="blackboard">Z</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMTok role="UNKNOWN" font="blackboard">Z</XMTok></XMApp></XMApp></XMath></Math>. (Proof of the nontriviality of <Math mode="inline" xml:id="S1.p1.m9" tex="NK_{1}(\mathbb{Z}[\mathbb{Z}/4])" text="N * K _ 1 * Z * delimited-[]@(Z / 4)" fragid="S1.p1.m9"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S1.p1.m9.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p1.m9.1" fragid="S1.p1.m9.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Z</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S1.p1.m9.1.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S1.p1.m9.1.1" fragid="S1.p1.m9.1.1"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="blackboard">Z</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> can be found in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Weibel2009" title="Weibel2009">Weibel2009</ref>]</cite> or
+<cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="SchmiedingNK1FinAbGrps" title="SchmiedingNK1FinAbGrps">SchmiedingNK1FinAbGrps</ref>]</cite>.) In <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BoSc3" title="BoSc3">BoSc3</ref>]</cite>, <Math mode="inline" xml:id="S1.p1.m10" tex="\mathcal{R}" text="R" fragid="S1.p1.m10"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> is a subring of <Math mode="inline" xml:id="S1.p1.m11" tex="\mathbb{R}" text="R" fragid="S1.p1.m11"><XMath><XMTok role="UNKNOWN" font="blackboard">R</XMTok></XMath></Math>;
+our example is for <Math mode="inline" xml:id="S1.p1.m12" tex="\mathcal{R}=\mathbb{Q}[t^{2},t^{3},z,z^{-1}]" text="R = Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S1.p1.m12"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="caligraphic">R</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S1.p1.m12.2"/><XMRef idref="S1.p1.m12.3"/><XMRef idref="S1.p1.m12.1"/><XMRef idref="S1.p1.m12.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S1.p1.m12.2" fragid="S1.p1.m12.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p1.m12.3" fragid="S1.p1.m12.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S1.p1.m12.1" font="italic" fragid="S1.p1.m12.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S1.p1.m12.4" fragid="S1.p1.m12.4"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>
+(which has many embeddings into <Math mode="inline" xml:id="S1.p1.m13" tex="\mathbb{R}" text="R" fragid="S1.p1.m13"><XMath><XMTok role="UNKNOWN" font="blackboard">R</XMTok></XMath></Math>).<break/>It seems to be difficult to locate explicit examples
+<!-- %**** ExplicitExamplesNK1Arxiv.tex Line 125 **** -->of this sort in the literature. The arguments to
+follow give some indication as to why that might be the case.
+The arguments are elementary, and only require carefully tracing through standard arguments and constructions in algebraic K-theory.
+However, the actual computation becomes lengthy,
+and leads to fairly large matrix examples.</p>
+    </para>
+    <para xml:id="S1.p2" class="ltx_indent" fragid="S1.p2">
+      <p>The computation might be of interest for someone
+new to <Math mode="inline" xml:id="S1.p2.m1" tex="K" text="K" fragid="S1.p2.m1"><XMath><XMTok role="UNKNOWN" font="italic">K</XMTok></XMath></Math>-theory, as an example of the complication buried in
+certain exact sequence arguments.<break/>The author would like to thank Mike Boyle for helpful comments and suggestions.</p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=". ">2</tag>Setup</title>
+    <toctitle><tag close=" ">2</tag>Setup</toctitle>
+    <para xml:id="S2.p1" class="ltx_indent" fragid="S2.p1">
+      <p>We will require little setup, all of which can be found in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="WeibelBook" title="WeibelBook">WeibelBook</ref>]</cite>, or <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="Rosenberg1994" title="Rosenberg1994">Rosenberg1994</ref>]</cite>. Always, <Math mode="inline" xml:id="S2.p1.m1" tex="\mathcal{R}" text="R" fragid="S2.p1.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> is an associative ring with <Math mode="inline" xml:id="S2.p1.m2" tex="1" text="1" fragid="S2.p1.m2"><XMath><XMTok meaning="1" role="NUMBER">1</XMTok></XMath></Math>.
+We consider <Math mode="inline" xml:id="S2.p1.m3" tex="K_{1}(\mathcal{R})" text="K _ 1 * R" fragid="S2.p1.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m3.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m3.1" font="caligraphic" fragid="S2.p1.m3.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> as the group <Math mode="inline" xml:id="S2.p1.m4" tex="GL(\mathcal{R})/El(\mathcal{R})" text="((G * L * R) / E) * l * R" fragid="S2.p1.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok><XMDual><XMRef idref="S2.p1.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m4.1" font="caligraphic" fragid="S2.p1.m4.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMTok role="UNKNOWN" font="italic">E</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">l</XMTok><XMDual><XMRef idref="S2.p1.m4.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m4.2" font="caligraphic" fragid="S2.p1.m4.2">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>, where <Math mode="inline" xml:id="S2.p1.m5" tex="GL(\mathcal{R})" text="G * L * R" fragid="S2.p1.m5"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok><XMDual><XMRef idref="S2.p1.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m5.1" font="caligraphic" fragid="S2.p1.m5.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> denotes the stabilized general linear group over <Math mode="inline" xml:id="S2.p1.m6" tex="\mathcal{R}" text="R" fragid="S2.p1.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math>, and <Math mode="inline" xml:id="S2.p1.m7" tex="El(\mathcal{R})" text="E * l * R" fragid="S2.p1.m7"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">E</XMTok><XMTok role="UNKNOWN" font="italic">l</XMTok><XMDual><XMRef idref="S2.p1.m7.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m7.1" font="caligraphic" fragid="S2.p1.m7.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> the stabilized elementary subgroup of <Math mode="inline" xml:id="S2.p1.m8" tex="GL(\mathcal{R})" text="G * L * R" fragid="S2.p1.m8"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">G</XMTok><XMTok role="UNKNOWN" font="italic">L</XMTok><XMDual><XMRef idref="S2.p1.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m8.1" font="caligraphic" fragid="S2.p1.m8.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. There is a map <Math mode="inline" xml:id="S2.p1.m9" tex="K_{1}(\mathcal{R}[t])\to K_{1}(\mathcal{R})" text="K _ 1 * R * delimited-[]@(t) to K _ 1 * R" fragid="S2.p1.m9"><XMath><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m9.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.p1.m9.3" fragid="S2.p1.m9.3"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">R</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p1.m9.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m9.1" font="italic" fragid="S2.p1.m9.1">t</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m9.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m9.2" font="caligraphic" fragid="S2.p1.m9.2">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math> induced by <Math mode="inline" xml:id="S2.p1.m10" tex="t\mapsto 0" text="t maps-to 0" fragid="S2.p1.m10"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, and the kernel of this map is defined to be <Math mode="inline" xml:id="S2.p1.m11" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S2.p1.m11"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m11.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m11.1" font="caligraphic" fragid="S2.p1.m11.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.
+Higman’s trick implies <Math mode="inline" xml:id="S2.p1.m12" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S2.p1.m12"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m12.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m12.1" font="caligraphic" fragid="S2.p1.m12.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>
+is the set of elements of <Math mode="inline" xml:id="S2.p1.m13" tex="K_{1}(\mathcal{R}[t])" text="K _ 1 * R * delimited-[]@(t)" fragid="S2.p1.m13"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p1.m13.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.p1.m13.2" fragid="S2.p1.m13.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="caligraphic">R</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p1.m13.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" xml:id="S2.p1.m13.1" font="italic" fragid="S2.p1.m13.1">t</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> which contain a matrix of the form
+<Math mode="inline" xml:id="S2.p1.m14" tex="I-tN" text="I - t * N" fragid="S2.p1.m14"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">I</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp></XMath></Math>, with <Math mode="inline" xml:id="S2.p1.m15" tex="N" text="N" fragid="S2.p1.m15"><XMath><XMTok role="UNKNOWN" font="italic">N</XMTok></XMath></Math> a nilpotent matrix over <Math mode="inline" xml:id="S2.p1.m16" tex="\mathcal{R}" text="R" fragid="S2.p1.m16"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math>.</p>
+    </para>
+    <para xml:id="S2.p2" fragid="S2.p2">
+      <p>The group
+<Math mode="inline" xml:id="S2.p2.m1" tex="Nil_{0}(\mathcal{R})" text="N * i * l _ 0 * R" fragid="S2.p2.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m1.1" font="caligraphic" fragid="S2.p2.m1.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is defined from
+<!-- %**** ExplicitExamplesNK1Arxiv.tex Line 150 **** --><text font="bold">Nil<Math mode="inline" xml:id="S2.p2.m2" tex="\mathcal{R}" text="R" fragid="S2.p2.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok></XMath></Math></text>, the nilpotent category over <Math mode="inline" xml:id="S2.p2.m3" tex="\mathcal{R}" text="R" fragid="S2.p2.m3"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math>.
+The objects of this category
+are pairs <Math mode="inline" xml:id="S2.p2.m4" tex="(P,f)" text="open-interval@(P, f)" fragid="S2.p2.m4"><XMath><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p2.m4.1"/><XMRef idref="S2.p2.m4.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m4.1" font="italic" fragid="S2.p2.m4.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m4.2" font="italic" fragid="S2.p2.m4.2">f</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>, where <Math mode="inline" xml:id="S2.p2.m5" tex="P" text="P" fragid="S2.p2.m5"><XMath><XMTok role="UNKNOWN" font="italic">P</XMTok></XMath></Math> is a finitely generated projective <Math mode="inline" xml:id="S2.p2.m6" tex="\mathcal{R}" text="R" fragid="S2.p2.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math>-module
+and <Math mode="inline" xml:id="S2.p2.m7" tex="f" text="f" fragid="S2.p2.m7"><XMath><XMTok role="UNKNOWN" font="italic">f</XMTok></XMath></Math> is a nilpotent endomorphism of <Math mode="inline" xml:id="S2.p2.m8" tex="P" text="P" fragid="S2.p2.m8"><XMath><XMTok role="UNKNOWN" font="italic">P</XMTok></XMath></Math>.
+A morphism <Math mode="inline" xml:id="S2.p2.m9" tex="(P,f)\to(Q,g)" text="open-interval@(P, f) to open-interval@(Q, g)" fragid="S2.p2.m9"><XMath><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p2.m9.1"/><XMRef idref="S2.p2.m9.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m9.1" font="italic" fragid="S2.p2.m9.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m9.2" font="italic" fragid="S2.p2.m9.2">f</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p2.m9.3"/><XMRef idref="S2.p2.m9.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m9.3" font="italic" fragid="S2.p2.m9.3">Q</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m9.4" font="italic" fragid="S2.p2.m9.4">g</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is an <Math mode="inline" xml:id="S2.p2.m10" tex="\mathcal{R}" text="R" fragid="S2.p2.m10"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> module homomorphism
+<Math mode="inline" xml:id="S2.p2.m11" tex="h:P\to Q" text="h colon P to Q" fragid="S2.p2.m11"><XMath><XMApp><XMTok name="colon" role="METARELOP">:</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMTok role="UNKNOWN" font="italic">P</XMTok><XMTok role="UNKNOWN" font="italic">Q</XMTok></XMApp></XMApp></XMath></Math> such that <Math mode="inline" xml:id="S2.p2.m12" tex="hf=gh" text="h * f = g * h" fragid="S2.p2.m12"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">g</XMTok><XMTok role="UNKNOWN" font="italic">h</XMTok></XMApp></XMApp></XMath></Math>.
+<text font="bold">Nil<Math mode="inline" xml:id="S2.p2.m13" tex="\mathcal{R}" text="R" fragid="S2.p2.m13"><XMath><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok></XMath></Math></text> acquires an exact structure via
+the forgetful functor <text font="bold">Nil<Math mode="inline" xml:id="S2.p2.m14" tex="\mathcal{R}\to" text="R to absent" fragid="S2.p2.m14"><XMath><XMApp><XMTok name="to" role="ARROW" font="medium">→</XMTok><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok><XMTok meaning="absent"/></XMApp></XMath></Math></text> <text font="bold">Proj<Math mode="inline" xml:id="S2.p2.m15" tex="\mathcal{R}" text="R" fragid="S2.p2.m15"><XMath><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok></XMath></Math></text> given by <Math mode="inline" xml:id="S2.p2.m16" tex="(P,f)\mapsto P" text="open-interval@(P, f) maps-to P" fragid="S2.p2.m16"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p2.m16.1"/><XMRef idref="S2.p2.m16.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m16.1" font="italic" fragid="S2.p2.m16.1">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m16.2" font="italic" fragid="S2.p2.m16.2">f</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMTok role="UNKNOWN" font="italic">P</XMTok></XMApp></XMath></Math>: a sequence in <text font="bold">Nil<Math mode="inline" xml:id="S2.p2.m17" tex="\mathcal{R}" text="R" fragid="S2.p2.m17"><XMath><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok></XMath></Math></text> is exact if its image under this forgetful functor is exact. One may then consider the <Math mode="inline" xml:id="S2.p2.m18" tex="K" text="K" fragid="S2.p2.m18"><XMath><XMTok role="UNKNOWN" font="italic">K</XMTok></XMath></Math>-group <Math mode="inline" xml:id="S2.p2.m19" tex="K_{0}(" fragid="S2.p2.m19"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMTok role="OPEN" stretchy="false">(</XMTok></XMath></Math><text font="bold">Nil<Math mode="inline" xml:id="S2.p2.m20" tex="\mathcal{R})" fragid="S2.p2.m20"><XMath><XMTok role="UNKNOWN" font="caligraphic medium">R</XMTok><XMTok role="CLOSE" stretchy="false" font="medium">)</XMTok></XMath></Math></text> of the exact category <Math mode="inline" xml:id="S2.p2.m21" tex="\textbf{Nil}\mathcal{R}" text="[Nil] * R" fragid="S2.p2.m21"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMText><text font="bold">Nil</text></XMText><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMApp></XMath></Math>
+(see <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="WeibelBook" title="WeibelBook">WeibelBook</ref>, II.7]</cite>).
+The cokernel of the map
+<Math mode="inline" xml:id="S2.p2.m22" tex="K_{0}(\textbf{Proj}\mathcal{R})\to K_{0}(\textbf{Nil}\mathcal{R})" text="K _ 0 * [Proj] * R to K _ 0 * [Nil] * R" fragid="S2.p2.m22"><XMath><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m22.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.p2.m22.1" fragid="S2.p2.m22.1"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMText><text font="bold">Proj</text></XMText><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m22.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S2.p2.m22.2" fragid="S2.p2.m22.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMText><text font="bold">Nil</text></XMText><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>
+given by <Math mode="inline" xml:id="S2.p2.m23" tex="[P]\mapsto[(P,0)]" text="delimited-[]@(P) maps-to delimited-[]@(open-interval@(P, 0))" fragid="S2.p2.m23"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p2.m23.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m23.1" font="italic" fragid="S2.p2.m23.1">P</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p2.m23.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMDual xml:id="S2.p2.m23.4" fragid="S2.p2.m23.4"><XMApp><XMTok meaning="open-interval"/><XMRef idref="S2.p2.m23.2"/><XMRef idref="S2.p2.m23.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m23.2" font="italic" fragid="S2.p2.m23.2">P</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="0" role="NUMBER" xml:id="S2.p2.m23.3" fragid="S2.p2.m23.3">0</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>
+is denoted <Math mode="inline" xml:id="S2.p2.m24" tex="Nil_{0}(\mathcal{R})" text="N * i * l _ 0 * R" fragid="S2.p2.m24"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m24.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m24.1" font="caligraphic" fragid="S2.p2.m24.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>.
+A well-known isomorphism <Math mode="inline" xml:id="S2.p2.m25" tex="NK_{1}(\mathcal{R})\to Nil_{0}(\mathcal{R})" text="N * K _ 1 * R to N * i * l _ 0 * R" fragid="S2.p2.m25"><XMath><XMApp><XMTok name="to" role="ARROW">→</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m25.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m25.1" font="caligraphic" fragid="S2.p2.m25.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p2.m25.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p2.m25.2" font="caligraphic" fragid="S2.p2.m25.2">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math> is induced by <Math mode="inline" xml:id="S2.p2.m26" tex="N\mapsto I-tN" text="N maps-to I - t * N" fragid="S2.p2.m26"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">I</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp></XMApp></XMath></Math>, where <Math mode="inline" xml:id="S2.p2.m27" tex="N" text="N" fragid="S2.p2.m27"><XMath><XMTok role="UNKNOWN" font="italic">N</XMTok></XMath></Math> denotes a nilpotent
+matrix over <Math mode="inline" xml:id="S2.p2.m28" tex="\mathcal{R}" text="R" fragid="S2.p2.m28"><XMath><XMTok role="UNKNOWN" font="caligraphic">R</XMTok></XMath></Math> (viewed as an endomorphism of <Math mode="inline" xml:id="S2.p2.m29" tex="\mathcal{R}^{n}" text="R ^ n" fragid="S2.p2.m29"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="caligraphic">R</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math>, where
+<Math mode="inline" xml:id="S2.p2.m30" tex="N" text="N" fragid="S2.p2.m30"><XMath><XMTok role="UNKNOWN" font="italic">N</XMTok></XMath></Math> is <Math mode="inline" xml:id="S2.p2.m31" tex="n\times n" text="n * n" fragid="S2.p2.m31"><XMath><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math>).
+<break/></p>
+    </para>
+    <para xml:id="S2.p3" class="ltx_indent" fragid="S2.p3">
+      <p>For <Math mode="inline" xml:id="S2.p3.m1" tex="k\geq 1" text="k &gt;= 1" fragid="S2.p3.m1"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>, we recall an important endomorphism of <Math mode="inline" xml:id="S2.p3.m2" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S2.p3.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m2.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m2.1" font="caligraphic" fragid="S2.p3.m2.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. The Verschiebung map <Math mode="inline" xml:id="S2.p3.m3" tex="V_{k}" text="V _ k" fragid="S2.p3.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">V</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp></XMath></Math>
+acts on <Math mode="inline" xml:id="S2.p3.m4" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S2.p3.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m4.1" font="caligraphic" fragid="S2.p3.m4.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> via <Math mode="inline" xml:id="S2.p3.m5" tex="V_{k}([1-tN])=[1-t^{k}N]" text="V _ k * delimited-[]@(1 - t * N) = delimited-[]@(1 - t ^ k * N)" fragid="S2.p3.m5"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">V</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m5.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMDual xml:id="S2.p3.m5.1" fragid="S2.p3.m5.1"><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m5.1.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S2.p3.m5.1.1" fragid="S2.p3.m5.1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m5.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S2.p3.m5.2" fragid="S2.p3.m5.2"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>, and acts on <Math mode="inline" xml:id="S2.p3.m6" tex="Nil_{0}(\mathcal{R})" text="N * i * l _ 0 * R" fragid="S2.p3.m6"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m6.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m6.1" font="caligraphic" fragid="S2.p3.m6.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> via</p>
+      <equation xml:id="S2.Ex1" fragid="S2.Ex1">
+        <Math mode="display" xml:id="S2.Ex1.m1" tex="V_{k}([N])=\Bigg[\left(\begin{smallmatrix}0&amp;0&amp;\cdots&amp;0&amp;N\\&#10;1&amp;0&amp;0&amp;\cdots&amp;0\\&#10;0&amp;1&amp;0&amp;\cdots&amp;0\\&#10;\vdots&amp;0&amp;\ddots&amp;\ddots&amp;\vdots\\&#10;0&amp;\cdots&amp;0&amp;1&amp;0\end{smallmatrix}\right)\Bigg]\ ." text="V _ k * delimited-[]@(N) = delimited-[]@(Array[[0, 0, cdots, 0, N], [1, 0, 0, cdots, 0], [0, 1, 0, cdots, 0], [vdots, 0, ddots, ddots, vdots], [0, cdots, 0, 1, 0]])" fragid="S2.Ex1.m1">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">V</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">k</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMRef idref="S2.Ex1.m1.3"/>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMDual xml:id="S2.Ex1.m1.3" fragid="S2.Ex1.m1.3">
+                      <XMApp>
+                        <XMTok meaning="delimited-[]"/>
+                        <XMRef idref="S2.Ex1.m1.1"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">[</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="S2.Ex1.m1.1" font="italic" fragid="S2.Ex1.m1.1">N</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="delimited-[]"/>
+                  <XMRef idref="S2.Ex1.m1.4"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false" fontsize="260%">[</XMTok>
+                  <XMDual xml:id="S2.Ex1.m1.4" fragid="S2.Ex1.m1.4">
+                    <XMRef idref="S2.Ex1.m1.2"/>
+                    <XMWrap>
+                      <XMTok role="OPEN">(</XMTok>
+                      <XMArray xml:id="S2.Ex1.m1.2" fragid="S2.Ex1.m1.2">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="cdots" role="ID" fontsize="70%">⋯</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok role="UNKNOWN" fontsize="70%" font="italic">N</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER" fontsize="70%">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="cdots" role="ID" fontsize="70%">⋯</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER" fontsize="70%">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="cdots" role="ID" fontsize="70%">⋯</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok name="vdots" role="ID" fontsize="70%">⋮</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="ddots" role="ID" fontsize="70%">⋱</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="ddots" role="ID" fontsize="70%">⋱</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="vdots" role="ID" fontsize="70%">⋮</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok name="cdots" role="ID" fontsize="70%">⋯</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER" fontsize="70%">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER" fontsize="70%">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                  <XMTok role="CLOSE" rpadding="5.0pt" stretchy="false" fontsize="260%">]</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <!-- %**** ExplicitExamplesNK1Arxiv.tex Line 175 **** -->
+      <p>For <Math mode="inline" xml:id="S2.p3.m7" tex="k\geq 1" text="k &gt;= 1" fragid="S2.p3.m7"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> there are associated endomorphisms called the Frobenius maps <Math mode="inline" xml:id="S2.p3.m8" tex="F_{k}" text="F _ k" fragid="S2.p3.m8"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">F</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp></XMath></Math>, which act on <Math mode="inline" xml:id="S2.p3.m9" tex="NK_{1}(\mathcal{R})" text="N * K _ 1 * R" fragid="S2.p3.m9"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m9.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m9.1" font="caligraphic" fragid="S2.p3.m9.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> via
+<Math mode="inline" xml:id="S2.p3.m10" tex="F_{k}([I-tN])=[I-tN^{k}]" text="F _ k * delimited-[]@(I - t * N) = delimited-[]@(I - t * N ^ k)" fragid="S2.p3.m10"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">F</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m10.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMDual xml:id="S2.p3.m10.1" fragid="S2.p3.m10.1"><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m10.1.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S2.p3.m10.1.1" fragid="S2.p3.m10.1.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">I</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m10.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S2.p3.m10.2" fragid="S2.p3.m10.2"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">I</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">t</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>, and
+acts on <Math mode="inline" xml:id="S2.p3.m11" tex="Nil_{0}(\mathcal{R})" text="N * i * l _ 0 * R" fragid="S2.p3.m11"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">l</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m11.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m11.1" font="caligraphic" fragid="S2.p3.m11.1">R</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> via <Math mode="inline" xml:id="S2.p3.m12" tex="F_{k}([N])=[N^{k}]" text="F _ k * delimited-[]@(N) = delimited-[]@(N ^ k)" fragid="S2.p3.m12"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">F</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp><XMDual><XMRef idref="S2.p3.m12.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMDual xml:id="S2.p3.m12.2" fragid="S2.p3.m12.2"><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m12.1"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" xml:id="S2.p3.m12.1" font="italic" fragid="S2.p3.m12.1">N</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMDual><XMApp><XMTok meaning="delimited-[]"/><XMRef idref="S2.p3.m12.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S2.p3.m12.3" fragid="S2.p3.m12.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. We will only require the Verschiebung map in the present note.<break/></p>
+    </para>
+  </section>
+  <section refnum="3" xml:id="S3" fragid="S3">
+    <title><tag close=". ">3</tag>A matrix nontrivial in <Math mode="inline" xml:id="S3.m1" tex="NK_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" text="N * K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S3.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.m1.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.m1.2" fragid="S3.m1.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.m1.2.1"/><XMRef idref="S3.m1.2.2"/><XMRef idref="S3.m1.1"/><XMRef idref="S3.m1.2.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.m1.2.1" fragid="S3.m1.2.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.m1.2.2" fragid="S3.m1.2.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.m1.1" font="italic" fragid="S3.m1.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.m1.2.3" fragid="S3.m1.2.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math></title>
+    <toctitle><tag close=" ">3</tag>A matrix nontrivial in <Math mode="inline" xml:id="S3.m2" tex="NK_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" text="N * K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S3.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.m2.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.m2.2" fragid="S3.m2.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.m2.2.1"/><XMRef idref="S3.m2.2.2"/><XMRef idref="S3.m2.1"/><XMRef idref="S3.m2.2.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.m2.2.1" fragid="S3.m2.2.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.m2.2.2" fragid="S3.m2.2.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.m2.1" font="italic" fragid="S3.m2.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.m2.2.3" fragid="S3.m2.2.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math></toctitle>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>Consider the ring <Math mode="inline" xml:id="S3.p1.m1" tex="\mathbb{Q}[t^{2},t^{3},z,z^{-1}]" text="Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S3.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p1.m1.2"/><XMRef idref="S3.p1.m1.3"/><XMRef idref="S3.p1.m1.1"/><XMRef idref="S3.p1.m1.4"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.p1.m1.2" fragid="S3.p1.m1.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m1.3" fragid="S3.p1.m1.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p1.m1.1" font="italic" fragid="S3.p1.m1.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m1.4" fragid="S3.p1.m1.4"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. For consistency, we let <Math mode="inline" xml:id="S3.p1.m2" tex="NK_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" text="N * K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S3.p1.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.p1.m2.2"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p1.m2.2" fragid="S3.p1.m2.2"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p1.m2.2.1"/><XMRef idref="S3.p1.m2.2.2"/><XMRef idref="S3.p1.m2.1"/><XMRef idref="S3.p1.m2.2.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.p1.m2.2.1" fragid="S3.p1.m2.2.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m2.2.2" fragid="S3.p1.m2.2.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p1.m2.1" font="italic" fragid="S3.p1.m2.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m2.2.3" fragid="S3.p1.m2.2.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> denote the kernel of the map <Math mode="inline" xml:id="S3.p1.m3" tex="K_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1},s])\stackrel{s\mapsto 0}{\to}K_{1}(%&#10;\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" text="K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1), s) to ^ (s maps-to 0) K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="S3.p1.m3"><XMath><XMApp><XMApp role="RELOP"><XMTok role="SUPERSCRIPTOP" scriptpos="mid2"/><XMTok name="to" role="ARROW">→</XMTok><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.p1.m3.4"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p1.m3.4" fragid="S3.p1.m3.4"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p1.m3.4.1"/><XMRef idref="S3.p1.m3.4.2"/><XMRef idref="S3.p1.m3.1"/><XMRef idref="S3.p1.m3.4.3"/><XMRef idref="S3.p1.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.p1.m3.4.1" fragid="S3.p1.m3.4.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m3.4.2" fragid="S3.p1.m3.4.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p1.m3.1" font="italic" fragid="S3.p1.m3.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m3.4.3" fragid="S3.p1.m3.4.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p1.m3.2" font="italic" fragid="S3.p1.m3.2">s</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.p1.m3.5"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p1.m3.5" fragid="S3.p1.m3.5"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p1.m3.5.1"/><XMRef idref="S3.p1.m3.5.2"/><XMRef idref="S3.p1.m3.3"/><XMRef idref="S3.p1.m3.5.3"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.p1.m3.5.1" fragid="S3.p1.m3.5.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m3.5.2" fragid="S3.p1.m3.5.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p1.m3.3" font="italic" fragid="S3.p1.m3.3">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p1.m3.5.3" fragid="S3.p1.m3.5.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMApp></XMath></Math>. In this section, we show the following.</p>
+    </para>
+    <theorem class="ltx_theorem_theorem" frefnum="Theorem 3.1" refnum="3.1" xml:id="S3.Thmtheorem1" labels="LABEL:Example1" fragid="S3.Thmtheorem1">
+      <title class="ltx_runin" font="bold"><tag>Theorem 3.1</tag>.</title>
+      <para xml:id="S3.Thmtheorem1.p1" fragid="S3.Thmtheorem1.p1">
+        <enumerate xml:id="I1" fragid="I1">
+          <item frefnum="(1)" refnum="1" xml:id="I1.i1" fragid="I1.i1">
+            <tag>
+              <text font="italic">(1)</text>
+            </tag>
+            <para xml:id="I1.i1.p1" fragid="I1.i1.p1">
+              <p>
+                <text font="italic">The class of the matrix</text>
+              </p>
+              <equation xml:id="S3.Ex1" fragid="S3.Ex1">
+                <Math mode="display" xml:id="S3.Ex1.m1" tex="\begin{pmatrix}1-(1+z^{-1})s^{4}t^{4}&amp;(z-1)(s^{2}t^{2}-s^{3}t^{3})\\&#10;(1-z^{-1})(s^{2}t^{2})(1+st+s^{2}t^{2}+s^{3}t^{3})&amp;1+(z-1)(s^{4}t^{4})\end{pmatrix}" text="matrix[[1 - (1 + z ^ (- 1)) * s ^ 4 * t ^ 4, (z - 1) * (s ^ 2 * t ^ 2 - s ^ 3 * t ^ 3)], [(1 - z ^ (- 1)) * s ^ 2 * t ^ 2 * (1 + s * t + s ^ 2 * t ^ 2 + s ^ 3 * t ^ 3), 1 + (z - 1) * s ^ 4 * t ^ 4]]" fragid="S3.Ex1.m1">
+                  <XMath>
+                    <XMDual>
+                      <XMRef idref="S3.Ex1.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN">(</XMTok>
+                        <XMArray meaning="matrix" xml:id="S3.Ex1.m1.1" fragid="S3.Ex1.m1.1">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMDual>
+                                    <XMRef idref="S3.Ex1.m1.1.1"/>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMApp xml:id="S3.Ex1.m1.1.1" fragid="S3.Ex1.m1.1.1">
+                                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                          <XMApp>
+                                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                          </XMApp>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                    <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex1.m1.1.2"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex1.m1.1.2" fragid="S3.Ex1.m1.1.2">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex1.m1.1.3"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex1.m1.1.3" fragid="S3.Ex1.m1.1.3">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                        </XMApp>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        </XMApp>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex1.m1.1.4"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex1.m1.1.4" fragid="S3.Ex1.m1.1.4">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex1.m1.1.5"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex1.m1.1.5" fragid="S3.Ex1.m1.1.5">
+                                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex1.m1.1.6"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex1.m1.1.6" fragid="S3.Ex1.m1.1.6">
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                        </XMApp>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        </XMApp>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMDual>
+                                    <XMRef idref="S3.Ex1.m1.1.7"/>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMApp xml:id="S3.Ex1.m1.1.7" fragid="S3.Ex1.m1.1.7">
+                                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      </XMApp>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                  <XMDual>
+                                    <XMRef idref="S3.Ex1.m1.1.8"/>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMApp xml:id="S3.Ex1.m1.1.8" fragid="S3.Ex1.m1.1.8">
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                        </XMApp>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math>
+              </equation>
+              <p>
+                <text font="italic">is not zero in </text>
+                <Math mode="inline" xml:id="I1.i1.p1.m1" tex="NK_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" text="N * K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1))" fragid="I1.i1.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post4"/>
+                        <XMTok role="UNKNOWN" font="italic">K</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="I1.i1.p1.m1.2"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="I1.i1.p1.m1.2" fragid="I1.i1.p1.m1.2">
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok role="UNKNOWN" font="blackboard">Q</XMTok>
+                            <XMDual>
+                              <XMApp>
+                                <XMTok meaning="list"/>
+                                <XMRef idref="I1.i1.p1.m1.2.1"/>
+                                <XMRef idref="I1.i1.p1.m1.2.2"/>
+                                <XMRef idref="I1.i1.p1.m1.1"/>
+                                <XMRef idref="I1.i1.p1.m1.2.3"/>
+                              </XMApp>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">[</XMTok>
+                                <XMApp xml:id="I1.i1.p1.m1.2.1" fragid="I1.i1.p1.m1.2.1">
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMTok role="PUNCT">,</XMTok>
+                                <XMApp xml:id="I1.i1.p1.m1.2.2" fragid="I1.i1.p1.m1.2.2">
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                                <XMTok role="PUNCT">,</XMTok>
+                                <XMTok role="UNKNOWN" xml:id="I1.i1.p1.m1.1" font="italic" fragid="I1.i1.p1.m1.1">z</XMTok>
+                                <XMTok role="PUNCT">,</XMTok>
+                                <XMApp xml:id="I1.i1.p1.m1.2.3" fragid="I1.i1.p1.m1.2.3">
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                                  <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math>
+                <text font="italic">. </text>
+                <break/>
+              </p>
+            </para>
+          </item>
+          <item frefnum="(2)" refnum="2" xml:id="I1.i2" fragid="I1.i2">
+            <tag>
+              <text font="italic">(2)</text>
+            </tag>
+            <para xml:id="I1.i2.p1" fragid="I1.i2.p1">
+              <p>
+                <text font="italic">The class of the matrix</text>
+              </p>
+              <equation xml:id="S3.Ex2" fragid="S3.Ex2">
+                <Math mode="display" xml:id="S3.Ex2.m1" tex="\begin{pmatrix}0&amp;0&amp;0&amp;(1-z)t^{2}&amp;0&amp;(1-z)(-t^{3})&amp;(1-z^{-1})t^{4}&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;(z^{-1}-1)t^{2}&amp;0&amp;(z^{-1}-1)t^{3}&amp;0&amp;(z^{-1}-1)t^{4}&amp;(1-z)t^{4}&amp;(z^{-1}-1)t%&#10;^{5}&amp;0\\&#10;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0\end{pmatrix}" text="matrix[[0, 0, 0, (1 - z) * t ^ 2, 0, (1 - z) * (- t ^ 3), (1 - z ^ (- 1)) * t ^ 4, 0, 0, 0], [0, 0, (z ^ (- 1) - 1) * t ^ 2, 0, (z ^ (- 1) - 1) * t ^ 3, 0, (z ^ (- 1) - 1) * t ^ 4, (1 - z) * t ^ 4, (z ^ (- 1) - 1) * t ^ 5, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]" fragid="S3.Ex2.m1">
+                  <XMath>
+                    <XMDual>
+                      <XMRef idref="S3.Ex2.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN">(</XMTok>
+                        <XMArray meaning="matrix" xml:id="S3.Ex2.m1.1" fragid="S3.Ex2.m1.1">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.1"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.1" fragid="S3.Ex2.m1.1.1">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.2"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.2" fragid="S3.Ex2.m1.1.2">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.3"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.3" fragid="S3.Ex2.m1.1.3">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.4"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.4" fragid="S3.Ex2.m1.1.4">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.5"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.5" fragid="S3.Ex2.m1.1.5">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.6"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.6" fragid="S3.Ex2.m1.1.6">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.7"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.7" fragid="S3.Ex2.m1.1.7">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.8"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.8" fragid="S3.Ex2.m1.1.8">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S3.Ex2.m1.1.9"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S3.Ex2.m1.1.9" fragid="S3.Ex2.m1.1.9">
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                  <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math>
+              </equation>
+              <p>
+                <text font="italic">is non-zero in </text>
+                <Math mode="inline" xml:id="I1.i2.p1.m1" tex="Nil_{0}(\mathbb{Q}[t^{2},t^{3},z,z^{-1}]" fragid="I1.i2.p1.m1">
+                  <XMath>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post4"/>
+                      <XMTok role="UNKNOWN" font="italic">l</XMTok>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok role="UNKNOWN" font="blackboard">Q</XMTok>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">[</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                          <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok role="UNKNOWN" xml:id="I1.i2.p1.m1.1" font="italic" fragid="I1.i2.p1.m1.1">z</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                          <XMTok role="UNKNOWN" font="italic">z</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                      </XMWrap>
+                    </XMWrap>
+                  </XMath>
+                </Math>
+                <text font="italic">.</text>
+              </p>
+            </para>
+          </item>
+        </enumerate>
+      </para>
+    </theorem>
+    <para xml:id="S3.p2" fragid="S3.p2">
+      <p>It follows from <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BoSc1" title="BoSc1">BoSc1</ref>, Theorem 5.4]</cite> that the nilpotent matrix in <Math mode="inline" xml:id="S3.p2.m1" tex="(2)" text="2" fragid="S3.p2.m1"><XMath><XMDual><XMRef idref="S3.p2.m1.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok meaning="2" role="NUMBER" xml:id="S3.p2.m1.1" fragid="S3.p2.m1.1">2</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> of <ref labelref="LABEL:Example1" href="#S3.Thmtheorem1" title="Theorem 3.1. ‣ 3. A matrix nontrivial in ⁢NK1(⁢Q[t2,t3,z,z-1]) ‣ Explicit examples in ⁢NK1"><text class="ltx_ref_tag">3.1</text></ref> is not strong shift equivalent over the ring to the zero matrix (see Section 5). Since this ring may be embedded in <Math mode="inline" xml:id="S3.p2.m2" tex="\mathbb{R}" text="R" fragid="S3.p2.m2"><XMath><XMTok role="UNKNOWN" font="blackboard">R</XMTok></XMath></Math>, this provides an example of a matrix over a subring of the reals which is shift equivalent, but not strong shift equivalent, to zero.<break/><!-- %“cite[Theorem 5.4]–BoSc1˝. -->The remainder of this section is devoted to proving
+<ref labelref="LABEL:Example1" href="#S3.Thmtheorem1" title="Theorem 3.1. ‣ 3. A matrix nontrivial in ⁢NK1(⁢Q[t2,t3,z,z-1]) ‣ Explicit examples in ⁢NK1"><text class="ltx_ref_tag">3.1</text></ref>. An outline for the construction is as follows: we
+begin with a non-zero class in <Math mode="inline" xml:id="S3.p2.m3" tex="K_{1}(\mathbb{Q}[t,s]/I)" text="K _ 1 * ((Q * closed-interval@(t, s)) / I)" fragid="S3.p2.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.p2.m3.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p2.m3.3" fragid="S3.p2.m3.3"><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="closed-interval"/><XMRef idref="S3.p2.m3.1"/><XMRef idref="S3.p2.m3.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m3.1" font="italic" fragid="S3.p2.m3.1">t</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m3.2" font="italic" fragid="S3.p2.m3.2">s</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="UNKNOWN" font="italic">I</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> which lies
+in the kernel of the map induced by <Math mode="inline" xml:id="S3.p2.m4" tex="s\mapsto 0" text="s maps-to 0" fragid="S3.p2.m4"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>. Such classes are
+easy to find. We then proceed by applying a collection of maps to this
+element, taking care that at each stage of the composition, the
+element remains non-zero, and ending in
+<Math mode="inline" xml:id="S3.p2.m5" tex="K_{1}(\mathbb{Q}[t^{2},t^{3},z,z^{-1},s])" text="K _ 1 * Q * list@(t ^ 2, t ^ 3, z, z ^ (- 1), s)" fragid="S3.p2.m5"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMDual><XMRef idref="S3.p2.m5.3"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S3.p2.m5.3" fragid="S3.p2.m5.3"><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S3.p2.m5.3.1"/><XMRef idref="S3.p2.m5.3.2"/><XMRef idref="S3.p2.m5.1"/><XMRef idref="S3.p2.m5.3.3"/><XMRef idref="S3.p2.m5.2"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp xml:id="S3.p2.m5.3.1" fragid="S3.p2.m5.3.1"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p2.m5.3.2" fragid="S3.p2.m5.3.2"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m5.1" font="italic" fragid="S3.p2.m5.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S3.p2.m5.3.3" fragid="S3.p2.m5.3.3"><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m5.2" font="italic" fragid="S3.p2.m5.2">s</XMTok><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap></XMDual></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. The resulting element
+still lies in the kernel upon sending <Math mode="inline" xml:id="S3.p2.m6" tex="s\mapsto 0" text="s maps-to 0" fragid="S3.p2.m6"><XMath><XMApp><XMTok meaning="maps-to" name="mapsto" role="ARROW">↦</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, so the final
+element lies in <Math mode="inline" xml:id="S3.p2.m7" tex="NK_{1}[\mathbb{Q}[t^{2},t^{3},z,z^{-1}])" fragid="S3.p2.m7"><XMath><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">K</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMTok role="UNKNOWN" font="blackboard">Q</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">[</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="S3.p2.m7.1" font="italic" fragid="S3.p2.m7.1">z</XMTok><XMTok role="PUNCT">,</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">z</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">]</XMTok></XMWrap><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMath></Math>. The maps
+which will be applied are shown in the diagram below, starting bottom left and ending top right:
+<!-- %“annotation–See changes at the vertical arrow (color didn’t work 
+     %there).˝--></p>
+      <equation xml:id="S3.Ex3" fragid="S3.Ex3">
+        <text class="ltx_markedasmath">Θ</text>
+      </equation>
+    </para>
+  </section>
+</document>

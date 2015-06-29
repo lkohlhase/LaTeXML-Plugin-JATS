@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  >  Element article-meta content does not follow the DTD, expecting (article-id* , article-categories? , title-group? , (contrib-group | aff | x)* , author-notes? , pub-date* , volume? , volume-id* , volume-series? , issue? , issue-id* , issue-title* , issue-sponsor* , issue-part? , isbn* , supplement? , (((fpage , lpage?)? , page-range?) | elocation-id)? , (email | ext-link | uri | product | supplementary-material)* , history? , permissions? , self-uri* , related-article* , abstract* , trans-abstract* , kwd-group* , funding-group* , conference* , counts? , custom-meta-group?), got (title-group contrib-group abstract CDATA)
+      >  Go to the next error
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="./acm_proc_article-sp" options="preprint"?>
+<?latexml package="epsfig"?>
+<?latexml package="natbib" options="square,comma,numbers,sort&compress"?>
+<!-- %===================================================================== -->
+<!-- %Reduce the overall amount of hyphenation -->
+<!-- %**** paper1.tex Line 25 **** -->
+<!-- %Disallow page breaks at hyphens, except where the only alternative -->
+<!-- %Disallow all widows and orphans (clubs) -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Simulating the Effects of<break/>Various Road Infrastructure Improvements to<break/>Vehicular Traffic in a Busy Three-road Fork</title>
+  <creator role="author">
+    <personname>
+<ERROR class="undefined">\alignauthor</ERROR>Marian G. Arada<break/><ERROR class="undefined">\affaddr</ERROR>Polytechnic University of the Philippines-Taguig<break/>Taguig City 1632, Metro Manila<break/><ERROR class="undefined">\alignauthor</ERROR>Merly F. Tataro<break/><ERROR class="undefined">\affaddr</ERROR>Polytechnic University of the Philippines-Taguig<break/>Taguig City 1632, Metro Manila<break/><ERROR class="undefined">\alignauthor</ERROR>Jaderick P. Pabico<break/><ERROR class="undefined">\affaddr</ERROR>Institute of Computer Science<break/><ERROR class="undefined">\affaddr</ERROR>University of the Philippines Los Baños<break/>College 4031, Laguna
+</personname>
+  </creator>
+  <date role="creation"/>
+  <abstract name="Abstract">
+    <p>Using microsimulations of vehicular dynamics, we studied the effects of several proposed infrastructure developments to the mean travel delay time <Math mode="inline" xml:id="m1" tex="\Delta" text="Delta" fragid="m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and mean speed <Math mode="inline" xml:id="m2" tex="\Sigma" text="Sigma" fragid="m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of vehicles passing a busy three-road fork, particularly in the non-signalized roundabout junction of Lower Bicutan, Taguig City, Metro Manila. We designed and implemented multi-agent-based microsimulation models to mimic the autonomous driving behavior of heterogeneous individuals and measured the effect of various proposed infrastructure developments on <Math mode="inline" xml:id="m3" tex="\Delta" text="Delta" fragid="m3"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="m4" tex="\Sigma" text="Sigma" fragid="m4"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. Our aim is to find out the best infrastructure development from among three choices being considered by the local government for the purpose of solving the traffic problems in the area. We created simulation models of the current vehicular traffic situation in the area using the mean travel times <Math mode="inline" xml:id="m5" tex="\tau" text="tau" fragid="m5"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> of statistically sampled vehicles to show that our model can simulate the real-world at a significance level of <Math mode="inline" xml:id="m6" tex="\alpha=0.05" text="alpha = 0.05" fragid="m6"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>. Based on these models, we then simulated the effect of the proposed infrastructure developments on <Math mode="inline" xml:id="m7" tex="\Delta" text="Delta" fragid="m7"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="m8" tex="\Sigma" text="Sigma" fragid="m8"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> and used these metrics as our basis of comparison. We found out that the proposed widening of one fork from two lanes to three lanes has the most improved metrics at the same <Math mode="inline" xml:id="m9" tex="\alpha=0.05" text="alpha = 0.05" fragid="m9"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math> compared to the metrics we observed in the current situation. Under this infrastructure development, the <Math mode="inline" xml:id="m10" tex="\Delta" text="Delta" fragid="m10"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> increases linearly (<Math mode="inline" xml:id="m11" tex="R^{2}=0.98" text="R ^ 2 = 0.98" fragid="m11"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.98" role="NUMBER">0.98</XMTok></XMApp></XMath></Math>) at the rate of 1.03 <Math mode="inline" xml:id="m12" tex="s" text="s" fragid="m12"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math>, while the <Math mode="inline" xml:id="m13" tex="\Sigma" text="Sigma" fragid="m13"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> decreases linearly (<Math mode="inline" xml:id="m14" tex="R^{2}&gt;0.99" text="R ^ 2 &gt; 0.99" fragid="m14"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.99" role="NUMBER">0.99</XMTok></XMApp></XMath></Math>) at the rate of 0.14 <Math mode="inline" xml:id="m15" tex="km/h" text="(k * m) / h" fragid="m15"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">h</XMTok></XMApp></XMath></Math> per percent increase in the total vehicle volume <Math mode="inline" xml:id="m16" tex="\mathcal{V}" text="V" fragid="m16"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math>.</p>
+    <ERROR class="undefined">\category</ERROR>
+    <p>K.3.7.1Computing MethodologiesArtificial Intelligence[Multi-agent systems]
+<ERROR class="undefined">\category</ERROR>K.5.1.2Computing MethodologiesModeling and Simulation[Model verification and validation]
+<ERROR class="undefined">\category</ERROR>L.9.5Applied ComputingOperations Research[Transportation]</p>
+  </abstract>
+  <ERROR class="undefined">\numberofauthors</ERROR>
+  <para xml:id="p1" fragid="p1">
+    <p>3
+
+<!-- %**** paper1.tex Line 50 **** -->
+<!-- %“toappearbox–Contributed article to the Philippine Information Technology Journal˝ --></p>
+  </para>
+  <!-- %ABSTRACT 
+     %INTRODUCTION-->
+  <section refnum="1" xml:id="S1" fragid="S1">
+    <title><tag close=" ">1</tag>Introduction</title>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>The increasing number of vehicles that use the road at the same time is causing congestions on road networks especially at road sections where nominal widths change such as intersections, three-way forks, and roundabouts. One real-world example of such width change is the Bicutan Roundabout (BR) in Taguig City, Metro Manila. Commuters passing through this roundabout experience delay in travel everyday, especially during rush hours on week days, because of vehicular congestion in the area. BR is located at the Upper Bicutan area and has an inscribed diameter of 34 <Math mode="inline" xml:id="S1.p1.m1" tex="m" text="m" fragid="S1.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math>. It is bounded to the East by the Department of Science and Technology (DOST) campus, to the North by the Philippine National Construction Corporation (PNCC) campus, to the West by the Philippine National Railways (PNR) crossing, and to the South by North <text font="italic">Daanghari</text>. BR serves as the T-intersection between General Paulino Santos Avenue (GPSA) which lies along the ENE-WSW line and SLEX’s East Service Road (ESR) which lies along the NEN-SWS line of the area (Figure <ref labelref="LABEL:fig:BR-map" href="#S1.F1" title="Figure 1 ‣ 1 Introduction ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">1</text></ref>). The nominal center of BR is approximately 100 <Math mode="inline" xml:id="S1.p1.m2" tex="m" text="m" fragid="S1.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> WSW from DOST’s main gate along GPSA, 150 <Math mode="inline" xml:id="S1.p1.m3" tex="m" text="m" fragid="S1.p1.m3"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> SWS of the ESR and San Martin de Porres fork, and 106 <Math mode="inline" xml:id="S1.p1.m4" tex="m" text="m" fragid="S1.p1.m4"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math> ENE of PNR crossing. Jeepneys, buses, trucks, taxis, AUVs, motorcycles, tricycles, and bicycles are the usual type of vehicles that pass the area. Upper Bicutan, a barangay under the urbanized City of Taguig, is situated on the western shore of Laguna de Bay and is bordered in the south by Muntinlupa City, in the southwest by Parañaque City, in the west by Cainta, Rizal, in the northeast by Taytay, Rizal and in the north by Makati City, Pasig City and the Municipality of Pateros. According to the 2010 census, 62,570 out of the city’s total population of 613,343 are residents of Upper Bicutan <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="taguig-web" title="taguig-web">taguig-web</ref>]</cite>.</p>
+    </para>
+    <figure frefnum="Figure 1" placement="bt" refnum="1" xml:id="S1.F1" labels="LABEL:fig:BR-map" fragid="S1.F1">
+      <graphics candidates="satellite-bicutan-roundabout.eps" graphic="./satellite-bicutan-roundabout.eps" options="file=./satellite-bicutan-roundabout.eps, width=469.755pt" xml:id="S1.F1.g1" class="ltx_centering" fragid="S1.F1.g1" imagesrc="x81.png" imagewidth="732" imageheight="527"/>
+      <toccaption class="ltx_centering"><tag close=" ">1</tag>The area map of Upper Bicutan, Taguig City showing the relative location of BR <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="googlemap13" title="googlemap13">googlemap13</ref>]</cite>.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Figure 1</tag>The area map of Upper Bicutan, Taguig City showing the relative location of BR <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="googlemap13" title="googlemap13">googlemap13</ref>]</cite>.</caption>
+    </figure>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>The thrust of the city government administration is to make Taguig City a “Premier City” in the Philippines. However, the physical and financial development of a city is greatly dependent, among others, on the efficiency of its transportation support system, particularly how the city manages the vehicular flow along its road networks. The efficient flow of vehicles carrying human and non-human capitals results in the efficient flow of resources. This translates to a productive citizenry and successful businesses. Because of this, the city government must <text font="italic">make its move</text> in pursuing efficient and practical steps to at least mitigate, if not totally eradicate, traffic congestion which must result into improved vehicular flow. Vehicular flow may be quantified by the following metrics and we say that improvement has been achieved if there is a statistically significant difference the measurement at a particular significance level <Math mode="inline" xml:id="S1.p2.m1" tex="\alpha" text="alpha" fragid="S1.p2.m1"><XMath><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMath></Math> as compared to the current situation:
+<!-- %**** paper1.tex Line 75 **** --></p>
+      <enumerate xml:id="I1" fragid="I1">
+        <item frefnum="1." refnum="1" xml:id="I1.i1" fragid="I1.i1">
+          <tag>1.</tag>
+          <para xml:id="I1.i1.p1" fragid="I1.i1.p1">
+            <p>Average vehicular delay time while in BR (<Math mode="inline" xml:id="I1.i1.p1.m1" tex="\Delta" text="Delta" fragid="I1.i1.p1.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math>) – This metric measures the total amount of time that the vehicle is in the stopped position (i.e., when the vehicle has a speed of 0 <Math mode="inline" xml:id="I1.i1.p1.m2" tex="km/h" text="(k * m) / h" fragid="I1.i1.p1.m2"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">h</XMTok></XMApp></XMath></Math>); and</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I1.i2" fragid="I1.i2">
+          <tag>2.</tag>
+          <para xml:id="I1.i2.p1" fragid="I1.i2.p1">
+            <p>Average vehicular speed while in BR (<Math mode="inline" xml:id="I1.i2.p1.m1" tex="\Sigma" text="Sigma" fragid="I1.i2.p1.m1"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>) – This metric measures the mean speed of a vehicle while traveling within the BR area.</p>
+          </para>
+        </item>
+      </enumerate>
+      <p>Ideally, we wanted <Math mode="inline" xml:id="S1.p2.m2" tex="\Delta" text="Delta" fragid="S1.p2.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> to approximate zero while we wanted <Math mode="inline" xml:id="S1.p2.m3" tex="\Sigma" text="Sigma" fragid="S1.p2.m3"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> to be near but not more than the legal maximum speed. In realistic situations, however, <Math mode="inline" xml:id="S1.p2.m4" tex="\Delta&gt;0" text="Delta &gt; 0" fragid="S1.p2.m4"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S1.p2.m5" tex="\Sigma" text="Sigma" fragid="S1.p2.m5"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> is even way below the legal minimum speed. These two metrics complement each other because for some agents such as those who drive big trucks, an almost zero <Math mode="inline" xml:id="S1.p2.m6" tex="\Delta" text="Delta" fragid="S1.p2.m6"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and a very low <Math mode="inline" xml:id="S1.p2.m7" tex="\Sigma" text="Sigma" fragid="S1.p2.m7"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> is much more desirable than a <Math mode="inline" xml:id="S1.p2.m8" tex="\Delta&gt;0" text="Delta &gt; 0" fragid="S1.p2.m8"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and a relatively high <Math mode="inline" xml:id="S1.p2.m9" tex="\Sigma" text="Sigma" fragid="S1.p2.m9"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. This is because it requires much more fuel to move the heavy vehicles from a full stop than to keep them moving at low <Math mode="inline" xml:id="S1.p2.m10" tex="\Sigma" text="Sigma" fragid="S1.p2.m10"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. For agent drivers of light- and medium-weight vehicles, a <Math mode="inline" xml:id="S1.p2.m11" tex="\Delta&gt;0" text="Delta &gt; 0" fragid="S1.p2.m11"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> but a very high <Math mode="inline" xml:id="S1.p2.m12" tex="\Sigma" text="Sigma" fragid="S1.p2.m12"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> is desirable because fuel burnt at low <Math mode="inline" xml:id="S1.p2.m13" tex="\Sigma" text="Sigma" fragid="S1.p2.m13"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> is greater than when idle (for at least within some reasonable time).</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>There are two ways the city can <text font="italic">make its move</text>: (1) Improve the infrastructure of the road network that will best optimize the <Math mode="inline" xml:id="S1.p3.m1" tex="\Delta" text="Delta" fragid="S1.p3.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and the <Math mode="inline" xml:id="S1.p3.m2" tex="\Sigma" text="Sigma" fragid="S1.p3.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>, or (2) implement responsive but efficient time-dependent traffic schemes that will significantly improve both metrics. Both moves are very costly if the government is to try all possible schemes and infrastructure just for the simple reason of finding the optimal one.</p>
+    </para>
+    <para xml:id="S1.p4" fragid="S1.p4">
+      <p>In terms of finding the optimal infrastructure improvement for BR, one should not do it via a trial-and-error way because it means the following: (1) building the infrastructure, (2) letting it tried by the commuters for a reasonable amount of time just to statistically compile the <Math mode="inline" xml:id="S1.p4.m1" tex="\Delta" text="Delta" fragid="S1.p4.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and the <Math mode="inline" xml:id="S1.p4.m2" tex="\Sigma" text="Sigma" fragid="S1.p4.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> metrics, and then (3) removing it to build the next one. By the time the government has compiled the data it needed, it has already spent significant amount of money, time, and other resources. Besides, the data collected might have already been biased due to what we call “data collection dependency” brought about by the memory of the agents in their experiences. This means that for a trial-and-error with <Math mode="inline" xml:id="S1.p4.m3" tex="n" text="n" fragid="S1.p4.m3"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> iterations, the data collected on the <Math mode="inline" xml:id="S1.p4.m4" tex="(i+1)" text="i + 1" fragid="S1.p4.m4"><XMath><XMDual><XMRef idref="S1.p4.m4.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p4.m4.1" fragid="S1.p4.m4.1"><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>th iterate might have been interactively affected by the improvement made during the <Math mode="inline" xml:id="S1.p4.m5" tex="i" text="i" fragid="S1.p4.m5"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th iterate, unless of course, after every iterate we revert back to the current infrastructure for the same amount of time just so both the drivers and the commuters will forget their <Math mode="inline" xml:id="S1.p4.m6" tex="i" text="i" fragid="S1.p4.m6"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th experiences.</p>
+    </para>
+    <para xml:id="S1.p5" fragid="S1.p5">
+      <p>In terms of implementing responsive yet efficient traffic schemes, most local governments have the habitual liking of doing it in the trial-and-error way, as experienced by all of this paper’s authors. If for example the local Traffic Management Office (TMO) is considering <Math mode="inline" xml:id="S1.p5.m1" tex="n" text="n" fragid="S1.p5.m1"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> traffic schemes, they will: (1) implement the <Math mode="inline" xml:id="S1.p5.m2" tex="i" text="i" fragid="S1.p5.m2"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th scheme for a <Math mode="inline" xml:id="S1.p5.m3" tex="t" text="t" fragid="S1.p5.m3"><XMath><XMTok role="UNKNOWN" font="italic">t</XMTok></XMath></Math> period of time (where <Math mode="inline" xml:id="S1.p5.m4" tex="t" text="t" fragid="S1.p5.m4"><XMath><XMTok role="UNKNOWN" font="italic">t</XMTok></XMath></Math> is empirically selected to be long enough for the drivers and the commuters to adapt to it), (2) compile the <Math mode="inline" xml:id="S1.p5.m5" tex="\Delta" text="Delta" fragid="S1.p5.m5"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and the <Math mode="inline" xml:id="S1.p5.m6" tex="\Sigma" text="Sigma" fragid="S1.p5.m6"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> metrics, and (3) repeat the process for the <Math mode="inline" xml:id="S1.p5.m7" tex="(i+1)" text="i + 1" fragid="S1.p5.m7"><XMath><XMDual><XMRef idref="S1.p5.m7.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p5.m7.1" fragid="S1.p5.m7.1"><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>th scheme. The local TMO will then compare the schemes and decide based on the metrics collected without considering (maybe even knowing) that there is an interactive effect on the <Math mode="inline" xml:id="S1.p5.m8" tex="(i+1)" text="i + 1" fragid="S1.p5.m8"><XMath><XMDual><XMRef idref="S1.p5.m8.1"/><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMApp xml:id="S1.p5.m8.1" fragid="S1.p5.m8.1"><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math>th scheme the experiences and adaptation of the driver and commuter agents during the implementation of the <Math mode="inline" xml:id="S1.p5.m9" tex="i" text="i" fragid="S1.p5.m9"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th scheme.</p>
+    </para>
+    <para xml:id="S1.p6" fragid="S1.p6">
+      <p>One efficient way that may be used to try out ideas and schemes in solving traffic congestions is to use computer-based simulation, a model created to reflect real-world situations. Once the model is constructed, solutions can be tried out to determine its impact on traffic congestion <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="bared02" title="bared02">bared02</ref>]</cite>, without the need for a costly real-world trial-and-error implementation. In this study, we used a multi-agent framework to simulate the object-following behavior of heterogeneous agents that share a road network. The road network reflects the scaled-down dimension of a real-world network, such as that of the BR, servicing scaled-down dimensions of real-world vehicles. Our model can be characterized as microscopic, stochastic, discrete time-step, and behavior-based. The model is microscopic because it simulates the behavior of the vehicles themselves while on the road in the presence of, and interacting with, other vehicles. The model is stochastic because it is based on random events that follow some distributions that we observed in the real-world. The model is discrete time-step because at each unit time, the agents concurrently change their respective positions, directions, and speeds driven only by their respective simulated behaviors in response to their respective interactions with the current state of the road network. The model is behavior-based because the traffic flow algorithms that we used are based on a psycho-physical car following model for vehicles moving along the length of the road <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="fritzsche94" title="fritzsche94">fritzsche94</ref>, <ref class="ltx_missing_citation" idref="gipps81" title="gipps81">gipps81</ref>]</cite>. We used a rule-based algorithm for lateral movement that simulates the lane-changing behaviors of the agents <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="alshihabi03" title="alshihabi03">alshihabi03</ref>, <ref class="ltx_missing_citation" idref="VISSIM90" title="VISSIM90">VISSIM90</ref>]</cite>.</p>
+    </para>
+    <para xml:id="S1.p7" fragid="S1.p7">
+      <p>We present in this paper the result of our experiments in searching for the optimal infrastructure improvement for BR from among three choices that are being considered by the local government. We present our results in searching for the optimal traffic schemes for the current infrastructure in another paper <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="tataro13" title="tataro13">tataro13</ref>]</cite>. Our study had three objectives: (1) To show that our model reflects the current real-world scenario at a statistical significance of <Math mode="inline" xml:id="S1.p7.m1" tex="\alpha=0.05" text="alpha = 0.05" fragid="S1.p7.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math> using the mean travel time <Math mode="inline" xml:id="S1.p7.m2" tex="\tau" text="tau" fragid="S1.p7.m2"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> of the sampled vehicles as metric, (2) to use the model to simulate the effect on <Math mode="inline" xml:id="S1.p7.m3" tex="\Delta" text="Delta" fragid="S1.p7.m3"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and on <Math mode="inline" xml:id="S1.p7.m4" tex="\Sigma" text="Sigma" fragid="S1.p7.m4"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of three infrastructure developments (ID) in BR currently being considered by the local government, and (3) simulate the effect on <Math mode="inline" xml:id="S1.p7.m5" tex="\Delta" text="Delta" fragid="S1.p7.m5"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and on <Math mode="inline" xml:id="S1.p7.m6" tex="\Sigma" text="Sigma" fragid="S1.p7.m6"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> the 10%, 50%, and 100% increase in vehicular volume under the best ID. Based on our results, we found out that: (1) The average travel time of the simulated vehicles while at the BR is not significantly different at <Math mode="inline" xml:id="S1.p7.m7" tex="\alpha=0.05" text="alpha = 0.05" fragid="S1.p7.m7"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math> from the observed average travel time of the sampled real-world vehicles, (2) the best ID is when the South bound lane of the ESR is widen up to three lanes continuing to the west bound lane of GPSA from BR to PNR, and (3) the <Math mode="inline" xml:id="S1.p7.m8" tex="\Delta" text="Delta" fragid="S1.p7.m8"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> increases linearly (<Math mode="inline" xml:id="S1.p7.m9" tex="R^{2}=0.98" text="R ^ 2 = 0.98" fragid="S1.p7.m9"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.98" role="NUMBER">0.98</XMTok></XMApp></XMath></Math>) at the rate of 1.03 <Math mode="inline" xml:id="S1.p7.m10" tex="s" text="s" fragid="S1.p7.m10"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math> per percent increase in the total vehicle volume <Math mode="inline" xml:id="S1.p7.m11" tex="\mathcal{V}" text="V" fragid="S1.p7.m11"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math>, while the <Math mode="inline" xml:id="S1.p7.m12" tex="\Sigma" text="Sigma" fragid="S1.p7.m12"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> decreases linearly (<Math mode="inline" xml:id="S1.p7.m13" tex="R^{2}&gt;0.99" text="R ^ 2 &gt; 0.99" fragid="S1.p7.m13"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.99" role="NUMBER">0.99</XMTok></XMApp></XMath></Math>) at the rate of 0.14 <Math mode="inline" xml:id="S1.p7.m14" tex="km/h" text="(k * m) / h" fragid="S1.p7.m14"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">h</XMTok></XMApp></XMath></Math> per percent increase in <Math mode="inline" xml:id="S1.p7.m15" tex="\mathcal{V}" text="V" fragid="S1.p7.m15"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math>.</p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=" ">2</tag>Model</title>
+    <para xml:id="S2.p1" fragid="S2.p1">
+      <p>A computer model that controls an agent’s behavior (i.e., the driver) in terms of its reaction to the vehicle in front of it while at the same lane is called a <text font="italic">car-following model</text> <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="herman63" title="herman63">herman63</ref>]</cite>. An agent-driven vehicle is said to be <text font="italic">following</text> when it is constrained by the speed of the moving vehicle in front of it, and that driving at the agent’s desired speed will lead to a collision. When a driver agent is not constrained by another vehicle, it is said to be <text font="italic">free</text> and travels, in general, at its desired speed. The actions of the <text font="italic">following</text> agent is defined by the agent’s acceleration, although some models, for example the car-following model developed by <cite class="ltx_citemacro_citet"><ref class="ltx_missing_citation" idref="gipps81" title="gipps81">gipps81</ref></cite>, define the agent’s actions through the agent’s speed. Some car-following models only describe the agents’ behavior when they are currently following another vehicle, while other models determine the agents’ behavior in all situations. We believe, however, that to model the real-world decision-making capabilities of human drivers, a car-following model should identify both of the following:</p>
+      <enumerate xml:id="I2" fragid="I2">
+        <item frefnum="1." refnum="1" xml:id="I2.i1" fragid="I2.i1">
+          <tag>1.</tag>
+          <para xml:id="I2.i1.p1" fragid="I2.i1.p1">
+            <p>The current state <Math mode="inline" xml:id="I2.i1.p1.m1" tex="S" text="S" fragid="I2.i1.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">S</XMTok></XMath></Math> the vehicle is in; and</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I2.i2" fragid="I2.i2">
+          <tag>2.</tag>
+          <para xml:id="I2.i2.p1" fragid="I2.i2.p1">
+            <p>What actions <Math mode="inline" xml:id="I2.i2.p1.m1" tex="A" text="A" fragid="I2.i2.p1.m1"><XMath><XMTok role="UNKNOWN" font="italic">A</XMTok></XMath></Math> are desirable at this state.</p>
+          </para>
+        </item>
+      </enumerate>
+      <p>Most car-following models use several states to describe the following agents’ behavior. Most models use:</p>
+      <enumerate xml:id="I3" fragid="I3">
+        <!-- %**** paper1.tex Line 100 **** -->
+        <item frefnum="1." refnum="1" xml:id="I3.i1" fragid="I3.i1">
+          <tag>1.</tag>
+          <para xml:id="I3.i1.p1" fragid="I3.i1.p1">
+            <p><Math mode="inline" xml:id="I3.i1.p1.m1" tex="S_{f}" text="S _ f" fragid="I3.i1.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok></XMApp></XMath></Math>: A state for <text font="bold">free driving</text>, where the vehicles are unconstrained and the respective driver agents try to achieve their desired speeds (subject of course to pertinent legal speed limits of the road network);</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I3.i2" fragid="I3.i2">
+          <tag>2.</tag>
+          <para xml:id="I3.i2.p1" fragid="I3.i2.p1">
+            <p><Math mode="inline" xml:id="I3.i2.p1.m1" tex="S_{n}" text="S _ n" fragid="I3.i2.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math>: A state for <text font="bold">normal following</text>, where the following agents adjust their respective speeds with respect to the speeds of the vehicles in front of them; and</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I3.i3" fragid="I3.i3">
+          <tag>3.</tag>
+          <para xml:id="I3.i3.p1" fragid="I3.i3.p1">
+            <p><Math mode="inline" xml:id="I3.i3.p1.m1" tex="S_{e}" text="S _ e" fragid="I3.i3.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok></XMApp></XMath></Math>: A state for an <text font="bold">emergency deceleration</text>, where agents try to decelerate to avoid a collision with the vehicle in front.</p>
+          </para>
+        </item>
+      </enumerate>
+    </para>
+    <para xml:id="S2.p2" fragid="S2.p2">
+      <p>Throughout the paper, we used the notations summarized in Table <ref labelref="LABEL:tab:notations" href="#S2.T1" title="Table 1 ‣ 2 Model ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">1</text></ref> to describe the kinematic quantities and model outputs.</p>
+    </para>
+    <table frefnum="Table 1" placement="hbt" refnum="1" xml:id="S2.T1" labels="LABEL:tab:notations" fragid="S2.T1">
+      <toccaption class="ltx_centering"><tag close=" ">1</tag>Alphabetical listing of notations, mathematical variables, and abbreviations used in this paper including their respective descriptions.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Table 1</tag>Alphabetical listing of notations, mathematical variables, and abbreviations used in this paper including their respective descriptions.</caption>
+      <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+        <thead>
+          <tr>
+            <td align="center" border="tt" thead="column row">Notation</td>
+            <td align="left" border="tt" thead="column">Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center" border="t" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m1" tex="\delta x" text="delta * x" fragid="S2.T1.m1">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok name="delta" role="UNKNOWN" font="italic">δ</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left" border="t">Space headway between <Math mode="inline" xml:id="S2.T1.m2" tex="x_{n-1}" text="x _ (n - 1)" fragid="S2.T1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.T1.m3" tex="x_{n}" text="x _ n" fragid="S2.T1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math> in <Math mode="inline" xml:id="S2.T1.m4" tex="m" text="m" fragid="S2.T1.m4"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m5" tex="\delta v" text="delta * v" fragid="S2.T1.m5">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok name="delta" role="UNKNOWN" font="italic">δ</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">difference in speed between <Math mode="inline" xml:id="S2.T1.m6" tex="x_{n-1}" text="x _ (n - 1)" fragid="S2.T1.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.T1.m7" tex="x_{n}" text="x _ n" fragid="S2.T1.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math> in <Math mode="inline" xml:id="S2.T1.m8" tex="m/s" text="m / s" fragid="S2.T1.m8"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m9" tex="a_{n}" text="a _ n" fragid="S2.T1.m9">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Acceleration of the <Math mode="inline" xml:id="S2.T1.m10" tex="n" text="n" fragid="S2.T1.m10"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m11" tex="m/s^{2}" text="m / s ^ 2" fragid="S2.T1.m11"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post9"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m12" tex="L_{n}" text="L _ n" fragid="S2.T1.m12">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">length of the <Math mode="inline" xml:id="S2.T1.m13" tex="n" text="n" fragid="S2.T1.m13"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m14" tex="m" text="m" fragid="S2.T1.m14"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m15" tex="s_{n}" text="s _ n" fragid="S2.T1.m15">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Effective length of the <Math mode="inline" xml:id="S2.T1.m16" tex="n" text="n" fragid="S2.T1.m16"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m17" tex="m" text="m" fragid="S2.T1.m17"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m18" tex="T" text="T" fragid="S2.T1.m18">
+                <XMath>
+                  <XMTok role="UNKNOWN" font="italic">T</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Reaction time in <Math mode="inline" xml:id="S2.T1.m19" tex="s" text="s" fragid="S2.T1.m19"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m20" tex="v_{n}" text="v _ n" fragid="S2.T1.m20">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Speed of the <Math mode="inline" xml:id="S2.T1.m21" tex="n" text="n" fragid="S2.T1.m21"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m22" tex="m/s" text="m / s" fragid="S2.T1.m22"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m23" tex="v_{n}^{\rm desired}" text="(v _ n) ^ desired" fragid="S2.T1.m23">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                      <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                    </XMApp>
+                    <XMTok role="UNKNOWN">desired</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Desired speed of the <Math mode="inline" xml:id="S2.T1.m24" tex="n" text="n" fragid="S2.T1.m24"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m25" tex="m/s" text="m / s" fragid="S2.T1.m25"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m26" tex="x_{n}" text="x _ n" fragid="S2.T1.m26">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Longitudinal position of the <Math mode="inline" xml:id="S2.T1.m27" tex="n" text="n" fragid="S2.T1.m27"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>th vehicle in <Math mode="inline" xml:id="S2.T1.m28" tex="m" text="m" fragid="S2.T1.m28"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" border="t" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m29" tex="\alpha" text="alpha" fragid="S2.T1.m29">
+                <XMath>
+                  <XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left" border="t">Statistical level of significance</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m30" tex="\Delta" text="Delta" fragid="S2.T1.m30">
+                <XMath>
+                  <XMTok name="Delta" role="UNKNOWN">Δ</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Mean delay time per vehicle in <Math mode="inline" xml:id="S2.T1.m31" tex="s" text="s" fragid="S2.T1.m31"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m32" tex="\Sigma" text="Sigma" fragid="S2.T1.m32">
+                <XMath>
+                  <XMTok name="Sigma" role="UNKNOWN">Σ</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Mean vehicular speed in <Math mode="inline" xml:id="S2.T1.m33" tex="m/s" text="m / s" fragid="S2.T1.m33"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m34" tex="\tau" text="tau" fragid="S2.T1.m34">
+                <XMath>
+                  <XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Mean vehicular travel time <Math mode="inline" xml:id="S2.T1.m35" tex="s" text="s" fragid="S2.T1.m35"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math></td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m36" tex="\tau_{o}" text="tau _ o" fragid="S2.T1.m36">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">o</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left"><Math mode="inline" xml:id="S2.T1.m37" tex="\tau" text="tau" fragid="S2.T1.m37"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> of the sampled vehicles from observation</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m38" tex="\tau_{s}" text="tau _ s" fragid="S2.T1.m38">
+                <XMath>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                    <XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Mean <Math mode="inline" xml:id="S2.T1.m39" tex="\tau" text="tau" fragid="S2.T1.m39"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> of the simulated vehicles</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">
+              <Math mode="inline" xml:id="S2.T1.m40" tex="\mathcal{V}" text="V" fragid="S2.T1.m40">
+                <XMath>
+                  <XMTok role="UNKNOWN" font="caligraphic">V</XMTok>
+                </XMath>
+              </Math>
+            </td>
+            <td align="left">Total volume of vehicles</td>
+          </tr>
+          <tr>
+            <td align="center" border="t" thead="row">ANOVA</td>
+            <td align="left" border="t">Analysis of Variance using the F-Statistics</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">BR</td>
+            <td align="left">Bicutan Roundabout</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">DOST</td>
+            <td align="left">Department of Science and Technology</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">ESR</td>
+            <td align="left">East Service Road</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">GPSA</td>
+            <td align="left">General Paulino Santos Avenue</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">ID</td>
+            <td align="left">Infrastructure Development</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">MMDA</td>
+            <td align="left">Metro Manila Development Authority</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">PNCC</td>
+            <td align="left">Philippine National Construction Corporation</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">PNR</td>
+            <td align="left">Philippine National Railways</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">PUP-T</td>
+            <td align="left">Polytechnic University of the Philippines-Taguig</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">SLEX</td>
+            <td align="left">Southern Luzon Expressway</td>
+          </tr>
+          <tr>
+            <td align="center" thead="row">TUP-T</td>
+            <td align="left">Technological University of the Philippines-Taguig</td>
+          </tr>
+          <tr>
+            <td align="center" border="bb" thead="row">TMO</td>
+            <td align="left" border="bb">Traffic Management Office</td>
+          </tr>
+        </tbody>
+      </tabular>
+    </table>
+    <subsection refnum="2.1" xml:id="S2.SS1" fragid="S2.SS1">
+      <title><tag close=" ">2.1</tag><Math mode="inline" xml:id="S2.SS1.m1" tex="S_{f}" text="S _ f" fragid="S2.SS1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok></XMApp></XMath></Math> Free Driving State</title>
+      <!-- %**** paper1.tex Line 150 **** -->
+      <para xml:id="S2.SS1.p1" fragid="S2.SS1.p1">
+        <p>The agents at the <Math mode="inline" xml:id="S2.SS1.p1.m1" tex="S_{f}" text="S _ f" fragid="S2.SS1.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">f</XMTok></XMApp></XMath></Math> state try to accelerate or decelerate to achieve its current desired speed. If the current speed <Math mode="inline" xml:id="S2.SS1.p1.m2" tex="v_{i}" text="v _ i" fragid="S2.SS1.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> of the <Math mode="inline" xml:id="S2.SS1.p1.m3" tex="i" text="i" fragid="S2.SS1.p1.m3"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th vehicle is higher than its desired speed <Math mode="inline" xml:id="S2.SS1.p1.m4" tex="v_{i}^{\rm desired}" text="(v _ i) ^ desired" fragid="S2.SS1.p1.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">desired</XMTok></XMApp></XMath></Math>, the agents uses the normal deceleration rate (<Math mode="inline" xml:id="S2.SS1.p1.m5" tex="-a_{i}^{\rm normal}" text="- (a _ i) ^ normal" fragid="S2.SS1.p1.m5"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">normal</XMTok></XMApp></XMApp></XMath></Math>) to slow down to the desired speed. If <Math mode="inline" xml:id="S2.SS1.p1.m6" tex="v_{i}&lt;v_{i}^{\rm desired}" text="v _ i less (v _ i) ^ desired" fragid="S2.SS1.p1.m6"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">desired</XMTok></XMApp></XMApp></XMath></Math>, the agents use its maximum acceleration rate <Math mode="inline" xml:id="S2.SS1.p1.m7" tex="a_{i}^{\rm max}" text="(a _ i) ^ max" fragid="S2.SS1.p1.m7"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">max</XMTok></XMApp></XMath></Math> to reach <Math mode="inline" xml:id="S2.SS1.p1.m8" tex="v_{i}^{\rm desired}" text="(v _ i) ^ desired" fragid="S2.SS1.p1.m8"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">desired</XMTok></XMApp></XMath></Math> at the shortest time possible. The <Math mode="inline" xml:id="S2.SS1.p1.m9" tex="-a_{i}^{\rm normal}" text="- (a _ i) ^ normal" fragid="S2.SS1.p1.m9"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">normal</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.SS1.p1.m10" tex="a_{i}^{\rm max}" text="(a _ i) ^ max" fragid="S2.SS1.p1.m10"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="UNKNOWN">max</XMTok></XMApp></XMath></Math> are parameters of the simulation and they are dependent on the type of vehicle the agent is driving. The acceleration rate of the <Math mode="inline" xml:id="S2.SS1.p1.m11" tex="i" text="i" fragid="S2.SS1.p1.m11"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th agent is expressed as</p>
+        <equation xml:id="S2.Ex1" fragid="S2.Ex1">
+          <Math mode="display" xml:id="S2.Ex1.m1" tex="a_{i}=\left\{\begin{array}[]{ll}a_{i}^{\rm max}&amp;\quad v_{i}&lt;v_{i}^{\rm desired%&#10;}\\&#10;0&amp;\quad v_{i}=v_{i}^{\rm desired}\\&#10;a_{i}^{\rm normal}&amp;\quad v_{i}&gt;v_{i}^{\rm desired}\end{array}\right." text="a _ i = cases@(Array[[(a _ i) ^ max, v _ i less (v _ i) ^ desired], [0, v _ i = (v _ i) ^ desired], [(a _ i) ^ normal, v _ i &gt; (v _ i) ^ desired]])" fragid="S2.Ex1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="cases"/>
+                    <XMRef idref="S2.Ex1.m1.1"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="OPEN">{</XMTok>
+                    <XMArray role="ARRAY" vattach="middle" xml:id="S2.Ex1.m1.1" fragid="S2.Ex1.m1.1">
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMTok role="UNKNOWN">max</XMTok>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="less-than" role="RELOP">&lt;</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">desired</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">desired</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMTok role="UNKNOWN">normal</XMTok>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">desired</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok meaning="absent"/>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>The time <Math mode="inline" xml:id="S2.SS1.p1.m12" tex="t_{i}" text="t _ i" fragid="S2.SS1.p1.m12"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> it will take for the <Math mode="inline" xml:id="S2.SS1.p1.m13" tex="i" text="i" fragid="S2.SS1.p1.m13"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th vehicle to achieve its desired speed is</p>
+        <equation xml:id="S2.Ex2" fragid="S2.Ex2">
+          <Math mode="display" xml:id="S2.Ex2.m1" tex="t_{i}=\left\{\begin{array}[]{ll}\frac{v_{i}}{a_{i}^{\rm max}}&amp;\quad v_{i}&lt;v_{i%&#10;}^{\rm desired}\\&#10;\frac{v_{i}}{a_{i}^{\rm normal}}&amp;\quad v_{i}&gt;v_{i}^{\rm desired}\end{array}\right." text="t _ i = cases@(Array[[v _ i / (a _ i) ^ max, v _ i less (v _ i) ^ desired], [v _ i / (a _ i) ^ normal, v _ i &gt; (v _ i) ^ desired]])" fragid="S2.Ex2.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="cases"/>
+                    <XMRef idref="S2.Ex2.m1.1"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="OPEN">{</XMTok>
+                    <XMArray role="ARRAY" vattach="middle" xml:id="S2.Ex2.m1.1" fragid="S2.Ex2.m1.1">
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                              <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">max</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="less-than" role="RELOP">&lt;</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">desired</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                              <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">normal</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                              </XMApp>
+                              <XMTok role="UNKNOWN">desired</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok meaning="absent"/>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+    </subsection>
+    <subsection refnum="2.2" xml:id="S2.SS2" fragid="S2.SS2">
+      <title><tag close=" ">2.2</tag><Math mode="inline" xml:id="S2.SS2.m1" tex="S_{n}" text="S _ n" fragid="S2.SS2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math> Normal Following State</title>
+      <para xml:id="S2.SS2.p1" fragid="S2.SS2.p1">
+        <p>While at the normal following state <Math mode="inline" xml:id="S2.SS2.p1.m1" tex="S_{n}" text="S _ n" fragid="S2.SS2.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math>, the acceleration rate of the <Math mode="inline" xml:id="S2.SS2.p1.m2" tex="i" text="i" fragid="S2.SS2.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th vehicle is given by an asymmetrical Gazis-Herman-Rothery (GHR) model <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="chandler58" title="chandler58">chandler58</ref>, <ref class="ltx_missing_citation" idref="gazis61" title="gazis61">gazis61</ref>, <ref class="ltx_missing_citation" idref="yang96" title="yang96">yang96</ref>]</cite>. The acceleration is computed as</p>
+        <equation xml:id="S2.Ex3" fragid="S2.Ex3">
+          <Math mode="display" xml:id="S2.Ex3.m1" tex="a_{i}=r^{\pm}\frac{v_{i}^{s^{\pm}}}{(x_{i-1}-L_{i-1}-x_{i})^{t^{\pm}}}(v_{i-1}%&#10;-v_{i})," text="a _ i = r ^ plus-or-minus * ((v _ i) ^ s ^ plus-or-minus / (x _ (i - 1) - L _ (i - 1) - x _ i) ^ t ^ plus-or-minus) * (v _ (i - 1) - v _ i)" fragid="S2.Ex3.m1">
+            <XMath>
+              <XMApp punctuation=",">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                        <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                        <XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                      <XMDual>
+                        <XMRef idref="S2.Ex3.m1.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S2.Ex3.m1.1" fragid="S2.Ex3.m1.1">
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                        <XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S2.Ex3.m1.2"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S2.Ex3.m1.2" fragid="S2.Ex3.m1.2">
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>where <Math mode="inline" xml:id="S2.SS2.p1.m3" tex="r^{\pm}" text="r ^ plus-or-minus" fragid="S2.SS2.p1.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.SS2.p1.m4" tex="s^{\pm}" text="s ^ plus-or-minus" fragid="S2.SS2.p1.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMApp></XMath></Math>, and <Math mode="inline" xml:id="S2.SS2.p1.m5" tex="t^{\pm}" text="t ^ plus-or-minus" fragid="S2.SS2.p1.m5"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="plus-or-minus" name="pm" role="ADDOP">±</XMTok></XMApp></XMath></Math> are model parameters. The parameters <Math mode="inline" xml:id="S2.SS2.p1.m6" tex="r^{+}" text="r ^ +" fragid="S2.SS2.p1.m6"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="plus" role="ADDOP">+</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.SS2.p1.m7" tex="s^{+}" text="s ^ +" fragid="S2.SS2.p1.m7"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="plus" role="ADDOP">+</XMTok></XMApp></XMath></Math>, and <Math mode="inline" xml:id="S2.SS2.p1.m8" tex="t^{+}" text="t ^ +" fragid="S2.SS2.p1.m8"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="plus" role="ADDOP">+</XMTok></XMApp></XMath></Math> are used if <Math mode="inline" xml:id="S2.SS2.p1.m9" tex="v_{i}\leq v_{i-1}" text="v _ i less= v _ (i - 1)" fragid="S2.SS2.p1.m9"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>, while the parameters <Math mode="inline" xml:id="S2.SS2.p1.m10" tex="r^{-}" text="r ^ -" fragid="S2.SS2.p1.m10"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.SS2.p1.m11" tex="s^{-}" text="s ^ -" fragid="S2.SS2.p1.m11"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math>, and <Math mode="inline" xml:id="S2.SS2.p1.m12" tex="t^{-}" text="t ^ -" fragid="S2.SS2.p1.m12"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">t</XMTok><XMTok meaning="minus" role="ADDOP">-</XMTok></XMApp></XMath></Math> are used if <Math mode="inline" xml:id="S2.SS2.p1.m13" tex="v_{i}&gt;v_{i-1}" text="v _ i &gt; v _ (i - 1)" fragid="S2.SS2.p1.m13"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">v</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Notice here that the final acceleration of the <Math mode="inline" xml:id="S2.SS2.p1.m14" tex="i" text="i" fragid="S2.SS2.p1.m14"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>th vehicle is given as <Math mode="inline" xml:id="S2.SS2.p1.m15" tex="\max\{a_{i},a_{i-1}\}" text="maximum@(a _ i, a _ (i - 1))" fragid="S2.SS2.p1.m15"><XMath><XMDual><XMApp><XMRef idref="S2.SS2.p1.m15.1"/><XMRef idref="S2.SS2.p1.m15.2"/><XMRef idref="S2.SS2.p1.m15.3"/></XMApp><XMApp><XMTok meaning="maximum" role="OPFUNCTION" scriptpos="post" xml:id="S2.SS2.p1.m15.1" fragid="S2.SS2.p1.m15.1">max</XMTok><XMWrap><XMTok role="OPEN" stretchy="false">{</XMTok><XMApp xml:id="S2.SS2.p1.m15.2" fragid="S2.SS2.p1.m15.2"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMTok role="PUNCT">,</XMTok><XMApp xml:id="S2.SS2.p1.m15.3" fragid="S2.SS2.p1.m15.3"><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok role="CLOSE" stretchy="false">}</XMTok></XMWrap></XMApp></XMDual></XMath></Math>.</p>
+      </para>
+    </subsection>
+    <subsection refnum="2.3" xml:id="S2.SS3" fragid="S2.SS3">
+      <title><tag close=" ">2.3</tag><Math mode="inline" xml:id="S2.SS3.m1" tex="S_{e}" text="S _ e" fragid="S2.SS3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">S</XMTok><XMTok role="UNKNOWN" font="italic">e</XMTok></XMApp></XMath></Math> Emergency State</title>
+      <para xml:id="S2.SS3.p1" fragid="S2.SS3.p1">
+        <p>Under this state, the agents use a deceleration rate that prevents collision and extends <Math mode="inline" xml:id="S2.SS3.p1.m1" tex="\delta x" text="delta * x" fragid="S2.SS3.p1.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok name="delta" role="UNKNOWN" font="italic">δ</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp></XMath></Math>. This deceleration rate is given by</p>
+        <equation xml:id="S2.Ex4" fragid="S2.Ex4">
+          <Math mode="display" xml:id="S2.Ex4.m1" tex="a_{i}=\left\{\begin{array}[]{ll}\min\{a_{i}^{\rm normal},a_{i-1}-\frac{0.5(v_{%&#10;i}-v_{i-1})^{2}}{x_{i-1}-L_{i-1}-x_{i}}\}&amp;\quad v_{i}&gt;v_{i-1}\\&#10;\min\{a_{i}^{\rm normal},a_{i-1}+0.25a_{i}^{\rm normal}&amp;\quad v_{i}\leq v_{i-1%&#10;}\end{array}\right." text="a _ i = cases@(Array[[minimum@((a _ i) ^ normal, a _ (i - 1) - (0.5 * (v _ i - v _ (i - 1)) ^ 2) / (x _ (i - 1) - L _ (i - 1) - x _ i)), v _ i &gt; v _ (i - 1)], [[min{ainormal,a-i1+0.25ainormal], v _ i less= v _ (i - 1)]])" fragid="S2.Ex4.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <!-- %**** paper1.tex Line 175 **** -->
+                  <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="cases"/>
+                    <XMRef idref="S2.Ex4.m1.5"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="OPEN">{</XMTok>
+                    <XMArray role="ARRAY" vattach="middle" xml:id="S2.Ex4.m1.5" fragid="S2.Ex4.m1.5">
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMDual>
+                            <XMApp>
+                              <XMRef idref="S2.Ex4.m1.2"/>
+                              <XMRef idref="S2.Ex4.m1.3"/>
+                              <XMRef idref="S2.Ex4.m1.4"/>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="minimum" role="OPFUNCTION" scriptpos="mid" xml:id="S2.Ex4.m1.2" fragid="S2.Ex4.m1.2">min</XMTok>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                                <XMApp xml:id="S2.Ex4.m1.3" fragid="S2.Ex4.m1.3">
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                  <XMApp>
+                                    <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                    <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                  </XMApp>
+                                  <XMTok role="UNKNOWN">normal</XMTok>
+                                </XMApp>
+                                <XMTok role="PUNCT">,</XMTok>
+                                <XMApp xml:id="S2.Ex4.m1.4" fragid="S2.Ex4.m1.4">
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                    <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                                    <XMApp>
+                                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                      <XMTok meaning="0.5" role="NUMBER">0.5</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                                        <XMDual>
+                                          <XMRef idref="S2.Ex4.m1.1"/>
+                                          <XMWrap>
+                                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                            <XMApp xml:id="S2.Ex4.m1.1" fragid="S2.Ex4.m1.1">
+                                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                              <XMApp>
+                                                <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                              </XMApp>
+                                              <XMApp>
+                                                <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                                <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                                                <XMApp>
+                                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                                </XMApp>
+                                              </XMApp>
+                                            </XMApp>
+                                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                          </XMWrap>
+                                        </XMDual>
+                                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                              </XMWrap>
+                            </XMApp>
+                          </XMDual>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="left">
+                          <XMArg rule="Anything,">
+                            <XMTok meaning="minimum" role="OPFUNCTION" scriptpos="mid">min</XMTok>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">{</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                <XMApp>
+                                  <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                  <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                </XMApp>
+                                <XMTok role="UNKNOWN">normal</XMTok>
+                              </XMApp>
+                              <XMTok role="PUNCT">,</XMTok>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMTok meaning="0.25" role="NUMBER">0.25</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                <XMApp>
+                                  <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                                  <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                </XMApp>
+                                <XMTok role="UNKNOWN">normal</XMTok>
+                              </XMApp>
+                            </XMWrap>
+                          </XMArg>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok lpadding="10.0pt" role="UNKNOWN" font="italic">v</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post8"/>
+                              <XMTok role="UNKNOWN" font="italic">v</XMTok>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok meaning="absent"/>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+    </subsection>
+  </section>
+  <section refnum="3" xml:id="S3" labels="LABEL:sec:method" fragid="S3">
+    <title><tag close=" ">3</tag>Methodology</title>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>We present in this section the activities that we performed in this study. We also present here the metrics that we measured, as well as the statistical analysis that we employed to analyze the results of the study.</p>
+    </para>
+    <subsection refnum="3.1" xml:id="S3.SS1" fragid="S3.SS1">
+      <title><tag close=" ">3.1</tag>Interview with Stakeholders</title>
+      <pagination role="newpage"/>
+      <para xml:id="S3.SS1.p1" fragid="S3.SS1.p1">
+        <p>We conducted interviews in order for us to understand the current plans of the two local governments that have jurisdictions over the BR: the Taguig City Traffic Management Office (TMO) and the Metro Manila Development Authority (MMDA). The interview served as some sort of leveling off with the intended stakeholders. We also wanted the result of this research endeavour to be put to use, particularly because two of the three authors of this paper pass this area on a daily basis. Thus, if either or both local governments will implement the result of our research, we will greatly benefit from such. We also asked permission from the two governments to allow us to conduct scientific observations so that we can quantify the current vehicular flow in BR.</p>
+      </para>
+      <!-- %insert data on busiest day of the week and time od day (8-9, 1-2, 4-5 F) -->
+    </subsection>
+    <subsection refnum="3.2" xml:id="S3.SS2" fragid="S3.SS2">
+      <title><tag close=" ">3.2</tag>Observation of Current Situation</title>
+      <para xml:id="S3.SS2.p1" fragid="S3.SS2.p1">
+        <p>We employed the help of twelve enumerators whom we assigned to different identified points within the BR junction. Each point of entrance to and exit from BR has designated persons to record the time of entrance and exit of the vehicle, and the type of vehicle that passed through. Each vehicle is identified by their tag or plate number. We recorded a series of actual observations during peak and non-peak periods for us to be able to get a statistically accurate data and determine the highest and lowest traffic volume. From these observations, we were able to obtain the mean travel time <Math mode="inline" xml:id="S3.SS2.p1.m1" tex="\tau" text="tau" fragid="S3.SS2.p1.m1"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> of sampled vehicles, as well as the respective distributions of each vehicle type. To identify the specific points in the BR, we divided the area into six routes as follows:</p>
+        <enumerate xml:id="I4" fragid="I4">
+          <item frefnum="1." refnum="1" xml:id="I4.i1" fragid="I4.i1">
+            <tag>1.</tag>
+            <para xml:id="I4.i1.p1" fragid="I4.i1.p1">
+              <p><text font="bold">Route 1</text> is the route from PNR to DOST Campus Eastbound along the GPSA passing through the BR;</p>
+            </para>
+          </item>
+          <item frefnum="2." refnum="2" xml:id="I4.i2" fragid="I4.i2">
+            <tag>2.</tag>
+            <para xml:id="I4.i2.p1" fragid="I4.i2.p1">
+              <p><text font="bold">Route 2</text> is the route from PNR to PNCC Campus, Eastbound along GPSA from the PNR to BR, and then turning left through the BR, and up to the Northbound lane of ESR going towards the PNCC Campus;</p>
+            </para>
+          </item>
+          <item frefnum="3." refnum="3" xml:id="I4.i3" fragid="I4.i3">
+            <tag>3.</tag>
+            <para xml:id="I4.i3.p1" fragid="I4.i3.p1">
+              <p><text font="bold">Route 3</text> is the route from DOST campus to PNR Westbound along the GPSA passing through the BR;</p>
+            </para>
+          </item>
+          <item frefnum="4." refnum="4" xml:id="I4.i4" fragid="I4.i4">
+            <tag>4.</tag>
+            <para xml:id="I4.i4.p1" fragid="I4.i4.p1">
+              <p><text font="bold">Route 4</text> is the route from the DOST Campus to the PNR Crossing, Westbound along the GPSA up to the BR, and then turning right through the BR, and up to the Northbound lane of ESR going towards the PNCC Campus;
+<!-- %**** paper1.tex Line 200 **** --></p>
+            </para>
+          </item>
+          <item frefnum="5." refnum="5" xml:id="I4.i5" fragid="I4.i5">
+            <tag>5.</tag>
+            <para xml:id="I4.i5.p1" fragid="I4.i5.p1">
+              <p><text font="bold">Route 5</text> is the route from PNCC Campus to PNR, Southbound along the ESR, turning right through BR, and then Westbound along the GPSA to the PNR; and</p>
+            </para>
+          </item>
+          <item frefnum="6." refnum="6" xml:id="I4.i6" fragid="I4.i6">
+            <tag>6.</tag>
+            <para xml:id="I4.i6.p1" fragid="I4.i6.p1">
+              <p><text font="bold">Route 6</text> is the route from PNCC Campus to the DOST Campus, Southbound along the ESR, turning left through BR, and then Eastbound along the GPSA to the DOST Campus.</p>
+            </para>
+          </item>
+        </enumerate>
+      </para>
+    </subsection>
+    <subsection refnum="3.3" xml:id="S3.SS3" fragid="S3.SS3">
+      <title><tag close=" ">3.3</tag>Simulation of Current Situation</title>
+      <para xml:id="S3.SS3.p1" fragid="S3.SS3.p1">
+        <p>We conducted a replicated microsimulation study of the vehicular flow under the current BR using the data on respective distribution of vehicles by type. We replicated the study to <Math mode="inline" xml:id="S3.SS3.p1.m1" tex="n=10" text="n = 10" fragid="S3.SS3.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="10" role="NUMBER">10</XMTok></XMApp></XMath></Math> and computed the mean <Math mode="inline" xml:id="S3.SS3.p1.m2" tex="\tau" text="tau" fragid="S3.SS3.p1.m2"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math>. We wanted to know if the model can statistically reproduce the observed vehicular traffic data. Statistically, the respective differences of the <Math mode="inline" xml:id="S3.SS3.p1.m3" tex="\tau" text="tau" fragid="S3.SS3.p1.m3"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> between the observed (<Math mode="inline" xml:id="S3.SS3.p1.m4" tex="\tau_{o}" text="tau _ o" fragid="S3.SS3.p1.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math>) and the mean simulated (<Math mode="inline" xml:id="S3.SS3.p1.m5" tex="\tau_{s}" text="tau _ s" fragid="S3.SS3.p1.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>) runs must not be different from zero at <Math mode="inline" xml:id="S3.SS3.p1.m6" tex="\alpha=0.05" text="alpha = 0.05" fragid="S3.SS3.p1.m6"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>. We used analysis of variance statistics (ANOVA) to evaluate two hypotheses, the null hypothesis <Math mode="inline" xml:id="S3.SS3.p1.m7" tex="H_{0}" text="H _ 0" fragid="S3.SS3.p1.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and the alternative hypothesis <Math mode="inline" xml:id="S3.SS3.p1.m8" tex="H_{a}" text="H _ a" fragid="S3.SS3.p1.m8"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok></XMApp></XMath></Math> as follows:</p>
+      </para>
+      <para xml:id="S3.SS3.p2" fragid="S3.SS3.p2">
+        <p><Math mode="inline" xml:id="S3.SS3.p2.m1" tex="H_{0}" text="H _ 0" fragid="S3.SS3.p2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>: There is no significant difference between <Math mode="inline" xml:id="S3.SS3.p2.m2" tex="\tau_{o}" text="tau _ o" fragid="S3.SS3.p2.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.SS3.p2.m3" tex="\tau_{s}" text="tau _ s" fragid="S3.SS3.p2.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> at <Math mode="inline" xml:id="S3.SS3.p2.m4" tex="\alpha=0.05" text="alpha = 0.05" fragid="S3.SS3.p2.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>.</p>
+      </para>
+      <para xml:id="S3.SS3.p3" fragid="S3.SS3.p3">
+        <p><Math mode="inline" xml:id="S3.SS3.p3.m1" tex="H_{a}" text="H _ a" fragid="S3.SS3.p3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok></XMApp></XMath></Math>: There is significant difference between <Math mode="inline" xml:id="S3.SS3.p3.m2" tex="\tau_{o}" text="tau _ o" fragid="S3.SS3.p3.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S3.SS3.p3.m3" tex="\tau_{s}" text="tau _ s" fragid="S3.SS3.p3.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> at the same <Math mode="inline" xml:id="S3.SS3.p3.m4" tex="\alpha" text="alpha" fragid="S3.SS3.p3.m4"><XMath><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMath></Math>.</p>
+      </para>
+    </subsection>
+    <subsection refnum="3.4" xml:id="S3.SS4" fragid="S3.SS4">
+      <title><tag close=" ">3.4</tag>Microsimulations of Proposed Developments</title>
+      <para xml:id="S3.SS4.p1" fragid="S3.SS4.p1">
+        <p>We created the respective replicated <Math mode="inline" xml:id="S3.SS4.p1.m1" tex="n=10" text="n = 10" fragid="S3.SS4.p1.m1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="10" role="NUMBER">10</XMTok></XMApp></XMath></Math> microsimulation studies of the vehicular flow using the observed current vehicular distribution when under the different planned infrastructure developments (ID) of the BR. These IDs are based on the C6 Project blueprint, the medium-term development plan by the City Mayor of Taguig Lani Cayetano, and DOST’s Monorail Project which is currently underway. The proposed developments are:</p>
+        <enumerate xml:id="I5" fragid="I5">
+          <item frefnum="1." refnum="1" xml:id="I5.i1" fragid="I5.i1">
+            <tag>1.</tag>
+            <para xml:id="I5.i1.p1" fragid="I5.i1.p1">
+              <p>Infrastructure Development 1 (ID1): Widening of the GPSA into three lanes but only those lanes towards the BR. That is the east bound lane from PNR to BR and the west bound lane from DOST to BR.</p>
+            </para>
+          </item>
+          <item frefnum="2." refnum="2" xml:id="I5.i2" fragid="I5.i2">
+            <tag>2.</tag>
+            <para xml:id="I5.i2.p1" fragid="I5.i2.p1">
+              <p>Infrastructure Development 2 (ID2): Widening of the GPSA into three lanes but only the eastbound lane from PNR to BR continuing from BR to DOST gate.</p>
+            </para>
+          </item>
+          <item frefnum="3." refnum="3" xml:id="I5.i3" fragid="I5.i3">
+            <tag>3.</tag>
+            <para xml:id="I5.i3.p1" fragid="I5.i3.p1">
+              <p>Infrastructure Development 3 (ID3): Widening of the south bound lane of the ESR into three lanes up to the BR continuing to the west bound lane of GPSA from BR to PNR.</p>
+            </para>
+          </item>
+        </enumerate>
+        <p>We computed the respective means of <Math mode="inline" xml:id="S3.SS4.p1.m2" tex="\Delta" text="Delta" fragid="S3.SS4.p1.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S3.SS4.p1.m3" tex="\Sigma" text="Sigma" fragid="S3.SS4.p1.m3"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> for all infrastructure improvements, including that of the current infrastructure we termed here as ID0 (i.e., from ID0 through ID3) and conducted an analysis of variance (ANOVA) statistics to find out whether the respective means are significantly different from each other at <Math mode="inline" xml:id="S3.SS4.p1.m4" tex="\alpha=0.05" text="alpha = 0.05" fragid="S3.SS4.p1.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>. That is, we want to test two hypotheses, the null hypothesis <Math mode="inline" xml:id="S3.SS4.p1.m5" tex="H_{0}" text="H _ 0" fragid="S3.SS4.p1.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and the alternative hypothesis <Math mode="inline" xml:id="S3.SS4.p1.m6" tex="H_{a}" text="H _ a" fragid="S3.SS4.p1.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok></XMApp></XMath></Math> as follows:</p>
+      </para>
+      <para xml:id="S3.SS4.p2" fragid="S3.SS4.p2">
+        <p><Math mode="inline" xml:id="S3.SS4.p2.m1" tex="H_{0}" text="H _ 0" fragid="S3.SS4.p2.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>: The absolute pairwise differences <Math mode="inline" xml:id="S3.SS4.p2.m2" tex="|\Delta_{\rm ID0}-\Delta_{\rm ID1}|=\dots=|\Delta_{\rm ID1}-\Delta_{\rm ID2}|=%&#10;|\Delta_{\rm ID1}-\Delta_{\rm ID3}|=|\Delta_{\rm ID2}-\Delta_{\rm ID3}|=0" text="absolute-value@(Delta _ ID0 - Delta _ ID1) = dots = absolute-value@(Delta _ ID1 - Delta _ ID2) = absolute-value@(Delta _ ID1 - Delta _ ID3) = absolute-value@(Delta _ ID2 - Delta _ ID3) = 0" fragid="S3.SS4.p2.m2"><XMath><XMApp><XMTok meaning="multirelation"/><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p2.m2.1"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p2.m2.1" fragid="S3.SS4.p2.m2.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="dots" role="ID">…</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p2.m2.2"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p2.m2.2" fragid="S3.SS4.p2.m2.2"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID2</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="equals" role="RELOP">=</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p2.m2.3"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p2.m2.3" fragid="S3.SS4.p2.m2.3"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID3</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="equals" role="RELOP">=</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p2.m2.4"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p2.m2.4" fragid="S3.SS4.p2.m2.4"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID3</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, where the <Math mode="inline" xml:id="S3.SS4.p2.m3" tex="=" text="=" fragid="S3.SS4.p2.m3"><XMath><XMTok meaning="equals" role="RELOP">=</XMTok></XMath></Math> sign in this sentence would mean “not significantly different from” or “statistically equal to.”</p>
+      </para>
+      <para xml:id="S3.SS4.p3" fragid="S3.SS4.p3">
+        <p><Math mode="inline" xml:id="S3.SS4.p3.m1" tex="H_{a}" text="H _ a" fragid="S3.SS4.p3.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok></XMApp></XMath></Math>: Any of the following respective pairwise absolute differences is true: <Math mode="inline" xml:id="S3.SS4.p3.m2" tex="|\Delta_{\rm ID0}-\Delta_{\rm ID1}|&gt;0" text="absolute-value@(Delta _ ID0 - Delta _ ID1) &gt; 0" fragid="S3.SS4.p3.m2"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p3.m2.1"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p3.m2.1" fragid="S3.SS4.p3.m2.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID0</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S3.SS4.p3.m3" tex="\dots" text="dots" fragid="S3.SS4.p3.m3"><XMath><XMTok name="dots" role="ID">…</XMTok></XMath></Math> , <Math mode="inline" xml:id="S3.SS4.p3.m4" tex="|\Delta_{\rm ID1}-\Delta_{\rm ID2}|&gt;0" text="absolute-value@(Delta _ ID1 - Delta _ ID2) &gt; 0" fragid="S3.SS4.p3.m4"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p3.m4.1"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p3.m4.1" fragid="S3.SS4.p3.m4.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID2</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S3.SS4.p3.m5" tex="|\Delta_{\rm ID1}-\Delta_{\rm ID3}|&gt;0" text="absolute-value@(Delta _ ID1 - Delta _ ID3) &gt; 0" fragid="S3.SS4.p3.m5"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p3.m5.1"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p3.m5.1" fragid="S3.SS4.p3.m5.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID3</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, or <Math mode="inline" xml:id="S3.SS4.p3.m6" tex="|\Delta_{\rm ID2}-\Delta_{\rm ID3}|&gt;0" text="absolute-value@(Delta _ ID2 - Delta _ ID3) &gt; 0" fragid="S3.SS4.p3.m6"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMDual><XMApp><XMTok meaning="absolute-value"/><XMRef idref="S3.SS4.p3.m6.1"/></XMApp><XMWrap><XMTok role="VERTBAR" stretchy="false">|</XMTok><XMApp xml:id="S3.SS4.p3.m6.1" fragid="S3.SS4.p3.m6.1"><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMTok role="UNKNOWN">ID3</XMTok></XMApp></XMApp><XMTok role="VERTBAR" stretchy="false">|</XMTok></XMWrap></XMDual><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>.
+<!-- %**** paper1.tex Line 225 **** --></p>
+      </para>
+      <para xml:id="S3.SS4.p4" fragid="S3.SS4.p4">
+        <p>We have the same set of hypotheses for <Math mode="inline" xml:id="S3.SS4.p4.m1" tex="\Sigma" text="Sigma" fragid="S3.SS4.p4.m1"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>.</p>
+      </para>
+    </subsection>
+    <subsection refnum="3.5" xml:id="S3.SS5" fragid="S3.SS5">
+      <title><tag close=" ">3.5</tag>Increased Traffic Volume at Best ID</title>
+      <para xml:id="S3.SS5.p1" fragid="S3.SS5.p1">
+        <p>We rerun the respective replicated microsimulation studies under ID0, ID1, ID2, and ID3 but with respective increases of 10%, 50%, and 100% in <Math mode="inline" xml:id="S3.SS5.p1.m1" tex="\mathcal{V}" text="V" fragid="S3.SS5.p1.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math>, making sure that the distribution by vehicular type is preserved. Here, we wanted to know if the benefits of the proposed improvements will be carried with the increase in <Math mode="inline" xml:id="S3.SS5.p1.m2" tex="\mathcal{V}" text="V" fragid="S3.SS5.p1.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> and if so, up to how much increase. The assumed increase in <Math mode="inline" xml:id="S3.SS5.p1.m3" tex="\mathcal{V}" text="V" fragid="S3.SS5.p1.m3"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> is just a natural reaction of the driving agents when there is a perceive improvement in the current situation. The improvement of the vehicular flow due to infrastructure improvements will attract more agents, increasing <Math mode="inline" xml:id="S3.SS5.p1.m4" tex="\mathcal{V}" text="V" fragid="S3.SS5.p1.m4"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> in the area, and thereby might degrade the expected designed benefits of the improvement in the long run.</p>
+      </para>
+    </subsection>
+  </section>
+  <section refnum="4" xml:id="S4" labels="LABEL:sec:results" fragid="S4">
+    <title><tag close=" ">4</tag>Results and Discussion</title>
+    <subsection refnum="4.1" xml:id="S4.SS1" fragid="S4.SS1">
+      <title><tag close=" ">4.1</tag>Actual Current Vehicular Flow</title>
+      <para xml:id="S4.SS1.p1" fragid="S4.SS1.p1">
+        <p>Tables <ref labelref="LABEL:tab:current" href="#S4.T2" title="Table 2 ‣ 4.1 Actual Current Vehicular Flow ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">2</text></ref> and <ref labelref="LABEL:tab:vehicle-type" href="#S4.T3" title="Table 3 ‣ 4.1 Actual Current Vehicular Flow ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">3</text></ref> summarize the distribution of vehicle per route and per vehicle type, respectively, that we compiled during the actual observation. Route 4 has the most number of total vehicles that passed during the observation period with 23.79%. This is followed by Routes 5, 1, and 2, in non-increasing order. Route 4, undeniably has the most number of vehicles since Route 4 is the only route that may be used by residents from the Lower Bicutan area who are trying to go to the Metropolitan Manila Area via the C-5 Diversion. Aside from the Lower Bicutan residents, the route is also extensively used by students and employees of several Higher Education Institutions (HEIs) and government agencies such as the Technological University of the Philippines-Taguig (TUP-T), the Polytechnic University of the Philippines-Taguig (PUP-T), the LGU-funded Taguig City University, and DOST’s national offices and laboratories. Route 5 is extensively used by trucking companies with medium-length trucks carrying heavy cargoes. These vehicles are coming off from the C-5 Diversion going to the Southern Luzon Area via the SLEX. Route 1 is obviously used by commuters coming from the SLEX area going to the residential Lower Bicutan or to any of the HEIs and government agencies. Route 2 is the reverse of Route 5, where mostly medium-length trucks pass through carrying cargoes from the Southern Luzon area via SLEX going to Metropolitan Manila Area through the C-5 Diversion. From Table <ref labelref="LABEL:tab:vehicle-type" href="#S4.T3" title="Table 3 ‣ 4.1 Actual Current Vehicular Flow ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">3</text></ref>, motorcycles and cars combined account for about 70% of the vehicles that use BR. This is followed by bicycles, jeepneys and vans. The heavier vehicles, such as the many-wheelers and buses only account for about 4% combined. This distribution by type is actually expected because the area is used extensively by residents and commuters rather than by non-human cargoes. Table <ref labelref="LABEL:tab:vehicle-dimension" href="#S4.T4" title="Table 4 ‣ 4.1 Actual Current Vehicular Flow ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">4</text></ref> shows the mean vehicular dimensions by vehicle type. We used these dimensions to scale the respective agents in our simulations.</p>
+      </para>
+      <table frefnum="Table 2" placement="bth" refnum="2" xml:id="S4.T2" labels="LABEL:tab:current" fragid="S4.T2">
+        <toccaption class="ltx_centering"><tag close=" ">2</tag>Distribution of the total number of vehicles that passed through the BR during the observation period.</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 2</tag>Distribution of the total number of vehicles that passed through the BR during the observation period.</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">Route</td>
+              <td align="right" border="tt" thead="column">Number of Vehicles</td>
+              <td align="right" border="tt" thead="column">Percentage (%)</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">
+                <text font="bold">Route 1</text>
+              </td>
+              <td align="right" border="t">778</td>
+              <td align="right" border="t">20</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">
+                <text font="bold">Route 2</text>
+              </td>
+              <td align="right">719</td>
+              <td align="right">18</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">
+                <text font="bold">Route 3</text>
+              </td>
+              <td align="right">524</td>
+              <td align="right">13</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">
+                <text font="bold">Route 4</text>
+              </td>
+              <td align="right">934</td>
+              <td align="right">24</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">
+                <text font="bold">Route 5</text>
+              </td>
+              <td align="right">815</td>
+              <td align="right">21</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">
+                <text font="bold">Route 6</text>
+              </td>
+              <td align="right">156</td>
+              <td align="right">4</td>
+            </tr>
+            <tr>
+              <td align="left" border="bb t" thead="row">
+                <text font="bold">Total</text>
+              </td>
+              <td align="right" border="bb t">3,926</td>
+              <td border="bb t"/>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+      <table frefnum="Table 3" placement="bth" refnum="3" xml:id="S4.T3" labels="LABEL:tab:vehicle-type" fragid="S4.T3">
+        <toccaption class="ltx_centering"><tag close=" ">3</tag>Distribution of the vehicles per type.</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 3</tag>Distribution of the vehicles per type.</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">Type</td>
+              <td align="right" border="tt" thead="column">Percentage (%)</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">Motorcycle</td>
+              <td align="right" border="t">38.30</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row"><Math mode="inline" xml:id="S4.T3.m1" tex="4\times 8" text="4 * 8" fragid="S4.T3.m1"><XMath><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok><XMTok meaning="8" role="NUMBER">8</XMTok></XMApp></XMath></Math> wheeler</td>
+              <td align="right">0.64</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row"><Math mode="inline" xml:id="S4.T3.m2" tex="4\times 6" text="4 * 6" fragid="S4.T3.m2"><XMath><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok><XMTok meaning="6" role="NUMBER">6</XMTok></XMApp></XMath></Math> wheeler</td>
+              <td align="right">2.75</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Van</td>
+              <td align="right">5.88</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Jeepney</td>
+              <td align="right">9.60</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Car</td>
+              <td align="right">31.73</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Bus</td>
+              <td align="right">0.38</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Bicycle</td>
+              <td align="right">10.72</td>
+            </tr>
+            <tr>
+              <td align="left" border="bb t" thead="row">Total</td>
+              <td align="right" border="bb t">100.00</td>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+      <!-- %**** paper1.tex Line 275 **** -->
+      <table frefnum="Table 4" placement="bth" refnum="4" xml:id="S4.T4" labels="LABEL:tab:vehicle-dimension" fragid="S4.T4">
+        <toccaption class="ltx_centering"><tag close=" ">4</tag>The average dimension of observed vehicles per type.</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 4</tag>The average dimension of observed vehicles per type.</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">Vehicle</td>
+              <td align="right" border="tt" thead="column">Length</td>
+              <td align="right" border="tt" thead="column">Width</td>
+            </tr>
+            <tr>
+              <td align="left" thead="column row">Type</td>
+              <td align="right" thead="column">(<Math mode="inline" xml:id="S4.T4.m1" tex="m" text="m" fragid="S4.T4.m1"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math>)</td>
+              <td align="right" thead="column">(<Math mode="inline" xml:id="S4.T4.m2" tex="m" text="m" fragid="S4.T4.m2"><XMath><XMTok role="UNKNOWN" font="italic">m</XMTok></XMath></Math>)</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">Motorcycle</td>
+              <td align="right" border="t">2.00</td>
+              <td align="right" border="t">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row"><Math mode="inline" xml:id="S4.T4.m3" tex="4\times 8" text="4 * 8" fragid="S4.T4.m3"><XMath><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok><XMTok meaning="8" role="NUMBER">8</XMTok></XMApp></XMath></Math> wheeler</td>
+              <td align="right">6.59</td>
+              <td align="right">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row"><Math mode="inline" xml:id="S4.T4.m4" tex="4\times 6" text="4 * 6" fragid="S4.T4.m4"><XMath><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok><XMTok meaning="6" role="NUMBER">6</XMTok></XMApp></XMath></Math> wheeler</td>
+              <td align="right">5.41</td>
+              <td align="right">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Van</td>
+              <td align="right">5.50</td>
+              <td align="right">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Jeepney</td>
+              <td align="right">4.00</td>
+              <td align="right">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Car</td>
+              <td align="right">4.50</td>
+              <td align="right">1.5</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Bus</td>
+              <td align="right">11.54</td>
+              <td align="right">2.5</td>
+            </tr>
+            <tr>
+              <td align="left" border="bb" thead="row">Bicycle</td>
+              <td align="right" border="bb">1.45</td>
+              <td align="right" border="bb">0.5</td>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+    </subsection>
+    <subsection refnum="4.2" xml:id="S4.SS2" fragid="S4.SS2">
+      <title><tag close=" ">4.2</tag>Evaluation of the Model against the Observed</title>
+      <para xml:id="S4.SS2.p1" fragid="S4.SS2.p1">
+        <p>Table <ref labelref="LABEL:tab:model-validation" href="#S4.T5" title="Table 5 ‣ 4.2 Evaluation of the Model against the Observed ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">5</text></ref> summarizes the statistics we computed after conducting ANOVA on <Math mode="inline" xml:id="S4.SS2.p1.m1" tex="\tau_{o}" text="tau _ o" fragid="S4.SS2.p1.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS2.p1.m2" tex="\tau_{s}" text="tau _ s" fragid="S4.SS2.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math>. Since we see that the F statistics <Math mode="inline" xml:id="S4.SS2.p1.m3" tex="\alpha_{\rm F}=0.6873&gt;\alpha=0.05" text="alpha _ F = 0.6873 &gt; alpha = 0.05" fragid="S4.SS2.p1.m3"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="0.6873" role="NUMBER">0.6873</XMTok><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>, then we accept the null hypothesis <Math mode="inline" xml:id="S4.SS2.p1.m4" tex="H_{0}" text="H _ 0" fragid="S4.SS2.p1.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> and we say that the difference between the mean sampled observed data <Math mode="inline" xml:id="S4.SS2.p1.m5" tex="\tau_{o}" text="tau _ o" fragid="S4.SS2.p1.m5"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and the mean simulated data <Math mode="inline" xml:id="S4.SS2.p1.m6" tex="\tau_{s}" text="tau _ s" fragid="S4.SS2.p1.m6"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> is not significantly different from zero at <Math mode="inline" xml:id="S4.SS2.p1.m7" tex="\alpha\approx 0.05" text="alpha approximately-equals 0.05" fragid="S4.SS2.p1.m7"><XMath><XMApp><XMTok meaning="approximately-equals" name="approx" role="RELOP">≈</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok meaning="0.05" role="NUMBER">0.05</XMTok></XMApp></XMath></Math>. Thus, our microsimulation model was able to mimic the driver’s behavior in the real world with a guarantee of being correct <Math mode="inline" xml:id="S4.SS2.p1.m8" tex="1-\alpha=0.95" text="1 - alpha = 0.95" fragid="S4.SS2.p1.m8"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMApp><XMTok meaning="0.95" role="NUMBER">0.95</XMTok></XMApp></XMath></Math> of the time.</p>
+      </para>
+      <!-- %**** paper1.tex Line 300 **** -->
+      <table frefnum="Table 5" placement="bth" refnum="5" xml:id="S4.T5" labels="LABEL:tab:model-validation" fragid="S4.T5">
+        <toccaption class="ltx_centering"><tag close=" ">5</tag>The ANOVA table comparing <Math mode="inline" xml:id="S4.T5.m1" tex="\tau_{o}" text="tau _ o" fragid="S4.T5.m1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.T5.m2" tex="\tau_{s}" text="tau _ s" fragid="S4.T5.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 5</tag>The ANOVA table comparing <Math mode="inline" xml:id="S4.T5.m3" tex="\tau_{o}" text="tau _ o" fragid="S4.T5.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.T5.m4" tex="\tau_{s}" text="tau _ s" fragid="S4.T5.m4"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post4"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">SOV</td>
+              <td align="right" border="tt" thead="column row">DF</td>
+              <td align="right" border="tt" thead="column">Sum of Squares</td>
+              <td align="right" border="tt" thead="column">Mean Square</td>
+              <td align="right" border="tt" thead="column">F</td>
+              <td align="right" border="tt" thead="column">
+                <Math mode="inline" xml:id="S4.T5.m5" tex="\alpha_{\rm F}" text="alpha _ F" fragid="S4.T5.m5">
+                  <XMath>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                      <XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok>
+                      <XMTok role="UNKNOWN">F</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">Replication</td>
+              <td align="right" border="t" thead="row">9</td>
+              <td align="right" border="t">1,633.05</td>
+              <td align="right" border="t">181.45</td>
+              <td align="right" border="t">39.21</td>
+              <td align="right" border="t"><Math mode="inline" xml:id="S4.T5.m6" tex="&lt;" text="less" fragid="S4.T5.m6"><XMath><XMTok meaning="less-than" role="RELOP">&lt;</XMTok></XMath></Math> 0.0001</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row"><Math mode="inline" xml:id="S4.T5.m7" tex="\tau_{o}" text="tau _ o" fragid="S4.T5.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> vs. <Math mode="inline" xml:id="S4.T5.m8" tex="\tau_{s}" text="tau _ s" fragid="S4.T5.m8"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post9"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math></td>
+              <td align="right" thead="row">1</td>
+              <td align="right">0.80</td>
+              <td align="right">0.80</td>
+              <td align="right">0.17</td>
+              <td align="right">0.6873</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Error</td>
+              <td align="right" thead="row">9</td>
+              <td align="right">41.65</td>
+              <td align="right">4.63</td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <td align="left" border="bb t" thead="row">Total</td>
+              <td align="right" border="bb t" thead="row">19</td>
+              <td align="right" border="bb t">1,675.50</td>
+              <td border="bb t"/>
+              <td border="bb t"/>
+              <td border="bb t"/>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+    </subsection>
+    <subsection refnum="4.3" xml:id="S4.SS3" fragid="S4.SS3">
+      <title><tag close=" ">4.3</tag>Comparison of the IDs</title>
+      <para xml:id="S4.SS3.p1" fragid="S4.SS3.p1">
+        <p>Tables <ref labelref="LABEL:tab:anova-delay" href="#S4.T6" title="Table 6 ‣ 4.3 Comparison of the IDs ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">6</text></ref> and <ref labelref="LABEL:tab:anova-speed" href="#S4.T7" title="Table 7 ‣ 4.3 Comparison of the IDs ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">7</text></ref> show the respective ANOVA tables of the mean <Math mode="inline" xml:id="S4.SS3.p1.m1" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and mean <Math mode="inline" xml:id="S4.SS3.p1.m2" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> for ID0, ID1, ID2, and ID3 where we find that <Math mode="inline" xml:id="S4.SS3.p1.m3" tex="\alpha_{\rm F}^{\Delta}&lt;\alpha" text="(alpha _ F) ^ Delta less alpha" fragid="S4.SS3.p1.m3"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMApp><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m4" tex="\alpha_{\rm F}^{\Sigma}&lt;\alpha" text="(alpha _ F) ^ Sigma less alpha" fragid="S4.SS3.p1.m4"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMApp><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMApp></XMath></Math>. Based on the computed <Math mode="inline" xml:id="S4.SS3.p1.m5" tex="\alpha_{\rm F}^{\Delta}" text="(alpha _ F) ^ Delta" fragid="S4.SS3.p1.m5"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m6" tex="\alpha_{\rm F}^{\Sigma}" text="(alpha _ F) ^ Sigma" fragid="S4.SS3.p1.m6"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMApp></XMath></Math>, we accept the alternate hypothesis <Math mode="inline" xml:id="S4.SS3.p1.m7" tex="H_{a}" text="H _ a" fragid="S4.SS3.p1.m7"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">H</XMTok><XMTok role="UNKNOWN" font="italic">a</XMTok></XMApp></XMath></Math> saying with confidence <Math mode="inline" xml:id="S4.SS3.p1.m8" tex="1-\alpha_{\rm F}=0.9999" text="1 - alpha _ F = 0.9999" fragid="S4.SS3.p1.m8"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok><XMTok role="UNKNOWN">F</XMTok></XMApp></XMApp><XMTok meaning="0.9999" role="NUMBER">0.9999</XMTok></XMApp></XMath></Math> that at least one of the absolute pairwise difference between <Math mode="inline" xml:id="S4.SS3.p1.m9" tex="\Delta_{{\rm ID}x}" text="Delta _ (ID * x)" fragid="S4.SS3.p1.m9"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">ID</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m10" tex="\Delta_{{\rm ID}y}" text="Delta _ (ID * y)" fragid="S4.SS3.p1.m10"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">ID</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMApp></XMath></Math>, and between <Math mode="inline" xml:id="S4.SS3.p1.m11" tex="\Sigma_{{\rm ID}x}" text="Sigma _ (ID * x)" fragid="S4.SS3.p1.m11"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">ID</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m12" tex="\Sigma_{{\rm ID}y}" text="Sigma _ (ID * y)" fragid="S4.SS3.p1.m12"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">ID</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S4.SS3.p1.m13" tex="\forall x\neq y" text="for-all@(x) not-equals y" fragid="S4.SS3.p1.m13"><XMath><XMApp><XMTok meaning="not-equals" name="neq" role="RELOP">≠</XMTok><XMApp><XMTok meaning="for-all" name="forall" role="BIGOP">∀</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMath></Math>, is significantly greater than zero. Figures <ref labelref="LABEL:fig:dmrt1" href="#S4.F2" title="Figure 2 ‣ 4.3 Comparison of the IDs ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">2</text></ref> and <ref labelref="LABEL:fig:dmrt2" href="#S4.F3" title="Figure 3 ‣ 4.3 Comparison of the IDs ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">3</text></ref> show the respective mean <Math mode="inline" xml:id="S4.SS3.p1.m14" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m14"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and mean <Math mode="inline" xml:id="S4.SS3.p1.m15" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m15"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of ID<Math mode="inline" xml:id="S4.SS3.p1.m16" tex="x" text="x" fragid="S4.SS3.p1.m16"><XMath><XMTok role="UNKNOWN" font="italic">x</XMTok></XMath></Math>, <Math mode="inline" xml:id="S4.SS3.p1.m17" tex="\forall x=0,\dots,3" text="for-all@(x) = list@(0, dots, 3)" fragid="S4.SS3.p1.m17"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="for-all" name="forall" role="BIGOP">∀</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok></XMApp><XMDual><XMApp><XMTok meaning="list"/><XMRef idref="S4.SS3.p1.m17.1"/><XMRef idref="S4.SS3.p1.m17.2"/><XMRef idref="S4.SS3.p1.m17.3"/></XMApp><XMWrap><XMTok meaning="0" role="NUMBER" xml:id="S4.SS3.p1.m17.1" fragid="S4.SS3.p1.m17.1">0</XMTok><XMTok role="PUNCT">,</XMTok><XMTok name="dots" role="ID" xml:id="S4.SS3.p1.m17.2" fragid="S4.SS3.p1.m17.2">…</XMTok><XMTok role="PUNCT">,</XMTok><XMTok meaning="3" role="NUMBER" xml:id="S4.SS3.p1.m17.3" fragid="S4.SS3.p1.m17.3">3</XMTok></XMWrap></XMDual></XMApp></XMath></Math>. Based on the DMRT, we see that ID1 will not improve <Math mode="inline" xml:id="S4.SS3.p1.m18" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m18"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> nor <Math mode="inline" xml:id="S4.SS3.p1.m19" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m19"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. In fact, both <Math mode="inline" xml:id="S4.SS3.p1.m20" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m20"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m21" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m21"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> under ID1 is no different, statistically, than the <Math mode="inline" xml:id="S4.SS3.p1.m22" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m22"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m23" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m23"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of the current infrastructure, and thus, implementing ID1 will just be a waste of taxpayer’s money. We also see that ID2 has significantly improved <Math mode="inline" xml:id="S4.SS3.p1.m24" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m24"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m25" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m25"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> compared to the current infrastructure. However, ID3 has the most significant improvement in terms of both <Math mode="inline" xml:id="S4.SS3.p1.m26" tex="\Delta" text="Delta" fragid="S4.SS3.p1.m26"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S4.SS3.p1.m27" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m27"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> compared to the current infrastructure. From Figure <ref labelref="LABEL:fig:dmrt2" href="#S4.F3" title="Figure 3 ‣ 4.3 Comparison of the IDs ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">3</text></ref>, we see that the respective <Math mode="inline" xml:id="S4.SS3.p1.m28" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m28"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of ID2 and ID3 are not statistically different from each other, so either ID can provide the best <Math mode="inline" xml:id="S4.SS3.p1.m29" tex="\Sigma" text="Sigma" fragid="S4.SS3.p1.m29"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. Based on the two metrics, however, we say that ID3 can provide the improvement that we desire for the vehicular flow.</p>
+      </para>
+      <table frefnum="Table 6" placement="bth" refnum="6" xml:id="S4.T6" labels="LABEL:tab:anova-delay" fragid="S4.T6">
+        <toccaption class="ltx_centering"><tag close=" ">6</tag>The ANOVA table comparing the different IDs in terms of <Math mode="inline" xml:id="S4.T6.m1" tex="\Delta" text="Delta" fragid="S4.T6.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 6</tag>The ANOVA table comparing the different IDs in terms of <Math mode="inline" xml:id="S4.T6.m2" tex="\Delta" text="Delta" fragid="S4.T6.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">SOV</td>
+              <td align="right" border="tt" thead="column row">DF</td>
+              <td align="right" border="tt" thead="column">Sum of Squares</td>
+              <td align="right" border="tt" thead="column">Mean Square</td>
+              <td align="right" border="tt" thead="column">F</td>
+              <td align="right" border="tt" thead="column">
+                <Math mode="inline" xml:id="S4.T6.m3" tex="\alpha_{\rm F}^{\Delta}" text="(alpha _ F) ^ Delta" fragid="S4.T6.m3">
+                  <XMath>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                        <XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok>
+                        <XMTok role="UNKNOWN">F</XMTok>
+                      </XMApp>
+                      <XMTok name="Delta" role="UNKNOWN">Δ</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">Replication</td>
+              <td align="right" border="t" thead="row">9</td>
+              <td align="right" border="t">2,328.63</td>
+              <td align="right" border="t">258.74</td>
+              <td align="right" border="t">5.12</td>
+              <td align="right" border="t">0.0004</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">ID</td>
+              <td align="right" thead="row">3</td>
+              <td align="right">3,556.14</td>
+              <td align="right">1,185.38</td>
+              <td align="right">23.47</td>
+              <td align="right"><Math mode="inline" xml:id="S4.T6.m4" tex="&lt;" text="less" fragid="S4.T6.m4"><XMath><XMTok meaning="less-than" role="RELOP">&lt;</XMTok></XMath></Math> 0.0001</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Error</td>
+              <td align="right" thead="row">27</td>
+              <td align="right">1,363.39</td>
+              <td align="right">50.50</td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <td align="left" border="bb t" thead="row">Total</td>
+              <td align="right" border="bb t" thead="row">39</td>
+              <td align="right" border="bb t">7,248.15</td>
+              <td border="bb t"/>
+              <td border="bb t"/>
+              <td border="bb t"/>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+      <table frefnum="Table 7" placement="bth" refnum="7" xml:id="S4.T7" labels="LABEL:tab:anova-speed" fragid="S4.T7">
+        <toccaption class="ltx_centering"><tag close=" ">7</tag>The ANOVA table comparing the different IDs in terms of <Math mode="inline" xml:id="S4.T7.m1" tex="\Sigma" text="Sigma" fragid="S4.T7.m1"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Table 7</tag>The ANOVA table comparing the different IDs in terms of <Math mode="inline" xml:id="S4.T7.m2" tex="\Sigma" text="Sigma" fragid="S4.T7.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> using the F statistics. SOV means Source of Variation and DF means Degree of Freedom</caption>
+        <tabular vattach="middle" class="ltx_centering ltx_guessed_headers">
+          <thead>
+            <tr>
+              <td align="left" border="tt" thead="column row">SOV</td>
+              <td align="right" border="tt" thead="column row">DF</td>
+              <td align="right" border="tt" thead="column">Sum of Squares</td>
+              <td align="right" border="tt" thead="column">Mean Square</td>
+              <td align="right" border="tt" thead="column">F</td>
+              <td align="right" border="tt" thead="column">
+                <Math mode="inline" xml:id="S4.T7.m3" tex="\alpha_{\rm F}^{\Sigma}" text="(alpha _ F) ^ Sigma" fragid="S4.T7.m3">
+                  <XMath>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post9"/>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post9"/>
+                        <XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok>
+                        <XMTok role="UNKNOWN">F</XMTok>
+                      </XMApp>
+                      <XMTok name="Sigma" role="UNKNOWN">Σ</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" border="t" thead="row">Replication</td>
+              <td align="right" border="t" thead="row">9</td>
+              <td align="right" border="t">14.73</td>
+              <td align="right" border="t">1.64</td>
+              <td align="right" border="t">5.63</td>
+              <td align="right" border="t">0.0002</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">ID</td>
+              <td align="right" thead="row">3</td>
+              <td align="right">11.83</td>
+              <td align="right">3.94</td>
+              <td align="right">13.56</td>
+              <td align="right"><Math mode="inline" xml:id="S4.T7.m4" tex="&lt;" text="less" fragid="S4.T7.m4"><XMath><XMTok meaning="less-than" role="RELOP">&lt;</XMTok></XMath></Math> 0.0001</td>
+            </tr>
+            <tr>
+              <td align="left" thead="row">Error</td>
+              <td align="right" thead="row">27</td>
+              <td align="right">7.85</td>
+              <td align="right">0.29</td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <td align="left" border="bb t" thead="row">Total</td>
+              <td align="right" border="bb t" thead="row">39</td>
+              <td align="right" border="bb t">34.41</td>
+              <td border="bb t"/>
+              <td border="bb t"/>
+              <td border="bb t"/>
+            </tr>
+          </tbody>
+        </tabular>
+      </table>
+      <figure frefnum="Figure 2" placement="bth" refnum="2" xml:id="S4.F2" labels="LABEL:fig:dmrt1" fragid="S4.F2">
+        <!-- %**** paper1.tex Line 350 **** -->
+        <graphics candidates="dmrt1.eps" graphic="./dmrt1.eps" options="file=./dmrt1.eps, width=216.81pt" xml:id="S4.F2.g1" class="ltx_centering" fragid="S4.F2.g1" imagesrc="x82.png" imagewidth="338" imageheight="209"/>
+        <toccaption class="ltx_centering"><tag close=" ">2</tag>The respective mean <Math mode="inline" xml:id="S4.F2.m1" tex="\Delta" text="Delta" fragid="S4.F2.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> of the various IDs with DMRT grouping. Means with the same letter are not statistically different from each other by DMRT.</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Figure 2</tag>The respective mean <Math mode="inline" xml:id="S4.F2.m2" tex="\Delta" text="Delta" fragid="S4.F2.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> of the various IDs with DMRT grouping. Means with the same letter are not statistically different from each other by DMRT.</caption>
+      </figure>
+      <figure frefnum="Figure 3" placement="bth" refnum="3" xml:id="S4.F3" labels="LABEL:fig:dmrt2" fragid="S4.F3">
+        <graphics candidates="dmrt2.eps" graphic="./dmrt2.eps" options="file=./dmrt2.eps, width=216.81pt" xml:id="S4.F3.g1" class="ltx_centering" fragid="S4.F3.g1" imagesrc="x83.png" imagewidth="338" imageheight="212"/>
+        <toccaption class="ltx_centering"><tag close=" ">3</tag>The respective mean <Math mode="inline" xml:id="S4.F3.m1" tex="\Sigma" text="Sigma" fragid="S4.F3.m1"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of the various IDs with DMRT grouping. Means with the same letter are not statistically different from each other by DMRT.</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Figure 3</tag>The respective mean <Math mode="inline" xml:id="S4.F3.m2" tex="\Sigma" text="Sigma" fragid="S4.F3.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of the various IDs with DMRT grouping. Means with the same letter are not statistically different from each other by DMRT.</caption>
+      </figure>
+      <!-- %“pagebreak -->
+    </subsection>
+    <subsection refnum="4.4" xml:id="S4.SS4" fragid="S4.SS4">
+      <title><tag close=" ">4.4</tag>Effect of Increased Traffic Volume</title>
+      <para xml:id="S4.SS4.p1" fragid="S4.SS4.p1">
+        <p>Figures <ref labelref="LABEL:fig:regress1" href="#S4.F4" title="Figure 4 ‣ 4.4 Effect of Increased Traffic Volume ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">4</text></ref> and <ref labelref="LABEL:fig:regress2" href="#S4.F5" title="Figure 5 ‣ 4.4 Effect of Increased Traffic Volume ‣ 4 Results and Discussion ‣ Simulating the Effects of Various Road Infrastructure Improvements to Vehicular Traffic in a Busy Three-road Fork"><text class="ltx_ref_tag">5</text></ref> show the respective effect of increasing <Math mode="inline" xml:id="S4.SS4.p1.m1" tex="\mathcal{V}" text="V" fragid="S4.SS4.p1.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> from 10% to 100% on <Math mode="inline" xml:id="S4.SS4.p1.m2" tex="\Delta" text="Delta" fragid="S4.SS4.p1.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S4.SS4.p1.m3" tex="\Sigma" text="Sigma" fragid="S4.SS4.p1.m3"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> while under ID3. As <Math mode="inline" xml:id="S4.SS4.p1.m4" tex="\mathcal{V}" text="V" fragid="S4.SS4.p1.m4"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> is increased one percent at a time, <Math mode="inline" xml:id="S4.SS4.p1.m5" tex="\Delta" text="Delta" fragid="S4.SS4.p1.m5"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> increases linearly with <Math mode="inline" xml:id="S4.SS4.p1.m6" tex="R^{2}=0.98" text="R ^ 2 = 0.98" fragid="S4.SS4.p1.m6"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.98" role="NUMBER">0.98</XMTok></XMApp></XMath></Math> at a rate of 1.03 <Math mode="inline" xml:id="S4.SS4.p1.m7" tex="s" text="s" fragid="S4.SS4.p1.m7"><XMath><XMTok role="UNKNOWN" font="italic">s</XMTok></XMath></Math> while <Math mode="inline" xml:id="S4.SS4.p1.m8" tex="\Sigma" text="Sigma" fragid="S4.SS4.p1.m8"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> decreases linearly with <Math mode="inline" xml:id="S4.SS4.p1.m9" tex="R^{2}&gt;0.99" text="R ^ 2 &gt; 0.99" fragid="S4.SS4.p1.m9"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.99" role="NUMBER">0.99</XMTok></XMApp></XMath></Math> at a rate of 0.15 <Math mode="inline" xml:id="S4.SS4.p1.m10" tex="km/h" text="(k * m) / h" fragid="S4.SS4.p1.m10"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok role="UNKNOWN" font="italic">m</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">h</XMTok></XMApp></XMath></Math>. At this linear rate of decrease, all vehicles will come to a halt (i.e., <Math mode="inline" xml:id="S4.SS4.p1.m11" tex="\Sigma=0" text="Sigma = 0" fragid="S4.SS4.p1.m11"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>) at <Math mode="inline" xml:id="S4.SS4.p1.m12" tex="\mathcal{V}\approx 180\%" text="V approximately-equals 180percent" fragid="S4.SS4.p1.m12"><XMath><XMApp><XMTok meaning="approximately-equals" name="approx" role="RELOP">≈</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok><XMApp><XMTok meaning="percent" role="POSTFIX">%</XMTok><XMTok meaning="180" role="NUMBER">180</XMTok></XMApp></XMApp></XMath></Math>.</p>
+      </para>
+      <figure frefnum="Figure 4" placement="bth" refnum="4" xml:id="S4.F4" labels="LABEL:fig:regress1" fragid="S4.F4">
+        <graphics candidates="regress1.eps" graphic="./regress1.eps" options="file=./regress1.eps, width=216.81pt" xml:id="S4.F4.g1" class="ltx_centering" fragid="S4.F4.g1" imagesrc="x84.png" imagewidth="338" imageheight="219"/>
+        <toccaption class="ltx_centering"><tag close=" ">4</tag>The respective mean <Math mode="inline" xml:id="S4.F4.m1" tex="\Delta" text="Delta" fragid="S4.F4.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> of ID3 when <Math mode="inline" xml:id="S4.F4.m2" tex="\mathcal{V}" text="V" fragid="S4.F4.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> was increased from 10% to 100%. The line represents the regression with <Math mode="inline" xml:id="S4.F4.m3" tex="\Delta=1.03\times\mathcal{V}+72.64" text="Delta = 1.03 * V + 72.64" fragid="S4.F4.m3"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="1.03" role="NUMBER">1.03</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMApp><XMTok meaning="72.64" role="NUMBER">72.64</XMTok></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="S4.F4.m4" tex="R^{2}=0.98" text="R ^ 2 = 0.98" fragid="S4.F4.m4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.98" role="NUMBER">0.98</XMTok></XMApp></XMath></Math>).</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Figure 4</tag>The respective mean <Math mode="inline" xml:id="S4.F4.m5" tex="\Delta" text="Delta" fragid="S4.F4.m5"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> of ID3 when <Math mode="inline" xml:id="S4.F4.m6" tex="\mathcal{V}" text="V" fragid="S4.F4.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> was increased from 10% to 100%. The line represents the regression with <Math mode="inline" xml:id="S4.F4.m7" tex="\Delta=1.03\times\mathcal{V}+72.64" text="Delta = 1.03 * V + 72.64" fragid="S4.F4.m7"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="Delta" role="UNKNOWN">Δ</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="1.03" role="NUMBER">1.03</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMApp><XMTok meaning="72.64" role="NUMBER">72.64</XMTok></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="S4.F4.m8" tex="R^{2}=0.98" text="R ^ 2 = 0.98" fragid="S4.F4.m8"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.98" role="NUMBER">0.98</XMTok></XMApp></XMath></Math>).</caption>
+      </figure>
+      <figure frefnum="Figure 5" placement="bth" refnum="5" xml:id="S4.F5" labels="LABEL:fig:regress2" fragid="S4.F5">
+        <graphics candidates="regress2.eps" graphic="./regress2.eps" options="file=./regress2.eps, width=216.81pt" xml:id="S4.F5.g1" class="ltx_centering" fragid="S4.F5.g1" imagesrc="x85.png" imagewidth="339" imageheight="220"/>
+        <toccaption class="ltx_centering"><tag close=" ">5</tag>The respective mean <Math mode="inline" xml:id="S4.F5.m1" tex="\Sigma" text="Sigma" fragid="S4.F5.m1"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of ID3 when <Math mode="inline" xml:id="S4.F5.m2" tex="\mathcal{V}" text="V" fragid="S4.F5.m2"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> was increased from 10% to 100%. The line represents the regression with <Math mode="inline" xml:id="S4.F5.m3" tex="\Sigma=-0.15\times\mathcal{V}+26.93" text="Sigma = (- 0.15 * V) + 26.93" fragid="S4.F5.m3"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="0.15" role="NUMBER">0.15</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMApp></XMApp><XMTok meaning="26.93" role="NUMBER">26.93</XMTok></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="S4.F5.m4" tex="R^{2}&gt;0.99" text="R ^ 2 &gt; 0.99" fragid="S4.F5.m4"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.99" role="NUMBER">0.99</XMTok></XMApp></XMath></Math>).</toccaption>
+        <caption class="ltx_centering"><tag close=": ">Figure 5</tag>The respective mean <Math mode="inline" xml:id="S4.F5.m5" tex="\Sigma" text="Sigma" fragid="S4.F5.m5"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> of ID3 when <Math mode="inline" xml:id="S4.F5.m6" tex="\mathcal{V}" text="V" fragid="S4.F5.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> was increased from 10% to 100%. The line represents the regression with <Math mode="inline" xml:id="S4.F5.m7" tex="\Sigma=-0.15\times\mathcal{V}+26.93" text="Sigma = (- 0.15 * V) + 26.93" fragid="S4.F5.m7"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">×</XMTok><XMTok meaning="0.15" role="NUMBER">0.15</XMTok><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMApp></XMApp><XMTok meaning="26.93" role="NUMBER">26.93</XMTok></XMApp></XMApp></XMath></Math> (<Math mode="inline" xml:id="S4.F5.m8" tex="R^{2}&gt;0.99" text="R ^ 2 &gt; 0.99" fragid="S4.F5.m8"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post4"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="0.99" role="NUMBER">0.99</XMTok></XMApp></XMath></Math>).</caption>
+      </figure>
+    </subsection>
+  </section>
+  <section refnum="5" xml:id="S5" labels="LABEL:sec:conclude" fragid="S5">
+    <title><tag close=" ">5</tag>Conclusion</title>
+    <!-- %**** paper1.tex Line 375 **** -->
+    <para xml:id="S5.p1" fragid="S5.p1">
+      <p>In this paper, we presented a multi-agent-based microsimulation of a real-world vehicular traffic based on the existing psycho-physical car following model for simulating the movement of vehicles along the lane <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="fritzsche94" title="fritzsche94">fritzsche94</ref>, <ref class="ltx_missing_citation" idref="gipps81" title="gipps81">gipps81</ref>]</cite> and a rule-based algorithm for simulating the lane-changing behaviors of the vehicles  <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="alshihabi03" title="alshihabi03">alshihabi03</ref>, <ref class="ltx_missing_citation" idref="VISSIM90" title="VISSIM90">VISSIM90</ref>]</cite>. We simulated a real-world infrastructure involving six routes merging into a three-road fork via an unsignalized roundabout. This roundabout is the BR located in Taguig City, Metro Manila. From the observed distribution of vehicles per route and per vehicular type, we simulated the vehicular traffic of the current situation and collected the <Math mode="inline" xml:id="S5.p1.m1" tex="\tau" text="tau" fragid="S5.p1.m1"><XMath><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok></XMath></Math> metric. Based on the ANOVA, we found out that <Math mode="inline" xml:id="S5.p1.m2" tex="\tau_{o}" text="tau _ o" fragid="S5.p1.m2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">o</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S5.p1.m3" tex="\tau_{s}" text="tau _ s" fragid="S5.p1.m3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok name="tau" role="UNKNOWN" font="italic">τ</XMTok><XMTok role="UNKNOWN" font="italic">s</XMTok></XMApp></XMath></Math> are not statistically different from each other based on the F statistics. This means that our simulation model can represent the real-world. We then simulated three proposed infrastructure developments (ID1, ID2, and ID3) and found out that ID3 offers the least <Math mode="inline" xml:id="S5.p1.m4" tex="\Delta" text="Delta" fragid="S5.p1.m4"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and at the same time the fastest <Math mode="inline" xml:id="S5.p1.m5" tex="\Sigma" text="Sigma" fragid="S5.p1.m5"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>. We increased the <Math mode="inline" xml:id="S5.p1.m6" tex="\mathcal{V}" text="V" fragid="S5.p1.m6"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> from 10% to 100% under ID3 and found out that <Math mode="inline" xml:id="S5.p1.m7" tex="\Delta" text="Delta" fragid="S5.p1.m7"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> increases linearly with <Math mode="inline" xml:id="S5.p1.m8" tex="\mathcal{V}" text="V" fragid="S5.p1.m8"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math>, while <Math mode="inline" xml:id="S5.p1.m9" tex="\Sigma" text="Sigma" fragid="S5.p1.m9"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math> decreases linearly. Based on these results, we provide the following conclusions:</p>
+      <enumerate xml:id="I6" fragid="I6">
+        <item frefnum="1." refnum="1" xml:id="I6.i1" fragid="I6.i1">
+          <tag>1.</tag>
+          <para xml:id="I6.i1.p1" fragid="I6.i1.p1">
+            <p>Our microsimulation model can stastically represent the real-world;</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I6.i2" fragid="I6.i2">
+          <tag>2.</tag>
+          <para xml:id="I6.i2.p1" fragid="I6.i2.p1">
+            <p>The best ID for BR is ID3; and</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I6.i3" fragid="I6.i3">
+          <tag>3.</tag>
+          <para xml:id="I6.i3.p1" fragid="I6.i3.p1">
+            <p>Under ID3, <Math mode="inline" xml:id="I6.i3.p1.m1" tex="\mathcal{V}" text="V" fragid="I6.i3.p1.m1"><XMath><XMTok role="UNKNOWN" font="caligraphic">V</XMTok></XMath></Math> has a positive linear effect on <Math mode="inline" xml:id="I6.i3.p1.m2" tex="\Delta" text="Delta" fragid="I6.i3.p1.m2"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and a negative linear effect on <Math mode="inline" xml:id="I6.i3.p1.m3" tex="\Sigma" text="Sigma" fragid="I6.i3.p1.m3"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>.</p>
+          </para>
+        </item>
+      </enumerate>
+    </para>
+  </section>
+  <section refnum="6" xml:id="S6" labels="LABEL:sec:recommend" fragid="S6">
+    <title><tag close=" ">6</tag>Recommendations</title>
+    <para xml:id="S6.p1" fragid="S6.p1">
+      <p>We recommend to the stakeholders within BR, such as the City Government of Taguig through its TMO, as well as the Engineering Section of the MMDA, the residents of Lower Bicutan, the public and private employees within BR such as the DOST, the TUP-T, and the PUP-T, and the private sector, particularly SM Corporation, to help call for the implementation of infrastructure developments described in ID3. We caution, however, that we may be able to find a better vehicular flow if hybrid improvements of ID1 through ID3 are considered. We further caution that it may be cheaper to implement signalized traffic schemes together with the ID. As we have mentioned before, we have already reported our findings with various traffic schemes elsewhere <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="tataro13" title="tataro13">tataro13</ref>]</cite>, while we are currently working <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="arada14" title="arada14">arada14</ref>]</cite> on the interactive effects of ID and traffic schemes to both <Math mode="inline" xml:id="S6.p1.m1" tex="\Delta" text="Delta" fragid="S6.p1.m1"><XMath><XMTok name="Delta" role="UNKNOWN">Δ</XMTok></XMath></Math> and <Math mode="inline" xml:id="S6.p1.m2" tex="\Sigma" text="Sigma" fragid="S6.p1.m2"><XMath><XMTok name="Sigma" role="UNKNOWN">Σ</XMTok></XMath></Math>.</p>
+    </para>
+  </section>
+  <section refnum="7" xml:id="S7" fragid="S7">
+    <title><tag close=" ">7</tag>Future Work</title>
+    <para xml:id="S7.p1" fragid="S7.p1">
+      <p>Several scientific research efforts have already forked out from this initial investigation. These are:</p>
+      <enumerate xml:id="I7" fragid="I7">
+        <item frefnum="1." refnum="1" xml:id="I7.i1" fragid="I7.i1">
+          <tag>1.</tag>
+          <para xml:id="I7.i1.p1" fragid="I7.i1.p1">
+            <p>Studying the effects of installing railings in busy sidewalks;</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I7.i2" fragid="I7.i2">
+          <tag>2.</tag>
+          <para xml:id="I7.i2.p1" fragid="I7.i2.p1">
+            <p>Pedestrian dynamics for a very, very large academic building beyond its designed full capacity;</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I7.i3" fragid="I7.i3">
+          <tag>3.</tag>
+          <para xml:id="I7.i3.p1" fragid="I7.i3.p1">
+            <p>Evaluation of evacuation plans for Tsunami-vulnerable shoreline communities;</p>
+          </para>
+        </item>
+        <item frefnum="4." refnum="4" xml:id="I7.i4" fragid="I7.i4">
+          <tag>4.</tag>
+          <para xml:id="I7.i4.p1" fragid="I7.i4.p1">
+            <p>Designing re-routable and adaptive traffic plans for time-responsive traffic schemes; and</p>
+          </para>
+        </item>
+        <item frefnum="5." refnum="5" xml:id="I7.i5" fragid="I7.i5">
+          <tag>5.</tag>
+          <para xml:id="I7.i5.p1" fragid="I7.i5.p1">
+            <p>Incorporating the “greedy” behavior of Jeepney and tricycle drivers in the car-following model.</p>
+          </para>
+        </item>
+      </enumerate>
+    </para>
+  </section>
+  <section refnum="8" xml:id="S8" fragid="S8">
+    <title><tag close=" ">8</tag>Acknowledgment</title>
+    <para xml:id="S8.p1" fragid="S8.p1">
+      <p>This research effort is funded by the DOST-SEI Graduate Scholarship Program with M.G. Arada and M.F. Tataro as scholar-grantees taking the Master of Information Technology graduate program in the University of the Philippines Los Baños under the research supervision of J.P. Pabico. We thank the PTV Group <cite class="ltx_citemacro_citep">[<ref class="ltx_missing_citation" idref="PTV" title="PTV">PTV</ref>]</cite> for allowing us to use their visual simulation framework free of charge for academic and research purposes.</p>
+    </para>
+    <!-- %**** paper1.tex Line 400 **** -->
+    <para xml:id="S8.p2" fragid="S8.p2">
+      <p>The following are the respective contributions of the authors:</p>
+      <enumerate xml:id="I8" fragid="I8">
+        <item frefnum="1." refnum="1" xml:id="I8.i1" fragid="I8.i1">
+          <tag>1.</tag>
+          <para xml:id="I8.i1.p1" fragid="I8.i1.p1">
+            <p>M.G. Arada implemented the computational solution, conducted the real-world observation, the computational experiments and the statistical analyses, and prepared the final manuscript;</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I8.i2" fragid="I8.i2">
+          <tag>2.</tag>
+          <para xml:id="I8.i2.p1" fragid="I8.i2.p1">
+            <p>M.F. Tataro implemented the computational solution and conducted the real-world observation and computational experiments; and</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I8.i3" fragid="I8.i3">
+          <tag>3.</tag>
+          <para xml:id="I8.i3.p1" fragid="I8.i3.p1">
+            <p>J.P. Pabico formulated the computational solution to the problem, conducted and interpreted the statistical analyses, and edited the final manuscript.</p>
+          </para>
+        </item>
+      </enumerate>
+      <p>All authors declare no conflict of interest.</p>
+    </para>
+    <!-- %BIBLIOGRAPHY -->
+  </section>
+  <bibliography citestyle="numbers" files="paper1" xml:id="bib" fragid="bib">
+    <title>References</title>
+    <biblist xml:id="Document.L1" fragid="L1"/>
+  </bibliography>
+</document>

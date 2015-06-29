@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/lnk/Desktop/LaTeXML-Plugin-JATS/development"?>
+<?latexml class="article"?>
+<?latexml package="nips14submit_e,times"?>
+<?latexml package="url"?>
+<?latexml package="graphicx"?>
+<?latexml package="caption" options="font=small"?>
+<?latexml package="subcaption"?>
+<?latexml package="amsmath,amssymb"?>
+<?latexml package="floatrow"?>
+<?latexml package="array"?>
+<?latexml package="booktabs"?>
+<?latexml package="makecell"?>
+<?latexml package="setspace"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line" xml:id="Document">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Towards a Visual Turing Challenge</title>
+  <creator role="author">
+    <personname>
+Mateusz Malinowski       Mario Fritz
+<break/>Max Planck Institute for Informatics <break/>Saarbrücken, Germany <break/>{<text font="typewriter">mmalinow,mfritz</text>}<text font="typewriter">@mpi-inf.mpg.de</text>
+</personname>
+  </creator>
+  <abstract name="Abstract">
+    <p>As language and visual understanding by machines progresses rapidly, we are observing an increasing
+interest in holistic architectures that tightly interlink both modalities in a joint learning and inference process.
+This trend has allowed the community to progress towards more challenging and open tasks and refueled the hope at achieving the old AI dream of building machines that could pass a turing test in open domains.
+In order to steadily make progress towards this goal, we realize that quantifying performance becomes increasingly difficult. Therefore we ask how we can precisely define such challenges and
+how we can evaluate different algorithms on this open tasks?
+In this paper, we summarize and discuss such challenges as well as try to give answers where appropriate options are available in the literature.
+We exemplify some of the solutions on a recently presented dataset of question-answering task based on real-world indoor images that establishes a visual turing challenge.
+Finally, we argue despite the success of unique ground-truth annotation, we likely have to step away from carefully curated dataset and rather rely on ’social consensus’ as the main driving force to create suitable benchmarks. Providing coverage in this inherently ambiguous output space is an emerging challenge that we face in order to make quantifiable progress in this area.</p>
+  </abstract>
+  <ERROR class="undefined">\newfloatcommand</ERROR>
+  <para xml:id="p1" fragid="p1">
+    <p>capbtabboxtable[][<ERROR class="undefined">\FBwidth</ERROR>]<!-- %**** nips2014.tex Line 25 **** 
+     %**** nips2014.tex Line 50 ****
+     %**** nips2014.tex Line 75 ****--><ERROR class="undefined">\nipsfinalcopy</ERROR></p>
+  </para>
+  <section refnum="1" xml:id="S1" labels="LABEL:section:introduction" fragid="S1">
+    <title><tag close=" ">1</tag>Introduction</title>
+    <para xml:id="S1.p1" fragid="S1.p1">
+      <p>Recently we witness a tremendous progress in the machine perception <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="krizhevsky2012imagenet" title="krizhevsky2012imagenet">krizhevsky2012imagenet</ref>, <ref class="ltx_missing_citation" idref="gupta2014learning" title="gupta2014learning">gupta2014learning</ref>, <ref class="ltx_missing_citation" idref="girshick2014rcnn" title="girshick2014rcnn">girshick2014rcnn</ref>, <ref class="ltx_missing_citation" idref="pishchulin2013strong" title="pishchulin2013strong">pishchulin2013strong</ref>, <ref class="ltx_missing_citation" idref="tompson2014joint" title="tompson2014joint">tompson2014joint</ref>, <ref class="ltx_missing_citation" idref="he2014spatial" title="he2014spatial">he2014spatial</ref>, <ref class="ltx_missing_citation" idref="lee2014deeply" title="lee2014deeply">lee2014deeply</ref>, <ref class="ltx_missing_citation" idref="simonyan2014very" title="simonyan2014very">simonyan2014very</ref>]</cite> and in the language understanding <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="BlackburnBos:2005" title="BlackburnBos:2005">BlackburnBos:2005</ref>, <ref class="ltx_missing_citation" idref="zettlemoyer2007online" title="zettlemoyer2007online">zettlemoyer2007online</ref>, <ref class="ltx_missing_citation" idref="kwiatkowski2010inducing" title="kwiatkowski2010inducing">kwiatkowski2010inducing</ref>, <ref class="ltx_missing_citation" idref="mikolov2013distributed" title="mikolov2013distributed">mikolov2013distributed</ref>, <ref class="ltx_missing_citation" idref="cho2014learning" title="cho2014learning">cho2014learning</ref>]</cite> tasks.
+The progress in both fields has inspired researchers to build holistic architectures for challenging grounding <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="matuszek2012joint" title="matuszek2012joint">matuszek2012joint</ref>, <ref class="ltx_missing_citation" idref="krishnamurthy2013jointly" title="krishnamurthy2013jointly">krishnamurthy2013jointly</ref>]</cite>, natural language generation from image/video <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="farhadi2010every" title="farhadi2010every">farhadi2010every</ref>, <ref class="ltx_missing_citation" idref="kulkarni2011baby" title="kulkarni2011baby">kulkarni2011baby</ref>, <ref class="ltx_missing_citation" idref="senina2014coherent" title="senina2014coherent">senina2014coherent</ref>]</cite>, image-to-sentence alignment <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="socher2013grounded" title="socher2013grounded">socher2013grounded</ref>, <ref class="ltx_missing_citation" idref="karpathy2014deep" title="karpathy2014deep">karpathy2014deep</ref>, <ref class="ltx_missing_citation" idref="mao2014explain" title="mao2014explain">mao2014explain</ref>, <ref class="ltx_missing_citation" idref="kong2014you" title="kong2014you">kong2014you</ref>]</cite>, and recently presented question-answering problems <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="liang2013learning" title="liang2013learning">liang2013learning</ref>, <ref class="ltx_missing_citation" idref="berant2014semantic" title="berant2014semantic">berant2014semantic</ref>, <ref class="ltx_missing_citation" idref="iyyer2014neural" title="iyyer2014neural">iyyer2014neural</ref>, <ref class="ltx_missing_citation" idref="faderopen" title="faderopen">faderopen</ref>, <ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite>.
+In this paper we argue for a Visual Turing Test - an open domain task of question-answering based on real-world images that resemblances the famous Turing Test <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="turing1950computing" title="turing1950computing">turing1950computing</ref>, <ref class="ltx_missing_citation" idref="lacurts2011criticisms" title="lacurts2011criticisms">lacurts2011criticisms</ref>]</cite> and deviates from other attempts <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="shan2013visual" title="shan2013visual">shan2013visual</ref>, <ref class="ltx_missing_citation" idref="lake2013one" title="lake2013one">lake2013one</ref>, <ref class="ltx_missing_citation" idref="battaglia2013simulation" title="battaglia2013simulation">battaglia2013simulation</ref>]</cite> - and discuss challenges together with tools to benchmark different models on such task.</p>
+    </para>
+    <para xml:id="S1.p2" fragid="S1.p2">
+      <p>We typically measure the progress in the field by quantifying the performance of different methods against a carefully crafted set of benchmarks.
+Crowdsourcing in combination of machine learning approaches have served us well to generate curated datasets with a unique ground truth at scale <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="welinder2010cvprw" title="welinder2010cvprw">welinder2010cvprw</ref>, <ref class="ltx_missing_citation" idref="welinder2010nips" title="welinder2010nips">welinder2010nips</ref>]</cite>.
+As the complexity and the openness of the task grows, the quest of crafting good benchmarks also becomes more difficult. First, interpreting and evaluating the answer of a system becomes increasingly difficult and ideally would rely on human judgement. Yet we want to have objective metrics that we can evaluate automatically at large scale. Second, establishing an evaluation methodology that assigns scores over a large output domain is challenging, as any system based on ontologies will have limited coverage. Third, if our aim is to mimic human response, we have to deal with inherent ambiguities due to human judgement that stem from issues like binding, reference frames, social conventions.
+For instance <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite> reports that for a question answering task on real-world images even human answers are inconsistent. Obviously this cannot be a problem of humans but rather argues for inherent ambiguities in the task.</p>
+    </para>
+    <para xml:id="S1.p3" fragid="S1.p3">
+      <p>Competing methods are validated against true annotations, but what is the “truth” in a task where even human answers cannot completely agree with each other? Instead of seeking an unique, “true” answer we suggest to look into ’social consensus’ that takes multiple human answers as different interpretations of the question into account. This enables us to incorporate ’agreement’ between the humans directly into the metric. Although the idea is not entirely new <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="amfm_pami2011" title="amfm_pami2011">amfm_pami2011</ref>, <ref class="ltx_missing_citation" idref="hodosh2013framing" title="hodosh2013framing">hodosh2013framing</ref>, <ref class="ltx_missing_citation" idref="farhadi2010eccv" title="farhadi2010eccv">farhadi2010eccv</ref>]</cite>, we believe it sits at the core of building more open and holistic challenges.</p>
+    </para>
+    <para xml:id="S1.p4" fragid="S1.p4">
+      <p>We exemplify some of our findings on the DAQUAR dataset <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite> with the aim of demonstrating different challenges that are present in the dataset.
+We hope that our exposition is helpful towards building a public visual turing challenge and will generate a discussion for the agreeable evaluation procedure and designing systems that can address open domain tasks.</p>
+    </para>
+    <para xml:id="S1.p5" fragid="S1.p5">
+      <p>In this paper holistic architecture (also holistic learner) is a machine learning architecture designed to work on the task that fuses at least two modalities, e.g. language and vision.
+The external world is a part of a task accessible to the holistic learner only via sensors and it can be either human world (the world that surrounds us), or a machine world that models some aspects of human world.
+
+<!-- %**** nips2014.tex Line 100 **** --></p>
+    </para>
+  </section>
+  <section refnum="2" xml:id="S2" fragid="S2">
+    <title><tag close=" ">2</tag>Challenges</title>
+    <para xml:id="S2.p1" fragid="S2.p1">
+      <p>As we strive for more holistic and open tasks such as grounding or question-answering based on images, we need to deal with a large gamut of challenges.
+In this section we have distilled and discuss some of the most prominent ones in order to guide the further discussion.</p>
+    </para>
+    <paragraph xml:id="S2.SS0.SSS0.Px1" fragid="S2.SS0.SSS0.Px1">
+      <title>Vision and language</title>
+      <para xml:id="S2.SS0.SSS0.Px1.p1" fragid="S2.SS0.SSS0.Px1.p1">
+        <p><text font="italic">Scalability:</text> Perception and natural language understanding are crucial parts of holistic reasoning as they ground any representation in the external world and therefore serve as a common reference point for machines and humans. The human conceptualization divides these percepts into different instances, categories as well as spatio-temporal concepts. Architectures that aim at mimicking or reproducing this space of human concepts need to capture the same diversity and therefore scale up to thousands of concepts <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="wsabie" title="wsabie">wsabie</ref>, <ref class="ltx_missing_citation" idref="perronnin2012towards" title="perronnin2012towards">perronnin2012towards</ref>, <ref class="ltx_missing_citation" idref="Hoffman14Lsda" title="Hoffman14Lsda">Hoffman14Lsda</ref>]</cite>. <break/><text font="italic">Concept ambiguity:</text> As the number of categories grows, the semantic boundaries become more fuzzy, and hence ambiguities are inherently introduced <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="lakoff1990women" title="lakoff1990women">lakoff1990women</ref>, <ref class="ltx_missing_citation" idref="deng2010does" title="deng2010does">deng2010does</ref>]</cite>. For instance, sometimes we may overlook the difference between ’night stand’ and ’cabinet’, or ’armchair’ and ’sofa’. Therefore it is reasonable to expect from the holistic architectures to create alternative hypotheses of the external world during inference.
+This also relates to the gradual category membership in human perception as portrayed in the prototype theory <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="lakoff1990women" title="lakoff1990women">lakoff1990women</ref>, <ref class="ltx_missing_citation" idref="rosch1973natural" title="rosch1973natural">rosch1973natural</ref>]</cite>.
+<break/><text font="italic">Attributes: </text>The human concepts are not limited to object categories, but also include attributes such as genders, colors, states (lights can be either on or off).
+Often these concepts cannot be learned on their own, but rather are contextualized by the associated noun. E.g. white in “white” elephant is surly different from “white” in white snow.<break/><text font="italic">Ambiguity in reference resolution:</text>
+Reliably answering on questions is challenging even for humans. The quality of an answer depends on how ambiguous and latent notions of reference frames and intentions are understood <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>, <ref class="ltx_missing_citation" idref="golland2010game" title="golland2010game">golland2010game</ref>]</cite>.
+Depending on the cultural bias and the context, we may use object-centric or observer-centric or even world-centric frames of reference <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="levinson2003space" title="levinson2003space">levinson2003space</ref>]</cite>. Moreover, it is even unclear what ’with’, ’beneath’, ’over’ mean. It seems at least difficult to symbolically define them in terms of predicates.
+While holistic learning and inference encompassing all the aforementioned aspects has yet to be shown, current research directions show promise <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="beltagy2013montague" title="beltagy2013montague">beltagy2013montague</ref>, <ref class="ltx_missing_citation" idref="rocktaschellow" title="rocktaschellow">rocktaschellow</ref>, <ref class="ltx_missing_citation" idref="lewiscombining" title="lewiscombining">lewiscombining</ref>]</cite> by adapting the symbolic-based approaches <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="zettlemoyer2007online" title="zettlemoyer2007online">zettlemoyer2007online</ref>, <ref class="ltx_missing_citation" idref="kwiatkowski2010inducing" title="kwiatkowski2010inducing">kwiatkowski2010inducing</ref>, <ref class="ltx_missing_citation" idref="liang2013learning" title="liang2013learning">liang2013learning</ref>, <ref class="ltx_missing_citation" idref="berant2014semantic" title="berant2014semantic">berant2014semantic</ref>]</cite> with vector-based approaches <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="mikolov2013distributed" title="mikolov2013distributed">mikolov2013distributed</ref>, <ref class="ltx_missing_citation" idref="socher2013grounded" title="socher2013grounded">socher2013grounded</ref>, <ref class="ltx_missing_citation" idref="iyyer2014neural" title="iyyer2014neural">iyyer2014neural</ref>]</cite> to represent the meaning.</p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S2.SS0.SSS0.Px2" fragid="S2.SS0.SSS0.Px2">
+      <title>Common sense knowledge</title>
+      <para xml:id="S2.SS0.SSS0.Px2.p1" fragid="S2.SS0.SSS0.Px2.p1">
+        <p>It turns out that some questions can solely be answered with the access to common sense knowledge with high reliability. For instance ”Which object on the table is used for cutting?” already narrows the likely options significantly and the correct answer is probably “knife” or “scissors”. Other questions like ”Which hand of the teacher is on her chin?” require the mixture of the vision and language. To understand the question, a holistic learner needs to first detect a person, figure out that the person may be a teacher, understand a gender of the person, detect her chin, understand ’left’ and ’right’ side, and finally relates ’her’ with the ’teacher’.</p>
+      </para>
+      <para xml:id="S2.SS0.SSS0.Px2.p2" fragid="S2.SS0.SSS0.Px2.p2">
+        <p>However, different parts of the common sense knowledge can be used with different modality.
+An ’object for cutting’ is not about seeing but about the affordance of the object and it cannot be learnt solely from the set of images. On the other hand things that often co-occur together may stand for the visual-based common sense knowledge. For instance we may expect to find a scissor or a pen inside a small plastic box, but never a wall or a window.
+<!-- %**** abstract˙challenges.tex Line 25 **** --></p>
+      </para>
+      <para xml:id="S2.SS0.SSS0.Px2.p3" fragid="S2.SS0.SSS0.Px2.p3">
+        <p>Common sense knowledge can help holistic machine learning architectures to either fulfill the task (question ”Which object on the table is used for cutting?” can utilizes this type of knowledge), or limit the hypothesis space and hence to reduce the computational complexity of the search problem. For instance an architecture could be guided by its common sense knowledge to limit the space of possible locations of the ’scissors’ and answer on ”What is in front of scissors?” more effectively.</p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S2.SS0.SSS0.Px3" fragid="S2.SS0.SSS0.Px3">
+      <title>Defining a benchmark dataset and quantifying performance</title>
+      <para xml:id="S2.SS0.SSS0.Px3.p1" fragid="S2.SS0.SSS0.Px3.p1">
+        <p>We argue that the question answering based on the visual input task significantly differ from the grounding problem and has unique advantages towards defining a challenge dataset. Most prominently, the latter is about finding (either with a hand-crafted set of rules or learnt-based approaches) a mapping between the linguistic fragments and the physical world <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="matuszek2012joint" title="matuszek2012joint">matuszek2012joint</ref>, <ref class="ltx_missing_citation" idref="krishnamurthy2013jointly" title="krishnamurthy2013jointly">krishnamurthy2013jointly</ref>, <ref class="ltx_missing_citation" idref="harnad1990symbol" title="harnad1990symbol">harnad1990symbol</ref>]</cite>, whereas the question answering task is about an end-to-end system where we do not necessarily want to enforce any constraints or penalty for the internal representation of the holistic learner. In this sense grounding is a latent sub-task that the holistic learner needs to solve, but will not be evaluated on.
+Finally, we argue that establishing benchmark dataset based on a question answering task similar to a turing test, is more tractable. Learning grounding asks for exhaustive symbolic-based annotations of the world, while question answering only needs textual annotations for the aspects that the question refers to.</p>
+      </para>
+    </paragraph>
+  </section>
+  <section refnum="3" xml:id="S3" fragid="S3">
+    <title><tag close=" ">3</tag>DAQUAR: Building a Dataset for Visual Turing Challenge</title>
+    <para xml:id="S3.p1" fragid="S3.p1">
+      <p>DAQUAR <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite> is a challenging, large dataset for a question answering task based on real-world images. The images present real-world indoor scenes <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="silbermanECCV12" title="silbermanECCV12">silbermanECCV12</ref>]</cite>, while the questions are unconstrained natural language sentences. DAQUAR’s language scope is beyond the nouns or tuples that are typical to recognition datasets <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="ILSVRCarxiv14" title="ILSVRCarxiv14">ILSVRCarxiv14</ref>, <ref class="ltx_missing_citation" idref="rohrbach2011evaluating" title="rohrbach2011evaluating">rohrbach2011evaluating</ref>, <ref class="ltx_missing_citation" idref="LanYWM12" title="LanYWM12">LanYWM12</ref>]</cite>. Other, linguistically rich datasets either do not tackle images at all <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="zelle1996learning" title="zelle1996learning">zelle1996learning</ref>, <ref class="ltx_missing_citation" idref="berant2013semantic" title="berant2013semantic">berant2013semantic</ref>]</cite> or consider only few in very constrained domain <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="krishnamurthy2013jointly" title="krishnamurthy2013jointly">krishnamurthy2013jointly</ref>]</cite>, or are more suitable for the learning an embedding/image-sentence retrieval or language generation <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="kong2014you" title="kong2014you">kong2014you</ref>, <ref class="ltx_missing_citation" idref="rashtchian2010collecting" title="rashtchian2010collecting">rashtchian2010collecting</ref>, <ref class="ltx_missing_citation" idref="rohrbach2012script" title="rohrbach2012script">rohrbach2012script</ref>, <ref class="ltx_missing_citation" idref="gong2014improving" title="gong2014improving">gong2014improving</ref>]</cite>.
+In this section we discuss in isolation different challenges reflected in DAQUAR.</p>
+    </para>
+    <paragraph xml:id="S3.SS0.SSS0.Px1" fragid="S3.SS0.SSS0.Px1">
+      <title>Vision and language</title>
+      <para xml:id="S3.SS0.SSS0.Px1.p1" fragid="S3.SS0.SSS0.Px1.p1">
+        <p>The machine world in DAQUAR is represented as a set of images and questions about their content.
+DAQUAR contains <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p1.m1" tex="1088" text="1088" fragid="S3.SS0.SSS0.Px1.p1.m1"><XMath><XMTok meaning="1088" role="NUMBER">1088</XMTok></XMath></Math> different nouns in the question, <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p1.m2" tex="803" text="803" fragid="S3.SS0.SSS0.Px1.p1.m2"><XMath><XMTok meaning="803" role="NUMBER">803</XMTok></XMath></Math> in the answers, and <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p1.m3" tex="1586" text="1586" fragid="S3.SS0.SSS0.Px1.p1.m3"><XMath><XMTok meaning="1586" role="NUMBER">1586</XMTok></XMath></Math> altogether (we use the Stanford POS Tagger <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="toutanova2003feature" title="toutanova2003feature">toutanova2003feature</ref>]</cite> to extract the nouns from the questions).
+If we consider only nouns in singular form in the questions, we still have <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p1.m4" tex="573" text="573" fragid="S3.SS0.SSS0.Px1.p1.m4"><XMath><XMTok meaning="573" role="NUMBER">573</XMTok></XMath></Math> categories.
+The current state-of-the-art semantic segmentation methods on the NYU-Depth V2 dataset <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="silbermanECCV12" title="silbermanECCV12">silbermanECCV12</ref>]</cite> can discriminate only between up to <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p1.m5" tex="37" text="37" fragid="S3.SS0.SSS0.Px1.p1.m5"><XMath><XMTok meaning="37" role="NUMBER">37</XMTok></XMath></Math> object categories <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="gupta2014learning" title="gupta2014learning">gupta2014learning</ref>, <ref class="ltx_missing_citation" idref="lin2013holistic" title="lin2013holistic">lin2013holistic</ref>, <ref class="ltx_missing_citation" idref="gupta2013perceptual" title="gupta2013perceptual">gupta2013perceptual</ref>]</cite>, much fewer to what is needed. DAQUAR also contains other parts of speech where only colors and spatial prepositions are grounded in <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite>.</p>
+      </para>
+      <para xml:id="S3.SS0.SSS0.Px1.p2" fragid="S3.SS0.SSS0.Px1.p2">
+        <p>Moreover, ambiguities naturally emerge due to fine grained categories that exist in DAQUAR.
+For instance ’night stand’, ’stool’ and ’cabinet’ sometimes refer to the same thing. There is also a variation in the naming of colors among the annotations.
+Questions rely heavily on the spatial concepts with different frame of reference.</p>
+      </para>
+      <para xml:id="S3.SS0.SSS0.Px1.p3" fragid="S3.SS0.SSS0.Px1.p3">
+        <p>DAQUAR includes various challenges related to natural language understanding.
+Any semantic representation needs to work with the large number of predicates (reaching about <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p3.m1" tex="4" text="4" fragid="S3.SS0.SSS0.Px1.p3.m1"><XMath><XMTok meaning="4" role="NUMBER">4</XMTok></XMath></Math> million to account different interpretations of the external world), with questions of substantial length (<Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p3.m2" tex="10.5" text="10.5" fragid="S3.SS0.SSS0.Px1.p3.m2"><XMath><XMTok meaning="10.5" role="NUMBER">10.5</XMTok></XMath></Math> words in average with variance <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p3.m3" tex="5.5" text="5.5" fragid="S3.SS0.SSS0.Px1.p3.m3"><XMath><XMTok meaning="5.5" role="NUMBER">5.5</XMTok></XMath></Math>; the longest question has <Math mode="inline" xml:id="S3.SS0.SSS0.Px1.p3.m4" tex="30" text="30" fragid="S3.SS0.SSS0.Px1.p3.m4"><XMath><XMTok meaning="30" role="NUMBER">30</XMTok></XMath></Math> words), and possible language errors in the questions.</p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S3.SS0.SSS0.Px2" fragid="S3.SS0.SSS0.Px2">
+      <title>Common sense knowledge</title>
+      <para xml:id="S3.SS0.SSS0.Px2.p1" fragid="S3.SS0.SSS0.Px2.p1">
+        <p>DAQUAR includes questions that can be reliably answered using common sense knowledge. For instance ”Which object on the table is used for cutting?” already provides strong non-visual cues for the “cutting” object.
+<!-- %**** concrete˙challenges.tex Line 25 **** -->Answers on other questions, such as ”What is above the desk in front of scissors?”, can be improved if the search space is reasonable restricted.
+Moreover, some annotators hypothesize missing parts of the object based on their common sense. To sum up, we believe that common sense knowledge is an interesting venue to explore with DAQUAR.</p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S3.SS0.SSS0.Px3" fragid="S3.SS0.SSS0.Px3">
+      <title>Question answering task</title>
+      <para xml:id="S3.SS0.SSS0.Px3.p1" fragid="S3.SS0.SSS0.Px3.p1">
+        <p>The question answering task is also about understanding hidden intentions of the questioner with grounding as a sub-goal to solve. Some authors <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="liang2013learning" title="liang2013learning">liang2013learning</ref>, <ref class="ltx_missing_citation" idref="berant2014semantic" title="berant2014semantic">berant2014semantic</ref>, <ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite> treat the grounding (understood here as the logical representation of the meaning of the question) as a latent variable in the question answering task.
+Others <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="golland2010game" title="golland2010game">golland2010game</ref>]</cite> have modeled the pragmatic effects in the question answering task, but such approaches have never been shown to work in less constrained environments.</p>
+      </para>
+    </paragraph>
+  </section>
+  <section refnum="4" xml:id="S4" labels="LABEL:section:benchmarks" fragid="S4">
+    <title><tag close=" ">4</tag>Quantifying the Performance of Holistic Architectures</title>
+    <para xml:id="S4.p1" fragid="S4.p1">
+      <p>Together with increasing complexity and openness of the task, quantifying performance of the holistic architectures becomes challenging due to several issues:
+<break/><text font="italic">Automation:</text>
+Evaluating answers on such complex tasks as answering on questions requires a quite deep understanding of natural language, involved concepts and hidden intentions of the questioner. The ideal but impractical metric would be to manually judge every single answer of every architecture individually. Since this is infeasible we are seeking an automatic approximation so that we can evaluate different holistic architectures at scale.
+<break/><text font="italic">Ambiguity:</text>
+The complex tasks that we are interested in are inherently ambiguous. The ambiguities stem from cultural bias, different frame of reference and fined grained categorization. This implies that multiple interpretations of a question are possible and hence many correct answers.
+<break/><text font="italic">Coverage:</text>
+Since there are multiple ways of expressing the same concept, the automatic performance metric should take the equivalence class among the answers into the consideration by assigning similar scores to all members of the same class. There are attempts to alleviate this issue via defining similarity scores <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="wu1994verbs" title="wu1994verbs">wu1994verbs</ref>]</cite> over the lexical databases <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="miller1995wordnet" title="miller1995wordnet">miller1995wordnet</ref>, <ref class="ltx_missing_citation" idref="fellbaum1999wordnet" title="fellbaum1999wordnet">fellbaum1999wordnet</ref>]</cite>. These approaches, however, lacks of coverage: we cannot assign a similarity between the terms that are not represented in the structure.</p>
+    </para>
+    <paragraph xml:id="S4.SS0.SSS0.Px1" fragid="S4.SS0.SSS0.Px1">
+      <title>WUPS scores</title>
+      <para xml:id="S4.SS0.SSS0.Px1.p1" fragid="S4.SS0.SSS0.Px1.p1">
+        <p>We exemplify the aforementioned requirements by illustrating the WUPS score - an automatic metric that quantifies performance of the holistic architectures proposed by <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite>. This metric is motivated by the development of a ’soft’ generalization of accuracy that takes ambiguities of different concepts into account via the set membership measure <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m1" tex="\mu" text="mu" fragid="S4.SS0.SSS0.Px1.p1.m1"><XMath><XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok></XMath></Math>:</p>
+        <equationgroup class="ltx_eqn_align" xml:id="S5.EGx1" fragid="S5.EGx1">
+          <equation frefnum="(1)" refnum="1" xml:id="S4.E1" labels="LABEL:eq:wups_score" fragid="S4.E1">
+            <MathFork>
+              <Math xml:id="S4.E1.m2" tex="\displaystyle\frac{1}{N}\sum_{i=1}^{N}\min\{\prod_{a\in A^{i}}\max_{t\in T^{i}%&#10;}\mu(a,t),\;\prod_{t\in T^{i}}\max_{a\in A^{i}}\mu(a,t)\}\cdot 100" text="(1 / N) * ((sum _ (i = 1)) ^ N)@(minimum@((product _ (a element-of A ^ i))@((maximum _ (t element-of T ^ i))@(mu) * open-interval@(a, t)), (product _ (t element-of T ^ i))@((maximum _ (a element-of A ^ i))@(mu) * open-interval@(a, t))) cdot 100)" fragid="S4.E1.m2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMApp scriptpos="mid">
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="mid7"/>
+                        <XMApp scriptpos="mid">
+                          <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                          <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMRef idref="S4.E1.m2.5"/>
+                            <XMRef idref="S4.E1.m2.6"/>
+                            <XMRef idref="S4.E1.m2.7"/>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="minimum" role="OPFUNCTION" scriptpos="mid" xml:id="S4.E1.m2.5" fragid="S4.E1.m2.5">min</XMTok>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">{</XMTok>
+                              <XMApp xml:id="S4.E1.m2.6" fragid="S4.E1.m2.6">
+                                <XMApp scriptpos="mid">
+                                  <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                  <XMTok mathstyle="display" meaning="product" name="prod" role="SUMOP" scriptpos="mid">∏</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                      <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMApp>
+                                    <XMApp scriptpos="mid">
+                                      <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                      <XMTok meaning="maximum" role="OPFUNCTION" scriptpos="mid">max</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                          <XMTok role="UNKNOWN" font="italic">T</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok>
+                                  </XMApp>
+                                  <XMDual>
+                                    <XMApp>
+                                      <XMTok meaning="open-interval"/>
+                                      <XMRef idref="S4.E1.m2.1"/>
+                                      <XMRef idref="S4.E1.m2.2"/>
+                                    </XMApp>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMTok role="UNKNOWN" xml:id="S4.E1.m2.1" font="italic" fragid="S4.E1.m2.1">a</XMTok>
+                                      <XMTok role="PUNCT">,</XMTok>
+                                      <XMTok role="UNKNOWN" xml:id="S4.E1.m2.2" font="italic" fragid="S4.E1.m2.2">t</XMTok>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="PUNCT" rpadding="2.8pt">,</XMTok>
+                              <XMApp xml:id="S4.E1.m2.7" fragid="S4.E1.m2.7">
+                                <XMApp scriptpos="mid">
+                                  <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                  <XMTok mathstyle="display" meaning="product" name="prod" role="SUMOP" scriptpos="mid">∏</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                      <XMTok role="UNKNOWN" font="italic">T</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMApp>
+                                    <XMApp scriptpos="mid">
+                                      <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                      <XMTok meaning="maximum" role="OPFUNCTION" scriptpos="mid">max</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                          <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok>
+                                  </XMApp>
+                                  <XMDual>
+                                    <XMApp>
+                                      <XMTok meaning="open-interval"/>
+                                      <XMRef idref="S4.E1.m2.3"/>
+                                      <XMRef idref="S4.E1.m2.4"/>
+                                    </XMApp>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMTok role="UNKNOWN" xml:id="S4.E1.m2.3" font="italic" fragid="S4.E1.m2.3">a</XMTok>
+                                      <XMTok role="PUNCT">,</XMTok>
+                                      <XMTok role="UNKNOWN" xml:id="S4.E1.m2.4" font="italic" fragid="S4.E1.m2.4">t</XMTok>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                            </XMWrap>
+                          </XMApp>
+                        </XMDual>
+                        <XMTok meaning="100" role="NUMBER">100</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle\frac{1}{N}\sum_{i=1}^{N}\min\{\prod_{a\in A^{i}}\max_{t\in T^{i}%&#10;}\mu(a,t),\;\prod_{t\in T^{i}}\max_{a\in A^{i}}\mu(a,t)\}\cdot 100" xml:id="S4.E1.m1" text="(1 / N) * ((sum _ (i = 1)) ^ N)@(minimum@((product _ (a element-of A ^ i))@((maximum _ (t element-of T ^ i))@(mu) * open-interval@(a, t)), (product _ (t element-of T ^ i))@((maximum _ (a element-of A ^ i))@(mu) * open-interval@(a, t))) cdot 100)" fragid="S4.E1.m1">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMApp scriptpos="mid">
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="mid7"/>
+                            <XMApp scriptpos="mid">
+                              <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                              <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                              <XMApp>
+                                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                            <XMDual>
+                              <XMApp>
+                                <XMRef idref="S4.E1.m1.5"/>
+                                <XMRef idref="S4.E1.m1.6"/>
+                                <XMRef idref="S4.E1.m1.7"/>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="minimum" role="OPFUNCTION" scriptpos="mid" xml:id="S4.E1.m1.5" fragid="S4.E1.m1.5">min</XMTok>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">{</XMTok>
+                                  <XMApp xml:id="S4.E1.m1.6" fragid="S4.E1.m1.6">
+                                    <XMApp scriptpos="mid">
+                                      <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                      <XMTok mathstyle="display" meaning="product" name="prod" role="SUMOP" scriptpos="mid">∏</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                          <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                      <XMApp>
+                                        <XMApp scriptpos="mid">
+                                          <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                          <XMTok meaning="maximum" role="OPFUNCTION" scriptpos="mid">max</XMTok>
+                                          <XMApp>
+                                            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                            <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                            <XMApp>
+                                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                              <XMTok role="UNKNOWN" font="italic">T</XMTok>
+                                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                            </XMApp>
+                                          </XMApp>
+                                        </XMApp>
+                                        <XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok>
+                                      </XMApp>
+                                      <XMDual>
+                                        <XMApp>
+                                          <XMTok meaning="open-interval"/>
+                                          <XMRef idref="S4.E1.m1.1"/>
+                                          <XMRef idref="S4.E1.m1.2"/>
+                                        </XMApp>
+                                        <XMWrap>
+                                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                          <XMTok role="UNKNOWN" xml:id="S4.E1.m1.1" font="italic" fragid="S4.E1.m1.1">a</XMTok>
+                                          <XMTok role="PUNCT">,</XMTok>
+                                          <XMTok role="UNKNOWN" xml:id="S4.E1.m1.2" font="italic" fragid="S4.E1.m1.2">t</XMTok>
+                                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                        </XMWrap>
+                                      </XMDual>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMTok role="PUNCT" rpadding="2.8pt">,</XMTok>
+                                  <XMApp xml:id="S4.E1.m1.7" fragid="S4.E1.m1.7">
+                                    <XMApp scriptpos="mid">
+                                      <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                      <XMTok mathstyle="display" meaning="product" name="prod" role="SUMOP" scriptpos="mid">∏</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">t</XMTok>
+                                        <XMApp>
+                                          <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                          <XMTok role="UNKNOWN" font="italic">T</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                        </XMApp>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                      <XMApp>
+                                        <XMApp scriptpos="mid">
+                                          <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                          <XMTok meaning="maximum" role="OPFUNCTION" scriptpos="mid">max</XMTok>
+                                          <XMApp>
+                                            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                            <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                            <XMApp>
+                                              <XMTok role="SUPERSCRIPTOP" scriptpos="post8"/>
+                                              <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                                              <XMTok role="UNKNOWN" font="italic">i</XMTok>
+                                            </XMApp>
+                                          </XMApp>
+                                        </XMApp>
+                                        <XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok>
+                                      </XMApp>
+                                      <XMDual>
+                                        <XMApp>
+                                          <XMTok meaning="open-interval"/>
+                                          <XMRef idref="S4.E1.m1.3"/>
+                                          <XMRef idref="S4.E1.m1.4"/>
+                                        </XMApp>
+                                        <XMWrap>
+                                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                          <XMTok role="UNKNOWN" xml:id="S4.E1.m1.3" font="italic" fragid="S4.E1.m1.3">a</XMTok>
+                                          <XMTok role="PUNCT">,</XMTok>
+                                          <XMTok role="UNKNOWN" xml:id="S4.E1.m1.4" font="italic" fragid="S4.E1.m1.4">t</XMTok>
+                                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                        </XMWrap>
+                                      </XMDual>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                                </XMWrap>
+                              </XMApp>
+                            </XMDual>
+                            <XMTok meaning="100" role="NUMBER">100</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>where for each <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m2" tex="i" text="i" fragid="S4.SS0.SSS0.Px1.p1.m2"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>-th question, <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m3" tex="A^{i}" text="A ^ i" fragid="S4.SS0.SSS0.Px1.p1.m3"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">A</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m4" tex="T^{i}" text="T ^ i" fragid="S4.SS0.SSS0.Px1.p1.m4"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">T</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMath></Math> are the answers produced by the architecture and human respectively, and they are represented as bags of words.
+The authors of <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite> have proposed using WUP similarity <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="wu1994verbs" title="wu1994verbs">wu1994verbs</ref>]</cite> as the membership measure <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m5" tex="\mu" text="mu" fragid="S4.SS0.SSS0.Px1.p1.m5"><XMath><XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok></XMath></Math> in the WUPS score. Such choice of <Math mode="inline" xml:id="S4.SS0.SSS0.Px1.p1.m6" tex="\mu" text="mu" fragid="S4.SS0.SSS0.Px1.p1.m6"><XMath><XMTok name="mu" role="UNKNOWN" font="italic">μ</XMTok></XMath></Math> suffers from the aforementioned coverage problem and the whole metric takes only one human interpretation of the question into account.</p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S4.SS0.SSS0.Px2" fragid="S4.SS0.SSS0.Px2">
+      <title>Future directions for defining metrics</title>
+      <para xml:id="S4.SS0.SSS0.Px2.p1" fragid="S4.SS0.SSS0.Px2.p1">
+        <p>Recent work provides several directions towards improving scores.
+To deal with ambiguities that stem from different readings of the same question we are collecting more human answers per question and we propose, based on that, two generalizations of WUPS score. The first, we call Interpretation Metric, runs Eq. <ref labelref="LABEL:eq:wups_score" href="#S4.E1" title="(1) ‣ WUPS scores ‣ 4 Quantifying the Performance of Holistic Architectures ‣ Towards a Visual Turing Challenge"><text class="ltx_ref_tag">1</text></ref> over many human answers and takes the maximal score, so that
+the machine answer is high if it is similar to at least one human answer. However, with many human answers, we can also rank higher the machine answers that are ’socially agreeable’ by measuring if they agree with most human answers. This can be done by averaging over multiple human answers. We call such second extension, Consensus Metric.
+The problem with coverage can be potentially alleviated with vector based representations <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="mikolov2013distributed" title="mikolov2013distributed">mikolov2013distributed</ref>]</cite> of the answers. Although in this case the coverage issues are less problematic, we understand the concerns that such score is dependent on the training data used to build such representation. On the other hand, due to abundance of textual data and recent improvements of vector based approaches <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="mikolov2013distributed" title="mikolov2013distributed">mikolov2013distributed</ref>, <ref class="ltx_missing_citation" idref="pennington2014glove" title="pennington2014glove">pennington2014glove</ref>]</cite>, we consider it as a valid alternative to similarities that are based on ontologies.
+<!-- %**** benchmarks.tex Line 50 **** --></p>
+      </para>
+    </paragraph>
+    <paragraph xml:id="S4.SS0.SSS0.Px3" fragid="S4.SS0.SSS0.Px3">
+      <title>Experimental scenarios</title>
+      <para xml:id="S4.SS0.SSS0.Px3.p1" fragid="S4.SS0.SSS0.Px3.p1">
+        <p>In many cases, success on challenging learning problems has been accelerated by use of external data in the training, e.g. in object detection <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="girshick2014rcnn" title="girshick2014rcnn">girshick2014rcnn</ref>]</cite>.
+We believe that a Visual Turing challenge should consists of a sub-task with a prohibited use of auxiliary data to understand how the holistic learners generalize from limited and challenging data in a more established setup. On the other hand we should not limit ourselves to such artificial restrictions in building next generation of the holistic learners. Therefore open sub-tasks with a permissible use of another sources in the training have to be stated, including: additional vision and language resources, synthetic data and curated questions.</p>
+      </para>
+    </paragraph>
+  </section>
+  <section refnum="5" xml:id="S5" fragid="S5">
+    <title><tag close=" ">5</tag>Summary</title>
+    <para xml:id="S5.p1" fragid="S5.p1">
+      <p>The goal of this contribution is to sparkle the discussions about benchmarking holistic architectures on complex and more open tasks.
+We identify particular challenges that holistic tasks should exhibit and exemplify how they are manifested in a recent question answering challenge <cite class="ltx_citemacro_cite">[<ref class="ltx_missing_citation" idref="malinowski14nips" title="malinowski14nips">malinowski14nips</ref>]</cite>.
+To judge competing architectures and measure the progress on the task, we suggest several directions to further improve existing metrics, and discuss different experimental scenarios.</p>
+    </para>
+    <para xml:id="S5.p2" fragid="S5.p2">
+      <p><text font="bold">Acknowledgement:</text> We would like to thank Michael Stark for his comments on the draft.</p>
+    </para>
+  </section>
+  <bibliography bibstyle="splncs" citestyle="numbers" files="egbib" xml:id="bib" fragid="bib">
+    <title fontsize="90%">References</title>
+    <biblist xml:id="Document.L1" fragid="L1"/>
+  </bibliography>
+</document>
