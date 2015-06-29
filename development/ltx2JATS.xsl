@@ -246,6 +246,51 @@ doctype-system="archivearticle3.dtd"/>
 	</inline-formula>
 </xsl:template>
 
+<xsl:template match="ltx:caption" mode="front">
+		<caption>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()" mode="front"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()" mode="front"/> 
+			</p>
+		</xsl:if>
+	</caption>
+</xsl:template>
+
+<xsl:template match="ltx:caption" mode="back">
+		<caption>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()" mode="back"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()" mode="back"/> 
+			</p>
+		</xsl:if>
+	</caption>
+</xsl:template>
+
+<xsl:template match="ltx:caption">
+		<caption>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:if>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()"/> 
+			</p>
+		</xsl:if>
+	</caption>
+</xsl:template>
+
+<xsl:template match="ltx:float" mode="front">
+	<boxed-text>
+		<xsl:apply-templates select="@*|node()" mode="front"/> 
+	</boxed-text>
+</xsl:template>
+
 <xsl:template match="ltx:paragraph">
 	<boxed-text>
 		<xsl:apply-templates select="@*|node()"/>
@@ -582,6 +627,12 @@ doctype-system="archivearticle3.dtd"/>
 	</title>
 </xsl:template>
 
+<xsl:template match="ltx:float">
+	<boxed-text>
+		<xsl:apply-templates select="@*|node()"/> 
+	</boxed-text>
+</xsl:template>
+
 <xsl:template match="ltx:subsection/ltx:title">
 	<title>
 		<xsl:apply-templates select="@*|node()"/>
@@ -737,6 +788,13 @@ doctype-system="archivearticle3.dtd"/>
 	</external-link>
 </xsl:template>
 
+<xsl:template match="ltx:float" mode="back">
+	<boxed-text>
+		<xsl:apply-templates select="@*|node()" mode="back"/> 
+	</boxed-text>
+</xsl:template>
+	
+
 <xsl:template match="ltx:titlepage">
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
@@ -803,9 +861,15 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:figure" mode="back"/>
 <xsl:template match="ltx:break" mode="back"/>
 <xsl:template match="ltx:contact[@role='dedicatory']" mode="front"/>
-<xsl:template match="ltx:contact[@role='dedicatory']" mode="back"/>
+<xsl:template match="ltx:contact[@role='dedicatory']" mode="back"/> 	
 <xsl:template match="ltx:contact[@role='dedicatory']"/>
+<xsl:template match="ltx:TOC"/>
+<xsl:template match="ltx:TOC" mode="front"/>
+<xsl:template match="ltx:TOC" mode="back"/>
+
+
 <xsl:template match="ltx:abstract/ltx:figure" mode="front">
+
 
 	<xsl:message>figure in an abstract, fix this </xsl:message> <!-- TODO actualy fix it if it happens --> 
 </xsl:template>
@@ -930,6 +994,36 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:text[@xml:lang]" mode="back">
 	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@framed='underline']">
+	<underline>
+		<xsl:apply-templates select="@*|node()"/>
+	</underline>
+</xsl:template>
+
+<xsl:template match="ltx:text[@framed='underline']" mode="front">
+	<underline>
+		<xsl:apply-templates select="@*|node()" mode="front"/>
+	</underline>
+</xsl:template>
+
+<xsl:template match="ltx:text[@framed='underline']" mode="back">
+	<underline>
+		<xsl:apply-templates select="@*|node()" mode="back"/>
+	</underline>
+</xsl:template>
+
+<xsl:template match="ltx:text[@class]">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@class]" mode="front">
+	<xsl:apply-templates select="@*|node()" mode="front"/>
+</xsl:template>
+
+<xsl:template match="ltx:text[@class]" mode="back">
+	<xsl:apply-templates select="@*|node()" mode="back"/>
 </xsl:template>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
