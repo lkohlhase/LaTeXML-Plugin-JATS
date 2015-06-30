@@ -219,9 +219,7 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:equationgroup/ltx:equation" mode="front">
 	<disp-formula>
 		<xsl:apply-templates select="@*" mode="front"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</disp-formula>
 </xsl:template>
 
@@ -232,10 +230,7 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:equation" mode="front">
 	<p>
 	<disp-formula>
-		<xsl:apply-templates select="@*" mode="front"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:apply-templates select="@*|node()"/>
 	</disp-formula>
 	</p>	
 </xsl:template>
@@ -243,9 +238,7 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:Math[@mode='inline']" mode="front">
 	<inline-formula>
 		<xsl:apply-templates select="@*"/>
-		<tex-math>
-			<xsl:value-of select="./@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</inline-formula>
 </xsl:template>
 
@@ -338,30 +331,21 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:equationgroup/ltx:equation" mode="back">
 	<disp-formula>
-		<xsl:apply-templates select="@*" mode="back"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</disp-formula>
 </xsl:template>
 
 <xsl:template match="ltx:equation" mode="back">
 	<p>
 	<disp-formula>
-		<xsl:apply-templates select="@*" mode="back"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</disp-formula>
 	</p>
 </xsl:template>
 
 <xsl:template match="ltx:Math[@mode='inline']" mode="back">
 	<inline-formula>
-		<xsl:apply-templates select="@*" mode="back"/>
-		<tex-math>
-			<xsl:value-of select="./@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</inline-formula>
 </xsl:template>
 
@@ -480,7 +464,7 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:note[@role='institutetext']" mode="back"/>
 <xsl:template match="ltx:note[@role='institutetext']"/>
-<xsl:template match="ltx:note[@role='institutetext']" mode="front"/> <!-- TODO Check if this can be done better -->
+<xsl:template match="ltx:note[@role='institutetext']" mode="front"/> 
 
 <xsl:template match="ltx:text[@font='italic']">
 	<italic>
@@ -496,29 +480,34 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:note[@role='footnote']">
 	<fn id="{generate-id(.)}">
-		<p>
-			<xsl:apply-templates select="@*|node()"/> 
-		</p>
+		<xsl:if test="not(./ltx:p)">
+			<p>
+				<xsl:apply-templates select="@*|node()"/> 
+			</p>
+		</xsl:if>
+		<xsl:if test="./ltx:p">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:if>
 	</fn>
-</xsl:template><!-- TODO check whether we ever us a simplistic id like @mark. Also check whether paragraphs are always necessary -->
+</xsl:template>
 
 <xsl:template match="ltx:para">
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
 <xsl:template match="ltx:equationgroup">
+	<p>
 	<disp-formula-group>
 		<xsl:apply-templates select="@*|node()"/> 
-	</disp-formula-group> 
+	</disp-formula-group>
+	</p>	
 </xsl:template> 
 
 <xsl:template match="ltx:equation">
 	<p>
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</disp-formula>
 	</p>
 </xsl:template>
@@ -526,18 +515,14 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:equationgroup/ltx:equation">
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
-		<tex-math>
-			<xsl:value-of select="./ltx:Math/@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</disp-formula>
 </xsl:template>
 
 <xsl:template match="ltx:Math[@mode='inline']">
 	<inline-formula>
 		<xsl:apply-templates select="@*"/>
-		<tex-math>
-			<xsl:value-of select="./@tex"/>
-		</tex-math>
+		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
 	</inline-formula>
 </xsl:template>
 
@@ -831,8 +816,7 @@ doctype-system="archivearticle3.dtd"/>
 
 
 <!-- End body section -->
-<xsl:template match="ltx:document/ltx:title"/> <!-- TODO ask Bruce if we want the article title outside of the frontmatter as well -->
-
+<xsl:template match="ltx:document/ltx:title"/> 
 <!-- This section is for elements that we aren't doing anything with and just removing from the document -->
 <xsl:template match="ltx:resource[@type='text/css']"/>
 <xsl:template match="ltx:creator[@role='author']"/>
@@ -842,19 +826,19 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:note[@role='thanks']" mode="front"/>
 <xsl:template match="ltx:contact[@role='thanks']" mode="front"/>
 <xsl:template match="ltx:section" mode="front"/>
-<xsl:template match="ltx:acknowledgements"/> <!-- TODO put this into backmatter -->
+<xsl:template match="ltx:acknowledgements"/> 
 <xsl:template match="ltx:acknowledgements" mode="front"/>
-<xsl:template match="ltx:bibliography"/> <!-- TODO put this into backmatter --> 
+<xsl:template match="ltx:bibliography"/>
 <xsl:template match="ltx:bibliography" mode="front"/>
 <xsl:template match="ltx:date[@role='creation']"/>
-<xsl:template match="ltx:tag"/> <!-- TODO check if Slavas stuff validates for this -->
+<xsl:template match="ltx:tag"/> 
 <xsl:template match="ltx:break"/> <!-- Break isn't really supposed to be used --> 
 <xsl:template match="ltx:resource[@type='text/css']" mode="back"/>
 <xsl:template match="ltx:creator[@role='author']" mode="back"/>
 <xsl:template match="ltx:abstract" mode="back"/>
 <xsl:template match="ltx:keywords" mode="back"/>
 <xsl:template match="ltx:note[@role='thanks']" mode="back"/>
-<xsl:template match="ltx:section" mode="back"/><!-- TODO check if there is any real possiblity for sections in back matter. I don't think so, since they all get dealt with by normal stuff -->
+<xsl:template match="ltx:section" mode="back"/>
 <xsl:template match="ltx:date[@role='creation']" mode="back"/>
 <xsl:template match="ltx:document/ltx:title" mode="back"/>
 <xsl:template match="ltx:para" mode="front"/>
@@ -908,7 +892,12 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="@labels">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 </xsl:template>
-<xsl:template match="ltx:para/@xml:id"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="ltx:para/@xml:id"/> 
+<xsl:template match="ltx:para[@xml:id]/ltx:p">
+	<p id="{../@xml:id}">
+		<xsl:apply-templates select="@*|node()"/> 
+	</p>
+</xsl:template>
 <xsl:template match="ltx:document/@xml:id"/>
 <xsl:template match="ltx:document/@xml:id" mode="front"/>
 <xsl:template match="ltx:document/@xml:id" mode="back"/>
@@ -919,14 +908,24 @@ doctype-system="archivearticle3.dtd"/>
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="ltx:para/@xml:id" mode="front"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="ltx:para/@xml:id" mode="front"/>
+<xsl:template match="ltx:para[@xml:id]/ltx:p" mode="front">
+	<p id="{../@xml:id}">
+		<xsl:apply-templates select="@*|node()" mode="back"/> 
+	</p>
+</xsl:template>
 <xsl:template match="@xml:id" mode="front">
 	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="ltx:para/@xml:id" mode="back"/> <!-- TODO append this to the next <p> or something -->
+<xsl:template match="ltx:para/@xml:id" mode="back"/> 
+<xsl:template match="ltx:para[@xml:id]/ltx:p" mode="back">
+	<p id="{../@xml:id}">
+		<xsl:apply-templates select="@*|node()" mode="back"/> 
+	</p>
+</xsl:template>
 <xsl:template match="@xml:id" mode="back">
 	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
