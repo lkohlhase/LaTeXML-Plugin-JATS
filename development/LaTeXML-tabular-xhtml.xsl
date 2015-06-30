@@ -33,7 +33,7 @@
   <xsl:template match="ltx:tabular">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,'table')}">
+    <xsl:element name="{f:blockelement($context,'table')}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes"/>
       <xsl:apply-templates select="." mode="begin">
@@ -52,7 +52,7 @@
   <xsl:template match="ltx:thead">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,'thead')}">
+    <xsl:element name="{f:blockelement($context,'thead')}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes"/>
       <xsl:apply-templates select="." mode="begin">
@@ -71,7 +71,7 @@
   <xsl:template match="ltx:tbody">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,'tbody')}">
+    <xsl:element name="{f:blockelement($context,'tbody')}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes"/>
       <xsl:apply-templates select="." mode="begin">
@@ -90,7 +90,7 @@
   <xsl:template match="ltx:tfoot">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,'tfoot')}">
+    <xsl:element name="{f:blockelement($context,'tfoot')}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes"/>
       <xsl:apply-templates select="." mode="begin">
@@ -109,7 +109,7 @@
   <xsl:template match="ltx:tr">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,'tr')}">
+    <xsl:element name="{f:blockelement($context,'tr')}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes"/>
       <xsl:apply-templates select="." mode="begin">
@@ -127,7 +127,7 @@
   <xsl:template match="ltx:td">
     <xsl:param name="context"/>
     <xsl:text>&#x0A;</xsl:text>
-    <xsl:element name="{f:blockelement($context,f:if(@thead,'th','td'))}">
+    <xsl:element name="{f:blockelement($context,f:if(@thead,'th','td'))}" namespace="{$html_ns}">
       <xsl:call-template name="add_id"/>
       <!-- generally, align & width should be covered by CSS -->
       <xsl:call-template name="add_attributes">

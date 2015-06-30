@@ -13,14 +13,17 @@
 <xsl:stylesheet
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ltx="http://dlmf.nist.gov/LaTeXML"  version="1.0" exclude-result-prefixes="ltx str m xlink xhtml" xmlns:str="http://exslt.org/strings" xmlns:m="http://www.w3.org/1998/Math/MathML"         xmlns:xhtml="http://www.w3.org/1999/xhtml"        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:exsl="http://exslt.org/common"
                 extension-element-prefixes="exsl" >
+                <xsl:import href="LaTeXML-tabular-xhtml.xsl"/>
+		<xsl:import href="LaTeXML-common.xsl"/>
 
-   <xsl:strip-space elements="*"/>
+<xsl:strip-space elements="*"/>
 <xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
 doctype-system="archivearticle3.dtd"/>
 
 <xsl:variable name="footnotes" select="//ltx:note[@role='footnote']"/>
-<xsl:include href="LaTeXML-tabular-xhtml.xsl"/>
-<xsl:include href="LaTeXML-common.xsl"/>
+<xsl:template name="add_classes"/>
+ <xsl:param name="html_ns"></xsl:param>
+
 <xsl:template match="*">
 	<xsl:message> The element <xsl:value-of select="name(.)"/> <xsl:if test="@*"> with attributes
 	<xsl:for-each select="./@*">
@@ -680,6 +683,32 @@ doctype-system="archivearticle3.dtd"/>
 		<xsl:apply-templates select="*[not(self::ltx:caption)]"/>
 	</table-wrap>
 </xsl:template>
+
+<xsl:template match="ltx:tabular/*">
+	<xsl:apply-imports>
+		<xsl:apply-templates select="@*"/>
+	</xsl:apply-imports>
+</xsl:template>
+
+<xsl:template match="ltx:tr">
+	<xsl:apply-imports>
+		<xsl:apply-templates select="@*"/>
+	</xsl:apply-imports>
+</xsl:template>
+
+<xsl:template match="ltx:td">
+	<xsl:apply-imports>
+		<xsl:apply-templates select="@*"/>
+	</xsl:apply-imports>
+</xsl:template>
+
+
+<xsl:template match="ltx:tabular">
+	<xsl:apply-imports>
+		<xsl:apply-templates select="@*"/> 
+	</xsl:apply-imports>
+</xsl:template>
+
 
 <xsl:template match="ltx:table/ltx:caption">
 	<caption>

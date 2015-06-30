@@ -22,7 +22,7 @@
     xmlns:f     = "http://dlmf.nist.gov/LaTeXML/functions"
     xmlns:xhtml = "http://www.w3.org/1999/xhtml"
     extension-element-prefixes="func f"
-    exclude-result-prefixes = "ltx f func string xhtml">
+    exclude-result-prefixes = "ltx f func string">
 
   <!-- ALL CAPS parameters are intended to be passed in;
        lower case ones are (mostly) intended for internal use-->
@@ -416,6 +416,16 @@
   -->
   <xsl:template name="add_classes">
     <xsl:param name="extra_classes" select="''"/>
+    <xsl:call-template name="add_attribute">
+      <xsl:with-param name="name" select="'class'"/>
+      <xsl:with-param name="value">
+        <xsl:apply-templates select="." mode="classes"/>
+        <xsl:if test="$extra_classes">
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="$extra_classes"/>
+        </xsl:if>
+      </xsl:with-param>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template match="*" mode="classes">
