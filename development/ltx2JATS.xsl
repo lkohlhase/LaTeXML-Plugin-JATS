@@ -102,7 +102,7 @@ doctype-system="archivearticle3.dtd"/>
 				<xsl:apply-templates select="ltx:abstract" mode="front"/>
 				<xsl:apply-templates select="ltx:keywords" mode="front"/>
 				<xsl:apply-templates select="*[not(self::ltx:title or self::ltx:creator[@role='author'] or self::ltx:date[@role='creation'] or self::ltx:abstract or self::ltx:keywords)]" mode="front"/>
-				<!-- TODO check if all the front matter is actually included. Authors and titles are in already -->
+
 			</article-meta>
 		</front>
 		<body>
@@ -321,7 +321,7 @@ doctype-system="archivearticle3.dtd"/>
 <!-- End front matter section -->
 <!-- Start back section --> 
 <!-- This is essentially for bibliography and acknowledgements-->
- <!-- TODO check if there is ever any issue by making ref-list from this and not biblist -->
+<!-- However I still need stuff to handle various other subcases that could come up in for example appendices or acknowledgements -->
 
 <xsl:template match="ltx:equationgroup" mode="back">
 	<disp-formula-group>
@@ -438,7 +438,6 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 
 
-<!-- TODO check if we want to do anything with fullauthors --> 
 <xsl:template match="ltx:bibtag[@role='fullauthors']" mode="back"/>
 <xsl:template match="ltx:text[@font='bold']" mode="back">
 	<bold>
