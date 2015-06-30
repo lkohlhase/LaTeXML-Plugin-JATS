@@ -812,8 +812,18 @@ doctype-system="archivearticle3.dtd"/>
 	<xsl:apply-templates select="@*|node()"/> 
 </xsl:template>
 
+<xsl:template match="ltx:description">
+	<list> 
+		<xsl:apply-templates select="@*|node()"/> 
+	</list>
+</xsl:template>
 
-
+<xsl:template match="ltx:verbatim">
+	<preformat>
+		<xsl:apply-templates select="@*|node()"/> 
+	</preformat>
+</xsl:template>
+	
 <!-- End body section -->
 <xsl:template match="ltx:document/ltx:title"/> 
 <!-- This section is for elements that we aren't doing anything with and just removing from the document -->
@@ -1052,6 +1062,19 @@ doctype-system="archivearticle3.dtd"/>
 
 <xsl:template match="ltx:text[@class]" mode="back">
 	<xsl:apply-templates select="@*|node()" mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:text">
+	<xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+
+<xsl:template match="ltx:text" mode="back">
+	<xsl:apply-templates mode="back" select="@*|node()"/> 
+</xsl:template>
+
+
+<xsl:template match="ltx:text" mode="front">
+	<xsl:apply-templates mode="back" select="@*|node()"/> 
 </xsl:template>
 <!-- Templates to make things more convenient -->
 </xsl:stylesheet> 
