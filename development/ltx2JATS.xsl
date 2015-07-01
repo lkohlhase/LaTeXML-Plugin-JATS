@@ -903,9 +903,19 @@ doctype-system="archivearticle3.dtd"/>
 </xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> 
 <xsl:template match="ltx:para[@xml:id]/ltx:p">
-	<p id="{../@xml:id}">
-		<xsl:apply-templates select="@*|node()"/> 
-	</p>
+	<xsl:choose>
+		<xsl:when test="not(preceding-sibling::ltx:p)">
+			<p id="{../@xml:id}">
+				<xsl:apply-templates select="@*|node()"/> 
+			</p>
+		</xsl:when>
+		<xsl:otherwise>
+			<p>
+				<xsl:apply-templates select="@*|node()"/> 
+			</p>
+		</xsl:otherwise>
+	</xsl:choose> 
+	
 </xsl:template>
 <xsl:template match="ltx:document/@xml:id"/>
 <xsl:template match="ltx:document/@xml:id" mode="front"/>
