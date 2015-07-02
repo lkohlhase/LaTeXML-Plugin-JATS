@@ -549,15 +549,19 @@
 </xsl:template>
 
 <xsl:template match="ltx:itemize">
-	<list list-type="bullet">
-		<xsl:apply-templates select="@*|node()"/> 
-	</list> 
+	<p>
+		<list list-type="bullet">
+			<xsl:apply-templates select="@*|node()"/> 
+		</list>
+	</p> 
 </xsl:template>
 
 <xsl:template match="ltx:enumerate">
-	<list list-type="ordered">
-		<xsl:apply-templates select="@*|node()"/> 
-	</list>
+	<p>
+		<list list-type="order">
+			<xsl:apply-templates select="@*|node()"/> 
+		</list>
+	</p>
 </xsl:template>
 
 <xsl:template match="ltx:item"> 
@@ -773,7 +777,7 @@
 
 
 <xsl:template match="ltx:ref[@labelref and not(@idref)]">
-	<xref ref-type="labelref" rid="{./@labelref}">
+	<xref rid="{./@labelref}">
 		<xsl:apply-templates select="@*|node()"/> 
 	</xref>
 </xsl:template>
@@ -796,19 +800,19 @@
 	</ext-link>
 </xsl:template>
 
-<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]">
+<xsl:template match="ltx:ref[not(./@idref or ./@labelref) and ./@href]">
 	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
 	</ext-link>
 </xsl:template>
 
-<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="front">
+<xsl:template match="ltx:ref[not(./@idref or ./@labelref) and ./@href]" mode="front">
 	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
 	</ext-link>
 </xsl:template>
 
-<xsl:template match="ltx:ref[not(./idref or ./@labelref) and ./@href]" mode="back">
+<xsl:template match="ltx:ref[not(./@idref or ./@labelref) and ./@href]" mode="back">
 	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
 	</ext-link>
