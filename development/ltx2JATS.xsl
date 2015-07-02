@@ -379,12 +379,22 @@
 </xsl:template>
 
 <xsl:template match="ltx:bibitem" mode="back">
-	<ref><xsl:if test="./@xml:id"><xsl:attribute name="id"><xsl:value-of select="./@xml:id"/></xsl:attribute></xsl:if>
+	<ref>
+		<xsl:if test="./@xml:id">
+			<xsl:attribute name="id"><xsl:value-of select="./@xml:id"/></xsl:attribute>
+		</xsl:if>
+	
 		<mixed-citation>
+			<!-- Getting the reference type into the reference, if possible --> 
+			<xsl:if test="./ltx:bibtag[@class='ltx_bib_type']">
+				<xsl:attribute name="publication-type"> <xsl:value-of select="./ltx:bibtag[@class='ltx_bib_type']/text()"/></xsl:attribute>
+			</xsl:if>
 			<xsl:apply-templates select="node()" mode="back"/>
 		</mixed-citation>
 	</ref>
 </xsl:template>
+
+<xsl:template match="ltx:bibtag[@class='ltx_bib_type']" mode="back"/>
 
 <xsl:template match="ltx:bibtag[@role='year']" mode="back">
 	<year>
@@ -392,8 +402,32 @@
 	</year>
 </xsl:template>
 
+<xsl:template match="ltx:bib-part[@role='volume']" mode="back">
+	<volume>
+		<xsl:apply-templates mode="back"/> 
+	</volume> 
+</xsl:template>
+
+<xsl:template match="ltx:bib-part[@role='pages']" mode="back">
+	<page-range>
+		<xsl:apply-templates/> 
+	</page-range>
+</xsl:template>
+
 <xsl:template match="ltx:bibblock" mode="back">
 	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:bibtag[@role='title']" mode="back">
+	<article-title>
+		<xsl:apply-templates mode="back"/> 
+	</article-title> 
+</xsl:template>
+
+	
+
+<xsl:template match="ltx:bibblock//ltx:bib-title" mode="back">
+	<xsl:apply-templates mode="back"/> 
 </xsl:template>
 
 <xsl:template match="ltx:emph" mode="back">
@@ -401,6 +435,8 @@
 		<xsl:apply-templates mode="back" select="@*|node()"/>
 	</italic>
 </xsl:template>
+
+
 
 <xsl:template match="ltx:acknowledgements" mode="back">
 	<ack> 
@@ -431,7 +467,7 @@
 		<!-- I will not do sophisticated handling trying to split this into several authors etc. -->
 			<surname>
 				<xsl:for-each select="str:tokenize(./text(),' ')">
-					<xsl:if test="position=last()">
+					<xsl:if test="position()=last()">
 						<xsl:value-of select="."/>
 					</xsl:if>
 				</xsl:for-each>
@@ -440,8 +476,8 @@
 		
 				<given-names>
 					<xsl:for-each select="str:tokenize(./text(),' ')">
-						<xsl:if test="position!=last()">
-							<xsl:value-of select="."/>
+						<xsl:if test="position()!=last()">
+							<xsl:value-of select="."/>&#160;
 						</xsl:if> 
 					</xsl:for-each>
 				</given-names>
