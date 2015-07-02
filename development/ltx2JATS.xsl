@@ -17,8 +17,7 @@
 		<xsl:import href="LaTeXML-common.xsl"/>
 
 <xsl:strip-space elements="*"/>
-<xsl:output method="xml" indent="yes"         doctype-public="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" 
-doctype-system="archivearticle3.dtd"/>
+<xsl:output method="xml" indent="yes"/>
 
 <xsl:variable name="footnotes" select="//ltx:note[@role='footnote']"/>
 <xsl:template name="add_classes"/>
@@ -39,6 +38,20 @@ doctype-system="archivearticle3.dtd"/>
 	</xsl:if> 
  is currently not supported for the main body.
 	</xsl:comment>
+</xsl:template>
+
+<xsl:template match="*" mode="math">
+	<xsl:copy>
+		<xsl:apply-templates select="@*|node()" mode="math"/> 
+	</xsl:copy>
+</xsl:template>
+
+<xsl:template match="@*" mode="math">
+	<xsl:attribute name="{local-name()}"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template> 
+
+<xsl:template match="@xml:id" mode="math">
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
 </xsl:template>
 
 <xsl:template match="*" mode="front">
@@ -506,7 +519,7 @@ doctype-system="archivearticle3.dtd"/>
 	<p>
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
-		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
+		<xsl:for-each select=".//m:math"><xsl:apply-templates select="." mode="math"/></xsl:for-each>
 	</disp-formula>
 	</p>
 </xsl:template>
@@ -514,14 +527,14 @@ doctype-system="archivearticle3.dtd"/>
 <xsl:template match="ltx:equationgroup/ltx:equation">
 	<disp-formula>
 		<xsl:apply-templates select="@*"/>
-		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
+		<xsl:for-each select=".//m:math"><xsl:apply-templates select="." mode="math"/></xsl:for-each>
 	</disp-formula>
 </xsl:template>
 
 <xsl:template match="ltx:Math[@mode='inline']">
 	<inline-formula>
 		<xsl:apply-templates select="@*"/>
-		<xsl:for-each select=".//m:math"><xsl:copy-of select="."/></xsl:for-each>
+		<xsl:for-each select=".//m:math"><xsl:apply-templates select="." mode="math"/></xsl:for-each>
 	</inline-formula>
 </xsl:template>
 
