@@ -424,10 +424,37 @@
 	</article-title> 
 </xsl:template>
 
-	
+<xsl:template match="ltx:bib-date[@role='publication']" mode="back"> <!-- We are making the assumption that this contains only the year of publication -->
+	<date>
+		<year>
+			<xsl:apply-templates mode="back"/>
+		</year>
+	</date> 
+</xsl:template>
+
+<xsl:template match="ltx:bib-note[@role='annotation']" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-organization" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
 
 <xsl:template match="ltx:bibblock//ltx:bib-title" mode="back">
 	<xsl:apply-templates mode="back"/> 
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-type" mode="back">
+	<xsl:apply-templates mode="back"/> 
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-place" mode="back">
+	<xsl:apply-templates mode="back"/> 
+</xsl:template>
+
+
+<xsl:template match="ltx:bib-part[@role='number']" mode="back">
+	<xsl:apply-templates mode="back"/>
 </xsl:template>
 
 <xsl:template match="ltx:emph" mode="back">
@@ -741,9 +768,18 @@
 
 
 <xsl:template match="ltx:tabular">
+	<xsl:if test="ancestor::ltx:table">
 	<xsl:apply-imports>
 		<xsl:apply-templates select="@*"/> 
 	</xsl:apply-imports>
+	</xsl:if> 
+	<xsl:if test="not(ancestor::ltx:table)">
+		<table-wrap>
+			<xsl:apply-imports>
+				<xsl:apply-templates select="@*"/> 
+			</xsl:apply-imports>
+		</table-wrap>
+	</xsl:if>
 </xsl:template>
 
 
@@ -852,6 +888,24 @@
 	<ext-link xlink:href="{./href}">
 		<xsl:apply-templates select="@*|node()"/>
 	</ext-link>
+</xsl:template>
+
+<xsl:template match="ltx:ref[@idref]">
+	<xref rid="{./@idref}">
+		<xsl:apply-templates/>
+	</xref>
+</xsl:template>
+
+<xsl:template match="ltx:ref[@idref]" mode="front">
+	<xref rid="{./@idref}">
+		<xsl:apply-templates mode="front"/>
+	</xref>
+</xsl:template>
+
+<xsl:template match="ltx:ref[@idref]" mode="back">
+	<xref rid="{./@idref}">
+		<xsl:apply-templates mode="back"/>
+	</xref>
 </xsl:template>
 
 <xsl:template match="ltx:float" mode="back">
