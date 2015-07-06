@@ -831,6 +831,7 @@
 <xsl:template match="ltx:cite">
 	<xsl:if test="./ltx:ref/@idref">
 	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref>
+	;lkj;lkj;lkj
 	</xsl:if>
 	<xsl:if test="./ltx:bibref/@bibrefs">
 		<xsl:for-each select="str:tokenize(./ltx:bibref/@bibrefs,./ltx:bibref/@yyseparator)">
@@ -843,13 +844,25 @@
 	<xsl:apply-templates select="@*|node()"/>
 </xsl:template>
 
-<xsl:template match="ltx:cite/ltx:ref[@idref]">
+<xsl:template match="ltx:ref[@idref]">
+	<xref rid="{./@idref}">
+		qwerq qwer wqerqwerqwer
+		<xsl:apply-templates select="@*|node()"/>
+	</xref>
+</xsl:template> 
+
+<xsl:template match="ltx:ref[@idref and ancestor::ltx:cite]">
 	<xsl:apply-templates select="@*|node()" />
 </xsl:template>
 
 
+
+
 <xsl:template match="ltx:ref[@labelref and not(@idref)]">
 	<xref rid="{./@labelref}">
+	asdf
+	asdf
+	asdf
 		<xsl:apply-templates select="@*|node()"/> 
 	</xref>
 </xsl:template>
@@ -890,10 +903,14 @@
 	</ext-link>
 </xsl:template>
 
-<xsl:template match="ltx:ref[@idref]">
+<xsl:template match="ltx:ref[@idref]" mode="back">
 	<xref rid="{./@idref}">
-		<xsl:apply-templates/>
+		<xsl:apply-templates mode="back"/>
 	</xref>
+</xsl:template>
+
+<xsl:template match="ltx:ref[ancestor::ltx:bibblock]" mode="back">
+	<xsl:apply-templates mode="back"/> <!-- references are not allowed in mixed-citations --> 
 </xsl:template>
 
 <xsl:template match="ltx:ref[@idref]" mode="front">
@@ -902,11 +919,7 @@
 	</xref>
 </xsl:template>
 
-<xsl:template match="ltx:ref[@idref]" mode="back">
-	<xref rid="{./@idref}">
-		<xsl:apply-templates mode="back"/>
-	</xref>
-</xsl:template>
+
 
 <xsl:template match="ltx:float" mode="back">
 	<boxed-text>
@@ -1005,9 +1018,6 @@
 </xsl:template>
 <!-- hackish stuff for references -->
 
-<xsl:template match="@labels">
-	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-</xsl:template>
 <xsl:template match="ltx:para/@xml:id"/> 
 <xsl:template match="ltx:para[@xml:id]/ltx:p">
 	<xsl:choose>
@@ -1029,9 +1039,7 @@
 <xsl:template match="ltx:document/@xml:id" mode="back"/>
 <xsl:template match="ltx:document/@labels"/>
 <xsl:template match="@xml:id">
-	<xsl:if test="not(../@labels)">
-	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-	</xsl:if>
+	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute> <!-- If everything has an id at the appropriate place now, this never ought to run into issues -->
 </xsl:template>
 
 <xsl:template match="ltx:para/@xml:id" mode="front"/>
@@ -1041,9 +1049,7 @@
 	</p>
 </xsl:template>
 <xsl:template match="@xml:id" mode="front">
-	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-	</xsl:if>
 </xsl:template>
 
 <xsl:template match="ltx:para/@xml:id" mode="back"/> 
@@ -1053,9 +1059,7 @@
 	</p>
 </xsl:template>
 <xsl:template match="@xml:id" mode="back">
-	<xsl:if test="not(../@labels)">
 	<xsl:attribute name="id"><xsl:value-of select="."/></xsl:attribute>
-	</xsl:if>
 </xsl:template>
 
 <xsl:template match="@*"/>
