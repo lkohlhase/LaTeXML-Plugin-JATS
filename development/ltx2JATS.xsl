@@ -395,6 +395,26 @@
 </xsl:template>
 
 <xsl:template match="ltx:bibtag[@class='ltx_bib_type']" mode="back"/>
+<xsl:template match="ltx:bibtag[@role='key']" mode="back"/>
+
+<xsl:template match="ltx:bibblock//ltx:bib-part[@role='publisher']" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-note[@role='publication']" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+<xsl:template match="ltx:bibblock//ltx:bib-part[@role='series']" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-publisher" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
+
+<xsl:template match="ltx:bibblock//ltx:bib-edition" mode="back">
+	<xsl:apply-templates mode="back"/>
+</xsl:template>
 
 <xsl:template match="ltx:bibtag[@role='year']" mode="back">
 	<year>
@@ -831,7 +851,6 @@
 <xsl:template match="ltx:cite">
 	<xsl:if test="./ltx:ref/@idref">
 	<xref ref-type="bibr" rid="{./ltx:ref/@idref}"><xsl:apply-templates select="@*|node()" /></xref>
-	;lkj;lkj;lkj
 	</xsl:if>
 	<xsl:if test="./ltx:bibref/@bibrefs">
 		<xsl:for-each select="str:tokenize(./ltx:bibref/@bibrefs,./ltx:bibref/@yyseparator)">
@@ -860,9 +879,6 @@
 
 <xsl:template match="ltx:ref[@labelref and not(@idref)]">
 	<xref rid="{./@labelref}">
-	asdf
-	asdf
-	asdf
 		<xsl:apply-templates select="@*|node()"/> 
 	</xref>
 </xsl:template>
