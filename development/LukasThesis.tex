@@ -400,6 +400,7 @@ w_t^{t+k+1}=M*w_t^{t+k}
 We note that using this method, every step is in $O(n^3)$ and therefore represents an even faster way of computing $w_t^{t+k}$. However, it does not quite replicate the structure of our previous model, as we can't look at different actions and their consequences anymore.
 
 We can additionally model the entire process using a MC with world-states $(q_i,a_j) \in Q \times A$. The corresponding Markov matrix $\widetilde{M}$ is given by 
+%This is where the label used to be, when stuff didn't work correctly. Just for documentation purpoes.
 \label{MC:HMM2}
 {\footnotesize
 \[\setlength{\arraycolsep}{0pt} 
