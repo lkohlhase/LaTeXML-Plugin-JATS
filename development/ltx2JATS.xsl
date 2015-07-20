@@ -131,6 +131,11 @@
 	</article>
 </xsl:template>
 
+<xsl:template match="ltx:para[not(ancestor::ltx:section or ancestor::ltx:appendix or ancestor::ltx:acknowledgements) and preceding::ltx:section]">  <!-- Is not allowed -->
+	<xsl:comment><xsl:for-each select=".//text()"><xsl:value-of select="."/></xsl:for-each></xsl:comment> <!-- trying to provide the maximal information here -->
+</xsl:template>
+	
+
 <xsl:template match="text()">
 	<xsl:copy-of select="."/>
 </xsl:template>
@@ -865,7 +870,6 @@
 
 <xsl:template match="ltx:ref[@idref]">
 	<xref rid="{./@idref}">
-		qwerq qwer wqerqwerqwer
 		<xsl:apply-templates select="@*|node()"/>
 	</xref>
 </xsl:template> 

@@ -1,0 +1,5 @@
+Don't look for countries in address atm. Not sure how to deal with this, as not everything is included/documented in tags. 
+No really good treatment for names. At the moment I am just making the last word into <surname> and the other ones into <given-name>. Has obvious issues with times when you have names like ASDF and QWER. Also no treatment of fullauthors at the moment.
+It's complaining about acknowledgements, but the documentation says it's okay? 
+says pub-date isn't allowed there. Documentation says it does (http://jats.nlm.nih.gov/archiving/tag-library/1.1d1/n-jt30.html). Doesn't accept string-date, although it really should. 
+When I print out <ERROR> as plain text, it sometimes leads to errors. Easily fixable, but it might be  an error we want to keep (potentially put in <ERROR> tags of my own to make sure it always is shown as an error)
