@@ -89,15 +89,15 @@
 </xsl:template>
 
 <xsl:template match="ltx:ERROR">
-	An error in the conversion from LaTeX to XML has occurred here. 
+	<xsl:copy-of select="."/> <xsl:comment> An error in the conversion from LaTeX to XML has occurred here. </xsl:comment> <!-- This tag is not included in JATS. We want validation to always fail documents where errors were present. Also makes it a lot easier to remove -->
 </xsl:template>
 
 <xsl:template match="ltx:ERROR" mode="front">
-	An error in the conversion from LaTeX to XML has occurred here. 
+		<xsl:copy-of select="."/> <xsl:comment> An error in the conversion from LaTeX to XML has occurred here. </xsl:comment> <!-- This tag is not included in JATS. We want validation to always fail documents where errors were present. Also makes it a lot easier to remove -->
 </xsl:template>
 
 <xsl:template match="ltx:ERROR" mode="back">
-	An error in the conversion from LaTeX to XML has occurred here. 
+		<xsl:copy-of select="."/> <xsl:comment> An error in the conversion from LaTeX to XML has occurred here. </xsl:comment> <!-- This tag is not included in JATS. We want validation to always fail documents where errors were present. Also makes it a lot easier to remove -->
 </xsl:template>
 
 
@@ -107,13 +107,48 @@
 	<article>
 		<front>
 			<article-meta>
-				<xsl:apply-templates select="ltx:title" mode="front"/>
+			<xsl:choose>
+				<xsl:when test="ltx:title">
+					<xsl:apply-templates select="ltx:title" mode="front"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<title-group>
+						<article-title>
+							No title 
+						</article-title>
+					</title-group>
+				</xsl:otherwise>
+			</xsl:choose>
 				<contrib-group>
-					<xsl:apply-templates select="ltx:creator[@role='author']" mode="front"/>
+					<!-- think of whether there are other ltx:creators that are viable -->
+					<xsl:choose> 
+						<xsl:when test="./ltx:creator[@role='author']">
+							<xsl:apply-templates select="ltx:creator[@role='author']" mode="front"/>
+						</xsl:when>
+						<xsl:otherwise> 
+							<contrib> <xsl:comment> Empty contributor to fulfill validation requirements </xsl:comment>
+								<name> 
+									<surname>1</surname>
+									<given-names>Author</given-names>
+								</name>
+							</contrib>
+						</xsl:otherwise>
+					</xsl:choose>	
 				</contrib-group>
 				<xsl:apply-templates select="ltx:date[@role='creation']" mode="front"/>
-				<xsl:apply-templates select="ltx:abstract" mode="front"/>
-				<xsl:apply-templates select="ltx:keywords" mode="front"/>
+				<xsl:choose>
+					<xsl:when test="//ltx:abstract">
+						<xsl:apply-templates select="//ltx:abstract" mode="front"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<abstract> <p> No abstract present </p> <xsl:comment> Put in to make this validate, even when there's no abstact </xsl:comment> </abstract>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:if test="ltx:keywords/text()">
+					<kwd-group>
+						<xsl:apply-templates select="ltx:keywords" mode="front"/>
+					</kwd-group>
+				</xsl:if>
 				<xsl:apply-templates select="*[not(self::ltx:title or self::ltx:creator[@role='author'] or self::ltx:date[@role='creation'] or self::ltx:abstract or self::ltx:keywords)]" mode="front"/>
 
 			</article-meta>
@@ -122,7 +157,13 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</body>
 		<back> 
-			<xsl:apply-templates select="@*|node()" mode="back"/>
+			<ack>
+				<xsl:apply-templates select="//ltx:acknowledgements" mode="back"/>
+			</ack> <!-- TODO change way that acknowledgements are handled by transforming into <p> --> 
+			<glossary>
+				<xsl:apply-templates select="//ltx:glossary" mode="back"/>
+			</glossary> <!-- TODO Make code for glossaries -->
+			<xsl:apply-templates select="//ltx:bibliography" mode="back"/>
 			<app-group>
 				<xsl:apply-templates select="//ltx:appendix" mode="app"/> 
 			</app-group>
@@ -148,7 +189,10 @@
 
 <xsl:template match="ltx:creator[@role='author']" mode="front">
 	<contrib contrib-type="author">
-		<xsl:apply-templates mode="front"/>
+		<xsl:apply-templates select="ltx:personname" mode ="front"/>
+		<xsl:apply-templates select="ltx:affiliation" mode="front"/>
+		<xsl:apply-templates select="ltx:contact[@role='address']" mode="front"/> 
+		<xsl:apply-templates select="ltx:contact[@role='email']" mode="front"/>
 		
 	</contrib>
 </xsl:template>
@@ -184,18 +228,32 @@
 	<name>
 
 		<surname>
-			<xsl:for-each select="str:tokenize(./text(),' ')">
-				<xsl:if test="position()=last()">
-					 <xsl:value-of select="."/> 
-				</xsl:if>
-			</xsl:for-each>
+			<xsl:choose>
+				<xsl:when test="./ltx:contact[@role='surname']">
+					<xsl:value-of select="./ltx:contact[@role='surname']"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="str:tokenize(./text(),' ')">
+						<xsl:if test="position()=last()">
+							 <xsl:value-of select="."/> 
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
 		</surname>
 		<given-names>
-		<xsl:for-each select="str:tokenize(./text(),' ')">
-			<xsl:if test="position()!=last()">
-				<xsl:value-of select="."/>&#160;
-			</xsl:if>
-		</xsl:for-each>
+		<xsl:choose>
+				<xsl:when test="./ltx:contact[@role='givenname']">
+					<xsl:value-of select="./ltx:contact[@role='givenname']"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="str:tokenize(./text(),' ')">
+						<xsl:if test="position()!=last()">
+							 <xsl:value-of select="."/> &#160;
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
 		</given-names>
 	</name>
 </xsl:template>
@@ -213,11 +271,9 @@
 </xsl:template>
 
 <xsl:template match="ltx:keywords" mode="front">
-<kwd-group>
 	<xsl:for-each select="str:tokenize(./text(),',')">
 		<kwd><xsl:value-of select="."/></kwd>
 	</xsl:for-each>
-</kwd-group>
 </xsl:template>
 
 <xsl:template match="ltx:document/ltx:title" mode="front">
@@ -490,8 +546,7 @@
 
 
 
-<xsl:template match="ltx:acknowledgements" mode="back">
-	<ack> 
+<xsl:template match="ltx:acknowledgements" mode="back"> <!-- check if this works somewhere where you can actually find acknowledgements -->
 		<xsl:if test="not(./ltx:p)">
 			<p>
 				<xsl:apply-templates mode="back" select="@*|node()"/>
@@ -500,7 +555,6 @@
 		<xsl:if test="./ltx:p">
 			<xsl:apply-templates mode="back" select="@*|node()"/> 
 		</xsl:if>
-	</ack>
 </xsl:template>
 
 <xsl:template match="ltx:text[@font='italic']" mode="back">
@@ -693,6 +747,7 @@
 		<addr-line>
 		<xsl:apply-templates select="@*|node()" mode="front"/>
 		</addr-line>
+		<country> Unknown </country> <!-- Default value to make validator happpy -->
 	</address>
 </xsl:template>
 
@@ -766,11 +821,22 @@
 </xsl:template>
 
 <xsl:template match="ltx:table">
+	<xsl:if test="../ltx:p">
 	<table-wrap>
 		<xsl:apply-templates select="@*"/>
 		<xsl:apply-templates select="ltx:caption"/>
 		<xsl:apply-templates select="*[not(self::ltx:caption)]"/>
 	</table-wrap>
+	</xsl:if>
+	<xsl:if test="not(../ltx:p)">
+		<p>
+			<table-wrap>
+				<xsl:apply-templates select="@*"/>
+				<xsl:apply-templates select="ltx:caption"/>
+				<xsl:apply-templates select="*[not(self::ltx:caption)]"/>
+			</table-wrap>
+		</p>
+	</xsl:if>	
 </xsl:template>
 
 <xsl:template match="ltx:tabular/*">

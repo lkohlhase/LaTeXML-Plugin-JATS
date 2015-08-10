@@ -1,154 +1,727 @@
 <?xml version="1.0"?>
-<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" "archivearticle3.dtd">
 <article>
   <front>
-    <article-meta><title-group><article-title>A Geometric View on Constrained <inline-formula id="m1"><tex-math>M</tex-math></inline-formula>-Estimators</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Volkan Cevher</surname><given-names>Yen-Huan Li, 
-			Ya-Ping Hsieh, 
-			Nissim 
-			Zerbib 
-			and 
-			</given-names></name></contrib></contrib-group><pub-date><string-date/></pub-date><abstract><p>We study the estimation error of constrained <inline-formula id="m2"><tex-math>M</tex-math></inline-formula>-estimators, and derive explicit upper bounds on the expected estimation error determined by the Gaussian width of the constraint set. Both of the cases where the true parameter is on the boundary of the constraint set (matched constraint), and where the true parameter is strictly in the constraint set (mismatched constraint) are considered. For both cases, we derive novel universal estimation error bounds for regression in a generalized linear model with the canonical link function. Our error bound for the mismatched constraint case is minimax optimal in terms of its dependence on the sample size, for Gaussian linear regression by the Lasso.</p></abstract>
-	An error in the conversion from LaTeX to XML has occurred here. 
-</article-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Nonparametic Bayesian Double Articulation Analyzerfor Direct Language Acquisition from Continuous Speech Signals</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Taniguchi</surname>
+            <given-names>Tadahiro 
+			</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Nagasaka</surname>
+            <given-names>Shogo 
+			</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Nakashima</surname>
+            <given-names>Ryo 
+			</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <abstract>
+        <p>Human infants can discover words directly from unsegmented speech signals without any explicitly labeled data. In this paper, we develop a novel machine learning method called nonparametric Bayesian double articulation analyzer (NPB-DAA) that can directly acquire language and acoustic models from observed continuous speech signals. For this purpose, we propose an integrative generative model that combines a language model and an acoustic model into a single generative model called the “hierarchical Dirichlet process hidden language model” (HDP-HLM). The HDP-HLM is obtained by extending the hierarchical Dirichlet process hidden semi-Markov model (HDP-HSMM) proposed by Johnson et al. An inference procedure for the HDP-HLM is derived using the blocked Gibbs sampler originally proposed for the HDP-HSMM. This procedure enables the simultaneous and direct inference of language and acoustic models from continuous speech signals. Based on the HDP-HLM and its inference procedure, we developed a novel double articulation analyzer.
+By assuming HDP-HLM as a generative model of observed time series data, and by inferring latent variables of the model, the method can analyze latent double articulation structure, i.e., hierarchically organized latent words and phonemes, of the data in an unsupervised manner.
+The novel unsupervised double articulation analyzer is called NPB-DAA.
+The NPB-DAA can automatically estimate double articulation structure embedded in speech signals. We also carried out two evaluation experiments using synthetic data and actual human continuous speech signals representing Japanese vowel sequences. In the word acquisition and phoneme categorization tasks, the NPB-DAA outperformed a conventional double articulation analyzer (DAA) and baseline automatic speech recognition system whose acoustic model was trained in a supervised manner.</p>
+      </abstract>
+      <ERROR xmlns="http://dlmf.nist.gov/LaTeXML" class="undefined">{IEEEkeywords}</ERROR>
+      <!-- An error in the conversion from LaTeX to XML has occurred here. -->
+      <ERROR xmlns="http://dlmf.nist.gov/LaTeXML" class="undefined">\IEEEpeerreviewmaketitle</ERROR>
+      <!-- An error in the conversion from LaTeX to XML has occurred here. -->
+    </article-meta>
   </front>
   <body>
-	An error in the conversion from LaTeX to XML has occurred here. 
-<p>LaboratoryforInformationandInferenceSystemsÉcolePolytechniqueFédéraledeLausanne</p><sec id="LABEL:sec_formulation"><title>Introduction</title><p>Consider a general statistical estimation problem. Let <inline-formula id="S1.p1.m1"><tex-math>(y_{1},\ldots,y_{n})</tex-math></inline-formula> be a sample following a probability distribution <inline-formula id="S1.p1.m2"><tex-math>\mathbb{P}_{\theta^{\natural}}</tex-math></inline-formula> in a given class <inline-formula id="S1.p1.m3"><tex-math>\mathcal{P}:=\left\{\mathbb{P}_{\theta}:\theta\in\mathbb{R}^{p}\right\}</tex-math></inline-formula>. We are interested in estimating the parameter <inline-formula id="S1.p1.m4"><tex-math>\theta^{\natural}</tex-math></inline-formula>, given <inline-formula id="S1.p1.m5"><tex-math>(y_{1},\ldots,y_{n})</tex-math></inline-formula> and <inline-formula id="S1.p1.m6"><tex-math>\mathcal{P}</tex-math></inline-formula>, under the high-dimensional setting where <inline-formula id="S1.p1.m7"><tex-math>n&lt;p</tex-math></inline-formula>.</p><p>If <inline-formula id="S1.p2.m1"><tex-math>\theta^{\natural}</tex-math></inline-formula> is known to satisfy <inline-formula id="S1.p2.m2"><tex-math>g(\theta^{\natural})\leq c</tex-math></inline-formula> for some continuous convex function <inline-formula id="S1.p2.m3"><tex-math>g</tex-math></inline-formula> and positive constant <inline-formula id="S1.p2.m4"><tex-math>c</tex-math></inline-formula>, we can consider a constrained <inline-formula id="S1.p2.m5"><tex-math>M</tex-math></inline-formula>-estimator of the form</p><p><disp-formula id="LABEL:eq_that"><tex-math>\hat{\theta}\in\arg\min_{\theta}\left\{f_{n}(\theta):\theta\in\mathcal{G}%
-\right\},\quad\mathcal{G}:=\left\{\theta\in\mathbb{R}^{p}:g(\theta)\leq c%
-\right\}.</tex-math></disp-formula></p><p>We assume that <inline-formula id="S1.p2.m6"><tex-math>f_{n}</tex-math></inline-formula> is a continuously differentiable convex function, and the constraint set <inline-formula id="S1.p2.m7"><tex-math>\mathcal{G}</tex-math></inline-formula> is non-empty. For example, the Lasso <xref ref-type="bibr" rid="Tibshirani1996">[Tibshirani1996]</xref> corresponds to</p><p><disp-formula id="LABEL:eq_LS"><tex-math>f_{n}(\theta):=\frac{1}{2n}\sum_{i=1}^{n}\left(y_{i}-\left\langle a_{i},\theta%
-\right\rangle\right)^{2},\quad\mathcal{G}:=\left\{\left\|\theta\right\|_{1}%
-\leq c\right\},</tex-math></disp-formula></p><p>for some <inline-formula id="S1.p2.m8"><tex-math>a_{1},\ldots,a_{n}\in\mathbb{R}^{p}</tex-math></inline-formula> and positive constant <inline-formula id="S1.p2.m9"><tex-math>c</tex-math></inline-formula>. A matrix <inline-formula id="S1.p2.m10"><tex-math>\Theta\in\mathbb{R}^{d\times d}</tex-math></inline-formula> can be vectorized as a corresponding vector <inline-formula id="S1.p2.m11"><tex-math>\theta\in\mathbb{R}^{p}</tex-math></inline-formula>, <inline-formula id="S1.p2.m12"><tex-math>d^{2}=p</tex-math></inline-formula>. In the low-rank matrix recovery problem <xref ref-type="bibr" rid="Candes2011b">[Candes2011b, Gunasekar2014]</xref>, a popular estimator corresponds to</p><p><disp-formula id="LABEL:eq_matrix_lasso"><tex-math>f_{n}(\Theta):=\frac{1}{2n}\sum_{i=1}^{n}\left(y_{i}-\mathrm{Tr}\left(A_{i}^{T%
-}\Theta\right)\right)^{2},\quad\mathcal{G}:=\left\{\left\|\Theta\right\|_{*}%
-\leq c\right\},</tex-math></disp-formula></p><p>for some <inline-formula id="S1.p2.m13"><tex-math>A_{1},\ldots,A_{n}\in\mathbb{R}^{d\times d}</tex-math></inline-formula> and positive constant <inline-formula id="S1.p2.m14"><tex-math>c</tex-math></inline-formula>, where <inline-formula id="S1.p2.m15"><tex-math>\left\|\cdot\right\|_{*}</tex-math></inline-formula> denotes the nuclear norm. In general, <inline-formula id="S1.p2.m16"><tex-math>f_{n}</tex-math></inline-formula> can be the normalized negative log-likelihood function, or any properly defined function, and <inline-formula id="S1.p2.m17"><tex-math>g</tex-math></inline-formula> depends on the <italic>a priori</italic> information on the structure of the parameter <inline-formula id="S1.p2.m18"><tex-math>\theta^{\natural}</tex-math></inline-formula><xref ref-type="bibr" rid="Bach2013a">[Bach2013a, Chandrasekaran2012, ElHalabi2015]</xref>.</p><p>One can also consider a penalized <inline-formula id="S1.p3.m1"><tex-math>M</tex-math></inline-formula>-estimator, given by</p><p><disp-formula id="LABEL:eq_penalized_est"><tex-math>\hat{\theta}_{\text{penalized}}\in\arg\min_{\theta\in\mathbb{R}^{p}}\left\{f_{%
-n}(\theta)+\rho_{n}g(\theta)\right\},</tex-math></disp-formula></p><p>for some positive constant <inline-formula id="S1.p3.m2"><tex-math>\rho_{n}</tex-math></inline-formula>. The penalized <inline-formula id="S1.p3.m3"><tex-math>M</tex-math></inline-formula>-estimator can be computed by fast proximal methods, provided that the proximal mapping of <inline-formula id="S1.p3.m4"><tex-math>g</tex-math></inline-formula> is easy to compute <xref ref-type="bibr" rid="Beck2009">[Beck2009, Nesterov2013]</xref>. This condition, however, is not always satisfied. For example, if <inline-formula id="S1.p3.m5"><tex-math>g</tex-math></inline-formula> is the nuclear norm, computing the corresponding proximal mapping requires a full singular value decomposition (SVD) in the first few iterations, and hence is not scalable with the parameter dimension. In contrast, if we consider a constrained <inline-formula id="S1.p3.m6"><tex-math>M</tex-math></inline-formula>-estimator and compute it by the Frank-Wolfe algorithm, each iteration of the algorithm requires a linear minimization oracle (LMO), which can be approximated efficiently by Lanczos’ algorithm <xref ref-type="bibr" rid="Jaggi2013">[Jaggi2013]</xref>. The paper <xref ref-type="bibr" rid="Zhang2013">[Zhang2013]</xref> also shows that when <inline-formula id="S1.p3.m7"><tex-math>g</tex-math></inline-formula> is a structured sparsity regularizer, the LMO can be much easier to compute than the proximal mapping.
-</p><p>If we consider a constrained <inline-formula id="S1.p4.m1"><tex-math>M</tex-math></inline-formula>-estimator, setting the value of the constant <inline-formula id="S1.p4.m2"><tex-math>c</tex-math></inline-formula> in (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>) becomes a practical issue.
-For the case <inline-formula id="S1.p4.m3"><tex-math>c&lt;g(\theta^{\natural})</tex-math></inline-formula>, the estimation error is obviously bounded below by the distance between <inline-formula id="S1.p4.m4"><tex-math>\theta^{\natural}</tex-math></inline-formula> and the constraint set <inline-formula id="S1.p4.m5"><tex-math>\mathcal{G}</tex-math></inline-formula>, and hence estimation consistency is impossible.
-Ideally we would like to set <inline-formula id="S1.p4.m6"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>, while in practice <inline-formula id="S1.p4.m7"><tex-math>g(\theta^{\natural})</tex-math></inline-formula> is seldom known. The last case is when we have some estimate on <inline-formula id="S1.p4.m8"><tex-math>g(\theta^{\natural})</tex-math></inline-formula>, and choose <inline-formula id="S1.p4.m9"><tex-math>c</tex-math></inline-formula> such that <inline-formula id="S1.p4.m10"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula>. Some natural questions arise: Is estimation consistency possible? How fast will the estimation error decay with the sample size <inline-formula id="S1.p4.m11"><tex-math>n</tex-math></inline-formula>? Does setting <inline-formula id="S1.p4.m12"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula> result in larger estimation error than setting <inline-formula id="S1.p4.m13"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>? We review related works in Section <xref ref-type="labelref" rid="LABEL:sec_related_work">2</xref>, which shows that answers existed only for specific cases even when <inline-formula id="S1.p4.m14"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>.</p><p>In this paper, we provide a unified analysis for constrained <inline-formula id="S1.p5.m1"><tex-math>M</tex-math></inline-formula>-estimators.
-Specifically,</p><list list-type="bullet" id="I1"><list-item id="I1.i1"><p>We propose an elementary framework for analyzing any <inline-formula id="I1.i1.p1.m1"><tex-math>M</tex-math></inline-formula>-estimator applied to any statistical model in Section <xref ref-type="labelref" rid="LABEL:sec_framework">3</xref>.</p></list-item><list-item id="I1.i2"><p>We obtain universal error bounds in terms of the Gaussian width, valid <italic>for all</italic> canonical GLMs. We consider the matched constraint case (<inline-formula id="I1.i2.p1.m1"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>) in Section <xref ref-type="labelref" rid="LABEL:sec_matched">4</xref>, and the mismatched constraint case (<inline-formula id="I1.i2.p1.m2"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula>) in Section <xref ref-type="labelref" rid="LABEL:sec_mismatch">5</xref>.</p></list-item><list-item id="I1.i3"><p>To illustrate the universal error bounds, we specialize the universal error bound to Gaussian linear regression with arbitrary convex constraint, and regression in canonical GLMs with the <inline-formula id="I1.i3.p1.m1"><tex-math>\ell_{1}</tex-math></inline-formula>-constraint in Section <xref ref-type="labelref" rid="LABEL:sec_appl">6</xref>, and obtain explicit results.</p></list-item><list-item id="I1.i4"><p>Our error bound for the Lasso applied to the Gaussian linear model is optimal in the minimax sense (cf. Section <xref ref-type="labelref" rid="LABEL:sec_mismatch_further">7</xref>).
-</p></list-item></list><p>Existing results for penalized <inline-formula id="S1.p7.m1"><tex-math>M</tex-math></inline-formula>-estimators <xref ref-type="bibr" rid="Banerjee2015">[Banerjee2015, Bickel2009, Buhlmann2011, Honorio2014, Kakade2010, Negahban2012, Geer2013]</xref>, which are for deterministic <inline-formula id="S1.p7.m2"><tex-math>\rho_{n}</tex-math></inline-formula>’s, cannot directly recover our results, and vice versa.
-Indeed, by Lagrange duality, there exists some <inline-formula id="S1.p7.m3"><tex-math>\rho_{n}&gt;0</tex-math></inline-formula> such that the constrained <inline-formula id="S1.p7.m4"><tex-math>M</tex-math></inline-formula>-estimator in (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>) is equivalent to the penalized <inline-formula id="S1.p7.m5"><tex-math>M</tex-math></inline-formula>-estimator in (<xref ref-type="labelref" rid="LABEL:eq_penalized_est">4</xref>).
-This correspondence, however, holds <italic>only for given realization of the sample <inline-formula id="S1.p7.m6"><tex-math>(y_{1},\ldots,y_{n})</tex-math></inline-formula></italic>, and hence <inline-formula id="S1.p7.m7"><tex-math>\rho_{n}</tex-math></inline-formula> is a random variable depending on the sample.
-Conversely, for any penalized <inline-formula id="S1.p7.m8"><tex-math>M</tex-math></inline-formula>-estimator <inline-formula id="S1.p7.m9"><tex-math>\hat{\theta}_{\text{penalized}}</tex-math></inline-formula> for some <inline-formula id="S1.p7.m10"><tex-math>\rho_{n}&gt;0</tex-math></inline-formula>, there exists a constant <inline-formula id="S1.p7.m11"><tex-math>c=g(\hat{\theta}_{\text{penalized}})</tex-math></inline-formula> such that the corresponding constrained <inline-formula id="S1.p7.m12"><tex-math>M</tex-math></inline-formula>-estimator (<xref ref-type="labelref" rid="LABEL:eq_penalized_est">4</xref>) is equivalent to <inline-formula id="S1.p7.m13"><tex-math>\hat{\theta}_{\text{penalized}}</tex-math></inline-formula>.
-Note that <inline-formula id="S1.p7.m14"><tex-math>c=g(\hat{\theta}_{\text{penalized}})</tex-math></inline-formula> is again a random variable and dependent on the sample.
-We are not aware of any existing work on characterizing the correspondence between the two formulations.</p></sec><sec id="LABEL:sec_related_work"><title>Related Works</title><p>In <xref ref-type="bibr" rid="Oymak2013a">[Oymak2013a, Oymak2013]</xref>, the authors derived sharp estimation error bounds for regression in the linear model by constrained least squares (LS) estimators.
-The analysis in <xref ref-type="bibr" rid="Vershynin2014">[Vershynin2014]</xref> provides a minimax estimation error bound for the same setting
-.
-There are some related works on learning a function in a function class <xref ref-type="bibr" rid="Koltchinskii2013a">[Koltchinskii2013a, Mendelson2014]</xref>. When the function class is linearly parametrized by vectors in <inline-formula id="S2.p1.m1"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>, and the function corresponding to <inline-formula id="S2.p1.m2"><tex-math>\theta^{\natural}</tex-math></inline-formula> is in the function class, the <inline-formula id="S2.p1.m3"><tex-math>L_{2}</tex-math></inline-formula>-estimation error in the function class may be translated into the <inline-formula id="S2.p1.m4"><tex-math>\ell_{2}</tex-math></inline-formula>-estimation error with respect to <inline-formula id="S2.p1.m5"><tex-math>\theta^{\natural}</tex-math></inline-formula>.
-A common limitation of <xref ref-type="bibr" rid="Koltchinskii2013a">[Koltchinskii2013a, Mendelson2014, Oymak2013, Oymak2013a, Vershynin2014]</xref> is that the results are not extendable to general non-linear statistical models.</p><p>Another research direction considers constrained estimation in possibly non-linear statistical models <xref ref-type="bibr" rid="Plan2013a">[Plan2013a, Plan2015, Plan2014a]</xref>.
-A constrained <inline-formula id="S2.p2.m1"><tex-math>M</tex-math></inline-formula>-estimator for logistic regression was proposed and analyzed in <xref ref-type="bibr" rid="Plan2013a">[Plan2013a]</xref>.
-In <xref ref-type="bibr" rid="Plan2014a">[Plan2014a]</xref>, the authors proposed and analyzed a universal projection-based estimator for regression in generalized linear models (GLMs).
-In <xref ref-type="bibr" rid="Plan2015">[Plan2015]</xref>, the authors analyzed the performance of the constrained LS estimator in GLMs.
-A common limitation of <xref ref-type="bibr" rid="Plan2013a">[Plan2013a, Plan2015, Plan2014a]</xref> is that the results are valid only for the specific proposed estimators, and they do not even apply to the constrained maximum-likelihood (ML) estimator, which is the most popular approach in practice. Moreover, the proposed estimators in <xref ref-type="bibr" rid="Plan2013a">[Plan2013a, Plan2015, Plan2014a]</xref> can only recover the true parameter up to a scale ambiguity.
-</p><p>We say that the constraint is <italic>matched</italic> if <inline-formula id="S2.p3.m1"><tex-math>\theta^{\natural}</tex-math></inline-formula> lies on the boundary of <inline-formula id="S2.p3.m2"><tex-math>\mathcal{G}</tex-math></inline-formula> in (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>) (or <inline-formula id="S2.p3.m3"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>), and <italic>mismatched</italic> if <inline-formula id="S2.p3.m4"><tex-math>\theta^{\natural}</tex-math></inline-formula> lies strictly in <inline-formula id="S2.p3.m5"><tex-math>\mathcal{G}</tex-math></inline-formula> (or <inline-formula id="S2.p3.m6"><tex-math>c&lt;g(\theta^{\natural})</tex-math></inline-formula>). The analyses in <xref ref-type="bibr" rid="Oymak2013a">[Oymak2013a, Oymak2013]</xref> require the constraint to be matched, while in practice the exact value of <inline-formula id="S2.p3.m7"><tex-math>g(\theta^{\natural})</tex-math></inline-formula> is seldom known. The constraint in <xref ref-type="bibr" rid="Koltchinskii2013a">[Koltchinskii2013a]</xref> is always matched due to the special structure of quantum density operators. The error bounds in <xref ref-type="bibr" rid="Plan2013a">[Plan2013a, Vershynin2014]</xref> can be overly pessimistic, because they hold for all <inline-formula id="S2.p3.m8"><tex-math>\theta^{\natural}\in\mathcal{G}</tex-math></inline-formula>. The results in <xref ref-type="bibr" rid="Mendelson2014">[Mendelson2014, Plan2015, Plan2014a]</xref> do not require a matched constraint and depend on <inline-formula id="S2.p3.m9"><tex-math>\theta^{\natural}</tex-math></inline-formula>; our result is of this kind. Recall that, however, <xref ref-type="bibr" rid="Mendelson2014">[Mendelson2014]</xref> is limited to specific statistical models, and <xref ref-type="bibr" rid="Plan2015">[Plan2015, Plan2014a]</xref> are limited to specific <inline-formula id="S2.p3.m10"><tex-math>M</tex-math></inline-formula>-estimators.</p></sec><sec id="LABEL:sec_framework"><title>A Geometric Framework</title><sec id="LABEL:sec_basic_idea"><title>Basic Idea</title><p>To illustrate the basic idea of our framework, let us start with a simple setting, where <inline-formula id="S3.SS1.p1.m1"><tex-math>f_{n}</tex-math></inline-formula> is strongly convex with parameter <inline-formula id="S3.SS1.p1.m2"><tex-math>\mu&gt;0</tex-math></inline-formula>, i.e.,</p><p><disp-formula id="S3.Ex1"><tex-math>\left\langle\nabla f_{n}(y)-\nabla f_{n}(x),y-x\right\rangle\geq\mu\left\|y-x%
-\right\|_{2}^{2},</tex-math></disp-formula></p><p>for any <inline-formula id="S3.SS1.p1.m3"><tex-math>x,y\in\mathrm{dom}\,f</tex-math></inline-formula>. Note that then <inline-formula id="S3.SS1.p1.m4"><tex-math>\hat{\theta}</tex-math></inline-formula> is uniquely defined.</p><p>Define <inline-formula id="S3.SS1.p2.m1"><tex-math>\iota_{g}:\mathbb{R}^{p}\to\mathbb{R}\cup\left\{+\infty\right\}</tex-math></inline-formula> as the indicator function of the constraint set <inline-formula id="S3.SS1.p2.m2"><tex-math>\mathcal{G}</tex-math></inline-formula>; that is, <inline-formula id="S3.SS1.p2.m3"><tex-math>\iota_{\mathcal{G}}(\theta)=0</tex-math></inline-formula> if <inline-formula id="S3.SS1.p2.m4"><tex-math>\theta\in\mathcal{G}</tex-math></inline-formula>, and <inline-formula id="S3.SS1.p2.m5"><tex-math>\iota_{\mathcal{G}}(\theta)=+\infty</tex-math></inline-formula> otherwise.
-By the strong convexity of <inline-formula id="S3.SS1.p2.m6"><tex-math>f_{n}</tex-math></inline-formula>, we have</p><p><disp-formula id="LABEL:eq_strong_convexity"><tex-math>\left\langle\nabla f_{n}(\hat{\theta})-\nabla f_{n}(\theta^{\natural}),\hat{%
-\theta}-\theta^{\natural}\right\rangle\geq\mu\left\|\hat{\theta}-\theta^{%
-\natural}\right\|_{2}^{2}.</tex-math></disp-formula></p><p>By the convexity of <inline-formula id="S3.SS1.p2.m7"><tex-math>\iota_{g}</tex-math></inline-formula>, or the monotonicity of the subdifferential mapping, we have</p><p><disp-formula id="LABEL:eq_monotonicity"><tex-math>\left\langle\hat{z}-z^{\natural},\hat{\theta}-\theta^{\natural}\right\rangle%
-\geq 0,</tex-math></disp-formula></p><p>for any <inline-formula id="S3.SS1.p2.m8"><tex-math>\hat{z}\in\partial\iota_{g}(\hat{\theta})</tex-math></inline-formula>, and any <inline-formula id="S3.SS1.p2.m9"><tex-math>z^{\natural}\in\partial\iota_{g}(\theta^{\natural})</tex-math></inline-formula>. Summing up (<xref ref-type="labelref" rid="LABEL:eq_strong_convexity">5</xref>) and (<xref ref-type="labelref" rid="LABEL:eq_monotonicity">6</xref>), we obtain</p><p><disp-formula id="S3.Ex2"><tex-math>\left\langle\nabla f_{n}(\hat{\theta})+\hat{z}-\nabla f_{n}(\theta^{\natural})%
--z^{\natural},\hat{\theta}-\theta^{\natural}\right\rangle\geq\mu\left\|\hat{%
-\theta}-\theta^{\natural}\right\|_{2}^{2},</tex-math></disp-formula></p><p>for any <inline-formula id="S3.SS1.p2.m10"><tex-math>\hat{z}\in\partial\iota_{g}(\hat{\theta})</tex-math></inline-formula>. By the optimality condition of <inline-formula id="S3.SS1.p2.m11"><tex-math>\hat{\theta}</tex-math></inline-formula>, there exists some <inline-formula id="S3.SS1.p2.m12"><tex-math>\hat{z}\in\partial\iota_{\mathcal{G}}(\hat{\theta})</tex-math></inline-formula> such that</p><p><disp-formula id="LABEL:eq_optimality"><tex-math>0=\nabla f_{n}(\hat{\theta})+\hat{z},</tex-math></disp-formula></p><p>and hence we have</p><p><disp-formula id="S3.Ex3"><tex-math>\left\langle-\nabla f_{n}(\theta^{\natural})-z^{\natural},\hat{\theta}-\theta^%
-{\natural}\right\rangle\geq\mu\left\|\hat{\theta}-\theta^{\natural}\right\|_{2%
-}^{2},</tex-math></disp-formula></p><p>for any <inline-formula id="S3.SS1.p2.m13"><tex-math>z^{\natural}\in\partial\iota_{g}(\theta^{\natural})</tex-math></inline-formula>. Since <inline-formula id="S3.SS1.p2.m14"><tex-math>\partial\iota_{g}(\theta^{\natural})</tex-math></inline-formula> is always a closed convex cone, we can choose <inline-formula id="S3.SS1.p2.m15"><tex-math>z^{\natural}=0</tex-math></inline-formula> and obtain</p><p><disp-formula id="LABEL:eq_bad_lower"><tex-math>\left\langle-\nabla f_{n}(\theta^{\natural}),\hat{\theta}-\theta^{\natural}%
-\right\rangle\geq\mu\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}^{2}.</tex-math></disp-formula></p><p>Applying the Cauchy-Schwarz inequality to the left-hand side, we obtain</p><disp-formula-group id="A5.EGx1"><disp-formula id="S3.Ex4"><tex-math/></disp-formula></disp-formula-group><p>or</p><p><disp-formula id="S3.E9"><tex-math>\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq\frac{1}{\mu}\left\|%
-\nabla f_{n}(\theta^{\natural})\right\|_{2}.</tex-math></disp-formula></p><p>Taking expectations on both sides, we immediately obtain the following estimation error bound:</p><p><disp-formula id="LABEL:eq_bad_bound"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq\frac{1}{\mu}%
-\mathbb{E}\,\left\|\nabla f_{n}(\theta^{\natural})\right\|_{2}.</tex-math></disp-formula></p><p>The gradient at the true parameter, <inline-formula id="S3.SS1.p2.m16"><tex-math>\nabla f_{n}(\theta^{\natural})</tex-math></inline-formula>, usually concentrates around <inline-formula id="S3.SS1.p2.m17"><tex-math>0</tex-math></inline-formula> with high probability.</p><p>The simple error bound (<xref ref-type="labelref" rid="LABEL:eq_bad_bound">10</xref>) is not desirable for two reasons:
-</p><list list-type="ordered" id="I2"><list-item id="I2.i1"><p>In the high-dimensional setting where <inline-formula id="I2.i1.p1.m1"><tex-math>n&lt;p</tex-math></inline-formula>, <inline-formula id="I2.i1.p1.m2"><tex-math>f_{n}</tex-math></inline-formula> cannot be strongly convex even for the basic LS estimator.</p></list-item><list-item id="I2.i2"><p>It does not depend on the choice of <inline-formula id="I2.i2.p1.m1"><tex-math>g</tex-math></inline-formula>.</p></list-item></list><p>We address the first issue in Section <xref ref-type="labelref" rid="LABEL:sec_RSC">3.2</xref>, and the second issue in Section <xref ref-type="labelref" rid="LABEL:sec_refined_bound">3.3</xref>.</p></sec><sec id="LABEL:sec_RSC"><title>Restricted Strong Convexity</title><p>Note that in order to facilitate the arguments in the previous sub-section, we only require (<xref ref-type="labelref" rid="LABEL:eq_strong_convexity">5</xref>) to hold for <inline-formula id="S3.SS2.p1.m1"><tex-math>\hat{\theta}</tex-math></inline-formula> and <inline-formula id="S3.SS2.p1.m2"><tex-math>\theta^{\natural}</tex-math></inline-formula>, instead of any two vectors in <inline-formula id="S3.SS2.p1.m3"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>. Therefore, we only need <inline-formula id="S3.SS2.p1.m4"><tex-math>f_{n}</tex-math></inline-formula> to satisfy some <italic>restricted</italic> notion of strong convexity. Similar (but not exactly the same) ideas had appeared in <xref ref-type="bibr" rid="Chandrasekaran2012">[Chandrasekaran2012, Negahban2012]</xref>, and can be traced back to <xref ref-type="bibr" rid="Bickel2009">[Bickel2009, Geer2007]</xref>.</p><statement id="S3.Thmdefn1"><title> (Feasible Set and Feasible Cone).</title><p>The <italic>feasible set</italic> of <inline-formula id="S3.Thmdefn1.p1.m1"><tex-math>g</tex-math></inline-formula> at <inline-formula id="S3.Thmdefn1.p1.m2"><tex-math>\theta^{\natural}</tex-math></inline-formula>, denoted by <inline-formula id="S3.Thmdefn1.p1.m3"><tex-math>\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula>, is given by</p><p><disp-formula id="S3.Ex5"><tex-math>\mathcal{F}_{g}(\theta^{\natural}):=\mathcal{G}-\theta^{\natural}=\left\{%
-\theta-\theta^{\natural}:\theta\in\mathcal{G}\right\}.</tex-math></disp-formula></p><p>The <italic>feasible cone</italic> of <inline-formula id="S3.Thmdefn1.p1.m4"><tex-math>g</tex-math></inline-formula> at <inline-formula id="S3.Thmdefn1.p1.m5"><tex-math>\theta^{\natural}</tex-math></inline-formula>, denoted by <inline-formula id="S3.Thmdefn1.p1.m6"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula>, is defined as the conic hull of <inline-formula id="S3.Thmdefn1.p1.m7"><tex-math>\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula>.</p></statement><p>By the definition of <inline-formula id="S3.SS2.p2.m1"><tex-math>\hat{\theta}</tex-math></inline-formula>, the estimation error must satisfy <inline-formula id="S3.SS2.p2.m2"><tex-math>\hat{\theta}-\theta^{\natural}\in\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula>.</p><statement id="LABEL:def_RSC"><title> (Restricted Strong Convexity).</title><p>The function <inline-formula id="S3.Thmdefn2.p1.m1"><tex-math>f_{n}</tex-math></inline-formula> satisfies the restricted strong convexity (RSC) condition with parameter <inline-formula id="S3.Thmdefn2.p1.m2"><tex-math>\mu&gt;0</tex-math></inline-formula> if</p><p><disp-formula id="LABEL:eq_RSC"><tex-math>\left\langle\nabla f_{n}(\theta^{\natural}+e)-\nabla f_{n}(\theta^{\natural}),%
-e\right\rangle\geq\mu\left\|e\right\|_{2}^{2},</tex-math></disp-formula></p><p>for any <inline-formula id="S3.Thmdefn2.p1.m3"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula>.</p></statement><p>If <inline-formula id="S3.SS2.p3.m1"><tex-math>f_{n}</tex-math></inline-formula> is twice continuously differentiable, we have a sufficient condition.</p><statement id="LABEL:prop_RSC_hessian"><title>.</title><p><italic>The function <inline-formula id="S3.Thmthm1.p1.m1"><tex-math>f_{n}</tex-math></inline-formula> satisfies the RSC condition with parameter <inline-formula id="S3.Thmthm1.p1.m2"><tex-math>\mu&gt;0</tex-math></inline-formula> if</italic></p><p><disp-formula id="S3.Ex6"><tex-math>\left\langle e,\nabla^{2}f_{n}(\theta^{\natural}+\lambda e)e\right\rangle\geq%
-\mu\left\|e\right\|_{2}^{2},</tex-math></disp-formula></p><p><italic>for all <inline-formula id="S3.Thmthm1.p1.m3"><tex-math>\lambda\in[0,1]</tex-math></inline-formula> and all <inline-formula id="S3.Thmthm1.p1.m4"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula>.</italic></p></statement><p>The uniqueness of <inline-formula id="S3.SS2.p4.m1"><tex-math>\hat{\theta}</tex-math></inline-formula> and the derivation of the error bound in Section <xref ref-type="labelref" rid="LABEL:sec_basic_idea">3.1</xref> are still valid even when <inline-formula id="S3.SS2.p4.m2"><tex-math>n&lt;p</tex-math></inline-formula>, as long as <inline-formula id="S3.SS2.p4.m3"><tex-math>f_{n}</tex-math></inline-formula> satisfies the RSC condition with some parameter <inline-formula id="S3.SS2.p4.m4"><tex-math>\mu&gt;0</tex-math></inline-formula>.</p></sec><sec id="LABEL:sec_refined_bound"><title>Refined Error Bound</title><p>We address the dependence of the estimation error on the choice of <inline-formula id="S3.SS3.p1.m1"><tex-math>g</tex-math></inline-formula>, and derive a refined error bound in this sub-section.</p><p>We note that</p><p><disp-formula id="S3.Ex7"><tex-math>\left\langle-\nabla f_{n}(\theta^{\natural}),\hat{\theta}-\theta^{\natural}%
-\right\rangle=\left\|\Pi_{\overline{\hat{\theta}-\theta^{\natural}}}\left(-%
-\nabla f_{n}(\theta^{\natural})\right)\right\|_{2}\left\|\hat{\theta}-\theta^{%
-\natural}\right\|_{2},</tex-math></disp-formula></p><p>where <inline-formula id="S3.SS3.p2.m1"><tex-math>\Pi_{\overline{\hat{\theta}-\theta^{\natural}}}(\cdot)</tex-math></inline-formula> denotes the projection onto the conic hull of <inline-formula id="S3.SS3.p2.m2"><tex-math>\left\{\hat{\theta}-\theta^{\natural}\right\}</tex-math></inline-formula> (which is a half-line or <inline-formula id="S3.SS3.p2.m3"><tex-math>\{0\}</tex-math></inline-formula>). This implies, by (<xref ref-type="labelref" rid="LABEL:eq_bad_lower">8</xref>),
-</p><p><disp-formula id="S3.Ex8"><tex-math>\left\|\Pi_{\overline{\hat{\theta}-\theta^{\natural}}}\left(-\nabla f_{n}(%
-\theta^{\natural})\right)\right\|_{2}\geq\mu\left\|\hat{\theta}-\theta^{%
-\natural}\right\|_{2}.</tex-math></disp-formula></p><p>The left-hand side, however, is not tractable due to its dependence on <inline-formula id="S3.SS3.p2.m4"><tex-math>\hat{\theta}</tex-math></inline-formula>. As <inline-formula id="S3.SS3.p2.m5"><tex-math>\hat{\theta}-\theta^{\natural}\in\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula> by definition, we consider a looser bound:</p><p><disp-formula id="LABEL:eq_concentration"><tex-math>\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}(-\nabla f_{n}(%
-\theta^{\natural}))\right\|_{2}\geq\mu\left\|\hat{\theta}-\theta^{\natural}%
-\right\|_{2},</tex-math></disp-formula></p><p>where <inline-formula id="S3.SS3.p2.m6"><tex-math>\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}(\cdot)</tex-math></inline-formula> denotes projection onto the feasible cone <inline-formula id="S3.SS3.p2.m7"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula>.</p><p>Taking expectations on both sides, we obtain the following lemma.</p><statement id="LABEL:lem_fundamental"><title>.</title><p><italic>Assume that <inline-formula id="S3.Thmthm2.p1.m1"><tex-math>f_{n}</tex-math></inline-formula> satisfies the RSC condition with parameter <inline-formula id="S3.Thmthm2.p1.m2"><tex-math>\mu&gt;0</tex-math></inline-formula>. Then <inline-formula id="S3.Thmthm2.p1.m3"><tex-math>\hat{\theta}</tex-math></inline-formula> is uniquely defined, and satisfies</italic></p><p><disp-formula id="S3.Ex9"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq\frac{1}{\mu}%
-\mathbb{E}\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}(-\nabla
-f%
-_{n}(\theta^{\natural}))\right\|_{2}.</tex-math></disp-formula></p></statement><p>Since <inline-formula id="S3.SS3.p4.m1"><tex-math>-\nabla f_{n}(\theta^{\natural})</tex-math></inline-formula> is a descent direction of <inline-formula id="S3.SS3.p4.m2"><tex-math>f_{n}</tex-math></inline-formula>, if its direction is coherent with the feasible cone <inline-formula id="S3.SS3.p4.m3"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula>, we may find some point <inline-formula id="S3.SS3.p4.m4"><tex-math>\hat{\theta}^{\prime}</tex-math></inline-formula> far away from <inline-formula id="S3.SS3.p4.m5"><tex-math>\theta^{\natural}</tex-math></inline-formula> in the feasible set <inline-formula id="S3.SS3.p4.m6"><tex-math>\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula> such that <inline-formula id="S3.SS3.p4.m7"><tex-math>f_{n}(\hat{\theta}^{\prime})</tex-math></inline-formula> is much smaller than <inline-formula id="S3.SS3.p4.m8"><tex-math>f_{n}(\theta^{\natural})</tex-math></inline-formula>, and hence the estimation error can be large. This provides an intuitive interpretation of the lemma.</p><p>Since projection onto a closed convex set is a non-expansive mapping, we have</p><p><disp-formula id="S3.Ex10"><tex-math>\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}(-\nabla f_{n}(%
-\theta^{\natural}))\right\|_{2}\leq\left\|\nabla f_{n}(\theta^{\natural})%
-\right\|_{2},</tex-math></disp-formula></p><p>so the error bound is always no larger than the one in Section <xref ref-type="labelref" rid="LABEL:sec_basic_idea">3.1</xref>.</p><p>Lemma <xref ref-type="labelref" rid="LABEL:lem_fundamental">3.2</xref> is the theoretical foundation of the rest of this paper.</p></sec></sec><sec id="LABEL:sec_matched"><title>Estimation Error Bound in Terms of the Gaussian Width</title><p>We apply Lemma <xref ref-type="labelref" rid="LABEL:lem_fundamental">3.2</xref> to constrained ML estimators in a GLM with the canonical link function. Examples of a canonical GLM include the Gaussian linear, logistic, gamma, and Poisson regression models.</p><p>Let <inline-formula id="S4.p2.m1"><tex-math>\theta^{\natural}\in\mathbb{R}^{p}</tex-math></inline-formula> be the parameter to be estimated, or the unknown vector of regression coefficients. In a canonical GLM, the negative log-likelihood of a sample <inline-formula id="S4.p2.m2"><tex-math>y</tex-math></inline-formula>, given <inline-formula id="S4.p2.m3"><tex-math>\theta^{\natural}</tex-math></inline-formula>, is of the form (up to scaling and shifting by some constants)</p><p><disp-formula id="S4.Ex11"><tex-math>L(y;\theta^{\natural})=y\left\langle a_{i},\theta^{\natural}\right\rangle-b(%
-\left\langle a_{i},\theta^{\natural}\right\rangle),</tex-math></disp-formula></p><p>where <inline-formula id="S4.p2.m4"><tex-math>a_{1},\ldots,a_{n}\in\mathbb{R}^{p}</tex-math></inline-formula> are given, and we assume that <inline-formula id="S4.p2.m5"><tex-math>b</tex-math></inline-formula> is some given concave function. Let <inline-formula id="S4.p2.m6"><tex-math>(y_{1},\ldots,y_{n})\in\mathbb{R}^{n}</tex-math></inline-formula> be the sample. The constrained ML estimator is given by (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>) with</p><p><disp-formula id="LABEL:eq_fn_glm"><tex-math>f_{n}(\theta):=\frac{1}{n}\sum_{i=1}^{n}L(y_{i},\theta),</tex-math></disp-formula></p><p>and <inline-formula id="S4.p2.m7"><tex-math>g</tex-math></inline-formula> being some continuous convex function. For simplicity, we consider the case where <inline-formula id="S4.p2.m8"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula> in this section; we address the case where <inline-formula id="S4.p2.m9"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula> in Section <xref ref-type="labelref" rid="LABEL:sec_mismatch">5</xref>.</p><p>We specialize Lemma <xref ref-type="labelref" rid="LABEL:lem_fundamental">3.2</xref> to the canonical GLM and obtain the following theorem.</p><statement id="LABEL:def_gwidth"><title> (Gaussian width <xref ref-type="bibr" rid="Chandrasekaran2012">[Chandrasekaran2012, Mendelson2007, Tropp2014]</xref>).</title><p>Let <inline-formula id="S4.Thmdefn1.p1.m1"><tex-math>\mathcal{C}\subseteq\mathbb{R}^{p}</tex-math></inline-formula>. The <italic>Gaussian width</italic> of <inline-formula id="S4.Thmdefn1.p1.m2"><tex-math>\mathcal{C}</tex-math></inline-formula> is given by</p><p><disp-formula id="S4.Ex12"><tex-math>\omega_{t}(\mathcal{C}):=\mathbb{E}\,\sup_{v\in\mathcal{C}\cap t\mathcal{S}^{p%
--1}}\left\{\left\langle h,v\right\rangle\right\},</tex-math></disp-formula></p><p>where <inline-formula id="S4.Thmdefn1.p1.m3"><tex-math>h:=(h_{1},\ldots,h_{p})</tex-math></inline-formula> is a vector of i.i.d. standard Gaussian random variables, and <inline-formula id="S4.Thmdefn1.p1.m4"><tex-math>\mathcal{S}^{p-1}</tex-math></inline-formula> denotes the unit <inline-formula id="S4.Thmdefn1.p1.m5"><tex-math>\ell_{2}</tex-math></inline-formula>-sphere in <inline-formula id="S4.Thmdefn1.p1.m6"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>.</p></statement><statement id="LABEL:thm_no_mismatch"><title>.</title><p><italic>Consider the canonical GLM and the corresponding ML estimator described above for <inline-formula id="S4.Thmthm1.p1.m1"><tex-math>c=g(\theta^{\natural})</tex-math></inline-formula>.
-Assume that the entries of <inline-formula id="S4.Thmthm1.p1.m2"><tex-math>a_{1},\ldots,a_{n}</tex-math></inline-formula> are either all i.i.d. standard Gaussian or all i.i.d. Rademacher random variables (random variables taking values in <inline-formula id="S4.Thmthm1.p1.m3"><tex-math>\left\{+1,-1\right\}</tex-math></inline-formula> with equal probability), and <inline-formula id="S4.Thmthm1.p1.m4"><tex-math>f_{n}</tex-math></inline-formula> satisfies the RSC condition for <inline-formula id="S4.Thmthm1.p1.m5"><tex-math>\mu&gt;0</tex-math></inline-formula> with probability at least <inline-formula id="S4.Thmthm1.p1.m6"><tex-math>1/2</tex-math></inline-formula>.
-Then</italic></p><p><disp-formula id="S4.Ex13"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq 2\sqrt{2\pi}%
-\,\sigma_{\max}\frac{\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural})})%
-}{\mu\sqrt{n}},</tex-math></disp-formula></p><p><italic>where <inline-formula id="S4.Thmthm1.p1.m7"><tex-math>\sigma_{\max}:=\max_{i}\sqrt{\mathrm{var}\,y_{i}}</tex-math></inline-formula>.</italic></p></statement><statement id="Thmremx1"><title>.</title><p>Note that the expectation is with respect to <inline-formula id="Thmremx1.p1.m1"><tex-math>A</tex-math></inline-formula> and <inline-formula id="Thmremx1.p1.m2"><tex-math>\varepsilon</tex-math></inline-formula>, conditioned on the event that the RSC condition holds.</p></statement><p>The feasible cone <inline-formula id="S4.p4.m1"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula> coincides with the tangent cone of <inline-formula id="S4.p4.m2"><tex-math>g</tex-math></inline-formula> at <inline-formula id="S4.p4.m3"><tex-math>\theta^{\natural}</tex-math></inline-formula> defined in <xref ref-type="bibr" rid="Chandrasekaran2012">[Chandrasekaran2012]</xref>. Therefore, to evaluate the estimation error bound, we only need to evaluate the Gaussian width of the corresponding tangent cone. We note that there are already many results for a variety of commonly used regularization functions, such as the <inline-formula id="S4.p4.m4"><tex-math>\ell_{1}</tex-math></inline-formula>-norm, nuclear norm, total variation semi-norm, and general atomic norms <xref ref-type="bibr" rid="Cai2013">[Cai2013, Chandrasekaran2012, Foygel2014, Plan2013a, Rao2012, Vershynin2014]</xref>.
-Therefore, for most of the applications, we only need to <italic>plug in</italic> an existing bound on the Gaussian width.</p><p>Finally, we would like to emphasize that the Gaussian width in Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref> comes from bounding the random process induced by the random gradient <inline-formula id="S4.p5.m1"><tex-math>\nabla f_{n}(\theta^{\natural})</tex-math></inline-formula> (cf. the proof of Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref>), instead of being a consequence of applying Gordon’s Lemma. That is, our result is essentially different from those in <xref ref-type="bibr" rid="Chandrasekaran2012">[Chandrasekaran2012, Oymak2013a, Oymak2013]</xref>.</p></sec><sec id="LABEL:sec_mismatch"><title>Effect of a Mismatched Constraint</title><p>In this section, we discuss the effect of a mismatched constraint for ML regression in a canonical GLM. Recall that the constraint set <inline-formula id="S5.p1.m1"><tex-math>\mathcal{G}</tex-math></inline-formula> is called <italic>mismatched</italic> if <inline-formula id="S5.p1.m2"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula> in (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>).</p><p>The notion of the RSC in Definition <xref ref-type="labelref" rid="LABEL:def_RSC">3.2</xref> is no longer meaningful when the constraint set is mismatched. Take ML regression in the Gaussian linear model for example, for which the corresponding <inline-formula id="S5.p2.m1"><tex-math>f_{n}</tex-math></inline-formula> is given in (<xref ref-type="labelref" rid="LABEL:eq_LS">2</xref>). Let <inline-formula id="S5.p2.m2"><tex-math>A\in\mathbb{R}^{n\times p}</tex-math></inline-formula> be defined as in Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref>.
-The RSC condition requires</p><p><disp-formula id="S5.Ex14"><tex-math>\left\langle\nabla f_{n}(\theta^{\natural}+e)-\nabla f_{n}(\theta^{\natural}),%
-e\right\rangle=\frac{1}{n}\left\|Ae\right\|_{2}^{2}\geq\mu\left\|e\right\|_{2}%
-^{2},</tex-math></disp-formula></p><p>for some <inline-formula id="S5.p2.m3"><tex-math>\mu&gt;0</tex-math></inline-formula> and all <inline-formula id="S5.p2.m4"><tex-math>e\in\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula>, where we say <inline-formula id="S5.p2.m5"><tex-math>e\in\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula> instead of <inline-formula id="S5.p2.m6"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula> because <inline-formula id="S5.p2.m7"><tex-math>A</tex-math></inline-formula> is a linear operator. Since when the constraint is mismatched, <inline-formula id="S5.p2.m8"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})}</tex-math></inline-formula> is the whole space <inline-formula id="S5.p2.m9"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>, the RSC condition requires <inline-formula id="S5.p2.m10"><tex-math>A</tex-math></inline-formula> to be a non-singular matrix. This cannot be true in the high-dimensional setting, where <inline-formula id="S5.p2.m11"><tex-math>A\in\mathbb{R}^{n\times p}</tex-math></inline-formula> and <inline-formula id="S5.p2.m12"><tex-math>n&lt;p</tex-math></inline-formula>.</p><p><bold>Our Approach: </bold> Let <inline-formula id="S5.p3.m1"><tex-math>t&gt;0</tex-math></inline-formula> and denote by <inline-formula id="S5.p3.m2"><tex-math>\mathcal{B}</tex-math></inline-formula> the unit <inline-formula id="S5.p3.m3"><tex-math>\ell_{2}</tex-math></inline-formula>-ball in <inline-formula id="S5.p3.m4"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>. We partition the feasible set <inline-formula id="S5.p3.m5"><tex-math>\mathcal{F}_{g}(\theta^{\natural})</tex-math></inline-formula> as</p><p><disp-formula id="S5.Ex15"><tex-math>\mathcal{F}_{g}(\theta^{\natural})=(\mathcal{F}_{g}(\theta^{\natural})\cap t%
-\mathcal{B})\cup(\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}).</tex-math></disp-formula></p><p>When <inline-formula id="S5.p3.m6"><tex-math>t</tex-math></inline-formula> is large enough, the conic hull of <inline-formula id="S5.p3.m7"><tex-math>(\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B})</tex-math></inline-formula> will not be the whole space <inline-formula id="S5.p3.m8"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>, so it is possible to have restricted strong convexity on <inline-formula id="S5.p3.m9"><tex-math>(\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B})</tex-math></inline-formula> when <inline-formula id="S5.p3.m10"><tex-math>n&lt;p</tex-math></inline-formula>. If the error vector <inline-formula id="S5.p3.m11"><tex-math>\hat{\theta}-\theta^{\natural}</tex-math></inline-formula> lies in <inline-formula id="S5.p3.m12"><tex-math>(\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B})</tex-math></inline-formula>, we can obtain an error bound, say, <inline-formula id="S5.p3.m13"><tex-math>\tilde{t}</tex-math></inline-formula>, as in Section <xref ref-type="labelref" rid="LABEL:sec_matched">4</xref>; otherwise, if the error vector lies in <inline-formula id="S5.p3.m14"><tex-math>\mathcal{B}_{t}</tex-math></inline-formula>, a naïve error bound is the radius of the ball, i.e., <inline-formula id="S5.p3.m15"><tex-math>t</tex-math></inline-formula>. Finally, we can bound the estimation error from above by the maximum of <inline-formula id="S5.p3.m16"><tex-math>\tilde{t}</tex-math></inline-formula> and <inline-formula id="S5.p3.m17"><tex-math>t</tex-math></inline-formula>. Note that <inline-formula id="S5.p3.m18"><tex-math>\tilde{t}</tex-math></inline-formula> is implicitly dependent on <inline-formula id="S5.p3.m19"><tex-math>t</tex-math></inline-formula>.
-</p><p>The arguments in the previous paragraph can be made precise as in Lemma <xref ref-type="labelref" rid="LABEL:lem_mismatched">5.1</xref>, which is an analogue of Lemma <xref ref-type="labelref" rid="LABEL:lem_fundamental">3.2</xref> in the mismatched case. Lemma <xref ref-type="labelref" rid="LABEL:lem_mismatched">5.1</xref> holds for arbitrary constrained <inline-formula id="S5.p4.m1"><tex-math>M</tex-math></inline-formula>-estimators of the form (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>) and statistical models.</p><statement id="LABEL:lem_mismatched"><title>.</title><p><italic>Suppose that for some <inline-formula id="S5.Thmthm1.p1.m1"><tex-math>t&gt;0</tex-math></inline-formula>, we have</italic></p><disp-formula-group id="A5.EGx2"><disp-formula id="LABEL:eq_RRSC"><tex-math>\displaystyle\left\langle\nabla f_{n}(\theta^{\natural}+e)-\nabla f_{n}(\theta%
-^{\natural}),e\right\rangle\geq\mu\left\|e\right\|_{2}^{2},</tex-math></disp-formula></disp-formula-group><p><italic>for some <inline-formula id="S5.Thmthm1.p1.m2"><tex-math>\mu&gt;0</tex-math></inline-formula> and all <inline-formula id="S5.Thmthm1.p1.m3"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}</tex-math></inline-formula>. Then</italic></p><p><disp-formula id="S5.Ex16"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+\mathbb{E}%
-\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{%
-B}}}\left(-\nabla f_{n}(\theta^{\natural})\right)\right\|_{2}.</tex-math></disp-formula></p></statement><p>We can also prove an analogue of Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref> for constrained ML regression in a canonical GLM.</p><statement id="LABEL:cor_mismatched"><title>.</title><p><italic>Consider the canonical GLM and the corresponding ML estimator described in Section <xref ref-type="labelref" rid="LABEL:sec_matched">4</xref>, for <inline-formula id="S5.Thmthm2.p1.m1"><tex-math>c&gt;g(\theta^{\natural})</tex-math></inline-formula>. Let <inline-formula id="S5.Thmthm2.p1.m2"><tex-math>A</tex-math></inline-formula> be defined as in Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref> and let <inline-formula id="S5.Thmthm2.p1.m3"><tex-math>t&gt;0</tex-math></inline-formula>. Suppose that (<xref ref-type="labelref" rid="LABEL:eq_RRSC">14</xref>) holds true with for some <inline-formula id="S5.Thmthm2.p1.m4"><tex-math>\mu&gt;0</tex-math></inline-formula> with probability at least <inline-formula id="S5.Thmthm2.p1.m5"><tex-math>1/2</tex-math></inline-formula>.
-Then we have</italic></p><p><disp-formula id="S5.Ex17"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+2\sqrt{2%
-\pi}\,\sigma_{\max}\frac{\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural%
-})\setminus t\mathcal{B}})}{\mu\sqrt{n}},</tex-math></disp-formula></p><p><italic>where <inline-formula id="S5.Thmthm2.p1.m6"><tex-math>\sigma_{\max}</tex-math></inline-formula> is defined as in Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref>.</italic></p></statement><p>The proofs of Lemma <xref ref-type="labelref" rid="LABEL:lem_mismatched">5.1</xref> and Corollary <xref ref-type="labelref" rid="LABEL:cor_mismatched">5.2</xref> are similar to the proofs of Lemma <xref ref-type="labelref" rid="LABEL:lem_fundamental">3.2</xref> and Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref>, respectively.</p></sec><sec id="LABEL:sec_appl"><title>Applications</title><p>Once the conditions (<xref ref-type="labelref" rid="LABEL:eq_RSC">11</xref>) and (<xref ref-type="labelref" rid="LABEL:eq_RRSC">14</xref>) are verified, our results Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref> and Corollary <xref ref-type="labelref" rid="LABEL:cor_mismatched">5.2</xref> immediately follow. We explicitly verify the conditions for two applications and obtain the corresponding estimation error bounds.</p><p>The first application is regression by the constrained LS estimator in a Gaussian linear model. Let <inline-formula id="S6.p2.m1"><tex-math>\theta^{\natural}\in\mathbb{R}^{p}</tex-math></inline-formula> and <inline-formula id="S6.p2.m2"><tex-math>a_{1},\ldots,a_{n}</tex-math></inline-formula> be vectors in <inline-formula id="S6.p2.m3"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>. The sample is given by</p><p><disp-formula id="S6.Ex18"><tex-math>y_{i}=\langle a_{i},\theta^{\natural}\rangle+\sigma w_{i},\quad i=1,\ldots,n,</tex-math></disp-formula></p><p>for some <inline-formula id="S6.p2.m4"><tex-math>\sigma&gt;0</tex-math></inline-formula>, where <inline-formula id="S6.p2.m5"><tex-math>w_{1},\ldots,w_{n}</tex-math></inline-formula> are i.i.d. standard Gaussian random variables. We consider the constrained LS estimator, for which <inline-formula id="S6.p2.m6"><tex-math>f_{n}</tex-math></inline-formula> is given by (<xref ref-type="labelref" rid="LABEL:eq_LS">2</xref>), and <inline-formula id="S6.p2.m7"><tex-math>\mathcal{G}:=\left\{\theta:g(\theta)\leq c\right\}</tex-math></inline-formula> for some <inline-formula id="S6.p2.m8"><tex-math>c\geq g(\theta^{\natural})</tex-math></inline-formula>, where <inline-formula id="S6.p2.m9"><tex-math>g</tex-math></inline-formula> can be any convex continuous function.</p><statement id="LABEL:cor_lasso_error"><title>.</title><p><italic>Consider the Gaussian linear model and the constrained LS estimator described above.
-Assume that the entries of <inline-formula id="S6.Thmthm1.p1.m1"><tex-math>a_{1},\ldots,a_{n}</tex-math></inline-formula> are either all i.i.d. standard Gaussian or all i.i.d. Rademacher random variables.
-Let <inline-formula id="S6.Thmthm1.p1.m2"><tex-math>\epsilon\in(0,1)</tex-math></inline-formula>. For any <inline-formula id="S6.Thmthm1.p1.m3"><tex-math>t\geq 0</tex-math></inline-formula>, there exist positive constants <inline-formula id="S6.Thmthm1.p1.m4"><tex-math>c_{1}</tex-math></inline-formula> and <inline-formula id="S6.Thmthm1.p1.m5"><tex-math>c_{2}</tex-math></inline-formula> such that if</italic></p><p><disp-formula id="LABEL:eq_lasso_sample_complexity"><tex-math>\sqrt{n}\geq\frac{c_{1}\alpha^{2}\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{%
-\natural})\setminus t\mathcal{B}})}{\epsilon},</tex-math></disp-formula></p><p><italic>then we have</italic></p><p><disp-formula id="LABEL:eq_lasso_error"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+2\sqrt{2%
-\pi}\sigma\,\frac{\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural})%
-\setminus t\mathcal{B}})}{(1-\epsilon)\sqrt{n}},</tex-math></disp-formula></p><p><italic>with probability at least <inline-formula id="S6.Thmthm1.p1.m6"><tex-math>1-\exp(-c_{2}\epsilon^{2}n)&gt;1/2</tex-math></inline-formula> when <inline-formula id="S6.Thmthm1.p1.m7"><tex-math>n</tex-math></inline-formula> is large enough.</italic></p></statement><statement id="Thmremx2"><title>.</title><p>When the constraint is matched, we can simply set <inline-formula id="Thmremx2.p1.m1"><tex-math>t=0</tex-math></inline-formula>.
-Recall that <inline-formula id="Thmremx2.p1.m2"><tex-math>t</tex-math></inline-formula> cannot be zero for the mismatched constraint case when <inline-formula id="Thmremx2.p1.m3"><tex-math>n&lt;p</tex-math></inline-formula> (cf. Section <xref ref-type="labelref" rid="LABEL:sec_mismatch">5</xref>). This remark also applies to Corollary <xref ref-type="labelref" rid="LABEL:cor_glm_error">6.2</xref> below.</p></statement><statement id="Thmremx3"><title>.</title><p>For the mismatched constraint case, Corollary (<xref ref-type="labelref" rid="LABEL:cor_lasso_error">6.1</xref>) is minimax optimal for the Lasso in the Gaussian linear model. We address this in Section <xref ref-type="labelref" rid="LABEL:sec_mismatch_further">7</xref>.</p></statement><p>Corollary <xref ref-type="labelref" rid="LABEL:cor_lasso_error">6.1</xref> is consistent with <xref ref-type="bibr" rid="Oymak2013">[Oymak2013]</xref>. The result in <xref ref-type="bibr" rid="Oymak2013">[Oymak2013]</xref> is sharper, while Corollary <xref ref-type="labelref" rid="LABEL:cor_lasso_error">6.1</xref> is more general as it also covers the mismatched constraint case.</p><p>The second application is <inline-formula id="S6.p4.m1"><tex-math>\ell_{1}</tex-math></inline-formula>-constrained ML regression in a canonical GLM. </p><statement id="LABEL:cor_glm_error"><title>.</title><p><italic>Consider the canonical GLM and the constrained ML estimator described in Section <xref ref-type="labelref" rid="LABEL:sec_matched">4</xref>, for <inline-formula id="S6.Thmthm2.p1.m1"><tex-math>g(\theta):=\left\|\theta\right\|_{1}</tex-math></inline-formula> and <inline-formula id="S6.Thmthm2.p1.m2"><tex-math>c\geq\left\|\theta^{\natural}\right\|</tex-math></inline-formula>. Assume that <inline-formula id="S6.Thmthm2.p1.m3"><tex-math>f_{n}</tex-math></inline-formula> in (<xref ref-type="labelref" rid="LABEL:eq_fn_glm">13</xref>) is twice continuously differentiable, and the entries of <inline-formula id="S6.Thmthm2.p1.m4"><tex-math>a_{1},\ldots,a_{n}</tex-math></inline-formula> are i.i.d. Rademacher random variables. Let <inline-formula id="S6.Thmthm2.p1.m5"><tex-math>\epsilon\in(0,1)</tex-math></inline-formula>. For any <inline-formula id="S6.Thmthm2.p1.m6"><tex-math>t\geq 0</tex-math></inline-formula>, there exist positive constants <inline-formula id="S6.Thmthm2.p1.m7"><tex-math>c_{1}</tex-math></inline-formula>, and <inline-formula id="S6.Thmthm2.p1.m8"><tex-math>c_{2}</tex-math></inline-formula> such that if (<xref ref-type="labelref" rid="LABEL:eq_lasso_sample_complexity">15</xref>) is satisfied, then we have</italic></p><p><disp-formula id="LABEL:eq_glm_error"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+2\sqrt{2%
-\pi}\,\sigma_{\max}\frac{\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural%
-})\setminus t\mathcal{B}})}{(1-\epsilon)\sqrt{n}},</tex-math></disp-formula></p><p><italic>with probability at least <inline-formula id="S6.Thmthm2.p1.m9"><tex-math>1-\exp(c_{2}\epsilon^{2}n)&gt;1/2</tex-math></inline-formula> when <inline-formula id="S6.Thmthm2.p1.m10"><tex-math>n</tex-math></inline-formula> is large enough, where <inline-formula id="S6.Thmthm2.p1.m11"><tex-math>\sigma_{\max}:=\max_{i}\sqrt{\mathrm{var}\,y_{i}}</tex-math></inline-formula> is bounded above by a constant independent of <inline-formula id="S6.Thmthm2.p1.m12"><tex-math>n</tex-math></inline-formula>.</italic></p></statement><p>To the best of our knowledge, there are not existing results for <inline-formula id="S6.p5.m1"><tex-math>\ell_{1}</tex-math></inline-formula>-constrained ML regression in GLMs. Here we compare Corollary <xref ref-type="labelref" rid="LABEL:cor_glm_error">6.2</xref> with <xref ref-type="bibr" rid="Negahban2010">[Negahban2010]</xref>, which provides an error bound for <inline-formula id="S6.p5.m2"><tex-math>\ell_{1}</tex-math></inline-formula>-penalized ML estimators in GLMs
-. Recall that, however, the correspondence between the constrained and penalized estimators is currently unclear. When the constraint is matched and <inline-formula id="S6.p5.m3"><tex-math>\theta^{\natural}</tex-math></inline-formula> is <inline-formula id="S6.p5.m4"><tex-math>s</tex-math></inline-formula>-sparse, Corollary <xref ref-type="labelref" rid="LABEL:cor_glm_error">6.2</xref> states that when <inline-formula id="S6.p5.m5"><tex-math>n=\Omega(s\log(p/s))</tex-math></inline-formula>,</p><p><disp-formula id="S6.Ex19"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}=O\left(\sqrt{%
-\frac{s}{n}\log\left(\frac{p}{s}\right)}\right)</tex-math></disp-formula></p><p>by Proposition 3.10 in <xref ref-type="bibr" rid="Chandrasekaran2012">[Chandrasekaran2012]</xref>, which essentially coincides with Corollary 5 in <xref ref-type="bibr" rid="Negahban2010">[Negahban2010]</xref><fn id="idp4491488"><p>We cite <xref ref-type="bibr" rid="Negahban2010">[Negahban2010]</xref> instead of the published version <xref ref-type="bibr" rid="Negahban2012">[Negahban2012]</xref>, because the estimation error bound only appears in <xref ref-type="bibr" rid="Negahban2010">[Negahban2010]</xref>.</p></fn>. We note that <xref ref-type="bibr" rid="Negahban2010">[Negahban2010]</xref> only provides an error bound for the <inline-formula id="S6.p5.m6"><tex-math>\ell_{1}</tex-math></inline-formula>-penalization case.
-</p></sec><sec id="LABEL:sec_mismatch_further"><title>Sharpness of Our Error Bound</title><p>It has been shown that in a Gaussian linear model with <inline-formula id="S7.p1.m1"><tex-math>\mathcal{G}</tex-math></inline-formula> being an <inline-formula id="S7.p1.m2"><tex-math>\ell_{1}</tex-math></inline-formula>-ball, <italic>any</italic> estimator <inline-formula id="S7.p1.m3"><tex-math>\hat{\theta}_{\text{arbitrary}}</tex-math></inline-formula> must satisfy, with probability larger than <inline-formula id="S7.p1.m4"><tex-math>1/2</tex-math></inline-formula>,</p><p><disp-formula id="S7.Ex20"><tex-math>\max_{\theta^{\natural}\in\mathcal{G}}\left\|\hat{\theta}_{\text{arbitrary}}-%
-\theta^{\natural}\right\|_{2}=\Omega(n^{-1/4}),</tex-math></disp-formula></p><p>under some technical conditions <xref ref-type="bibr" rid="Raskutti2011">[Raskutti2011]</xref>. Now we show our error bound for the Lasso in Corollary <xref ref-type="labelref" rid="LABEL:cor_lasso_error">6.1</xref> actually achieves the error decaying rate <inline-formula id="S7.p1.m5"><tex-math>O(n^{-1/4})</tex-math></inline-formula> in the mismatched constraint case, and hence cannot be essentially improved.</p><p>By the definition of the Gaussian width, we have, for any <inline-formula id="S7.p2.m1"><tex-math>t&gt;0</tex-math></inline-formula>,
-</p><p><disp-formula id="S7.Ex21"><tex-math>\omega_{1}\left(\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t%
-\mathcal{B}}\right)=\frac{\omega_{t}\left(\overline{\mathcal{F}_{g}(\theta^{%
-\natural})\setminus t\mathcal{B}}\right)}{t}=\frac{\omega_{t}\left(\mathcal{F}%
-_{g}(\theta^{\natural})\right)}{t},</tex-math></disp-formula></p><p>and hence the estimation error bound in Corollary <xref ref-type="labelref" rid="LABEL:eq_lasso_error">16</xref> can be written as</p><p><disp-formula id="LABEL:compare"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+\frac{C}{t%
-}\frac{\omega_{t}(\mathcal{F}_{g}(\theta^{\natural}))}{\sqrt{n}},</tex-math></disp-formula></p><p>for some <inline-formula id="S7.p2.m2"><tex-math>C&gt;0</tex-math></inline-formula>, when <inline-formula id="S7.p2.m3"><tex-math>n</tex-math></inline-formula> is large enough such that (<xref ref-type="labelref" rid="LABEL:eq_lasso_sample_complexity">15</xref>) is satisfied.</p><p>Define the <italic>global Gaussian width</italic>:</p><p><disp-formula id="S7.Ex22"><tex-math>\omega(\mathcal{F}_{g}(\theta^{\natural})):=\mathbb{E}\,\sup_{v\in\mathcal{F}_%
-{g}(\theta^{\natural})}\left\{\left\langle h,x\right\rangle\right\},</tex-math></disp-formula></p><p>where <inline-formula id="S7.p3.m1"><tex-math>h\in\mathbb{R}^{p}</tex-math></inline-formula> is a vector of i.i.d. standard Gaussian random variables. By definition, <inline-formula id="S7.p3.m2"><tex-math>\omega_{t}(\mathcal{F}_{g}(\theta^{\natural}))</tex-math></inline-formula> is bounded above by <inline-formula id="S7.p3.m3"><tex-math>\omega(\mathcal{F}_{g}(\theta^{\natural}))</tex-math></inline-formula>, independent of <inline-formula id="S7.p3.m4"><tex-math>n</tex-math></inline-formula>. Replacing <inline-formula id="S7.p3.m5"><tex-math>\omega_{t}(\mathcal{F}_{g}(\theta^{\natural}))</tex-math></inline-formula> by <inline-formula id="S7.p3.m6"><tex-math>\omega(\mathcal{F}_{g}(\theta^{\natural}))</tex-math></inline-formula> in (<xref ref-type="labelref" rid="LABEL:compare">18</xref>), we have a looser error upper bound:</p><p><disp-formula id="S7.Ex23"><tex-math>\mathbb{E}\,\left\|\hat{\theta}-\theta^{\natural}\right\|_{2}\leq t+\frac{C}{t%
-}\frac{\omega(\mathcal{F}_{g}(\theta^{\natural}))}{\sqrt{n}},</tex-math></disp-formula></p><p>Minimizing this bound over all <inline-formula id="S7.p3.m7"><tex-math>t&gt;0</tex-math></inline-formula>, we obtain the <inline-formula id="S7.p3.m8"><tex-math>O(n^{-1/4})</tex-math></inline-formula> error decaying rate. Similar discussion can be found in <xref ref-type="bibr" rid="Plan2014a">[Plan2014a]</xref>.</p></sec><sec id="S8"><title>Discussion</title><p>Note that by the elementary argument in Section <xref ref-type="labelref" rid="LABEL:sec_framework">3</xref>, we arrive at an estimation error bound (<xref ref-type="labelref" rid="LABEL:eq_concentration">12</xref>) that holds <italic>surely</italic>. It is possible to derive a concentration-type error guarantee based on this sure error bound, which we are working on.</p><p>Our framework is not restricted to constraint sets of the form (<xref ref-type="labelref" rid="LABEL:eq_that">1</xref>); it applies to any non-empty closed convex set <inline-formula id="S8.p2.m1"><tex-math>\mathcal{G}</tex-math></inline-formula>, as we only require <inline-formula id="S8.p2.m2"><tex-math>\iota_{\mathcal{G}}(\cdot)</tex-math></inline-formula> to be proper closed convex in the proof. This observation is crucial to applying our framework to analyze constrained estimators for quantum tomography <xref ref-type="bibr" rid="Flammia2012">[Flammia2012, Gross2010]</xref> and photon-limited imaging systems <xref ref-type="bibr" rid="Raginsky2010">[Raginsky2010]</xref>, which we are studying.</p><p>In this paper, we consider a random matrix <inline-formula id="S8.p3.m1"><tex-math>A</tex-math></inline-formula>, and discuss the expected estimation error with respect to both <inline-formula id="S8.p3.m2"><tex-math>A</tex-math></inline-formula> and the sample <inline-formula id="S8.p3.m3"><tex-math>(y_{1},\ldots,y_{n})</tex-math></inline-formula>. The extension to the the case where <inline-formula id="S8.p3.m4"><tex-math>A</tex-math></inline-formula> is deterministic is technically non-trivial, and we have not obtained a satisfactory result. We address this in the remark following the proof of Theorem <xref ref-type="labelref" rid="LABEL:thm_no_mismatch">4.1</xref> in the appendix.</p></sec><sec id="Sx1"><title>Acknowledgements</title><p>This work was supported in part by the European Commission under Grant MIRG-268398, ERC Future Proof, SNF 200021-132548, SNF 200021-146750 and SNF CRSII2-147633.</p></sec></body>
+    <ERROR xmlns="http://dlmf.nist.gov/LaTeXML" class="undefined">{IEEEkeywords}</ERROR>
+    <!-- An error in the conversion from LaTeX to XML has occurred here. -->
+    <p id="p1">Language acquisition, child development, Bayesian nonparametrics, latent variable model</p>
+    <ERROR xmlns="http://dlmf.nist.gov/LaTeXML" class="undefined">\IEEEpeerreviewmaketitle</ERROR>
+    <!-- An error in the conversion from LaTeX to XML has occurred here. -->
+    <sec id="S1">
+      <title>INTRODUCTION</title>
+      <ERROR xmlns="http://dlmf.nist.gov/LaTeXML" class="undefined">\IEEEPARstart</ERROR>
+      <!-- An error in the conversion from LaTeX to XML has occurred here. -->
+      <p id="S1.p1">INFANTS must solve the word segmentation problem in order to acquire language from the continuous speech signals to which they are exposed. The word segmentation problem is that of identifying word boundaries in continuous speech. If the speech signals are given to infants as isolated words, the task is easy for them. However, it has been known that a relatively small number of infant-directed utterances consist of an isolated word <xref ref-type="bibr" rid="Aslin1996">[Aslin1996]</xref>.
+If infants had knowledge about words and phonemes innately, the problem could be solved relatively easily.
+However, the fact that each language has different lists of phonemes and words clearly shows that infants have to acquire them through developmental processes.</p>
+      <p id="S1.p2">From the viewpoint of statistical learning, the learning problem, i.e., direct language acquisition from continuous speech signals, is very difficult because infants do not have access to the truth labels of speech recognition results. In other words, the language acquisition process must be completely unsupervised, in contrast with most current automatic speech recognition (ASR) systems.</p>
+      <p id="S1.p3">Most modern ASR systems have a language model that represents knowledge about words and their distributional probabilities as well as an acoustic model that represents knowledge about phonemes and their acoustic features. Both are usually trained using large transcribed speech datasets and linguistic corpora through supervised learning. However, infants do not have access to such explicitly labeled datasets.
+They have to acquire both language and acoustic models from raw acoustic speech signals in an unsupervised manner.</p>
+      <p id="S1.p4">The question about what kind of cues human infants utilize to discover words from continuous speech signals arises.
+Saffran et al. listed three types of cues for word segmentation: prosodic, distributional, and co-occurrence <xref ref-type="bibr" rid="Saffran1996a">[Saffran1996a]</xref>.
+Prosodic cues rely on acoustic information, such as post-utterance pauses, stressed syllables, and acoustically distinctive final syllables.
+Distributional cues represent the statistical relationships between neighboring speech sounds.
+Co-occurrence cues are used by children to learn words by detecting which sounds co-occurs with entities in the environment.
+Although many researchers had considered the distributional cues to be too complex for infants to use,
+Saffran reported that word segmentation from fluent speech can be accomplished by 8-month-old infants based on solely on distributional cues <xref ref-type="bibr" rid="Saffran1996">[Saffran1996]</xref>. It is also reported that the distributional cues seem to be used
+by infants by the age of 7 months, which is earlier than most other cues <xref ref-type="bibr" rid="Thiessen2003">[Thiessen2003]</xref>.
+These results imply that infants have a fundamental mechanism that can estimate word segments using distributional cues. In addition to this fundamental segmentation mechanism using distributional cues, the prosodic and co-occurrence cues are believed to help the word segmentation task only as
+supplemental cues. In addition, from the viewpoint of phonemic category acquisition, distributional patterns of sounds have been considered to provide infants with clues about the phonemic structure of a language <xref ref-type="bibr" rid="Kuhl2007">[Kuhl2007]</xref>.</p>
+      <p id="S1.p5">Based on these findings, in this paper, we focus on distributional cues.
+We explore the fundamental computational mechanism that can discover words from speech signals using only distributional cues, and develop an unsupervised machine learning method which can discover phonemes and words directly from unsegmented speech signals</p>
+      <p id="S1.p6">In this paper, we propose an unsupervised learning method called the nonparametric Bayesian double articulation analyzer (NPB-DAA) which can automatically estimate double articulation structure, i.e., hierarchically organized latent words and phonemes, embedded in speech signals. We proposed it as a computationally feasible explanation for the simultaneous acquisition of language and acoustic models. To develop the NPB-DAA, we newly introduce probabilistic generative model called the hierarchical Dirichlet process hidden language model (HDP-HLM) and its inference algorithm.</p>
+      <p id="S1.p7">The remainder of this paper is organized as follows.
+Section <xref rid="LABEL:sec2">2</xref> describes the background of the proposed method.
+Section <xref rid="LABEL:sec3">3</xref> presents the HDP-HLM by extending hierarchical Dirichlet process-hidden semi-Markov model (HDP-HSMM) proposed by Johnson et al. <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>. The HDP-HLM is an probabilistic generative model that integrates acoustic and language models for continuous speech signals.
+Section <xref rid="LABEL:sec4">4</xref> describes the inference procedure of HDP-HLM, and our proposed NPB-DAA. Sections <xref rid="LABEL:sec5">5</xref> and <xref rid="LABEL:sec6">6</xref> evaluate the effectiveness of the proposed method using synthetic data and actual sequential vowel speech signals. Section <xref rid="LABEL:sec7">7</xref> concludes this paper.</p>
+    </sec>
+    <sec id="S2">
+      <title>Background</title>
+      <sec id="S2.SS1">
+        <title>Word segmentation using distributional cues in transcribed data</title>
+        <p id="S2.SS1.p1">With respect to statistical computational models, many kinds of unsupervised machine learning methods for word segmentation have been proposed in the last two decades <xref ref-type="bibr" rid="Brent1999">[Brent1999, Venkataraman2001, Goldwater2008, Goldwater2009, Mochihashi2009, Johnson2009, Chen2014, Magistry2012, Sakti2011]</xref>.
+Brent proposed model-based dynamic programming 1 (MBDP-1) for recovering deleted word boundaries in a natural-language text <xref ref-type="bibr" rid="Brent1999">[Brent1999]</xref>. The MBDP-1 presumes that there is an information source generating the text explicitly and segments the target text so as to maximize the text’s probability. Venkataraman proposed a statistical model for segmentation and word discovery from phoneme sequences by improving Brent’s algorithm <xref ref-type="bibr" rid="Venkataraman2001">[Venkataraman2001]</xref>.
+</p>
+        <p id="S2.SS1.p2">Recently, Bayesian nonparametrics, including the hierarchical Dirichlet process and hierarchical Pitman-Yor process, have enabled more sophisticated methods for word segmentation. These models have fully Bayesian generative models and make it possible to calculate the appropriately smoothed n-gram probability for a word that has a long context. Theoretically, they can treat an infinite number of possible words.
+Goldwater proposed an HDP-based word segmentation method and showed that taking context into account is important for statistical word segmentation <xref ref-type="bibr" rid="Goldwater2008">[Goldwater2008, Goldwater2009]</xref>.
+Mochihashi et al. proposed a nested Pitman-Yor language model (NPYLM), in which a letter n-gram model based on a hierarchical Pitman-Yor language model is embedded in the word n-gram model. They also developed the forward filtering backward sampling procedure to achieve efficient blocked Gibbs sampling and hence infer word boundaries <xref ref-type="bibr" rid="Mochihashi2009">[Mochihashi2009]</xref>.</p>
+        <p id="S2.SS1.p3">However, all of the above mentioned word segmentation methods presume that transcribed phoneme sequences or text data without any recognition errors can be obtained by the learning system.
+However, in practice, before acquiring a language model containing an inventory of words, a learning system, i.e., an infant, has to recognize speech signals without any knowledge of words, only with the knowledge of phonemes and/or syllables in an acoustic model. In such a recognition task, the phoneme recognition error rate inevitably becomes high.
+To overcome this problem, several researchers have proposed word discovery methods utilizing co-occurrence cues.</p>
+      </sec>
+      <sec id="S2.SS2">
+        <title>Lexical acquisition using co-occurrence cues</title>
+        <p id="S2.SS2.p1">Roy et al. ambitiously implemented a computational model that enables a robot to autonomously discover words from raw multimodal sensory input <xref ref-type="bibr" rid="Roy2002a">[Roy2002a]</xref>. Their results were imperfect compared with recent state-of-art results. However, their results showed it was possible to develop cognitive models that can process raw sensor data and acquire a lexicon without the need for human transcription or labeling.</p>
+        <p id="S2.SS2.p2">Iwahashi et al. implemented an interactive learning method for a robot to acquire spoken words through human-robot interaction using audio-visual interfaces <xref ref-type="bibr" rid="Iwahashi2008">[Iwahashi2008]</xref>. Their learning process was carried out on-line, incrementally, actively, and in an unsupervised manner.
+Iwahashi et al. also proposed a method that enables a robot to learn linguistic knowledge through human-robot communication in an unsupervised manner <xref ref-type="bibr" rid="Iwahashi2003">[Iwahashi2003]</xref>.
+The model combines speech, visual, and behavioral information in a probabilistic framework.
+Though its performance was still limited, the model is considered to be a more sophisticated model than that proposed in Roy et al.’s previous study from the viewpoint of statistical machine learning <xref ref-type="bibr" rid="Roy2002a">[Roy2002a]</xref>.
+On the basis of this work, Iwahashi et al. developed an integrated online machine learning system combining speech, visual, and tactile information obtained through interaction. It enabled robots to learn beliefs regarding speech units, words, the concepts of objects, motions, grammar, and pragmatic and communicative capabilities <xref ref-type="bibr" rid="Iwahashi2010">[Iwahashi2010]</xref>.
+They called the system LCore.</p>
+        <p id="S2.SS2.p3">Araki et al. built a robot that formed object categories and acquired their names by combining a multimodal latent Dirichlet allocation (MLDA) and the NPYLM <xref ref-type="bibr" rid="Araki2012">[Araki2012]</xref>. They showed that the iterative learning of MLDA and NPYLM increases word segmentation performance by using distributional cues and co-occurrence cues simultaneously, but they reported that the prediction accuracy decreases as the phoneme recognition error rate increases.
+To overcome this problem, Nakamura et al. integrated statistical models for word segmentation and multimodal categorization. They showed that a robot can autonomously form object categories and related words from continuous speech signals and continuous visual, auditory, and haptic information by updating its language and categorization models iteratively <xref ref-type="bibr" rid="Nakamura2014">[Nakamura2014]</xref>.</p>
+        <p id="S2.SS2.p4">Not only object information, but also place information can be used as co-occurrence cues.
+Taguchi et al. proposed a method for the unsupervised learning of place-names from information pairs that consist of spoken utterances and the mobile robot’s estimated current location without any prior linguistic knowledge other than a phoneme acoustic model <xref ref-type="bibr" rid="Taguchi2011">[Taguchi2011]</xref>. They optimized a word list using a model selection method based on description length criterion.
+Taniguchi et al. combined NPYLM and Monte Carlo localization (MCL) methods and developed simultaneous localization and word discovery methods for a robot. Their model updates language model and speech recognition results iteratively by referring to the robot’s location information, as estimated by MCL <xref ref-type="bibr" rid="Akira2015">[Akira2015]</xref>.
+</p>
+      </sec>
+      <sec id="S2.SS3">
+        <title>Word segmentation using distributional cues in noisy input</title>
+        <p id="S2.SS3.p1">As described above, it becomes clear that using co-occurrence cues can mitigate the ill effects of phoneme recognition errors in a word discovery task. However, whether or not the word discovery task can be achieved solely from raw speech signals is still an open question.
+Neubig et al. extended the unsupervised morphological analyzer proposed by Mochihashi et al. and enabled it to analyze phoneme lattices <xref ref-type="bibr" rid="Neubig2012">[Neubig2012]</xref>. Heymann et al. modified Neubig et al.’s algorithm and proposed a suboptimal two-stage algorithm <xref ref-type="bibr" rid="Heymann2013">[Heymann2013]</xref>. Heymann et al. reported that their proposed method outperformed the original method in an experiment that used lattice input generated artificially from text input. In addition, they used the discovered language model for phoneme recognition in an iterative manner and reported that recognition performance was improved <xref ref-type="bibr" rid="Heymann2014">[Heymann2014]</xref>.
+Elsner et al. proposed a computational model that jointly performs word segmentation and learns an explicit model of phonetic variation <xref ref-type="bibr" rid="Elsner2013">[Elsner2013]</xref>. However, they did not start with acoustic sound, but with dictated noisy text, i.e., recognized phoneme sequences with errors. Their model does not include acoustic model learning.</p>
+        <fig id="S2.F1">
+          <caption>
+            <p>Overview of unsupervised learning of language and acoustic models through human-robot interaction, and the generative process of speech signal assumed in the DAA</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="daa3.eps" id="S2.F1.g1"/>
+        </fig>
+        <p id="S2.SS3.p2">They showed that the ill effect of phoneme recognition errors can be mitigated to some extent by using distributional information more appropriately.
+However, all of these methods, except for Iwahashi et al., used an acoustic model previously trained in a supervised manner. Therefore, these models are insufficient as a constructive model for language acquisition from raw speech signals. Hence, the unsupervised learning of an acoustic model is also an important problem.</p>
+      </sec>
+      <sec id="S2.SS4">
+        <title>Unsupervised learning of an acoustic model</title>
+        <p id="S2.SS4.p1">In contrast with the word segmentation task, the acquisition of an acoustic model is basically a categorization task of the feature vectors transformed from continuous speech signals.
+Mixture models, including hidden Markov models (HMMs) and Gaussian mixture models, have been used to model phoneme category acquisition. For example, Lake et al. used an online mixture estimation model for vowel category learning <xref ref-type="bibr" rid="Lake2009">[Lake2009]</xref>.
+However, the phoneme acquisition has proven to be complex categorization task in a feature space.
+The distribution of the feature vectors of each phoneme overlap with each other, and the actual sound of the phoneme depends on its context.
+Feldman et al. pointed out that feedback information from segmented words is important for phonetic category acquisition. They demonstrated this effect through simulations using Bayesian models <xref ref-type="bibr" rid="Feldman2013">[Feldman2013]</xref>.</p>
+        <p id="S2.SS4.p2">Lee et al. proposed a hierarchical Bayesian model that can discover a proper set of sub-word units and an acoustic model in an unsupervised manner <xref ref-type="bibr" rid="Lee2012">[Lee2012]</xref>. However, their model did not estimate the language model.
+Lee et al. also proposed a hierarchical Bayesian model simultaneously discovering the phonetic inventory and the Letter-to-Sound mapping rules on the basis of transcribed data only <xref ref-type="bibr" rid="Lee2013a">[Lee2013a]</xref>.
+The method is not a completely unsupervised learning method from raw speech signals, but does automatically determine relations between sounds and transcribed alphabets and forms an acoustic model in an unsupervised manner.</p>
+        <p id="S2.SS4.p3">There have been several studies about the simultaneous unsupervised learning of acoustic and language models.
+However, a very small number of statistical learning methods that can simultaneously acquire integrated acoustic and language models have been proposed.
+Brandl et al. attempted to develop an unsupervised learning method that enables a robot to simultaneously obtain phonemes, syllables, and words from acoustic speech <xref ref-type="bibr" rid="Brandl2008">[Brandl2008]</xref>. They did not successfully build such a system, but reported their preliminary results.
+Walter et al. proposed a word discovery method that uses an HMM-based method for finding acoustic unit descriptors in parallel with a dynamic time warping technique for finding word segments <xref ref-type="bibr" rid="Walter2013">[Walter2013]</xref>. However, their model is still heuristic from the viewpoint of probabilistic computational models.
+As Feldman et al. pointed out, word segmentation and phonetic category acquisition are undoubtedly mutually dependent. Therefore, a theoretically integrated probabilistic generative model for the simultaneous acquisition of language and acoustic models is desirable.
+To develop such an integrated theoretical model, the authors introduced the general concept of double articulation analysis.</p>
+      </sec>
+      <sec id="S2.SS5">
+        <title>Double articulation analysis</title>
+        <p id="S2.SS5.p1">From a general point of view, unsupervised word discovery from raw speech signals is regarded as a double articulation analysis of the time series data representing a speech signal.
+The double articulation structure is a well-known two-layer hierarchical structure, i.e., a word sequence is generated from a language model, a word is a sequence of phonemes, and each phoneme outputs observation data during the period it persists. The word discovery problem becomes a general problem about analyzing the time series data that potentially have a double articulation structure by estimating the latent acoustic model as well as the latent language model.</p>
+        <p id="S2.SS5.p2">Taniguchi et al. proposed a double articulation analyzer (DAA) by combining the sticky HDP-HMM and the NPYLM <xref ref-type="bibr" rid="Taniguchi2011">[Taniguchi2011]</xref>. The sticky HDP-HMM proposed by Fox et al. is an nonparametric Bayesian extension of HMM <xref ref-type="bibr" rid="Fox2009">[Fox2009]</xref>.
+They applied the DAA to human motion data to extract unit motion from unsegmented human motion data.
+However, they simply used the two nonparametric Bayesian methods sequentially. They did not integrated the two models into a single generative model. Therefore, if there are many recognition or categorization errors in the result of the first latent letter recognition process, i.e., segmentation process by the sticky HDP-HMM, the performance of the subsequent process, i.e., unsupervised chunking by the NPYLM, deteriorates.
+In the terminology of a DAA, a latent letter and a latent word basically correspond to a phoneme and a word in speech signals, respectively.
+In this paper, we call this method “conventional DAA” in order to differentiate it from the DAA newly proposed in this paper, i.e., NPB-DAA. Conventional DAA has been successfully applied to human motion data and driving behavior data, which were also considered to potentially have a double articulation structure. Conventional DAA has been used for various purposes, e.g., segmentation <xref ref-type="bibr" rid="takenaka12iros">[takenaka12iros]</xref>, prediction <xref ref-type="bibr" rid="taniguchi12iv">[taniguchi12iv, IEEE-ITS]</xref>, data mining <xref ref-type="bibr" rid="genki12sii">[genki12sii]</xref>, topic modeling <xref ref-type="bibr" rid="bando13iv">[bando13iv, bando13iros]</xref>, and video summarization <xref ref-type="bibr" rid="takenaka12mm">[takenaka12mm]</xref>.
+Conventional DAA owes its successful result with respect to driving behavior data to the fact that driving behavior data were continuous and smooth compared with raw speech signals. For a driving letter, which corresponds to a phoneme in continuous speech signals, the recognition error rate was still low.
+However, it is expected that a straightforward application of the conventional DAA to raw speech signals will inevitably turn out badly.</p>
+        <p id="S2.SS5.p3">Therefore, based on the background mentioned above, in this paper, we propose an integrated probabilistic generative model, HDP-HLM, representing a latent double articulation structure that contains both a language model and an acoustic model. By assuming HDP-HLM as a generative model of observed time series data, and by inferring latent variables of the model, we can analyze latent double articulation structure of the data in an unsupervised manner. A novel double articulation analyzer is developed on the basis of the HDP-HLM and its inference algorithm.
+This HDP-HLM-based double articulation analysis method is called NPB-DAA.</p>
+      </sec>
+    </sec>
+    <sec id="S3">
+      <title>Generative model</title>
+      <p id="S3.p1">In this section, we propose a novel generative model, the HDP-HLM, for time series data that potentially has a double articulation structure, by extending HDP-HSMM <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>.
+As indicated in its name, HDP-HLM latently contains a language model. In contrast with the conventional case where a latent state transits to the next state on the basis of a Markov process in the HDP-HMM, a latent word in the HDP-HLM transits to the next latent word on the basis of a language model.
+An illustrative overview of the proposed method and the target task are shown in Fig. <xref rid="LABEL:fig:daa">1</xref>.
+We can naturally derive an inference procedure for the HDP-HLM based on the blocked Gibbs sampler. First, we briefly describe the HDP-HSMM. We then describe the HDP-HLM.</p>
+      <sec id="S3.SS1">
+        <title>HDP-HSMM</title>
+        <p id="S3.SS1.p1">HDP-HSMM is a nonparametric Bayesian extension of the conventional hidden semi-Markov model (HSMM) <xref ref-type="bibr" rid="johnson2013">[johnson2013, HSMM]</xref>. Unlike HDP-HMM, which is an nonparametric Bayesian extension of conventional hidden Markov model (HMM) <xref ref-type="bibr" rid="Fox2009">[Fox2009, teh2006]</xref>, the HDP-HSMM explicitly models the duration time of a hidden state.
+A graphical model of the HDP-HSMM is shown in Fig. <xref rid="LABEL:fig:graphical_model_of_hdp-hmm">2</xref>.</p>
+        <fig id="S3.F2">
+          <caption>
+            <p>Model of the HDP-HSMM <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref></p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="gm_hdp_hmm_2.eps" id="S3.F2.g1"/>
+        </fig>
+        <p id="S3.SS1.p2">The generative process of the HDP-HSMM is described as follows.</p>
+        <p>
+          <disp-formula-group id="S7.EGx1">
+            <disp-formula id="S3.E1"/>
+            <disp-formula id="S3.E2"/>
+            <disp-formula id="S3.E3"/>
+            <disp-formula id="S3.E4"/>
+            <disp-formula id="S3.E5"/>
+            <disp-formula id="S3.E6"/>
+            <disp-formula id="S3.E7"/>
+            <disp-formula id="S3.E8"/>
+            <disp-formula id="S3.E9"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S3.SS1.p2.m1"/> and <inline-formula id="S3.SS1.p2.m2"/> represent the stick breaking process and Dirichlet process, respectively <xref ref-type="bibr" rid="Sethuraman1994">[Sethuraman1994, teh2006]</xref>.
+The parameters <inline-formula id="S3.SS1.p2.m3"/> and <inline-formula id="S3.SS1.p2.m4"/> are hyperparameters of the <inline-formula id="S3.SS1.p2.m5"/>, <inline-formula id="S3.SS1.p2.m6"/> is a global transition probability that becomes the base measure of the transition probability distributions related to each super state, and <inline-formula id="S3.SS1.p2.m7"/> is a transition probability distribution related to the <inline-formula id="S3.SS1.p2.m8"/>-th super state. Additionally, <inline-formula id="S3.SS1.p2.m9"/> and <inline-formula id="S3.SS1.p2.m10"/> are base measures for emission distribution and duration distribution.</p>
+        <p id="S3.SS1.p3">In contrast with the case where HMM assumes that a hidden state <inline-formula id="S3.SS1.p3.m1"/> transits to the next hidden state <inline-formula id="S3.SS1.p3.m2"/> according to a Markov process, the hidden semi-Markov Model (HSMM) assumes that a hidden super state <inline-formula id="S3.SS1.p3.m3"/> transits to next hidden super state <inline-formula id="S3.SS1.p3.m4"/> after a probabilistically determined duration time <inline-formula id="S3.SS1.p3.m5"/>, which is sampled from a duration distribution <inline-formula id="S3.SS1.p3.m6"/>.
+The super state <inline-formula id="S3.SS1.p3.m7"/> is sampled from a categorical distribution <inline-formula id="S3.SS1.p3.m8"/> related to the previous super state <inline-formula id="S3.SS1.p3.m9"/>.
+When the super state <inline-formula id="S3.SS1.p3.m10"/> and duration time <inline-formula id="S3.SS1.p3.m11"/> are sampled, a sequence of hidden states <inline-formula id="S3.SS1.p3.m12"/> are determined to be <inline-formula id="S3.SS1.p3.m13"/>. An observation datum <inline-formula id="S3.SS1.p3.m14"/> at time <inline-formula id="S3.SS1.p3.m15"/> is assumed to be drawn from an emission distribution <inline-formula id="S3.SS1.p3.m16"/> whose parameter is <inline-formula id="S3.SS1.p3.m17"/>.
+Observation data <inline-formula id="S3.SS1.p3.m18"/> are generated by <inline-formula id="S3.SS1.p3.m19"/> for <inline-formula id="S3.SS1.p3.m20"/> steps.</p>
+        <p id="S3.SS1.p4">An efficient sampling inference procedure based on the backward filtering forward sampling technique was proposed for
+constructing a blocked Gibbs sampler <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>. A similar algorithm was proposed for HDP-HMM by Fox et al. <xref ref-type="bibr" rid="Fox2009">[Fox2009]</xref>. The algorithm is derived from a weak-limit approximation of the number of hidden super states. The computational cost of the message passing algorithm can be reduced to <inline-formula id="S3.SS1.p4.m1"/>, where <inline-formula id="S3.SS1.p4.m2"/> is the length of the observed data, <inline-formula id="S3.SS1.p4.m3"/> is the state cardinality, and <inline-formula id="S3.SS1.p4.m4"/> is the maximal duration of a super state for truncation. The order is almost the same as that of the backward filtering forward sampling algorithm for the HDP-HMM, except for the constant factor <inline-formula id="S3.SS1.p4.m5"/>.</p>
+      </sec>
+      <sec id="S3.SS2">
+        <title>HDP-HLM</title>
+        <p id="S3.SS2.p1">The generative model for time series data that potentially have a double articulation structure can be obtained by extending the HDP-HSMM.
+A graphical model of the proposed HDP-HLM is shown in Fig. <xref rid="LABEL:fig:graphical_model">3</xref>.
+</p>
+        <fig id="S3.F3">
+          <caption>
+            <p>Model of the proposed HDP-HLM</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="graphical_model_daa_2.eps" id="S3.F3.g1"/>
+        </fig>
+        <p id="S3.SS2.p2">In the generative model of HDP-HLM, the super state <inline-formula id="S3.SS2.p2.m1"/> corresponds to a word in spoken language, which is the fundamental idea of the extension.
+The <inline-formula id="S3.SS2.p2.m2"/>-th super state <inline-formula id="S3.SS2.p2.m3"/> has a phoneme sequence <inline-formula id="S3.SS2.p2.m4"/>, where <inline-formula id="S3.SS2.p2.m5"/> is the length of the <inline-formula id="S3.SS2.p2.m6"/>-th word <inline-formula id="S3.SS2.p2.m7"/>.
+The generative process of the HDP-HLM is described as follows.</p>
+        <p>
+          <disp-formula-group id="S7.EGx2">
+            <disp-formula id="S3.E10"/>
+            <disp-formula id="S3.E11"/>
+          </disp-formula-group>
+        </p>
+        <p>
+          <disp-formula-group id="S7.EGx3">
+            <disp-formula id="S3.E12"/>
+            <disp-formula id="S3.E13"/>
+          </disp-formula-group>
+        </p>
+        <p>
+          <disp-formula-group id="S7.EGx4">
+            <disp-formula id="S3.Ex1"/>
+            <disp-formula id="S3.E14"/>
+            <disp-formula id="S3.E15"/>
+          </disp-formula-group>
+        </p>
+        <p>
+          <disp-formula-group id="S7.EGx5">
+            <disp-formula id="S3.E16"/>
+            <disp-formula id="S3.E17"/>
+            <disp-formula id="S3.E18"/>
+            <disp-formula id="S3.E19"/>
+            <disp-formula id="S3.E20"/>
+          </disp-formula-group>
+        </p>
+        <p>
+          <disp-formula-group id="S7.EGx6">
+            <disp-formula id="S3.E21"/>
+            <disp-formula id="S3.E22"/>
+            <disp-formula id="S3.E23"/>
+            <disp-formula id="S3.E24"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S3.SS2.p2.m8"/> is the base measure and <inline-formula id="S3.SS2.p2.m9"/> and <inline-formula id="S3.SS2.p2.m10"/> are hyperparameters of a word model, which generates words, i.e., latent letter sequences.
+Furthermore, <inline-formula id="S3.SS2.p2.m11"/> outputs <inline-formula id="S3.SS2.p2.m12"/>, representing the transition probability from latent letter <inline-formula id="S3.SS2.p2.m13"/> to the next latent letter. By contrast, <inline-formula id="S3.SS2.p2.m14"/> is the base measure, <inline-formula id="S3.SS2.p2.m15"/> and <inline-formula id="S3.SS2.p2.m16"/> are hyperparameters of the language model, and <inline-formula id="S3.SS2.p2.m17"/> outputs <inline-formula id="S3.SS2.p2.m18"/>, representing the transition probability from latent word <inline-formula id="S3.SS2.p2.m19"/> to the next latent word. The superscripts <inline-formula id="S3.SS2.p2.m20"/> and <inline-formula id="S3.SS2.p2.m21"/> indicate language model (LM) or word model (WM), respectively.
+The latent letters contained in the <inline-formula id="S3.SS2.p2.m22"/>-th latent word <inline-formula id="S3.SS2.p2.m23"/> are sequentially sampled from <inline-formula id="S3.SS2.p2.m24"/>. The <inline-formula id="S3.SS2.p2.m25"/>-th latent letter of the <inline-formula id="S3.SS2.p2.m26"/>-th latent word is represented by <inline-formula id="S3.SS2.p2.m27"/>.</p>
+        <p id="S3.SS2.p3">In contrast with HMMs, the duration distribution is explicitly determined for each latent letter <inline-formula id="S3.SS2.p3.m1"/> in the HDP-HLM. The HDP-HLM inherits this property from the HDP-HSMM <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>. The duration time <inline-formula id="S3.SS2.p3.m2"/> of latent letter <inline-formula id="S3.SS2.p3.m3"/>, which is the <inline-formula id="S3.SS2.p3.m4"/>-th latent letter of the <inline-formula id="S3.SS2.p3.m5"/>-th latent word <inline-formula id="S3.SS2.p3.m6"/> in a sampled word sequence, is drawn from the duration distribution <inline-formula id="S3.SS2.p3.m7"/>, where <inline-formula id="S3.SS2.p3.m8"/> is the duration parameter for latent letter <inline-formula id="S3.SS2.p3.m9"/>.
+The duration of a latent word <inline-formula id="S3.SS2.p3.m10"/> becomes <inline-formula id="S3.SS2.p3.m11"/>. When we assume that <inline-formula id="S3.SS2.p3.m12"/> is a Poisson distribution, <inline-formula id="S3.SS2.p3.m13"/> also follows a Poisson distribution whose parameter is <inline-formula id="S3.SS2.p3.m14"/> because of the properties of Poisson distributions.</p>
+        <p id="S3.SS2.p4">In the HDP-HLM, latent word <inline-formula id="S3.SS2.p4.m1"/> determines a latent letter sequence <inline-formula id="S3.SS2.p4.m2"/>. Based on the determined sequence <inline-formula id="S3.SS2.p4.m3"/>, duration <inline-formula id="S3.SS2.p4.m4"/> of <inline-formula id="S3.SS2.p4.m5"/> is drawn, and observations <inline-formula id="S3.SS2.p4.m6"/> are drawn from an emission distribution <inline-formula id="S3.SS2.p4.m7"/> corresponding to <inline-formula id="S3.SS2.p4.m8"/>. The maps <inline-formula id="S3.SS2.p4.m9"/> and <inline-formula id="S3.SS2.p4.m10"/> represent the indices of words and letters, respectively, in a latent word sequence at time <inline-formula id="S3.SS2.p4.m11"/>. Using this generative model, a continuous time series data with a latent double articulation structure can be generated.
+In this paper, we assume that observed time series data <inline-formula id="S3.SS2.p4.m12"/> represents a feature vector of the speech signal at time <inline-formula id="S3.SS2.p4.m13"/> and is generated in this way. Generally, the HDP-HLM can be applied to any kind of time series data that has a double articulation structure.</p>
+        <p id="S3.SS2.p5">From the viewpoint of language acquisition, we review the generative model. In the conventional DAA <xref ref-type="bibr" rid="Taniguchi2011">[Taniguchi2011]</xref>, a DAA is composed of two separated machine learning methods, i.e., sticky HDP-HMM for encoding observation data to letter sequences and NPYLM for chunking letter sequences into word sequences.
+On the one hand, the transition probabilities <inline-formula id="S3.SS2.p5.m1"/> and <inline-formula id="S3.SS2.p5.m2"/> correspond to the word bigram and letter bigram models in the NPYLM, respectively. Therefore, <inline-formula id="S3.SS2.p5.m3"/> contains information regarding a language model. On the other hand, <inline-formula id="S3.SS2.p5.m4"/> contains information regarding an acoustic model, which corresponds to a sticky HDP-HMM in conventional DAA.</p>
+        <p id="S3.SS2.p6">The HDP-HLM assumes that the language model consists of a word bigram model. Mochihashi et al. compared the bigram and trigram language models and showed that the trigram assumption hardly improved the word segmentation performance although computational cost and complexity increased  <xref ref-type="bibr" rid="Mochihashi2009">[Mochihashi2009]</xref>. Therefore, the bigram assumption must be appropriate for a word segmentation and word discovery task.
+</p>
+        <p id="S3.SS2.p7">If we derive an efficient inference procedure for this two-layer hierarchical generative model, the inference procedure can infer the acoustic model and language model simultaneously.</p>
+      </sec>
+    </sec>
+    <sec id="S4">
+      <title>Inference algorithm</title>
+      <p id="S4.p1">In this section, we derive an approximated blocked Gibbs sampler for the HDP-HLM. The sampler can simultaneously infer latent letters, latent words, a language model, and an acoustic model. Concurrently, the inference procedure can estimate the overall double articulation structure from continuous time series data. Therefore, we propose the unsupervised machine learning method NPB-DAA.
+The overall inference procedure is shown in Algorithm 1.
+</p>
+      <sec id="S4.SS1">
+        <title>Inference of latent words: <inline-formula id="S4.SS1.m1"/></title>
+        <p id="S4.SS1.p1">In the HDP-HSMM, a backward filtering forward sampling procedure is adopted instead of the direct assignment procedure. When each latent state strongly depends on other neighboring latent states, the direct assignment procedure, which is a naive implementation of the Gibbs sampler, results in a poor mixing rate <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>.
+Johnson et al. showed that a blocked Gibbs sampler using a backward filtering forward sampling procedure that can simultaneously sample all hidden states of an observed sequence outperforms a direct-assignment Gibbs sampler.
+By extending the backward filtering forward-sampling procedure and making it applicable to HDP-HLM, we can obtain an inference procedure for HDP-HLM.</p>
+        <p id="S4.SS1.p2">The calculation of the backward messages for super states <inline-formula id="S4.SS1.p2.m1"/> in HDP-HSMM is as follows.</p>
+        <p>
+          <disp-formula-group id="S7.EGx7">
+            <disp-formula id="S4.E25"/>
+            <disp-formula id="S4.E26"/>
+            <disp-formula id="S4.E27"/>
+            <disp-formula id="S4.Ex2"/>
+            <disp-formula id="S4.E28"/>
+            <disp-formula id="S4.E29"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S4.SS1.p2.m2"/> is a variable indicating that <inline-formula id="S4.SS1.p2.m3"/> is the boundary of the super state. If <inline-formula id="S4.SS1.p2.m4"/>, <inline-formula id="S4.SS1.p2.m5"/>. The variable <inline-formula id="S4.SS1.p2.m6"/> in (<xref rid="LABEL:eq:1">25</xref>) represents the probability that the latent super state <inline-formula id="S4.SS1.p2.m7"/> and that it transitions into a different super state at the next time step. Probability <inline-formula id="S4.SS1.p2.m8"/> is obtained by marginalizing over all super states <inline-formula id="S4.SS1.p2.m9"/> at time step <inline-formula id="S4.SS1.p2.m10"/>. Variable <inline-formula id="S4.SS1.p2.m11"/> in (<xref rid="LABEL:eq:2">27</xref>) represents the probability that the latent super state becomes <inline-formula id="S4.SS1.p2.m12"/> from time step <inline-formula id="S4.SS1.p2.m13"/>. This probability can be obtained by marginalizing over the duration variable in (<xref rid="LABEL:eq:4">28</xref>). Probability <inline-formula id="S4.SS1.p2.m14"/> in (<xref rid="LABEL:eq:4">28</xref>) shows the emission probability of observed data <inline-formula id="S4.SS1.p2.m15"/> given the condition that the duration <inline-formula id="S4.SS1.p2.m16"/> of <inline-formula id="S4.SS1.p2.m17"/> is <inline-formula id="S4.SS1.p2.m18"/>.
+In the HDP-HSMM, all time steps with the same super state <inline-formula id="S4.SS1.p2.m19"/> share the same emission distribution. Therefore, the likelihood of a super state <inline-formula id="S4.SS1.p2.m20"/>, i.e., <inline-formula id="S4.SS1.p2.m21"/>, can be calculated easily.
+</p>
+        <p id="S4.SS1.p3">Surprisingly, in HDP-HLM, the exact same procedure of calculating backward messages as that of HDP-HSMM can be used.
+We obtain a message passing algorithm for HDP-HLM by replacing a super state <inline-formula id="S4.SS1.p3.m1"/> in HDP-HSMM with latent word <inline-formula id="S4.SS1.p3.m2"/> in HDP-HLM. Only the likelihood of the latent word <inline-formula id="S4.SS1.p3.m3"/>, i.e., <inline-formula id="S4.SS1.p3.m4"/>, is different between the two message passing algorithms.
+The likelihood of the occurrence of latent word <inline-formula id="S4.SS1.p3.m5"/> then becomes</p>
+        <p>
+          <disp-formula-group id="S7.EGx8">
+            <disp-formula id="S4.Ex3"/>
+            <disp-formula id="S4.E30"/>
+            <disp-formula id="S4.E31"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S4.SS1.p3.m6"/> indicates the number of elements in vector <inline-formula id="S4.SS1.p3.m7"/>, and <inline-formula id="S4.SS1.p3.m8"/> is an <inline-formula id="S4.SS1.p3.m9"/>-partition of duration <inline-formula id="S4.SS1.p3.m10"/>.
+By substituting (<xref rid="LABEL:eq:5">30</xref>) into (<xref rid="LABEL:eq:4">28</xref>), we can obtain a formula to calculate the backward message of HDP-HLM.</p>
+        <p id="S4.SS1.p4">The calculation of (<xref rid="LABEL:eq:5">30</xref>) looks complicated at first glance. However, the
+value of (<xref rid="LABEL:eq:5">30</xref>) can be efficiently calculated using dynamic programming. If we define forward message <inline-formula id="S4.SS1.p4.m1"/> as the probability that the <inline-formula id="S4.SS1.p4.m2"/>-th latent letter in the relevant latent word <inline-formula id="S4.SS1.p4.m3"/> transits to the next latent letter at time <inline-formula id="S4.SS1.p4.m4"/> after emitting observations, forward message <inline-formula id="S4.SS1.p4.m5"/> can be recursively calculated as follows:</p>
+        <p>
+          <disp-formula-group id="S7.EGx9">
+            <disp-formula id="S4.E32"/>
+            <disp-formula id="S4.E33"/>
+          </disp-formula-group>
+        </p>
+        <p>By applying the calculation formula shown above, backward messages <inline-formula id="S4.SS1.p4.m6"/> and <inline-formula id="S4.SS1.p4.m7"/> can be calculated. Using the calculation procedure for backward messages, the forward sampling procedure proposed in the HDP-HSMM can be employed. The backward filtering forward sampling procedure enables the blocked Gibbs sampler to directly sample latent words from observation data without explicitly sampling latent letters in HDP-HLM.</p>
+        <p id="S4.SS1.p5">In the forward sampling procedure, super state <inline-formula id="S4.SS1.p5.m1"/> and its duration <inline-formula id="S4.SS1.p5.m2"/> are sampled iteratively using backward messages as follows.</p>
+        <p>
+          <disp-formula-group id="S7.EGx10">
+            <disp-formula id="S4.Ex4"/>
+            <disp-formula id="S4.E34"/>
+            <disp-formula id="S4.Ex5"/>
+            <disp-formula id="S4.E35"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S4.SS1.p5.m3"/>.
+For further details, please refer to the original paper, in which the HDP-HSMM were introduced <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>.</p>
+      </sec>
+      <sec id="S4.SS2">
+        <title>Sampling a letter sequence for a latent word: <inline-formula id="S4.SS2.m1"/></title>
+        <p id="S4.SS2.p1">The sampled <inline-formula id="S4.SS2.p1.m1"/> is only an index of a latent word. Concrete letter sequences <inline-formula id="S4.SS2.p1.m2"/> for each latent word <inline-formula id="S4.SS2.p1.m3"/> should be sampled according to the correspondence of each sub-sequence of time series data <inline-formula id="S4.SS2.p1.m4"/> to each latent word.
+When a latent word <inline-formula id="S4.SS2.p1.m5"/> is given, the generative model of the observation in the range of a latent word <inline-formula id="S4.SS2.p1.m6"/> can be regarded as an HDP-HSMM whose super states correspond to latent letters. Therefore, in the proposed model, each sub-sequence of observation data corresponding to a latent word can be considered an observed sequence generated by an HDP-HSMM.
+If only a single sub-sequence of observations corresponds to a latent word, a latent letter sequence could be sampled using an ordinal sampling procedure in the HDP-HSMM. However, observations containing the same latent word have to share the same latent letter sequence <inline-formula id="S4.SS2.p1.m7"/>. Therefore, latent letter sequences for observations with the same latent word are simultaneously sampled, given that they have the same latent letter sequence.
+We employ an approximate sampling procedure based on sampling importance resampling (SIR) <xref ref-type="bibr" rid="p_robotics">[p_robotics]</xref>.</p>
+        <p id="S4.SS2.p2">If we define the observations sharing the same latent word as <inline-formula id="S4.SS2.p2.m1"/> and the shared latent letter sequence as <inline-formula id="S4.SS2.p2.m2"/>, the posterior probability <inline-formula id="S4.SS2.p2.m3"/> becomes</p>
+        <p>
+          <disp-formula-group id="S7.EGx11">
+            <disp-formula id="S4.E36"/>
+            <disp-formula id="S4.E37"/>
+          </disp-formula-group>
+        </p>
+        <p>where <inline-formula id="S4.SS2.p2.m4"/> in (<xref rid="LABEL:eq:8">37</xref>), representing the likelihood of the observation, can be calculated using the backward filtering procedure in the HDP-HSMM. Probability <inline-formula id="S4.SS2.p2.m5"/> can also be calculated in the same way as (<xref rid="LABEL:eq:5">30</xref>) if <inline-formula id="S4.SS2.p2.m6"/> is given. The HDP-HSMM also provides a sampling procedure for <inline-formula id="S4.SS2.p2.m7"/>. Therefore, if we consider <inline-formula id="S4.SS2.p2.m8"/> as the proposed distribution and <inline-formula id="S4.SS2.p2.m9"/> as a weight, the SIR procedure can be employed <xref ref-type="bibr" rid="p_robotics">[p_robotics]</xref>.
+Specifically, after a set of <inline-formula id="S4.SS2.p2.m10"/> are sampled from the proposed distribution <inline-formula id="S4.SS2.p2.m11"/>, a final sample is drawn from the set with a probability proportional to each sample’s weight.
+Using this procedure, the proposed model can approximately sample a latent letter sequence <inline-formula id="S4.SS2.p2.m12"/> for the <inline-formula id="S4.SS2.p2.m13"/>-th latent word.</p>
+      </sec>
+      <sec id="S4.SS3">
+        <title>Sampling model parameters</title>
+        <p id="S4.SS3.p1">After sampling latent words <inline-formula id="S4.SS3.p1.m1"/> for each observation data and sampling letter sequences for the latent words, other parameters can be updated.
+Parameters of the language model, i.e., <inline-formula id="S4.SS3.p1.m2"/> and <inline-formula id="S4.SS3.p1.m3"/>, can be updated on the basis of latent word sequences.
+Parameters of the word model, i.e., <inline-formula id="S4.SS3.p1.m4"/> and <inline-formula id="S4.SS3.p1.m5"/>, can be updated on the basis of sampled letter sequences for latent words.
+Parameters for the acoustic model, i.e., <inline-formula id="S4.SS3.p1.m6"/> and <inline-formula id="S4.SS3.p1.m7"/>, can be updated if each hidden state <inline-formula id="S4.SS3.p1.m8"/> is determined for each <inline-formula id="S4.SS3.p1.m9"/>. During the SIR process for sampling a letter sequence, <inline-formula id="S4.SS3.p1.m10"/> in Algorithm 1 are subsidiarily obtained. To accelerate the mixing rate, the subsidiary sampling results <inline-formula id="S4.SS3.p1.m11"/> obtained in the SIR are used for updating the acoustic model parameters.
+These parameters can be sampled in the same way as the HDP-HSMM. For more details, we refer to the original paper in which the HDP-HSMM were introduced <xref ref-type="bibr" rid="johnson2013">[johnson2013]</xref>.
+Finally, the overall sampling procedure is obtained, as described in Algorithm <xref rid="LABEL:alg:bgibbs">4.3</xref>.</p>
+        <boxed-text id="algorithm1">
+          <caption>
+            <p>Blocked Gibbs sampler for HDP-HLM</p>
+          </caption>
+          <p>
+            <list list-type="bullet">
+              <list-item id="I1.i1">
+                <p id="I1.i1.p1">Initialize all parameters.</p>
+              </list-item>
+              <list-item id="I1.i2">
+                <p id="I1.i2.p1">Observe <inline-formula id="I1.i2.p1.m1"/> time series data <inline-formula id="I1.i2.p1.m2"/>.</p>
+              </list-item>
+              <list-item id="I1.i3">
+                <p id="I1.i3.p1">
+                  <bold>repeat</bold>
+                </p>
+                <p>
+                  <list list-type="bullet">
+                    <list-item id="I1.I1.i1">
+                      <p id="I1.I1.i1.p1"><bold>for</bold> <inline-formula id="I1.I1.i1.p1.m1"/> to <inline-formula id="I1.I1.i1.p1.m2"/> <bold>do</bold></p>
+                      <p>
+                        <list list-type="bullet">
+                          <list-item id="I1.I1.I1.i1">
+                            <p id="I1.I1.I1.i1.p1">// Backward filtering procedure</p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i2">
+                            <p id="I1.I1.I1.i2.p1">For each <inline-formula id="I1.I1.I1.i2.p1.m1"/>, initialize messages <inline-formula id="I1.I1.I1.i2.p1.m2"/>.</p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i3">
+                            <p id="I1.I1.I1.i3.p1"><bold>for</bold> <inline-formula id="I1.I1.I1.i3.p1.m1"/> to <inline-formula id="I1.I1.I1.i3.p1.m2"/> <bold>do</bold></p>
+                            <p>
+                              <list list-type="bullet">
+                                <list-item id="I1.I1.I1.I1.i1">
+                                  <p id="I1.I1.I1.I1.i1.p1">For each <inline-formula id="I1.I1.I1.I1.i1.p1.m1"/>, compute backward messages <inline-formula id="I1.I1.I1.I1.i1.p1.m2"/> and <inline-formula id="I1.I1.I1.I1.i1.p1.m3"/> using (<xref rid="LABEL:eq:1">25</xref>)–(<xref rid="LABEL:eq:4">28</xref>).
+</p>
+                                </list-item>
+                              </list>
+                            </p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i4">
+                            <p id="I1.I1.I1.i4.p1"><bold>end</bold> <bold>for</bold></p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i5">
+                            <p id="I1.I1.I1.i5.p1">// Forward sampling procedure</p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i6">
+                            <p id="I1.I1.I1.i6.p1">Initialize <inline-formula id="I1.I1.I1.i6.p1.m1"/> and <inline-formula id="I1.I1.I1.i6.p1.m2"/></p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i7">
+                            <p id="I1.I1.I1.i7.p1"><bold>while</bold> <inline-formula id="I1.I1.I1.i7.p1.m1"/> <bold>do</bold></p>
+                            <p>
+                              <list list-type="bullet">
+                                <list-item id="I1.I1.I1.I2.i1">
+                                  <p id="I1.I1.I1.I2.i1.p1">// Sampling a super state representing a latent word</p>
+                                </list-item>
+                                <list-item id="I1.I1.I1.I2.i2">
+                                  <p id="I1.I1.I1.I2.i2.p1">
+                                    <inline-formula id="I1.I1.I1.I2.i2.p1.m1"/>
+                                  </p>
+                                </list-item>
+                                <list-item id="I1.I1.I1.I2.i3">
+                                  <p id="I1.I1.I1.I2.i3.p1">// Sampling duration of the super state</p>
+                                </list-item>
+                                <list-item id="I1.I1.I1.I2.i4">
+                                  <p id="I1.I1.I1.I2.i4.p1">
+                                    <inline-formula id="I1.I1.I1.I2.i4.p1.m1"/>
+                                  </p>
+                                </list-item>
+                                <list-item id="I1.I1.I1.I2.i5">
+                                  <p id="I1.I1.I1.I2.i5.p1">
+                                    <inline-formula id="I1.I1.I1.I2.i5.p1.m1"/>
+                                  </p>
+                                </list-item>
+                                <list-item id="I1.I1.I1.I2.i6">
+                                  <p id="I1.I1.I1.I2.i6.p1">
+                                    <inline-formula id="I1.I1.I1.I2.i6.p1.m1"/>
+                                  </p>
+                                </list-item>
+                              </list>
+                            </p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i8">
+                            <p id="I1.I1.I1.i8.p1"><bold>end</bold> <bold>while</bold></p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i9">
+                            <p id="I1.I1.I1.i9.p1">
+                              <inline-formula id="I1.I1.I1.i9.p1.m1"/>
+                            </p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i10">
+                            <p id="I1.I1.I1.i10.p1">// Sampling a tentative latent letter sequences</p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i11">
+                            <p id="I1.I1.I1.i11.p1"><bold>for</bold> <inline-formula id="I1.I1.I1.i11.p1.m1"/> to <inline-formula id="I1.I1.I1.i11.p1.m2"/> <bold>do</bold></p>
+                            <p>
+                              <list list-type="bullet">
+                                <list-item id="I1.I1.I1.I3.i1">
+                                  <p id="I1.I1.I1.I3.i1.p1">
+                                    <inline-formula id="I1.I1.I1.I3.i1.p1.m1"/>
+                                  </p>
+                                </list-item>
+                              </list>
+                            </p>
+                          </list-item>
+                          <list-item id="I1.I1.I1.i12">
+                            <p id="I1.I1.I1.i12.p1"><bold>end</bold> <bold>for</bold></p>
+                          </list-item>
+                        </list>
+                      </p>
+                    </list-item>
+                    <list-item id="I1.I1.i2">
+                      <p id="I1.I1.i2.p1"><bold>end</bold> <bold>for</bold></p>
+                    </list-item>
+                    <list-item id="I1.I1.i3">
+                      <p id="I1.I1.i3.p1">// Update model parameters</p>
+                    </list-item>
+                    <list-item id="I1.I1.i4">
+                      <p id="I1.I1.i4.p1">Sample acoustic model parameters <inline-formula id="I1.I1.i4.p1.m1"/> on the basis of tentatively sampled latent letter sequences <inline-formula id="I1.I1.i4.p1.m2"/>.</p>
+                    </list-item>
+                    <list-item id="I1.I1.i5">
+                      <p id="I1.I1.i5.p1">Sample language model parameter <inline-formula id="I1.I1.i5.p1.m1"/> on the basis of sampled super states , i.e., latent words.</p>
+                    </list-item>
+                    <list-item id="I1.I1.i6">
+                      <p id="I1.I1.i6.p1">Sample a word inventory <inline-formula id="I1.I1.i6.p1.m1"/> using SIR procedure (see (<xref rid="LABEL:eq:8">37</xref>)).</p>
+                    </list-item>
+                    <list-item id="I1.I1.i7">
+                      <p id="I1.I1.i7.p1">Sample a word model <inline-formula id="I1.I1.i7.p1.m1"/> on the basis of sampled word inventory <inline-formula id="I1.I1.i7.p1.m2"/>.</p>
+                    </list-item>
+                  </list>
+                </p>
+              </list-item>
+              <list-item id="I1.i4">
+                <p id="I1.i4.p1"><bold>until</bold> a predetermined exit condition is satisfied.</p>
+              </list-item>
+            </list>
+          </p>
+        </boxed-text>
+      </sec>
+      <sec id="S4.SS4">
+        <title>NPB-DAA</title>
+        <p id="S4.SS4.p1">Based on the generative model, HDP-HLM, and its inference algorithm shown in Algorithm <xref rid="LABEL:alg:bgibbs">4.3</xref>, the proposed NPB-DAA is obtained, finally.
+By assuming HDP-HLM as a generative model of observed time series data, and by inferring latent variables of the model, we can analyze latent double articulation structure, i.e., hierarchically organized latent words and phonemes, of the data in an unsupervised manner. We call the novel unsupervised double articulation analyzer NPB-DAA.</p>
+      </sec>
+    </sec>
+    <sec id="S5">
+      <title>Experiment 1: Synthetic data</title>
+      <p id="S5.p1">We conducted an experiment using a synthetic dataset that explicitly has a double articulation structure to validate our proposed method.</p>
+      <sec id="S5.SS1">
+        <title>Conditions</title>
+        <p id="S5.SS1.p1">To validate the ability of our proposed method to infer a latent double articulation structure in time series data, we applied the proposed NPB-DAA based on the HDP-HLM to synthetic time series data.
+The conventional DAA was employed as a comparative method.
+The time series data are generated using five letters <inline-formula id="S5.SS1.p1.m1"/> and four words <inline-formula id="S5.SS1.p1.m2"/> where <inline-formula id="S5.SS1.p1.m3"/> is a set of letters and <inline-formula id="S5.SS1.p1.m4"/> is a set of words. The four words were generated randomly.
+The sequence <inline-formula id="S5.SS1.p1.m5"/> represents a word that is generated by combining <inline-formula id="S5.SS1.p1.m6"/> sequentially where <inline-formula id="S5.SS1.p1.m7"/> denotes the <inline-formula id="S5.SS1.p1.m8"/>-th letter of <inline-formula id="S5.SS1.p1.m9"/>. The durations of the letters were assumed to follow Poisson distributions and their parameters were drawn from a Gamma distribution whose parameters were <inline-formula id="S5.SS1.p1.m10"/>. The emission distribution was assumed to be a Gaussian distribution whose parameters were <inline-formula id="S5.SS1.p1.m11"/>, where <inline-formula id="S5.SS1.p1.m12"/> represents the index of latent letters. The variance of the emission distribution was changed in stages, and the inference results were compared. Forty time series data items were generated from 20 types of latent word sequences. Sixteen of them were pairs of words in <inline-formula id="S5.SS1.p1.m13"/>, e.g., <inline-formula id="S5.SS1.p1.m14"/> , and <inline-formula id="S5.SS1.p1.m15"/>. Four of them were three-word sentences, e.g., <inline-formula id="S5.SS1.p1.m16"/>. A sequence of latent words is represented by <inline-formula id="S5.SS1.p1.m17"/>. Two observations were generated from each word sequence.</p>
+        <p id="S5.SS1.p2">We set the parameters of the NPB-DAA as follows: the hyperparameters for the latent language model were <inline-formula id="S5.SS1.p2.m1"/>, and the maximum number of words was six for weak-limit approximation. The hyperparameters for the latent word model were <inline-formula id="S5.SS1.p2.m2"/>, and the maximum number of letters was seven for weak-limit approximation. The hyperparameters of the duration distributions were set to <inline-formula id="S5.SS1.p2.m3"/> and <inline-formula id="S5.SS1.p2.m4"/>, and those of the emission distributions were set to <inline-formula id="S5.SS1.p2.m5"/>. The Gibbs Sampling procedure was iterated 100 times.</p>
+        <p id="S5.SS1.p3">For the comparative model and conventional DAA, we set the hyperparameters of the sticky HDP-HMM to be as similar to those of the NPB-DAA as possible.</p>
+      </sec>
+      <sec id="S5.SS2">
+        <title>Results</title>
+        <p id="S5.SS2.p1">The average log-likelihood is shown in Fig. <xref rid="LABEL:fig:llk">4</xref>, where error bars represent the standard deviation of 30 trials. These results show that the proposed inference procedure worked appropriately, gradually sampling more probable latent variables as the iterations increased.
+</p>
+        <p id="S5.SS2.p2">In contrast with ordinal speech recognition tasks, the target task (language acquisition and double articulation analysis) is an unsupervised learning task. Specifically, it is a clustering task. Therefore, it is difficult to evaluate the methods’ performance from the viewpoint of precision and recall because the estimated index of a cluster and the label corresponding to the ground truth data are usually different. We evaluated the obtained result using the adjusted rand index (ARI), which quantifies the performance of a clustering task  <xref ref-type="bibr" rid="ari">[ari]</xref>.</p>
+        <p id="S5.SS2.p3">Table <xref rid="LABEL:exp1_ari_letter">2</xref> shows the ARI for estimated latent letters, and
+Table <xref rid="LABEL:exp1_ari_word">2</xref> shows the ARI for estimated latent words. Although
+the ARI for the latent letters obtained by conventional DAA decreases when the variance <inline-formula id="S5.SS2.p3.m1"/> increases, that of NPB-DAA did not decrease as much. As the ARIs for latent words show, the performance of word segmentation by conventional DAA was poor, even when the ARI for latent letters was larger than <inline-formula id="S5.SS2.p3.m2"/>. In contrast, the ARI for latent words estimated by NPB-DAA was over <inline-formula id="S5.SS2.p3.m3"/> in all stages.
+This shows that the NPB-DAA can mitigate the ill effects of phoneme recognition errors in the word segmentation task, and obtained knowledge about words can improve phoneme recognition performance.
+Fig. <xref rid="LABEL:fig:aritime">5</xref> shows the change in ARI through iterations in the case of <inline-formula id="S5.SS2.p3.m4"/>. This shows that the ARI also increased gradually while log likelihood increases, as in Fig. <xref rid="LABEL:fig:llk">4</xref>.</p>
+        <p id="S5.SS2.p4">An example of estimated latent variables is shown in Fig.  <xref rid="LABEL:fig:state1">6</xref>, which shows the results for time series data generated from the latent word sequence <inline-formula id="S5.SS2.p4.m1"/>. The input time series data is shown at very top of the figure. The top of each panel shows the true latent letters or latent words, whereas the panel beneath shows the inferred results. The vertical axes represent the iteration of the Gibbs sampling. In Fig. <xref rid="LABEL:fig:state1">6</xref>, the figure in the middle shows a latent word sequence estimated using the proposed method, and the figure at the bottom shows the estimated boundaries of the latent words. These results show that the inference procedure works consistently and can estimate an adequate boundary for the latent words given the data.</p>
+        <fig id="S5.F4">
+          <caption>
+            <p>Log-likelihood profile through Gibbs sampling (<inline-formula id="S5.F4.m2"/>)</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="llk_s1.0_.eps" id="S5.F4.g1"/>
+        </fig>
+        <fig id="S5.F5">
+          <caption>
+            <p>ARI profile through Gibbs sampling (<inline-formula id="S5.F5.m2"/>)</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ARITIME_s1.0.eps" id="S5.F5.g1"/>
+        </fig>
+        <fig id="S5.F6">
+          <caption>
+            <p>Example of inference results for sample data <inline-formula id="S5.F6.m3"/> and <inline-formula id="S5.F6.m4"/>: (top) observation data, (upper middle) latent letters, (lower middle) latent words, and (bottom) the boundaries of latent words. Different colors denote different states.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="s1_15.eps" id="S5.F6.g1"/>
+        </fig>
+        <p>
+          <table-wrap id="S5.T2"><caption><p>ARI for estimated latent letters</p></caption><caption><p>ARI for estimated latent words</p></caption>
+<table>
+<thead>
+<tr>
+<th><inline-formula id="S5.T2.m1"/></th>
+<th>0.1</th>
+<th>0.5</th>
+<th>1.0</th></tr>
+</thead>
+<tbody>
+<tr>
+<th><p>Conventional DAA</p><p>(sticky HDP-HMM)</p></th>
+<td>0.845</td>
+<td>0.832</td>
+<td>0.649</td></tr>
+<tr>
+<th>NPB-DAA</th>
+<td><underline>0.984</underline></td>
+<td><underline>0.895</underline></td>
+<td><underline>0.938</underline></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><inline-formula id="S5.T2.m2"/></th>
+<th><inline-formula id="S5.T2.m3"/></th>
+<th><inline-formula id="S5.T2.m4"/></th>
+<th><inline-formula id="S5.T2.m5"/></th></tr>
+</thead>
+<tbody>
+<tr>
+<th><p>Conventional DAA</p><p>(sticky HDP-HMM + NPYLM)</p></th>
+<td>0.122</td>
+<td>0.107</td>
+<td>0.125</td></tr>
+<tr>
+<th>NPB-DAA</th>
+<td><underline>0.594</underline></td>
+<td><underline>0.509</underline></td>
+<td><underline>0.618</underline></td></tr>
+</tbody>
+</table></table-wrap>
+        </p>
+        <p id="S5.SS2.p5">These results show that the proposed method is a more effective machine learning method for estimating a latent double articulation structure embedded in time series data.</p>
+      </sec>
+    </sec>
+    <sec id="S6">
+      <title>Experiment 2: Continuous Japanese Vowel Speech Signal</title>
+      <p id="S6.p1">In the second experiment, we evaluated our proposed method using Japanese vowel speech signals to test the applicability of the proposed method to actual human continuous speech signal.</p>
+      <sec id="S6.SS1">
+        <title>Conditions</title>
+        <p id="S6.SS1.p1">We prepared 60 audio data items. We asked a female Japanese speaker to read 30 artificial sentences aloud two times at a natural speed and recorded her voice.
+The 30 sentences were prepared using five words {aioi, aue, ao, ie, uo}, which consisted of five Japanese vowels {a, i, u, e, o}. By reordering the five words, we prepared 25 two-word sentences, e.g., “ao aioi,” “uo aue,” and “aioi aioi,” and five three-word sentences, i.e., “uo aue ie,” “ie ie uo,” “aue ao ie,” “ao ie ao,” and “aioi uo ie.” The set of two-word sentences consisted of all types of word pairs (<inline-formula id="S6.SS1.p1.m1"/>). The set of three-word sentences were generated randomly.</p>
+        <p id="S6.SS1.p2">The recorded data were encoded into <inline-formula id="S6.SS1.p2.m1"/>-dimensional mel-frequency cepstrum coefficient (MFCC) time series data using the HMM Toolkit (HTK) <fn id="idp6298512"><p>Hidden Markov Model Toolkit: http://htk.eng.cam.ac.uk/</p></fn>. The frame size and shift were set to <inline-formula id="S6.SS1.p2.m2"/> and <inline-formula id="S6.SS1.p2.m3"/> ms, respectively. Twelve-dimensional MFCC data was obtained as input data by eliminating power information from the original 13-dimensional MFCC data. As a result, 12-dimensional time series data at a frame rate of <inline-formula id="S6.SS1.p2.m4"/> Hz were obtained.
+</p>
+        <p id="S6.SS1.p3">The hyperparameters for the latent language model were set to <inline-formula id="S6.SS1.p3.m1"/> and <inline-formula id="S6.SS1.p3.m2"/>, and the maximum number of words was set to seven for weak-limit approximation. The hyperparameters for the latent word model were <inline-formula id="S6.SS1.p3.m3"/> and <inline-formula id="S6.SS1.p3.m4"/>, and the maximum number of letters was seven for weak-limit approximation. The hyperparameters of the duration distributions were set to <inline-formula id="S6.SS1.p3.m5"/> and <inline-formula id="S6.SS1.p3.m6"/>, and those of the emission distributions were set to <inline-formula id="S6.SS1.p3.m7"/> and <inline-formula id="S6.SS1.p3.m8"/>dimension<inline-formula id="S6.SS1.p3.m9"/>.</p>
+        <p id="S6.SS1.p4">For the conventional DAA, we set the hyperparameters of the sticky HDP-HMM to be as similar to those of the NPB-DAA as possible. The hyperparameters for the NPYLM used in the conventional DAA were set to <inline-formula id="S6.SS1.p4.m1"/> and <inline-formula id="S6.SS1.p4.m2"/>. The Gibbs sampling procedure was iterated 100 times. With different random number seeds, 20 trials were performed.</p>
+        <p id="S6.SS1.p5">As a baseline method, we employed an open-source continuous speech recognition engine, Julius,<fn id="idp6401760"><p>Open-Source Large Vocabulary CSR Engine Julius: http://julius.sourceforge.jp/. The Linux binary dictation-kit-v4.3.1-linux.tgz was used in this experiment. The software encodes the recorded data into 36-dimensional MFCC data including dynamic features and uses them for speech recognition. </p></fn> which is widely used in Japanese speech recognition tasks. Julius’s acoustic model is trained by using a large number of speech data in a supervised manner. We prepared four conditions for Julius. The first one was called “Julius (phoneme + NPYLM).” In this condition, we used Julius as a phoneme recognition system by preparing a phoneme dictionary containing five Japanese vowels {a, i, u, e, o}.<fn id="idp6404400"><p>In addition, Julius’s dictionary also contains silB and silE to represent silence because of its system requirements.</p></fn> After encoding continuous speech signals into phoneme sequences using Julius as a phoneme recognizer, unsupervised morphological analysis based on the NPYLM was conducted to discover words and a language model. The second condition was called “Julius (phoneme + latticelm).” In this condition, we also used latticelm, which is an unsupervised morphological analyzer for lattice output from an ASR system. The method was proposed by Neubig et al. as an extension of Mochihashi’s NPYLM <xref ref-type="bibr" rid="Neubig2012">[Neubig2012]</xref>. In this condition, the latticelm software<fn id="idp6408512"><p>latticelm: http://www.phontron.com/latticelm/index.html</p></fn> developed by Neubig et al. was used.</p>
+        <p id="S6.SS1.p6">In the third and fourth conditions, called “Julius (monophone + word dictionary)” and “Julius (triphone + word dictionary),” respectively. we prepared a complete word dictionary that contained all of the words that appeared in the target speech signal, i.e.,{aioi, aue, ao, ie, uo}, for Julius. This condition provides almost an upper bound for the performance of our task.
+Except for in “Julius (triphone + word dictionary),” Julius uses a monophone-based acoustic model contained in the dictation kit. The acoustic model is trained in a supervised manner using a large number of labeled speech data. “Julius (triphone + word dictionary)” used a triphone-based acoustic model for comparison.</p>
+      </sec>
+      <sec id="S6.SS2">
+        <title>Results</title>
+        <p id="S6.SS2.p1">We provided word and letter ground truth labels to all frames of the speech signal data and evaluated the relationship between the truth labels and estimated latent letter and word indices.</p>
+        <p>
+          <table-wrap id="S6.T3"><caption><p>ARI for estimated latent letters and words</p></caption>
+<table>
+<tbody>
+<tr>
+<td>Method</td>
+<td><p>Letter ARI</p></td>
+<td><p>Word ARI</p></td>
+<td>AM</td>
+<td>LM</td></tr>
+<tr>
+<td>NPB-DAA (MAP)</td>
+<td><bold>0.599</bold></td>
+<td><bold>0.497</bold></td>
+<td/>
+<td/></tr>
+<tr>
+<td>NPB-DAA</td>
+<td>0.574</td>
+<td>0.385</td>
+<td/>
+<td/></tr>
+<tr>
+<td>Conventional DAA</td>
+<td>0.584</td>
+<td>0.072</td>
+<td/>
+<td/></tr>
+<tr>
+<td><p>Julius (phoneme dictionary</p><p>+ NPYLM)</p></td>
+<td>0.483</td>
+<td>0.315</td>
+<td>✓</td>
+<td/></tr>
+<tr>
+<td><p>Julius (phoneme dictionary</p><p>+ latticelm)</p></td>
+<td>0.524</td>
+<td>0.426</td>
+<td>✓</td>
+<td/></tr>
+<tr>
+<td><p>Julius (monophone</p><p>+ word dictionary)</p></td>
+<td>0.565</td>
+<td>0.548</td>
+<td>✓</td>
+<td>✓</td></tr>
+<tr>
+<td><p>Julius (triphone</p><p>+ word dictionary)</p></td>
+<td>0.516</td>
+<td>0.636</td>
+<td>✓</td>
+<td>✓</td></tr>
+</tbody>
+</table></table-wrap>
+        </p>
+        <p id="S6.SS2.p2">The results are shown in Table <xref rid="LABEL:tbl:exp2_ari">3</xref>. Check marks in the AM and LM columns indicate that the method used a pretrained acoustic model and given true language model, respectively.
+We see that “NPB-DAA (MAP)” outperformed the conventional DAA. The results of “NPB-DAA” and “Conventional DAA” show the ARI averaged over 20 trials. In contrast, “NPB-DAA (MAP)” obtained the maximum a posteriori probability (MAP) of the 20 trials.
+An advantage of the NPB-DAA is that the method can calculate the posterior probability of a given dataset after the learning phase because the NPB-DAA is derived from a generative model, i.e., HDP-HLM, which integrates the language and acoustic models. In contrast with the conventional DAA and similar methods that do not have appropriate generative models, the NPB-DAA can obtain an appropriate learning result by referring to the probability. The rows with MAP in Table <xref rid="LABEL:tbl:exp2_ari">3</xref> show that this probability is an adequate criterion for selecting a learning result.
+</p>
+        <p id="S6.SS2.p3">The results show that the NPB-DAA outperformed not only the conventional DAA but also Julius-based word discovery systems whose acoustic models were trained in supervised manner.
+One reason is that the acoustic models of the DAAs were trained only from the female participant’s speech signals, in contrast, Julius’s acoustic model was trained by the speech signals of many speakers.
+In other words, NPB-DAA acquired speaker-dependent acoustic model in contrast with that Julius used speaker-independent acoustic model.
+This adaptation of acoustic model to the speaker must have increased the NPB-DAA’s performance.</p>
+        <p id="S6.SS2.p4">The results show that a naive application of the NPYLM to recognized phoneme sequences results in poor word acquisition performance, especially in conventional DAA. Because the theory of the NPYLM does not presume that letter sequences have recognition errors, the existence of phoneme recognition error deteriorates word segmentation performance. The methods that simply apply an NPYLM to obtained phoneme sequences, i.e., the conventional DAA and Julius (phoneme dictionary + NPYLM), output bad results in the word ARI compared with those of the letter ARI. However, latticelm, which presumes phoneme recognition errors to some extent, could not dramatically improve the performance of word acquisition in our experimental setting.</p>
+        <p id="S6.SS2.p5">In contrast, “Julius (triphone + word dictionary)” improved its word ARI performance with respect to letter ARI performance. “Julius (monophone + word dictionary)” also kept its performance high with respect to the word recognition task compared with the phoneme recognition task.
+We note that the word error rate was 28.9 % and the phoneme error rate was 23.9 % in Julius (monophone + word dictionary).</p>
+        <p id="S6.SS2.p6">In the research field of ASR, it is widely known that a good language model improves word and phoneme recognition performance. The NPB-DAA could not improve the performance of word ARI with respect to letter ARI performance. However, it obtained an adequate language model and prevented the score of the word ARI from becoming far worse than that of the letter ARI. To achieve such an error-proof word acquisition, the direct inference of latent words are important in NPB-DAA. In the inference procedure described in Section <xref rid="LABEL:sec3">3</xref>, latent words are sampled directly without sampling latent letters while marginalizing all possible latent letter sequences. This achieves an effect similar to that of a given language model in the inference process</p>
+        <p id="S6.SS2.p7">Typical examples of the estimation results are shown in Table <xref rid="LABEL:tbl:DAAresult">4</xref> for NPB-DAA and conventional DAA. Each number in parentheses represents an estimated phoneme label, each space represents a phoneme boundary, each number in bold style represents a sampled index of a word, and “<inline-formula id="S6.SS2.p7.m1"/>” represents a boundary between successive words. For example, “ao ie” was divided into two words, i.e., “5 0 1” and “6 3 4 6,” in the NPB-DAA results, and their word indices were 3 and 4. In Table <xref rid="LABEL:tbl:DAAresult">4</xref>, the sampled letters corresponding to the word “ie” are underlined. Although conventional DAA could not estimate “ie” as a single word, the NPB-DAA could estimate “ie” to be a single word: “4.” In the conventional DAA results, several phoneme recognition errors can be found. The errors completely deteriorated the following chunking process, i.e., unsupervised morphological analysis using a NPYLM, as past research has frequently pointed out.
+As shown in Table <xref rid="LABEL:tbl:DAAresult">4</xref>, NPB-DAA had some phoneme recognition errors. However, in the NPB-DAA, latent words are sampled on the basis of the marginalized phoneme distribution before sampling concrete phoneme sequences. This property of the sampling procedure seemed to improve the performance of NPB-DAA.</p>
+        <p>
+          <table-wrap id="S6.T4"><caption><p>Example word discovery results </p></caption>
+<table>
+<thead>
+<tr>
+<th>Vowel sequence</th>
+<th>Estimated NPB-DAA results</th>
+<th>Estimated conventional DAA results</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>ao ie</td>
+<td><bold>3</bold> (5 0 1) / <bold>4</bold> (6 3 4 6)</td>
+<td><bold>226</bold> (2 0 3 4 1 5 4 1)</td></tr>
+<tr>
+<td>ao ie ao</td>
+<td><bold>3</bold> (5 0 1) / <bold>4</bold> (6 3 4 6) / <bold>3</bold> (5 0 1) / <bold>0</bold> (6 4 6)</td>
+<td><bold>494</bold> (3) / <bold>675</bold> (2 3 0) / <bold>374</bold> ( 1 5 4 1 2 0 1)</td></tr>
+<tr>
+<td>aue ie</td>
+<td><bold>6</bold> (6 5 1 2 6 4) / <bold>4</bold> (6 3 4 6)</td>
+<td><bold>329</bold> (2 3 8 4 5 4 1)</td></tr>
+<tr>
+<td>ie ie</td>
+<td><bold>4</bold> (6 3 4 6) / <bold>4</bold> (6 3 4 6)</td>
+<td><bold>389</bold> ( 5 4 1 41 5 4 1)</td></tr>
+<tr>
+<td>ie uo</td>
+<td><bold>4</bold> (6 3 4 6) / <bold>5</bold> (5 1 2) / <bold>3</bold> (5 0 1) / <bold>0</bold> (0 6)</td>
+<td><bold>401</bold> ( 5 4 1 8 0 1)</td></tr>
+<tr>
+<td>ie aioi</td>
+<td><bold>4</bold> (6 3 4 6) / <bold>1</bold> (5 6 4 6 3 6 1) / <bold>4</bold> (6 3 4 6)</td>
+<td><bold>813</bold> ( 5 4 1 2 4 5) / <bold>602</bold> (4 3 0 3 4 5)</td></tr>
+</tbody>
+</table></table-wrap>
+        </p>
+        <p id="S6.SS2.p8">An example of the estimated latent variables is shown in Fig.  <xref rid="LABEL:fig:npb_example_inference">7</xref>, which shows the results for time series data corresponding to a vowel sequence, “ao ie ao.” The input time series data, i.e., 12-dimensional MFCC time series data, are shown at the top of the figures. The middle and the bottom figures show the inference process. The top of each figure shows the true latent letters or latent words, whereas the bottom shows the inferred result. The vertical axes represent the number of Gibbs sampling iterations. This shows that the inference procedure worked for human vowel sequence data, and could estimate an adequate unit for each word.</p>
+        <fig id="S6.F7">
+          <caption>
+            <p>Example of inference results for “ao ie ao.” MFCC feature vectors are plotted in the top panel. The middle and bottom panels show the inference results of latent letters and latent words, respectively. Different colors denotes different states. </p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ao_ie_ao2.eps" id="S6.F7.g1"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec id="S7">
+      <title>Conclusion</title>
+      <p id="S7.p1">In this paper, we proposed NPB-DAA for direct and simultaneous acquisition of language and acoustic models from continuous speech signals in an unsupervised manner. For this purpose, we proposed an integrative generative model called the HDP-HLM by extending HDP-HSMM. Based on the generative model, we derived an inference procedure by extending the blocked Gibbs sampler originally proposed for HDP-HSMM. The method is expected to enable a developmental robot to simultaneously obtain language and acoustic models directly from continuous speech signals. To evaluate the performance of the proposed method, two experiments were performed. In the first experiment, the proposed method was applied to synthetic data, and it was shown that the method can successfully infer latent words embedded in time series data in an unsupervised manner. In the second experiment, we applied the proposed method to actual human Japanese vowel sequences. The result showed that the proposed method outperformed a conventional two-stage sequential method, conventional DAA, and a baseline ASR method.</p>
+      <p id="S7.p2">One of the most important challenges in our future work is to achieve complete human language acquisition from speech signals. We did not achieve complete language acquisition from speech signals that includes consonants as well as vowels in this study. Language acquisition from more natural speech signals like child-directed speech by human parents are also part of our future work. To achieve these aims, we still have two main problems: feature extraction and computational cost.</p>
+      <p id="S7.p3">To address these problems, more sophisticated feature extraction methods are needed. Deep learning has gained attention recently because of its impressive feature extraction performance. Integrating a deep learning method into the NPB-DAA should improve its performance.</p>
+      <p id="S7.p4">Computational cost is another problem. Even though the size of the
+dataset used in the Experiment 2 was very small, it took approximately 240
+minutes for 100 iterations using an Intel Xeon CPU E5-2650 v2 2.60 GHz, 8 cores <inline-formula id="S7.p4.m1"/> 16
+CPU. In particular, the computational cost of the blocked Gibbs sampler was <inline-formula id="S7.p4.m2"/>, where <inline-formula id="S7.p4.m3"/> is the maximum number of latent letters for a word, <inline-formula id="S7.p4.m4"/> is the maximum duration of a word, and <inline-formula id="S7.p4.m5"/>is the maximum number of words.
+To apply the proposed method to a larger dataset, improving its computational cost will be necessary.
+</p>
+      <p id="S7.p5">Currently, the accuracy of the language acquisition is still limited, as shown in Table <xref rid="LABEL:tbl:exp2_ari">3</xref>. In this paper, we focused on a language acquisition method based on distributional cues and proposed a mathematical model for language acquisition. Obviously, distributional cues are not enough for more accurate language acquisition. As suggested by several computational and robotic studies, making use of co-occurrence cues improves the accuracy of language acquisition <xref ref-type="bibr" rid="Nakamura2014">[Nakamura2014, Akira2015, Taguchi2011]</xref>. The proposed HDP-HLM is a fully probabilistic generative model. Therefore, introducing other factors into consideration is relatively easier than for other heuristic models. This is also advantage of our approach. Combining prosodic and co-occurrence cues into the NPB-DAA, and obtaining a more accurate and more plausible constructive developmental language acquisition model is also a direction for future research.
+</p>
+    </sec>
+  </body>
   <back>
-	An error in the conversion from LaTeX to XML has occurred here. 
-<ref-list><title>References</title></ref-list><app-group><app id="A1"><title>Proof of Proposition 3.1</title><p>We have</p><disp-formula-group id="A5.EGx3"><disp-formula id="A1.Ex24"><tex-math/></disp-formula></disp-formula-group><p>The right-hand side is always larger than <inline-formula id="A1.p1.m1"><tex-math>\mu\left\|e\right\|_{2}^{2}</tex-math></inline-formula> by assumption.</p></app><app id="A2"><title>Proof of Theorem 4.1</title><p>The main goal of the proof is to evaluate <inline-formula id="A2.p1.m1"><tex-math>\mathbb{E}\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}\left(-%
-\nabla f_{n}(\theta^{\natural})\right)\right\|_{2}</tex-math></inline-formula>. Here the expectation is with respect to both <inline-formula id="A2.p1.m2"><tex-math>A</tex-math></inline-formula> and the sample <inline-formula id="A2.p1.m3"><tex-math>(y_{i})_{i=1,\ldots,n}</tex-math></inline-formula>.</p><p>We start with an equivalent formulation:</p><p><disp-formula id="LABEL:eq_proj_sup"><tex-math>\mathbb{E}\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}\left(-%
-\nabla f_{n}(\theta^{\natural})\right)\right\|_{2}=\mathbb{E}\,\sup_{v\in%
-\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap\mathcal{S}^{p-1}}\left\{%
-\left\langle-\nabla f_{n}(\theta^{\natural}),v\right\rangle\right\},</tex-math></disp-formula></p><p>where <inline-formula id="A2.p2.m1"><tex-math>\mathcal{S}^{p-1}</tex-math></inline-formula> denotes the unit <inline-formula id="A2.p2.m2"><tex-math>\ell_{2}</tex-math></inline-formula>-sphere in <inline-formula id="A2.p2.m3"><tex-math>\mathbb{R}^{p}</tex-math></inline-formula>. It is well known that in a canonical GLM, we have</p><p><disp-formula id="LABEL:eq_nablaF"><tex-math>\nabla f_{n}(\theta^{\natural})=-\frac{1}{n}A^{T}\varepsilon,</tex-math></disp-formula></p><p>where <inline-formula id="A2.p2.m4"><tex-math>\varepsilon:=(y_{i}-\mathbb{E}\,y_{i})_{i=1,\ldots,n}</tex-math></inline-formula>, and hence</p><p><disp-formula id="A2.Ex25"><tex-math>\mathbb{E}\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}\left(-%
-\nabla f_{n}(\theta^{\natural})\right)\right\|_{2}=\frac{1}{n}\,\mathbb{E}\,%
-\sup_{v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap\mathcal{S}^{p-1}}%
-\left\{\left\langle A^{T}\varepsilon,v\right\rangle\right\}.</tex-math></disp-formula></p><p>To proceed, we need the following symmetrization inequality. The symmetrization inequality is different from the well-known symmetrization inequality by a Rademacher process, so we show it here for completeness.</p><statement id="LABEL:lem_symmetrization"><title> (<xref ref-type="bibr" rid="Handel2014">[Handel2014]</xref>).</title><p><italic>Let <inline-formula id="A2.Thmthm1.p1.m1"><tex-math>\xi_{1},\ldots,\xi_{n}</tex-math></inline-formula> be independent real-valued random variables, and let <inline-formula id="A2.Thmthm1.p1.m2"><tex-math>\mathcal{F}</tex-math></inline-formula> be a class of real functions. We have</italic></p><p><disp-formula id="A2.Ex26"><tex-math>\mathbb{E}\,\sup_{f\in\mathcal{F}}\left\{\sum_{i=1}^{n}\left[f(\xi_{i})-%
-\mathbb{E}\,f(\xi_{i})\right]\right\}\leq\sqrt{2\pi}\,\mathbb{E}\,\sup_{f\in%
-\mathcal{F}}\left\{\sum_{i=1}^{n}h_{i}f(\xi_{i})\right\},</tex-math></disp-formula></p><p><italic>where <inline-formula id="A2.Thmthm1.p1.m3"><tex-math>h_{1},\ldots,h_{n}</tex-math></inline-formula> are i.i.d. standard Gaussian random variables.</italic></p></statement><statement id="Thmremx4"><title>.</title><p>In <xref ref-type="bibr" rid="Handel2014">[Handel2014]</xref>, the lemma is stated for the case when <inline-formula id="Thmremx4.p1.m1"><tex-math>\xi_{1},\ldots,\xi_{n}</tex-math></inline-formula> are i.i.d. The case when <inline-formula id="Thmremx4.p1.m2"><tex-math>\xi_{1},\ldots,\xi_{n}</tex-math></inline-formula> are not necessarily identical can be proved in a similar way, as noted in <xref ref-type="bibr" rid="Pollard1984">[Pollard1984]</xref>.</p></statement><p>By Lemma <xref ref-type="labelref" rid="LABEL:lem_symmetrization">B.1</xref>, we have</p><disp-formula-group id="A5.EGx4"><disp-formula id="A2.Ex27"><tex-math/></disp-formula><disp-formula id="A2.Ex28"><tex-math/></disp-formula></disp-formula-group><p>where <inline-formula id="A2.p4.m1"><tex-math>h\cdot\varepsilon:=(h_{i}\varepsilon_{i})_{i=1,\ldots,n}</tex-math></inline-formula>, and <inline-formula id="A2.p4.m2"><tex-math>h_{1},\ldots,h_{n}</tex-math></inline-formula> are i.i.d. standard Gaussian random variables. Note that <inline-formula id="A2.p4.m3"><tex-math>h\cdot\varepsilon</tex-math></inline-formula> is a random Gaussian vector with zero mean and covariance matrix <inline-formula id="A2.p4.m4"><tex-math>\Sigma\in\mathbb{R}^{n\times n}</tex-math></inline-formula> which is dependent on <inline-formula id="A2.p4.m5"><tex-math>A</tex-math></inline-formula> in general; moreover, since the entries in <inline-formula id="A2.p4.m6"><tex-math>\varepsilon</tex-math></inline-formula> are independent, <inline-formula id="A2.p4.m7"><tex-math>\Sigma</tex-math></inline-formula> is a diagonal matrix with diagonal entries given by <inline-formula id="A2.p4.m8"><tex-math>\Sigma_{i,i}:=\mathrm{var}\,y_{i}</tex-math></inline-formula>. Define <inline-formula id="A2.p4.m9"><tex-math>\tilde{h}:=(\tilde{h}_{i})_{i=1,\ldots,n}</tex-math></inline-formula>, where <inline-formula id="A2.p4.m10"><tex-math>\tilde{h}_{i}:=\Sigma_{i,i}^{-1/2}h_{i}\varepsilon_{i}</tex-math></inline-formula>. Then <inline-formula id="A2.p4.m11"><tex-math>\tilde{h}</tex-math></inline-formula> is a vector of i.i.d. standard Gaussian random variables; furthermore, it is still a vector of i.i.d. standard Gaussian random variables condition on <inline-formula id="A2.p4.m12"><tex-math>A</tex-math></inline-formula>, and hence it is statistically independent of <inline-formula id="A2.p4.m13"><tex-math>A</tex-math></inline-formula>.</p><p>Since <inline-formula id="A2.p5.m1"><tex-math>h\cdot\varepsilon</tex-math></inline-formula> and <inline-formula id="A2.p5.m2"><tex-math>\sqrt{\Sigma}\tilde{h}</tex-math></inline-formula> have the same probability distribution, we can write
-</p><p><disp-formula id="A2.Ex29"><tex-math>\mathbb{E}\,\sup_{v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap%
-\mathcal{S}^{p-1}}\left\{\left\langle h\cdot\varepsilon,Av\right\rangle\right%
-\}=\mathbb{E}\,\sup_{v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap%
-\mathcal{S}^{p-1}}\left\{\left\langle\sqrt{\Sigma}\tilde{h},Av\right\rangle%
-\right\}.</tex-math></disp-formula></p><p>Let <inline-formula id="A2.p5.m3"><tex-math>\mathcal{T}:=\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap\mathcal{S}^{p-1}</tex-math></inline-formula>. Condition on any given <inline-formula id="A2.p5.m4"><tex-math>A</tex-math></inline-formula> (and hence <inline-formula id="A2.p5.m5"><tex-math>\Sigma</tex-math></inline-formula>), we consider two mean-zero Gaussian processes <inline-formula id="A2.p5.m6"><tex-math>\left\{X_{t}\right\}_{t\in\mathcal{T}}</tex-math></inline-formula> and <inline-formula id="A2.p5.m7"><tex-math>\left\{Y_{t}\right\}_{t\in\mathcal{T}}</tex-math></inline-formula> defined as</p><p><disp-formula id="A2.Ex30"><tex-math>X_{t}:=\left\langle\sqrt{\Sigma}\tilde{h},At\right\rangle,\quad Y_{t}:=\sigma_%
-{\max}\left\langle\tilde{h},At\right\rangle,</tex-math></disp-formula></p><p>where <inline-formula id="A2.p5.m8"><tex-math>\sigma_{max}:=\max_{i}\Sigma_{i,i}=\max_{i}\sqrt{\mathrm{var}\,\varepsilon_{i}}</tex-math></inline-formula>. We have, for any <inline-formula id="A2.p5.m9"><tex-math>t_{1},t_{2}\in\mathcal{T}</tex-math></inline-formula>,</p><p><disp-formula id="A2.Ex31"><tex-math>\mathbb{E}\,\left|X_{t_{1}}-X_{t_{2}}\right|^{2}=\left\|\Sigma A(t_{1}-t_{2})%
-\right\|_{2}^{2}\leq\sigma_{\max}^{2}\left\|A(t_{1}-t_{2})\right\|_{2}^{2}=%
-\mathbb{E}\,\left|Y_{t_{1}}-Y_{t_{2}}\right|^{2}.</tex-math></disp-formula></p><p>By Slepian’s lemma, this implies</p><p><disp-formula id="A2.Ex32"><tex-math>\mathbb{E}\,\sup_{t\in\mathcal{T}}X_{t}\leq\mathbb{E}\,\sup_{t\in\mathcal{T}}Y%
-_{t}.</tex-math></disp-formula></p><p>Since the inequality holds given any realization of <inline-formula id="A2.p5.m10"><tex-math>A</tex-math></inline-formula>, we have</p><disp-formula-group id="A5.EGx5"><disp-formula id="A2.Ex33"><tex-math/></disp-formula><disp-formula id="A2.Ex34"><tex-math/></disp-formula></disp-formula-group><p>It remains to prove</p><p><disp-formula id="LABEL:eq_key"><tex-math>\mathbb{E}\,\sup_{v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap%
-\mathcal{S}^{p-1}}\left\{\left\langle A^{T}\tilde{h},v\right\rangle\right\}%
-\leq\sqrt{n}\,\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural})}):=\sqrt%
-{n}\,\mathbb{E}\,\sup_{v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap%
-\mathcal{S}^{p-1}}\left\{\left\langle\tilde{h},v\right\rangle\right\}.</tex-math></disp-formula></p><p>We consider two cases:</p><boxed-text id="A2.SS3.SSS0.Px1"><caption><p>Case 1: </p></caption><p>If <inline-formula id="A2.SS3.SSS0.Px1.p1.m1"><tex-math>A</tex-math></inline-formula> has i.i.d. standard Gaussian entries, then condition on <inline-formula id="A2.SS3.SSS0.Px1.p1.m2"><tex-math>\tilde{h}</tex-math></inline-formula>, <inline-formula id="A2.SS3.SSS0.Px1.p1.m3"><tex-math>A^{T}\tilde{h}</tex-math></inline-formula> is a vector of mean-zero Gaussian random variables with covariance matrix <inline-formula id="A2.SS3.SSS0.Px1.p1.m4"><tex-math>\left\|\tilde{h}\right\|_{2}I</tex-math></inline-formula>, and hence has the same probablity distribution as <inline-formula id="A2.SS3.SSS0.Px1.p1.m5"><tex-math>\left\|\tilde{h}\right\|\bar{h}</tex-math></inline-formula>, where <inline-formula id="A2.SS3.SSS0.Px1.p1.m6"><tex-math>\bar{h}</tex-math></inline-formula> is a vector of i.i.d. standard Gaussian random variables independent of <inline-formula id="A2.SS3.SSS0.Px1.p1.m7"><tex-math>\tilde{h}</tex-math></inline-formula>. Therefore,</p><disp-formula-group id="A5.EGx6"><disp-formula id="A2.Ex35"><tex-math/></disp-formula><disp-formula id="A2.Ex36"><tex-math/></disp-formula><disp-formula id="A2.Ex37"><tex-math/></disp-formula></disp-formula-group></boxed-text><boxed-text id="A2.SS3.SSS0.Px2"><caption><p>Case 2: </p></caption><p>If <inline-formula id="A2.SS3.SSS0.Px2.p1.m1"><tex-math>A</tex-math></inline-formula> has i.i.d. Rademacher entries, then condition on <inline-formula id="A2.SS3.SSS0.Px2.p1.m2"><tex-math>A</tex-math></inline-formula>, <inline-formula id="A2.SS3.SSS0.Px2.p1.m3"><tex-math>A^{T}\tilde{h}</tex-math></inline-formula> is a vector of mean-zero Gaussian random variables with covariance matrix <inline-formula id="A2.SS3.SSS0.Px2.p1.m4"><tex-math>nI</tex-math></inline-formula>, and hence has the same probability distribution as <inline-formula id="A2.SS3.SSS0.Px2.p1.m5"><tex-math>\sqrt{n}\bar{h}</tex-math></inline-formula>, where <inline-formula id="A2.SS3.SSS0.Px2.p1.m6"><tex-math>\bar{h}</tex-math></inline-formula> is a vector of i.i.d. standard Gaussian random variables. Therefore,</p><disp-formula-group id="A5.EGx7"><disp-formula id="A2.Ex38"><tex-math/></disp-formula><disp-formula id="A2.Ex39"><tex-math/></disp-formula></disp-formula-group><p>In summary, we obtain</p><p><disp-formula id="A2.Ex40"><tex-math>\mathbb{E}\,\left\|\Pi_{\overline{\mathcal{F}_{g}(\theta^{\natural})}}(-\nabla
-f%
-_{n}(\theta^{\natural}))\right\|_{2}\leq\sqrt{2\pi}\,\sigma_{\max}\,\frac{%
-\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural})})}{\sqrt{n}},</tex-math></disp-formula></p><p>if the entries of <inline-formula id="A2.SS3.SSS0.Px2.p2.m1"><tex-math>A</tex-math></inline-formula> are i.i.d. standard Gaussian or Rademacher random variables, for a canonical GLM, where the expectation is with respect to both <inline-formula id="A2.SS3.SSS0.Px2.p2.m2"><tex-math>A</tex-math></inline-formula> and the sample <inline-formula id="A2.SS3.SSS0.Px2.p2.m3"><tex-math>(y_{i})_{i=1,\ldots,n}</tex-math></inline-formula>.</p><p>Let <inline-formula id="A2.SS3.SSS0.Px2.p3.m1"><tex-math>\mathcal{E}</tex-math></inline-formula> denote that event that the RSC condition holds. Then we have</p><disp-formula-group id="A5.EGx8"><disp-formula id="A2.Ex41"><tex-math/></disp-formula><disp-formula id="A2.Ex42"><tex-math/></disp-formula></disp-formula-group><p>and hence</p><disp-formula-group id="A5.EGx9"><disp-formula id="A2.Ex43"><tex-math/></disp-formula><disp-formula id="A2.Ex44"><tex-math/></disp-formula></disp-formula-group><p>where we applied the assumption that <inline-formula id="A2.SS3.SSS0.Px2.p3.m2"><tex-math>\mathbb{P}(\mathcal{E})\geq 1/2</tex-math></inline-formula>. By Lemma 3.2, this implies</p><disp-formula-group id="A5.EGx10"><disp-formula id="A2.Ex45"><tex-math/></disp-formula><disp-formula id="A2.Ex46"><tex-math/></disp-formula></disp-formula-group><p>This completes the proof.</p><statement id="Thmremx5"><title>.</title><p>If we want to adapt this proof to the deterministic <inline-formula id="Thmremx5.p1.m1"><tex-math>A</tex-math></inline-formula> case, a technical issue arises when bounding the right-hand side of (<xref ref-type="labelref" rid="LABEL:eq_key">21</xref>). As the random process <inline-formula id="Thmremx5.p1.m2"><tex-math>\left\{\tilde{X}_{v}:=\left\langle\tilde{h},v\right\rangle\right\}_{v\in%
-\mathcal{V}}</tex-math></inline-formula>, where <inline-formula id="Thmremx5.p1.m3"><tex-math>\mathcal{V}:=\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap\mathcal{S}^{p-1}</tex-math></inline-formula>, is a mean-zero Gaussian process, a standard approach is to bound <inline-formula id="Thmremx5.p1.m4"><tex-math>\sup_{v\in\mathcal{V}}\tilde{X}_{v}</tex-math></inline-formula> by Slepian’s lemma. Note that, for any <inline-formula id="Thmremx5.p1.m5"><tex-math>v_{1},v_{2}\in\mathcal{V}</tex-math></inline-formula>,</p><p><disp-formula id="A2.Ex47"><tex-math>\mathbb{E}\,\left|\tilde{X}_{v_{1}}-\tilde{X}_{v_{2}}\right|^{2}=\left\|A(v_{1%
-}-v_{2})\right\|_{2}^{2},</tex-math></disp-formula></p><p>and hence an upper-bound on <inline-formula id="Thmremx5.p1.m6"><tex-math>\mathbb{E}\,\left|\tilde{X}_{v_{1}}-\tilde{X}_{v_{2}}\right|^{2}</tex-math></inline-formula> would depend on the largest eigenvalue of <inline-formula id="Thmremx5.p1.m7"><tex-math>A</tex-math></inline-formula>. The largest eigenvalue of <inline-formula id="Thmremx5.p1.m8"><tex-math>A</tex-math></inline-formula>, however, cannot be bounded above by a constant independent of <inline-formula id="Thmremx5.p1.m9"><tex-math>n</tex-math></inline-formula> under the high-dimensional setting. Although we can weaken the requirement on <inline-formula id="Thmremx5.p1.m10"><tex-math>A</tex-math></inline-formula> to a restricted smoothness condition as</p><p><disp-formula id="A2.Ex48"><tex-math>\left\|Av\right\|_{2}\leq\sqrt{1+\epsilon}\left\|v\right\|_{2},\quad\text{for %
-all }v\in\overline{\mathcal{F}_{g}(\theta^{\natural})}\cap\mathcal{S}^{p-1},</tex-math></disp-formula></p><p>which, by Theorem <xref ref-type="labelref" rid="LABEL:thm_mendelson">E.1</xref>, holds with high probability. This condition does not imply
-</p><p><disp-formula id="A2.Ex49"><tex-math>\left\|A(v_{1}-v_{2})\right\|_{2}^{2}\leq C\left\|v_{1}-v_{2}\right\|_{2}^{2},</tex-math></disp-formula></p><p>for some dimension-independent constant <inline-formula id="Thmremx5.p1.m11"><tex-math>C&gt;0</tex-math></inline-formula>, for all <inline-formula id="Thmremx5.p1.m12"><tex-math>v_{1},v_{2}\in\mathcal{V}</tex-math></inline-formula>.</p></statement></boxed-text></app><app id="LABEL:sec_proof_lem_mismatch"><title>Proof of Lemma 5.1</title><p>Let <inline-formula id="A3.p1.m1"><tex-math>e:=\hat{\theta}-\theta^{\natural}</tex-math></inline-formula>. If <inline-formula id="A3.p1.m2"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}</tex-math></inline-formula>, following the proof of Theorem 4.1, we obtain</p><p><disp-formula id="A3.Ex50"><tex-math>\left\|e\right\|_{2}\leq\frac{1}{\mu}\left\|\Pi_{\overline{\mathcal{F}_{g}(%
-\theta^{\natural})\setminus t\mathcal{B}}}\left(-\nabla f_{n}(\theta^{\natural%
-})\right)\right\|_{2},</tex-math></disp-formula></p><p>where <inline-formula id="A3.p1.m3"><tex-math>\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}}</tex-math></inline-formula> denotes the conic hull of <inline-formula id="A3.p1.m4"><tex-math>\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}</tex-math></inline-formula>. If <inline-formula id="A3.p1.m5"><tex-math>e\in t\mathcal{B}</tex-math></inline-formula>, we have the naïve bound: <inline-formula id="A3.p1.m6"><tex-math>\left\|e\right\|_{2}\leq t</tex-math></inline-formula>. Therefore,</p><disp-formula-group id="A5.EGx11"><disp-formula id="A3.Ex51"><tex-math/></disp-formula><disp-formula id="A3.Ex52"><tex-math/></disp-formula></disp-formula-group><p>The lemma follows by taking expectations on both sides.</p></app><app id="LABEL:sec_proof_cor_mismatch"><title>Proof of Corollary 5.2</title><p>Let <inline-formula id="A4.p1.m1"><tex-math>e:=\hat{\theta}-\theta^{\natural}</tex-math></inline-formula>. If <inline-formula id="A4.p1.m2"><tex-math>e\in\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}</tex-math></inline-formula>, following the proof of Theorem 4.1, we can obtain</p><p><disp-formula id="A4.Ex53"><tex-math>\mathbb{E}\,\left\|e\right\|_{2}\leq 2\sqrt{2\pi}\,\sigma_{\max}\frac{\omega_{%
-1}(\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}})}{\mu%
-\sqrt{n}};</tex-math></disp-formula></p><p>otherwise, we can bound the expected estimation error from above by <inline-formula id="A4.p1.m3"><tex-math>t</tex-math></inline-formula>. Therefore,</p><disp-formula-group id="A5.EGx12"><disp-formula id="A4.Ex54"><tex-math/></disp-formula><disp-formula id="A4.Ex55"><tex-math/></disp-formula></disp-formula-group></app><app id="A5"><title>Proof of Corollary 6.1 and Corollary 6.2</title><p>The proofs in this section rely on the following theorem <xref ref-type="bibr" rid="Mendelson2007">[Mendelson2007]</xref>.</p><statement id="LABEL:thm_mendelson"><title> (<xref ref-type="bibr" rid="Mendelson2007">[Mendelson2007]</xref>).</title><p><italic>Let <inline-formula id="A5.Thmthm1.p1.m1"><tex-math>\mathcal{T}\subseteq\mathbb{R}^{p}</tex-math></inline-formula> be star-shaped. Let <inline-formula id="A5.Thmthm1.p1.m2"><tex-math>A\in\mathbb{R}^{n\times p}</tex-math></inline-formula>, <inline-formula id="A5.Thmthm1.p1.m3"><tex-math>n&lt;p</tex-math></inline-formula>, whose rows are i.i.d. isotropic subgaussian random vectors with subgaussian norm <inline-formula id="A5.Thmthm1.p1.m4"><tex-math>\alpha\geq 1</tex-math></inline-formula>, and let <inline-formula id="A5.Thmthm1.p1.m5"><tex-math>\epsilon\in(0,1)</tex-math></inline-formula>. Then there exist constants <inline-formula id="A5.Thmthm1.p1.m6"><tex-math>c_{1}</tex-math></inline-formula> and <inline-formula id="A5.Thmthm1.p1.m7"><tex-math>c_{2}</tex-math></inline-formula> such that for all <inline-formula id="A5.Thmthm1.p1.m8"><tex-math>x\in\mathcal{T}</tex-math></inline-formula> satisfying</italic></p><p><disp-formula id="LABEL:eq_rkstar"><tex-math>\left\|x\right\|_{2}\geq\gamma_{n}^{*}\left(\frac{\epsilon}{c_{1}\alpha^{2}},%
-\mathcal{T}\right):=\inf\left\{t&gt;0:t\geq\frac{c_{1}\alpha^{2}\omega_{t}(%
-\mathcal{T})}{\epsilon\sqrt{n}}\right\},</tex-math></disp-formula></p><p><italic>we have</italic></p><p><disp-formula id="A5.Ex56"><tex-math>(1-\epsilon)\left\|x\right\|_{2}^{2}\leq\frac{\left\|Ax\right\|_{2}^{2}}{n}%
-\leq(1+\epsilon)\left\|x\right\|_{2}^{2}</tex-math></disp-formula></p><p><italic>with probability at least <inline-formula id="A5.Thmthm1.p1.m9"><tex-math>1-\exp\left(-c_{2}\epsilon^{2}n/\alpha^{4}\right)</tex-math></inline-formula>.</italic></p></statement><p>We note that the sub-Gaussian norm of a vector of i.i.d. standard Gaussian entries or i.i.d. Rademacher entries is bounded above by a constant <xref ref-type="bibr" rid="Vershynin2012">[Vershynin2012]</xref>.</p><sec id="LABEL:sec_Lasso"><title>Proof of Corollary 6.1</title><p>We prove by Corollary 5.2.</p><p>Let <inline-formula id="A5.SS1.p2.m1"><tex-math>A</tex-math></inline-formula> be defined as in Theorem 4.1. We verify the condition (14) by Theorem <xref ref-type="labelref" rid="LABEL:thm_mendelson">E.1</xref>. Since <inline-formula id="A5.SS1.p2.m2"><tex-math>\omega_{t}(\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{B}}%
-)=t\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{\natural})\setminus t\mathcal{%
-B}})</tex-math></inline-formula>, the condition (<xref ref-type="labelref" rid="LABEL:eq_rkstar">22</xref>) is equivalent to requiring</p><p><disp-formula id="A5.Ex57"><tex-math>\sqrt{n}\geq\frac{c_{1}\alpha^{2}\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{%
-\natural})\setminus t\mathcal{B}})}{\epsilon}.</tex-math></disp-formula></p><p>Once this inequality is satisfied, we can set <inline-formula id="A5.SS1.p2.m3"><tex-math>\mu=1-\epsilon</tex-math></inline-formula>, and the condition (14) hold with probability at least <inline-formula id="A5.SS1.p2.m4"><tex-math>1-\exp\left(-c_{2}\epsilon^{2}n/\alpha^{4}\right)</tex-math></inline-formula>. Note that <inline-formula id="A5.SS1.p2.m5"><tex-math>\sigma_{\max}=\sqrt{\mathbb{E}\,w_{i}^{2}}=\sigma</tex-math></inline-formula>. This completes the proof.</p></sec><sec id="A5.SS2"><title>Proof of Corollary 6.2</title><p>We prove the corollary by Corollary 5.2.</p><p>It is known that</p><p><disp-formula id="A5.Ex58"><tex-math>\nabla^{2}f_{n}(\theta)=\frac{1}{n}A^{T}D(\theta)A</tex-math></disp-formula></p><p>for the ML estimator in a canonical GLM, where <inline-formula id="A5.SS2.p2.m1"><tex-math>A</tex-math></inline-formula> is defined as in Theorem 4.1, and <inline-formula id="A5.SS2.p2.m2"><tex-math>D(\theta)</tex-math></inline-formula> is a diagonal matrix; furthermore, there exists a continuous strictly positive function <inline-formula id="A5.SS2.p2.m3"><tex-math>\phi</tex-math></inline-formula> such that the <inline-formula id="A5.SS2.p2.m4"><tex-math>(i,i)</tex-math></inline-formula>-th entry of <inline-formula id="A5.SS2.p2.m5"><tex-math>D(\theta)</tex-math></inline-formula> is given by <inline-formula id="A5.SS2.p2.m6"><tex-math>\phi(\langle a_{i},\theta\rangle)</tex-math></inline-formula>. Since the entries of <inline-formula id="A5.SS2.p2.m7"><tex-math>A</tex-math></inline-formula> are i.i.d. Rademacher random variables, for any <inline-formula id="A5.SS2.p2.m8"><tex-math>\theta\in\mathcal{G}</tex-math></inline-formula>,</p><p><disp-formula id="A5.Ex59"><tex-math>\left|\left\langle a_{i},\theta\right\rangle\right|\leq\left\|a_{i}\right\|_{%
-\infty}\left\|\theta\right\|_{1}\leq c.</tex-math></disp-formula></p><p>By the extreme value theorem, the diagonal entries of <inline-formula id="A5.SS2.p2.m9"><tex-math>D(\theta)</tex-math></inline-formula> are bounded below by a constant <inline-formula id="A5.SS2.p2.m10"><tex-math>\nu&gt;0</tex-math></inline-formula> for all <inline-formula id="A5.SS2.p2.m11"><tex-math>\theta\in\mathcal{G}</tex-math></inline-formula>, which is independent of <inline-formula id="A5.SS2.p2.m12"><tex-math>n</tex-math></inline-formula>. Similarly, <inline-formula id="A5.SS2.p2.m13"><tex-math>\sigma_{\max}</tex-math></inline-formula> is bounded above by a constant independent of <inline-formula id="A5.SS2.p2.m14"><tex-math>n</tex-math></inline-formula>.</p><p>The rest of the proof is similar to the last paragraph in the previous sub-section.
-By Theorem <xref ref-type="labelref" rid="LABEL:thm_mendelson">E.1</xref>, if we choose <inline-formula id="A5.SS2.p3.m1"><tex-math>n</tex-math></inline-formula> such that</p><p><disp-formula id="A5.Ex60"><tex-math>\sqrt{n}\geq\frac{c\alpha^{2}\omega_{1}(\overline{\mathcal{F}_{g}(\theta^{%
-\natural})\setminus t\mathcal{B}})}{\epsilon},</tex-math></disp-formula></p><p>then the condition (14) holds with probability at least <inline-formula id="A5.SS2.p3.m2"><tex-math>1-\exp\left(-c_{2}\epsilon^{2}n/\alpha^{4}\right)</tex-math></inline-formula> with <inline-formula id="A5.SS2.p3.m3"><tex-math>\mu=\nu(1-\epsilon)</tex-math></inline-formula>.</p></sec></app></app-group></back>
+    <ack/>
+    <glossary/>
+    <ref-list>
+      <title>References</title>
+    </ref-list>
+    <app-group/>
+  </back>
 </article>

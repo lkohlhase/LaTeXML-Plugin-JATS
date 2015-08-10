@@ -3,3 +3,25 @@ No really good treatment for names. At the moment I am just making the last word
 It's complaining about acknowledgements, but the documentation says it's okay? 
 says pub-date isn't allowed there. Documentation says it does (http://jats.nlm.nih.gov/archiving/tag-library/1.1d1/n-jt30.html). Doesn't accept string-date, although it really should. 
 When I print out <ERROR> as plain text, it sometimes leads to errors. Easily fixable, but it might be  an error we want to keep (potentially put in <ERROR> tags of my own to make sure it always is shown as an error)
+Also some complaints about putting adresses in contrib. However the documentation says it's allowed (http://jats.nlm.nih.gov/archiving/tag-library/1.1d1/n-n3w0.html). 
+Apparently an abstract is required. Not sure if I'll just include an empty abstract in that case (I probably should, but I'll ask Bruce. It doesn't seem like the sort of thing that companies couldn't deal with themselves).
+Some trouble with <aff> in <contrib> tags. However the documentation says it's okay and no particular order is required. (http://jats.nlm.nih.gov/archiving/tag-library/0.4/n-dpa0.html)
+Putting in an empty contrib group is apparently a problem (also missing title group is bad). Not really something that I think will be an issue though.
+Empty keywords are bad too.
+sections in paragraphs are also bad. (Ask Bruce if this should ever be happening, if not find the paper where it happened).
+
+Country issues: Could hide it with something like <country> unknown </country> (Makes it valid but ugly) or put in empty country tags. No real solution. 
+Name issues: Possibly define extra markup. 
+Acknowledgements issues: Possibly look into what the validator actually does. 
+Date issues: Maybe look into validator. Maybe check for year manually 
+Error issues: Always put in explicit ERROR Tags. 
+abstract: Put in empty abstract (Possibly put in text like empty abstract)
+
+
+Added empty country element.
+Reworked error handling
+Changed acknowledgements, have to test still.
+pub-date issue: Pub-date isn't allowed for article-authoring. However it is allowed for journal publishing. Not sure whether to include or remove. It seems like something that would be automatically set by the journal.
+
+
+contrib stuff: first name, then affiliation, then adress, then email. then ext-ling, then possibly author-comment. Should have fixed ordering now.
